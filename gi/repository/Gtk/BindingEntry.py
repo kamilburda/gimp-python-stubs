@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -169,7 +168,7 @@ class BindingEntry(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(BindingEntry), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'BindingEntry' objects>, '__weakref__': <attribute '__weakref__' of 'BindingEntry' objects>, '__doc__': None, 'keyval': <property object at 0x000002ece8fc30b0>, 'modifiers': <property object at 0x000002ece8fc31a0>, 'binding_set': <property object at 0x000002ece8fc3290>, 'destroyed': <property object at 0x000002ece8fc3380>, 'in_emission': <property object at 0x000002ece8fc3470>, 'marks_unbound': <property object at 0x000002ece8fc3560>, 'set_next': <property object at 0x000002ece8fc3650>, 'hash_next': <property object at 0x000002ece8fc3740>, 'signals': <property object at 0x000002ece8fc3830>, 'add_signal_from_string': gi.FunctionInfo(add_signal_from_string, bound=None), 'add_signall': gi.FunctionInfo(add_signall, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'skip': gi.FunctionInfo(skip, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(BindingEntry), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'BindingEntry' objects>, '__weakref__': <attribute '__weakref__' of 'BindingEntry' objects>, '__doc__': None, 'keyval': <property object at 0x000002bfd17b22f0>, 'modifiers': <property object at 0x000002bfd17b23e0>, 'binding_set': <property object at 0x000002bfd17b24d0>, 'destroyed': <property object at 0x000002bfd17b25c0>, 'in_emission': <property object at 0x000002bfd17b26b0>, 'marks_unbound': <property object at 0x000002bfd17b27a0>, 'set_next': <property object at 0x000002bfd17b2890>, 'hash_next': <property object at 0x000002bfd17b2980>, 'signals': <property object at 0x000002bfd17b2a70>, 'add_signal_from_string': <staticmethod(gi.FunctionInfo(add_signal_from_string))>, 'add_signall': <staticmethod(gi.FunctionInfo(add_signall))>, 'remove': <staticmethod(gi.FunctionInfo(remove))>, 'skip': <staticmethod(gi.FunctionInfo(skip))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(BindingEntry)
 

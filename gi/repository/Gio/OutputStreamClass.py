@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class OutputStreamClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -170,7 +179,7 @@ class OutputStreamClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(OutputStreamClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'OutputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'OutputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793de13a0>, 'write_fn': <property object at 0x000001a793de1490>, 'splice': <property object at 0x000001a793de1580>, 'flush': <property object at 0x000001a793de1670>, 'close_fn': <property object at 0x000001a793de1760>, 'write_async': <property object at 0x000001a793de1850>, 'write_finish': <property object at 0x000001a793de1940>, 'splice_async': <property object at 0x000001a793de1a30>, 'splice_finish': <property object at 0x000001a793de1b20>, 'flush_async': <property object at 0x000001a793de1c10>, 'flush_finish': <property object at 0x000001a793de1d00>, 'close_async': <property object at 0x000001a793de1df0>, 'close_finish': <property object at 0x000001a793de1ee0>, 'writev_fn': <property object at 0x000001a793de1fd0>, 'writev_async': <property object at 0x000001a793de20c0>, 'writev_finish': <property object at 0x000001a793de21b0>, '_g_reserved4': <property object at 0x000001a793de22a0>, '_g_reserved5': <property object at 0x000001a793de2390>, '_g_reserved6': <property object at 0x000001a793de2480>, '_g_reserved7': <property object at 0x000001a793de2570>, '_g_reserved8': <property object at 0x000001a793de2660>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(OutputStreamClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'OutputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'OutputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea70300950>, 'write_fn': <property object at 0x000001ea70300a40>, 'splice': <property object at 0x000001ea70300b30>, 'flush': <property object at 0x000001ea70300c20>, 'close_fn': <property object at 0x000001ea70300d10>, 'write_async': <property object at 0x000001ea70300e00>, 'write_finish': <property object at 0x000001ea70300ef0>, 'splice_async': <property object at 0x000001ea70300fe0>, 'splice_finish': <property object at 0x000001ea703010d0>, 'flush_async': <property object at 0x000001ea703011c0>, 'flush_finish': <property object at 0x000001ea703012b0>, 'close_async': <property object at 0x000001ea703013a0>, 'close_finish': <property object at 0x000001ea70301490>, 'writev_fn': <property object at 0x000001ea70301580>, 'writev_async': <property object at 0x000001ea70301670>, 'writev_finish': <property object at 0x000001ea70301760>, '_g_reserved4': <property object at 0x000001ea70301850>, '_g_reserved5': <property object at 0x000001ea70301940>, '_g_reserved6': <property object at 0x000001ea70301a30>, '_g_reserved7': <property object at 0x000001ea70301b20>, '_g_reserved8': <property object at 0x000001ea70301c10>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(OutputStreamClass)
 

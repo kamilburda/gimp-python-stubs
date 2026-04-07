@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Sequence(__gi.Struct):
@@ -242,7 +240,7 @@ class Sequence(__gi.Struct):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Sequence), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Sequence' objects>, '__weakref__': <attribute '__weakref__' of 'Sequence' objects>, '__doc__': None, 'append': gi.FunctionInfo(append, bound=None), 'foreach': gi.FunctionInfo(foreach, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_begin_iter': gi.FunctionInfo(get_begin_iter, bound=None), 'get_end_iter': gi.FunctionInfo(get_end_iter, bound=None), 'get_iter_at_pos': gi.FunctionInfo(get_iter_at_pos, bound=None), 'get_length': gi.FunctionInfo(get_length, bound=None), 'insert_sorted': gi.FunctionInfo(insert_sorted, bound=None), 'insert_sorted_iter': gi.FunctionInfo(insert_sorted_iter, bound=None), 'is_empty': gi.FunctionInfo(is_empty, bound=None), 'lookup': gi.FunctionInfo(lookup, bound=None), 'lookup_iter': gi.FunctionInfo(lookup_iter, bound=None), 'prepend': gi.FunctionInfo(prepend, bound=None), 'search': gi.FunctionInfo(search, bound=None), 'search_iter': gi.FunctionInfo(search_iter, bound=None), 'sort': gi.FunctionInfo(sort, bound=None), 'sort_iter': gi.FunctionInfo(sort_iter, bound=None), 'foreach_range': gi.FunctionInfo(foreach_range, bound=None), 'get': gi.FunctionInfo(get, bound=None), 'insert_before': gi.FunctionInfo(insert_before, bound=None), 'move': gi.FunctionInfo(move, bound=None), 'move_range': gi.FunctionInfo(move_range, bound=None), 'range_get_midpoint': gi.FunctionInfo(range_get_midpoint, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'remove_range': gi.FunctionInfo(remove_range, bound=None), 'set': gi.FunctionInfo(set, bound=None), 'sort_changed': gi.FunctionInfo(sort_changed, bound=None), 'sort_changed_iter': gi.FunctionInfo(sort_changed_iter, bound=None), 'swap': gi.FunctionInfo(swap, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Sequence), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Sequence' objects>, '__weakref__': <attribute '__weakref__' of 'Sequence' objects>, '__doc__': None, 'append': gi.FunctionInfo(append), 'foreach': gi.FunctionInfo(foreach), 'free': gi.FunctionInfo(free), 'get_begin_iter': gi.FunctionInfo(get_begin_iter), 'get_end_iter': gi.FunctionInfo(get_end_iter), 'get_iter_at_pos': gi.FunctionInfo(get_iter_at_pos), 'get_length': gi.FunctionInfo(get_length), 'insert_sorted': gi.FunctionInfo(insert_sorted), 'insert_sorted_iter': gi.FunctionInfo(insert_sorted_iter), 'is_empty': gi.FunctionInfo(is_empty), 'lookup': gi.FunctionInfo(lookup), 'lookup_iter': gi.FunctionInfo(lookup_iter), 'prepend': gi.FunctionInfo(prepend), 'search': gi.FunctionInfo(search), 'search_iter': gi.FunctionInfo(search_iter), 'sort': gi.FunctionInfo(sort), 'sort_iter': gi.FunctionInfo(sort_iter), 'foreach_range': <staticmethod(gi.FunctionInfo(foreach_range))>, 'get': <staticmethod(gi.FunctionInfo(get))>, 'insert_before': <staticmethod(gi.FunctionInfo(insert_before))>, 'move': <staticmethod(gi.FunctionInfo(move))>, 'move_range': <staticmethod(gi.FunctionInfo(move_range))>, 'range_get_midpoint': <staticmethod(gi.FunctionInfo(range_get_midpoint))>, 'remove': <staticmethod(gi.FunctionInfo(remove))>, 'remove_range': <staticmethod(gi.FunctionInfo(remove_range))>, 'set': <staticmethod(gi.FunctionInfo(set))>, 'sort_changed': <staticmethod(gi.FunctionInfo(sort_changed))>, 'sort_changed_iter': <staticmethod(gi.FunctionInfo(sort_changed_iter))>, 'swap': <staticmethod(gi.FunctionInfo(swap))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Sequence)
 

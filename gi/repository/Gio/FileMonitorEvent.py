@@ -1,28 +1,32 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class FileMonitorEvent(__gobject.GEnum):
+class FileMonitorEvent(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -81,6 +85,10 @@ class FileMonitorEvent(__gobject.GEnum):
         """
         pass
 
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return an array of bytes representing an integer.
@@ -122,12 +130,23 @@ class FileMonitorEvent(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -151,10 +170,15 @@ class FileMonitorEvent(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -189,7 +213,8 @@ class FileMonitorEvent(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -198,6 +223,14 @@ class FileMonitorEvent(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -225,8 +258,8 @@ class FileMonitorEvent(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -257,15 +290,16 @@ class FileMonitorEvent(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -329,7 +363,7 @@ class FileMonitorEvent(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -371,10 +405,6 @@ class FileMonitorEvent(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ATTRIBUTE_CHANGED = 4
     CHANGED = 0
@@ -387,22 +417,9 @@ class FileMonitorEvent(__gobject.GEnum):
     PRE_UNMOUNT = 5
     RENAMED = 8
     UNMOUNTED = 6
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gio', '__dict__': <attribute '__dict__' of 'FileMonitorEvent' objects>, '__doc__': None, '__gtype__': <GType GFileMonitorEvent (2466385584)>, '__enum_values__': {0: <enum G_FILE_MONITOR_EVENT_CHANGED of type Gio.FileMonitorEvent>, 1: <enum G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT of type Gio.FileMonitorEvent>, 2: <enum G_FILE_MONITOR_EVENT_DELETED of type Gio.FileMonitorEvent>, 3: <enum G_FILE_MONITOR_EVENT_CREATED of type Gio.FileMonitorEvent>, 4: <enum G_FILE_MONITOR_EVENT_ATTRIBUTE_CHANGED of type Gio.FileMonitorEvent>, 5: <enum G_FILE_MONITOR_EVENT_PRE_UNMOUNT of type Gio.FileMonitorEvent>, 6: <enum G_FILE_MONITOR_EVENT_UNMOUNTED of type Gio.FileMonitorEvent>, 7: <enum G_FILE_MONITOR_EVENT_MOVED of type Gio.FileMonitorEvent>, 8: <enum G_FILE_MONITOR_EVENT_RENAMED of type Gio.FileMonitorEvent>, 9: <enum G_FILE_MONITOR_EVENT_MOVED_IN of type Gio.FileMonitorEvent>, 10: <enum G_FILE_MONITOR_EVENT_MOVED_OUT of type Gio.FileMonitorEvent>}, '__info__': gi.EnumInfo(FileMonitorEvent), 'CHANGED': <enum G_FILE_MONITOR_EVENT_CHANGED of type Gio.FileMonitorEvent>, 'CHANGES_DONE_HINT': <enum G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT of type Gio.FileMonitorEvent>, 'DELETED': <enum G_FILE_MONITOR_EVENT_DELETED of type Gio.FileMonitorEvent>, 'CREATED': <enum G_FILE_MONITOR_EVENT_CREATED of type Gio.FileMonitorEvent>, 'ATTRIBUTE_CHANGED': <enum G_FILE_MONITOR_EVENT_ATTRIBUTE_CHANGED of type Gio.FileMonitorEvent>, 'PRE_UNMOUNT': <enum G_FILE_MONITOR_EVENT_PRE_UNMOUNT of type Gio.FileMonitorEvent>, 'UNMOUNTED': <enum G_FILE_MONITOR_EVENT_UNMOUNTED of type Gio.FileMonitorEvent>, 'MOVED': <enum G_FILE_MONITOR_EVENT_MOVED of type Gio.FileMonitorEvent>, 'RENAMED': <enum G_FILE_MONITOR_EVENT_RENAMED of type Gio.FileMonitorEvent>, 'MOVED_IN': <enum G_FILE_MONITOR_EVENT_MOVED_IN of type Gio.FileMonitorEvent>, 'MOVED_OUT': <enum G_FILE_MONITOR_EVENT_MOVED_OUT of type Gio.FileMonitorEvent>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-    }
-    __gtype__ = None # (!) real value is '<GType GFileMonitorEvent (2466385584)>'
-    __info__ = gi.EnumInfo(FileMonitorEvent)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'CHANGED': <FileMonitorEvent.CHANGED: 0>, 'CHANGES_DONE_HINT': <FileMonitorEvent.CHANGES_DONE_HINT: 1>, 'DELETED': <FileMonitorEvent.DELETED: 2>, 'CREATED': <FileMonitorEvent.CREATED: 3>, 'ATTRIBUTE_CHANGED': <FileMonitorEvent.ATTRIBUTE_CHANGED: 4>, 'PRE_UNMOUNT': <FileMonitorEvent.PRE_UNMOUNT: 5>, 'UNMOUNTED': <FileMonitorEvent.UNMOUNTED: 6>, 'MOVED': <FileMonitorEvent.MOVED: 7>, 'RENAMED': <FileMonitorEvent.RENAMED: 8>, 'MOVED_IN': <FileMonitorEvent.MOVED_IN: 9>, 'MOVED_OUT': <FileMonitorEvent.MOVED_OUT: 10>})"
+    __name__ = 'FileMonitorEvent'
+    __qualname__ = 'FileMonitorEvent'
 
 

@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -44,7 +49,7 @@ class TlsPassword(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -72,6 +77,9 @@ class TlsPassword(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_default_warning(self, *args, **kwargs): # real signature unknown
@@ -219,7 +227,8 @@ class TlsPassword(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, flags, description): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, flags, description): # real signature unknown; restored from __doc__
         """ new(flags:Gio.TlsPasswordFlags, description:str) -> Gio.TlsPassword """
         pass
 
@@ -320,20 +329,20 @@ class TlsPassword(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -363,7 +372,11 @@ class TlsPassword(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -465,12 +478,12 @@ class TlsPassword(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb7d00>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7086e9b0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TlsPassword), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTlsPassword (2466629984)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_description': gi.FunctionInfo(get_description, bound=None), 'get_flags': gi.FunctionInfo(get_flags, bound=None), 'get_value': gi.FunctionInfo(get_value, bound=None), 'get_warning': gi.FunctionInfo(get_warning, bound=None), 'set_description': gi.FunctionInfo(set_description, bound=None), 'set_flags': gi.FunctionInfo(set_flags, bound=None), 'set_value': gi.FunctionInfo(set_value, bound=None), 'set_value_full': gi.FunctionInfo(set_value_full, bound=None), 'set_warning': gi.FunctionInfo(set_warning, bound=None), 'do_get_default_warning': gi.VFuncInfo(get_default_warning, bound=None), 'do_get_value': gi.VFuncInfo(get_value, bound=None), 'do_set_value': gi.VFuncInfo(set_value, bound=None), 'parent_instance': <property object at 0x000001a793da6700>, 'priv': <property object at 0x000001a793da67f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TlsPassword), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTlsPassword (1845532640)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_description': gi.FunctionInfo(get_description), 'get_flags': gi.FunctionInfo(get_flags), 'get_value': gi.FunctionInfo(get_value), 'get_warning': gi.FunctionInfo(get_warning), 'set_description': gi.FunctionInfo(set_description), 'set_flags': gi.FunctionInfo(set_flags), 'set_value': gi.FunctionInfo(set_value), 'set_value_full': gi.FunctionInfo(set_value_full), 'set_warning': gi.FunctionInfo(set_warning), 'do_get_default_warning': gi.VFuncInfo(get_default_warning), 'do_get_value': gi.VFuncInfo(get_value), 'do_set_value': gi.VFuncInfo(set_value), 'parent_instance': <property object at 0x000001ea709e9df0>, 'priv': <property object at 0x000001ea709e9ee0>})"
     __gdoc__ = 'Object GTlsPassword\n\nProperties from GTlsPassword:\n  flags -> GTlsPasswordFlags: flags\n  description -> gchararray: description\n  warning -> gchararray: warning\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GTlsPassword (2466629984)>'
+    __gtype__ = None # (!) real value is '<GType GTlsPassword (1845532640)>'
     __info__ = ObjectInfo(TlsPassword)
 
 

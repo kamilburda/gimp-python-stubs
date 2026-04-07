@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,12 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class Stretch(__gobject.GEnum):
+class Stretch(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -73,7 +71,7 @@ class Stretch(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -96,7 +94,7 @@ class Stretch(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -124,12 +122,23 @@ class Stretch(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -158,6 +167,10 @@ class Stretch(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -203,6 +216,14 @@ class Stretch(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -228,8 +249,8 @@ class Stretch(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -260,15 +281,16 @@ class Stretch(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -332,7 +354,7 @@ class Stretch(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -374,10 +396,6 @@ class Stretch(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CONDENSED = 2
     EXPANDED = 6
@@ -388,20 +406,9 @@ class Stretch(__gobject.GEnum):
     SEMI_EXPANDED = 5
     ULTRA_CONDENSED = 0
     ULTRA_EXPANDED = 8
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Pango', '__dict__': <attribute '__dict__' of 'Stretch' objects>, '__doc__': None, '__gtype__': <GType PangoStretch (4081760272)>, '__enum_values__': {0: <enum PANGO_STRETCH_ULTRA_CONDENSED of type Pango.Stretch>, 1: <enum PANGO_STRETCH_EXTRA_CONDENSED of type Pango.Stretch>, 2: <enum PANGO_STRETCH_CONDENSED of type Pango.Stretch>, 3: <enum PANGO_STRETCH_SEMI_CONDENSED of type Pango.Stretch>, 4: <enum PANGO_STRETCH_NORMAL of type Pango.Stretch>, 5: <enum PANGO_STRETCH_SEMI_EXPANDED of type Pango.Stretch>, 6: <enum PANGO_STRETCH_EXPANDED of type Pango.Stretch>, 7: <enum PANGO_STRETCH_EXTRA_EXPANDED of type Pango.Stretch>, 8: <enum PANGO_STRETCH_ULTRA_EXPANDED of type Pango.Stretch>}, '__info__': gi.EnumInfo(Stretch), 'ULTRA_CONDENSED': <enum PANGO_STRETCH_ULTRA_CONDENSED of type Pango.Stretch>, 'EXTRA_CONDENSED': <enum PANGO_STRETCH_EXTRA_CONDENSED of type Pango.Stretch>, 'CONDENSED': <enum PANGO_STRETCH_CONDENSED of type Pango.Stretch>, 'SEMI_CONDENSED': <enum PANGO_STRETCH_SEMI_CONDENSED of type Pango.Stretch>, 'NORMAL': <enum PANGO_STRETCH_NORMAL of type Pango.Stretch>, 'SEMI_EXPANDED': <enum PANGO_STRETCH_SEMI_EXPANDED of type Pango.Stretch>, 'EXPANDED': <enum PANGO_STRETCH_EXPANDED of type Pango.Stretch>, 'EXTRA_EXPANDED': <enum PANGO_STRETCH_EXTRA_EXPANDED of type Pango.Stretch>, 'ULTRA_EXPANDED': <enum PANGO_STRETCH_ULTRA_EXPANDED of type Pango.Stretch>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-    }
-    __gtype__ = None # (!) real value is '<GType PangoStretch (4081760272)>'
-    __info__ = gi.EnumInfo(Stretch)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'ULTRA_CONDENSED': <Stretch.ULTRA_CONDENSED: 0>, 'EXTRA_CONDENSED': <Stretch.EXTRA_CONDENSED: 1>, 'CONDENSED': <Stretch.CONDENSED: 2>, 'SEMI_CONDENSED': <Stretch.SEMI_CONDENSED: 3>, 'NORMAL': <Stretch.NORMAL: 4>, 'SEMI_EXPANDED': <Stretch.SEMI_EXPANDED: 5>, 'EXPANDED': <Stretch.EXPANDED: 6>, 'EXTRA_EXPANDED': <Stretch.EXTRA_EXPANDED: 7>, 'ULTRA_EXPANDED': <Stretch.ULTRA_EXPANDED: 8>})"
+    __name__ = 'Stretch'
+    __qualname__ = 'Stretch'
 
 

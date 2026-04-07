@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -140,10 +139,10 @@ class StyleProvider(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(StyleProvider), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkStyleProvider (3867804352)>, '__dict__': <attribute '__dict__' of 'StyleProvider' objects>, '__weakref__': <attribute '__weakref__' of 'StyleProvider' objects>, '__doc__': None, '__gsignals__': {}, 'get_icon_factory': gi.FunctionInfo(get_icon_factory, bound=None), 'get_style': gi.FunctionInfo(get_style, bound=None), 'get_style_property': gi.FunctionInfo(get_style_property, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(StyleProvider), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkStyleProvider (3426610000)>, '__dict__': <attribute '__dict__' of 'StyleProvider' objects>, '__weakref__': <attribute '__weakref__' of 'StyleProvider' objects>, '__doc__': None, '__gsignals__': {}, 'get_icon_factory': gi.FunctionInfo(get_icon_factory), 'get_style': gi.FunctionInfo(get_style), 'get_style_property': gi.FunctionInfo(get_style_property)})"
     __gdoc__ = 'Interface GtkStyleProvider\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkStyleProvider (3867804352)>'
+    __gtype__ = None # (!) real value is '<GType GtkStyleProvider (3426610000)>'
     __info__ = InterfaceInfo(StyleProvider)
 
 

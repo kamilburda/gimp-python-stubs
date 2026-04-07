@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -44,7 +49,7 @@ class MountOperation(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -84,6 +89,9 @@ class MountOperation(__gi_overrides_GObject.Object):
 
     def do_ask_question(self, *args, **kwargs): # real signature unknown
         """ ask_question(self, message:str, choices:list) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_reply(self, *args, **kwargs): # real signature unknown
@@ -251,7 +259,8 @@ class MountOperation(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gio.MountOperation """
         pass
 
@@ -372,20 +381,20 @@ class MountOperation(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -415,7 +424,11 @@ class MountOperation(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -517,12 +530,12 @@ class MountOperation(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb5180>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7085e650>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(MountOperation), '__module__': 'gi.repository.Gio', '__gtype__': <GType GMountOperation (2466387936)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_anonymous': gi.FunctionInfo(get_anonymous, bound=None), 'get_choice': gi.FunctionInfo(get_choice, bound=None), 'get_domain': gi.FunctionInfo(get_domain, bound=None), 'get_is_tcrypt_hidden_volume': gi.FunctionInfo(get_is_tcrypt_hidden_volume, bound=None), 'get_is_tcrypt_system_volume': gi.FunctionInfo(get_is_tcrypt_system_volume, bound=None), 'get_password': gi.FunctionInfo(get_password, bound=None), 'get_password_save': gi.FunctionInfo(get_password_save, bound=None), 'get_pim': gi.FunctionInfo(get_pim, bound=None), 'get_username': gi.FunctionInfo(get_username, bound=None), 'reply': gi.FunctionInfo(reply, bound=None), 'set_anonymous': gi.FunctionInfo(set_anonymous, bound=None), 'set_choice': gi.FunctionInfo(set_choice, bound=None), 'set_domain': gi.FunctionInfo(set_domain, bound=None), 'set_is_tcrypt_hidden_volume': gi.FunctionInfo(set_is_tcrypt_hidden_volume, bound=None), 'set_is_tcrypt_system_volume': gi.FunctionInfo(set_is_tcrypt_system_volume, bound=None), 'set_password': gi.FunctionInfo(set_password, bound=None), 'set_password_save': gi.FunctionInfo(set_password_save, bound=None), 'set_pim': gi.FunctionInfo(set_pim, bound=None), 'set_username': gi.FunctionInfo(set_username, bound=None), 'do_aborted': gi.VFuncInfo(aborted, bound=None), 'do_ask_password': gi.VFuncInfo(ask_password, bound=None), 'do_ask_question': gi.VFuncInfo(ask_question, bound=None), 'do_reply': gi.VFuncInfo(reply, bound=None), 'do_show_processes': gi.VFuncInfo(show_processes, bound=None), 'do_show_unmount_progress': gi.VFuncInfo(show_unmount_progress, bound=None), 'parent_instance': <property object at 0x000001a793ded210>, 'priv': <property object at 0x000001a793ded300>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(MountOperation), '__module__': 'gi.repository.Gio', '__gtype__': <GType GMountOperation (1841604944)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_anonymous': gi.FunctionInfo(get_anonymous), 'get_choice': gi.FunctionInfo(get_choice), 'get_domain': gi.FunctionInfo(get_domain), 'get_is_tcrypt_hidden_volume': gi.FunctionInfo(get_is_tcrypt_hidden_volume), 'get_is_tcrypt_system_volume': gi.FunctionInfo(get_is_tcrypt_system_volume), 'get_password': gi.FunctionInfo(get_password), 'get_password_save': gi.FunctionInfo(get_password_save), 'get_pim': gi.FunctionInfo(get_pim), 'get_username': gi.FunctionInfo(get_username), 'reply': gi.FunctionInfo(reply), 'set_anonymous': gi.FunctionInfo(set_anonymous), 'set_choice': gi.FunctionInfo(set_choice), 'set_domain': gi.FunctionInfo(set_domain), 'set_is_tcrypt_hidden_volume': gi.FunctionInfo(set_is_tcrypt_hidden_volume), 'set_is_tcrypt_system_volume': gi.FunctionInfo(set_is_tcrypt_system_volume), 'set_password': gi.FunctionInfo(set_password), 'set_password_save': gi.FunctionInfo(set_password_save), 'set_pim': gi.FunctionInfo(set_pim), 'set_username': gi.FunctionInfo(set_username), 'do_aborted': gi.VFuncInfo(aborted), 'do_ask_password': gi.VFuncInfo(ask_password), 'do_ask_question': gi.VFuncInfo(ask_question), 'do_reply': gi.VFuncInfo(reply), 'do_show_processes': gi.VFuncInfo(show_processes), 'do_show_unmount_progress': gi.VFuncInfo(show_unmount_progress), 'parent_instance': <property object at 0x000001ea709a6160>, 'priv': <property object at 0x000001ea709a6250>})"
     __gdoc__ = 'Object GMountOperation\n\nSignals from GMountOperation:\n  ask-password (gchararray, gchararray, gchararray, GAskPasswordFlags)\n  ask-question (gchararray, GStrv)\n  reply (GMountOperationResult)\n  aborted ()\n  show-processes (gchararray, GArray, GStrv)\n  show-unmount-progress (gchararray, gint64, gint64)\n\nProperties from GMountOperation:\n  username -> gchararray: username\n  password -> gchararray: password\n  anonymous -> gboolean: anonymous\n  domain -> gchararray: domain\n  password-save -> GPasswordSave: password-save\n  choice -> gint: choice\n  is-tcrypt-hidden-volume -> gboolean: is-tcrypt-hidden-volume\n  is-tcrypt-system-volume -> gboolean: is-tcrypt-system-volume\n  pim -> guint: pim\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GMountOperation (2466387936)>'
+    __gtype__ = None # (!) real value is '<GType GMountOperation (1841604944)>'
     __info__ = ObjectInfo(MountOperation)
 
 

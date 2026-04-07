@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -34,27 +33,33 @@ class SymbolicColor(__gi.Boxed):
     def copy(self, *args, **kwargs): # real signature unknown
         pass
 
-    def new_alpha(self, color, factor): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_alpha(cls, color, factor): # real signature unknown; restored from __doc__
         """ new_alpha(color:Gtk.SymbolicColor, factor:float) -> Gtk.SymbolicColor """
         pass
 
-    def new_literal(self, color): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_literal(cls, color): # real signature unknown; restored from __doc__
         """ new_literal(color:Gdk.RGBA) -> Gtk.SymbolicColor """
         pass
 
-    def new_mix(self, color1, color2, factor): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_mix(cls, color1, color2, factor): # real signature unknown; restored from __doc__
         """ new_mix(color1:Gtk.SymbolicColor, color2:Gtk.SymbolicColor, factor:float) -> Gtk.SymbolicColor """
         pass
 
-    def new_name(self, name): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_name(cls, name): # real signature unknown; restored from __doc__
         """ new_name(name:str) -> Gtk.SymbolicColor """
         pass
 
-    def new_shade(self, color, factor): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_shade(cls, color, factor): # real signature unknown; restored from __doc__
         """ new_shade(color:Gtk.SymbolicColor, factor:float) -> Gtk.SymbolicColor """
         pass
 
-    def new_win32(self, theme_class, id): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_win32(cls, theme_class, id): # real signature unknown; restored from __doc__
         """ new_win32(theme_class:str, id:int) -> Gtk.SymbolicColor """
         pass
 
@@ -185,8 +190,8 @@ class SymbolicColor(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SymbolicColor), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkSymbolicColor (3923966144)>, '__dict__': <attribute '__dict__' of 'SymbolicColor' objects>, '__weakref__': <attribute '__weakref__' of 'SymbolicColor' objects>, '__doc__': None, 'new_alpha': gi.FunctionInfo(new_alpha, bound=None), 'new_literal': gi.FunctionInfo(new_literal, bound=None), 'new_mix': gi.FunctionInfo(new_mix, bound=None), 'new_name': gi.FunctionInfo(new_name, bound=None), 'new_shade': gi.FunctionInfo(new_shade, bound=None), 'new_win32': gi.FunctionInfo(new_win32, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'resolve': gi.FunctionInfo(resolve, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GtkSymbolicColor (3923966144)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SymbolicColor), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkSymbolicColor (3414247632)>, '__dict__': <attribute '__dict__' of 'SymbolicColor' objects>, '__weakref__': <attribute '__weakref__' of 'SymbolicColor' objects>, '__doc__': None, 'new_alpha': <classmethod(gi.FunctionInfo(new_alpha))>, 'new_literal': <classmethod(gi.FunctionInfo(new_literal))>, 'new_mix': <classmethod(gi.FunctionInfo(new_mix))>, 'new_name': <classmethod(gi.FunctionInfo(new_name))>, 'new_shade': <classmethod(gi.FunctionInfo(new_shade))>, 'new_win32': <classmethod(gi.FunctionInfo(new_win32))>, 'ref': gi.FunctionInfo(ref), 'resolve': gi.FunctionInfo(resolve), 'to_string': gi.FunctionInfo(to_string), 'unref': gi.FunctionInfo(unref)})"
+    __gtype__ = None # (!) real value is '<GType GtkSymbolicColor (3414247632)>'
     __info__ = StructInfo(SymbolicColor)
 
 

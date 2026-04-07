@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -43,7 +42,7 @@ class AppLaunchContext(__gi_repository_Gio.AppLaunchContext):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -71,6 +70,9 @@ class AppLaunchContext(__gi_repository_Gio.AppLaunchContext):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_display(self, *args, **kwargs): # real signature unknown
@@ -226,7 +228,8 @@ class AppLaunchContext(__gi_repository_Gio.AppLaunchContext):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gdk.AppLaunchContext """
         pass
 
@@ -339,20 +342,20 @@ class AppLaunchContext(__gi_repository_Gio.AppLaunchContext):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -488,12 +491,12 @@ class AppLaunchContext(__gi_repository_Gio.AppLaunchContext):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x0000024599916d70>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x00000187250a7fd0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(AppLaunchContext), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkAppLaunchContext (2579724480)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'set_desktop': gi.FunctionInfo(set_desktop, bound=None), 'set_display': gi.FunctionInfo(set_display, bound=None), 'set_icon': gi.FunctionInfo(set_icon, bound=None), 'set_icon_name': gi.FunctionInfo(set_icon_name, bound=None), 'set_screen': gi.FunctionInfo(set_screen, bound=None), 'set_timestamp': gi.FunctionInfo(set_timestamp, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(AppLaunchContext), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkAppLaunchContext (583474000)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'set_desktop': gi.FunctionInfo(set_desktop), 'set_display': gi.FunctionInfo(set_display), 'set_icon': gi.FunctionInfo(set_icon), 'set_icon_name': gi.FunctionInfo(set_icon_name), 'set_screen': gi.FunctionInfo(set_screen), 'set_timestamp': gi.FunctionInfo(set_timestamp)})"
     __gdoc__ = 'Object GdkAppLaunchContext\n\nProperties from GdkAppLaunchContext:\n  display -> GdkDisplay: Display\n    Display\n\nSignals from GAppLaunchContext:\n  launch-failed (gchararray)\n  launch-started (GAppInfo, GVariant)\n  launched (GAppInfo, GVariant)\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkAppLaunchContext (2579724480)>'
+    __gtype__ = None # (!) real value is '<GType GdkAppLaunchContext (583474000)>'
     __info__ = ObjectInfo(AppLaunchContext)
 
 

@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class MarkupParser(__gi.Struct):
@@ -143,7 +141,7 @@ class MarkupParser(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MarkupParser), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MarkupParser' objects>, '__weakref__': <attribute '__weakref__' of 'MarkupParser' objects>, '__doc__': None, 'start_element': <property object at 0x000002830bf17060>, 'end_element': <property object at 0x000002830bf17150>, 'text': <property object at 0x000002830bf17240>, 'passthrough': <property object at 0x000002830bf17330>, 'error': <property object at 0x000002830bf17420>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MarkupParser), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MarkupParser' objects>, '__weakref__': <attribute '__weakref__' of 'MarkupParser' objects>, '__doc__': None, 'start_element': <property object at 0x0000018ea0078310>, 'end_element': <property object at 0x0000018ea00780e0>, 'text': <property object at 0x0000018ea0078680>, 'passthrough': <property object at 0x0000018ea0078770>, 'error': <property object at 0x0000018ea0078860>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(MarkupParser)
 

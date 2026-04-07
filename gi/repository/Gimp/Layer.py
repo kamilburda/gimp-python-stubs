@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -83,20 +79,20 @@ class Layer(Drawable):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -139,6 +135,12 @@ class Layer(Drawable):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def edit_bucket_fill(self, fill_type, x, y): # real signature unknown; restored from __doc__
@@ -204,17 +206,17 @@ class Layer(Drawable):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -403,20 +405,20 @@ class Layer(Drawable):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -470,6 +472,10 @@ class Layer(Drawable):
         """ id_is_layer_mask(item_id:int) -> bool """
         return False
 
+    def id_is_link_layer(self, item_id): # real signature unknown; restored from __doc__
+        """ id_is_link_layer(item_id:int) -> bool """
+        return False
+
     def id_is_path(self, item_id): # real signature unknown; restored from __doc__
         """ id_is_path(item_id:int) -> bool """
         return False
@@ -484,6 +490,10 @@ class Layer(Drawable):
 
     def id_is_valid(self, item_id): # real signature unknown; restored from __doc__
         """ id_is_valid(item_id:int) -> bool """
+        return False
+
+    def id_is_vector_layer(self, item_id): # real signature unknown; restored from __doc__
+        """ id_is_vector_layer(item_id:int) -> bool """
         return False
 
     def install_properties(self, pspecs): # real signature unknown; restored from __doc__
@@ -550,6 +560,10 @@ class Layer(Drawable):
         """ is_layer_mask(self) -> bool """
         return False
 
+    def is_link_layer(self): # real signature unknown; restored from __doc__
+        """ is_link_layer(self) -> bool """
+        return False
+
     def is_path(self): # real signature unknown; restored from __doc__
         """ is_path(self) -> bool """
         return False
@@ -568,6 +582,10 @@ class Layer(Drawable):
 
     def is_valid(self): # real signature unknown; restored from __doc__
         """ is_valid(self) -> bool """
+        return False
+
+    def is_vector_layer(self): # real signature unknown; restored from __doc__
+        """ is_vector_layer(self) -> bool """
         return False
 
     def levels(self, channel, low_input, high_input, clamp_input, gamma, low_output, high_output, clamp_output): # real signature unknown; restored from __doc__
@@ -602,7 +620,8 @@ class Layer(Drawable):
         """ merge_shadow(self, undo:bool) -> bool """
         return False
 
-    def new(self, image, name=None, width, height, type, opacity, mode): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, image, name=None, width, height, type, opacity, mode): # real signature unknown; restored from __doc__
         """ new(image:Gimp.Image, name:str=None, width:int, height:int, type:Gimp.ImageType, opacity:float, mode:Gimp.LayerMode) -> Gimp.Layer """
         pass
 
@@ -610,19 +629,23 @@ class Layer(Drawable):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_from_drawable(self, drawable, dest_image): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_drawable(cls, drawable, dest_image): # real signature unknown; restored from __doc__
         """ new_from_drawable(drawable:Gimp.Drawable, dest_image:Gimp.Image) -> Gimp.Layer """
         pass
 
-    def new_from_pixbuf(self, image, name, pixbuf, opacity, mode, progress_start, progress_end): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_pixbuf(cls, image, name, pixbuf, opacity, mode, progress_start, progress_end): # real signature unknown; restored from __doc__
         """ new_from_pixbuf(image:Gimp.Image, name:str, pixbuf:GdkPixbuf.Pixbuf, opacity:float, mode:Gimp.LayerMode, progress_start:float, progress_end:float) -> Gimp.Layer """
         pass
 
-    def new_from_surface(self, image, name, surface, progress_start, progress_end): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_surface(cls, image, name, surface, progress_start, progress_end): # real signature unknown; restored from __doc__
         """ new_from_surface(image:Gimp.Image, name:str, surface:cairo.Surface, progress_start:float, progress_end:float) -> Gimp.Layer """
         pass
 
-    def new_from_visible(self, image, dest_image, name=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_visible(cls, image, dest_image, name=None): # real signature unknown; restored from __doc__
         """ new_from_visible(image:Gimp.Image, dest_image:Gimp.Image, name:str=None) -> Gimp.Layer """
         pass
 
@@ -859,20 +882,20 @@ class Layer(Drawable):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -1006,12 +1029,14 @@ class Layer(Drawable):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001dcd90fdd50>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001268f2ee020>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Layer), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpLayer (3599939376)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_from_drawable': gi.FunctionInfo(new_from_drawable, bound=None), 'new_from_pixbuf': gi.FunctionInfo(new_from_pixbuf, bound=None), 'new_from_surface': gi.FunctionInfo(new_from_surface, bound=None), 'new_from_visible': gi.FunctionInfo(new_from_visible, bound=None), 'from_mask': gi.FunctionInfo(from_mask, bound=None), 'get_by_id': gi.FunctionInfo(get_by_id, bound=None), 'add_alpha': gi.FunctionInfo(add_alpha, bound=None), 'add_mask': gi.FunctionInfo(add_mask, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'create_mask': gi.FunctionInfo(create_mask, bound=None), 'flatten': gi.FunctionInfo(flatten, bound=None), 'get_apply_mask': gi.FunctionInfo(get_apply_mask, bound=None), 'get_blend_space': gi.FunctionInfo(get_blend_space, bound=None), 'get_composite_mode': gi.FunctionInfo(get_composite_mode, bound=None), 'get_composite_space': gi.FunctionInfo(get_composite_space, bound=None), 'get_edit_mask': gi.FunctionInfo(get_edit_mask, bound=None), 'get_lock_alpha': gi.FunctionInfo(get_lock_alpha, bound=None), 'get_mask': gi.FunctionInfo(get_mask, bound=None), 'get_mode': gi.FunctionInfo(get_mode, bound=None), 'get_opacity': gi.FunctionInfo(get_opacity, bound=None), 'get_show_mask': gi.FunctionInfo(get_show_mask, bound=None), 'is_floating_sel': gi.FunctionInfo(is_floating_sel, bound=None), 'remove_mask': gi.FunctionInfo(remove_mask, bound=None), 'resize': gi.FunctionInfo(resize, bound=None), 'resize_to_image_size': gi.FunctionInfo(resize_to_image_size, bound=None), 'scale': gi.FunctionInfo(scale, bound=None), 'set_apply_mask': gi.FunctionInfo(set_apply_mask, bound=None), 'set_blend_space': gi.FunctionInfo(set_blend_space, bound=None), 'set_composite_mode': gi.FunctionInfo(set_composite_mode, bound=None), 'set_composite_space': gi.FunctionInfo(set_composite_space, bound=None), 'set_edit_mask': gi.FunctionInfo(set_edit_mask, bound=None), 'set_lock_alpha': gi.FunctionInfo(set_lock_alpha, bound=None), 'set_mode': gi.FunctionInfo(set_mode, bound=None), 'set_offsets': gi.FunctionInfo(set_offsets, bound=None), 'set_opacity': gi.FunctionInfo(set_opacity, bound=None), 'set_show_mask': gi.FunctionInfo(set_show_mask, bound=None), 'parent_instance': <property object at 0x000001dcd90c2390>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Layer), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpLayer (2359046112)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_from_drawable': <classmethod(gi.FunctionInfo(new_from_drawable))>, 'new_from_pixbuf': <classmethod(gi.FunctionInfo(new_from_pixbuf))>, 'new_from_surface': <classmethod(gi.FunctionInfo(new_from_surface))>, 'new_from_visible': <classmethod(gi.FunctionInfo(new_from_visible))>, 'from_mask': <staticmethod(gi.FunctionInfo(from_mask))>, 'get_by_id': <staticmethod(gi.FunctionInfo(get_by_id))>, 'add_alpha': gi.FunctionInfo(add_alpha), 'add_mask': gi.FunctionInfo(add_mask), 'copy': gi.FunctionInfo(copy), 'create_mask': gi.FunctionInfo(create_mask), 'flatten': gi.FunctionInfo(flatten), 'get_apply_mask': gi.FunctionInfo(get_apply_mask), 'get_blend_space': gi.FunctionInfo(get_blend_space), 'get_composite_mode': gi.FunctionInfo(get_composite_mode), 'get_composite_space': gi.FunctionInfo(get_composite_space), 'get_edit_mask': gi.FunctionInfo(get_edit_mask), 'get_lock_alpha': gi.FunctionInfo(get_lock_alpha), 'get_mask': gi.FunctionInfo(get_mask), 'get_mode': gi.FunctionInfo(get_mode), 'get_opacity': gi.FunctionInfo(get_opacity), 'get_show_mask': gi.FunctionInfo(get_show_mask), 'is_floating_sel': gi.FunctionInfo(is_floating_sel), 'remove_mask': gi.FunctionInfo(remove_mask), 'resize': gi.FunctionInfo(resize), 'resize_to_image_size': gi.FunctionInfo(resize_to_image_size), 'scale': gi.FunctionInfo(scale), 'set_apply_mask': gi.FunctionInfo(set_apply_mask), 'set_blend_space': gi.FunctionInfo(set_blend_space), 'set_composite_mode': gi.FunctionInfo(set_composite_mode), 'set_composite_space': gi.FunctionInfo(set_composite_space), 'set_edit_mask': gi.FunctionInfo(set_edit_mask), 'set_lock_alpha': gi.FunctionInfo(set_lock_alpha), 'set_mode': gi.FunctionInfo(set_mode), 'set_offsets': gi.FunctionInfo(set_offsets), 'set_opacity': gi.FunctionInfo(set_opacity), 'set_show_mask': gi.FunctionInfo(set_show_mask), 'parent_instance': <property object at 0x000001268f4f92b0>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GimpLayer\n\nProperties from GimpItem:\n  id -> gint: The item id\n    The item id for internal use\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpLayer (3599939376)>'
+    __gtype__ = None # (!) real value is '<GType GimpLayer (2359046112)>'
     __info__ = ObjectInfo(Layer)
+    __static_attributes__ = ()
 
 

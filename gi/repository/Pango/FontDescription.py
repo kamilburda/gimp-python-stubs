@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 from .FontDescription import FontDescription
@@ -224,7 +222,7 @@ class FontDescription(FontDescription):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # reliably restored by inspect
+    def __init__(*args, **kwargs): # reliably restored by inspect
         # no doc
         pass
 
@@ -284,8 +282,10 @@ class FontDescription(FontDescription):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Pango', '__new__': <staticmethod(<function FontDescription.__new__ at 0x00000213f5f640e0>)>, '__init__': <function FontDescription.__init__ at 0x00000213f5f64b80>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType PangoFontDescription (4081786848)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Pango', '__firstlineno__': 44, '__new__': <staticmethod(<function FontDescription.__new__ at 0x0000028035132980>)>, '__static_attributes__': (), '__doc__': None})"
+    __firstlineno__ = 44
+    __gtype__ = None # (!) real value is '<GType PangoFontDescription (842606336)>'
     __info__ = StructInfo(FontDescription)
+    __static_attributes__ = ()
 
 

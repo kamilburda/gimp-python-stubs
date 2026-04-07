@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -53,7 +58,7 @@ class DBusObjectManagerClient(__gi_overrides_GObject.Object, AsyncInitable, DBus
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -81,6 +86,9 @@ class DBusObjectManagerClient(__gi_overrides_GObject.Object, AsyncInitable, DBus
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_interface_proxy_properties_changed(self, *args, **kwargs): # real signature unknown
@@ -264,7 +272,8 @@ class DBusObjectManagerClient(__gi_overrides_GObject.Object, AsyncInitable, DBus
         """ newv_async(object_type:GType, n_parameters:int, parameters:GObject.Parameter, io_priority:int, cancellable:Gio.Cancellable=None, callback:Gio.AsyncReadyCallback=None, user_data=None) """
         pass
 
-    def new_finish(self, res): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_finish(cls, res): # real signature unknown; restored from __doc__
         """ new_finish(res:Gio.AsyncResult) -> Gio.DBusObjectManagerClient """
         pass
 
@@ -272,15 +281,18 @@ class DBusObjectManagerClient(__gi_overrides_GObject.Object, AsyncInitable, DBus
         """ new_for_bus(bus_type:Gio.BusType, flags:Gio.DBusObjectManagerClientFlags, name:str, object_path:str, get_proxy_type_func:Gio.DBusProxyTypeFunc=None, get_proxy_type_user_data=None, cancellable:Gio.Cancellable=None, callback:Gio.AsyncReadyCallback=None, user_data=None) """
         pass
 
-    def new_for_bus_finish(self, res): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_for_bus_finish(cls, res): # real signature unknown; restored from __doc__
         """ new_for_bus_finish(res:Gio.AsyncResult) -> Gio.DBusObjectManagerClient """
         pass
 
-    def new_for_bus_sync(self, bus_type, flags, name, object_path, get_proxy_type_func=None, get_proxy_type_user_data=None, cancellable=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_for_bus_sync(cls, bus_type, flags, name, object_path, get_proxy_type_func=None, get_proxy_type_user_data=None, cancellable=None): # real signature unknown; restored from __doc__
         """ new_for_bus_sync(bus_type:Gio.BusType, flags:Gio.DBusObjectManagerClientFlags, name:str, object_path:str, get_proxy_type_func:Gio.DBusProxyTypeFunc=None, get_proxy_type_user_data=None, cancellable:Gio.Cancellable=None) -> Gio.DBusObjectManagerClient """
         pass
 
-    def new_sync(self, connection, flags, name=None, object_path, get_proxy_type_func=None, get_proxy_type_user_data=None, cancellable=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_sync(cls, connection, flags, name=None, object_path, get_proxy_type_func=None, get_proxy_type_user_data=None, cancellable=None): # real signature unknown; restored from __doc__
         """ new_sync(connection:Gio.DBusConnection, flags:Gio.DBusObjectManagerClientFlags, name:str=None, object_path:str, get_proxy_type_func:Gio.DBusProxyTypeFunc=None, get_proxy_type_user_data=None, cancellable:Gio.Cancellable=None) -> Gio.DBusObjectManagerClient """
         pass
 
@@ -357,20 +369,20 @@ class DBusObjectManagerClient(__gi_overrides_GObject.Object, AsyncInitable, DBus
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -400,7 +412,11 @@ class DBusObjectManagerClient(__gi_overrides_GObject.Object, AsyncInitable, DBus
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -505,12 +521,12 @@ class DBusObjectManagerClient(__gi_overrides_GObject.Object, AsyncInitable, DBus
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a793750e50>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70853d30>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(DBusObjectManagerClient), '__module__': 'gi.repository.Gio', '__gtype__': <GType GDBusObjectManagerClient (2472622128)>, '__doc__': None, '__gsignals__': {}, 'new_finish': gi.FunctionInfo(new_finish, bound=None), 'new_for_bus_finish': gi.FunctionInfo(new_for_bus_finish, bound=None), 'new_for_bus_sync': gi.FunctionInfo(new_for_bus_sync, bound=None), 'new_sync': gi.FunctionInfo(new_sync, bound=None), 'new': gi.FunctionInfo(new, bound=None), 'new_for_bus': gi.FunctionInfo(new_for_bus, bound=None), 'get_connection': gi.FunctionInfo(get_connection, bound=None), 'get_flags': gi.FunctionInfo(get_flags, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_name_owner': gi.FunctionInfo(get_name_owner, bound=None), 'do_interface_proxy_properties_changed': gi.VFuncInfo(interface_proxy_properties_changed, bound=None), 'do_interface_proxy_signal': gi.VFuncInfo(interface_proxy_signal, bound=None), 'parent_instance': <property object at 0x000001a793e6b740>, 'priv': <property object at 0x000001a793e6b830>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(DBusObjectManagerClient), '__module__': 'gi.repository.Gio', '__gtype__': <GType GDBusObjectManagerClient (1841878752)>, '__doc__': None, '__gsignals__': {}, 'new_finish': <classmethod(gi.FunctionInfo(new_finish))>, 'new_for_bus_finish': <classmethod(gi.FunctionInfo(new_for_bus_finish))>, 'new_for_bus_sync': <classmethod(gi.FunctionInfo(new_for_bus_sync))>, 'new_sync': <classmethod(gi.FunctionInfo(new_sync))>, 'new': <staticmethod(gi.FunctionInfo(new))>, 'new_for_bus': <staticmethod(gi.FunctionInfo(new_for_bus))>, 'get_connection': gi.FunctionInfo(get_connection), 'get_flags': gi.FunctionInfo(get_flags), 'get_name': gi.FunctionInfo(get_name), 'get_name_owner': gi.FunctionInfo(get_name_owner), 'do_interface_proxy_properties_changed': gi.VFuncInfo(interface_proxy_properties_changed), 'do_interface_proxy_signal': gi.VFuncInfo(interface_proxy_signal), 'parent_instance': <property object at 0x000001ea70968720>, 'priv': <property object at 0x000001ea70968860>})"
     __gdoc__ = 'Object GDBusObjectManagerClient\n\nSignals from GDBusObjectManagerClient:\n  interface-proxy-signal (GDBusObjectProxy, GDBusProxy, gchararray, gchararray, GVariant)\n  interface-proxy-properties-changed (GDBusObjectProxy, GDBusProxy, GVariant, GStrv)\n\nProperties from GDBusObjectManagerClient:\n  bus-type -> GBusType: bus-type\n  connection -> GDBusConnection: connection\n  flags -> GDBusObjectManagerClientFlags: flags\n  object-path -> gchararray: object-path\n  name -> gchararray: name\n  name-owner -> gchararray: name-owner\n  get-proxy-type-func -> gpointer: get-proxy-type-func\n  get-proxy-type-user-data -> gpointer: get-proxy-type-user-data\n  get-proxy-type-destroy-notify -> gpointer: get-proxy-type-destroy-notify\n\nSignals from GDBusObjectManager:\n  object-added (GDBusObject)\n  object-removed (GDBusObject)\n  interface-added (GDBusObject, GDBusInterface)\n  interface-removed (GDBusObject, GDBusInterface)\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GDBusObjectManagerClient (2472622128)>'
+    __gtype__ = None # (!) real value is '<GType GDBusObjectManagerClient (1841878752)>'
     __info__ = ObjectInfo(DBusObjectManagerClient)
 
 

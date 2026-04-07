@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -58,7 +52,7 @@ class Curve(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -86,6 +80,9 @@ class Curve(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def duplicate(self): # real signature unknown; restored from __doc__
@@ -217,7 +214,8 @@ class Curve(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, y_min, y_max): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, y_min, y_max): # real signature unknown; restored from __doc__
         """ new(y_min:float, y_max:float) -> Gegl.Curve """
         pass
 
@@ -225,7 +223,8 @@ class Curve(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_default(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_default(cls): # real signature unknown; restored from __doc__
         """ new_default() -> Gegl.Curve """
         pass
 
@@ -310,20 +309,20 @@ class Curve(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -457,12 +456,12 @@ class Curve(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x0000027618c48c70>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ebdc0e4880>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Curve), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglCurve (426592336)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_default': gi.FunctionInfo(new_default, bound=None), 'add_point': gi.FunctionInfo(add_point, bound=None), 'calc_value': gi.FunctionInfo(calc_value, bound=None), 'duplicate': gi.FunctionInfo(duplicate, bound=None), 'get_point': gi.FunctionInfo(get_point, bound=None), 'get_y_bounds': gi.FunctionInfo(get_y_bounds, bound=None), 'num_points': gi.FunctionInfo(num_points, bound=None), 'set_point': gi.FunctionInfo(set_point, bound=None), 'parent_instance': <property object at 0x000002761b94e0c0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Curve), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglCurve (3652619040)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_default': <classmethod(gi.FunctionInfo(new_default))>, 'add_point': gi.FunctionInfo(add_point), 'calc_value': gi.FunctionInfo(calc_value), 'duplicate': gi.FunctionInfo(duplicate), 'get_point': gi.FunctionInfo(get_point), 'get_y_bounds': gi.FunctionInfo(get_y_bounds), 'num_points': gi.FunctionInfo(num_points), 'set_point': gi.FunctionInfo(set_point), 'parent_instance': <property object at 0x000001ebdc263150>})"
     __gdoc__ = 'Object GeglCurve\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglCurve (426592336)>'
+    __gtype__ = None # (!) real value is '<GType GeglCurve (3652619040)>'
     __info__ = ObjectInfo(Curve)
 
 

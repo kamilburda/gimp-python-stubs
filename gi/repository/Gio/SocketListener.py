@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -88,7 +93,7 @@ class SocketListener(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -120,6 +125,9 @@ class SocketListener(__gi_overrides_GObject.Object):
 
     def do_changed(self, *args, **kwargs): # real signature unknown
         """ changed(self) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_event(self, *args, **kwargs): # real signature unknown
@@ -243,7 +251,8 @@ class SocketListener(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gio.SocketListener """
         pass
 
@@ -328,20 +337,20 @@ class SocketListener(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -371,7 +380,11 @@ class SocketListener(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -473,12 +486,12 @@ class SocketListener(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb5600>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70860190>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(SocketListener), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSocketListener (2466396448)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'accept': gi.FunctionInfo(accept, bound=None), 'accept_async': gi.FunctionInfo(accept_async, bound=None), 'accept_finish': gi.FunctionInfo(accept_finish, bound=None), 'accept_socket': gi.FunctionInfo(accept_socket, bound=None), 'accept_socket_async': gi.FunctionInfo(accept_socket_async, bound=None), 'accept_socket_finish': gi.FunctionInfo(accept_socket_finish, bound=None), 'add_address': gi.FunctionInfo(add_address, bound=None), 'add_any_inet_port': gi.FunctionInfo(add_any_inet_port, bound=None), 'add_inet_port': gi.FunctionInfo(add_inet_port, bound=None), 'add_socket': gi.FunctionInfo(add_socket, bound=None), 'close': gi.FunctionInfo(close, bound=None), 'set_backlog': gi.FunctionInfo(set_backlog, bound=None), 'do_changed': gi.VFuncInfo(changed, bound=None), 'do_event': gi.VFuncInfo(event, bound=None), 'parent_instance': <property object at 0x000001a793dc2a20>, 'priv': <property object at 0x000001a793dc2b10>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(SocketListener), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSocketListener (1841606576)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'accept': gi.FunctionInfo(accept), 'accept_async': gi.FunctionInfo(accept_async), 'accept_finish': gi.FunctionInfo(accept_finish), 'accept_socket': gi.FunctionInfo(accept_socket), 'accept_socket_async': gi.FunctionInfo(accept_socket_async), 'accept_socket_finish': gi.FunctionInfo(accept_socket_finish), 'add_address': gi.FunctionInfo(add_address), 'add_any_inet_port': gi.FunctionInfo(add_any_inet_port), 'add_inet_port': gi.FunctionInfo(add_inet_port), 'add_socket': gi.FunctionInfo(add_socket), 'close': gi.FunctionInfo(close), 'set_backlog': gi.FunctionInfo(set_backlog), 'do_changed': gi.VFuncInfo(changed), 'do_event': gi.VFuncInfo(event), 'parent_instance': <property object at 0x000001ea709d19e0>, 'priv': <property object at 0x000001ea709d1ad0>})"
     __gdoc__ = 'Object GSocketListener\n\nSignals from GSocketListener:\n  event (GSocketListenerEvent, GSocket)\n\nProperties from GSocketListener:\n  listen-backlog -> gint: listen-backlog\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GSocketListener (2466396448)>'
+    __gtype__ = None # (!) real value is '<GType GSocketListener (1841606576)>'
     __info__ = ObjectInfo(SocketListener)
 
 

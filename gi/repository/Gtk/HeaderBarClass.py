@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -145,7 +144,7 @@ class HeaderBarClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HeaderBarClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'HeaderBarClass' objects>, '__weakref__': <attribute '__weakref__' of 'HeaderBarClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceabe9c10>, '_gtk_reserved1': <property object at 0x000002eceabe9d00>, '_gtk_reserved2': <property object at 0x000002eceabe9df0>, '_gtk_reserved3': <property object at 0x000002eceabe9ee0>, '_gtk_reserved4': <property object at 0x000002eceabe9fd0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HeaderBarClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'HeaderBarClass' objects>, '__weakref__': <attribute '__weakref__' of 'HeaderBarClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18dcf90>, '_gtk_reserved1': <property object at 0x000002bfd18dd080>, '_gtk_reserved2': <property object at 0x000002bfd18dd170>, '_gtk_reserved3': <property object at 0x000002bfd18dd260>, '_gtk_reserved4': <property object at 0x000002bfd18dd350>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(HeaderBarClass)
 

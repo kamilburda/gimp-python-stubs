@@ -4,9 +4,9 @@
 # no doc
 
 # imports
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
+import enum as __enum
 import gi as __gi
 import gobject as __gobject
 

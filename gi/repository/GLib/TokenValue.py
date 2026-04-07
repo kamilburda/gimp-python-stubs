@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class TokenValue(__gi.Struct):
@@ -151,7 +149,7 @@ class TokenValue(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': gi.UnionInfo(TokenValue), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TokenValue' objects>, '__weakref__': <attribute '__weakref__' of 'TokenValue' objects>, '__doc__': None, 'v_symbol': <property object at 0x000002830bec3e70>, 'v_identifier': <property object at 0x000002830bec3f60>, 'v_binary': <property object at 0x000002830bea0090>, 'v_octal': <property object at 0x000002830bea0180>, 'v_int': <property object at 0x000002830bea0270>, 'v_int64': <property object at 0x000002830bea0360>, 'v_float': <property object at 0x000002830bea0450>, 'v_hex': <property object at 0x000002830bea0540>, 'v_string': <property object at 0x000002830bea0630>, 'v_comment': <property object at 0x000002830bea0720>, 'v_char': <property object at 0x000002830bea0810>, 'v_error': <property object at 0x000002830bea0900>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': gi.UnionInfo(TokenValue), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TokenValue' objects>, '__weakref__': <attribute '__weakref__' of 'TokenValue' objects>, '__doc__': None, 'v_symbol': <property object at 0x0000018ea0051e90>, 'v_identifier': <property object at 0x0000018ea0051da0>, 'v_binary': <property object at 0x0000018ea0051cb0>, 'v_octal': <property object at 0x0000018ea0051bc0>, 'v_int': <property object at 0x0000018ea0051ad0>, 'v_int64': <property object at 0x0000018ea00519e0>, 'v_float': <property object at 0x0000018ea00518f0>, 'v_hex': <property object at 0x0000018ea0051f80>, 'v_string': <property object at 0x0000018ea0052070>, 'v_comment': <property object at 0x0000018ea0052160>, 'v_char': <property object at 0x0000018ea0052250>, 'v_error': <property object at 0x0000018ea0052340>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = gi.UnionInfo(TokenValue)
 

@@ -1,21 +1,13 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
 class font_extents_t(__gi.Struct):
@@ -159,7 +151,7 @@ class font_extents_t(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(font_extents_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'font_extents_t' objects>, '__weakref__': <attribute '__weakref__' of 'font_extents_t' objects>, '__doc__': None, 'ascender': <property object at 0x000001d9a160bba0>, 'descender': <property object at 0x000001d9a160bc90>, 'line_gap': <property object at 0x000001d9a160bd80>, 'reserved9': <property object at 0x000001d9a160be70>, 'reserved8': <property object at 0x000001d9a160bf60>, 'reserved7': <property object at 0x000001d9a15d4090>, 'reserved6': <property object at 0x000001d9a15d4180>, 'reserved5': <property object at 0x000001d9a15d4270>, 'reserved4': <property object at 0x000001d9a15d4360>, 'reserved3': <property object at 0x000001d9a15d4450>, 'reserved2': <property object at 0x000001d9a15d4540>, 'reserved1': <property object at 0x000001d9a15d4630>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(font_extents_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'font_extents_t' objects>, '__weakref__': <attribute '__weakref__' of 'font_extents_t' objects>, '__doc__': None, 'ascender': <property object at 0x00000208a50a0860>, 'descender': <property object at 0x00000208a50a0950>, 'line_gap': <property object at 0x00000208a50a0a40>, 'reserved9': <property object at 0x00000208a50a0b30>, 'reserved8': <property object at 0x00000208a50a0c20>, 'reserved7': <property object at 0x00000208a50a0d10>, 'reserved6': <property object at 0x00000208a50a0e00>, 'reserved5': <property object at 0x00000208a50a0ef0>, 'reserved4': <property object at 0x00000208a50a0fe0>, 'reserved3': <property object at 0x00000208a50a10d0>, 'reserved2': <property object at 0x00000208a50a11c0>, 'reserved1': <property object at 0x00000208a50a12b0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(font_extents_t)
 

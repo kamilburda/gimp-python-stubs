@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Scanner(__gi.Struct):
@@ -243,7 +241,7 @@ class Scanner(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Scanner), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Scanner' objects>, '__weakref__': <attribute '__weakref__' of 'Scanner' objects>, '__doc__': None, 'user_data': <property object at 0x000002830bef6660>, 'max_parse_errors': <property object at 0x000002830bef6750>, 'parse_errors': <property object at 0x000002830bef6840>, 'input_name': <property object at 0x000002830bef6930>, 'qdata': <property object at 0x000002830bef6a20>, 'config': <property object at 0x000002830bef6b10>, 'token': <property object at 0x000002830bef6c00>, 'value': <property object at 0x000002830bef6cf0>, 'line': <property object at 0x000002830bef6de0>, 'position': <property object at 0x000002830bef6ed0>, 'next_token': <property object at 0x000002830bef6fc0>, 'next_value': <property object at 0x000002830bef70b0>, 'next_line': <property object at 0x000002830bef71a0>, 'next_position': <property object at 0x000002830bef7290>, 'symbol_table': <property object at 0x000002830bef7380>, 'input_fd': <property object at 0x000002830bef7470>, 'text': <property object at 0x000002830bef7560>, 'text_end': <property object at 0x000002830bef7650>, 'buffer': <property object at 0x000002830bef7740>, 'scope_id': <property object at 0x000002830bef7830>, 'msg_handler': <property object at 0x000002830bef7920>, 'cur_line': gi.FunctionInfo(cur_line, bound=None), 'cur_position': gi.FunctionInfo(cur_position, bound=None), 'cur_token': gi.FunctionInfo(cur_token, bound=None), 'destroy': gi.FunctionInfo(destroy, bound=None), 'eof': gi.FunctionInfo(eof, bound=None), 'get_next_token': gi.FunctionInfo(get_next_token, bound=None), 'input_file': gi.FunctionInfo(input_file, bound=None), 'input_text': gi.FunctionInfo(input_text, bound=None), 'lookup_symbol': gi.FunctionInfo(lookup_symbol, bound=None), 'peek_next_token': gi.FunctionInfo(peek_next_token, bound=None), 'scope_add_symbol': gi.FunctionInfo(scope_add_symbol, bound=None), 'scope_foreach_symbol': gi.FunctionInfo(scope_foreach_symbol, bound=None), 'scope_lookup_symbol': gi.FunctionInfo(scope_lookup_symbol, bound=None), 'scope_remove_symbol': gi.FunctionInfo(scope_remove_symbol, bound=None), 'set_scope': gi.FunctionInfo(set_scope, bound=None), 'sync_file_offset': gi.FunctionInfo(sync_file_offset, bound=None), 'unexp_token': gi.FunctionInfo(unexp_token, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Scanner), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Scanner' objects>, '__weakref__': <attribute '__weakref__' of 'Scanner' objects>, '__doc__': None, 'user_data': <property object at 0x0000018ea007bdd0>, 'max_parse_errors': <property object at 0x0000018ea007bec0>, 'parse_errors': <property object at 0x0000018ea007bfb0>, 'input_name': <property object at 0x0000018ea007ba10>, 'qdata': <property object at 0x0000018ea007b9c0>, 'config': <property object at 0x0000018ea0064ae0>, 'token': <property object at 0x0000018ea00649f0>, 'value': <property object at 0x0000018ea0064900>, 'line': <property object at 0x0000018ea0064810>, 'position': <property object at 0x0000018ea0064720>, 'next_token': <property object at 0x0000018ea0064630>, 'next_value': <property object at 0x0000018ea0064540>, 'next_line': <property object at 0x0000018ea0064450>, 'next_position': <property object at 0x0000018ea0064360>, 'symbol_table': <property object at 0x0000018ea0064270>, 'input_fd': <property object at 0x0000018ea0064180>, 'text': <property object at 0x0000018ea0064090>, 'text_end': <property object at 0x0000018ea0064c70>, 'buffer': <property object at 0x0000018ea0064d60>, 'scope_id': <property object at 0x0000018ea0064e50>, 'msg_handler': <property object at 0x0000018ea0064f40>, 'cur_line': gi.FunctionInfo(cur_line), 'cur_position': gi.FunctionInfo(cur_position), 'cur_token': gi.FunctionInfo(cur_token), 'destroy': gi.FunctionInfo(destroy), 'eof': gi.FunctionInfo(eof), 'get_next_token': gi.FunctionInfo(get_next_token), 'input_file': gi.FunctionInfo(input_file), 'input_text': gi.FunctionInfo(input_text), 'lookup_symbol': gi.FunctionInfo(lookup_symbol), 'peek_next_token': gi.FunctionInfo(peek_next_token), 'scope_add_symbol': gi.FunctionInfo(scope_add_symbol), 'scope_foreach_symbol': gi.FunctionInfo(scope_foreach_symbol), 'scope_lookup_symbol': gi.FunctionInfo(scope_lookup_symbol), 'scope_remove_symbol': gi.FunctionInfo(scope_remove_symbol), 'set_scope': gi.FunctionInfo(set_scope), 'sync_file_offset': gi.FunctionInfo(sync_file_offset), 'unexp_token': gi.FunctionInfo(unexp_token)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Scanner)
 

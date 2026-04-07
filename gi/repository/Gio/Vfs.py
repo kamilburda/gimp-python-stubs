@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -43,7 +48,7 @@ class Vfs(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -75,6 +80,9 @@ class Vfs(__gi_overrides_GObject.Object):
 
     def do_add_writable_namespaces(self, *args, **kwargs): # real signature unknown
         """ add_writable_namespaces(self, list:Gio.FileAttributeInfoList) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_file_for_path(self, *args, **kwargs): # real signature unknown
@@ -343,20 +351,20 @@ class Vfs(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -386,7 +394,11 @@ class Vfs(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -486,12 +498,12 @@ class Vfs(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792e2bee0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70872680>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Vfs), '__module__': 'gi.repository.Gio', '__gtype__': <GType GVfs (2472616416)>, '__doc__': None, '__gsignals__': {}, 'get_default': gi.FunctionInfo(get_default, bound=None), 'get_local': gi.FunctionInfo(get_local, bound=None), 'get_file_for_path': gi.FunctionInfo(get_file_for_path, bound=None), 'get_file_for_uri': gi.FunctionInfo(get_file_for_uri, bound=None), 'get_supported_uri_schemes': gi.FunctionInfo(get_supported_uri_schemes, bound=None), 'is_active': gi.FunctionInfo(is_active, bound=None), 'parse_name': gi.FunctionInfo(parse_name, bound=None), 'register_uri_scheme': gi.FunctionInfo(register_uri_scheme, bound=None), 'unregister_uri_scheme': gi.FunctionInfo(unregister_uri_scheme, bound=None), 'do_add_writable_namespaces': gi.VFuncInfo(add_writable_namespaces, bound=None), 'do_get_file_for_path': gi.VFuncInfo(get_file_for_path, bound=None), 'do_get_file_for_uri': gi.VFuncInfo(get_file_for_uri, bound=None), 'do_get_supported_uri_schemes': gi.VFuncInfo(get_supported_uri_schemes, bound=None), 'do_is_active': gi.VFuncInfo(is_active, bound=None), 'do_local_file_add_info': gi.VFuncInfo(local_file_add_info, bound=None), 'do_local_file_moved': gi.VFuncInfo(local_file_moved, bound=None), 'do_local_file_removed': gi.VFuncInfo(local_file_removed, bound=None), 'do_local_file_set_attributes': gi.VFuncInfo(local_file_set_attributes, bound=None), 'do_parse_name': gi.VFuncInfo(parse_name, bound=None), 'parent_instance': <property object at 0x000001a793d72340>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Vfs), '__module__': 'gi.repository.Gio', '__gtype__': <GType GVfs (1848624272)>, '__doc__': None, '__gsignals__': {}, 'get_default': <staticmethod(gi.FunctionInfo(get_default))>, 'get_local': <staticmethod(gi.FunctionInfo(get_local))>, 'get_file_for_path': gi.FunctionInfo(get_file_for_path), 'get_file_for_uri': gi.FunctionInfo(get_file_for_uri), 'get_supported_uri_schemes': gi.FunctionInfo(get_supported_uri_schemes), 'is_active': gi.FunctionInfo(is_active), 'parse_name': gi.FunctionInfo(parse_name), 'register_uri_scheme': gi.FunctionInfo(register_uri_scheme), 'unregister_uri_scheme': gi.FunctionInfo(unregister_uri_scheme), 'do_add_writable_namespaces': gi.VFuncInfo(add_writable_namespaces), 'do_get_file_for_path': gi.VFuncInfo(get_file_for_path), 'do_get_file_for_uri': gi.VFuncInfo(get_file_for_uri), 'do_get_supported_uri_schemes': gi.VFuncInfo(get_supported_uri_schemes), 'do_is_active': gi.VFuncInfo(is_active), 'do_local_file_add_info': gi.VFuncInfo(local_file_add_info), 'do_local_file_moved': gi.VFuncInfo(local_file_moved), 'do_local_file_removed': gi.VFuncInfo(local_file_removed), 'do_local_file_set_attributes': gi.VFuncInfo(local_file_set_attributes), 'do_parse_name': gi.VFuncInfo(parse_name), 'parent_instance': <property object at 0x000001ea709f8540>})"
     __gdoc__ = 'Object GVfs\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GVfs (2472616416)>'
+    __gtype__ = None # (!) real value is '<GType GVfs (1848624272)>'
     __info__ = ObjectInfo(Vfs)
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -65,20 +64,20 @@ class RadioAction(RadioAction):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -143,6 +142,9 @@ class RadioAction(RadioAction):
         """ connect_proxy(self, proxy:Gtk.Widget) """
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_create_menu(self, *args, **kwargs): # real signature unknown
         """ create_menu(self) -> Gtk.Widget """
         pass
@@ -157,6 +159,9 @@ class RadioAction(RadioAction):
 
     def do_disconnect_proxy(self, *args, **kwargs): # real signature unknown
         """ disconnect_proxy(self, proxy:Gtk.Widget) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_toggled(self, *args, **kwargs): # real signature unknown
@@ -182,17 +187,17 @@ class RadioAction(RadioAction):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -301,20 +306,20 @@ class RadioAction(RadioAction):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -549,20 +554,20 @@ class RadioAction(RadioAction):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -631,7 +636,7 @@ class RadioAction(RadioAction):
     def __init__(self, *args, **kwargs): # reliably restored by inspect
         """
         Initializer for a GObject based classes with support for property
-                sets through the use of explicit keyword arguments.
+        sets through the use of explicit keyword arguments.
         """
         pass
 
@@ -707,12 +712,14 @@ class RadioAction(RadioAction):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ece90564a0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd19074f0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__init__': <function deprecated_init.<locals>.new_init at 0x000002ece8a90e00>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__firstlineno__': 231, '__init__': <function deprecated_init.<locals>.new_init at 0x000002bfce4d62a0>, '__static_attributes__': (), '__doc__': None, '__gsignals__': {}})"
+    __firstlineno__ = 231
     __gdoc__ = 'Object GtkRadioAction\n\nSignals from GtkRadioAction:\n  changed (GtkRadioAction)\n\nProperties from GtkRadioAction:\n  value -> gint: The value\n    The value returned by gtk_radio_action_get_current_value() when this action is the current action of its group.\n  group -> GtkRadioAction: Group\n    The radio action whose group this action belongs to.\n  current-value -> gint: The current value\n    The value property of the currently active member of the group to which this action belongs.\n\nSignals from GtkToggleAction:\n  toggled ()\n\nProperties from GtkToggleAction:\n  draw-as-radio -> gboolean: Create the same proxies as a radio action\n    Whether the proxies for this action look like radio action proxies\n  active -> gboolean: Active\n    Whether the toggle action should be active\n\nSignals from GtkAction:\n  activate ()\n\nProperties from GtkAction:\n  name -> gchararray: Name\n    A unique name for the action.\n  label -> gchararray: Label\n    The label used for menu items and buttons that activate this action.\n  short-label -> gchararray: Short label\n    A shorter label that may be used on toolbar buttons.\n  tooltip -> gchararray: Tooltip\n    A tooltip for this action.\n  stock-id -> gchararray: Stock Icon\n    The stock icon displayed in widgets representing this action.\n  icon-name -> gchararray: Icon Name\n    The name of the icon from the icon theme\n  gicon -> GIcon: GIcon\n    The GIcon being displayed\n  visible-horizontal -> gboolean: Visible when horizontal\n    Whether the toolbar item is visible when the toolbar is in a horizontal orientation.\n  visible-vertical -> gboolean: Visible when vertical\n    Whether the toolbar item is visible when the toolbar is in a vertical orientation.\n  visible-overflown -> gboolean: Visible when overflown\n    When TRUE, toolitem proxies for this action are represented in the toolbar overflow menu.\n  is-important -> gboolean: Is important\n    Whether the action is considered important. When TRUE, toolitem proxies for this action show text in GTK_TOOLBAR_BOTH_HORIZ mode.\n  hide-if-empty -> gboolean: Hide if empty\n    When TRUE, empty menu proxies for this action are hidden.\n  sensitive -> gboolean: Sensitive\n    Whether the action is enabled.\n  visible -> gboolean: Visible\n    Whether the action is visible.\n  action-group -> GtkActionGroup: Action Group\n    The GtkActionGroup this GtkAction is associated with, or NULL (for internal use).\n  always-show-image -> gboolean: Always show image\n    Whether the image will always be shown\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkRadioAction (3860576560)>'
+    __gtype__ = None # (!) real value is '<GType GtkRadioAction (3413531904)>'
     __info__ = ObjectInfo(RadioAction)
+    __static_attributes__ = ()
 
 

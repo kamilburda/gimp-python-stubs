@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class TestLogType(__gobject.GEnum):
+class TestLogType(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class TestLogType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class TestLogType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -126,12 +124,23 @@ class TestLogType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +169,10 @@ class TestLogType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -205,6 +218,14 @@ class TestLogType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -230,8 +251,8 @@ class TestLogType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -262,15 +283,16 @@ class TestLogType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -334,7 +356,7 @@ class TestLogType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -376,10 +398,6 @@ class TestLogType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ERROR = 1
     LIST_CASE = 3
@@ -393,23 +411,9 @@ class TestLogType(__gobject.GEnum):
     START_SUITE = 10
     STOP_CASE = 6
     STOP_SUITE = 11
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'TestLogType' objects>, '__doc__': None, '__gtype__': <GType PyGLibTestLogType (163508464)>, '__enum_values__': {0: <enum G_TEST_LOG_NONE of type GLib.TestLogType>, 1: <enum G_TEST_LOG_ERROR of type GLib.TestLogType>, 2: <enum G_TEST_LOG_START_BINARY of type GLib.TestLogType>, 3: <enum G_TEST_LOG_LIST_CASE of type GLib.TestLogType>, 4: <enum G_TEST_LOG_SKIP_CASE of type GLib.TestLogType>, 5: <enum G_TEST_LOG_START_CASE of type GLib.TestLogType>, 6: <enum G_TEST_LOG_STOP_CASE of type GLib.TestLogType>, 7: <enum G_TEST_LOG_MIN_RESULT of type GLib.TestLogType>, 8: <enum G_TEST_LOG_MAX_RESULT of type GLib.TestLogType>, 9: <enum G_TEST_LOG_MESSAGE of type GLib.TestLogType>, 10: <enum G_TEST_LOG_START_SUITE of type GLib.TestLogType>, 11: <enum G_TEST_LOG_STOP_SUITE of type GLib.TestLogType>}, '__info__': gi.EnumInfo(TestLogType), 'NONE': <enum G_TEST_LOG_NONE of type GLib.TestLogType>, 'ERROR': <enum G_TEST_LOG_ERROR of type GLib.TestLogType>, 'START_BINARY': <enum G_TEST_LOG_START_BINARY of type GLib.TestLogType>, 'LIST_CASE': <enum G_TEST_LOG_LIST_CASE of type GLib.TestLogType>, 'SKIP_CASE': <enum G_TEST_LOG_SKIP_CASE of type GLib.TestLogType>, 'START_CASE': <enum G_TEST_LOG_START_CASE of type GLib.TestLogType>, 'STOP_CASE': <enum G_TEST_LOG_STOP_CASE of type GLib.TestLogType>, 'MIN_RESULT': <enum G_TEST_LOG_MIN_RESULT of type GLib.TestLogType>, 'MAX_RESULT': <enum G_TEST_LOG_MAX_RESULT of type GLib.TestLogType>, 'MESSAGE': <enum G_TEST_LOG_MESSAGE of type GLib.TestLogType>, 'START_SUITE': <enum G_TEST_LOG_START_SUITE of type GLib.TestLogType>, 'STOP_SUITE': <enum G_TEST_LOG_STOP_SUITE of type GLib.TestLogType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibTestLogType (163508464)>'
-    __info__ = gi.EnumInfo(TestLogType)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'NONE': <TestLogType.NONE: 0>, 'ERROR': <TestLogType.ERROR: 1>, 'START_BINARY': <TestLogType.START_BINARY: 2>, 'LIST_CASE': <TestLogType.LIST_CASE: 3>, 'SKIP_CASE': <TestLogType.SKIP_CASE: 4>, 'START_CASE': <TestLogType.START_CASE: 5>, 'STOP_CASE': <TestLogType.STOP_CASE: 6>, 'MIN_RESULT': <TestLogType.MIN_RESULT: 7>, 'MAX_RESULT': <TestLogType.MAX_RESULT: 8>, 'MESSAGE': <TestLogType.MESSAGE: 9>, 'START_SUITE': <TestLogType.START_SUITE: 10>, 'STOP_SUITE': <TestLogType.STOP_SUITE: 11>})"
+    __name__ = 'TestLogType'
+    __qualname__ = 'TestLogType'
 
 

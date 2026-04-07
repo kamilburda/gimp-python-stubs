@@ -1,26 +1,20 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class TileCommand(__gobject.GEnum):
+class TileCommand(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -130,12 +124,23 @@ class TileCommand(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -164,6 +169,10 @@ class TileCommand(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -198,7 +207,8 @@ class TileCommand(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +217,14 @@ class TileCommand(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -234,8 +252,8 @@ class TileCommand(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -266,15 +284,16 @@ class TileCommand(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -338,7 +357,7 @@ class TileCommand(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -380,12 +399,7 @@ class TileCommand(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-
-    EGL_TILE_COPY = 9
     EGL_TILE_EXIST = 4
     EGL_TILE_FLUSH = 6
     EGL_TILE_GET = 2
@@ -397,22 +411,9 @@ class TileCommand(__gobject.GEnum):
     EGL_TILE_SET = 1
     EGL_TILE_VOID = 5
     GEGL_TILE_LAST_0_4_8_COMMAND = 9
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gegl', '__dict__': <attribute '__dict__' of 'TileCommand' objects>, '__doc__': None, '__gtype__': <GType PyGeglTileCommand (420747408)>, '__enum_values__': {0: <enum GEGL_TILE_IDLE of type Gegl.TileCommand>, 1: <enum GEGL_TILE_SET of type Gegl.TileCommand>, 2: <enum GEGL_TILE_GET of type Gegl.TileCommand>, 3: <enum GEGL_TILE_IS_CACHED of type Gegl.TileCommand>, 4: <enum GEGL_TILE_EXIST of type Gegl.TileCommand>, 5: <enum GEGL_TILE_VOID of type Gegl.TileCommand>, 6: <enum GEGL_TILE_FLUSH of type Gegl.TileCommand>, 7: <enum GEGL_TILE_REFETCH of type Gegl.TileCommand>, 8: <enum GEGL_TILE_REINIT of type Gegl.TileCommand>, 9: <enum _GEGL_TILE_LAST_0_4_8_COMMAND of type Gegl.TileCommand>, 10: <enum GEGL_TILE_LAST_COMMAND of type Gegl.TileCommand>}, '__info__': gi.EnumInfo(TileCommand), 'EGL_TILE_IDLE': <enum GEGL_TILE_IDLE of type Gegl.TileCommand>, 'EGL_TILE_SET': <enum GEGL_TILE_SET of type Gegl.TileCommand>, 'EGL_TILE_GET': <enum GEGL_TILE_GET of type Gegl.TileCommand>, 'EGL_TILE_IS_CACHED': <enum GEGL_TILE_IS_CACHED of type Gegl.TileCommand>, 'EGL_TILE_EXIST': <enum GEGL_TILE_EXIST of type Gegl.TileCommand>, 'EGL_TILE_VOID': <enum GEGL_TILE_VOID of type Gegl.TileCommand>, 'EGL_TILE_FLUSH': <enum GEGL_TILE_FLUSH of type Gegl.TileCommand>, 'EGL_TILE_REFETCH': <enum GEGL_TILE_REFETCH of type Gegl.TileCommand>, 'EGL_TILE_REINIT': <enum GEGL_TILE_REINIT of type Gegl.TileCommand>, 'GEGL_TILE_LAST_0_4_8_COMMAND': <enum _GEGL_TILE_LAST_0_4_8_COMMAND of type Gegl.TileCommand>, 'EGL_TILE_COPY': <enum _GEGL_TILE_LAST_0_4_8_COMMAND of type Gegl.TileCommand>, 'EGL_TILE_LAST_COMMAND': <enum GEGL_TILE_LAST_COMMAND of type Gegl.TileCommand>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGeglTileCommand (420747408)>'
-    __info__ = gi.EnumInfo(TileCommand)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'EGL_TILE_IDLE': <TileCommand.EGL_TILE_IDLE: 0>, 'EGL_TILE_SET': <TileCommand.EGL_TILE_SET: 1>, 'EGL_TILE_GET': <TileCommand.EGL_TILE_GET: 2>, 'EGL_TILE_IS_CACHED': <TileCommand.EGL_TILE_IS_CACHED: 3>, 'EGL_TILE_EXIST': <TileCommand.EGL_TILE_EXIST: 4>, 'EGL_TILE_VOID': <TileCommand.EGL_TILE_VOID: 5>, 'EGL_TILE_FLUSH': <TileCommand.EGL_TILE_FLUSH: 6>, 'EGL_TILE_REFETCH': <TileCommand.EGL_TILE_REFETCH: 7>, 'EGL_TILE_REINIT': <TileCommand.EGL_TILE_REINIT: 8>, 'GEGL_TILE_LAST_0_4_8_COMMAND': <TileCommand.GEGL_TILE_LAST_0_4_8_COMMAND: 9>, 'EGL_TILE_COPY': <TileCommand.GEGL_TILE_LAST_0_4_8_COMMAND: 9>, 'EGL_TILE_LAST_COMMAND': <TileCommand.EGL_TILE_LAST_COMMAND: 10>})"
+    __name__ = 'TileCommand'
+    __qualname__ = 'TileCommand'
 
 

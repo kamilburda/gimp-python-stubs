@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -34,6 +39,10 @@ class Resource(__gi.Boxed):
         """ get_info(self, path:str, lookup_flags:Gio.ResourceLookupFlags) -> bool, size:int, flags:int """
         return False
 
+    def has_children(self, path): # real signature unknown; restored from __doc__
+        """ has_children(self, path:str) -> bool """
+        return False
+
     def load(self, filename): # real signature unknown; restored from __doc__
         """ load(filename:str) -> Gio.Resource """
         pass
@@ -42,7 +51,8 @@ class Resource(__gi.Boxed):
         """ lookup_data(self, path:str, lookup_flags:Gio.ResourceLookupFlags) -> GLib.Bytes """
         pass
 
-    def new_from_data(self, data): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_data(cls, data): # real signature unknown; restored from __doc__
         """ new_from_data(data:GLib.Bytes) -> Gio.Resource """
         pass
 
@@ -82,7 +92,11 @@ class Resource(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -173,8 +187,8 @@ class Resource(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Resource), '__module__': 'gi.repository.Gio', '__gtype__': <GType GResource (2466393984)>, '__dict__': <attribute '__dict__' of 'Resource' objects>, '__weakref__': <attribute '__weakref__' of 'Resource' objects>, '__doc__': None, 'new_from_data': gi.FunctionInfo(new_from_data, bound=None), '_register': gi.FunctionInfo(_register, bound=None), '_unregister': gi.FunctionInfo(_unregister, bound=None), 'enumerate_children': gi.FunctionInfo(enumerate_children, bound=None), 'get_info': gi.FunctionInfo(get_info, bound=None), 'lookup_data': gi.FunctionInfo(lookup_data, bound=None), 'open_stream': gi.FunctionInfo(open_stream, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'load': gi.FunctionInfo(load, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GResource (2466393984)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Resource), '__module__': 'gi.repository.Gio', '__gtype__': <GType GResource (1841602256)>, '__dict__': <attribute '__dict__' of 'Resource' objects>, '__weakref__': <attribute '__weakref__' of 'Resource' objects>, '__doc__': None, 'new_from_data': <classmethod(gi.FunctionInfo(new_from_data))>, '_register': gi.FunctionInfo(_register), '_unregister': gi.FunctionInfo(_unregister), 'enumerate_children': gi.FunctionInfo(enumerate_children), 'get_info': gi.FunctionInfo(get_info), 'has_children': gi.FunctionInfo(has_children), 'lookup_data': gi.FunctionInfo(lookup_data), 'open_stream': gi.FunctionInfo(open_stream), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), 'load': <staticmethod(gi.FunctionInfo(load))>})"
+    __gtype__ = None # (!) real value is '<GType GResource (1841602256)>'
     __info__ = StructInfo(Resource)
 
 

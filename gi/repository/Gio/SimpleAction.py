@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -55,7 +60,7 @@ class SimpleAction(__gi_overrides_GObject.Object, Action):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -83,6 +88,9 @@ class SimpleAction(__gi_overrides_GObject.Object, Action):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -230,7 +238,8 @@ class SimpleAction(__gi_overrides_GObject.Object, Action):
         """ name_is_valid(action_name:str) -> bool """
         return False
 
-    def new(self, name, parameter_type=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, name, parameter_type=None): # real signature unknown; restored from __doc__
         """ new(name:str, parameter_type:GLib.VariantType=None) -> Gio.SimpleAction """
         pass
 
@@ -238,7 +247,8 @@ class SimpleAction(__gi_overrides_GObject.Object, Action):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_stateful(self, name, parameter_type=None, state): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_stateful(cls, name, parameter_type=None, state): # real signature unknown; restored from __doc__
         """ new_stateful(name:str, parameter_type:GLib.VariantType=None, state:GLib.Variant) -> Gio.SimpleAction """
         pass
 
@@ -335,20 +345,20 @@ class SimpleAction(__gi_overrides_GObject.Object, Action):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -378,7 +388,11 @@ class SimpleAction(__gi_overrides_GObject.Object, Action):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -479,12 +493,12 @@ class SimpleAction(__gi_overrides_GObject.Object, Action):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb52d0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70862e30>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(SimpleAction), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSimpleAction (2466389168)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_stateful': gi.FunctionInfo(new_stateful, bound=None), 'set_enabled': gi.FunctionInfo(set_enabled, bound=None), 'set_state': gi.FunctionInfo(set_state, bound=None), 'set_state_hint': gi.FunctionInfo(set_state_hint, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(SimpleAction), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSimpleAction (1841604848)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_stateful': <classmethod(gi.FunctionInfo(new_stateful))>, 'set_enabled': gi.FunctionInfo(set_enabled), 'set_state': gi.FunctionInfo(set_state), 'set_state_hint': gi.FunctionInfo(set_state_hint)})"
     __gdoc__ = 'Object GSimpleAction\n\nSignals from GSimpleAction:\n  activate (GVariant)\n  change-state (GVariant)\n\nProperties from GSimpleAction:\n  name -> gchararray: name\n  parameter-type -> GVariantType: parameter-type\n  enabled -> gboolean: enabled\n  state-type -> GVariantType: state-type\n  state -> GVariant: state\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GSimpleAction (2466389168)>'
+    __gtype__ = None # (!) real value is '<GType GSimpleAction (1841604848)>'
     __info__ = ObjectInfo(SimpleAction)
 
 

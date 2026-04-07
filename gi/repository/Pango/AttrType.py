@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,12 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class AttrType(__gobject.GEnum):
+class AttrType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -73,22 +71,14 @@ class AttrType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
         pass
 
-    def get_name(self, type): # real signature unknown; restored from __doc__
-        """ get_name(type:Pango.AttrType) -> str or None """
-        return ""
-
     def is_integer(self, *args, **kwargs): # real signature unknown
         """ Returns True. Exists for duck type compatibility with float.is_integer. """
-        pass
-
-    def register(self, name): # real signature unknown; restored from __doc__
-        """ register(name:str) -> Pango.AttrType """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -104,7 +94,7 @@ class AttrType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -132,12 +122,23 @@ class AttrType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -166,6 +167,10 @@ class AttrType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -211,6 +216,14 @@ class AttrType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -236,8 +249,8 @@ class AttrType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -268,15 +281,16 @@ class AttrType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -340,7 +354,7 @@ class AttrType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -382,10 +396,6 @@ class AttrType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ABSOLUTE_LINE_HEIGHT = 32
     ABSOLUTE_SIZE = 20
@@ -425,49 +435,9 @@ class AttrType(__gobject.GEnum):
     VARIANT = 5
     WEIGHT = 4
     WORD = 34
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Pango', '__dict__': <attribute '__dict__' of 'AttrType' objects>, '__doc__': None, '__gtype__': <GType PangoAttrType (4081756912)>, '__enum_values__': {0: <enum PANGO_ATTR_INVALID of type Pango.AttrType>, 1: <enum PANGO_ATTR_LANGUAGE of type Pango.AttrType>, 2: <enum PANGO_ATTR_FAMILY of type Pango.AttrType>, 3: <enum PANGO_ATTR_STYLE of type Pango.AttrType>, 4: <enum PANGO_ATTR_WEIGHT of type Pango.AttrType>, 5: <enum PANGO_ATTR_VARIANT of type Pango.AttrType>, 6: <enum PANGO_ATTR_STRETCH of type Pango.AttrType>, 7: <enum PANGO_ATTR_SIZE of type Pango.AttrType>, 8: <enum PANGO_ATTR_FONT_DESC of type Pango.AttrType>, 9: <enum PANGO_ATTR_FOREGROUND of type Pango.AttrType>, 10: <enum PANGO_ATTR_BACKGROUND of type Pango.AttrType>, 11: <enum PANGO_ATTR_UNDERLINE of type Pango.AttrType>, 12: <enum PANGO_ATTR_STRIKETHROUGH of type Pango.AttrType>, 13: <enum PANGO_ATTR_RISE of type Pango.AttrType>, 14: <enum PANGO_ATTR_SHAPE of type Pango.AttrType>, 15: <enum PANGO_ATTR_SCALE of type Pango.AttrType>, 16: <enum PANGO_ATTR_FALLBACK of type Pango.AttrType>, 17: <enum PANGO_ATTR_LETTER_SPACING of type Pango.AttrType>, 18: <enum PANGO_ATTR_UNDERLINE_COLOR of type Pango.AttrType>, 19: <enum PANGO_ATTR_STRIKETHROUGH_COLOR of type Pango.AttrType>, 20: <enum PANGO_ATTR_ABSOLUTE_SIZE of type Pango.AttrType>, 21: <enum PANGO_ATTR_GRAVITY of type Pango.AttrType>, 22: <enum PANGO_ATTR_GRAVITY_HINT of type Pango.AttrType>, 23: <enum PANGO_ATTR_FONT_FEATURES of type Pango.AttrType>, 24: <enum PANGO_ATTR_FOREGROUND_ALPHA of type Pango.AttrType>, 25: <enum PANGO_ATTR_BACKGROUND_ALPHA of type Pango.AttrType>, 26: <enum PANGO_ATTR_ALLOW_BREAKS of type Pango.AttrType>, 27: <enum PANGO_ATTR_SHOW of type Pango.AttrType>, 28: <enum PANGO_ATTR_INSERT_HYPHENS of type Pango.AttrType>, 29: <enum PANGO_ATTR_OVERLINE of type Pango.AttrType>, 30: <enum PANGO_ATTR_OVERLINE_COLOR of type Pango.AttrType>, 31: <enum PANGO_ATTR_LINE_HEIGHT of type Pango.AttrType>, 32: <enum PANGO_ATTR_ABSOLUTE_LINE_HEIGHT of type Pango.AttrType>, 33: <enum PANGO_ATTR_TEXT_TRANSFORM of type Pango.AttrType>, 34: <enum PANGO_ATTR_WORD of type Pango.AttrType>, 35: <enum PANGO_ATTR_SENTENCE of type Pango.AttrType>, 36: <enum PANGO_ATTR_BASELINE_SHIFT of type Pango.AttrType>, 37: <enum PANGO_ATTR_FONT_SCALE of type Pango.AttrType>}, '__info__': gi.EnumInfo(AttrType), 'INVALID': <enum PANGO_ATTR_INVALID of type Pango.AttrType>, 'LANGUAGE': <enum PANGO_ATTR_LANGUAGE of type Pango.AttrType>, 'FAMILY': <enum PANGO_ATTR_FAMILY of type Pango.AttrType>, 'STYLE': <enum PANGO_ATTR_STYLE of type Pango.AttrType>, 'WEIGHT': <enum PANGO_ATTR_WEIGHT of type Pango.AttrType>, 'VARIANT': <enum PANGO_ATTR_VARIANT of type Pango.AttrType>, 'STRETCH': <enum PANGO_ATTR_STRETCH of type Pango.AttrType>, 'SIZE': <enum PANGO_ATTR_SIZE of type Pango.AttrType>, 'FONT_DESC': <enum PANGO_ATTR_FONT_DESC of type Pango.AttrType>, 'FOREGROUND': <enum PANGO_ATTR_FOREGROUND of type Pango.AttrType>, 'BACKGROUND': <enum PANGO_ATTR_BACKGROUND of type Pango.AttrType>, 'UNDERLINE': <enum PANGO_ATTR_UNDERLINE of type Pango.AttrType>, 'STRIKETHROUGH': <enum PANGO_ATTR_STRIKETHROUGH of type Pango.AttrType>, 'RISE': <enum PANGO_ATTR_RISE of type Pango.AttrType>, 'SHAPE': <enum PANGO_ATTR_SHAPE of type Pango.AttrType>, 'SCALE': <enum PANGO_ATTR_SCALE of type Pango.AttrType>, 'FALLBACK': <enum PANGO_ATTR_FALLBACK of type Pango.AttrType>, 'LETTER_SPACING': <enum PANGO_ATTR_LETTER_SPACING of type Pango.AttrType>, 'UNDERLINE_COLOR': <enum PANGO_ATTR_UNDERLINE_COLOR of type Pango.AttrType>, 'STRIKETHROUGH_COLOR': <enum PANGO_ATTR_STRIKETHROUGH_COLOR of type Pango.AttrType>, 'ABSOLUTE_SIZE': <enum PANGO_ATTR_ABSOLUTE_SIZE of type Pango.AttrType>, 'GRAVITY': <enum PANGO_ATTR_GRAVITY of type Pango.AttrType>, 'GRAVITY_HINT': <enum PANGO_ATTR_GRAVITY_HINT of type Pango.AttrType>, 'FONT_FEATURES': <enum PANGO_ATTR_FONT_FEATURES of type Pango.AttrType>, 'FOREGROUND_ALPHA': <enum PANGO_ATTR_FOREGROUND_ALPHA of type Pango.AttrType>, 'BACKGROUND_ALPHA': <enum PANGO_ATTR_BACKGROUND_ALPHA of type Pango.AttrType>, 'ALLOW_BREAKS': <enum PANGO_ATTR_ALLOW_BREAKS of type Pango.AttrType>, 'SHOW': <enum PANGO_ATTR_SHOW of type Pango.AttrType>, 'INSERT_HYPHENS': <enum PANGO_ATTR_INSERT_HYPHENS of type Pango.AttrType>, 'OVERLINE': <enum PANGO_ATTR_OVERLINE of type Pango.AttrType>, 'OVERLINE_COLOR': <enum PANGO_ATTR_OVERLINE_COLOR of type Pango.AttrType>, 'LINE_HEIGHT': <enum PANGO_ATTR_LINE_HEIGHT of type Pango.AttrType>, 'ABSOLUTE_LINE_HEIGHT': <enum PANGO_ATTR_ABSOLUTE_LINE_HEIGHT of type Pango.AttrType>, 'TEXT_TRANSFORM': <enum PANGO_ATTR_TEXT_TRANSFORM of type Pango.AttrType>, 'WORD': <enum PANGO_ATTR_WORD of type Pango.AttrType>, 'SENTENCE': <enum PANGO_ATTR_SENTENCE of type Pango.AttrType>, 'BASELINE_SHIFT': <enum PANGO_ATTR_BASELINE_SHIFT of type Pango.AttrType>, 'FONT_SCALE': <enum PANGO_ATTR_FONT_SCALE of type Pango.AttrType>, 'get_name': gi.FunctionInfo(get_name, bound=None), 'register': gi.FunctionInfo(register, bound=None)})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-        30: 30,
-        31: 31,
-        32: 32,
-        33: 33,
-        34: 34,
-        35: 35,
-        36: 36,
-        37: 37,
-    }
-    __gtype__ = None # (!) real value is '<GType PangoAttrType (4081756912)>'
-    __info__ = gi.EnumInfo(AttrType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'INVALID': <AttrType.INVALID: 0>, 'LANGUAGE': <AttrType.LANGUAGE: 1>, 'FAMILY': <AttrType.FAMILY: 2>, 'STYLE': <AttrType.STYLE: 3>, 'WEIGHT': <AttrType.WEIGHT: 4>, 'VARIANT': <AttrType.VARIANT: 5>, 'STRETCH': <AttrType.STRETCH: 6>, 'SIZE': <AttrType.SIZE: 7>, 'FONT_DESC': <AttrType.FONT_DESC: 8>, 'FOREGROUND': <AttrType.FOREGROUND: 9>, 'BACKGROUND': <AttrType.BACKGROUND: 10>, 'UNDERLINE': <AttrType.UNDERLINE: 11>, 'STRIKETHROUGH': <AttrType.STRIKETHROUGH: 12>, 'RISE': <AttrType.RISE: 13>, 'SHAPE': <AttrType.SHAPE: 14>, 'SCALE': <AttrType.SCALE: 15>, 'FALLBACK': <AttrType.FALLBACK: 16>, 'LETTER_SPACING': <AttrType.LETTER_SPACING: 17>, 'UNDERLINE_COLOR': <AttrType.UNDERLINE_COLOR: 18>, 'STRIKETHROUGH_COLOR': <AttrType.STRIKETHROUGH_COLOR: 19>, 'ABSOLUTE_SIZE': <AttrType.ABSOLUTE_SIZE: 20>, 'GRAVITY': <AttrType.GRAVITY: 21>, 'GRAVITY_HINT': <AttrType.GRAVITY_HINT: 22>, 'FONT_FEATURES': <AttrType.FONT_FEATURES: 23>, 'FOREGROUND_ALPHA': <AttrType.FOREGROUND_ALPHA: 24>, 'BACKGROUND_ALPHA': <AttrType.BACKGROUND_ALPHA: 25>, 'ALLOW_BREAKS': <AttrType.ALLOW_BREAKS: 26>, 'SHOW': <AttrType.SHOW: 27>, 'INSERT_HYPHENS': <AttrType.INSERT_HYPHENS: 28>, 'OVERLINE': <AttrType.OVERLINE: 29>, 'OVERLINE_COLOR': <AttrType.OVERLINE_COLOR: 30>, 'LINE_HEIGHT': <AttrType.LINE_HEIGHT: 31>, 'ABSOLUTE_LINE_HEIGHT': <AttrType.ABSOLUTE_LINE_HEIGHT: 32>, 'TEXT_TRANSFORM': <AttrType.TEXT_TRANSFORM: 33>, 'WORD': <AttrType.WORD: 34>, 'SENTENCE': <AttrType.SENTENCE: 35>, 'BASELINE_SHIFT': <AttrType.BASELINE_SHIFT: 36>, 'FONT_SCALE': <AttrType.FONT_SCALE: 37>})"
+    __name__ = 'AttrType'
+    __qualname__ = 'AttrType'
 
 

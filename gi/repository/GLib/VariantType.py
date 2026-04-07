@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class VariantType(__gi.Boxed):
@@ -49,7 +47,7 @@ class VariantType(__gi.Boxed):
         return False
 
     def first(self): # real signature unknown; restored from __doc__
-        """ first(self) -> GLib.VariantType """
+        """ first(self) -> GLib.VariantType or None """
         pass
 
     def free(self): # real signature unknown; restored from __doc__
@@ -104,28 +102,33 @@ class VariantType(__gi.Boxed):
         """ key(self) -> GLib.VariantType """
         pass
 
-    def new(self, type_string): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, type_string): # real signature unknown; restored from __doc__
         """ new(type_string:str) -> GLib.VariantType """
         pass
 
-    def new_array(self, element): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_array(cls, element): # real signature unknown; restored from __doc__
         """ new_array(element:GLib.VariantType) -> GLib.VariantType """
         pass
 
-    def new_dict_entry(self, key, value): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_dict_entry(cls, key, value): # real signature unknown; restored from __doc__
         """ new_dict_entry(key:GLib.VariantType, value:GLib.VariantType) -> GLib.VariantType """
         pass
 
-    def new_maybe(self, element): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_maybe(cls, element): # real signature unknown; restored from __doc__
         """ new_maybe(element:GLib.VariantType) -> GLib.VariantType """
         pass
 
-    def new_tuple(self, items): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_tuple(cls, items): # real signature unknown; restored from __doc__
         """ new_tuple(items:list) -> GLib.VariantType """
         pass
 
     def next(self): # real signature unknown; restored from __doc__
-        """ next(self) -> GLib.VariantType """
+        """ next(self) -> GLib.VariantType or None """
         pass
 
     def n_items(self): # real signature unknown; restored from __doc__
@@ -260,8 +263,8 @@ class VariantType(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VariantType), '__module__': 'gi.repository.GLib', '__gtype__': <GType GVariantType (155123872)>, '__dict__': <attribute '__dict__' of 'VariantType' objects>, '__weakref__': <attribute '__weakref__' of 'VariantType' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'new_array': gi.FunctionInfo(new_array, bound=None), 'new_dict_entry': gi.FunctionInfo(new_dict_entry, bound=None), 'new_maybe': gi.FunctionInfo(new_maybe, bound=None), 'new_tuple': gi.FunctionInfo(new_tuple, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'dup_string': gi.FunctionInfo(dup_string, bound=None), 'element': gi.FunctionInfo(element, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'first': gi.FunctionInfo(first, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_string_length': gi.FunctionInfo(get_string_length, bound=None), 'hash': gi.FunctionInfo(hash, bound=None), 'is_array': gi.FunctionInfo(is_array, bound=None), 'is_basic': gi.FunctionInfo(is_basic, bound=None), 'is_container': gi.FunctionInfo(is_container, bound=None), 'is_definite': gi.FunctionInfo(is_definite, bound=None), 'is_dict_entry': gi.FunctionInfo(is_dict_entry, bound=None), 'is_maybe': gi.FunctionInfo(is_maybe, bound=None), 'is_subtype_of': gi.FunctionInfo(is_subtype_of, bound=None), 'is_tuple': gi.FunctionInfo(is_tuple, bound=None), 'is_variant': gi.FunctionInfo(is_variant, bound=None), 'key': gi.FunctionInfo(key, bound=None), 'n_items': gi.FunctionInfo(n_items, bound=None), 'next': gi.FunctionInfo(next, bound=None), 'value': gi.FunctionInfo(value, bound=None), 'checked_': gi.FunctionInfo(checked_, bound=None), 'string_get_depth_': gi.FunctionInfo(string_get_depth_, bound=None), 'string_is_valid': gi.FunctionInfo(string_is_valid, bound=None), 'string_scan': gi.FunctionInfo(string_scan, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GVariantType (155123872)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VariantType), '__module__': 'gi.repository.GLib', '__gtype__': <GType GVariantType (2640518784)>, '__dict__': <attribute '__dict__' of 'VariantType' objects>, '__weakref__': <attribute '__weakref__' of 'VariantType' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_array': <classmethod(gi.FunctionInfo(new_array))>, 'new_dict_entry': <classmethod(gi.FunctionInfo(new_dict_entry))>, 'new_maybe': <classmethod(gi.FunctionInfo(new_maybe))>, 'new_tuple': <classmethod(gi.FunctionInfo(new_tuple))>, 'copy': gi.FunctionInfo(copy), 'dup_string': gi.FunctionInfo(dup_string), 'element': gi.FunctionInfo(element), 'equal': gi.FunctionInfo(equal), 'first': gi.FunctionInfo(first), 'free': gi.FunctionInfo(free), 'get_string_length': gi.FunctionInfo(get_string_length), 'hash': gi.FunctionInfo(hash), 'is_array': gi.FunctionInfo(is_array), 'is_basic': gi.FunctionInfo(is_basic), 'is_container': gi.FunctionInfo(is_container), 'is_definite': gi.FunctionInfo(is_definite), 'is_dict_entry': gi.FunctionInfo(is_dict_entry), 'is_maybe': gi.FunctionInfo(is_maybe), 'is_subtype_of': gi.FunctionInfo(is_subtype_of), 'is_tuple': gi.FunctionInfo(is_tuple), 'is_variant': gi.FunctionInfo(is_variant), 'key': gi.FunctionInfo(key), 'n_items': gi.FunctionInfo(n_items), 'next': gi.FunctionInfo(next), 'value': gi.FunctionInfo(value), 'checked_': <staticmethod(gi.FunctionInfo(checked_))>, 'string_get_depth_': <staticmethod(gi.FunctionInfo(string_get_depth_))>, 'string_is_valid': <staticmethod(gi.FunctionInfo(string_is_valid))>, 'string_scan': <staticmethod(gi.FunctionInfo(string_scan))>, '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GVariantType (2640518784)>'
     __info__ = StructInfo(VariantType)
 
 

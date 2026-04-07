@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -51,20 +50,20 @@ class Style(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -89,8 +88,14 @@ class Style(__gi_overrides_GObject.Object):
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_copy(self, *args, **kwargs): # real signature unknown
         """ copy(self, src:Gtk.Style) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_draw_arrow(self, *args, **kwargs): # real signature unknown
@@ -212,17 +217,17 @@ class Style(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -251,20 +256,20 @@ class Style(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -326,7 +331,8 @@ class Style(__gi_overrides_GObject.Object):
         """ lookup_icon_set(self, stock_id:str) -> Gtk.IconSet """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.Style """
         pass
 
@@ -415,20 +421,20 @@ class Style(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -604,12 +610,14 @@ class Style(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ecece1d5a0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd190e0b0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Style), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkStyle (3867804464)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'apply_default_background': gi.FunctionInfo(apply_default_background, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'detach': gi.FunctionInfo(detach, bound=None), 'get_style_property': gi.FunctionInfo(get_style_property, bound=None), 'has_context': gi.FunctionInfo(has_context, bound=None), 'lookup_color': gi.FunctionInfo(lookup_color, bound=None), 'lookup_icon_set': gi.FunctionInfo(lookup_icon_set, bound=None), 'render_icon': gi.FunctionInfo(render_icon, bound=None), 'set_background': gi.FunctionInfo(set_background, bound=None), 'do_copy': gi.VFuncInfo(copy, bound=None), 'do_draw_arrow': gi.VFuncInfo(draw_arrow, bound=None), 'do_draw_box': gi.VFuncInfo(draw_box, bound=None), 'do_draw_box_gap': gi.VFuncInfo(draw_box_gap, bound=None), 'do_draw_check': gi.VFuncInfo(draw_check, bound=None), 'do_draw_diamond': gi.VFuncInfo(draw_diamond, bound=None), 'do_draw_expander': gi.VFuncInfo(draw_expander, bound=None), 'do_draw_extension': gi.VFuncInfo(draw_extension, bound=None), 'do_draw_flat_box': gi.VFuncInfo(draw_flat_box, bound=None), 'do_draw_focus': gi.VFuncInfo(draw_focus, bound=None), 'do_draw_handle': gi.VFuncInfo(draw_handle, bound=None), 'do_draw_hline': gi.VFuncInfo(draw_hline, bound=None), 'do_draw_layout': gi.VFuncInfo(draw_layout, bound=None), 'do_draw_option': gi.VFuncInfo(draw_option, bound=None), 'do_draw_resize_grip': gi.VFuncInfo(draw_resize_grip, bound=None), 'do_draw_shadow': gi.VFuncInfo(draw_shadow, bound=None), 'do_draw_shadow_gap': gi.VFuncInfo(draw_shadow_gap, bound=None), 'do_draw_slider': gi.VFuncInfo(draw_slider, bound=None), 'do_draw_spinner': gi.VFuncInfo(draw_spinner, bound=None), 'do_draw_tab': gi.VFuncInfo(draw_tab, bound=None), 'do_draw_vline': gi.VFuncInfo(draw_vline, bound=None), 'do_init_from_rc': gi.VFuncInfo(init_from_rc, bound=None), 'do_realize': gi.VFuncInfo(realize, bound=None), 'do_render_icon': gi.VFuncInfo(render_icon, bound=None), 'do_set_background': gi.VFuncInfo(set_background, bound=None), 'do_unrealize': gi.VFuncInfo(unrealize, bound=None), 'parent_instance': <property object at 0x000002ece9b92d40>, 'fg': <property object at 0x000002ece9b92e30>, 'bg': <property object at 0x000002ece9b92f20>, 'light': <property object at 0x000002ece9b93010>, 'dark': <property object at 0x000002ece9b93100>, 'mid': <property object at 0x000002ece9b931f0>, 'text': <property object at 0x000002ece9b932e0>, 'base': <property object at 0x000002ece9b933d0>, 'text_aa': <property object at 0x000002ece9b934c0>, 'black': <property object at 0x000002ece9b935b0>, 'white': <property object at 0x000002ece9b936a0>, 'font_desc': <property object at 0x000002ece9b93790>, 'xthickness': <property object at 0x000002ece9b93880>, 'ythickness': <property object at 0x000002ece9b93970>, 'background': <property object at 0x000002ece9b93a60>, 'attach_count': <property object at 0x000002ece9b93b50>, 'visual': <property object at 0x000002ece9b93c40>, 'private_font_desc': <property object at 0x000002ece9b93d30>, 'rc_style': <property object at 0x000002ece9b93e20>, 'styles': <property object at 0x000002ece9b93f10>, 'property_cache': <property object at 0x000002ece9b7c040>, 'icon_factories': <property object at 0x000002ece9b7c130>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Style), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkStyle (3418528544)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'apply_default_background': gi.FunctionInfo(apply_default_background), 'copy': gi.FunctionInfo(copy), 'detach': gi.FunctionInfo(detach), 'get_style_property': gi.FunctionInfo(get_style_property), 'has_context': gi.FunctionInfo(has_context), 'lookup_color': gi.FunctionInfo(lookup_color), 'lookup_icon_set': gi.FunctionInfo(lookup_icon_set), 'render_icon': gi.FunctionInfo(render_icon), 'set_background': gi.FunctionInfo(set_background), 'do_copy': gi.VFuncInfo(copy), 'do_draw_arrow': gi.VFuncInfo(draw_arrow), 'do_draw_box': gi.VFuncInfo(draw_box), 'do_draw_box_gap': gi.VFuncInfo(draw_box_gap), 'do_draw_check': gi.VFuncInfo(draw_check), 'do_draw_diamond': gi.VFuncInfo(draw_diamond), 'do_draw_expander': gi.VFuncInfo(draw_expander), 'do_draw_extension': gi.VFuncInfo(draw_extension), 'do_draw_flat_box': gi.VFuncInfo(draw_flat_box), 'do_draw_focus': gi.VFuncInfo(draw_focus), 'do_draw_handle': gi.VFuncInfo(draw_handle), 'do_draw_hline': gi.VFuncInfo(draw_hline), 'do_draw_layout': gi.VFuncInfo(draw_layout), 'do_draw_option': gi.VFuncInfo(draw_option), 'do_draw_resize_grip': gi.VFuncInfo(draw_resize_grip), 'do_draw_shadow': gi.VFuncInfo(draw_shadow), 'do_draw_shadow_gap': gi.VFuncInfo(draw_shadow_gap), 'do_draw_slider': gi.VFuncInfo(draw_slider), 'do_draw_spinner': gi.VFuncInfo(draw_spinner), 'do_draw_tab': gi.VFuncInfo(draw_tab), 'do_draw_vline': gi.VFuncInfo(draw_vline), 'do_init_from_rc': gi.VFuncInfo(init_from_rc), 'do_realize': gi.VFuncInfo(realize), 'do_render_icon': gi.VFuncInfo(render_icon), 'do_set_background': gi.VFuncInfo(set_background), 'do_unrealize': gi.VFuncInfo(unrealize), 'parent_instance': <property object at 0x000002bfd39fd3f0>, 'fg': <property object at 0x000002bfd39fd4e0>, 'bg': <property object at 0x000002bfd39fd5d0>, 'light': <property object at 0x000002bfd39fd6c0>, 'dark': <property object at 0x000002bfd39fd7b0>, 'mid': <property object at 0x000002bfd39fd8a0>, 'text': <property object at 0x000002bfd39fd990>, 'base': <property object at 0x000002bfd39fda80>, 'text_aa': <property object at 0x000002bfd39fdb70>, 'black': <property object at 0x000002bfd39fdc60>, 'white': <property object at 0x000002bfd39fdd50>, 'font_desc': <property object at 0x000002bfd39fde40>, 'xthickness': <property object at 0x000002bfd39fdf30>, 'ythickness': <property object at 0x000002bfd39fe020>, 'background': <property object at 0x000002bfd39fe110>, 'attach_count': <property object at 0x000002bfd39fe200>, 'visual': <property object at 0x000002bfd39fe2f0>, 'private_font_desc': <property object at 0x000002bfd39fe3e0>, 'rc_style': <property object at 0x000002bfd39fe4d0>, 'styles': <property object at 0x000002bfd39fe5c0>, 'property_cache': <property object at 0x000002bfd39fe6b0>, 'icon_factories': <property object at 0x000002bfd39fe7a0>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkStyle\n\nSignals from GtkStyle:\n  realize ()\n  unrealize ()\n\nProperties from GtkStyle:\n  context -> GtkStyleContext: Style context\n    GtkStyleContext to get style from\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkStyle (3867804464)>'
+    __gtype__ = None # (!) real value is '<GType GtkStyle (3418528544)>'
     __info__ = ObjectInfo(Style)
+    __static_attributes__ = ()
 
 

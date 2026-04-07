@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,28 +35,28 @@ class ActionGroup(ActionGroup):
     def add_actions(self, entries, user_data=None): # reliably restored by inspect
         """
         The add_actions() method is a convenience method that creates a number
-                    of gtk.Action  objects based on the information in the list of action
-                    entry tuples contained in entries and adds them to the action group.
-                    The entry tuples can vary in size from one to six items with the
-                    following information:
+        of gtk.Action  objects based on the information in the list of action
+        entry tuples contained in entries and adds them to the action group.
+        The entry tuples can vary in size from one to six items with the
+        following information:
         
-                        * The name of the action. Must be specified.
-                        * The stock id for the action. Optional with a default value of None
-                          if a label is specified.
-                        * The label for the action. This field should typically be marked
-                          for translation, see the set_translation_domain() method. Optional
-                          with a default value of None if a stock id is specified.
-                        * The accelerator for the action, in the format understood by the
-                          gtk.accelerator_parse() function. Optional with a default value of
-                          None.
-                        * The tooltip for the action. This field should typically be marked
-                          for translation, see the set_translation_domain() method. Optional
-                          with a default value of None.
-                        * The callback function invoked when the action is activated.
-                          Optional with a default value of None.
+            * The name of the action. Must be specified.
+            * The stock id for the action. Optional with a default value of None
+              if a label is specified.
+            * The label for the action. This field should typically be marked
+              for translation, see the set_translation_domain() method. Optional
+              with a default value of None if a stock id is specified.
+            * The accelerator for the action, in the format understood by the
+              gtk.accelerator_parse() function. Optional with a default value of
+              None.
+            * The tooltip for the action. This field should typically be marked
+              for translation, see the set_translation_domain() method. Optional
+              with a default value of None.
+            * The callback function invoked when the action is activated.
+              Optional with a default value of None.
         
-                    The "activate" signals of the actions are connected to the callbacks and
-                    their accel paths are set to <Actions>/group-name/action-name.
+        The "activate" signals of the actions are connected to the callbacks and
+        their accel paths are set to <Actions>/group-name/action-name.
         """
         pass
 
@@ -72,60 +71,60 @@ class ActionGroup(ActionGroup):
     def add_radio_actions(self, entries, value=None, on_change=None, user_data=None): # reliably restored by inspect
         """
         The add_radio_actions() method is a convenience method that creates a
-                    number of gtk.RadioAction objects based on the information in the list
-                    of action entry tuples contained in entries and adds them to the action
-                    group. The entry tuples can vary in size from one to six items with the
-                    following information:
+        number of gtk.RadioAction objects based on the information in the list
+        of action entry tuples contained in entries and adds them to the action
+        group. The entry tuples can vary in size from one to six items with the
+        following information:
         
-                        * The name of the action. Must be specified.
-                        * The stock id for the action. Optional with a default value of None
-                          if a label is specified.
-                        * The label for the action. This field should typically be marked
-                          for translation, see the set_translation_domain() method. Optional
-                          with a default value of None if a stock id is specified.
-                        * The accelerator for the action, in the format understood by the
-                          gtk.accelerator_parse() function. Optional with a default value of
-                          None.
-                        * The tooltip for the action. This field should typically be marked
-                          for translation, see the set_translation_domain() method. Optional
-                          with a default value of None.
-                        * The value to set on the radio action. Optional with a default
-                          value of 0. Should be specified in applications.
+            * The name of the action. Must be specified.
+            * The stock id for the action. Optional with a default value of None
+              if a label is specified.
+            * The label for the action. This field should typically be marked
+              for translation, see the set_translation_domain() method. Optional
+              with a default value of None if a stock id is specified.
+            * The accelerator for the action, in the format understood by the
+              gtk.accelerator_parse() function. Optional with a default value of
+              None.
+            * The tooltip for the action. This field should typically be marked
+              for translation, see the set_translation_domain() method. Optional
+              with a default value of None.
+            * The value to set on the radio action. Optional with a default
+              value of 0. Should be specified in applications.
         
-                    The value parameter specifies the radio action that should be set
-                    active. The "changed" signal of the first radio action is connected to
-                    the on_change callback (if specified and not None) and the accel paths
-                    of the actions are set to <Actions>/group-name/action-name.
+        The value parameter specifies the radio action that should be set
+        active. The "changed" signal of the first radio action is connected to
+        the on_change callback (if specified and not None) and the accel paths
+        of the actions are set to <Actions>/group-name/action-name.
         """
         pass
 
     def add_toggle_actions(self, entries, user_data=None): # reliably restored by inspect
         """
         The add_toggle_actions() method is a convenience method that creates a
-                    number of gtk.ToggleAction objects based on the information in the list
-                    of action entry tuples contained in entries and adds them to the action
-                    group. The toggle action entry tuples can vary in size from one to seven
-                    items with the following information:
+        number of gtk.ToggleAction objects based on the information in the list
+        of action entry tuples contained in entries and adds them to the action
+        group. The toggle action entry tuples can vary in size from one to seven
+        items with the following information:
         
-                        * The name of the action. Must be specified.
-                        * The stock id for the action. Optional with a default value of None
-                          if a label is specified.
-                        * The label for the action. This field should typically be marked
-                          for translation, see the set_translation_domain() method. Optional
-                          with a default value of None if a stock id is specified.
-                        * The accelerator for the action, in the format understood by the
-                          gtk.accelerator_parse() function. Optional with a default value of
-                          None.
-                        * The tooltip for the action. This field should typically be marked
-                          for translation, see the set_translation_domain() method. Optional
-                          with a default value of None.
-                        * The callback function invoked when the action is activated.
-                          Optional with a default value of None.
-                        * A flag indicating whether the toggle action is active. Optional
-                          with a default value of False.
+            * The name of the action. Must be specified.
+            * The stock id for the action. Optional with a default value of None
+              if a label is specified.
+            * The label for the action. This field should typically be marked
+              for translation, see the set_translation_domain() method. Optional
+              with a default value of None if a stock id is specified.
+            * The accelerator for the action, in the format understood by the
+              gtk.accelerator_parse() function. Optional with a default value of
+              None.
+            * The tooltip for the action. This field should typically be marked
+              for translation, see the set_translation_domain() method. Optional
+              with a default value of None.
+            * The callback function invoked when the action is activated.
+              Optional with a default value of None.
+            * A flag indicating whether the toggle action is active. Optional
+              with a default value of False.
         
-                    The "activate" signals of the actions are connected to the callbacks and
-                    their accel paths are set to <Actions>/group-name/action-name.
+        The "activate" signals of the actions are connected to the callbacks and
+        their accel paths are set to <Actions>/group-name/action-name.
         """
         pass
 
@@ -149,20 +148,20 @@ class ActionGroup(ActionGroup):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -195,6 +194,12 @@ class ActionGroup(ActionGroup):
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_get_action(self, *args, **kwargs): # real signature unknown
         """ get_action(self, action_name:str) -> Gtk.Action """
         pass
@@ -218,17 +223,17 @@ class ActionGroup(ActionGroup):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -277,20 +282,20 @@ class ActionGroup(ActionGroup):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -465,20 +470,20 @@ class ActionGroup(ActionGroup):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -547,7 +552,7 @@ class ActionGroup(ActionGroup):
     def __init__(self, *args, **kwargs): # reliably restored by inspect
         """
         Initializer for a GObject based classes with support for property
-                sets through the use of explicit keyword arguments.
+        sets through the use of explicit keyword arguments.
         """
         pass
 
@@ -621,12 +626,14 @@ class ActionGroup(ActionGroup):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ece6da2b30>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17e2140>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__init__': <function deprecated_init.<locals>.new_init at 0x000002ece8a90f40>, 'add_actions': <function ActionGroup.add_actions at 0x000002ece8a90fe0>, 'add_toggle_actions': <function ActionGroup.add_toggle_actions at 0x000002ece8a91080>, 'add_radio_actions': <function ActionGroup.add_radio_actions at 0x000002ece8a91120>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__firstlineno__': 241, '__init__': <function deprecated_init.<locals>.new_init at 0x000002bfce4d6350>, 'add_actions': <function ActionGroup.add_actions at 0x000002bfce4d6400>, 'add_toggle_actions': <function ActionGroup.add_toggle_actions at 0x000002bfce4d64b0>, 'add_radio_actions': <function ActionGroup.add_radio_actions at 0x000002bfce4d6560>, '__static_attributes__': (), '__doc__': None, '__gsignals__': {}})"
+    __firstlineno__ = 241
     __gdoc__ = 'Object GtkActionGroup\n\nSignals from GtkActionGroup:\n  connect-proxy (GtkAction, GtkWidget)\n  disconnect-proxy (GtkAction, GtkWidget)\n  pre-activate (GtkAction)\n  post-activate (GtkAction)\n\nProperties from GtkActionGroup:\n  name -> gchararray: Name\n    A name for the action group.\n  sensitive -> gboolean: Sensitive\n    Whether the action group is enabled.\n  visible -> gboolean: Visible\n    Whether the action group is visible.\n  accel-group -> GtkAccelGroup: Accelerator Group\n    The accelerator group the actions of this group should use.\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkActionGroup (3867798864)>'
+    __gtype__ = None # (!) real value is '<GType GtkActionGroup (3425467920)>'
     __info__ = ObjectInfo(ActionGroup)
+    __static_attributes__ = ()
 
 

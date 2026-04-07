@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -47,20 +46,20 @@ class IconInfo(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -75,6 +74,12 @@ class IconInfo(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -96,17 +101,17 @@ class IconInfo(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -159,20 +164,20 @@ class IconInfo(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -274,7 +279,8 @@ class IconInfo(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_for_pixbuf(self, icon_theme, pixbuf): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_for_pixbuf(cls, icon_theme, pixbuf): # real signature unknown; restored from __doc__
         """ new_for_pixbuf(icon_theme:Gtk.IconTheme, pixbuf:GdkPixbuf.Pixbuf) -> Gtk.IconInfo """
         pass
 
@@ -355,20 +361,20 @@ class IconInfo(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -500,12 +506,14 @@ class IconInfo(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002eceab9dbd0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd1905c00>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(IconInfo), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkIconInfo (3923970848)>, '__doc__': None, '__gsignals__': {}, 'new_for_pixbuf': gi.FunctionInfo(new_for_pixbuf, bound=None), 'get_attach_points': gi.FunctionInfo(get_attach_points, bound=None), 'get_base_scale': gi.FunctionInfo(get_base_scale, bound=None), 'get_base_size': gi.FunctionInfo(get_base_size, bound=None), 'get_builtin_pixbuf': gi.FunctionInfo(get_builtin_pixbuf, bound=None), 'get_display_name': gi.FunctionInfo(get_display_name, bound=None), 'get_embedded_rect': gi.FunctionInfo(get_embedded_rect, bound=None), 'get_filename': gi.FunctionInfo(get_filename, bound=None), 'is_symbolic': gi.FunctionInfo(is_symbolic, bound=None), 'load_icon': gi.FunctionInfo(load_icon, bound=None), 'load_icon_async': gi.FunctionInfo(load_icon_async, bound=None), 'load_icon_finish': gi.FunctionInfo(load_icon_finish, bound=None), 'load_surface': gi.FunctionInfo(load_surface, bound=None), 'load_symbolic': gi.FunctionInfo(load_symbolic, bound=None), 'load_symbolic_async': gi.FunctionInfo(load_symbolic_async, bound=None), 'load_symbolic_finish': gi.FunctionInfo(load_symbolic_finish, bound=None), 'load_symbolic_for_context': gi.FunctionInfo(load_symbolic_for_context, bound=None), 'load_symbolic_for_context_async': gi.FunctionInfo(load_symbolic_for_context_async, bound=None), 'load_symbolic_for_context_finish': gi.FunctionInfo(load_symbolic_for_context_finish, bound=None), 'load_symbolic_for_style': gi.FunctionInfo(load_symbolic_for_style, bound=None), 'set_raw_coordinates': gi.FunctionInfo(set_raw_coordinates, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(IconInfo), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkIconInfo (3538515584)>, '__doc__': None, '__gsignals__': {}, 'new_for_pixbuf': <classmethod(gi.FunctionInfo(new_for_pixbuf))>, 'get_attach_points': gi.FunctionInfo(get_attach_points), 'get_base_scale': gi.FunctionInfo(get_base_scale), 'get_base_size': gi.FunctionInfo(get_base_size), 'get_builtin_pixbuf': gi.FunctionInfo(get_builtin_pixbuf), 'get_display_name': gi.FunctionInfo(get_display_name), 'get_embedded_rect': gi.FunctionInfo(get_embedded_rect), 'get_filename': gi.FunctionInfo(get_filename), 'is_symbolic': gi.FunctionInfo(is_symbolic), 'load_icon': gi.FunctionInfo(load_icon), 'load_icon_async': gi.FunctionInfo(load_icon_async), 'load_icon_finish': gi.FunctionInfo(load_icon_finish), 'load_surface': gi.FunctionInfo(load_surface), 'load_symbolic': gi.FunctionInfo(load_symbolic), 'load_symbolic_async': gi.FunctionInfo(load_symbolic_async), 'load_symbolic_finish': gi.FunctionInfo(load_symbolic_finish), 'load_symbolic_for_context': gi.FunctionInfo(load_symbolic_for_context), 'load_symbolic_for_context_async': gi.FunctionInfo(load_symbolic_for_context_async), 'load_symbolic_for_context_finish': gi.FunctionInfo(load_symbolic_for_context_finish), 'load_symbolic_for_style': gi.FunctionInfo(load_symbolic_for_style), 'set_raw_coordinates': gi.FunctionInfo(set_raw_coordinates)})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkIconInfo\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkIconInfo (3923970848)>'
+    __gtype__ = None # (!) real value is '<GType GtkIconInfo (3538515584)>'
     __info__ = ObjectInfo(IconInfo)
+    __static_attributes__ = ()
 
 

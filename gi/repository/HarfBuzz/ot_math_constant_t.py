@@ -1,24 +1,16 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
-class ot_math_constant_t(__gobject.GEnum):
+class ot_math_constant_t(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +69,7 @@ class ot_math_constant_t(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +92,7 @@ class ot_math_constant_t(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +120,23 @@ class ot_math_constant_t(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +165,10 @@ class ot_math_constant_t(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +214,14 @@ class ot_math_constant_t(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +247,8 @@ class ot_math_constant_t(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +279,16 @@ class ot_math_constant_t(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +352,7 @@ class ot_math_constant_t(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -377,10 +393,6 @@ class ot_math_constant_t(__gobject.GEnum):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     ACCENT_BASE_HEIGHT = 6
@@ -439,67 +451,9 @@ class ot_math_constant_t(__gobject.GEnum):
     UNDERBAR_VERTICAL_GAP = 46
     UPPER_LIMIT_BASELINE_RISE_MIN = 19
     UPPER_LIMIT_GAP_MIN = 18
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.HarfBuzz', '__dict__': <attribute '__dict__' of 'ot_math_constant_t' objects>, '__doc__': None, '__gtype__': <GType PyHarfBuzzot_math_constant_t (2667609008)>, '__enum_values__': {0: <enum HB_OT_MATH_CONSTANT_SCRIPT_PERCENT_SCALE_DOWN of type HarfBuzz.ot_math_constant_t>, 1: <enum HB_OT_MATH_CONSTANT_SCRIPT_SCRIPT_PERCENT_SCALE_DOWN of type HarfBuzz.ot_math_constant_t>, 2: <enum HB_OT_MATH_CONSTANT_DELIMITED_SUB_FORMULA_MIN_HEIGHT of type HarfBuzz.ot_math_constant_t>, 3: <enum HB_OT_MATH_CONSTANT_DISPLAY_OPERATOR_MIN_HEIGHT of type HarfBuzz.ot_math_constant_t>, 4: <enum HB_OT_MATH_CONSTANT_MATH_LEADING of type HarfBuzz.ot_math_constant_t>, 5: <enum HB_OT_MATH_CONSTANT_AXIS_HEIGHT of type HarfBuzz.ot_math_constant_t>, 6: <enum HB_OT_MATH_CONSTANT_ACCENT_BASE_HEIGHT of type HarfBuzz.ot_math_constant_t>, 7: <enum HB_OT_MATH_CONSTANT_FLATTENED_ACCENT_BASE_HEIGHT of type HarfBuzz.ot_math_constant_t>, 8: <enum HB_OT_MATH_CONSTANT_SUBSCRIPT_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 9: <enum HB_OT_MATH_CONSTANT_SUBSCRIPT_TOP_MAX of type HarfBuzz.ot_math_constant_t>, 10: <enum HB_OT_MATH_CONSTANT_SUBSCRIPT_BASELINE_DROP_MIN of type HarfBuzz.ot_math_constant_t>, 11: <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 12: <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_SHIFT_UP_CRAMPED of type HarfBuzz.ot_math_constant_t>, 13: <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_BOTTOM_MIN of type HarfBuzz.ot_math_constant_t>, 14: <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_BASELINE_DROP_MAX of type HarfBuzz.ot_math_constant_t>, 15: <enum HB_OT_MATH_CONSTANT_SUB_SUPERSCRIPT_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 16: <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_BOTTOM_MAX_WITH_SUBSCRIPT of type HarfBuzz.ot_math_constant_t>, 17: <enum HB_OT_MATH_CONSTANT_SPACE_AFTER_SCRIPT of type HarfBuzz.ot_math_constant_t>, 18: <enum HB_OT_MATH_CONSTANT_UPPER_LIMIT_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 19: <enum HB_OT_MATH_CONSTANT_UPPER_LIMIT_BASELINE_RISE_MIN of type HarfBuzz.ot_math_constant_t>, 20: <enum HB_OT_MATH_CONSTANT_LOWER_LIMIT_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 21: <enum HB_OT_MATH_CONSTANT_LOWER_LIMIT_BASELINE_DROP_MIN of type HarfBuzz.ot_math_constant_t>, 22: <enum HB_OT_MATH_CONSTANT_STACK_TOP_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 23: <enum HB_OT_MATH_CONSTANT_STACK_TOP_DISPLAY_STYLE_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 24: <enum HB_OT_MATH_CONSTANT_STACK_BOTTOM_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 25: <enum HB_OT_MATH_CONSTANT_STACK_BOTTOM_DISPLAY_STYLE_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 26: <enum HB_OT_MATH_CONSTANT_STACK_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 27: <enum HB_OT_MATH_CONSTANT_STACK_DISPLAY_STYLE_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 28: <enum HB_OT_MATH_CONSTANT_STRETCH_STACK_TOP_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 29: <enum HB_OT_MATH_CONSTANT_STRETCH_STACK_BOTTOM_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 30: <enum HB_OT_MATH_CONSTANT_STRETCH_STACK_GAP_ABOVE_MIN of type HarfBuzz.ot_math_constant_t>, 31: <enum HB_OT_MATH_CONSTANT_STRETCH_STACK_GAP_BELOW_MIN of type HarfBuzz.ot_math_constant_t>, 32: <enum HB_OT_MATH_CONSTANT_FRACTION_NUMERATOR_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 33: <enum HB_OT_MATH_CONSTANT_FRACTION_NUMERATOR_DISPLAY_STYLE_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 34: <enum HB_OT_MATH_CONSTANT_FRACTION_DENOMINATOR_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 35: <enum HB_OT_MATH_CONSTANT_FRACTION_DENOMINATOR_DISPLAY_STYLE_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 36: <enum HB_OT_MATH_CONSTANT_FRACTION_NUMERATOR_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 37: <enum HB_OT_MATH_CONSTANT_FRACTION_NUM_DISPLAY_STYLE_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 38: <enum HB_OT_MATH_CONSTANT_FRACTION_RULE_THICKNESS of type HarfBuzz.ot_math_constant_t>, 39: <enum HB_OT_MATH_CONSTANT_FRACTION_DENOMINATOR_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 40: <enum HB_OT_MATH_CONSTANT_FRACTION_DENOM_DISPLAY_STYLE_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 41: <enum HB_OT_MATH_CONSTANT_SKEWED_FRACTION_HORIZONTAL_GAP of type HarfBuzz.ot_math_constant_t>, 42: <enum HB_OT_MATH_CONSTANT_SKEWED_FRACTION_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 43: <enum HB_OT_MATH_CONSTANT_OVERBAR_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 44: <enum HB_OT_MATH_CONSTANT_OVERBAR_RULE_THICKNESS of type HarfBuzz.ot_math_constant_t>, 45: <enum HB_OT_MATH_CONSTANT_OVERBAR_EXTRA_ASCENDER of type HarfBuzz.ot_math_constant_t>, 46: <enum HB_OT_MATH_CONSTANT_UNDERBAR_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 47: <enum HB_OT_MATH_CONSTANT_UNDERBAR_RULE_THICKNESS of type HarfBuzz.ot_math_constant_t>, 48: <enum HB_OT_MATH_CONSTANT_UNDERBAR_EXTRA_DESCENDER of type HarfBuzz.ot_math_constant_t>, 49: <enum HB_OT_MATH_CONSTANT_RADICAL_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 50: <enum HB_OT_MATH_CONSTANT_RADICAL_DISPLAY_STYLE_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 51: <enum HB_OT_MATH_CONSTANT_RADICAL_RULE_THICKNESS of type HarfBuzz.ot_math_constant_t>, 52: <enum HB_OT_MATH_CONSTANT_RADICAL_EXTRA_ASCENDER of type HarfBuzz.ot_math_constant_t>, 53: <enum HB_OT_MATH_CONSTANT_RADICAL_KERN_BEFORE_DEGREE of type HarfBuzz.ot_math_constant_t>, 54: <enum HB_OT_MATH_CONSTANT_RADICAL_KERN_AFTER_DEGREE of type HarfBuzz.ot_math_constant_t>, 55: <enum HB_OT_MATH_CONSTANT_RADICAL_DEGREE_BOTTOM_RAISE_PERCENT of type HarfBuzz.ot_math_constant_t>}, '__info__': gi.EnumInfo(ot_math_constant_t), 'SCRIPT_PERCENT_SCALE_DOWN': <enum HB_OT_MATH_CONSTANT_SCRIPT_PERCENT_SCALE_DOWN of type HarfBuzz.ot_math_constant_t>, 'SCRIPT_SCRIPT_PERCENT_SCALE_DOWN': <enum HB_OT_MATH_CONSTANT_SCRIPT_SCRIPT_PERCENT_SCALE_DOWN of type HarfBuzz.ot_math_constant_t>, 'DELIMITED_SUB_FORMULA_MIN_HEIGHT': <enum HB_OT_MATH_CONSTANT_DELIMITED_SUB_FORMULA_MIN_HEIGHT of type HarfBuzz.ot_math_constant_t>, 'DISPLAY_OPERATOR_MIN_HEIGHT': <enum HB_OT_MATH_CONSTANT_DISPLAY_OPERATOR_MIN_HEIGHT of type HarfBuzz.ot_math_constant_t>, 'MATH_LEADING': <enum HB_OT_MATH_CONSTANT_MATH_LEADING of type HarfBuzz.ot_math_constant_t>, 'AXIS_HEIGHT': <enum HB_OT_MATH_CONSTANT_AXIS_HEIGHT of type HarfBuzz.ot_math_constant_t>, 'ACCENT_BASE_HEIGHT': <enum HB_OT_MATH_CONSTANT_ACCENT_BASE_HEIGHT of type HarfBuzz.ot_math_constant_t>, 'FLATTENED_ACCENT_BASE_HEIGHT': <enum HB_OT_MATH_CONSTANT_FLATTENED_ACCENT_BASE_HEIGHT of type HarfBuzz.ot_math_constant_t>, 'SUBSCRIPT_SHIFT_DOWN': <enum HB_OT_MATH_CONSTANT_SUBSCRIPT_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 'SUBSCRIPT_TOP_MAX': <enum HB_OT_MATH_CONSTANT_SUBSCRIPT_TOP_MAX of type HarfBuzz.ot_math_constant_t>, 'SUBSCRIPT_BASELINE_DROP_MIN': <enum HB_OT_MATH_CONSTANT_SUBSCRIPT_BASELINE_DROP_MIN of type HarfBuzz.ot_math_constant_t>, 'SUPERSCRIPT_SHIFT_UP': <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 'SUPERSCRIPT_SHIFT_UP_CRAMPED': <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_SHIFT_UP_CRAMPED of type HarfBuzz.ot_math_constant_t>, 'SUPERSCRIPT_BOTTOM_MIN': <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_BOTTOM_MIN of type HarfBuzz.ot_math_constant_t>, 'SUPERSCRIPT_BASELINE_DROP_MAX': <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_BASELINE_DROP_MAX of type HarfBuzz.ot_math_constant_t>, 'SUB_SUPERSCRIPT_GAP_MIN': <enum HB_OT_MATH_CONSTANT_SUB_SUPERSCRIPT_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 'SUPERSCRIPT_BOTTOM_MAX_WITH_SUBSCRIPT': <enum HB_OT_MATH_CONSTANT_SUPERSCRIPT_BOTTOM_MAX_WITH_SUBSCRIPT of type HarfBuzz.ot_math_constant_t>, 'SPACE_AFTER_SCRIPT': <enum HB_OT_MATH_CONSTANT_SPACE_AFTER_SCRIPT of type HarfBuzz.ot_math_constant_t>, 'UPPER_LIMIT_GAP_MIN': <enum HB_OT_MATH_CONSTANT_UPPER_LIMIT_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 'UPPER_LIMIT_BASELINE_RISE_MIN': <enum HB_OT_MATH_CONSTANT_UPPER_LIMIT_BASELINE_RISE_MIN of type HarfBuzz.ot_math_constant_t>, 'LOWER_LIMIT_GAP_MIN': <enum HB_OT_MATH_CONSTANT_LOWER_LIMIT_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 'LOWER_LIMIT_BASELINE_DROP_MIN': <enum HB_OT_MATH_CONSTANT_LOWER_LIMIT_BASELINE_DROP_MIN of type HarfBuzz.ot_math_constant_t>, 'STACK_TOP_SHIFT_UP': <enum HB_OT_MATH_CONSTANT_STACK_TOP_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 'STACK_TOP_DISPLAY_STYLE_SHIFT_UP': <enum HB_OT_MATH_CONSTANT_STACK_TOP_DISPLAY_STYLE_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 'STACK_BOTTOM_SHIFT_DOWN': <enum HB_OT_MATH_CONSTANT_STACK_BOTTOM_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 'STACK_BOTTOM_DISPLAY_STYLE_SHIFT_DOWN': <enum HB_OT_MATH_CONSTANT_STACK_BOTTOM_DISPLAY_STYLE_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 'STACK_GAP_MIN': <enum HB_OT_MATH_CONSTANT_STACK_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 'STACK_DISPLAY_STYLE_GAP_MIN': <enum HB_OT_MATH_CONSTANT_STACK_DISPLAY_STYLE_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 'STRETCH_STACK_TOP_SHIFT_UP': <enum HB_OT_MATH_CONSTANT_STRETCH_STACK_TOP_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 'STRETCH_STACK_BOTTOM_SHIFT_DOWN': <enum HB_OT_MATH_CONSTANT_STRETCH_STACK_BOTTOM_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 'STRETCH_STACK_GAP_ABOVE_MIN': <enum HB_OT_MATH_CONSTANT_STRETCH_STACK_GAP_ABOVE_MIN of type HarfBuzz.ot_math_constant_t>, 'STRETCH_STACK_GAP_BELOW_MIN': <enum HB_OT_MATH_CONSTANT_STRETCH_STACK_GAP_BELOW_MIN of type HarfBuzz.ot_math_constant_t>, 'FRACTION_NUMERATOR_SHIFT_UP': <enum HB_OT_MATH_CONSTANT_FRACTION_NUMERATOR_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 'FRACTION_NUMERATOR_DISPLAY_STYLE_SHIFT_UP': <enum HB_OT_MATH_CONSTANT_FRACTION_NUMERATOR_DISPLAY_STYLE_SHIFT_UP of type HarfBuzz.ot_math_constant_t>, 'FRACTION_DENOMINATOR_SHIFT_DOWN': <enum HB_OT_MATH_CONSTANT_FRACTION_DENOMINATOR_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 'FRACTION_DENOMINATOR_DISPLAY_STYLE_SHIFT_DOWN': <enum HB_OT_MATH_CONSTANT_FRACTION_DENOMINATOR_DISPLAY_STYLE_SHIFT_DOWN of type HarfBuzz.ot_math_constant_t>, 'FRACTION_NUMERATOR_GAP_MIN': <enum HB_OT_MATH_CONSTANT_FRACTION_NUMERATOR_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 'FRACTION_NUM_DISPLAY_STYLE_GAP_MIN': <enum HB_OT_MATH_CONSTANT_FRACTION_NUM_DISPLAY_STYLE_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 'FRACTION_RULE_THICKNESS': <enum HB_OT_MATH_CONSTANT_FRACTION_RULE_THICKNESS of type HarfBuzz.ot_math_constant_t>, 'FRACTION_DENOMINATOR_GAP_MIN': <enum HB_OT_MATH_CONSTANT_FRACTION_DENOMINATOR_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 'FRACTION_DENOM_DISPLAY_STYLE_GAP_MIN': <enum HB_OT_MATH_CONSTANT_FRACTION_DENOM_DISPLAY_STYLE_GAP_MIN of type HarfBuzz.ot_math_constant_t>, 'SKEWED_FRACTION_HORIZONTAL_GAP': <enum HB_OT_MATH_CONSTANT_SKEWED_FRACTION_HORIZONTAL_GAP of type HarfBuzz.ot_math_constant_t>, 'SKEWED_FRACTION_VERTICAL_GAP': <enum HB_OT_MATH_CONSTANT_SKEWED_FRACTION_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 'OVERBAR_VERTICAL_GAP': <enum HB_OT_MATH_CONSTANT_OVERBAR_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 'OVERBAR_RULE_THICKNESS': <enum HB_OT_MATH_CONSTANT_OVERBAR_RULE_THICKNESS of type HarfBuzz.ot_math_constant_t>, 'OVERBAR_EXTRA_ASCENDER': <enum HB_OT_MATH_CONSTANT_OVERBAR_EXTRA_ASCENDER of type HarfBuzz.ot_math_constant_t>, 'UNDERBAR_VERTICAL_GAP': <enum HB_OT_MATH_CONSTANT_UNDERBAR_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 'UNDERBAR_RULE_THICKNESS': <enum HB_OT_MATH_CONSTANT_UNDERBAR_RULE_THICKNESS of type HarfBuzz.ot_math_constant_t>, 'UNDERBAR_EXTRA_DESCENDER': <enum HB_OT_MATH_CONSTANT_UNDERBAR_EXTRA_DESCENDER of type HarfBuzz.ot_math_constant_t>, 'RADICAL_VERTICAL_GAP': <enum HB_OT_MATH_CONSTANT_RADICAL_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 'RADICAL_DISPLAY_STYLE_VERTICAL_GAP': <enum HB_OT_MATH_CONSTANT_RADICAL_DISPLAY_STYLE_VERTICAL_GAP of type HarfBuzz.ot_math_constant_t>, 'RADICAL_RULE_THICKNESS': <enum HB_OT_MATH_CONSTANT_RADICAL_RULE_THICKNESS of type HarfBuzz.ot_math_constant_t>, 'RADICAL_EXTRA_ASCENDER': <enum HB_OT_MATH_CONSTANT_RADICAL_EXTRA_ASCENDER of type HarfBuzz.ot_math_constant_t>, 'RADICAL_KERN_BEFORE_DEGREE': <enum HB_OT_MATH_CONSTANT_RADICAL_KERN_BEFORE_DEGREE of type HarfBuzz.ot_math_constant_t>, 'RADICAL_KERN_AFTER_DEGREE': <enum HB_OT_MATH_CONSTANT_RADICAL_KERN_AFTER_DEGREE of type HarfBuzz.ot_math_constant_t>, 'RADICAL_DEGREE_BOTTOM_RAISE_PERCENT': <enum HB_OT_MATH_CONSTANT_RADICAL_DEGREE_BOTTOM_RAISE_PERCENT of type HarfBuzz.ot_math_constant_t>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-        30: 30,
-        31: 31,
-        32: 32,
-        33: 33,
-        34: 34,
-        35: 35,
-        36: 36,
-        37: 37,
-        38: 38,
-        39: 39,
-        40: 40,
-        41: 41,
-        42: 42,
-        43: 43,
-        44: 44,
-        45: 45,
-        46: 46,
-        47: 47,
-        48: 48,
-        49: 49,
-        50: 50,
-        51: 51,
-        52: 52,
-        53: 53,
-        54: 54,
-        55: 55,
-    }
-    __gtype__ = None # (!) real value is '<GType PyHarfBuzzot_math_constant_t (2667609008)>'
-    __info__ = gi.EnumInfo(ot_math_constant_t)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'SCRIPT_PERCENT_SCALE_DOWN': <ot_math_constant_t.SCRIPT_PERCENT_SCALE_DOWN: 0>, 'SCRIPT_SCRIPT_PERCENT_SCALE_DOWN': <ot_math_constant_t.SCRIPT_SCRIPT_PERCENT_SCALE_DOWN: 1>, 'DELIMITED_SUB_FORMULA_MIN_HEIGHT': <ot_math_constant_t.DELIMITED_SUB_FORMULA_MIN_HEIGHT: 2>, 'DISPLAY_OPERATOR_MIN_HEIGHT': <ot_math_constant_t.DISPLAY_OPERATOR_MIN_HEIGHT: 3>, 'MATH_LEADING': <ot_math_constant_t.MATH_LEADING: 4>, 'AXIS_HEIGHT': <ot_math_constant_t.AXIS_HEIGHT: 5>, 'ACCENT_BASE_HEIGHT': <ot_math_constant_t.ACCENT_BASE_HEIGHT: 6>, 'FLATTENED_ACCENT_BASE_HEIGHT': <ot_math_constant_t.FLATTENED_ACCENT_BASE_HEIGHT: 7>, 'SUBSCRIPT_SHIFT_DOWN': <ot_math_constant_t.SUBSCRIPT_SHIFT_DOWN: 8>, 'SUBSCRIPT_TOP_MAX': <ot_math_constant_t.SUBSCRIPT_TOP_MAX: 9>, 'SUBSCRIPT_BASELINE_DROP_MIN': <ot_math_constant_t.SUBSCRIPT_BASELINE_DROP_MIN: 10>, 'SUPERSCRIPT_SHIFT_UP': <ot_math_constant_t.SUPERSCRIPT_SHIFT_UP: 11>, 'SUPERSCRIPT_SHIFT_UP_CRAMPED': <ot_math_constant_t.SUPERSCRIPT_SHIFT_UP_CRAMPED: 12>, 'SUPERSCRIPT_BOTTOM_MIN': <ot_math_constant_t.SUPERSCRIPT_BOTTOM_MIN: 13>, 'SUPERSCRIPT_BASELINE_DROP_MAX': <ot_math_constant_t.SUPERSCRIPT_BASELINE_DROP_MAX: 14>, 'SUB_SUPERSCRIPT_GAP_MIN': <ot_math_constant_t.SUB_SUPERSCRIPT_GAP_MIN: 15>, 'SUPERSCRIPT_BOTTOM_MAX_WITH_SUBSCRIPT': <ot_math_constant_t.SUPERSCRIPT_BOTTOM_MAX_WITH_SUBSCRIPT: 16>, 'SPACE_AFTER_SCRIPT': <ot_math_constant_t.SPACE_AFTER_SCRIPT: 17>, 'UPPER_LIMIT_GAP_MIN': <ot_math_constant_t.UPPER_LIMIT_GAP_MIN: 18>, 'UPPER_LIMIT_BASELINE_RISE_MIN': <ot_math_constant_t.UPPER_LIMIT_BASELINE_RISE_MIN: 19>, 'LOWER_LIMIT_GAP_MIN': <ot_math_constant_t.LOWER_LIMIT_GAP_MIN: 20>, 'LOWER_LIMIT_BASELINE_DROP_MIN': <ot_math_constant_t.LOWER_LIMIT_BASELINE_DROP_MIN: 21>, 'STACK_TOP_SHIFT_UP': <ot_math_constant_t.STACK_TOP_SHIFT_UP: 22>, 'STACK_TOP_DISPLAY_STYLE_SHIFT_UP': <ot_math_constant_t.STACK_TOP_DISPLAY_STYLE_SHIFT_UP: 23>, 'STACK_BOTTOM_SHIFT_DOWN': <ot_math_constant_t.STACK_BOTTOM_SHIFT_DOWN: 24>, 'STACK_BOTTOM_DISPLAY_STYLE_SHIFT_DOWN': <ot_math_constant_t.STACK_BOTTOM_DISPLAY_STYLE_SHIFT_DOWN: 25>, 'STACK_GAP_MIN': <ot_math_constant_t.STACK_GAP_MIN: 26>, 'STACK_DISPLAY_STYLE_GAP_MIN': <ot_math_constant_t.STACK_DISPLAY_STYLE_GAP_MIN: 27>, 'STRETCH_STACK_TOP_SHIFT_UP': <ot_math_constant_t.STRETCH_STACK_TOP_SHIFT_UP: 28>, 'STRETCH_STACK_BOTTOM_SHIFT_DOWN': <ot_math_constant_t.STRETCH_STACK_BOTTOM_SHIFT_DOWN: 29>, 'STRETCH_STACK_GAP_ABOVE_MIN': <ot_math_constant_t.STRETCH_STACK_GAP_ABOVE_MIN: 30>, 'STRETCH_STACK_GAP_BELOW_MIN': <ot_math_constant_t.STRETCH_STACK_GAP_BELOW_MIN: 31>, 'FRACTION_NUMERATOR_SHIFT_UP': <ot_math_constant_t.FRACTION_NUMERATOR_SHIFT_UP: 32>, 'FRACTION_NUMERATOR_DISPLAY_STYLE_SHIFT_UP': <ot_math_constant_t.FRACTION_NUMERATOR_DISPLAY_STYLE_SHIFT_UP: 33>, 'FRACTION_DENOMINATOR_SHIFT_DOWN': <ot_math_constant_t.FRACTION_DENOMINATOR_SHIFT_DOWN: 34>, 'FRACTION_DENOMINATOR_DISPLAY_STYLE_SHIFT_DOWN': <ot_math_constant_t.FRACTION_DENOMINATOR_DISPLAY_STYLE_SHIFT_DOWN: 35>, 'FRACTION_NUMERATOR_GAP_MIN': <ot_math_constant_t.FRACTION_NUMERATOR_GAP_MIN: 36>, 'FRACTION_NUM_DISPLAY_STYLE_GAP_MIN': <ot_math_constant_t.FRACTION_NUM_DISPLAY_STYLE_GAP_MIN: 37>, 'FRACTION_RULE_THICKNESS': <ot_math_constant_t.FRACTION_RULE_THICKNESS: 38>, 'FRACTION_DENOMINATOR_GAP_MIN': <ot_math_constant_t.FRACTION_DENOMINATOR_GAP_MIN: 39>, 'FRACTION_DENOM_DISPLAY_STYLE_GAP_MIN': <ot_math_constant_t.FRACTION_DENOM_DISPLAY_STYLE_GAP_MIN: 40>, 'SKEWED_FRACTION_HORIZONTAL_GAP': <ot_math_constant_t.SKEWED_FRACTION_HORIZONTAL_GAP: 41>, 'SKEWED_FRACTION_VERTICAL_GAP': <ot_math_constant_t.SKEWED_FRACTION_VERTICAL_GAP: 42>, 'OVERBAR_VERTICAL_GAP': <ot_math_constant_t.OVERBAR_VERTICAL_GAP: 43>, 'OVERBAR_RULE_THICKNESS': <ot_math_constant_t.OVERBAR_RULE_THICKNESS: 44>, 'OVERBAR_EXTRA_ASCENDER': <ot_math_constant_t.OVERBAR_EXTRA_ASCENDER: 45>, 'UNDERBAR_VERTICAL_GAP': <ot_math_constant_t.UNDERBAR_VERTICAL_GAP: 46>, 'UNDERBAR_RULE_THICKNESS': <ot_math_constant_t.UNDERBAR_RULE_THICKNESS: 47>, 'UNDERBAR_EXTRA_DESCENDER': <ot_math_constant_t.UNDERBAR_EXTRA_DESCENDER: 48>, 'RADICAL_VERTICAL_GAP': <ot_math_constant_t.RADICAL_VERTICAL_GAP: 49>, 'RADICAL_DISPLAY_STYLE_VERTICAL_GAP': <ot_math_constant_t.RADICAL_DISPLAY_STYLE_VERTICAL_GAP: 50>, 'RADICAL_RULE_THICKNESS': <ot_math_constant_t.RADICAL_RULE_THICKNESS: 51>, 'RADICAL_EXTRA_ASCENDER': <ot_math_constant_t.RADICAL_EXTRA_ASCENDER: 52>, 'RADICAL_KERN_BEFORE_DEGREE': <ot_math_constant_t.RADICAL_KERN_BEFORE_DEGREE: 53>, 'RADICAL_KERN_AFTER_DEGREE': <ot_math_constant_t.RADICAL_KERN_AFTER_DEGREE: 54>, 'RADICAL_DEGREE_BOTTOM_RAISE_PERCENT': <ot_math_constant_t.RADICAL_DEGREE_BOTTOM_RAISE_PERCENT: 55>})"
+    __name__ = 'ot_math_constant_t'
+    __qualname__ = 'ot_math_constant_t'
 
 

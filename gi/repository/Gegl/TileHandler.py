@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -50,7 +44,7 @@ class TileHandler(TileSource):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -86,6 +80,9 @@ class TileHandler(TileSource):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -294,20 +291,20 @@ class TileHandler(TileSource):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -449,12 +446,12 @@ class TileHandler(TileSource):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x0000027618c8efe0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ebda7d4a30>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TileHandler), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglTileHandler (426598048)>, '__doc__': None, '__gsignals__': {}, 'damage_rect': gi.FunctionInfo(damage_rect, bound=None), 'damage_tile': gi.FunctionInfo(damage_tile, bound=None), 'lock': gi.FunctionInfo(lock, bound=None), 'set_source': gi.FunctionInfo(set_source, bound=None), 'unlock': gi.FunctionInfo(unlock, bound=None), 'parent_instance': <property object at 0x000002761b94d210>, 'source': <property object at 0x000002761b94d300>, 'priv': <property object at 0x000002761b94d3f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TileHandler), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglTileHandler (3645261424)>, '__doc__': None, '__gsignals__': {}, 'damage_rect': gi.FunctionInfo(damage_rect), 'damage_tile': gi.FunctionInfo(damage_tile), 'lock': gi.FunctionInfo(lock), 'set_source': gi.FunctionInfo(set_source), 'unlock': gi.FunctionInfo(unlock), 'parent_instance': <property object at 0x000001ebdc2620c0>, 'source': <property object at 0x000001ebdc2621b0>, 'priv': <property object at 0x000001ebdc2622a0>})"
     __gdoc__ = 'Object GeglTileHandler\n\nProperties from GeglTileHandler:\n  source -> GObject: GeglBuffer\n    The tilestore to be a facade for\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglTileHandler (426598048)>'
+    __gtype__ = None # (!) real value is '<GType GeglTileHandler (3645261424)>'
     __info__ = ObjectInfo(TileHandler)
 
 

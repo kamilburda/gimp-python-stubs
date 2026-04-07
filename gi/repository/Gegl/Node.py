@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -61,7 +55,7 @@ class Node(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -105,6 +99,9 @@ class Node(__gi_overrides_GObject.Object):
         return False
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -293,7 +290,8 @@ class Node(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gegl.Node """
         pass
 
@@ -301,15 +299,18 @@ class Node(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_from_file(self, path): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_file(cls, path): # real signature unknown; restored from __doc__
         """ new_from_file(path:str) -> Gegl.Node """
         pass
 
-    def new_from_serialized(self, chaindata, path_root): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_serialized(cls, chaindata, path_root): # real signature unknown; restored from __doc__
         """ new_from_serialized(chaindata:str, path_root:str) -> Gegl.Node """
         pass
 
-    def new_from_xml(self, xmldata, path_root): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_xml(cls, xmldata, path_root): # real signature unknown; restored from __doc__
         """ new_from_xml(xmldata:str, path_root:str) -> Gegl.Node """
         pass
 
@@ -423,20 +424,20 @@ class Node(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -568,12 +569,12 @@ class Node(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x0000027618bf9840>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ebdc0e5270>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Node), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglNode (426598272)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_from_file': gi.FunctionInfo(new_from_file, bound=None), 'new_from_serialized': gi.FunctionInfo(new_from_serialized, bound=None), 'new_from_xml': gi.FunctionInfo(new_from_xml, bound=None), 'add_child': gi.FunctionInfo(add_child, bound=None), 'blit_buffer': gi.FunctionInfo(blit_buffer, bound=None), 'connect': gi.FunctionInfo(connect, bound=None), 'connect_from': gi.FunctionInfo(connect_from, bound=None), 'connect_to': gi.FunctionInfo(connect_to, bound=None), 'create_child': gi.FunctionInfo(create_child, bound=None), 'detect': gi.FunctionInfo(detect, bound=None), 'disconnect': gi.FunctionInfo(disconnect, bound=None), 'find_property': gi.FunctionInfo(find_property, bound=None), 'get_children': gi.FunctionInfo(get_children, bound=None), 'get_consumers': gi.FunctionInfo(get_consumers, bound=None), 'get_gegl_operation': gi.FunctionInfo(get_gegl_operation, bound=None), 'get_input_proxy': gi.FunctionInfo(get_input_proxy, bound=None), 'get_operation': gi.FunctionInfo(get_operation, bound=None), 'get_output_proxy': gi.FunctionInfo(get_output_proxy, bound=None), 'get_pad_description': gi.FunctionInfo(get_pad_description, bound=None), 'get_pad_label': gi.FunctionInfo(get_pad_label, bound=None), 'get_parent': gi.FunctionInfo(get_parent, bound=None), 'get_passthrough': gi.FunctionInfo(get_passthrough, bound=None), 'get_producer': gi.FunctionInfo(get_producer, bound=None), 'has_pad': gi.FunctionInfo(has_pad, bound=None), 'get_bounding_box': gi.FunctionInfo(get_bounding_box, bound=None), 'get_property': gi.FunctionInfo(get_property, bound=None), 'is_graph': gi.FunctionInfo(is_graph, bound=None), 'link': gi.FunctionInfo(link, bound=None), 'list_input_pads': gi.FunctionInfo(list_input_pads, bound=None), 'list_output_pads': gi.FunctionInfo(list_output_pads, bound=None), 'new_processor': gi.FunctionInfo(new_processor, bound=None), 'process': gi.FunctionInfo(process, bound=None), 'progress': gi.FunctionInfo(progress, bound=None), 'remove_child': gi.FunctionInfo(remove_child, bound=None), 'set_enum_as_string': gi.FunctionInfo(set_enum_as_string, bound=None), 'set_passthrough': gi.FunctionInfo(set_passthrough, bound=None), 'set_property': gi.FunctionInfo(set_property, bound=None), 'set_time': gi.FunctionInfo(set_time, bound=None), 'to_xml': gi.FunctionInfo(to_xml, bound=None), 'to_xml_full': gi.FunctionInfo(to_xml_full, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Node), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglNode (3657335808)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_from_file': <classmethod(gi.FunctionInfo(new_from_file))>, 'new_from_serialized': <classmethod(gi.FunctionInfo(new_from_serialized))>, 'new_from_xml': <classmethod(gi.FunctionInfo(new_from_xml))>, 'add_child': gi.FunctionInfo(add_child), 'blit_buffer': gi.FunctionInfo(blit_buffer), 'connect': gi.FunctionInfo(connect), 'connect_from': gi.FunctionInfo(connect_from), 'connect_to': gi.FunctionInfo(connect_to), 'create_child': gi.FunctionInfo(create_child), 'detect': gi.FunctionInfo(detect), 'disconnect': gi.FunctionInfo(disconnect), 'find_property': gi.FunctionInfo(find_property), 'get_children': gi.FunctionInfo(get_children), 'get_consumers': gi.FunctionInfo(get_consumers), 'get_gegl_operation': gi.FunctionInfo(get_gegl_operation), 'get_input_proxy': gi.FunctionInfo(get_input_proxy), 'get_operation': gi.FunctionInfo(get_operation), 'get_output_proxy': gi.FunctionInfo(get_output_proxy), 'get_pad_description': gi.FunctionInfo(get_pad_description), 'get_pad_label': gi.FunctionInfo(get_pad_label), 'get_parent': gi.FunctionInfo(get_parent), 'get_passthrough': gi.FunctionInfo(get_passthrough), 'get_producer': gi.FunctionInfo(get_producer), 'has_pad': gi.FunctionInfo(has_pad), 'get_bounding_box': gi.FunctionInfo(get_bounding_box), 'get_property': gi.FunctionInfo(get_property), 'is_graph': gi.FunctionInfo(is_graph), 'link': gi.FunctionInfo(link), 'list_input_pads': gi.FunctionInfo(list_input_pads), 'list_output_pads': gi.FunctionInfo(list_output_pads), 'new_processor': gi.FunctionInfo(new_processor), 'process': gi.FunctionInfo(process), 'progress': gi.FunctionInfo(progress), 'remove_child': gi.FunctionInfo(remove_child), 'set_enum_as_string': gi.FunctionInfo(set_enum_as_string), 'set_passthrough': gi.FunctionInfo(set_passthrough), 'set_property': gi.FunctionInfo(set_property), 'set_time': gi.FunctionInfo(set_time), 'to_xml': gi.FunctionInfo(to_xml), 'to_xml_full': gi.FunctionInfo(to_xml_full)})"
     __gdoc__ = 'Object GeglNode\n\nSignals from GeglNode:\n  invalidated (GeglRectangle)\n  computed (GeglRectangle)\n  progress (gdouble)\n\nProperties from GeglNode:\n  operation -> gchararray: Operation Type\n    The type of associated GeglOperation\n  gegl-operation -> GeglOperation: Operation Object\n    The associated GeglOperation instance\n  name -> gchararray: Name\n    The name of the node\n  dont-cache -> gboolean: Do not cache\n    Do not cache the result of this operation, the property is inherited by children created from a node. (Deprecated for "cache-policy".)\n  cache-policy -> GeglCachePolicy: Cache Policy\n    Cache policy for this node, the property is inherited by children created from a node.\n  use-opencl -> gboolean: Use OpenCL\n    Use the OpenCL version of this operation if available, this property is inherited by children created from a node.\n  passthrough -> gboolean: Passthrough\n    Act as a nop, passing input unmodifed through to ouput.\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglNode (426598272)>'
+    __gtype__ = None # (!) real value is '<GType GeglNode (3657335808)>'
     __info__ = ObjectInfo(Node)
 
 

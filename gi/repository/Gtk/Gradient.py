@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -34,11 +33,13 @@ class Gradient(__gi.Boxed):
     def copy(self, *args, **kwargs): # real signature unknown
         pass
 
-    def new_linear(self, x0, y0, x1, y1): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_linear(cls, x0, y0, x1, y1): # real signature unknown; restored from __doc__
         """ new_linear(x0:float, y0:float, x1:float, y1:float) -> Gtk.Gradient """
         pass
 
-    def new_radial(self, x0, y0, radius0, x1, y1, radius1): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_radial(cls, x0, y0, radius0, x1, y1, radius1): # real signature unknown; restored from __doc__
         """ new_radial(x0:float, y0:float, radius0:float, x1:float, y1:float, radius1:float) -> Gtk.Gradient """
         pass
 
@@ -173,8 +174,8 @@ class Gradient(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Gradient), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkGradient (3923974432)>, '__dict__': <attribute '__dict__' of 'Gradient' objects>, '__weakref__': <attribute '__weakref__' of 'Gradient' objects>, '__doc__': None, 'new_linear': gi.FunctionInfo(new_linear, bound=None), 'new_radial': gi.FunctionInfo(new_radial, bound=None), 'add_color_stop': gi.FunctionInfo(add_color_stop, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'resolve': gi.FunctionInfo(resolve, bound=None), 'resolve_for_context': gi.FunctionInfo(resolve_for_context, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GtkGradient (3923974432)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Gradient), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkGradient (3537897584)>, '__dict__': <attribute '__dict__' of 'Gradient' objects>, '__weakref__': <attribute '__weakref__' of 'Gradient' objects>, '__doc__': None, 'new_linear': <classmethod(gi.FunctionInfo(new_linear))>, 'new_radial': <classmethod(gi.FunctionInfo(new_radial))>, 'add_color_stop': gi.FunctionInfo(add_color_stop), 'ref': gi.FunctionInfo(ref), 'resolve': gi.FunctionInfo(resolve), 'resolve_for_context': gi.FunctionInfo(resolve_for_context), 'to_string': gi.FunctionInfo(to_string), 'unref': gi.FunctionInfo(unref)})"
+    __gtype__ = None # (!) real value is '<GType GtkGradient (3537897584)>'
     __info__ = StructInfo(Gradient)
 
 

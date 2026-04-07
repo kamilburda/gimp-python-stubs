@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -158,7 +151,7 @@ class HyperlinkClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HyperlinkClass), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'HyperlinkClass' objects>, '__weakref__': <attribute '__weakref__' of 'HyperlinkClass' objects>, '__doc__': None, 'parent': <property object at 0x0000017338140310>, 'get_uri': <property object at 0x0000017338140400>, 'get_object': <property object at 0x00000173381404f0>, 'get_end_index': <property object at 0x00000173381405e0>, 'get_start_index': <property object at 0x00000173381406d0>, 'is_valid': <property object at 0x00000173381407c0>, 'get_n_anchors': <property object at 0x00000173381408b0>, 'link_state': <property object at 0x00000173381409a0>, 'is_selected_link': <property object at 0x0000017338140a90>, 'link_activated': <property object at 0x0000017338140b80>, 'pad1': <property object at 0x0000017338140c70>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HyperlinkClass), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'HyperlinkClass' objects>, '__weakref__': <attribute '__weakref__' of 'HyperlinkClass' objects>, '__doc__': None, 'parent': <property object at 0x000001c85dafc9f0>, 'get_uri': <property object at 0x000001c85dafcae0>, 'get_object': <property object at 0x000001c85dafcbd0>, 'get_end_index': <property object at 0x000001c85dafccc0>, 'get_start_index': <property object at 0x000001c85dafcdb0>, 'is_valid': <property object at 0x000001c85dafcea0>, 'get_n_anchors': <property object at 0x000001c85dafcf90>, 'link_state': <property object at 0x000001c85dafd080>, 'is_selected_link': <property object at 0x000001c85dafd170>, 'link_activated': <property object at 0x000001c85dafd260>, 'pad1': <property object at 0x000001c85dafd350>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(HyperlinkClass)
 

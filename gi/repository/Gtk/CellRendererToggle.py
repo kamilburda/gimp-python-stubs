@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -53,20 +52,20 @@ class CellRendererToggle(CellRenderer):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -85,6 +84,12 @@ class CellRendererToggle(CellRenderer):
 
     def do_activate(self, *args, **kwargs): # real signature unknown
         """ activate(self, event:Gdk.Event, widget:Gtk.Widget, path:str, background_area:Gdk.Rectangle, cell_area:Gdk.Rectangle, flags:Gtk.CellRendererState) -> bool """
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_editing_canceled(self, *args, **kwargs): # real signature unknown
@@ -154,17 +159,17 @@ class CellRendererToggle(CellRenderer):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -257,20 +262,20 @@ class CellRendererToggle(CellRenderer):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -324,7 +329,8 @@ class CellRendererToggle(CellRenderer):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.CellRenderer """
         pass
 
@@ -453,20 +459,20 @@ class CellRendererToggle(CellRenderer):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -604,12 +610,14 @@ class CellRendererToggle(CellRenderer):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ece9abba00>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17e67a0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(CellRendererToggle), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCellRendererToggle (3855515488)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_activatable': gi.FunctionInfo(get_activatable, bound=None), 'get_active': gi.FunctionInfo(get_active, bound=None), 'get_radio': gi.FunctionInfo(get_radio, bound=None), 'set_activatable': gi.FunctionInfo(set_activatable, bound=None), 'set_active': gi.FunctionInfo(set_active, bound=None), 'set_radio': gi.FunctionInfo(set_radio, bound=None), 'do_toggled': gi.VFuncInfo(toggled, bound=None), 'parent': <property object at 0x000002eceabb72e0>, 'priv': <property object at 0x000002eceabb73d0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(CellRendererToggle), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCellRendererToggle (3428550896)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_activatable': gi.FunctionInfo(get_activatable), 'get_active': gi.FunctionInfo(get_active), 'get_radio': gi.FunctionInfo(get_radio), 'set_activatable': gi.FunctionInfo(set_activatable), 'set_active': gi.FunctionInfo(set_active), 'set_radio': gi.FunctionInfo(set_radio), 'do_toggled': gi.VFuncInfo(toggled), 'parent': <property object at 0x000002bfd178e980>, 'priv': <property object at 0x000002bfd178ea70>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkCellRendererToggle\n\nSignals from GtkCellRendererToggle:\n  toggled (gchararray)\n\nProperties from GtkCellRendererToggle:\n  activatable -> gboolean: Activatable\n    The toggle button can be activated\n  active -> gboolean: Toggle state\n    The toggle state of the button\n  radio -> gboolean: Radio state\n    Draw the toggle button as a radio button\n  inconsistent -> gboolean: Inconsistent state\n    The inconsistent state of the button\n  indicator-size -> gint: Indicator size\n    Size of check or radio indicator\n\nSignals from GtkCellRenderer:\n  editing-canceled ()\n  editing-started (GtkCellEditable, gchararray)\n\nProperties from GtkCellRenderer:\n  mode -> GtkCellRendererMode: mode\n    Editable mode of the CellRenderer\n  visible -> gboolean: visible\n    Display the cell\n  sensitive -> gboolean: Sensitive\n    Display the cell sensitive\n  xalign -> gfloat: xalign\n    The x-align\n  yalign -> gfloat: yalign\n    The y-align\n  xpad -> guint: xpad\n    The xpad\n  ypad -> guint: ypad\n    The ypad\n  width -> gint: width\n    The fixed width\n  height -> gint: height\n    The fixed height\n  is-expander -> gboolean: Is Expander\n    Row has children\n  is-expanded -> gboolean: Is Expanded\n    Row is an expander row, and is expanded\n  cell-background -> gchararray: Cell background color name\n    Cell background color as a string\n  cell-background-gdk -> GdkColor: Cell background color\n    Cell background color as a GdkColor\n  cell-background-rgba -> GdkRGBA: Cell background RGBA color\n    Cell background color as a GdkRGBA\n  cell-background-set -> gboolean: Cell background set\n    Whether the cell background color is set\n  editing -> gboolean: Editing\n    Whether the cell renderer is currently in editing mode\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkCellRendererToggle (3855515488)>'
+    __gtype__ = None # (!) real value is '<GType GtkCellRendererToggle (3428550896)>'
     __info__ = ObjectInfo(CellRendererToggle)
+    __static_attributes__ = ()
 
 

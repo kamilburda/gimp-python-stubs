@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -42,7 +41,7 @@ class Device(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -70,6 +69,9 @@ class Device(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -382,20 +384,20 @@ class Device(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -527,12 +529,12 @@ class Device(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002459a3c5720>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001872539af80>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Device), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkDevice (2569377712)>, '__doc__': None, '__gsignals__': {}, 'grab_info_libgtk_only': gi.FunctionInfo(grab_info_libgtk_only, bound=None), 'get_associated_device': gi.FunctionInfo(get_associated_device, bound=None), 'get_axes': gi.FunctionInfo(get_axes, bound=None), 'get_axis_use': gi.FunctionInfo(get_axis_use, bound=None), 'get_device_type': gi.FunctionInfo(get_device_type, bound=None), 'get_display': gi.FunctionInfo(get_display, bound=None), 'get_has_cursor': gi.FunctionInfo(get_has_cursor, bound=None), 'get_key': gi.FunctionInfo(get_key, bound=None), 'get_last_event_window': gi.FunctionInfo(get_last_event_window, bound=None), 'get_mode': gi.FunctionInfo(get_mode, bound=None), 'get_n_axes': gi.FunctionInfo(get_n_axes, bound=None), 'get_n_keys': gi.FunctionInfo(get_n_keys, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_position': gi.FunctionInfo(get_position, bound=None), 'get_position_double': gi.FunctionInfo(get_position_double, bound=None), 'get_product_id': gi.FunctionInfo(get_product_id, bound=None), 'get_seat': gi.FunctionInfo(get_seat, bound=None), 'get_source': gi.FunctionInfo(get_source, bound=None), 'get_vendor_id': gi.FunctionInfo(get_vendor_id, bound=None), 'get_window_at_position': gi.FunctionInfo(get_window_at_position, bound=None), 'get_window_at_position_double': gi.FunctionInfo(get_window_at_position_double, bound=None), 'grab': gi.FunctionInfo(grab, bound=None), 'list_axes': gi.FunctionInfo(list_axes, bound=None), 'list_slave_devices': gi.FunctionInfo(list_slave_devices, bound=None), 'set_axis_use': gi.FunctionInfo(set_axis_use, bound=None), 'set_key': gi.FunctionInfo(set_key, bound=None), 'set_mode': gi.FunctionInfo(set_mode, bound=None), 'ungrab': gi.FunctionInfo(ungrab, bound=None), 'warp': gi.FunctionInfo(warp, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Device), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkDevice (587202800)>, '__doc__': None, '__gsignals__': {}, 'grab_info_libgtk_only': <staticmethod(gi.FunctionInfo(grab_info_libgtk_only))>, 'get_associated_device': gi.FunctionInfo(get_associated_device), 'get_axes': gi.FunctionInfo(get_axes), 'get_axis_use': gi.FunctionInfo(get_axis_use), 'get_device_type': gi.FunctionInfo(get_device_type), 'get_display': gi.FunctionInfo(get_display), 'get_has_cursor': gi.FunctionInfo(get_has_cursor), 'get_key': gi.FunctionInfo(get_key), 'get_last_event_window': gi.FunctionInfo(get_last_event_window), 'get_mode': gi.FunctionInfo(get_mode), 'get_n_axes': gi.FunctionInfo(get_n_axes), 'get_n_keys': gi.FunctionInfo(get_n_keys), 'get_name': gi.FunctionInfo(get_name), 'get_position': gi.FunctionInfo(get_position), 'get_position_double': gi.FunctionInfo(get_position_double), 'get_product_id': gi.FunctionInfo(get_product_id), 'get_seat': gi.FunctionInfo(get_seat), 'get_source': gi.FunctionInfo(get_source), 'get_vendor_id': gi.FunctionInfo(get_vendor_id), 'get_window_at_position': gi.FunctionInfo(get_window_at_position), 'get_window_at_position_double': gi.FunctionInfo(get_window_at_position_double), 'grab': gi.FunctionInfo(grab), 'list_axes': gi.FunctionInfo(list_axes), 'list_slave_devices': gi.FunctionInfo(list_slave_devices), 'set_axis_use': gi.FunctionInfo(set_axis_use), 'set_key': gi.FunctionInfo(set_key), 'set_mode': gi.FunctionInfo(set_mode), 'ungrab': gi.FunctionInfo(ungrab), 'warp': gi.FunctionInfo(warp)})"
     __gdoc__ = 'Object GdkDevice\n\nSignals from GdkDevice:\n  changed ()\n  tool-changed (GdkDeviceTool)\n\nProperties from GdkDevice:\n  display -> GdkDisplay: Device Display\n    Display which the device belongs to\n  device-manager -> GdkDeviceManager: Device manager\n    Device manager which the device belongs to\n  name -> gchararray: Device name\n    Device name\n  associated-device -> GdkDevice: Associated device\n    Associated pointer or keyboard with this device\n  type -> GdkDeviceType: Device type\n    Device role in the device manager\n  input-source -> GdkInputSource: Input source\n    Source type for the device\n  input-mode -> GdkInputMode: Input mode for the device\n    Input mode for the device\n  has-cursor -> gboolean: Whether the device has a cursor\n    Whether there is a visible cursor following device motion\n  n-axes -> guint: Number of axes in the device\n    Number of axes in the device\n  vendor-id -> gchararray: Vendor ID\n    Vendor ID\n  product-id -> gchararray: Product ID\n    Product ID\n  seat -> GdkSeat: Seat\n    Seat\n  num-touches -> guint: Number of concurrent touches\n    Number of concurrent touches\n  axes -> GdkAxisFlags: Axes\n    Axes\n  tool -> GdkDeviceTool: Tool\n    The tool that is currently used with this device\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkDevice (2569377712)>'
+    __gtype__ = None # (!) real value is '<GType GdkDevice (587202800)>'
     __info__ = ObjectInfo(Device)
 
 

@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class HashTable(__gi.Boxed):
@@ -212,8 +210,8 @@ class HashTable(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HashTable), '__module__': 'gi.repository.GLib', '__gtype__': <GType GHashTable (163511712)>, '__dict__': <attribute '__dict__' of 'HashTable' objects>, '__weakref__': <attribute '__weakref__' of 'HashTable' objects>, '__doc__': None, 'add': gi.FunctionInfo(add, bound=None), 'contains': gi.FunctionInfo(contains, bound=None), 'destroy': gi.FunctionInfo(destroy, bound=None), 'find': gi.FunctionInfo(find, bound=None), 'foreach': gi.FunctionInfo(foreach, bound=None), 'foreach_remove': gi.FunctionInfo(foreach_remove, bound=None), 'foreach_steal': gi.FunctionInfo(foreach_steal, bound=None), 'insert': gi.FunctionInfo(insert, bound=None), 'lookup': gi.FunctionInfo(lookup, bound=None), 'lookup_extended': gi.FunctionInfo(lookup_extended, bound=None), 'new_similar': gi.FunctionInfo(new_similar, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'remove_all': gi.FunctionInfo(remove_all, bound=None), 'replace': gi.FunctionInfo(replace, bound=None), 'size': gi.FunctionInfo(size, bound=None), 'steal': gi.FunctionInfo(steal, bound=None), 'steal_all': gi.FunctionInfo(steal_all, bound=None), 'steal_extended': gi.FunctionInfo(steal_extended, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GHashTable (163511712)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HashTable), '__module__': 'gi.repository.GLib', '__gtype__': <GType GHashTable (2640521664)>, '__dict__': <attribute '__dict__' of 'HashTable' objects>, '__weakref__': <attribute '__weakref__' of 'HashTable' objects>, '__doc__': None, 'add': <staticmethod(gi.FunctionInfo(add))>, 'contains': <staticmethod(gi.FunctionInfo(contains))>, 'destroy': <staticmethod(gi.FunctionInfo(destroy))>, 'find': <staticmethod(gi.FunctionInfo(find))>, 'foreach': <staticmethod(gi.FunctionInfo(foreach))>, 'foreach_remove': <staticmethod(gi.FunctionInfo(foreach_remove))>, 'foreach_steal': <staticmethod(gi.FunctionInfo(foreach_steal))>, 'insert': <staticmethod(gi.FunctionInfo(insert))>, 'lookup': <staticmethod(gi.FunctionInfo(lookup))>, 'lookup_extended': <staticmethod(gi.FunctionInfo(lookup_extended))>, 'new_similar': <staticmethod(gi.FunctionInfo(new_similar))>, 'ref': <staticmethod(gi.FunctionInfo(ref))>, 'remove': <staticmethod(gi.FunctionInfo(remove))>, 'remove_all': <staticmethod(gi.FunctionInfo(remove_all))>, 'replace': <staticmethod(gi.FunctionInfo(replace))>, 'size': <staticmethod(gi.FunctionInfo(size))>, 'steal': <staticmethod(gi.FunctionInfo(steal))>, 'steal_all': <staticmethod(gi.FunctionInfo(steal_all))>, 'steal_extended': <staticmethod(gi.FunctionInfo(steal_extended))>, 'unref': <staticmethod(gi.FunctionInfo(unref))>})"
+    __gtype__ = None # (!) real value is '<GType GHashTable (2640521664)>'
     __info__ = StructInfo(HashTable)
 
 

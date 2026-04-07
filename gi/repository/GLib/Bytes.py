@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Bytes(__gi.Boxed):
@@ -52,7 +50,8 @@ class Bytes(__gi.Boxed):
         """ hash(self) -> int """
         return 0
 
-    def new(self, data=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, data=None): # real signature unknown; restored from __doc__
         """ new(data:list=None) -> GLib.Bytes """
         pass
 
@@ -60,7 +59,8 @@ class Bytes(__gi.Boxed):
         """ new_from_bytes(self, offset:int, length:int) -> GLib.Bytes """
         pass
 
-    def new_take(self, data=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_take(cls, data=None): # real signature unknown; restored from __doc__
         """ new_take(data:list=None) -> GLib.Bytes """
         pass
 
@@ -192,8 +192,8 @@ class Bytes(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Bytes), '__module__': 'gi.repository.GLib', '__gtype__': <GType GBytes (155712240)>, '__dict__': <attribute '__dict__' of 'Bytes' objects>, '__weakref__': <attribute '__weakref__' of 'Bytes' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'new_take': gi.FunctionInfo(new_take, bound=None), 'compare': gi.FunctionInfo(compare, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'get_data': gi.FunctionInfo(get_data, bound=None), 'get_region': gi.FunctionInfo(get_region, bound=None), 'get_size': gi.FunctionInfo(get_size, bound=None), 'hash': gi.FunctionInfo(hash, bound=None), 'new_from_bytes': gi.FunctionInfo(new_from_bytes, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'unref_to_array': gi.FunctionInfo(unref_to_array, bound=None), 'unref_to_data': gi.FunctionInfo(unref_to_data, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GBytes (155712240)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Bytes), '__module__': 'gi.repository.GLib', '__gtype__': <GType GBytes (2640518976)>, '__dict__': <attribute '__dict__' of 'Bytes' objects>, '__weakref__': <attribute '__weakref__' of 'Bytes' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_take': <classmethod(gi.FunctionInfo(new_take))>, 'compare': gi.FunctionInfo(compare), 'equal': gi.FunctionInfo(equal), 'get_data': gi.FunctionInfo(get_data), 'get_region': gi.FunctionInfo(get_region), 'get_size': gi.FunctionInfo(get_size), 'hash': gi.FunctionInfo(hash), 'new_from_bytes': gi.FunctionInfo(new_from_bytes), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), 'unref_to_array': gi.FunctionInfo(unref_to_array), 'unref_to_data': gi.FunctionInfo(unref_to_data), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GBytes (2640518976)>'
     __info__ = StructInfo(Bytes)
 
 

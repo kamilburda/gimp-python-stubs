@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class FontFaceClass(__gi.Struct):
@@ -147,7 +145,7 @@ class FontFaceClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontFaceClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontFaceClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontFaceClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000213f608e6b0>, 'get_face_name': <property object at 0x00000213f608e7a0>, 'describe': <property object at 0x00000213f608e890>, 'list_sizes': <property object at 0x00000213f608e980>, 'is_synthesized': <property object at 0x00000213f608ea70>, 'get_family': <property object at 0x00000213f608eb60>, '_pango_reserved3': <property object at 0x00000213f608ec50>, '_pango_reserved4': <property object at 0x00000213f608ed40>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontFaceClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontFaceClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontFaceClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000280355e5120>, 'get_face_name': <property object at 0x00000280355e5210>, 'describe': <property object at 0x00000280355e5300>, 'list_sizes': <property object at 0x00000280355e53f0>, 'is_synthesized': <property object at 0x00000280355e54e0>, 'get_family': <property object at 0x00000280355e55d0>, '_pango_reserved3': <property object at 0x00000280355e56c0>, '_pango_reserved4': <property object at 0x00000280355e57b0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(FontFaceClass)
 

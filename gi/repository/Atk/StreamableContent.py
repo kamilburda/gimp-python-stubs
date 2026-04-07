@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -145,10 +138,10 @@ class StreamableContent(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(StreamableContent), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkStreamableContent (892677392)>, '__dict__': <attribute '__dict__' of 'StreamableContent' objects>, '__weakref__': <attribute '__weakref__' of 'StreamableContent' objects>, '__doc__': None, '__gsignals__': {}, 'get_mime_type': gi.FunctionInfo(get_mime_type, bound=None), 'get_n_mime_types': gi.FunctionInfo(get_n_mime_types, bound=None), 'get_stream': gi.FunctionInfo(get_stream, bound=None), 'get_uri': gi.FunctionInfo(get_uri, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(StreamableContent), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkStreamableContent (1529330064)>, '__dict__': <attribute '__dict__' of 'StreamableContent' objects>, '__weakref__': <attribute '__weakref__' of 'StreamableContent' objects>, '__doc__': None, '__gsignals__': {}, 'get_mime_type': gi.FunctionInfo(get_mime_type), 'get_n_mime_types': gi.FunctionInfo(get_n_mime_types), 'get_stream': gi.FunctionInfo(get_stream), 'get_uri': gi.FunctionInfo(get_uri)})"
     __gdoc__ = 'Interface AtkStreamableContent\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkStreamableContent (892677392)>'
+    __gtype__ = None # (!) real value is '<GType AtkStreamableContent (1529330064)>'
     __info__ = InterfaceInfo(StreamableContent)
 
 

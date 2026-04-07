@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -145,7 +144,7 @@ class EventPadButton(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EventPadButton), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EventPadButton' objects>, '__weakref__': <attribute '__weakref__' of 'EventPadButton' objects>, '__doc__': None, 'type': <property object at 0x000002459c48e700>, 'window': <property object at 0x000002459c48e7f0>, 'send_event': <property object at 0x000002459c48e8e0>, 'time': <property object at 0x000002459c48e9d0>, 'group': <property object at 0x000002459c48eac0>, 'button': <property object at 0x000002459c48ebb0>, 'mode': <property object at 0x000002459c48eca0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EventPadButton), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EventPadButton' objects>, '__weakref__': <attribute '__weakref__' of 'EventPadButton' objects>, '__doc__': None, 'type': <property object at 0x000001872582fb00>, 'window': <property object at 0x000001872582fbf0>, 'send_event': <property object at 0x000001872582fce0>, 'time': <property object at 0x000001872582fdd0>, 'group': <property object at 0x000001872582fec0>, 'button': <property object at 0x000001872582ffb0>, 'mode': <property object at 0x000001872580c0e0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(EventPadButton)
 

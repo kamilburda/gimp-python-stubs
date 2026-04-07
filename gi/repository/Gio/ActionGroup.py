@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -86,7 +91,11 @@ class ActionGroup(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -177,10 +186,10 @@ class ActionGroup(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ActionGroup), '__module__': 'gi.repository.Gio', '__gtype__': <GType GActionGroup (2430931456)>, '__dict__': <attribute '__dict__' of 'ActionGroup' objects>, '__weakref__': <attribute '__weakref__' of 'ActionGroup' objects>, '__doc__': None, '__gsignals__': {}, 'action_added': gi.FunctionInfo(action_added, bound=None), 'action_enabled_changed': gi.FunctionInfo(action_enabled_changed, bound=None), 'action_removed': gi.FunctionInfo(action_removed, bound=None), 'action_state_changed': gi.FunctionInfo(action_state_changed, bound=None), 'activate_action': gi.FunctionInfo(activate_action, bound=None), 'change_action_state': gi.FunctionInfo(change_action_state, bound=None), 'get_action_enabled': gi.FunctionInfo(get_action_enabled, bound=None), 'get_action_parameter_type': gi.FunctionInfo(get_action_parameter_type, bound=None), 'get_action_state': gi.FunctionInfo(get_action_state, bound=None), 'get_action_state_hint': gi.FunctionInfo(get_action_state_hint, bound=None), 'get_action_state_type': gi.FunctionInfo(get_action_state_type, bound=None), 'has_action': gi.FunctionInfo(has_action, bound=None), 'list_actions': gi.FunctionInfo(list_actions, bound=None), 'query_action': gi.FunctionInfo(query_action, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ActionGroup), '__module__': 'gi.repository.Gio', '__gtype__': <GType GActionGroup (1845785440)>, '__dict__': <attribute '__dict__' of 'ActionGroup' objects>, '__weakref__': <attribute '__weakref__' of 'ActionGroup' objects>, '__doc__': None, '__gsignals__': {}, 'action_added': gi.FunctionInfo(action_added), 'action_enabled_changed': gi.FunctionInfo(action_enabled_changed), 'action_removed': gi.FunctionInfo(action_removed), 'action_state_changed': gi.FunctionInfo(action_state_changed), 'activate_action': gi.FunctionInfo(activate_action), 'change_action_state': gi.FunctionInfo(change_action_state), 'get_action_enabled': gi.FunctionInfo(get_action_enabled), 'get_action_parameter_type': gi.FunctionInfo(get_action_parameter_type), 'get_action_state': gi.FunctionInfo(get_action_state), 'get_action_state_hint': gi.FunctionInfo(get_action_state_hint), 'get_action_state_type': gi.FunctionInfo(get_action_state_type), 'has_action': gi.FunctionInfo(has_action), 'list_actions': gi.FunctionInfo(list_actions), 'query_action': gi.FunctionInfo(query_action)})"
     __gdoc__ = 'Interface GActionGroup\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GActionGroup (2430931456)>'
+    __gtype__ = None # (!) real value is '<GType GActionGroup (1845785440)>'
     __info__ = InterfaceInfo(ActionGroup)
 
 

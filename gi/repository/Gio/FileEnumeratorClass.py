@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class FileEnumeratorClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -156,7 +165,7 @@ class FileEnumeratorClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FileEnumeratorClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FileEnumeratorClass' objects>, '__weakref__': <attribute '__weakref__' of 'FileEnumeratorClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793e197b0>, 'next_file': <property object at 0x000001a793e198a0>, 'close_fn': <property object at 0x000001a793e19990>, 'next_files_async': <property object at 0x000001a793e19ad0>, 'next_files_finish': <property object at 0x000001a793e19bc0>, 'close_async': <property object at 0x000001a793e19c60>, 'close_finish': <property object at 0x000001a793e19d50>, '_g_reserved1': <property object at 0x000001a793e19e40>, '_g_reserved2': <property object at 0x000001a793e19f30>, '_g_reserved3': <property object at 0x000001a793e1a020>, '_g_reserved4': <property object at 0x000001a793e1a110>, '_g_reserved5': <property object at 0x000001a793e1a200>, '_g_reserved6': <property object at 0x000001a793e1a2f0>, '_g_reserved7': <property object at 0x000001a793e1a3e0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FileEnumeratorClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FileEnumeratorClass' objects>, '__weakref__': <attribute '__weakref__' of 'FileEnumeratorClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea7094d620>, 'next_file': <property object at 0x000001ea7094d710>, 'close_fn': <property object at 0x000001ea7094d800>, 'next_files_async': <property object at 0x000001ea7094d8f0>, 'next_files_finish': <property object at 0x000001ea7094d9e0>, 'close_async': <property object at 0x000001ea7094dad0>, 'close_finish': <property object at 0x000001ea7094dbc0>, '_g_reserved1': <property object at 0x000001ea7094dcb0>, '_g_reserved2': <property object at 0x000001ea7094dda0>, '_g_reserved3': <property object at 0x000001ea7094de90>, '_g_reserved4': <property object at 0x000001ea7094df80>, '_g_reserved5': <property object at 0x000001ea7094e070>, '_g_reserved6': <property object at 0x000001ea7094e160>, '_g_reserved7': <property object at 0x000001ea7094e250>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(FileEnumeratorClass)
 

@@ -1,28 +1,32 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class TlsCertificateFlags(__gobject.GFlags):
+class TlsCertificateFlags(__gi__gi.GFlags):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -81,6 +85,10 @@ class TlsCertificateFlags(__gobject.GFlags):
         """
         pass
 
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return an array of bytes representing an integer.
@@ -110,8 +118,8 @@ class TlsCertificateFlags(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -122,12 +130,16 @@ class TlsCertificateFlags(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -151,10 +163,15 @@ class TlsCertificateFlags(__gobject.GFlags):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -189,15 +206,24 @@ class TlsCertificateFlags(__gobject.GFlags):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -225,16 +251,16 @@ class TlsCertificateFlags(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -249,24 +275,24 @@ class TlsCertificateFlags(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -285,8 +311,8 @@ class TlsCertificateFlags(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -317,8 +343,8 @@ class TlsCertificateFlags(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -330,7 +356,7 @@ class TlsCertificateFlags(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -356,16 +382,12 @@ class TlsCertificateFlags(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -376,34 +398,17 @@ class TlsCertificateFlags(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     BAD_IDENTITY = 2
     EXPIRED = 8
     GENERIC_ERROR = 64
     INSECURE = 32
     NOT_ACTIVATED = 4
-    NO_FLAGS = 0
     REVOKED = 16
     UNKNOWN_CA = 1
-    VALIDATE_ALL = 127
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gio', '__dict__': <attribute '__dict__' of 'TlsCertificateFlags' objects>, '__doc__': None, '__gtype__': <GType GTlsCertificateFlags (2466628304)>, '__flags_values__': {0: <flags 0 of type Gio.TlsCertificateFlags>, 1: <flags G_TLS_CERTIFICATE_UNKNOWN_CA of type Gio.TlsCertificateFlags>, 2: <flags G_TLS_CERTIFICATE_BAD_IDENTITY of type Gio.TlsCertificateFlags>, 4: <flags G_TLS_CERTIFICATE_NOT_ACTIVATED of type Gio.TlsCertificateFlags>, 8: <flags G_TLS_CERTIFICATE_EXPIRED of type Gio.TlsCertificateFlags>, 16: <flags G_TLS_CERTIFICATE_REVOKED of type Gio.TlsCertificateFlags>, 32: <flags G_TLS_CERTIFICATE_INSECURE of type Gio.TlsCertificateFlags>, 64: <flags G_TLS_CERTIFICATE_GENERIC_ERROR of type Gio.TlsCertificateFlags>, 127: <flags G_TLS_CERTIFICATE_UNKNOWN_CA | G_TLS_CERTIFICATE_BAD_IDENTITY | G_TLS_CERTIFICATE_NOT_ACTIVATED | G_TLS_CERTIFICATE_EXPIRED | G_TLS_CERTIFICATE_REVOKED | G_TLS_CERTIFICATE_INSECURE | G_TLS_CERTIFICATE_GENERIC_ERROR | G_TLS_CERTIFICATE_VALIDATE_ALL of type Gio.TlsCertificateFlags>}, '__info__': gi.EnumInfo(TlsCertificateFlags), 'NO_FLAGS': <flags 0 of type Gio.TlsCertificateFlags>, 'UNKNOWN_CA': <flags G_TLS_CERTIFICATE_UNKNOWN_CA of type Gio.TlsCertificateFlags>, 'BAD_IDENTITY': <flags G_TLS_CERTIFICATE_BAD_IDENTITY of type Gio.TlsCertificateFlags>, 'NOT_ACTIVATED': <flags G_TLS_CERTIFICATE_NOT_ACTIVATED of type Gio.TlsCertificateFlags>, 'EXPIRED': <flags G_TLS_CERTIFICATE_EXPIRED of type Gio.TlsCertificateFlags>, 'REVOKED': <flags G_TLS_CERTIFICATE_REVOKED of type Gio.TlsCertificateFlags>, 'INSECURE': <flags G_TLS_CERTIFICATE_INSECURE of type Gio.TlsCertificateFlags>, 'GENERIC_ERROR': <flags G_TLS_CERTIFICATE_GENERIC_ERROR of type Gio.TlsCertificateFlags>, 'VALIDATE_ALL': <flags G_TLS_CERTIFICATE_UNKNOWN_CA | G_TLS_CERTIFICATE_BAD_IDENTITY | G_TLS_CERTIFICATE_NOT_ACTIVATED | G_TLS_CERTIFICATE_EXPIRED | G_TLS_CERTIFICATE_REVOKED | G_TLS_CERTIFICATE_INSECURE | G_TLS_CERTIFICATE_GENERIC_ERROR | G_TLS_CERTIFICATE_VALIDATE_ALL of type Gio.TlsCertificateFlags>})"
-    __flags_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-        64: 64,
-        127: 127,
-    }
-    __gtype__ = None # (!) real value is '<GType GTlsCertificateFlags (2466628304)>'
-    __info__ = gi.EnumInfo(TlsCertificateFlags)
+    __class__ = None # (!) real value is "<class 'gi._enum.GFlagsMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NO_FLAGS': <TlsCertificateFlags.NO_FLAGS: 0>, 'UNKNOWN_CA': <TlsCertificateFlags.UNKNOWN_CA: 1>, 'BAD_IDENTITY': <TlsCertificateFlags.BAD_IDENTITY: 2>, 'NOT_ACTIVATED': <TlsCertificateFlags.NOT_ACTIVATED: 4>, 'EXPIRED': <TlsCertificateFlags.EXPIRED: 8>, 'REVOKED': <TlsCertificateFlags.REVOKED: 16>, 'INSECURE': <TlsCertificateFlags.INSECURE: 32>, 'GENERIC_ERROR': <TlsCertificateFlags.GENERIC_ERROR: 64>, 'VALIDATE_ALL': <TlsCertificateFlags.VALIDATE_ALL: 127>})"
+    __name__ = 'TlsCertificateFlags'
+    __qualname__ = 'TlsCertificateFlags'
 
 

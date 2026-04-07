@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.freetype2
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\freetype2-2.0.typelib
 # by generator 1.147
 """
 An object which wraps an introspection typelib.

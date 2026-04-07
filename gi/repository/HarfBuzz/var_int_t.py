@@ -1,21 +1,13 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
 class var_int_t(__gi.Struct):
@@ -141,7 +133,7 @@ class var_int_t(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': gi.UnionInfo(var_int_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'var_int_t' objects>, '__weakref__': <attribute '__weakref__' of 'var_int_t' objects>, '__doc__': None, 'u32': <property object at 0x000001d9a15c9a30>, 'i32': <property object at 0x000001d9a15c9b20>, 'u16': <property object at 0x000001d9a15c9c10>, 'i16': <property object at 0x000001d9a15c9d00>, 'u8': <property object at 0x000001d9a15c9df0>, 'i8': <property object at 0x000001d9a15c9ee0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': gi.UnionInfo(var_int_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'var_int_t' objects>, '__weakref__': <attribute '__weakref__' of 'var_int_t' objects>, '__doc__': None, 'u32': <property object at 0x00000208a5080d10>, 'i32': <property object at 0x00000208a5080c20>, 'u16': <property object at 0x00000208a5080b30>, 'i16': <property object at 0x00000208a5080a40>, 'u8': <property object at 0x00000208a5080950>, 'i8': <property object at 0x00000208a5080860>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = gi.UnionInfo(var_int_t)
 

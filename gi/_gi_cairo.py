@@ -8,9 +8,9 @@
 # no classes
 # variables with complex values
 
-__loader__ = None # (!) real value is '<_frozen_importlib_external.ExtensionFileLoader object at 0x0000029292dac620>'
+__loader__ = None # (!) real value is '<_frozen_importlib_external.ExtensionFileLoader object at 0x00000274deaa9150>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi._gi_cairo', loader=<_frozen_importlib_external.ExtensionFileLoader object at 0x0000029292dac620>, origin='C:\\\\Program Files\\\\GIMP 3\\\\lib\\\\python3.12\\\\site-packages\\\\gi\\\\_gi_cairo.cp312-mingw_x86_64_ucrt_llvm.pyd')"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi._gi_cairo', loader=<_frozen_importlib_external.ExtensionFileLoader object at 0x00000274deaa9150>)"
 

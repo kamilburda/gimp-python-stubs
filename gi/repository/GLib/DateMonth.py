@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class DateMonth(__gobject.GEnum):
+class DateMonth(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class DateMonth(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class DateMonth(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -126,12 +124,23 @@ class DateMonth(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +169,10 @@ class DateMonth(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -205,6 +218,14 @@ class DateMonth(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -230,8 +251,8 @@ class DateMonth(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -262,15 +283,16 @@ class DateMonth(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -334,7 +356,7 @@ class DateMonth(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -376,10 +398,6 @@ class DateMonth(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     APRIL = 4
     AUGUST = 8
@@ -394,24 +412,9 @@ class DateMonth(__gobject.GEnum):
     NOVEMBER = 11
     OCTOBER = 10
     SEPTEMBER = 9
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'DateMonth' objects>, '__doc__': None, '__gtype__': <GType PyGLibDateMonth (155716272)>, '__enum_values__': {0: <enum G_DATE_BAD_MONTH of type GLib.DateMonth>, 1: <enum G_DATE_JANUARY of type GLib.DateMonth>, 2: <enum G_DATE_FEBRUARY of type GLib.DateMonth>, 3: <enum G_DATE_MARCH of type GLib.DateMonth>, 4: <enum G_DATE_APRIL of type GLib.DateMonth>, 5: <enum G_DATE_MAY of type GLib.DateMonth>, 6: <enum G_DATE_JUNE of type GLib.DateMonth>, 7: <enum G_DATE_JULY of type GLib.DateMonth>, 8: <enum G_DATE_AUGUST of type GLib.DateMonth>, 9: <enum G_DATE_SEPTEMBER of type GLib.DateMonth>, 10: <enum G_DATE_OCTOBER of type GLib.DateMonth>, 11: <enum G_DATE_NOVEMBER of type GLib.DateMonth>, 12: <enum G_DATE_DECEMBER of type GLib.DateMonth>}, '__info__': gi.EnumInfo(DateMonth), 'BAD_MONTH': <enum G_DATE_BAD_MONTH of type GLib.DateMonth>, 'JANUARY': <enum G_DATE_JANUARY of type GLib.DateMonth>, 'FEBRUARY': <enum G_DATE_FEBRUARY of type GLib.DateMonth>, 'MARCH': <enum G_DATE_MARCH of type GLib.DateMonth>, 'APRIL': <enum G_DATE_APRIL of type GLib.DateMonth>, 'MAY': <enum G_DATE_MAY of type GLib.DateMonth>, 'JUNE': <enum G_DATE_JUNE of type GLib.DateMonth>, 'JULY': <enum G_DATE_JULY of type GLib.DateMonth>, 'AUGUST': <enum G_DATE_AUGUST of type GLib.DateMonth>, 'SEPTEMBER': <enum G_DATE_SEPTEMBER of type GLib.DateMonth>, 'OCTOBER': <enum G_DATE_OCTOBER of type GLib.DateMonth>, 'NOVEMBER': <enum G_DATE_NOVEMBER of type GLib.DateMonth>, 'DECEMBER': <enum G_DATE_DECEMBER of type GLib.DateMonth>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibDateMonth (155716272)>'
-    __info__ = gi.EnumInfo(DateMonth)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'BAD_MONTH': <DateMonth.BAD_MONTH: 0>, 'JANUARY': <DateMonth.JANUARY: 1>, 'FEBRUARY': <DateMonth.FEBRUARY: 2>, 'MARCH': <DateMonth.MARCH: 3>, 'APRIL': <DateMonth.APRIL: 4>, 'MAY': <DateMonth.MAY: 5>, 'JUNE': <DateMonth.JUNE: 6>, 'JULY': <DateMonth.JULY: 7>, 'AUGUST': <DateMonth.AUGUST: 8>, 'SEPTEMBER': <DateMonth.SEPTEMBER: 9>, 'OCTOBER': <DateMonth.OCTOBER: 10>, 'NOVEMBER': <DateMonth.NOVEMBER: 11>, 'DECEMBER': <DateMonth.DECEMBER: 12>})"
+    __name__ = 'DateMonth'
+    __qualname__ = 'DateMonth'
 
 

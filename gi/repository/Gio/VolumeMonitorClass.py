@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class VolumeMonitorClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -180,7 +189,7 @@ class VolumeMonitorClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VolumeMonitorClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'VolumeMonitorClass' objects>, '__weakref__': <attribute '__weakref__' of 'VolumeMonitorClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793e70ea0>, 'volume_added': <property object at 0x000001a793e70f90>, 'volume_removed': <property object at 0x000001a793e71080>, 'volume_changed': <property object at 0x000001a793e71170>, 'mount_added': <property object at 0x000001a793e71260>, 'mount_removed': <property object at 0x000001a793e71350>, 'mount_pre_unmount': <property object at 0x000001a793e71490>, 'mount_changed': <property object at 0x000001a793e71580>, 'drive_connected': <property object at 0x000001a793e71670>, 'drive_disconnected': <property object at 0x000001a793e717b0>, 'drive_changed': <property object at 0x000001a793e718a0>, 'is_supported': <property object at 0x000001a793e71990>, 'get_connected_drives': <property object at 0x000001a793e71ad0>, 'get_volumes': <property object at 0x000001a793e71b70>, 'get_mounts': <property object at 0x000001a793e71c60>, 'get_volume_for_uuid': <property object at 0x000001a793e71da0>, 'get_mount_for_uuid': <property object at 0x000001a793e71e90>, 'adopt_orphan_mount': <property object at 0x000001a793e71f80>, 'drive_eject_button': <property object at 0x000001a793e72070>, 'drive_stop_button': <property object at 0x000001a793e721b0>, '_g_reserved1': <property object at 0x000001a793e722a0>, '_g_reserved2': <property object at 0x000001a793e72390>, '_g_reserved3': <property object at 0x000001a793e72480>, '_g_reserved4': <property object at 0x000001a793e72570>, '_g_reserved5': <property object at 0x000001a793e72660>, '_g_reserved6': <property object at 0x000001a793e72750>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VolumeMonitorClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'VolumeMonitorClass' objects>, '__weakref__': <attribute '__weakref__' of 'VolumeMonitorClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea709fad90>, 'volume_added': <property object at 0x000001ea709fae80>, 'volume_removed': <property object at 0x000001ea709faf70>, 'volume_changed': <property object at 0x000001ea709fb060>, 'mount_added': <property object at 0x000001ea709fb150>, 'mount_removed': <property object at 0x000001ea709fb240>, 'mount_pre_unmount': <property object at 0x000001ea709fb330>, 'mount_changed': <property object at 0x000001ea709fb420>, 'drive_connected': <property object at 0x000001ea709fb510>, 'drive_disconnected': <property object at 0x000001ea709fb600>, 'drive_changed': <property object at 0x000001ea709fb6f0>, 'is_supported': <property object at 0x000001ea709fb7e0>, 'get_connected_drives': <property object at 0x000001ea709fb8d0>, 'get_volumes': <property object at 0x000001ea709fb9c0>, 'get_mounts': <property object at 0x000001ea709fbab0>, 'get_volume_for_uuid': <property object at 0x000001ea709fbba0>, 'get_mount_for_uuid': <property object at 0x000001ea709fbc90>, 'adopt_orphan_mount': <property object at 0x000001ea709fbd80>, 'drive_eject_button': <property object at 0x000001ea709fbe70>, 'drive_stop_button': <property object at 0x000001ea709fbf60>, '_g_reserved1': <property object at 0x000001ea709fc090>, '_g_reserved2': <property object at 0x000001ea709fc180>, '_g_reserved3': <property object at 0x000001ea709fc270>, '_g_reserved4': <property object at 0x000001ea709fc360>, '_g_reserved5': <property object at 0x000001ea709fc450>, '_g_reserved6': <property object at 0x000001ea709fc540>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(VolumeMonitorClass)
 

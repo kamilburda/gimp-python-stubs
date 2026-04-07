@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -149,7 +148,7 @@ class StockItem(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StockItem), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StockItem' objects>, '__weakref__': <attribute '__weakref__' of 'StockItem' objects>, '__doc__': None, 'stock_id': <property object at 0x000002ece9b927a0>, 'label': <property object at 0x000002ece9b92890>, 'modifier': <property object at 0x000002ece9b92980>, 'keyval': <property object at 0x000002ece9b92a70>, 'translation_domain': <property object at 0x000002ece9b92b60>, 'free': gi.FunctionInfo(free, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StockItem), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StockItem' objects>, '__weakref__': <attribute '__weakref__' of 'StockItem' objects>, '__doc__': None, 'stock_id': <property object at 0x000002bfd39fcea0>, 'label': <property object at 0x000002bfd39fcf90>, 'modifier': <property object at 0x000002bfd39fd080>, 'keyval': <property object at 0x000002bfd39fd170>, 'translation_domain': <property object at 0x000002bfd39fd260>, 'free': gi.FunctionInfo(free)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(StockItem)
 

@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class StrvBuilder(__gi.Boxed):
@@ -39,7 +37,8 @@ class StrvBuilder(__gi.Boxed):
         """ end(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> GLib.StrvBuilder """
         pass
 
@@ -171,8 +170,8 @@ class StrvBuilder(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StrvBuilder), '__module__': 'gi.repository.GLib', '__gtype__': <GType GStrvBuilder (163506560)>, '__dict__': <attribute '__dict__' of 'StrvBuilder' objects>, '__weakref__': <attribute '__weakref__' of 'StrvBuilder' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'add': gi.FunctionInfo(add, bound=None), 'addv': gi.FunctionInfo(addv, bound=None), 'end': gi.FunctionInfo(end, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'take': gi.FunctionInfo(take, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'unref_to_strv': gi.FunctionInfo(unref_to_strv, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GStrvBuilder (163506560)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StrvBuilder), '__module__': 'gi.repository.GLib', '__gtype__': <GType GStrvBuilder (2640520608)>, '__dict__': <attribute '__dict__' of 'StrvBuilder' objects>, '__weakref__': <attribute '__weakref__' of 'StrvBuilder' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'add': gi.FunctionInfo(add), 'addv': gi.FunctionInfo(addv), 'end': gi.FunctionInfo(end), 'ref': gi.FunctionInfo(ref), 'take': gi.FunctionInfo(take), 'unref': gi.FunctionInfo(unref), 'unref_to_strv': gi.FunctionInfo(unref_to_strv), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GStrvBuilder (2640520608)>'
     __info__ = StructInfo(StrvBuilder)
 
 

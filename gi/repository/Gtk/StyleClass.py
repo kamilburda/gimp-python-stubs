@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -213,7 +212,7 @@ class StyleClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StyleClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StyleClass' objects>, '__weakref__': <attribute '__weakref__' of 'StyleClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece9b7c270>, 'realize': <property object at 0x000002ece9b7c360>, 'unrealize': <property object at 0x000002ece9b7c450>, 'copy': <property object at 0x000002ece9b7c540>, 'clone': <property object at 0x000002ece9b7c630>, 'init_from_rc': <property object at 0x000002ece9b7c720>, 'set_background': <property object at 0x000002ece9b7c810>, 'render_icon': <property object at 0x000002ece9b7c900>, 'draw_hline': <property object at 0x000002ece9b7c9f0>, 'draw_vline': <property object at 0x000002ece9b7cae0>, 'draw_shadow': <property object at 0x000002ece9b7cbd0>, 'draw_arrow': <property object at 0x000002ece9b7ccc0>, 'draw_diamond': <property object at 0x000002ece9b7cdb0>, 'draw_box': <property object at 0x000002ece9b7cea0>, 'draw_flat_box': <property object at 0x000002ece9b7cf90>, 'draw_check': <property object at 0x000002ece9b7d080>, 'draw_option': <property object at 0x000002ece9b7d170>, 'draw_tab': <property object at 0x000002ece9b7d260>, 'draw_shadow_gap': <property object at 0x000002ece9b7d350>, 'draw_box_gap': <property object at 0x000002ece9b7d440>, 'draw_extension': <property object at 0x000002ece9b7d530>, 'draw_focus': <property object at 0x000002ece9b7d620>, 'draw_slider': <property object at 0x000002ece9b7d710>, 'draw_handle': <property object at 0x000002ece9b7d800>, 'draw_expander': <property object at 0x000002ece9b7d8f0>, 'draw_layout': <property object at 0x000002ece9b7d9e0>, 'draw_resize_grip': <property object at 0x000002ece9b7dad0>, 'draw_spinner': <property object at 0x000002ece9b7dbc0>, '_gtk_reserved1': <property object at 0x000002ece9b7dcb0>, '_gtk_reserved2': <property object at 0x000002ece9b7dda0>, '_gtk_reserved3': <property object at 0x000002ece9b7de90>, '_gtk_reserved4': <property object at 0x000002ece9b7df80>, '_gtk_reserved5': <property object at 0x000002ece9b7e070>, '_gtk_reserved6': <property object at 0x000002ece9b7e160>, '_gtk_reserved7': <property object at 0x000002ece9b7e250>, '_gtk_reserved8': <property object at 0x000002ece9b7e340>, '_gtk_reserved9': <property object at 0x000002ece9b7e430>, '_gtk_reserved10': <property object at 0x000002ece9b7e520>, '_gtk_reserved11': <property object at 0x000002ece9b7e610>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StyleClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StyleClass' objects>, '__weakref__': <attribute '__weakref__' of 'StyleClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd39fe8e0>, 'realize': <property object at 0x000002bfd39fe9d0>, 'unrealize': <property object at 0x000002bfd39feac0>, 'copy': <property object at 0x000002bfd39febb0>, 'clone': <property object at 0x000002bfd39feca0>, 'init_from_rc': <property object at 0x000002bfd39fed90>, 'set_background': <property object at 0x000002bfd39fee80>, 'render_icon': <property object at 0x000002bfd39fef70>, 'draw_hline': <property object at 0x000002bfd39ff060>, 'draw_vline': <property object at 0x000002bfd39ff150>, 'draw_shadow': <property object at 0x000002bfd39ff240>, 'draw_arrow': <property object at 0x000002bfd39ff330>, 'draw_diamond': <property object at 0x000002bfd39ff420>, 'draw_box': <property object at 0x000002bfd39ff510>, 'draw_flat_box': <property object at 0x000002bfd39ff600>, 'draw_check': <property object at 0x000002bfd39ff6f0>, 'draw_option': <property object at 0x000002bfd39ff7e0>, 'draw_tab': <property object at 0x000002bfd39ff8d0>, 'draw_shadow_gap': <property object at 0x000002bfd39ff9c0>, 'draw_box_gap': <property object at 0x000002bfd39ffab0>, 'draw_extension': <property object at 0x000002bfd39ffba0>, 'draw_focus': <property object at 0x000002bfd39ffc90>, 'draw_slider': <property object at 0x000002bfd39ffd80>, 'draw_handle': <property object at 0x000002bfd39ffe70>, 'draw_expander': <property object at 0x000002bfd39fff60>, 'draw_layout': <property object at 0x000002bfd3a00090>, 'draw_resize_grip': <property object at 0x000002bfd3a00180>, 'draw_spinner': <property object at 0x000002bfd3a00270>, '_gtk_reserved1': <property object at 0x000002bfd3a00360>, '_gtk_reserved2': <property object at 0x000002bfd3a00450>, '_gtk_reserved3': <property object at 0x000002bfd3a00540>, '_gtk_reserved4': <property object at 0x000002bfd3a00630>, '_gtk_reserved5': <property object at 0x000002bfd3a00720>, '_gtk_reserved6': <property object at 0x000002bfd3a00810>, '_gtk_reserved7': <property object at 0x000002bfd3a00900>, '_gtk_reserved8': <property object at 0x000002bfd3a009f0>, '_gtk_reserved9': <property object at 0x000002bfd3a00ae0>, '_gtk_reserved10': <property object at 0x000002bfd3a00bd0>, '_gtk_reserved11': <property object at 0x000002bfd3a00cc0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(StyleClass)
 

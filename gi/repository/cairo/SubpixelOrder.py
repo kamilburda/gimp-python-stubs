@@ -1,30 +1,22 @@
 # encoding: utf-8
 # module gi.repository.cairo
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class SubpixelOrder(__gobject.GEnum):
+class SubpixelOrder(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -77,10 +69,14 @@ class SubpixelOrder(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -96,7 +92,7 @@ class SubpixelOrder(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -124,12 +120,23 @@ class SubpixelOrder(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -153,10 +160,15 @@ class SubpixelOrder(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -202,6 +214,14 @@ class SubpixelOrder(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -227,8 +247,8 @@ class SubpixelOrder(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -259,15 +279,16 @@ class SubpixelOrder(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -331,7 +352,7 @@ class SubpixelOrder(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -373,26 +394,15 @@ class SubpixelOrder(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     BGR = 2
     DEFAULT = 0
     RGB = 1
     VBGR = 4
     VRGB = 3
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.cairo', '__dict__': <attribute '__dict__' of 'SubpixelOrder' objects>, '__doc__': None, '__gtype__': <GType cairo_subpixel_order_t (4004031472)>, '__enum_values__': {0: <enum CAIRO_SUBPIXEL_ORDER_DEFAULT of type cairo.SubpixelOrder>, 1: <enum CAIRO_SUBPIXEL_ORDER_RGB of type cairo.SubpixelOrder>, 2: <enum CAIRO_SUBPIXEL_ORDER_BGR of type cairo.SubpixelOrder>, 3: <enum CAIRO_SUBPIXEL_ORDER_VRGB of type cairo.SubpixelOrder>, 4: <enum CAIRO_SUBPIXEL_ORDER_VBGR of type cairo.SubpixelOrder>}, '__info__': gi.EnumInfo(SubpixelOrder), 'DEFAULT': <enum CAIRO_SUBPIXEL_ORDER_DEFAULT of type cairo.SubpixelOrder>, 'RGB': <enum CAIRO_SUBPIXEL_ORDER_RGB of type cairo.SubpixelOrder>, 'BGR': <enum CAIRO_SUBPIXEL_ORDER_BGR of type cairo.SubpixelOrder>, 'VRGB': <enum CAIRO_SUBPIXEL_ORDER_VRGB of type cairo.SubpixelOrder>, 'VBGR': <enum CAIRO_SUBPIXEL_ORDER_VBGR of type cairo.SubpixelOrder>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-    }
-    __gtype__ = None # (!) real value is '<GType cairo_subpixel_order_t (4004031472)>'
-    __info__ = gi.EnumInfo(SubpixelOrder)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'DEFAULT': <SubpixelOrder.DEFAULT: 0>, 'RGB': <SubpixelOrder.RGB: 1>, 'BGR': <SubpixelOrder.BGR: 2>, 'VRGB': <SubpixelOrder.VRGB: 3>, 'VBGR': <SubpixelOrder.VBGR: 4>})"
+    __name__ = 'SubpixelOrder'
+    __qualname__ = 'SubpixelOrder'
 
 

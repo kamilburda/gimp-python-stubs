@@ -1,21 +1,13 @@
 # encoding: utf-8
 # module gi.repository.Babl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Babl-0.1.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
 # Variables with simple values
@@ -26,15 +18,13 @@ ALPHA_FLOOR_F = 0
 
 MAJOR_VERSION = 0
 
-MICRO_VERSION = 110
+MICRO_VERSION = 122
 
 MINOR_VERSION = 1
 
 _namespace = 'Babl'
 
 _version = '0.1'
-
-__weakref__ = None
 
 # functions
 
@@ -207,8 +197,8 @@ def space_get_gamma(space): # real signature unknown; restored from __doc__
     return 0.0
 
 def space_get_icc(babl): # real signature unknown; restored from __doc__
-    """ space_get_icc(babl:Babl.Object) -> str, length:int """
-    return ""
+    """ space_get_icc(babl:Babl.Object) -> list """
+    return []
 
 def space_get_rgb_luminance(space): # real signature unknown; restored from __doc__
     """ space_get_rgb_luminance(space:Babl.Object) -> red_luminance:float, green_luminance:float, blue_luminance:float """
@@ -242,118 +232,15 @@ def type(name): # real signature unknown; restored from __doc__
     """ type(name:str) -> Babl.Object """
     pass
 
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """ Default object formatter. """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    """ Might raise gi._gi.RepositoryError """
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
-    pass
-
 # classes
 
-class IccIntent(__gobject.GEnum):
+class IccIntent(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -406,10 +293,14 @@ class IccIntent(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -425,7 +316,7 @@ class IccIntent(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -453,12 +344,23 @@ class IccIntent(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -482,10 +384,15 @@ class IccIntent(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -531,6 +438,14 @@ class IccIntent(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -556,8 +471,8 @@ class IccIntent(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -588,15 +503,16 @@ class IccIntent(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -660,7 +576,7 @@ class IccIntent(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -701,10 +617,6 @@ class IccIntent(__gobject.GEnum):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     ABSOLUTE_COLORIMETRIC = 3
@@ -712,27 +624,19 @@ class IccIntent(__gobject.GEnum):
     PERFORMANCE = 32
     RELATIVE_COLORIMETRIC = 1
     SATURATION = 2
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Babl', '__dict__': <attribute '__dict__' of 'IccIntent' objects>, '__doc__': None, '__gtype__': <GType PyBablIccIntent (381086608)>, '__enum_values__': {0: <enum BABL_ICC_INTENT_PERCEPTUAL of type Babl.IccIntent>, 1: <enum BABL_ICC_INTENT_RELATIVE_COLORIMETRIC of type Babl.IccIntent>, 2: <enum BABL_ICC_INTENT_SATURATION of type Babl.IccIntent>, 3: <enum BABL_ICC_INTENT_ABSOLUTE_COLORIMETRIC of type Babl.IccIntent>, 32: <enum BABL_ICC_INTENT_PERFORMANCE of type Babl.IccIntent>}, '__info__': gi.EnumInfo(IccIntent), 'PERCEPTUAL': <enum BABL_ICC_INTENT_PERCEPTUAL of type Babl.IccIntent>, 'RELATIVE_COLORIMETRIC': <enum BABL_ICC_INTENT_RELATIVE_COLORIMETRIC of type Babl.IccIntent>, 'SATURATION': <enum BABL_ICC_INTENT_SATURATION of type Babl.IccIntent>, 'ABSOLUTE_COLORIMETRIC': <enum BABL_ICC_INTENT_ABSOLUTE_COLORIMETRIC of type Babl.IccIntent>, 'PERFORMANCE': <enum BABL_ICC_INTENT_PERFORMANCE of type Babl.IccIntent>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        32: 32,
-    }
-    __gtype__ = None # (!) real value is '<GType PyBablIccIntent (381086608)>'
-    __info__ = gi.EnumInfo(IccIntent)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'PERCEPTUAL': <IccIntent.PERCEPTUAL: 0>, 'RELATIVE_COLORIMETRIC': <IccIntent.RELATIVE_COLORIMETRIC: 1>, 'SATURATION': <IccIntent.SATURATION: 2>, 'ABSOLUTE_COLORIMETRIC': <IccIntent.ABSOLUTE_COLORIMETRIC: 3>, 'PERFORMANCE': <IccIntent.PERFORMANCE: 32>})"
+    __name__ = 'IccIntent'
+    __qualname__ = 'IccIntent'
 
 
-class ModelFlag(__gobject.GFlags):
+class ModelFlag(__enum.IntFlag):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -785,10 +689,14 @@ class ModelFlag(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -804,7 +712,7 @@ class ModelFlag(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -820,8 +728,8 @@ class ModelFlag(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -832,12 +740,16 @@ class ModelFlag(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -861,10 +773,15 @@ class ModelFlag(__gobject.GFlags):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -906,8 +823,16 @@ class ModelFlag(__gobject.GFlags):
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -935,16 +860,16 @@ class ModelFlag(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -959,24 +884,24 @@ class ModelFlag(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -995,8 +920,8 @@ class ModelFlag(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -1027,8 +952,8 @@ class ModelFlag(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -1040,7 +965,7 @@ class ModelFlag(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -1066,16 +991,12 @@ class ModelFlag(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -1085,10 +1006,6 @@ class ModelFlag(__gobject.GFlags):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     ALPHA = 2
@@ -1101,22 +1018,10 @@ class ModelFlag(__gobject.GFlags):
     NONLINEAR = 2048
     PERCEPTUAL = 4096
     RGB = 2097152
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Babl', '__dict__': <attribute '__dict__' of 'ModelFlag' objects>, '__doc__': None, '__gtype__': <GType PyBablModelFlag (381083808)>, '__flags_values__': {2: <flags BABL_MODEL_FLAG_ALPHA of type Babl.ModelFlag>, 4: <flags BABL_MODEL_FLAG_ASSOCIATED of type Babl.ModelFlag>, 8: <flags BABL_MODEL_FLAG_INVERTED of type Babl.ModelFlag>, 1024: <flags BABL_MODEL_FLAG_LINEAR of type Babl.ModelFlag>, 2048: <flags BABL_MODEL_FLAG_NONLINEAR of type Babl.ModelFlag>, 4096: <flags BABL_MODEL_FLAG_PERCEPTUAL of type Babl.ModelFlag>, 1048576: <flags BABL_MODEL_FLAG_GRAY of type Babl.ModelFlag>, 2097152: <flags BABL_MODEL_FLAG_RGB of type Babl.ModelFlag>, 8388608: <flags BABL_MODEL_FLAG_CIE of type Babl.ModelFlag>, 16777216: <flags BABL_MODEL_FLAG_CMYK of type Babl.ModelFlag>}, '__info__': gi.EnumInfo(ModelFlag), 'ALPHA': <flags BABL_MODEL_FLAG_ALPHA of type Babl.ModelFlag>, 'ASSOCIATED': <flags BABL_MODEL_FLAG_ASSOCIATED of type Babl.ModelFlag>, 'INVERTED': <flags BABL_MODEL_FLAG_INVERTED of type Babl.ModelFlag>, 'LINEAR': <flags BABL_MODEL_FLAG_LINEAR of type Babl.ModelFlag>, 'NONLINEAR': <flags BABL_MODEL_FLAG_NONLINEAR of type Babl.ModelFlag>, 'PERCEPTUAL': <flags BABL_MODEL_FLAG_PERCEPTUAL of type Babl.ModelFlag>, 'GRAY': <flags BABL_MODEL_FLAG_GRAY of type Babl.ModelFlag>, 'RGB': <flags BABL_MODEL_FLAG_RGB of type Babl.ModelFlag>, 'CIE': <flags BABL_MODEL_FLAG_CIE of type Babl.ModelFlag>, 'CMYK': <flags BABL_MODEL_FLAG_CMYK of type Babl.ModelFlag>})"
-    __flags_values__ = {
-        2: 2,
-        4: 4,
-        8: 8,
-        1024: 1024,
-        2048: 2048,
-        4096: 4096,
-        1048576: 1048576,
-        2097152: 2097152,
-        8388608: 8388608,
-        16777216: 16777216,
-    }
-    __gtype__ = None # (!) real value is '<GType PyBablModelFlag (381083808)>'
-    __info__ = gi.EnumInfo(ModelFlag)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'ALPHA': <ModelFlag.ALPHA: 2>, 'ASSOCIATED': <ModelFlag.ASSOCIATED: 4>, 'INVERTED': <ModelFlag.INVERTED: 8>, 'LINEAR': <ModelFlag.LINEAR: 1024>, 'NONLINEAR': <ModelFlag.NONLINEAR: 2048>, 'PERCEPTUAL': <ModelFlag.PERCEPTUAL: 4096>, 'GRAY': <ModelFlag.GRAY: 1048576>, 'RGB': <ModelFlag.RGB: 2097152>, 'CIE': <ModelFlag.CIE: 8388608>, 'CMYK': <ModelFlag.CMYK: 16777216>})"
+    __name__ = 'ModelFlag'
+    __qualname__ = 'ModelFlag'
 
 
 class Object(__gi.Struct):
@@ -1134,7 +1039,11 @@ class Object(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -1230,14 +1139,13 @@ class Object(__gi.Struct):
     __info__ = gi.UnionInfo(Object)
 
 
-class SpaceFlags(__gobject.GEnum):
+class SpaceFlags(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -1290,10 +1198,14 @@ class SpaceFlags(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -1309,7 +1221,7 @@ class SpaceFlags(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -1337,12 +1249,23 @@ class SpaceFlags(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -1366,10 +1289,15 @@ class SpaceFlags(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -1415,6 +1343,14 @@ class SpaceFlags(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -1440,8 +1376,8 @@ class SpaceFlags(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -1472,15 +1408,16 @@ class SpaceFlags(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -1544,7 +1481,7 @@ class SpaceFlags(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -1586,150 +1523,20 @@ class SpaceFlags(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     EQUALIZE = 1
     NONE = 0
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Babl', '__dict__': <attribute '__dict__' of 'SpaceFlags' objects>, '__doc__': None, '__gtype__': <GType PyBablSpaceFlags (381080784)>, '__enum_values__': {0: <enum BABL_SPACE_FLAG_NONE of type Babl.SpaceFlags>, 1: <enum BABL_SPACE_FLAG_EQUALIZE of type Babl.SpaceFlags>}, '__info__': gi.EnumInfo(SpaceFlags), 'NONE': <enum BABL_SPACE_FLAG_NONE of type Babl.SpaceFlags>, 'EQUALIZE': <enum BABL_SPACE_FLAG_EQUALIZE of type Babl.SpaceFlags>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-    }
-    __gtype__ = None # (!) real value is '<GType PyBablSpaceFlags (381080784)>'
-    __info__ = gi.EnumInfo(SpaceFlags)
-
-
-class __class__(object):
-    """
-    An object which wraps an introspection typelib.
-    
-        This wrapping creates a python module like representation of the typelib
-        using gi repository as a foundation. Accessing attributes of the module
-        will dynamically pull them in and create wrappers for the members.
-        These members are then cached on this introspection module.
-    """
-    def __delattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement delattr(self, name). """
-        pass
-
-    def __dir__(self): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __eq__(self, *args, **kwargs): # real signature unknown
-        """ Return self==value. """
-        pass
-
-    def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
-        pass
-
-    def __getattribute__(self, *args, **kwargs): # real signature unknown
-        """ Return getattr(self, name). """
-        pass
-
-    def __getattr__(self, name): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __getstate__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __ge__(self, *args, **kwargs): # real signature unknown
-        """ Return self>=value. """
-        pass
-
-    def __gt__(self, *args, **kwargs): # real signature unknown
-        """ Return self>value. """
-        pass
-
-    def __hash__(self, *args, **kwargs): # real signature unknown
-        """ Return hash(self). """
-        pass
-
-    def __init_subclass__(self, *args, **kwargs): # real signature unknown
-        """
-        This method is called when a class is subclassed.
-        
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-        pass
-
-    def __init__(self, namespace, version=None): # reliably restored by inspect
-        """ Might raise gi._gi.RepositoryError """
-        pass
-
-    def __le__(self, *args, **kwargs): # real signature unknown
-        """ Return self<=value. """
-        pass
-
-    def __lt__(self, *args, **kwargs): # real signature unknown
-        """ Return self<value. """
-        pass
-
-    @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
-        pass
-
-    def __ne__(self, *args, **kwargs): # real signature unknown
-        """ Return self!=value. """
-        pass
-
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __reduce__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __repr__(self): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __setattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement setattr(self, name, value). """
-        pass
-
-    def __sizeof__(self, *args, **kwargs): # real signature unknown
-        """ Size of object in memory, in bytes. """
-        pass
-
-    def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
-        pass
-
-    def __subclasshook__(self, *args, **kwargs): # real signature unknown
-        """
-        Abstract classes can override this to customize issubclass().
-        
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-        pass
-
-    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """list of weak references to the object"""
-
-
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.module', '__doc__': 'An object which wraps an introspection typelib.\\n\\n    This wrapping creates a python module like representation of the typelib\\n    using gi repository as a foundation. Accessing attributes of the module\\n    will dynamically pull them in and create wrappers for the members.\\n    These members are then cached on this introspection module.\\n    ', '__init__': <function IntrospectionModule.__init__ at 0x00000173194a8720>, '__getattr__': <function IntrospectionModule.__getattr__ at 0x00000173194a8900>, '__repr__': <function IntrospectionModule.__repr__ at 0x00000173194a89a0>, '__dir__': <function IntrospectionModule.__dir__ at 0x00000173194a8a40>, '__dict__': <attribute '__dict__' of 'IntrospectionModule' objects>, '__weakref__': <attribute '__weakref__' of 'IntrospectionModule' objects>})"
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'NONE': <SpaceFlags.NONE: 0>, 'EQUALIZE': <SpaceFlags.EQUALIZE: 1>})"
+    __name__ = 'SpaceFlags'
+    __qualname__ = 'SpaceFlags'
 
 
 # variables with complex values
 
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x0000017318aa9350>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x00000176372ac440>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Babl', loader=<gi.importer.DynamicImporter object at 0x0000017318aa9350>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Babl', loader=<gi.importer.DynamicImporter object at 0x00000176372ac440>)"
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -158,7 +157,8 @@ class WidgetPath(__gi.Boxed):
         """ length(self) -> int """
         return 0
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.WidgetPath """
         pass
 
@@ -290,8 +290,8 @@ class WidgetPath(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(WidgetPath), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkWidgetPath (3922672864)>, '__dict__': <attribute '__dict__' of 'WidgetPath' objects>, '__weakref__': <attribute '__weakref__' of 'WidgetPath' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'append_for_widget': gi.FunctionInfo(append_for_widget, bound=None), 'append_type': gi.FunctionInfo(append_type, bound=None), 'append_with_siblings': gi.FunctionInfo(append_with_siblings, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_object_type': gi.FunctionInfo(get_object_type, bound=None), 'has_parent': gi.FunctionInfo(has_parent, bound=None), 'is_type': gi.FunctionInfo(is_type, bound=None), 'iter_add_class': gi.FunctionInfo(iter_add_class, bound=None), 'iter_add_region': gi.FunctionInfo(iter_add_region, bound=None), 'iter_clear_classes': gi.FunctionInfo(iter_clear_classes, bound=None), 'iter_clear_regions': gi.FunctionInfo(iter_clear_regions, bound=None), 'iter_get_name': gi.FunctionInfo(iter_get_name, bound=None), 'iter_get_object_name': gi.FunctionInfo(iter_get_object_name, bound=None), 'iter_get_object_type': gi.FunctionInfo(iter_get_object_type, bound=None), 'iter_get_sibling_index': gi.FunctionInfo(iter_get_sibling_index, bound=None), 'iter_get_siblings': gi.FunctionInfo(iter_get_siblings, bound=None), 'iter_get_state': gi.FunctionInfo(iter_get_state, bound=None), 'iter_has_class': gi.FunctionInfo(iter_has_class, bound=None), 'iter_has_name': gi.FunctionInfo(iter_has_name, bound=None), 'iter_has_qclass': gi.FunctionInfo(iter_has_qclass, bound=None), 'iter_has_qname': gi.FunctionInfo(iter_has_qname, bound=None), 'iter_has_qregion': gi.FunctionInfo(iter_has_qregion, bound=None), 'iter_has_region': gi.FunctionInfo(iter_has_region, bound=None), 'iter_list_classes': gi.FunctionInfo(iter_list_classes, bound=None), 'iter_list_regions': gi.FunctionInfo(iter_list_regions, bound=None), 'iter_remove_class': gi.FunctionInfo(iter_remove_class, bound=None), 'iter_remove_region': gi.FunctionInfo(iter_remove_region, bound=None), 'iter_set_name': gi.FunctionInfo(iter_set_name, bound=None), 'iter_set_object_name': gi.FunctionInfo(iter_set_object_name, bound=None), 'iter_set_object_type': gi.FunctionInfo(iter_set_object_type, bound=None), 'iter_set_state': gi.FunctionInfo(iter_set_state, bound=None), 'length': gi.FunctionInfo(length, bound=None), 'prepend_type': gi.FunctionInfo(prepend_type, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002ece8827880>})"
-    __gtype__ = None # (!) real value is '<GType GtkWidgetPath (3922672864)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(WidgetPath), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkWidgetPath (3414253584)>, '__dict__': <attribute '__dict__' of 'WidgetPath' objects>, '__weakref__': <attribute '__weakref__' of 'WidgetPath' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'append_for_widget': gi.FunctionInfo(append_for_widget), 'append_type': gi.FunctionInfo(append_type), 'append_with_siblings': gi.FunctionInfo(append_with_siblings), 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_object_type': gi.FunctionInfo(get_object_type), 'has_parent': gi.FunctionInfo(has_parent), 'is_type': gi.FunctionInfo(is_type), 'iter_add_class': gi.FunctionInfo(iter_add_class), 'iter_add_region': gi.FunctionInfo(iter_add_region), 'iter_clear_classes': gi.FunctionInfo(iter_clear_classes), 'iter_clear_regions': gi.FunctionInfo(iter_clear_regions), 'iter_get_name': gi.FunctionInfo(iter_get_name), 'iter_get_object_name': gi.FunctionInfo(iter_get_object_name), 'iter_get_object_type': gi.FunctionInfo(iter_get_object_type), 'iter_get_sibling_index': gi.FunctionInfo(iter_get_sibling_index), 'iter_get_siblings': gi.FunctionInfo(iter_get_siblings), 'iter_get_state': gi.FunctionInfo(iter_get_state), 'iter_has_class': gi.FunctionInfo(iter_has_class), 'iter_has_name': gi.FunctionInfo(iter_has_name), 'iter_has_qclass': gi.FunctionInfo(iter_has_qclass), 'iter_has_qname': gi.FunctionInfo(iter_has_qname), 'iter_has_qregion': gi.FunctionInfo(iter_has_qregion), 'iter_has_region': gi.FunctionInfo(iter_has_region), 'iter_list_classes': gi.FunctionInfo(iter_list_classes), 'iter_list_regions': gi.FunctionInfo(iter_list_regions), 'iter_remove_class': gi.FunctionInfo(iter_remove_class), 'iter_remove_region': gi.FunctionInfo(iter_remove_region), 'iter_set_name': gi.FunctionInfo(iter_set_name), 'iter_set_object_name': gi.FunctionInfo(iter_set_object_name), 'iter_set_object_type': gi.FunctionInfo(iter_set_object_type), 'iter_set_state': gi.FunctionInfo(iter_set_state), 'length': gi.FunctionInfo(length), 'prepend_type': gi.FunctionInfo(prepend_type), 'ref': gi.FunctionInfo(ref), 'to_string': gi.FunctionInfo(to_string), 'unref': gi.FunctionInfo(unref), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000002bfce305010>})"
+    __gtype__ = None # (!) real value is '<GType GtkWidgetPath (3414253584)>'
     __info__ = StructInfo(WidgetPath)
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,17 +7,17 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class ResponseType(__gobject.GEnum):
+class ResponseType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +76,7 @@ class ResponseType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +99,7 @@ class ResponseType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +127,23 @@ class ResponseType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +172,10 @@ class ResponseType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +221,14 @@ class ResponseType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +254,8 @@ class ResponseType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +286,16 @@ class ResponseType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +359,7 @@ class ResponseType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -378,10 +401,6 @@ class ResponseType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ACCEPT = -3
     APPLY = -10
@@ -394,22 +413,9 @@ class ResponseType(__gobject.GEnum):
     OK = -5
     REJECT = -2
     YES = -8
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gtk', '__dict__': <attribute '__dict__' of 'ResponseType' objects>, '__doc__': None, '__gtype__': <GType GtkResponseType (3923961664)>, '__enum_values__': {-1: <enum GTK_RESPONSE_NONE of type Gtk.ResponseType>, -2: <enum GTK_RESPONSE_REJECT of type Gtk.ResponseType>, -3: <enum GTK_RESPONSE_ACCEPT of type Gtk.ResponseType>, -4: <enum GTK_RESPONSE_DELETE_EVENT of type Gtk.ResponseType>, -5: <enum GTK_RESPONSE_OK of type Gtk.ResponseType>, -6: <enum GTK_RESPONSE_CANCEL of type Gtk.ResponseType>, -7: <enum GTK_RESPONSE_CLOSE of type Gtk.ResponseType>, -8: <enum GTK_RESPONSE_YES of type Gtk.ResponseType>, -9: <enum GTK_RESPONSE_NO of type Gtk.ResponseType>, -10: <enum GTK_RESPONSE_APPLY of type Gtk.ResponseType>, -11: <enum GTK_RESPONSE_HELP of type Gtk.ResponseType>}, '__info__': gi.EnumInfo(ResponseType), 'NONE': <enum GTK_RESPONSE_NONE of type Gtk.ResponseType>, 'REJECT': <enum GTK_RESPONSE_REJECT of type Gtk.ResponseType>, 'ACCEPT': <enum GTK_RESPONSE_ACCEPT of type Gtk.ResponseType>, 'DELETE_EVENT': <enum GTK_RESPONSE_DELETE_EVENT of type Gtk.ResponseType>, 'OK': <enum GTK_RESPONSE_OK of type Gtk.ResponseType>, 'CANCEL': <enum GTK_RESPONSE_CANCEL of type Gtk.ResponseType>, 'CLOSE': <enum GTK_RESPONSE_CLOSE of type Gtk.ResponseType>, 'YES': <enum GTK_RESPONSE_YES of type Gtk.ResponseType>, 'NO': <enum GTK_RESPONSE_NO of type Gtk.ResponseType>, 'APPLY': <enum GTK_RESPONSE_APPLY of type Gtk.ResponseType>, 'HELP': <enum GTK_RESPONSE_HELP of type Gtk.ResponseType>})"
-    __enum_values__ = {
-        -11: -11,
-        -10: -10,
-        -9: -9,
-        -8: -8,
-        -7: -7,
-        -6: -6,
-        -5: -5,
-        -4: -4,
-        -3: -3,
-        -2: -2,
-        -1: -1,
-    }
-    __gtype__ = None # (!) real value is '<GType GtkResponseType (3923961664)>'
-    __info__ = gi.EnumInfo(ResponseType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NONE': <ResponseType.NONE: -1>, 'REJECT': <ResponseType.REJECT: -2>, 'ACCEPT': <ResponseType.ACCEPT: -3>, 'DELETE_EVENT': <ResponseType.DELETE_EVENT: -4>, 'OK': <ResponseType.OK: -5>, 'CANCEL': <ResponseType.CANCEL: -6>, 'CLOSE': <ResponseType.CLOSE: -7>, 'YES': <ResponseType.YES: -8>, 'NO': <ResponseType.NO: -9>, 'APPLY': <ResponseType.APPLY: -10>, 'HELP': <ResponseType.HELP: -11>})"
+    __name__ = 'ResponseType'
+    __qualname__ = 'ResponseType'
 
 

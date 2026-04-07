@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,32 +19,31 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
 
-class SignalMatchType(__gobject.GFlags):
+class SignalMatchType(__enum.IntFlag):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -104,6 +102,10 @@ class SignalMatchType(__gobject.GFlags):
         """
         pass
 
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return an array of bytes representing an integer.
@@ -133,8 +135,8 @@ class SignalMatchType(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -145,12 +147,16 @@ class SignalMatchType(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -174,10 +180,15 @@ class SignalMatchType(__gobject.GFlags):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -212,15 +223,24 @@ class SignalMatchType(__gobject.GFlags):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -248,16 +268,16 @@ class SignalMatchType(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -272,24 +292,24 @@ class SignalMatchType(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -308,8 +328,8 @@ class SignalMatchType(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -340,8 +360,8 @@ class SignalMatchType(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -353,7 +373,7 @@ class SignalMatchType(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -379,16 +399,12 @@ class SignalMatchType(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -399,10 +415,6 @@ class SignalMatchType(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CLOSURE = 4
     DATA = 16
@@ -410,17 +422,9 @@ class SignalMatchType(__gobject.GFlags):
     FUNC = 8
     ID = 1
     UNBLOCKED = 32
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GObject', '__dict__': <attribute '__dict__' of 'SignalMatchType' objects>, '__doc__': None, '__gtype__': <GType PyGObjectSignalMatchType (123597760)>, '__flags_values__': {1: <flags G_SIGNAL_MATCH_ID of type GObject.SignalMatchType>, 2: <flags G_SIGNAL_MATCH_DETAIL of type GObject.SignalMatchType>, 4: <flags G_SIGNAL_MATCH_CLOSURE of type GObject.SignalMatchType>, 8: <flags G_SIGNAL_MATCH_FUNC of type GObject.SignalMatchType>, 16: <flags G_SIGNAL_MATCH_DATA of type GObject.SignalMatchType>, 32: <flags G_SIGNAL_MATCH_UNBLOCKED of type GObject.SignalMatchType>}, '__info__': gi.EnumInfo(SignalMatchType), 'ID': <flags G_SIGNAL_MATCH_ID of type GObject.SignalMatchType>, 'DETAIL': <flags G_SIGNAL_MATCH_DETAIL of type GObject.SignalMatchType>, 'CLOSURE': <flags G_SIGNAL_MATCH_CLOSURE of type GObject.SignalMatchType>, 'FUNC': <flags G_SIGNAL_MATCH_FUNC of type GObject.SignalMatchType>, 'DATA': <flags G_SIGNAL_MATCH_DATA of type GObject.SignalMatchType>, 'UNBLOCKED': <flags G_SIGNAL_MATCH_UNBLOCKED of type GObject.SignalMatchType>})"
-    __flags_values__ = {
-        1: 1,
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGObjectSignalMatchType (123597760)>'
-    __info__ = gi.EnumInfo(SignalMatchType)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'ID': <SignalMatchType.ID: 1>, 'DETAIL': <SignalMatchType.DETAIL: 2>, 'CLOSURE': <SignalMatchType.CLOSURE: 4>, 'FUNC': <SignalMatchType.FUNC: 8>, 'DATA': <SignalMatchType.DATA: 16>, 'UNBLOCKED': <SignalMatchType.UNBLOCKED: 32>})"
+    __name__ = 'SignalMatchType'
+    __qualname__ = 'SignalMatchType'
 
 

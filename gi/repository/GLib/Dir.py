@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Dir(__gi.Boxed):
@@ -35,7 +33,8 @@ class Dir(__gi.Boxed):
         """ make_tmp(tmpl:str=None) -> str """
         return ""
 
-    def open(self, path, flags): # real signature unknown; restored from __doc__
+    @classmethod
+    def open(cls, path, flags): # real signature unknown; restored from __doc__
         """ open(path:str, flags:int) -> GLib.Dir """
         pass
 
@@ -166,8 +165,8 @@ class Dir(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Dir), '__module__': 'gi.repository.GLib', '__gtype__': <GType GDir (155715824)>, '__dict__': <attribute '__dict__' of 'Dir' objects>, '__weakref__': <attribute '__weakref__' of 'Dir' objects>, '__doc__': None, 'open': gi.FunctionInfo(open, bound=None), 'close': gi.FunctionInfo(close, bound=None), 'read_name': gi.FunctionInfo(read_name, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'rewind': gi.FunctionInfo(rewind, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'make_tmp': gi.FunctionInfo(make_tmp, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GDir (155715824)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Dir), '__module__': 'gi.repository.GLib', '__gtype__': <GType GDir (2640520416)>, '__dict__': <attribute '__dict__' of 'Dir' objects>, '__weakref__': <attribute '__weakref__' of 'Dir' objects>, '__doc__': None, 'open': <classmethod(gi.FunctionInfo(open))>, 'close': gi.FunctionInfo(close), 'read_name': gi.FunctionInfo(read_name), 'ref': gi.FunctionInfo(ref), 'rewind': gi.FunctionInfo(rewind), 'unref': gi.FunctionInfo(unref), 'make_tmp': <staticmethod(gi.FunctionInfo(make_tmp))>})"
+    __gtype__ = None # (!) real value is '<GType GDir (2640520416)>'
     __info__ = StructInfo(Dir)
 
 

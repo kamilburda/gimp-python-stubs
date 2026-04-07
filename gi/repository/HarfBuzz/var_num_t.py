@@ -1,21 +1,13 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
 class var_num_t(__gi.Struct):
@@ -143,7 +135,7 @@ class var_num_t(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': gi.UnionInfo(var_num_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'var_num_t' objects>, '__weakref__': <attribute '__weakref__' of 'var_num_t' objects>, '__doc__': None, 'f': <property object at 0x000001d9a15ca020>, 'u32': <property object at 0x000001d9a15ca110>, 'i32': <property object at 0x000001d9a15ca200>, 'u16': <property object at 0x000001d9a15ca2f0>, 'i16': <property object at 0x000001d9a15ca3e0>, 'u8': <property object at 0x000001d9a15ca4d0>, 'i8': <property object at 0x000001d9a15ca5c0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': gi.UnionInfo(var_num_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'var_num_t' objects>, '__weakref__': <attribute '__weakref__' of 'var_num_t' objects>, '__doc__': None, 'f': <property object at 0x00000208a5080720>, 'u32': <property object at 0x00000208a5080630>, 'i32': <property object at 0x00000208a5080f90>, 'u16': <property object at 0x00000208a5081080>, 'i16': <property object at 0x00000208a5081170>, 'u8': <property object at 0x00000208a5081260>, 'i8': <property object at 0x00000208a5081350>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = gi.UnionInfo(var_num_t)
 

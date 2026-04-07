@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class AttrShape(__gi.Struct):
@@ -151,7 +149,7 @@ class AttrShape(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrShape), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AttrShape' objects>, '__weakref__': <attribute '__weakref__' of 'AttrShape' objects>, '__doc__': None, 'attr': <property object at 0x00000213f608c630>, 'ink_rect': <property object at 0x00000213f608c720>, 'logical_rect': <property object at 0x00000213f608c810>, 'data': <property object at 0x00000213f608c900>, 'copy_func': <property object at 0x00000213f608c9f0>, 'destroy_func': <property object at 0x00000213f608cae0>, 'new': gi.FunctionInfo(new, bound=None), 'new_with_data': gi.FunctionInfo(new_with_data, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrShape), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AttrShape' objects>, '__weakref__': <attribute '__weakref__' of 'AttrShape' objects>, '__doc__': None, 'attr': <property object at 0x000002803560af20>, 'ink_rect': <property object at 0x000002803560b010>, 'logical_rect': <property object at 0x000002803560b100>, 'data': <property object at 0x000002803560b1f0>, 'copy_func': <property object at 0x000002803560b2e0>, 'destroy_func': <property object at 0x000002803560b3d0>, 'new': <staticmethod(gi.FunctionInfo(new))>, 'new_with_data': <staticmethod(gi.FunctionInfo(new_with_data))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(AttrShape)
 

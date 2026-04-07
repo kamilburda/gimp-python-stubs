@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -135,8 +134,6 @@ VALUE_NOCOPY_CONTENTS = 134217728
 _namespace = 'GObject'
 
 _version = '2.0'
-
-__weakref__ = None
 
 # functions
 
@@ -245,7 +242,7 @@ def cclosure_marshal_VOID__VOID(closure, return_value, n_param_values, param_val
     pass
 
 def child_watch_add(*args, **kwargs): # reliably restored by inspect
-    """ child_watch_add(priority, pid, function, *data) """
+    """ child_watch_add(priority, pid, function, *data). """
     pass
 
 def clear_signal_handler(handler_id_ptr, instance): # real signature unknown; restored from __doc__
@@ -253,7 +250,7 @@ def clear_signal_handler(handler_id_ptr, instance): # real signature unknown; re
     pass
 
 def enum_complete_type_info(g_enum_type, const_values): # real signature unknown; restored from __doc__
-    """ enum_complete_type_info(g_enum_type:GType, const_values:GObject.EnumValue) -> info:GObject.TypeInfo """
+    """ enum_complete_type_info(g_enum_type:GType, const_values:list) -> info:GObject.TypeInfo """
     pass
 
 def enum_get_value(enum_class, value): # real signature unknown; restored from __doc__
@@ -269,7 +266,7 @@ def enum_get_value_by_nick(enum_class, nick): # real signature unknown; restored
     pass
 
 def enum_register_static(name, const_static_values): # real signature unknown; restored from __doc__
-    """ enum_register_static(name:str, const_static_values:GObject.EnumValue) -> GType """
+    """ enum_register_static(name:str, const_static_values:list) -> GType """
     return GType
 
 def enum_to_string(g_enum_type, value): # real signature unknown; restored from __doc__
@@ -281,7 +278,7 @@ def filename_from_utf8(utf8string, len=-1): # reliably restored by inspect
     pass
 
 def flags_complete_type_info(g_flags_type, const_values): # real signature unknown; restored from __doc__
-    """ flags_complete_type_info(g_flags_type:GType, const_values:GObject.FlagsValue) -> info:GObject.TypeInfo """
+    """ flags_complete_type_info(g_flags_type:GType, const_values:list) -> info:GObject.TypeInfo """
     pass
 
 def flags_get_first_value(flags_class, value): # real signature unknown; restored from __doc__
@@ -297,7 +294,7 @@ def flags_get_value_by_nick(flags_class, nick): # real signature unknown; restor
     pass
 
 def flags_register_static(name, const_static_values): # real signature unknown; restored from __doc__
-    """ flags_register_static(name:str, const_static_values:GObject.FlagsValue) -> GType """
+    """ flags_register_static(name:str, const_static_values:list) -> GType """
     return GType
 
 def flags_to_string(flags_type, value): # real signature unknown; restored from __doc__
@@ -312,12 +309,12 @@ def gtype_get_type(): # real signature unknown; restored from __doc__
     """ gtype_get_type() -> GType """
     return GType
 
-def idle_add(function, *user_data, **kwargs): # reliably restored by inspect
+def idle_add(function, *user_data, priority=200): # reliably restored by inspect
     # no doc
     pass
 
 def io_add_watch(*args, **kwargs): # reliably restored by inspect
-    """ io_add_watch(channel, priority, condition, func, *user_data) -> event_source_id """
+    """ io_add_watch(channel, priority, condition, func, *user_data) -> event_source_id. """
     pass
 
 def markup_escape_text(text, length=-1): # reliably restored by inspect
@@ -610,11 +607,11 @@ def threads_init(): # reliably restored by inspect
     # no doc
     pass
 
-def timeout_add(interval, function, *user_data, **kwargs): # reliably restored by inspect
+def timeout_add(interval, function, *user_data, priority=0): # reliably restored by inspect
     # no doc
     pass
 
-def timeout_add_seconds(interval, function, *user_data, **kwargs): # reliably restored by inspect
+def timeout_add_seconds(interval, function, *user_data, priority=0): # reliably restored by inspect
     # no doc
     pass
 
@@ -670,16 +667,24 @@ def type_class_adjust_private_offset(g_class=None, private_size_or_offset): # re
     """ type_class_adjust_private_offset(g_class=None, private_size_or_offset:int) """
     pass
 
+def type_class_get(type): # real signature unknown; restored from __doc__
+    """ type_class_get(type:GType) -> GObject.TypeClass """
+    pass
+
 def type_class_peek(type): # real signature unknown; restored from __doc__
-    """ type_class_peek(type:GType) -> GObject.TypeClass """
+    """ type_class_peek(type:GType) -> GObject.TypeClass or None """
     pass
 
 def type_class_peek_static(type): # real signature unknown; restored from __doc__
-    """ type_class_peek_static(type:GType) -> GObject.TypeClass """
+    """ type_class_peek_static(type:GType) -> GObject.TypeClass or None """
     pass
 
 def type_class_ref(type): # real signature unknown; restored from __doc__
     """ type_class_ref(type:GType) -> GObject.TypeClass """
+    pass
+
+def type_default_interface_get(g_type): # real signature unknown; restored from __doc__
+    """ type_default_interface_get(g_type:GType) -> GObject.TypeInterface """
     pass
 
 def type_default_interface_peek(g_type): # real signature unknown; restored from __doc__
@@ -759,7 +764,7 @@ def type_interface_instantiatable_prerequisite(interface_type): # real signature
     return GType
 
 def type_interface_peek(instance_class, iface_type): # real signature unknown; restored from __doc__
-    """ type_interface_peek(instance_class:GObject.TypeClass, iface_type:GType) -> GObject.TypeInterface """
+    """ type_interface_peek(instance_class:GObject.TypeClass, iface_type:GType) -> GObject.TypeInterface or None """
     pass
 
 def type_interface_prerequisites(interface_type): # real signature unknown; restored from __doc__
@@ -830,107 +835,6 @@ def variant_get_gtype(): # real signature unknown; restored from __doc__
     """ variant_get_gtype() -> GType """
     return GType
 
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """ Default object formatter. """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
-    pass
-
 # classes
 
 from .Array import Array
@@ -954,6 +858,7 @@ from .EnumClass import EnumClass
 from .EnumValue import EnumValue
 from .FlagsClass import FlagsClass
 from .FlagsValue import FlagsValue
+from .Float import Float
 from .ParamSpec import ParamSpec
 from .GParamSpec import GParamSpec
 from .HashTable import HashTable
@@ -1044,7 +949,6 @@ from .VariantDict import VariantDict
 from .VariantType import VariantType
 from .WeakRef import WeakRef
 from ._Value__data__union import _Value__data__union
-from .__class__ import __class__
 # variables with complex values
 
 features = {
@@ -1053,14 +957,14 @@ features = {
 
 glib_version = (
     2,
-    82,
-    2,
+    86,
+    3,
 )
 
 pygobject_version = (
     3,
-    50,
-    0,
+    54,
+    5,
 )
 
 TYPE_BOOLEAN = None # (!) real value is '<GType gboolean (20)>'
@@ -1077,9 +981,9 @@ TYPE_FLAGS = None # (!) real value is '<GType GFlags (52)>'
 
 TYPE_FLOAT = None # (!) real value is '<GType gfloat (56)>'
 
-TYPE_GSTRING = None # (!) real value is '<GType GString (83216544)>'
+TYPE_GSTRING = None # (!) real value is '<GType GString (255840976)>'
 
-TYPE_GTYPE = None # (!) real value is '<GType GType (83214304)>'
+TYPE_GTYPE = None # (!) real value is '<GType GType (252362848)>'
 
 TYPE_INT = None # (!) real value is '<GType gint (24)>'
 
@@ -1099,11 +1003,11 @@ TYPE_PARAM = None # (!) real value is '<GType GParam (76)>'
 
 TYPE_POINTER = None # (!) real value is '<GType gpointer (68)>'
 
-TYPE_PYOBJECT = None # (!) real value is '<GType PyObject (83216768)>'
+TYPE_PYOBJECT = None # (!) real value is '<GType PyObject (255842896)>'
 
 TYPE_STRING = None # (!) real value is '<GType gchararray (64)>'
 
-TYPE_STRV = None # (!) real value is '<GType GStrv (83209936)>'
+TYPE_STRV = None # (!) real value is '<GType GStrv (255842032)>'
 
 TYPE_UCHAR = None # (!) real value is '<GType guchar (16)>'
 
@@ -1115,17 +1019,13 @@ TYPE_ULONG = None # (!) real value is '<GType gulong (36)>'
 
 TYPE_UNICHAR = TYPE_UINT
 
-TYPE_VALUE = None # (!) real value is '<GType GValue (83281280)>'
+TYPE_VALUE = None # (!) real value is '<GType GValue (265149856)>'
 
 TYPE_VARIANT = None # (!) real value is '<GType GVariant (84)>'
 
-_introspection_module = None # (!) real value is "<IntrospectionModule 'GObject' from 'C:\\\\Program Files\\\\GIMP 3\\\\lib\\\\girepository-1.0\\\\GObject-2.0.typelib'>"
-
-__annotations__ = {}
-
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x0000010b06f82090>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001dd0f966fc0>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GObject', loader=<gi.importer.DynamicImporter object at 0x0000010b06f82090>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GObject', loader=<gi.importer.DynamicImporter object at 0x000001dd0f966fc0>)"
 

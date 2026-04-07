@@ -1,30 +1,22 @@
 # encoding: utf-8
 # module gi.repository.cairo
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class Antialias(__gobject.GEnum):
+class Antialias(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -77,10 +69,14 @@ class Antialias(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -96,7 +92,7 @@ class Antialias(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -124,12 +120,23 @@ class Antialias(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -153,10 +160,15 @@ class Antialias(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -202,6 +214,14 @@ class Antialias(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -227,8 +247,8 @@ class Antialias(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -259,15 +279,16 @@ class Antialias(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -331,7 +352,7 @@ class Antialias(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -373,10 +394,6 @@ class Antialias(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     BEST = 6
     DEFAULT = 0
@@ -385,18 +402,9 @@ class Antialias(__gobject.GEnum):
     GRAY = 2
     NONE = 1
     SUBPIXEL = 3
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.cairo', '__dict__': <attribute '__dict__' of 'Antialias' objects>, '__doc__': None, '__gtype__': <GType cairo_antialias_t (4003651056)>, '__enum_values__': {0: <enum CAIRO_ANTIALIAS_DEFAULT of type cairo.Antialias>, 1: <enum CAIRO_ANTIALIAS_NONE of type cairo.Antialias>, 2: <enum CAIRO_ANTIALIAS_GRAY of type cairo.Antialias>, 3: <enum CAIRO_ANTIALIAS_SUBPIXEL of type cairo.Antialias>, 4: <enum CAIRO_ANTIALIAS_FAST of type cairo.Antialias>, 5: <enum CAIRO_ANTIALIAS_GOOD of type cairo.Antialias>, 6: <enum CAIRO_ANTIALIAS_BEST of type cairo.Antialias>}, '__info__': gi.EnumInfo(Antialias), 'DEFAULT': <enum CAIRO_ANTIALIAS_DEFAULT of type cairo.Antialias>, 'NONE': <enum CAIRO_ANTIALIAS_NONE of type cairo.Antialias>, 'GRAY': <enum CAIRO_ANTIALIAS_GRAY of type cairo.Antialias>, 'SUBPIXEL': <enum CAIRO_ANTIALIAS_SUBPIXEL of type cairo.Antialias>, 'FAST': <enum CAIRO_ANTIALIAS_FAST of type cairo.Antialias>, 'GOOD': <enum CAIRO_ANTIALIAS_GOOD of type cairo.Antialias>, 'BEST': <enum CAIRO_ANTIALIAS_BEST of type cairo.Antialias>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-    }
-    __gtype__ = None # (!) real value is '<GType cairo_antialias_t (4003651056)>'
-    __info__ = gi.EnumInfo(Antialias)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'DEFAULT': <Antialias.DEFAULT: 0>, 'NONE': <Antialias.NONE: 1>, 'GRAY': <Antialias.GRAY: 2>, 'SUBPIXEL': <Antialias.SUBPIXEL: 3>, 'FAST': <Antialias.FAST: 4>, 'GOOD': <Antialias.GOOD: 5>, 'BEST': <Antialias.BEST: 6>})"
+    __name__ = 'Antialias'
+    __qualname__ = 'Antialias'
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -107,20 +106,20 @@ class Calendar(__gi_overrides_Gtk.Widget):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -217,6 +216,9 @@ class Calendar(__gi_overrides_Gtk.Widget):
         """ configure_event(self, event:Gdk.EventConfigure) -> bool """
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_damage_event(self, *args, **kwargs): # real signature unknown
         """ damage_event(self, event:Gdk.EventExpose) -> bool """
         pass
@@ -247,6 +249,9 @@ class Calendar(__gi_overrides_Gtk.Widget):
 
     def do_dispatch_child_properties_changed(self, *args, **kwargs): # real signature unknown
         """ dispatch_child_properties_changed(self, n_pspecs:int, pspecs:GObject.ParamSpec) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_drag_begin(self, *args, **kwargs): # real signature unknown
@@ -684,17 +689,17 @@ class Calendar(__gi_overrides_Gtk.Widget):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -1095,20 +1100,20 @@ class Calendar(__gi_overrides_Gtk.Widget):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -1302,7 +1307,8 @@ class Calendar(__gi_overrides_Gtk.Widget):
         """ modify_text(self, state:Gtk.StateType, color:Gdk.Color=None) """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.Widget """
         pass
 
@@ -1831,20 +1837,20 @@ class Calendar(__gi_overrides_Gtk.Widget):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -1985,12 +1991,14 @@ class Calendar(__gi_overrides_Gtk.Widget):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ece9ab0100>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17e20e0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Calendar), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCalendar (3855517408)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'clear_marks': gi.FunctionInfo(clear_marks, bound=None), 'get_date': gi.FunctionInfo(get_date, bound=None), 'get_day_is_marked': gi.FunctionInfo(get_day_is_marked, bound=None), 'get_detail_height_rows': gi.FunctionInfo(get_detail_height_rows, bound=None), 'get_detail_width_chars': gi.FunctionInfo(get_detail_width_chars, bound=None), 'get_display_options': gi.FunctionInfo(get_display_options, bound=None), 'mark_day': gi.FunctionInfo(mark_day, bound=None), 'select_day': gi.FunctionInfo(select_day, bound=None), 'select_month': gi.FunctionInfo(select_month, bound=None), 'set_detail_func': gi.FunctionInfo(set_detail_func, bound=None), 'set_detail_height_rows': gi.FunctionInfo(set_detail_height_rows, bound=None), 'set_detail_width_chars': gi.FunctionInfo(set_detail_width_chars, bound=None), 'set_display_options': gi.FunctionInfo(set_display_options, bound=None), 'unmark_day': gi.FunctionInfo(unmark_day, bound=None), 'do_day_selected': gi.VFuncInfo(day_selected, bound=None), 'do_day_selected_double_click': gi.VFuncInfo(day_selected_double_click, bound=None), 'do_month_changed': gi.VFuncInfo(month_changed, bound=None), 'do_next_month': gi.VFuncInfo(next_month, bound=None), 'do_next_year': gi.VFuncInfo(next_year, bound=None), 'do_prev_month': gi.VFuncInfo(prev_month, bound=None), 'do_prev_year': gi.VFuncInfo(prev_year, bound=None), 'widget': <property object at 0x000002ece8ff4770>, 'priv': <property object at 0x000002ece8ff4860>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Calendar), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCalendar (3428508000)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'clear_marks': gi.FunctionInfo(clear_marks), 'get_date': gi.FunctionInfo(get_date), 'get_day_is_marked': gi.FunctionInfo(get_day_is_marked), 'get_detail_height_rows': gi.FunctionInfo(get_detail_height_rows), 'get_detail_width_chars': gi.FunctionInfo(get_detail_width_chars), 'get_display_options': gi.FunctionInfo(get_display_options), 'mark_day': gi.FunctionInfo(mark_day), 'select_day': gi.FunctionInfo(select_day), 'select_month': gi.FunctionInfo(select_month), 'set_detail_func': gi.FunctionInfo(set_detail_func), 'set_detail_height_rows': gi.FunctionInfo(set_detail_height_rows), 'set_detail_width_chars': gi.FunctionInfo(set_detail_width_chars), 'set_display_options': gi.FunctionInfo(set_display_options), 'unmark_day': gi.FunctionInfo(unmark_day), 'do_day_selected': gi.VFuncInfo(day_selected), 'do_day_selected_double_click': gi.VFuncInfo(day_selected_double_click), 'do_month_changed': gi.VFuncInfo(month_changed), 'do_next_month': gi.VFuncInfo(next_month), 'do_next_year': gi.VFuncInfo(next_year), 'do_prev_month': gi.VFuncInfo(prev_month), 'do_prev_year': gi.VFuncInfo(prev_year), 'widget': <property object at 0x000002bfd17a7ab0>, 'priv': <property object at 0x000002bfd17a7920>})"
+    __firstlineno__ = 104
     __gdoc__ = "Object GtkCalendar\n\nSignals from GtkCalendar:\n  month-changed ()\n  day-selected ()\n  day-selected-double-click ()\n  prev-month ()\n  next-month ()\n  prev-year ()\n  next-year ()\n\nProperties from GtkCalendar:\n  year -> gint: Year\n    The selected year\n  month -> gint: Month\n    The selected month (as a number between 0 and 11)\n  day -> gint: Day\n    The selected day (as a number between 1 and 31, or 0 to unselect the currently selected day)\n  show-heading -> gboolean: Show Heading\n    If TRUE, a heading is displayed\n  show-day-names -> gboolean: Show Day Names\n    If TRUE, day names are displayed\n  no-month-change -> gboolean: No Month Change\n    If TRUE, the selected month cannot be changed\n  show-week-numbers -> gboolean: Show Week Numbers\n    If TRUE, week numbers are displayed\n  show-details -> gboolean: Show Details\n    If TRUE, details are shown\n  detail-width-chars -> gint: Details Width\n    Details width in characters\n  detail-height-rows -> gint: Details Height\n    Details height in rows\n\nSignals from GtkWidget:\n  direction-changed (GtkTextDirection)\n  state-changed (GtkStateType)\n  composited-changed ()\n  destroy ()\n  show ()\n  hide ()\n  map ()\n  unmap ()\n  realize ()\n  unrealize ()\n  size-allocate (GdkRectangle)\n  state-flags-changed (GtkStateFlags)\n  parent-set (GtkWidget)\n  hierarchy-changed (GtkWidget)\n  style-set (GtkStyle)\n  style-updated ()\n  grab-notify (gboolean)\n  child-notify (GParam)\n  draw (CairoContext) -> gboolean\n  mnemonic-activate (gboolean) -> gboolean\n  grab-focus ()\n  focus (GtkDirectionType) -> gboolean\n  move-focus (GtkDirectionType)\n  keynav-failed (GtkDirectionType) -> gboolean\n  event (GdkEvent) -> gboolean\n  event-after (GdkEvent)\n  button-press-event (GdkEvent) -> gboolean\n  button-release-event (GdkEvent) -> gboolean\n  touch-event (GdkEvent) -> gboolean\n  scroll-event (GdkEvent) -> gboolean\n  motion-notify-event (GdkEvent) -> gboolean\n  delete-event (GdkEvent) -> gboolean\n  destroy-event (GdkEvent) -> gboolean\n  key-press-event (GdkEvent) -> gboolean\n  key-release-event (GdkEvent) -> gboolean\n  enter-notify-event (GdkEvent) -> gboolean\n  leave-notify-event (GdkEvent) -> gboolean\n  configure-event (GdkEvent) -> gboolean\n  focus-in-event (GdkEvent) -> gboolean\n  focus-out-event (GdkEvent) -> gboolean\n  map-event (GdkEvent) -> gboolean\n  unmap-event (GdkEvent) -> gboolean\n  property-notify-event (GdkEvent) -> gboolean\n  selection-clear-event (GdkEvent) -> gboolean\n  selection-request-event (GdkEvent) -> gboolean\n  selection-notify-event (GdkEvent) -> gboolean\n  selection-received (GtkSelectionData, guint)\n  selection-get (GtkSelectionData, guint, guint)\n  proximity-in-event (GdkEvent) -> gboolean\n  proximity-out-event (GdkEvent) -> gboolean\n  drag-leave (GdkDragContext, guint)\n  drag-begin (GdkDragContext)\n  drag-end (GdkDragContext)\n  drag-data-delete (GdkDragContext)\n  drag-failed (GdkDragContext, GtkDragResult) -> gboolean\n  drag-motion (GdkDragContext, gint, gint, guint) -> gboolean\n  drag-drop (GdkDragContext, gint, gint, guint) -> gboolean\n  drag-data-get (GdkDragContext, GtkSelectionData, guint, guint)\n  drag-data-received (GdkDragContext, gint, gint, GtkSelectionData, guint, guint)\n  visibility-notify-event (GdkEvent) -> gboolean\n  window-state-event (GdkEvent) -> gboolean\n  damage-event (GdkEvent) -> gboolean\n  grab-broken-event (GdkEvent) -> gboolean\n  query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean\n  popup-menu () -> gboolean\n  show-help (GtkWidgetHelpType) -> gboolean\n  accel-closures-changed ()\n  screen-changed (GdkScreen)\n  can-activate-accel (guint) -> gboolean\n\nProperties from GtkWidget:\n  name -> gchararray: Widget name\n    The name of the widget\n  parent -> GtkContainer: Parent widget\n    The parent widget of this widget. Must be a Container widget\n  width-request -> gint: Width request\n    Override for width request of the widget, or -1 if natural request should be used\n  height-request -> gint: Height request\n    Override for height request of the widget, or -1 if natural request should be used\n  visible -> gboolean: Visible\n    Whether the widget is visible\n  sensitive -> gboolean: Sensitive\n    Whether the widget responds to input\n  app-paintable -> gboolean: Application paintable\n    Whether the application will paint directly on the widget\n  can-focus -> gboolean: Can focus\n    Whether the widget can accept the input focus\n  has-focus -> gboolean: Has focus\n    Whether the widget has the input focus\n  is-focus -> gboolean: Is focus\n    Whether the widget is the focus widget within the toplevel\n  focus-on-click -> gboolean: Focus on click\n    Whether the widget should grab focus when it is clicked with the mouse\n  can-default -> gboolean: Can default\n    Whether the widget can be the default widget\n  has-default -> gboolean: Has default\n    Whether the widget is the default widget\n  receives-default -> gboolean: Receives default\n    If TRUE, the widget will receive the default action when it is focused\n  composite-child -> gboolean: Composite child\n    Whether the widget is part of a composite widget\n  style -> GtkStyle: Style\n    The style of the widget, which contains information about how it will look (colors etc)\n  events -> GdkEventMask: Events\n    The event mask that decides what kind of GdkEvents this widget gets\n  no-show-all -> gboolean: No show all\n    Whether gtk_widget_show_all() should not affect this widget\n  has-tooltip -> gboolean: Has tooltip\n    Whether this widget has a tooltip\n  tooltip-markup -> gchararray: Tooltip markup\n    The contents of the tooltip for this widget\n  tooltip-text -> gchararray: Tooltip Text\n    The contents of the tooltip for this widget\n  window -> GdkWindow: Window\n    The widget's window if it is realized\n  opacity -> gdouble: Opacity for Widget\n    The opacity of the widget, from 0 to 1\n  double-buffered -> gboolean: Double Buffered\n    Whether the widget is double buffered\n  halign -> GtkAlign: Horizontal Alignment\n    How to position in extra horizontal space\n  valign -> GtkAlign: Vertical Alignment\n    How to position in extra vertical space\n  margin-left -> gint: Margin on Left\n    Pixels of extra space on the left side\n  margin-right -> gint: Margin on Right\n    Pixels of extra space on the right side\n  margin-start -> gint: Margin on Start\n    Pixels of extra space on the start\n  margin-end -> gint: Margin on End\n    Pixels of extra space on the end\n  margin-top -> gint: Margin on Top\n    Pixels of extra space on the top side\n  margin-bottom -> gint: Margin on Bottom\n    Pixels of extra space on the bottom side\n  margin -> gint: All Margins\n    Pixels of extra space on all four sides\n  hexpand -> gboolean: Horizontal Expand\n    Whether widget wants more horizontal space\n  vexpand -> gboolean: Vertical Expand\n    Whether widget wants more vertical space\n  hexpand-set -> gboolean: Horizontal Expand Set\n    Whether to use the hexpand property\n  vexpand-set -> gboolean: Vertical Expand Set\n    Whether to use the vexpand property\n  expand -> gboolean: Expand Both\n    Whether widget wants to expand in both directions\n  scale-factor -> gint: Scale factor\n    The scaling factor of the window\n\nSignals from GObject:\n  notify (GParam)\n\n"
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkCalendar (3855517408)>'
+    __gtype__ = None # (!) real value is '<GType GtkCalendar (3428508000)>'
     __info__ = ObjectInfo(Calendar)
+    __static_attributes__ = ()
 
 

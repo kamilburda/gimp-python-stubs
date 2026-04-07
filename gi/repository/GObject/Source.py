@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -64,6 +63,10 @@ class Source(__gi_repository_GLib.Source):
 
     def destroy(self): # real signature unknown; restored from __doc__
         """ destroy(self) """
+        pass
+
+    def dup_context(self): # real signature unknown; restored from __doc__
+        """ dup_context(self) -> GLib.MainContext or None """
         pass
 
     def finalize(self): # reliably restored by inspect
@@ -210,7 +213,11 @@ class Source(__gi_repository_GLib.Source):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -331,8 +338,8 @@ class Source(__gi_repository_GLib.Source):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__new__': <staticmethod(<function Source.__new__ at 0x0000010b078e5e40>)>, '__init__': <function Source.__init__ at 0x0000010b078e5ee0>, '__del__': <function Source.__del__ at 0x0000010b078e5f80>, 'finalize': <function Source.finalize at 0x0000010b078e6020>, 'set_callback': <function Source.set_callback at 0x0000010b078e60c0>, 'get_current_time': <function Source.get_current_time at 0x0000010b078e6200>, '_Source__get_priority': <function Source.__get_priority at 0x0000010b078e62a0>, '_Source__set_priority': <function Source.__set_priority at 0x0000010b078e6340>, 'priority': <property object at 0x0000010b078dd4e0>, '_Source__get_can_recurse': <function Source.__get_can_recurse at 0x0000010b078e63e0>, '_Source__set_can_recurse': <function Source.__set_can_recurse at 0x0000010b078e6480>, 'can_recurse': <property object at 0x0000010b078de390>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType GSource (83279936)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__new__': <staticmethod(<function Source.__new__ at 0x000001dd11de6340>)>, '__init__': <function Source.__init__ at 0x000001dd11de63e0>, '__del__': <function Source.__del__ at 0x000001dd11de6480>, 'finalize': <function Source.finalize at 0x000001dd11de6520>, 'set_callback': <function Source.set_callback at 0x000001dd11de65c0>, 'get_current_time': <function Source.get_current_time at 0x000001dd11de6700>, '_Source__get_priority': <function Source.__get_priority at 0x000001dd11de67a0>, '_Source__set_priority': <function Source.__set_priority at 0x000001dd11de6840>, 'priority': <property object at 0x000001dd11db0590>, '_Source__get_can_recurse': <function Source.__get_can_recurse at 0x000001dd11de68e0>, '_Source__set_can_recurse': <function Source.__set_can_recurse at 0x000001dd11de6980>, 'can_recurse': <property object at 0x000001dd11db1300>, '__doc__': None})"
+    __gtype__ = None # (!) real value is '<GType GSource (257691952)>'
     __info__ = StructInfo(Source)
 
 

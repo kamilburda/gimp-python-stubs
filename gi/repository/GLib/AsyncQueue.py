@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class AsyncQueue(__gi.Struct):
@@ -62,8 +60,8 @@ class AsyncQueue(__gi.Struct):
         """ push_sorted(self, data, func:GLib.CompareDataFunc, user_data=None) """
         pass
 
-    def push_sorted_unlocked(self, data=None, func, user_data=None): # real signature unknown; restored from __doc__
-        """ push_sorted_unlocked(self, data=None, func:GLib.CompareDataFunc, user_data=None) """
+    def push_sorted_unlocked(self, data, func, user_data=None): # real signature unknown; restored from __doc__
+        """ push_sorted_unlocked(self, data, func:GLib.CompareDataFunc, user_data=None) """
         pass
 
     def push_unlocked(self, data): # real signature unknown; restored from __doc__
@@ -82,8 +80,8 @@ class AsyncQueue(__gi.Struct):
         """ remove(self, item) -> bool """
         return False
 
-    def remove_unlocked(self, item=None): # real signature unknown; restored from __doc__
-        """ remove_unlocked(self, item=None) -> bool """
+    def remove_unlocked(self, item): # real signature unknown; restored from __doc__
+        """ remove_unlocked(self, item) -> bool """
         return False
 
     def sort(self, func, user_data=None): # real signature unknown; restored from __doc__
@@ -238,7 +236,7 @@ class AsyncQueue(__gi.Struct):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AsyncQueue), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AsyncQueue' objects>, '__weakref__': <attribute '__weakref__' of 'AsyncQueue' objects>, '__doc__': None, 'length': gi.FunctionInfo(length, bound=None), 'length_unlocked': gi.FunctionInfo(length_unlocked, bound=None), 'lock': gi.FunctionInfo(lock, bound=None), 'pop': gi.FunctionInfo(pop, bound=None), 'pop_unlocked': gi.FunctionInfo(pop_unlocked, bound=None), 'push': gi.FunctionInfo(push, bound=None), 'push_front': gi.FunctionInfo(push_front, bound=None), 'push_front_unlocked': gi.FunctionInfo(push_front_unlocked, bound=None), 'push_sorted': gi.FunctionInfo(push_sorted, bound=None), 'push_sorted_unlocked': gi.FunctionInfo(push_sorted_unlocked, bound=None), 'push_unlocked': gi.FunctionInfo(push_unlocked, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'ref_unlocked': gi.FunctionInfo(ref_unlocked, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'remove_unlocked': gi.FunctionInfo(remove_unlocked, bound=None), 'sort': gi.FunctionInfo(sort, bound=None), 'sort_unlocked': gi.FunctionInfo(sort_unlocked, bound=None), 'timed_pop': gi.FunctionInfo(timed_pop, bound=None), 'timed_pop_unlocked': gi.FunctionInfo(timed_pop_unlocked, bound=None), 'timeout_pop': gi.FunctionInfo(timeout_pop, bound=None), 'timeout_pop_unlocked': gi.FunctionInfo(timeout_pop_unlocked, bound=None), 'try_pop': gi.FunctionInfo(try_pop, bound=None), 'try_pop_unlocked': gi.FunctionInfo(try_pop_unlocked, bound=None), 'unlock': gi.FunctionInfo(unlock, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'unref_and_unlock': gi.FunctionInfo(unref_and_unlock, bound=None), 'new': gi.FunctionInfo(new, bound=None), 'new_full': gi.FunctionInfo(new_full, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AsyncQueue), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AsyncQueue' objects>, '__weakref__': <attribute '__weakref__' of 'AsyncQueue' objects>, '__doc__': None, 'length': gi.FunctionInfo(length), 'length_unlocked': gi.FunctionInfo(length_unlocked), 'lock': gi.FunctionInfo(lock), 'pop': gi.FunctionInfo(pop), 'pop_unlocked': gi.FunctionInfo(pop_unlocked), 'push': gi.FunctionInfo(push), 'push_front': gi.FunctionInfo(push_front), 'push_front_unlocked': gi.FunctionInfo(push_front_unlocked), 'push_sorted': gi.FunctionInfo(push_sorted), 'push_sorted_unlocked': gi.FunctionInfo(push_sorted_unlocked), 'push_unlocked': gi.FunctionInfo(push_unlocked), 'ref': gi.FunctionInfo(ref), 'ref_unlocked': gi.FunctionInfo(ref_unlocked), 'remove': gi.FunctionInfo(remove), 'remove_unlocked': gi.FunctionInfo(remove_unlocked), 'sort': gi.FunctionInfo(sort), 'sort_unlocked': gi.FunctionInfo(sort_unlocked), 'timed_pop': gi.FunctionInfo(timed_pop), 'timed_pop_unlocked': gi.FunctionInfo(timed_pop_unlocked), 'timeout_pop': gi.FunctionInfo(timeout_pop), 'timeout_pop_unlocked': gi.FunctionInfo(timeout_pop_unlocked), 'try_pop': gi.FunctionInfo(try_pop), 'try_pop_unlocked': gi.FunctionInfo(try_pop_unlocked), 'unlock': gi.FunctionInfo(unlock), 'unref': gi.FunctionInfo(unref), 'unref_and_unlock': gi.FunctionInfo(unref_and_unlock), 'new': <staticmethod(gi.FunctionInfo(new))>, 'new_full': <staticmethod(gi.FunctionInfo(new_full))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(AsyncQueue)
 

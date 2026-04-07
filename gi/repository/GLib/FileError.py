@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class FileError(__gobject.GEnum):
+class FileError(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class FileError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class FileError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -126,12 +124,23 @@ class FileError(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +169,10 @@ class FileError(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -205,6 +218,14 @@ class FileError(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -230,8 +251,8 @@ class FileError(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -262,15 +283,16 @@ class FileError(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -334,7 +356,7 @@ class FileError(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -376,10 +398,6 @@ class FileError(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ACCES = 2
     AGAIN = 19
@@ -406,36 +424,9 @@ class FileError(__gobject.GEnum):
     PIPE = 18
     ROFS = 8
     TXTBSY = 9
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'FileError' objects>, '__doc__': None, '__gtype__': <GType PyGLibFileError (163512160)>, '__enum_values__': {0: <enum G_FILE_ERROR_EXIST of type GLib.FileError>, 1: <enum G_FILE_ERROR_ISDIR of type GLib.FileError>, 2: <enum G_FILE_ERROR_ACCES of type GLib.FileError>, 3: <enum G_FILE_ERROR_NAMETOOLONG of type GLib.FileError>, 4: <enum G_FILE_ERROR_NOENT of type GLib.FileError>, 5: <enum G_FILE_ERROR_NOTDIR of type GLib.FileError>, 6: <enum G_FILE_ERROR_NXIO of type GLib.FileError>, 7: <enum G_FILE_ERROR_NODEV of type GLib.FileError>, 8: <enum G_FILE_ERROR_ROFS of type GLib.FileError>, 9: <enum G_FILE_ERROR_TXTBSY of type GLib.FileError>, 10: <enum G_FILE_ERROR_FAULT of type GLib.FileError>, 11: <enum G_FILE_ERROR_LOOP of type GLib.FileError>, 12: <enum G_FILE_ERROR_NOSPC of type GLib.FileError>, 13: <enum G_FILE_ERROR_NOMEM of type GLib.FileError>, 14: <enum G_FILE_ERROR_MFILE of type GLib.FileError>, 15: <enum G_FILE_ERROR_NFILE of type GLib.FileError>, 16: <enum G_FILE_ERROR_BADF of type GLib.FileError>, 17: <enum G_FILE_ERROR_INVAL of type GLib.FileError>, 18: <enum G_FILE_ERROR_PIPE of type GLib.FileError>, 19: <enum G_FILE_ERROR_AGAIN of type GLib.FileError>, 20: <enum G_FILE_ERROR_INTR of type GLib.FileError>, 21: <enum G_FILE_ERROR_IO of type GLib.FileError>, 22: <enum G_FILE_ERROR_PERM of type GLib.FileError>, 23: <enum G_FILE_ERROR_NOSYS of type GLib.FileError>, 24: <enum G_FILE_ERROR_FAILED of type GLib.FileError>}, '__info__': gi.EnumInfo(FileError), 'EXIST': <enum G_FILE_ERROR_EXIST of type GLib.FileError>, 'ISDIR': <enum G_FILE_ERROR_ISDIR of type GLib.FileError>, 'ACCES': <enum G_FILE_ERROR_ACCES of type GLib.FileError>, 'NAMETOOLONG': <enum G_FILE_ERROR_NAMETOOLONG of type GLib.FileError>, 'NOENT': <enum G_FILE_ERROR_NOENT of type GLib.FileError>, 'NOTDIR': <enum G_FILE_ERROR_NOTDIR of type GLib.FileError>, 'NXIO': <enum G_FILE_ERROR_NXIO of type GLib.FileError>, 'NODEV': <enum G_FILE_ERROR_NODEV of type GLib.FileError>, 'ROFS': <enum G_FILE_ERROR_ROFS of type GLib.FileError>, 'TXTBSY': <enum G_FILE_ERROR_TXTBSY of type GLib.FileError>, 'FAULT': <enum G_FILE_ERROR_FAULT of type GLib.FileError>, 'LOOP': <enum G_FILE_ERROR_LOOP of type GLib.FileError>, 'NOSPC': <enum G_FILE_ERROR_NOSPC of type GLib.FileError>, 'NOMEM': <enum G_FILE_ERROR_NOMEM of type GLib.FileError>, 'MFILE': <enum G_FILE_ERROR_MFILE of type GLib.FileError>, 'NFILE': <enum G_FILE_ERROR_NFILE of type GLib.FileError>, 'BADF': <enum G_FILE_ERROR_BADF of type GLib.FileError>, 'INVAL': <enum G_FILE_ERROR_INVAL of type GLib.FileError>, 'PIPE': <enum G_FILE_ERROR_PIPE of type GLib.FileError>, 'AGAIN': <enum G_FILE_ERROR_AGAIN of type GLib.FileError>, 'INTR': <enum G_FILE_ERROR_INTR of type GLib.FileError>, 'IO': <enum G_FILE_ERROR_IO of type GLib.FileError>, 'PERM': <enum G_FILE_ERROR_PERM of type GLib.FileError>, 'NOSYS': <enum G_FILE_ERROR_NOSYS of type GLib.FileError>, 'FAILED': <enum G_FILE_ERROR_FAILED of type GLib.FileError>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibFileError (163512160)>'
-    __info__ = gi.EnumInfo(FileError)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'EXIST': <FileError.EXIST: 0>, 'ISDIR': <FileError.ISDIR: 1>, 'ACCES': <FileError.ACCES: 2>, 'NAMETOOLONG': <FileError.NAMETOOLONG: 3>, 'NOENT': <FileError.NOENT: 4>, 'NOTDIR': <FileError.NOTDIR: 5>, 'NXIO': <FileError.NXIO: 6>, 'NODEV': <FileError.NODEV: 7>, 'ROFS': <FileError.ROFS: 8>, 'TXTBSY': <FileError.TXTBSY: 9>, 'FAULT': <FileError.FAULT: 10>, 'LOOP': <FileError.LOOP: 11>, 'NOSPC': <FileError.NOSPC: 12>, 'NOMEM': <FileError.NOMEM: 13>, 'MFILE': <FileError.MFILE: 14>, 'NFILE': <FileError.NFILE: 15>, 'BADF': <FileError.BADF: 16>, 'INVAL': <FileError.INVAL: 17>, 'PIPE': <FileError.PIPE: 18>, 'AGAIN': <FileError.AGAIN: 19>, 'INTR': <FileError.INTR: 20>, 'IO': <FileError.IO: 21>, 'PERM': <FileError.PERM: 22>, 'NOSYS': <FileError.NOSYS: 23>, 'FAILED': <FileError.FAILED: 24>})"
+    __name__ = 'FileError'
+    __qualname__ = 'FileError'
 
 

@@ -1,30 +1,22 @@
 # encoding: utf-8
 # module gi.repository.cairo
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class Operator(__gobject.GEnum):
+class Operator(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -77,10 +69,14 @@ class Operator(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -96,7 +92,7 @@ class Operator(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -124,12 +120,23 @@ class Operator(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -153,10 +160,15 @@ class Operator(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -202,6 +214,14 @@ class Operator(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -227,8 +247,8 @@ class Operator(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -259,15 +279,16 @@ class Operator(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -331,7 +352,7 @@ class Operator(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -373,10 +394,6 @@ class Operator(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ADD = 12
     ATOP = 5
@@ -407,40 +424,9 @@ class Operator(__gobject.GEnum):
     SOFT_LIGHT = 22
     SOURCE = 1
     XOR = 11
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.cairo', '__dict__': <attribute '__dict__' of 'Operator' objects>, '__doc__': None, '__gtype__': <GType cairo_operator_t (4004030240)>, '__enum_values__': {0: <enum CAIRO_OPERATOR_CLEAR of type cairo.Operator>, 1: <enum CAIRO_OPERATOR_SOURCE of type cairo.Operator>, 2: <enum CAIRO_OPERATOR_OVER of type cairo.Operator>, 3: <enum CAIRO_OPERATOR_IN of type cairo.Operator>, 4: <enum CAIRO_OPERATOR_OUT of type cairo.Operator>, 5: <enum CAIRO_OPERATOR_ATOP of type cairo.Operator>, 6: <enum CAIRO_OPERATOR_DEST of type cairo.Operator>, 7: <enum CAIRO_OPERATOR_DEST_OVER of type cairo.Operator>, 8: <enum CAIRO_OPERATOR_DEST_IN of type cairo.Operator>, 9: <enum CAIRO_OPERATOR_DEST_OUT of type cairo.Operator>, 10: <enum CAIRO_OPERATOR_DEST_ATOP of type cairo.Operator>, 11: <enum CAIRO_OPERATOR_XOR of type cairo.Operator>, 12: <enum CAIRO_OPERATOR_ADD of type cairo.Operator>, 13: <enum CAIRO_OPERATOR_SATURATE of type cairo.Operator>, 14: <enum CAIRO_OPERATOR_MULTIPLY of type cairo.Operator>, 15: <enum CAIRO_OPERATOR_SCREEN of type cairo.Operator>, 16: <enum CAIRO_OPERATOR_OVERLAY of type cairo.Operator>, 17: <enum CAIRO_OPERATOR_DARKEN of type cairo.Operator>, 18: <enum CAIRO_OPERATOR_LIGHTEN of type cairo.Operator>, 19: <enum CAIRO_OPERATOR_COLOR_DODGE of type cairo.Operator>, 20: <enum CAIRO_OPERATOR_COLOR_BURN of type cairo.Operator>, 21: <enum CAIRO_OPERATOR_HARD_LIGHT of type cairo.Operator>, 22: <enum CAIRO_OPERATOR_SOFT_LIGHT of type cairo.Operator>, 23: <enum CAIRO_OPERATOR_DIFFERENCE of type cairo.Operator>, 24: <enum CAIRO_OPERATOR_EXCLUSION of type cairo.Operator>, 25: <enum CAIRO_OPERATOR_HSL_HUE of type cairo.Operator>, 26: <enum CAIRO_OPERATOR_HSL_SATURATION of type cairo.Operator>, 27: <enum CAIRO_OPERATOR_HSL_COLOR of type cairo.Operator>, 28: <enum CAIRO_OPERATOR_HSL_LUMINOSITY of type cairo.Operator>}, '__info__': gi.EnumInfo(Operator), 'CLEAR': <enum CAIRO_OPERATOR_CLEAR of type cairo.Operator>, 'SOURCE': <enum CAIRO_OPERATOR_SOURCE of type cairo.Operator>, 'OVER': <enum CAIRO_OPERATOR_OVER of type cairo.Operator>, 'IN': <enum CAIRO_OPERATOR_IN of type cairo.Operator>, 'OUT': <enum CAIRO_OPERATOR_OUT of type cairo.Operator>, 'ATOP': <enum CAIRO_OPERATOR_ATOP of type cairo.Operator>, 'DEST': <enum CAIRO_OPERATOR_DEST of type cairo.Operator>, 'DEST_OVER': <enum CAIRO_OPERATOR_DEST_OVER of type cairo.Operator>, 'DEST_IN': <enum CAIRO_OPERATOR_DEST_IN of type cairo.Operator>, 'DEST_OUT': <enum CAIRO_OPERATOR_DEST_OUT of type cairo.Operator>, 'DEST_ATOP': <enum CAIRO_OPERATOR_DEST_ATOP of type cairo.Operator>, 'XOR': <enum CAIRO_OPERATOR_XOR of type cairo.Operator>, 'ADD': <enum CAIRO_OPERATOR_ADD of type cairo.Operator>, 'SATURATE': <enum CAIRO_OPERATOR_SATURATE of type cairo.Operator>, 'MULTIPLY': <enum CAIRO_OPERATOR_MULTIPLY of type cairo.Operator>, 'SCREEN': <enum CAIRO_OPERATOR_SCREEN of type cairo.Operator>, 'OVERLAY': <enum CAIRO_OPERATOR_OVERLAY of type cairo.Operator>, 'DARKEN': <enum CAIRO_OPERATOR_DARKEN of type cairo.Operator>, 'LIGHTEN': <enum CAIRO_OPERATOR_LIGHTEN of type cairo.Operator>, 'COLOR_DODGE': <enum CAIRO_OPERATOR_COLOR_DODGE of type cairo.Operator>, 'COLOR_BURN': <enum CAIRO_OPERATOR_COLOR_BURN of type cairo.Operator>, 'HARD_LIGHT': <enum CAIRO_OPERATOR_HARD_LIGHT of type cairo.Operator>, 'SOFT_LIGHT': <enum CAIRO_OPERATOR_SOFT_LIGHT of type cairo.Operator>, 'DIFFERENCE': <enum CAIRO_OPERATOR_DIFFERENCE of type cairo.Operator>, 'EXCLUSION': <enum CAIRO_OPERATOR_EXCLUSION of type cairo.Operator>, 'HSL_HUE': <enum CAIRO_OPERATOR_HSL_HUE of type cairo.Operator>, 'HSL_SATURATION': <enum CAIRO_OPERATOR_HSL_SATURATION of type cairo.Operator>, 'HSL_COLOR': <enum CAIRO_OPERATOR_HSL_COLOR of type cairo.Operator>, 'HSL_LUMINOSITY': <enum CAIRO_OPERATOR_HSL_LUMINOSITY of type cairo.Operator>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-    }
-    __gtype__ = None # (!) real value is '<GType cairo_operator_t (4004030240)>'
-    __info__ = gi.EnumInfo(Operator)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'CLEAR': <Operator.CLEAR: 0>, 'SOURCE': <Operator.SOURCE: 1>, 'OVER': <Operator.OVER: 2>, 'IN': <Operator.IN: 3>, 'OUT': <Operator.OUT: 4>, 'ATOP': <Operator.ATOP: 5>, 'DEST': <Operator.DEST: 6>, 'DEST_OVER': <Operator.DEST_OVER: 7>, 'DEST_IN': <Operator.DEST_IN: 8>, 'DEST_OUT': <Operator.DEST_OUT: 9>, 'DEST_ATOP': <Operator.DEST_ATOP: 10>, 'XOR': <Operator.XOR: 11>, 'ADD': <Operator.ADD: 12>, 'SATURATE': <Operator.SATURATE: 13>, 'MULTIPLY': <Operator.MULTIPLY: 14>, 'SCREEN': <Operator.SCREEN: 15>, 'OVERLAY': <Operator.OVERLAY: 16>, 'DARKEN': <Operator.DARKEN: 17>, 'LIGHTEN': <Operator.LIGHTEN: 18>, 'COLOR_DODGE': <Operator.COLOR_DODGE: 19>, 'COLOR_BURN': <Operator.COLOR_BURN: 20>, 'HARD_LIGHT': <Operator.HARD_LIGHT: 21>, 'SOFT_LIGHT': <Operator.SOFT_LIGHT: 22>, 'DIFFERENCE': <Operator.DIFFERENCE: 23>, 'EXCLUSION': <Operator.EXCLUSION: 24>, 'HSL_HUE': <Operator.HSL_HUE: 25>, 'HSL_SATURATION': <Operator.HSL_SATURATION: 26>, 'HSL_COLOR': <Operator.HSL_COLOR: 27>, 'HSL_LUMINOSITY': <Operator.HSL_LUMINOSITY: 28>})"
+    __name__ = 'Operator'
+    __qualname__ = 'Operator'
 
 

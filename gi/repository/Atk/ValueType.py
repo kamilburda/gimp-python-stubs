@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class ValueType(__gobject.GEnum):
+class ValueType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -78,19 +71,11 @@ class ValueType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
         pass
-
-    def get_localized_name(self, value_type): # real signature unknown; restored from __doc__
-        """ get_localized_name(value_type:Atk.ValueType) -> str """
-        return ""
-
-    def get_name(self, value_type): # real signature unknown; restored from __doc__
-        """ get_name(value_type:Atk.ValueType) -> str """
-        return ""
 
     def is_integer(self, *args, **kwargs): # real signature unknown
         """ Returns True. Exists for duck type compatibility with float.is_integer. """
@@ -109,7 +94,7 @@ class ValueType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -137,12 +122,23 @@ class ValueType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -171,6 +167,10 @@ class ValueType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -216,6 +216,14 @@ class ValueType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -241,8 +249,8 @@ class ValueType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -273,15 +281,16 @@ class ValueType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -345,7 +354,7 @@ class ValueType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -387,10 +396,6 @@ class ValueType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ACCEPTABLE = 2
     BAD = 11
@@ -408,27 +413,9 @@ class ValueType(__gobject.GEnum):
     VERY_STRONG = 4
     VERY_WEAK = 0
     WEAK = 1
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Atk', '__dict__': <attribute '__dict__' of 'ValueType' objects>, '__doc__': None, '__gtype__': <GType AtkValueType (892681088)>, '__enum_values__': {0: <enum ATK_VALUE_VERY_WEAK of type Atk.ValueType>, 1: <enum ATK_VALUE_WEAK of type Atk.ValueType>, 2: <enum ATK_VALUE_ACCEPTABLE of type Atk.ValueType>, 3: <enum ATK_VALUE_STRONG of type Atk.ValueType>, 4: <enum ATK_VALUE_VERY_STRONG of type Atk.ValueType>, 5: <enum ATK_VALUE_VERY_LOW of type Atk.ValueType>, 6: <enum ATK_VALUE_LOW of type Atk.ValueType>, 7: <enum ATK_VALUE_MEDIUM of type Atk.ValueType>, 8: <enum ATK_VALUE_HIGH of type Atk.ValueType>, 9: <enum ATK_VALUE_VERY_HIGH of type Atk.ValueType>, 10: <enum ATK_VALUE_VERY_BAD of type Atk.ValueType>, 11: <enum ATK_VALUE_BAD of type Atk.ValueType>, 12: <enum ATK_VALUE_GOOD of type Atk.ValueType>, 13: <enum ATK_VALUE_VERY_GOOD of type Atk.ValueType>, 14: <enum ATK_VALUE_BEST of type Atk.ValueType>, 15: <enum ATK_VALUE_LAST_DEFINED of type Atk.ValueType>}, '__info__': gi.EnumInfo(ValueType), 'VERY_WEAK': <enum ATK_VALUE_VERY_WEAK of type Atk.ValueType>, 'WEAK': <enum ATK_VALUE_WEAK of type Atk.ValueType>, 'ACCEPTABLE': <enum ATK_VALUE_ACCEPTABLE of type Atk.ValueType>, 'STRONG': <enum ATK_VALUE_STRONG of type Atk.ValueType>, 'VERY_STRONG': <enum ATK_VALUE_VERY_STRONG of type Atk.ValueType>, 'VERY_LOW': <enum ATK_VALUE_VERY_LOW of type Atk.ValueType>, 'LOW': <enum ATK_VALUE_LOW of type Atk.ValueType>, 'MEDIUM': <enum ATK_VALUE_MEDIUM of type Atk.ValueType>, 'HIGH': <enum ATK_VALUE_HIGH of type Atk.ValueType>, 'VERY_HIGH': <enum ATK_VALUE_VERY_HIGH of type Atk.ValueType>, 'VERY_BAD': <enum ATK_VALUE_VERY_BAD of type Atk.ValueType>, 'BAD': <enum ATK_VALUE_BAD of type Atk.ValueType>, 'GOOD': <enum ATK_VALUE_GOOD of type Atk.ValueType>, 'VERY_GOOD': <enum ATK_VALUE_VERY_GOOD of type Atk.ValueType>, 'BEST': <enum ATK_VALUE_BEST of type Atk.ValueType>, 'LAST_DEFINED': <enum ATK_VALUE_LAST_DEFINED of type Atk.ValueType>, 'get_localized_name': gi.FunctionInfo(get_localized_name, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None)})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-    }
-    __gtype__ = None # (!) real value is '<GType AtkValueType (892681088)>'
-    __info__ = gi.EnumInfo(ValueType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'VERY_WEAK': <ValueType.VERY_WEAK: 0>, 'WEAK': <ValueType.WEAK: 1>, 'ACCEPTABLE': <ValueType.ACCEPTABLE: 2>, 'STRONG': <ValueType.STRONG: 3>, 'VERY_STRONG': <ValueType.VERY_STRONG: 4>, 'VERY_LOW': <ValueType.VERY_LOW: 5>, 'LOW': <ValueType.LOW: 6>, 'MEDIUM': <ValueType.MEDIUM: 7>, 'HIGH': <ValueType.HIGH: 8>, 'VERY_HIGH': <ValueType.VERY_HIGH: 9>, 'VERY_BAD': <ValueType.VERY_BAD: 10>, 'BAD': <ValueType.BAD: 11>, 'GOOD': <ValueType.GOOD: 12>, 'VERY_GOOD': <ValueType.VERY_GOOD: 13>, 'BEST': <ValueType.BEST: 14>, 'LAST_DEFINED': <ValueType.LAST_DEFINED: 15>})"
+    __name__ = 'ValueType'
+    __qualname__ = 'ValueType'
 
 

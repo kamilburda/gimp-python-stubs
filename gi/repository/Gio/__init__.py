@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -232,8 +237,6 @@ VOLUME_MONITOR_EXTENSION_POINT_NAME = 'gio-volume-monitor'
 _namespace = 'Gio'
 
 _version = '2.0'
-
-__weakref__ = None
 
 # functions
 
@@ -701,10 +704,6 @@ def proxy_resolver_get_default(): # real signature unknown; restored from __doc_
     """ proxy_resolver_get_default() -> Gio.ProxyResolver """
     pass
 
-def registry_settings_backend_new(registry_key=None): # real signature unknown; restored from __doc__
-    """ registry_settings_backend_new(registry_key:str=None) -> Gio.SettingsBackend """
-    pass
-
 def resolver_error_quark(): # real signature unknown; restored from __doc__
     """ resolver_error_quark() -> int """
     return 0
@@ -715,6 +714,10 @@ def resources_enumerate_children(path, lookup_flags): # real signature unknown; 
 
 def resources_get_info(path, lookup_flags): # real signature unknown; restored from __doc__
     """ resources_get_info(path:str, lookup_flags:Gio.ResourceLookupFlags) -> bool, size:int, flags:int """
+    return False
+
+def resources_has_children(path): # real signature unknown; restored from __doc__
+    """ resources_has_children(path:str) -> bool """
     return False
 
 def resources_lookup_data(path, lookup_flags): # real signature unknown; restored from __doc__
@@ -771,107 +774,6 @@ def tls_file_database_new(anchors): # real signature unknown; restored from __do
 
 def tls_server_connection_new(base_io_stream, certificate=None): # real signature unknown; restored from __doc__
     """ tls_server_connection_new(base_io_stream:Gio.IOStream, certificate:Gio.TlsCertificate=None) -> Gio.TlsServerConnection """
-    pass
-
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """ Default object formatter. """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
     pass
 
 # classes
@@ -1308,30 +1210,16 @@ from .VfsClass import VfsClass
 from .Volume import Volume
 from .VolumeIface import VolumeIface
 from .VolumeMonitorClass import VolumeMonitorClass
-from .Win32InputStream import Win32InputStream
-from .Win32InputStreamClass import Win32InputStreamClass
-from .Win32InputStreamPrivate import Win32InputStreamPrivate
-from .Win32NetworkMonitor import Win32NetworkMonitor
-from .Win32NetworkMonitorClass import Win32NetworkMonitorClass
-from .Win32NetworkMonitorPrivate import Win32NetworkMonitorPrivate
-from .Win32OutputStream import Win32OutputStream
-from .Win32OutputStreamClass import Win32OutputStreamClass
-from .Win32OutputStreamPrivate import Win32OutputStreamPrivate
 from .ZlibCompressor import ZlibCompressor
 from .ZlibCompressorClass import ZlibCompressorClass
 from .ZlibCompressorFormat import ZlibCompressorFormat
 from .ZlibDecompressor import ZlibDecompressor
 from .ZlibDecompressorClass import ZlibDecompressorClass
-from .__class__ import __class__
 # variables with complex values
 
-_introspection_module = None # (!) real value is "<IntrospectionModule 'Gio' from 'C:\\\\Program Files\\\\GIMP 3\\\\lib\\\\girepository-1.0\\\\Gio-2.0.typelib'>"
-
-__annotations__ = {}
-
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001a792de9350>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001ea6de66fc0>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Gio', loader=<gi.importer.DynamicImporter object at 0x000001a792de9350>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Gio', loader=<gi.importer.DynamicImporter object at 0x000001ea6de66fc0>)"
 

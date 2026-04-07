@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class SpawnFlags(__gobject.GFlags):
+class SpawnFlags(__enum.IntFlag):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class SpawnFlags(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class SpawnFlags(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -114,8 +112,8 @@ class SpawnFlags(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -126,12 +124,16 @@ class SpawnFlags(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +162,10 @@ class SpawnFlags(__gobject.GFlags):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -201,8 +207,16 @@ class SpawnFlags(__gobject.GFlags):
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -230,16 +244,16 @@ class SpawnFlags(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -254,24 +268,24 @@ class SpawnFlags(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -290,8 +304,8 @@ class SpawnFlags(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -322,8 +336,8 @@ class SpawnFlags(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -335,7 +349,7 @@ class SpawnFlags(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -361,16 +375,12 @@ class SpawnFlags(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -381,16 +391,11 @@ class SpawnFlags(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CHILD_INHERITS_STDERR = 1024
     CHILD_INHERITS_STDIN = 32
     CHILD_INHERITS_STDOUT = 512
     CLOEXEC_PIPES = 256
-    DEFAULT = 0
     DO_NOT_REAP_CHILD = 2
     FILE_AND_ARGV_ZERO = 64
     LEAVE_DESCRIPTORS_OPEN = 1
@@ -399,24 +404,9 @@ class SpawnFlags(__gobject.GFlags):
     STDERR_TO_DEV_NULL = 16
     STDIN_FROM_DEV_NULL = 2048
     STDOUT_TO_DEV_NULL = 8
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'SpawnFlags' objects>, '__doc__': None, '__gtype__': <GType PyGLibSpawnFlags (155708656)>, '__flags_values__': {0: <flags 0 of type GLib.SpawnFlags>, 1: <flags G_SPAWN_LEAVE_DESCRIPTORS_OPEN of type GLib.SpawnFlags>, 2: <flags G_SPAWN_DO_NOT_REAP_CHILD of type GLib.SpawnFlags>, 4: <flags G_SPAWN_SEARCH_PATH of type GLib.SpawnFlags>, 8: <flags G_SPAWN_STDOUT_TO_DEV_NULL of type GLib.SpawnFlags>, 16: <flags G_SPAWN_STDERR_TO_DEV_NULL of type GLib.SpawnFlags>, 32: <flags G_SPAWN_CHILD_INHERITS_STDIN of type GLib.SpawnFlags>, 64: <flags G_SPAWN_FILE_AND_ARGV_ZERO of type GLib.SpawnFlags>, 128: <flags G_SPAWN_SEARCH_PATH_FROM_ENVP of type GLib.SpawnFlags>, 256: <flags G_SPAWN_CLOEXEC_PIPES of type GLib.SpawnFlags>, 512: <flags G_SPAWN_CHILD_INHERITS_STDOUT of type GLib.SpawnFlags>, 1024: <flags G_SPAWN_CHILD_INHERITS_STDERR of type GLib.SpawnFlags>, 2048: <flags G_SPAWN_STDIN_FROM_DEV_NULL of type GLib.SpawnFlags>}, '__info__': gi.EnumInfo(SpawnFlags), 'DEFAULT': <flags 0 of type GLib.SpawnFlags>, 'LEAVE_DESCRIPTORS_OPEN': <flags G_SPAWN_LEAVE_DESCRIPTORS_OPEN of type GLib.SpawnFlags>, 'DO_NOT_REAP_CHILD': <flags G_SPAWN_DO_NOT_REAP_CHILD of type GLib.SpawnFlags>, 'SEARCH_PATH': <flags G_SPAWN_SEARCH_PATH of type GLib.SpawnFlags>, 'STDOUT_TO_DEV_NULL': <flags G_SPAWN_STDOUT_TO_DEV_NULL of type GLib.SpawnFlags>, 'STDERR_TO_DEV_NULL': <flags G_SPAWN_STDERR_TO_DEV_NULL of type GLib.SpawnFlags>, 'CHILD_INHERITS_STDIN': <flags G_SPAWN_CHILD_INHERITS_STDIN of type GLib.SpawnFlags>, 'FILE_AND_ARGV_ZERO': <flags G_SPAWN_FILE_AND_ARGV_ZERO of type GLib.SpawnFlags>, 'SEARCH_PATH_FROM_ENVP': <flags G_SPAWN_SEARCH_PATH_FROM_ENVP of type GLib.SpawnFlags>, 'CLOEXEC_PIPES': <flags G_SPAWN_CLOEXEC_PIPES of type GLib.SpawnFlags>, 'CHILD_INHERITS_STDOUT': <flags G_SPAWN_CHILD_INHERITS_STDOUT of type GLib.SpawnFlags>, 'CHILD_INHERITS_STDERR': <flags G_SPAWN_CHILD_INHERITS_STDERR of type GLib.SpawnFlags>, 'STDIN_FROM_DEV_NULL': <flags G_SPAWN_STDIN_FROM_DEV_NULL of type GLib.SpawnFlags>})"
-    __flags_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-        64: 64,
-        128: 128,
-        256: 256,
-        512: 512,
-        1024: 1024,
-        2048: 2048,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibSpawnFlags (155708656)>'
-    __info__ = gi.EnumInfo(SpawnFlags)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'DEFAULT': <SpawnFlags.DEFAULT: 0>, 'LEAVE_DESCRIPTORS_OPEN': <SpawnFlags.LEAVE_DESCRIPTORS_OPEN: 1>, 'DO_NOT_REAP_CHILD': <SpawnFlags.DO_NOT_REAP_CHILD: 2>, 'SEARCH_PATH': <SpawnFlags.SEARCH_PATH: 4>, 'STDOUT_TO_DEV_NULL': <SpawnFlags.STDOUT_TO_DEV_NULL: 8>, 'STDERR_TO_DEV_NULL': <SpawnFlags.STDERR_TO_DEV_NULL: 16>, 'CHILD_INHERITS_STDIN': <SpawnFlags.CHILD_INHERITS_STDIN: 32>, 'FILE_AND_ARGV_ZERO': <SpawnFlags.FILE_AND_ARGV_ZERO: 64>, 'SEARCH_PATH_FROM_ENVP': <SpawnFlags.SEARCH_PATH_FROM_ENVP: 128>, 'CLOEXEC_PIPES': <SpawnFlags.CLOEXEC_PIPES: 256>, 'CHILD_INHERITS_STDOUT': <SpawnFlags.CHILD_INHERITS_STDOUT: 512>, 'CHILD_INHERITS_STDERR': <SpawnFlags.CHILD_INHERITS_STDERR: 1024>, 'STDIN_FROM_DEV_NULL': <SpawnFlags.STDIN_FROM_DEV_NULL: 2048>})"
+    __name__ = 'SpawnFlags'
+    __qualname__ = 'SpawnFlags'
 
 

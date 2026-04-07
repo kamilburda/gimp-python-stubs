@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class SpinButtonClass(__gi.Struct):
@@ -161,7 +154,7 @@ class SpinButtonClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SpinButtonClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'SpinButtonClass' objects>, '__weakref__': <attribute '__weakref__' of 'SpinButtonClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb7524040>, '_gimp_reserved0': <property object at 0x000001eeb7524130>, '_gimp_reserved1': <property object at 0x000001eeb7524220>, '_gimp_reserved2': <property object at 0x000001eeb7524310>, '_gimp_reserved3': <property object at 0x000001eeb7524400>, '_gimp_reserved4': <property object at 0x000001eeb75244f0>, '_gimp_reserved5': <property object at 0x000001eeb75245e0>, '_gimp_reserved6': <property object at 0x000001eeb75246d0>, '_gimp_reserved7': <property object at 0x000001eeb75247c0>, '_gimp_reserved8': <property object at 0x000001eeb75248b0>, '_gimp_reserved9': <property object at 0x000001eeb75249a0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SpinButtonClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'SpinButtonClass' objects>, '__weakref__': <attribute '__weakref__' of 'SpinButtonClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1cefb00>, '_gimp_reserved0': <property object at 0x0000020ee1cefbf0>, '_gimp_reserved1': <property object at 0x0000020ee1cefce0>, '_gimp_reserved2': <property object at 0x0000020ee1cefdd0>, '_gimp_reserved3': <property object at 0x0000020ee1cefec0>, '_gimp_reserved4': <property object at 0x0000020ee1ceffb0>, '_gimp_reserved5': <property object at 0x0000020ee1cf00e0>, '_gimp_reserved6': <property object at 0x0000020ee1cf01d0>, '_gimp_reserved7': <property object at 0x0000020ee1cf02c0>, '_gimp_reserved8': <property object at 0x0000020ee1cf03b0>, '_gimp_reserved9': <property object at 0x0000020ee1cf04a0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(SpinButtonClass)
 

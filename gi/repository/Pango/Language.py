@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Language(__gi.Boxed):
@@ -162,8 +160,8 @@ class Language(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Language), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoLanguage (4081766208)>, '__dict__': <attribute '__dict__' of 'Language' objects>, '__weakref__': <attribute '__weakref__' of 'Language' objects>, '__doc__': None, 'get_sample_string': gi.FunctionInfo(get_sample_string, bound=None), 'get_scripts': gi.FunctionInfo(get_scripts, bound=None), 'includes_script': gi.FunctionInfo(includes_script, bound=None), 'matches': gi.FunctionInfo(matches, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None), 'from_string': gi.FunctionInfo(from_string, bound=None), 'get_default': gi.FunctionInfo(get_default, bound=None), 'get_preferred': gi.FunctionInfo(get_preferred, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType PangoLanguage (4081766208)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Language), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoLanguage (843940800)>, '__dict__': <attribute '__dict__' of 'Language' objects>, '__weakref__': <attribute '__weakref__' of 'Language' objects>, '__doc__': None, 'get_sample_string': gi.FunctionInfo(get_sample_string), 'get_scripts': gi.FunctionInfo(get_scripts), 'includes_script': gi.FunctionInfo(includes_script), 'matches': gi.FunctionInfo(matches), 'to_string': gi.FunctionInfo(to_string), 'from_string': <staticmethod(gi.FunctionInfo(from_string))>, 'get_default': <staticmethod(gi.FunctionInfo(get_default))>, 'get_preferred': <staticmethod(gi.FunctionInfo(get_preferred))>})"
+    __gtype__ = None # (!) real value is '<GType PangoLanguage (843940800)>'
     __info__ = StructInfo(Language)
 
 

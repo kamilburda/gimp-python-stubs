@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class LayoutIter(__gi.Boxed):
@@ -211,8 +209,8 @@ class LayoutIter(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LayoutIter), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoLayoutIter (4081760048)>, '__dict__': <attribute '__dict__' of 'LayoutIter' objects>, '__weakref__': <attribute '__weakref__' of 'LayoutIter' objects>, '__doc__': None, 'at_last_line': gi.FunctionInfo(at_last_line, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_baseline': gi.FunctionInfo(get_baseline, bound=None), 'get_char_extents': gi.FunctionInfo(get_char_extents, bound=None), 'get_cluster_extents': gi.FunctionInfo(get_cluster_extents, bound=None), 'get_index': gi.FunctionInfo(get_index, bound=None), 'get_layout': gi.FunctionInfo(get_layout, bound=None), 'get_layout_extents': gi.FunctionInfo(get_layout_extents, bound=None), 'get_line': gi.FunctionInfo(get_line, bound=None), 'get_line_extents': gi.FunctionInfo(get_line_extents, bound=None), 'get_line_readonly': gi.FunctionInfo(get_line_readonly, bound=None), 'get_line_yrange': gi.FunctionInfo(get_line_yrange, bound=None), 'get_run': gi.FunctionInfo(get_run, bound=None), 'get_run_baseline': gi.FunctionInfo(get_run_baseline, bound=None), 'get_run_extents': gi.FunctionInfo(get_run_extents, bound=None), 'get_run_readonly': gi.FunctionInfo(get_run_readonly, bound=None), 'next_char': gi.FunctionInfo(next_char, bound=None), 'next_cluster': gi.FunctionInfo(next_cluster, bound=None), 'next_line': gi.FunctionInfo(next_line, bound=None), 'next_run': gi.FunctionInfo(next_run, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType PangoLayoutIter (4081760048)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LayoutIter), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoLayoutIter (843938016)>, '__dict__': <attribute '__dict__' of 'LayoutIter' objects>, '__weakref__': <attribute '__weakref__' of 'LayoutIter' objects>, '__doc__': None, 'at_last_line': gi.FunctionInfo(at_last_line), 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_baseline': gi.FunctionInfo(get_baseline), 'get_char_extents': gi.FunctionInfo(get_char_extents), 'get_cluster_extents': gi.FunctionInfo(get_cluster_extents), 'get_index': gi.FunctionInfo(get_index), 'get_layout': gi.FunctionInfo(get_layout), 'get_layout_extents': gi.FunctionInfo(get_layout_extents), 'get_line': gi.FunctionInfo(get_line), 'get_line_extents': gi.FunctionInfo(get_line_extents), 'get_line_readonly': gi.FunctionInfo(get_line_readonly), 'get_line_yrange': gi.FunctionInfo(get_line_yrange), 'get_run': gi.FunctionInfo(get_run), 'get_run_baseline': gi.FunctionInfo(get_run_baseline), 'get_run_extents': gi.FunctionInfo(get_run_extents), 'get_run_readonly': gi.FunctionInfo(get_run_readonly), 'next_char': gi.FunctionInfo(next_char), 'next_cluster': gi.FunctionInfo(next_cluster), 'next_line': gi.FunctionInfo(next_line), 'next_run': gi.FunctionInfo(next_run)})"
+    __gtype__ = None # (!) real value is '<GType PangoLayoutIter (843938016)>'
     __info__ = StructInfo(LayoutIter)
 
 

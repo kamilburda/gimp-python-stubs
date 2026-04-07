@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,7 +156,7 @@ class BuildableIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(BuildableIface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'BuildableIface' objects>, '__weakref__': <attribute '__weakref__' of 'BuildableIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002ece8fcd800>, 'set_name': <property object at 0x000002ece8fcd8f0>, 'get_name': <property object at 0x000002ece8fcd9e0>, 'add_child': <property object at 0x000002ece8fcdad0>, 'set_buildable_property': <property object at 0x000002ece8fcdbc0>, 'construct_child': <property object at 0x000002ece8fcdcb0>, 'custom_tag_start': <property object at 0x000002ece8fcdda0>, 'custom_tag_end': <property object at 0x000002ece8fcde90>, 'custom_finished': <property object at 0x000002ece8fcdf80>, 'parser_finished': <property object at 0x000002ece8fce070>, 'get_internal_child': <property object at 0x000002ece8fce160>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(BuildableIface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'BuildableIface' objects>, '__weakref__': <attribute '__weakref__' of 'BuildableIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002bfd17a4a40>, 'set_name': <property object at 0x000002bfd17a4b30>, 'get_name': <property object at 0x000002bfd17a4c20>, 'add_child': <property object at 0x000002bfd17a4d10>, 'set_buildable_property': <property object at 0x000002bfd17a4e00>, 'construct_child': <property object at 0x000002bfd17a4ef0>, 'custom_tag_start': <property object at 0x000002bfd17a4fe0>, 'custom_tag_end': <property object at 0x000002bfd17a50d0>, 'custom_finished': <property object at 0x000002bfd17a51c0>, 'parser_finished': <property object at 0x000002bfd17a52b0>, 'get_internal_child': <property object at 0x000002bfd17a53a0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(BuildableIface)
 

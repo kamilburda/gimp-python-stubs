@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -57,6 +53,10 @@ class Config(__gi.Struct):
     def duplicate(self): # real signature unknown; restored from __doc__
         """ duplicate(self) """
         pass
+
+    def get_xcf_version(self): # real signature unknown; restored from __doc__
+        """ get_xcf_version(self) -> int """
+        return 0
 
     def is_equal_to(self, b): # real signature unknown; restored from __doc__
         """ is_equal_to(self, b:Gimp.Config) -> bool """
@@ -105,6 +105,10 @@ class Config(__gi.Struct):
     def serialize_to_string(self, data=None): # real signature unknown; restored from __doc__
         """ serialize_to_string(self, data=None) -> str """
         return ""
+
+    def set_xcf_version(self, xcf_version): # real signature unknown; restored from __doc__
+        """ set_xcf_version(self, xcf_version:int) """
+        pass
 
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
@@ -214,7 +218,7 @@ class Config(__gi.Struct):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Config), '__module__': 'gi.repository.Gimp', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None, 'copy': gi.FunctionInfo(copy, bound=None), 'deserialize': gi.FunctionInfo(deserialize, bound=None), 'deserialize_file': gi.FunctionInfo(deserialize_file, bound=None), 'deserialize_parasite': gi.FunctionInfo(deserialize_parasite, bound=None), 'deserialize_properties': gi.FunctionInfo(deserialize_properties, bound=None), 'deserialize_property': gi.FunctionInfo(deserialize_property, bound=None), 'deserialize_stream': gi.FunctionInfo(deserialize_stream, bound=None), 'deserialize_string': gi.FunctionInfo(deserialize_string, bound=None), 'duplicate': gi.FunctionInfo(duplicate, bound=None), 'is_equal_to': gi.FunctionInfo(is_equal_to, bound=None), 'reset': gi.FunctionInfo(reset, bound=None), 'serialize': gi.FunctionInfo(serialize, bound=None), 'serialize_changed_properties': gi.FunctionInfo(serialize_changed_properties, bound=None), 'serialize_properties': gi.FunctionInfo(serialize_properties, bound=None), 'serialize_property': gi.FunctionInfo(serialize_property, bound=None), 'serialize_property_by_name': gi.FunctionInfo(serialize_property_by_name, bound=None), 'serialize_to_fd': gi.FunctionInfo(serialize_to_fd, bound=None), 'serialize_to_file': gi.FunctionInfo(serialize_to_file, bound=None), 'serialize_to_parasite': gi.FunctionInfo(serialize_to_parasite, bound=None), 'serialize_to_stream': gi.FunctionInfo(serialize_to_stream, bound=None), 'serialize_to_string': gi.FunctionInfo(serialize_to_string, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Config), '__module__': 'gi.repository.Gimp', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Config' objects>, '__weakref__': <attribute '__weakref__' of 'Config' objects>, '__doc__': None, 'copy': gi.FunctionInfo(copy), 'deserialize': gi.FunctionInfo(deserialize), 'deserialize_file': gi.FunctionInfo(deserialize_file), 'deserialize_parasite': gi.FunctionInfo(deserialize_parasite), 'deserialize_properties': gi.FunctionInfo(deserialize_properties), 'deserialize_property': gi.FunctionInfo(deserialize_property), 'deserialize_stream': gi.FunctionInfo(deserialize_stream), 'deserialize_string': gi.FunctionInfo(deserialize_string), 'duplicate': gi.FunctionInfo(duplicate), 'get_xcf_version': gi.FunctionInfo(get_xcf_version), 'is_equal_to': gi.FunctionInfo(is_equal_to), 'reset': gi.FunctionInfo(reset), 'serialize': gi.FunctionInfo(serialize), 'serialize_changed_properties': gi.FunctionInfo(serialize_changed_properties), 'serialize_properties': gi.FunctionInfo(serialize_properties), 'serialize_property': gi.FunctionInfo(serialize_property), 'serialize_property_by_name': gi.FunctionInfo(serialize_property_by_name), 'serialize_to_fd': gi.FunctionInfo(serialize_to_fd), 'serialize_to_file': gi.FunctionInfo(serialize_to_file), 'serialize_to_parasite': gi.FunctionInfo(serialize_to_parasite), 'serialize_to_stream': gi.FunctionInfo(serialize_to_stream), 'serialize_to_string': gi.FunctionInfo(serialize_to_string), 'set_xcf_version': gi.FunctionInfo(set_xcf_version)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Config)
 

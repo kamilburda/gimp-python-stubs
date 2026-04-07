@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class ModifierType(__gobject.GFlags):
+class ModifierType(__gi__gi.GFlags):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -112,8 +111,8 @@ class ModifierType(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -124,12 +123,16 @@ class ModifierType(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -158,6 +161,10 @@ class ModifierType(__gobject.GFlags):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -192,15 +199,24 @@ class ModifierType(__gobject.GFlags):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -228,16 +244,16 @@ class ModifierType(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -252,24 +268,24 @@ class ModifierType(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -288,8 +304,8 @@ class ModifierType(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -320,8 +336,8 @@ class ModifierType(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -333,7 +349,7 @@ class ModifierType(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -359,16 +375,12 @@ class ModifierType(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -378,10 +390,6 @@ class ModifierType(__gobject.GFlags):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     BUTTON1_MASK = 256
@@ -398,7 +406,6 @@ class ModifierType(__gobject.GFlags):
     MOD3_MASK = 32
     MOD4_MASK = 64
     MOD5_MASK = 128
-    MODIFIER_MASK = 1543512063
     MODIFIER_RESERVED_13_MASK = 8192
     MODIFIER_RESERVED_14_MASK = 16384
     MODIFIER_RESERVED_15_MASK = 32768
@@ -416,43 +423,9 @@ class ModifierType(__gobject.GFlags):
     RELEASE_MASK = 1073741824
     SHIFT_MASK = 1
     SUPER_MASK = 67108864
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gdk', '__dict__': <attribute '__dict__' of 'ModifierType' objects>, '__doc__': None, '__gtype__': <GType GdkModifierType (2579730080)>, '__flags_values__': {1: <flags GDK_SHIFT_MASK of type Gdk.ModifierType>, 2: <flags GDK_LOCK_MASK of type Gdk.ModifierType>, 4: <flags GDK_CONTROL_MASK of type Gdk.ModifierType>, 8: <flags GDK_MOD1_MASK of type Gdk.ModifierType>, 16: <flags GDK_MOD2_MASK of type Gdk.ModifierType>, 32: <flags GDK_MOD3_MASK of type Gdk.ModifierType>, 64: <flags GDK_MOD4_MASK of type Gdk.ModifierType>, 128: <flags GDK_MOD5_MASK of type Gdk.ModifierType>, 256: <flags GDK_BUTTON1_MASK of type Gdk.ModifierType>, 512: <flags GDK_BUTTON2_MASK of type Gdk.ModifierType>, 1024: <flags GDK_BUTTON3_MASK of type Gdk.ModifierType>, 2048: <flags GDK_BUTTON4_MASK of type Gdk.ModifierType>, 4096: <flags GDK_BUTTON5_MASK of type Gdk.ModifierType>, 8192: <flags GDK_MODIFIER_RESERVED_13_MASK of type Gdk.ModifierType>, 16384: <flags GDK_MODIFIER_RESERVED_14_MASK of type Gdk.ModifierType>, 32768: <flags GDK_MODIFIER_RESERVED_15_MASK of type Gdk.ModifierType>, 65536: <flags GDK_MODIFIER_RESERVED_16_MASK of type Gdk.ModifierType>, 131072: <flags GDK_MODIFIER_RESERVED_17_MASK of type Gdk.ModifierType>, 262144: <flags GDK_MODIFIER_RESERVED_18_MASK of type Gdk.ModifierType>, 524288: <flags GDK_MODIFIER_RESERVED_19_MASK of type Gdk.ModifierType>, 1048576: <flags GDK_MODIFIER_RESERVED_20_MASK of type Gdk.ModifierType>, 2097152: <flags GDK_MODIFIER_RESERVED_21_MASK of type Gdk.ModifierType>, 4194304: <flags GDK_MODIFIER_RESERVED_22_MASK of type Gdk.ModifierType>, 8388608: <flags GDK_MODIFIER_RESERVED_23_MASK of type Gdk.ModifierType>, 16777216: <flags GDK_MODIFIER_RESERVED_24_MASK of type Gdk.ModifierType>, 33554432: <flags GDK_MODIFIER_RESERVED_25_MASK of type Gdk.ModifierType>, 67108864: <flags GDK_SUPER_MASK of type Gdk.ModifierType>, 134217728: <flags GDK_HYPER_MASK of type Gdk.ModifierType>, 268435456: <flags GDK_META_MASK of type Gdk.ModifierType>, 536870912: <flags GDK_MODIFIER_RESERVED_29_MASK of type Gdk.ModifierType>, 1073741824: <flags GDK_RELEASE_MASK of type Gdk.ModifierType>, 1543512063: <flags GDK_SHIFT_MASK | GDK_LOCK_MASK | GDK_CONTROL_MASK | GDK_MOD1_MASK | GDK_MOD2_MASK | GDK_MOD3_MASK | GDK_MOD4_MASK | GDK_MOD5_MASK | GDK_BUTTON1_MASK | GDK_BUTTON2_MASK | GDK_BUTTON3_MASK | GDK_BUTTON4_MASK | GDK_BUTTON5_MASK | GDK_SUPER_MASK | GDK_HYPER_MASK | GDK_META_MASK | GDK_RELEASE_MASK | GDK_MODIFIER_MASK of type Gdk.ModifierType>}, '__info__': gi.EnumInfo(ModifierType), 'SHIFT_MASK': <flags GDK_SHIFT_MASK of type Gdk.ModifierType>, 'LOCK_MASK': <flags GDK_LOCK_MASK of type Gdk.ModifierType>, 'CONTROL_MASK': <flags GDK_CONTROL_MASK of type Gdk.ModifierType>, 'MOD1_MASK': <flags GDK_MOD1_MASK of type Gdk.ModifierType>, 'MOD2_MASK': <flags GDK_MOD2_MASK of type Gdk.ModifierType>, 'MOD3_MASK': <flags GDK_MOD3_MASK of type Gdk.ModifierType>, 'MOD4_MASK': <flags GDK_MOD4_MASK of type Gdk.ModifierType>, 'MOD5_MASK': <flags GDK_MOD5_MASK of type Gdk.ModifierType>, 'BUTTON1_MASK': <flags GDK_BUTTON1_MASK of type Gdk.ModifierType>, 'BUTTON2_MASK': <flags GDK_BUTTON2_MASK of type Gdk.ModifierType>, 'BUTTON3_MASK': <flags GDK_BUTTON3_MASK of type Gdk.ModifierType>, 'BUTTON4_MASK': <flags GDK_BUTTON4_MASK of type Gdk.ModifierType>, 'BUTTON5_MASK': <flags GDK_BUTTON5_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_13_MASK': <flags GDK_MODIFIER_RESERVED_13_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_14_MASK': <flags GDK_MODIFIER_RESERVED_14_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_15_MASK': <flags GDK_MODIFIER_RESERVED_15_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_16_MASK': <flags GDK_MODIFIER_RESERVED_16_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_17_MASK': <flags GDK_MODIFIER_RESERVED_17_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_18_MASK': <flags GDK_MODIFIER_RESERVED_18_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_19_MASK': <flags GDK_MODIFIER_RESERVED_19_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_20_MASK': <flags GDK_MODIFIER_RESERVED_20_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_21_MASK': <flags GDK_MODIFIER_RESERVED_21_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_22_MASK': <flags GDK_MODIFIER_RESERVED_22_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_23_MASK': <flags GDK_MODIFIER_RESERVED_23_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_24_MASK': <flags GDK_MODIFIER_RESERVED_24_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_25_MASK': <flags GDK_MODIFIER_RESERVED_25_MASK of type Gdk.ModifierType>, 'SUPER_MASK': <flags GDK_SUPER_MASK of type Gdk.ModifierType>, 'HYPER_MASK': <flags GDK_HYPER_MASK of type Gdk.ModifierType>, 'META_MASK': <flags GDK_META_MASK of type Gdk.ModifierType>, 'MODIFIER_RESERVED_29_MASK': <flags GDK_MODIFIER_RESERVED_29_MASK of type Gdk.ModifierType>, 'RELEASE_MASK': <flags GDK_RELEASE_MASK of type Gdk.ModifierType>, 'MODIFIER_MASK': <flags GDK_SHIFT_MASK | GDK_LOCK_MASK | GDK_CONTROL_MASK | GDK_MOD1_MASK | GDK_MOD2_MASK | GDK_MOD3_MASK | GDK_MOD4_MASK | GDK_MOD5_MASK | GDK_BUTTON1_MASK | GDK_BUTTON2_MASK | GDK_BUTTON3_MASK | GDK_BUTTON4_MASK | GDK_BUTTON5_MASK | GDK_SUPER_MASK | GDK_HYPER_MASK | GDK_META_MASK | GDK_RELEASE_MASK | GDK_MODIFIER_MASK of type Gdk.ModifierType>})"
-    __flags_values__ = {
-        1: 1,
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-        64: 64,
-        128: 128,
-        256: 256,
-        512: 512,
-        1024: 1024,
-        2048: 2048,
-        4096: 4096,
-        8192: 8192,
-        16384: 16384,
-        32768: 32768,
-        65536: 65536,
-        131072: 131072,
-        262144: 262144,
-        524288: 524288,
-        1048576: 1048576,
-        2097152: 2097152,
-        4194304: 4194304,
-        8388608: 8388608,
-        16777216: 16777216,
-        33554432: 33554432,
-        67108864: 67108864,
-        134217728: 134217728,
-        268435456: 268435456,
-        536870912: 536870912,
-        1073741824: 1073741824,
-        1543512063: 1543512063,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkModifierType (2579730080)>'
-    __info__ = gi.EnumInfo(ModifierType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GFlagsMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'SHIFT_MASK': <ModifierType.SHIFT_MASK: 1>, 'LOCK_MASK': <ModifierType.LOCK_MASK: 2>, 'CONTROL_MASK': <ModifierType.CONTROL_MASK: 4>, 'MOD1_MASK': <ModifierType.MOD1_MASK: 8>, 'MOD2_MASK': <ModifierType.MOD2_MASK: 16>, 'MOD3_MASK': <ModifierType.MOD3_MASK: 32>, 'MOD4_MASK': <ModifierType.MOD4_MASK: 64>, 'MOD5_MASK': <ModifierType.MOD5_MASK: 128>, 'BUTTON1_MASK': <ModifierType.BUTTON1_MASK: 256>, 'BUTTON2_MASK': <ModifierType.BUTTON2_MASK: 512>, 'BUTTON3_MASK': <ModifierType.BUTTON3_MASK: 1024>, 'BUTTON4_MASK': <ModifierType.BUTTON4_MASK: 2048>, 'BUTTON5_MASK': <ModifierType.BUTTON5_MASK: 4096>, 'MODIFIER_RESERVED_13_MASK': <ModifierType.MODIFIER_RESERVED_13_MASK: 8192>, 'MODIFIER_RESERVED_14_MASK': <ModifierType.MODIFIER_RESERVED_14_MASK: 16384>, 'MODIFIER_RESERVED_15_MASK': <ModifierType.MODIFIER_RESERVED_15_MASK: 32768>, 'MODIFIER_RESERVED_16_MASK': <ModifierType.MODIFIER_RESERVED_16_MASK: 65536>, 'MODIFIER_RESERVED_17_MASK': <ModifierType.MODIFIER_RESERVED_17_MASK: 131072>, 'MODIFIER_RESERVED_18_MASK': <ModifierType.MODIFIER_RESERVED_18_MASK: 262144>, 'MODIFIER_RESERVED_19_MASK': <ModifierType.MODIFIER_RESERVED_19_MASK: 524288>, 'MODIFIER_RESERVED_20_MASK': <ModifierType.MODIFIER_RESERVED_20_MASK: 1048576>, 'MODIFIER_RESERVED_21_MASK': <ModifierType.MODIFIER_RESERVED_21_MASK: 2097152>, 'MODIFIER_RESERVED_22_MASK': <ModifierType.MODIFIER_RESERVED_22_MASK: 4194304>, 'MODIFIER_RESERVED_23_MASK': <ModifierType.MODIFIER_RESERVED_23_MASK: 8388608>, 'MODIFIER_RESERVED_24_MASK': <ModifierType.MODIFIER_RESERVED_24_MASK: 16777216>, 'MODIFIER_RESERVED_25_MASK': <ModifierType.MODIFIER_RESERVED_25_MASK: 33554432>, 'SUPER_MASK': <ModifierType.SUPER_MASK: 67108864>, 'HYPER_MASK': <ModifierType.HYPER_MASK: 134217728>, 'META_MASK': <ModifierType.META_MASK: 268435456>, 'MODIFIER_RESERVED_29_MASK': <ModifierType.MODIFIER_RESERVED_29_MASK: 536870912>, 'RELEASE_MASK': <ModifierType.RELEASE_MASK: 1073741824>, 'MODIFIER_MASK': <ModifierType.MODIFIER_MASK: 1543512063>})"
+    __name__ = 'ModifierType'
+    __qualname__ = 'ModifierType'
 
 

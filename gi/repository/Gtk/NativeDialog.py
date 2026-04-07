@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -46,20 +45,20 @@ class NativeDialog(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -78,6 +77,12 @@ class NativeDialog(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_hide(self, *args, **kwargs): # real signature unknown
@@ -111,17 +116,17 @@ class NativeDialog(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -162,20 +167,20 @@ class NativeDialog(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -326,20 +331,20 @@ class NativeDialog(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -473,12 +478,14 @@ class NativeDialog(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002eceab9b430>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17e68f0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(NativeDialog), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkNativeDialog (3923975664)>, '__doc__': None, '__gsignals__': {}, 'destroy': gi.FunctionInfo(destroy, bound=None), 'get_modal': gi.FunctionInfo(get_modal, bound=None), 'get_title': gi.FunctionInfo(get_title, bound=None), 'get_transient_for': gi.FunctionInfo(get_transient_for, bound=None), 'get_visible': gi.FunctionInfo(get_visible, bound=None), 'hide': gi.FunctionInfo(hide, bound=None), 'run': gi.FunctionInfo(run, bound=None), 'set_modal': gi.FunctionInfo(set_modal, bound=None), 'set_title': gi.FunctionInfo(set_title, bound=None), 'set_transient_for': gi.FunctionInfo(set_transient_for, bound=None), 'show': gi.FunctionInfo(show, bound=None), 'do_hide': gi.VFuncInfo(hide, bound=None), 'do_response': gi.VFuncInfo(response, bound=None), 'do_show': gi.VFuncInfo(show, bound=None), 'parent_instance': <property object at 0x000002eceabc9170>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(NativeDialog), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkNativeDialog (3537895376)>, '__doc__': None, '__gsignals__': {}, 'destroy': gi.FunctionInfo(destroy), 'get_modal': gi.FunctionInfo(get_modal), 'get_title': gi.FunctionInfo(get_title), 'get_transient_for': gi.FunctionInfo(get_transient_for), 'get_visible': gi.FunctionInfo(get_visible), 'hide': gi.FunctionInfo(hide), 'run': gi.FunctionInfo(run), 'set_modal': gi.FunctionInfo(set_modal), 'set_title': gi.FunctionInfo(set_title), 'set_transient_for': gi.FunctionInfo(set_transient_for), 'show': gi.FunctionInfo(show), 'do_hide': gi.VFuncInfo(hide), 'do_response': gi.VFuncInfo(response), 'do_show': gi.VFuncInfo(show), 'parent_instance': <property object at 0x000002bfd18fc400>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkNativeDialog\n\nSignals from GtkNativeDialog:\n  response (gint)\n\nProperties from GtkNativeDialog:\n  title -> gchararray: Dialog Title\n    The title of the file chooser dialog\n  visible -> gboolean: Visible\n    Whether the dialog is currently visible\n  modal -> gboolean: Modal\n    If TRUE, the dialog is modal (other windows are not usable while this one is up)\n  transient-for -> GtkWindow: Transient for Window\n    The transient parent of the dialog\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkNativeDialog (3923975664)>'
+    __gtype__ = None # (!) real value is '<GType GtkNativeDialog (3537895376)>'
     __info__ = ObjectInfo(NativeDialog)
+    __static_attributes__ = ()
 
 

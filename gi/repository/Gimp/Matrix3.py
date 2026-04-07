@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -209,8 +205,8 @@ class Matrix3(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Matrix3), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpMatrix3 (3595410928)>, '__dict__': <attribute '__dict__' of 'Matrix3' objects>, '__weakref__': <attribute '__weakref__' of 'Matrix3' objects>, '__doc__': None, 'coeff': <property object at 0x000001dcd92a5620>, 'affine': gi.FunctionInfo(affine, bound=None), 'determinant': gi.FunctionInfo(determinant, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'identity': gi.FunctionInfo(identity, bound=None), 'invert': gi.FunctionInfo(invert, bound=None), 'is_affine': gi.FunctionInfo(is_affine, bound=None), 'is_diagonal': gi.FunctionInfo(is_diagonal, bound=None), 'is_identity': gi.FunctionInfo(is_identity, bound=None), 'is_simple': gi.FunctionInfo(is_simple, bound=None), 'mult': gi.FunctionInfo(mult, bound=None), 'rotate': gi.FunctionInfo(rotate, bound=None), 'scale': gi.FunctionInfo(scale, bound=None), 'transform_point': gi.FunctionInfo(transform_point, bound=None), 'translate': gi.FunctionInfo(translate, bound=None), 'xshear': gi.FunctionInfo(xshear, bound=None), 'yshear': gi.FunctionInfo(yshear, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GimpMatrix3 (3595410928)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Matrix3), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpMatrix3 (2360808784)>, '__dict__': <attribute '__dict__' of 'Matrix3' objects>, '__weakref__': <attribute '__weakref__' of 'Matrix3' objects>, '__doc__': None, 'coeff': <property object at 0x000001268f510540>, 'affine': gi.FunctionInfo(affine), 'determinant': gi.FunctionInfo(determinant), 'equal': gi.FunctionInfo(equal), 'identity': gi.FunctionInfo(identity), 'invert': gi.FunctionInfo(invert), 'is_affine': gi.FunctionInfo(is_affine), 'is_diagonal': gi.FunctionInfo(is_diagonal), 'is_identity': gi.FunctionInfo(is_identity), 'is_simple': gi.FunctionInfo(is_simple), 'mult': gi.FunctionInfo(mult), 'rotate': gi.FunctionInfo(rotate), 'scale': gi.FunctionInfo(scale), 'transform_point': gi.FunctionInfo(transform_point), 'translate': gi.FunctionInfo(translate), 'xshear': gi.FunctionInfo(xshear), 'yshear': gi.FunctionInfo(yshear)})"
+    __gtype__ = None # (!) real value is '<GType GimpMatrix3 (2360808784)>'
     __info__ = StructInfo(Matrix3)
 
 

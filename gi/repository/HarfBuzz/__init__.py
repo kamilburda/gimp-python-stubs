@@ -1,21 +1,13 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
 # Variables with simple values
@@ -51,16 +43,14 @@ UNICODE_MAX = 1114111
 
 UNICODE_MAX_DECOMPOSITION_LEN = 19
 
-VERSION_MAJOR = 10
-VERSION_MICRO = 0
-VERSION_MINOR = 2
-VERSION_STRING = '10.2.0'
+VERSION_MAJOR = 12
+VERSION_MICRO = 2
+VERSION_MINOR = 3
+VERSION_STRING = '12.3.2'
 
 _namespace = 'HarfBuzz'
 
 _version = '0.0'
-
-__weakref__ = None
 
 # functions
 
@@ -368,6 +358,10 @@ def buffer_set_unicode_funcs(buffer, unicode_funcs): # real signature unknown; r
     """ buffer_set_unicode_funcs(buffer:HarfBuzz.buffer_t, unicode_funcs:HarfBuzz.unicode_funcs_t) """
     pass
 
+def calloc(nmemb, size): # real signature unknown; restored from __doc__
+    """ calloc(nmemb:int, size:int) """
+    pass
+
 def color_get_alpha(color): # real signature unknown; restored from __doc__
     """ color_get_alpha(color:int) -> int """
     return 0
@@ -500,8 +494,16 @@ def face_create_from_file_or_fail(file_name, index): # real signature unknown; r
     """ face_create_from_file_or_fail(file_name:str, index:int) -> HarfBuzz.face_t """
     pass
 
+def face_create_from_file_or_fail_using(file_name, index, loader_name=None): # real signature unknown; restored from __doc__
+    """ face_create_from_file_or_fail_using(file_name:str, index:int, loader_name:str=None) -> HarfBuzz.face_t """
+    pass
+
 def face_create_or_fail(blob, index): # real signature unknown; restored from __doc__
     """ face_create_or_fail(blob:HarfBuzz.blob_t, index:int) -> HarfBuzz.face_t """
+    pass
+
+def face_create_or_fail_using(blob, index, loader_name=None): # real signature unknown; restored from __doc__
+    """ face_create_or_fail_using(blob:HarfBuzz.blob_t, index:int, loader_name:str=None) -> HarfBuzz.face_t """
     pass
 
 def face_get_empty(): # real signature unknown; restored from __doc__
@@ -527,6 +529,10 @@ def face_get_upem(face): # real signature unknown; restored from __doc__
 def face_is_immutable(face): # real signature unknown; restored from __doc__
     """ face_is_immutable(face:HarfBuzz.face_t) -> int """
     return 0
+
+def face_list_loaders(): # real signature unknown; restored from __doc__
+    """ face_list_loaders() -> list """
+    return []
 
 def face_make_immutable(face): # real signature unknown; restored from __doc__
     """ face_make_immutable(face:HarfBuzz.face_t) """
@@ -584,6 +590,10 @@ def font_draw_glyph(font, glyph, dfuncs, draw_data=None): # real signature unkno
     """ font_draw_glyph(font:HarfBuzz.font_t, glyph:int, dfuncs:HarfBuzz.draw_funcs_t, draw_data=None) """
     pass
 
+def font_draw_glyph_or_fail(font, glyph, dfuncs, draw_data=None): # real signature unknown; restored from __doc__
+    """ font_draw_glyph_or_fail(font:HarfBuzz.font_t, glyph:int, dfuncs:HarfBuzz.draw_funcs_t, draw_data=None) -> int """
+    return 0
+
 def font_funcs_create(): # real signature unknown; restored from __doc__
     """ font_funcs_create() -> HarfBuzz.font_funcs_t """
     pass
@@ -602,6 +612,10 @@ def font_funcs_make_immutable(ffuncs): # real signature unknown; restored from _
 
 def font_funcs_set_draw_glyph_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
     """ font_funcs_set_draw_glyph_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_draw_glyph_func_t, user_data=None) """
+    pass
+
+def font_funcs_set_draw_glyph_or_fail_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
+    """ font_funcs_set_draw_glyph_or_fail_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_draw_glyph_or_fail_func_t, user_data=None) """
     pass
 
 def font_funcs_set_font_h_extents_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
@@ -640,6 +654,10 @@ def font_funcs_set_glyph_h_kerning_func(ffuncs, func, user_data=None): # real si
     """ font_funcs_set_glyph_h_kerning_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_get_glyph_kerning_func_t, user_data=None) """
     pass
 
+def font_funcs_set_glyph_h_origins_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
+    """ font_funcs_set_glyph_h_origins_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_get_glyph_origins_func_t, user_data=None) """
+    pass
+
 def font_funcs_set_glyph_h_origin_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
     """ font_funcs_set_glyph_h_origin_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_get_glyph_origin_func_t, user_data=None) """
     pass
@@ -664,6 +682,10 @@ def font_funcs_set_glyph_v_kerning_func(ffuncs, func, user_data=None): # real si
     """ font_funcs_set_glyph_v_kerning_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_get_glyph_kerning_func_t, user_data=None) """
     pass
 
+def font_funcs_set_glyph_v_origins_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
+    """ font_funcs_set_glyph_v_origins_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_get_glyph_origins_func_t, user_data=None) """
+    pass
+
 def font_funcs_set_glyph_v_origin_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
     """ font_funcs_set_glyph_v_origin_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_get_glyph_origin_func_t, user_data=None) """
     pass
@@ -678,6 +700,10 @@ def font_funcs_set_nominal_glyph_func(ffuncs, func, user_data=None): # real sign
 
 def font_funcs_set_paint_glyph_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
     """ font_funcs_set_paint_glyph_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_paint_glyph_func_t, user_data=None) """
+    pass
+
+def font_funcs_set_paint_glyph_or_fail_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
+    """ font_funcs_set_paint_glyph_or_fail_func(ffuncs:HarfBuzz.font_funcs_t, func:HarfBuzz.font_paint_glyph_or_fail_func_t, user_data=None) """
     pass
 
 def font_funcs_set_variation_glyph_func(ffuncs, func, user_data=None): # real signature unknown; restored from __doc__
@@ -744,6 +770,10 @@ def font_get_glyph_h_origin(font, glyph): # real signature unknown; restored fro
     """ font_get_glyph_h_origin(font:HarfBuzz.font_t, glyph:int) -> int, x:int, y:int """
     return 0
 
+def font_get_glyph_h_origins(font, count, first_glyph, glyph_stride, x_stride, y_stride): # real signature unknown; restored from __doc__
+    """ font_get_glyph_h_origins(font:HarfBuzz.font_t, count:int, first_glyph:int, glyph_stride:int, x_stride:int, y_stride:int) -> int, first_x:int, first_y:int """
+    return 0
+
 def font_get_glyph_kerning_for_direction(font, first_glyph, second_glyph, direction): # real signature unknown; restored from __doc__
     """ font_get_glyph_kerning_for_direction(font:HarfBuzz.font_t, first_glyph:int, second_glyph:int, direction:HarfBuzz.direction_t) -> x:int, y:int """
     pass
@@ -774,6 +804,10 @@ def font_get_glyph_v_kerning(font, top_glyph, bottom_glyph): # real signature un
 
 def font_get_glyph_v_origin(font, glyph): # real signature unknown; restored from __doc__
     """ font_get_glyph_v_origin(font:HarfBuzz.font_t, glyph:int) -> int, x:int, y:int """
+    return 0
+
+def font_get_glyph_v_origins(font, count, first_glyph, glyph_stride, x_stride, y_stride): # real signature unknown; restored from __doc__
+    """ font_get_glyph_v_origins(font:HarfBuzz.font_t, count:int, first_glyph:int, glyph_stride:int, x_stride:int, y_stride:int) -> int, first_x:int, first_y:int """
     return 0
 
 def font_get_h_extents(font): # real signature unknown; restored from __doc__
@@ -848,6 +882,14 @@ def font_is_immutable(font): # real signature unknown; restored from __doc__
     """ font_is_immutable(font:HarfBuzz.font_t) -> int """
     return 0
 
+def font_is_synthetic(font): # real signature unknown; restored from __doc__
+    """ font_is_synthetic(font:HarfBuzz.font_t) -> int """
+    return 0
+
+def font_list_funcs(): # real signature unknown; restored from __doc__
+    """ font_list_funcs() -> list """
+    return []
+
 def font_make_immutable(font): # real signature unknown; restored from __doc__
     """ font_make_immutable(font:HarfBuzz.font_t) """
     pass
@@ -856,9 +898,17 @@ def font_paint_glyph(font, glyph, pfuncs, paint_data=None, palette_index, foregr
     """ font_paint_glyph(font:HarfBuzz.font_t, glyph:int, pfuncs:HarfBuzz.paint_funcs_t, paint_data=None, palette_index:int, foreground:int) """
     pass
 
+def font_paint_glyph_or_fail(font, glyph, pfuncs, paint_data=None, palette_index, foreground): # real signature unknown; restored from __doc__
+    """ font_paint_glyph_or_fail(font:HarfBuzz.font_t, glyph:int, pfuncs:HarfBuzz.paint_funcs_t, paint_data=None, palette_index:int, foreground:int) -> int """
+    return 0
+
 def font_set_face(font, face): # real signature unknown; restored from __doc__
     """ font_set_face(font:HarfBuzz.font_t, face:HarfBuzz.face_t) """
     pass
+
+def font_set_funcs_using(font, name): # real signature unknown; restored from __doc__
+    """ font_set_funcs_using(font:HarfBuzz.font_t, name:str) -> int """
+    return 0
 
 def font_set_parent(font, parent): # real signature unknown; restored from __doc__
     """ font_set_parent(font:HarfBuzz.font_t, parent:HarfBuzz.font_t) """
@@ -908,8 +958,16 @@ def font_subtract_glyph_origin_for_direction(font, glyph, direction, x, y): # re
     """ font_subtract_glyph_origin_for_direction(font:HarfBuzz.font_t, glyph:int, direction:HarfBuzz.direction_t, x:int, y:int) -> x:int, y:int """
     pass
 
+def free(ptr=None): # real signature unknown; restored from __doc__
+    """ free(ptr=None) """
+    pass
+
 def ft_face_create_cached(ft_face): # real signature unknown; restored from __doc__
     """ ft_face_create_cached(ft_face:freetype2.Face) -> HarfBuzz.face_t """
+    pass
+
+def ft_face_create_from_blob_or_fail(blob, index): # real signature unknown; restored from __doc__
+    """ ft_face_create_from_blob_or_fail(blob:HarfBuzz.blob_t, index:int) -> HarfBuzz.face_t """
     pass
 
 def ft_face_create_from_file_or_fail(file_name, index): # real signature unknown; restored from __doc__
@@ -979,6 +1037,10 @@ def language_matches(language, specific): # real signature unknown; restored fro
 def language_to_string(language): # real signature unknown; restored from __doc__
     """ language_to_string(language:HarfBuzz.language_t) -> str """
     return ""
+
+def malloc(size): # real signature unknown; restored from __doc__
+    """ malloc(size:int) """
+    pass
 
 def map_allocation_successful(map): # real signature unknown; restored from __doc__
     """ map_allocation_successful(map:HarfBuzz.map_t) -> int """
@@ -1224,6 +1286,10 @@ def ot_layout_lookup_collect_glyphs(face, table_tag, lookup_index): # real signa
     """ ot_layout_lookup_collect_glyphs(face:HarfBuzz.face_t, table_tag:int, lookup_index:int) -> glyphs_before:HarfBuzz.set_t, glyphs_input:HarfBuzz.set_t, glyphs_after:HarfBuzz.set_t, glyphs_output:HarfBuzz.set_t """
     pass
 
+def ot_layout_lookup_collect_glyph_alternates(face, lookup_index, alternate_count, alternate_glyphs): # real signature unknown; restored from __doc__
+    """ ot_layout_lookup_collect_glyph_alternates(face:HarfBuzz.face_t, lookup_index:int, alternate_count:HarfBuzz.map_t, alternate_glyphs:HarfBuzz.map_t) -> int, alternate_count:HarfBuzz.map_t, alternate_glyphs:HarfBuzz.map_t """
+    return 0
+
 def ot_layout_lookup_get_glyph_alternates(face, lookup_index, glyph, start_offset): # real signature unknown; restored from __doc__
     """ ot_layout_lookup_get_glyph_alternates(face:HarfBuzz.face_t, lookup_index:int, glyph:int, start_offset:int) -> int, alternate_glyphs:list """
     return 0
@@ -1375,6 +1441,10 @@ def ot_shape_glyphs_closure(font, buffer, features): # real signature unknown; r
 def ot_shape_plan_collect_lookups(shape_plan, table_tag): # real signature unknown; restored from __doc__
     """ ot_shape_plan_collect_lookups(shape_plan:HarfBuzz.shape_plan_t, table_tag:int) -> lookup_indexes:HarfBuzz.set_t """
     pass
+
+def ot_shape_plan_get_feature_tags(shape_plan, start_offset): # real signature unknown; restored from __doc__
+    """ ot_shape_plan_get_feature_tags(shape_plan:HarfBuzz.shape_plan_t, start_offset:int) -> int, tags:list """
+    return 0
 
 def ot_tags_from_script(script): # real signature unknown; restored from __doc__
     """ ot_tags_from_script(script:HarfBuzz.script_t) -> script_tag_1:int, script_tag_2:int """
@@ -1560,8 +1630,16 @@ def paint_push_clip_rectangle(funcs, paint_data=None, xmin, ymin, xmax, ymax): #
     """ paint_push_clip_rectangle(funcs:HarfBuzz.paint_funcs_t, paint_data=None, xmin:float, ymin:float, xmax:float, ymax:float) """
     pass
 
+def paint_push_font_transform(funcs, paint_data=None, font): # real signature unknown; restored from __doc__
+    """ paint_push_font_transform(funcs:HarfBuzz.paint_funcs_t, paint_data=None, font:HarfBuzz.font_t) """
+    pass
+
 def paint_push_group(funcs, paint_data=None): # real signature unknown; restored from __doc__
     """ paint_push_group(funcs:HarfBuzz.paint_funcs_t, paint_data=None) """
+    pass
+
+def paint_push_inverse_font_transform(funcs, paint_data=None, font): # real signature unknown; restored from __doc__
+    """ paint_push_inverse_font_transform(funcs:HarfBuzz.paint_funcs_t, paint_data=None, font:HarfBuzz.font_t) """
     pass
 
 def paint_push_transform(funcs, paint_data=None, xx, yx, xy, yy, dx, dy): # real signature unknown; restored from __doc__
@@ -1574,6 +1652,10 @@ def paint_radial_gradient(funcs, paint_data=None, color_line, x0, y0, r0, x1, y1
 
 def paint_sweep_gradient(funcs, paint_data=None, color_line, x0, y0, start_angle, end_angle): # real signature unknown; restored from __doc__
     """ paint_sweep_gradient(funcs:HarfBuzz.paint_funcs_t, paint_data=None, color_line:HarfBuzz.color_line_t, x0:float, y0:float, start_angle:float, end_angle:float) """
+    pass
+
+def realloc(ptr=None, size): # real signature unknown; restored from __doc__
+    """ realloc(ptr=None, size:int) """
     pass
 
 def script_from_iso15924_tag(tag): # real signature unknown; restored from __doc__
@@ -1872,112 +1954,6 @@ def variation_to_string(variation): # real signature unknown; restored from __do
     """ variation_to_string(variation:HarfBuzz.variation_t) -> buf:list """
     pass
 
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """
-    Default object formatter.
-    
-    Return str(self) if format_spec is empty. Raise TypeError otherwise.
-    """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    """ Might raise gi._gi.RepositoryError """
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
-    pass
-
 # classes
 
 from .aat_layout_feature_selector_info_t import aat_layout_feature_selector_info_t
@@ -2040,12 +2016,11 @@ from .user_data_key_t import user_data_key_t
 from .variation_t import variation_t
 from .var_int_t import var_int_t
 from .var_num_t import var_num_t
-from .__class__ import __class__
 # variables with complex values
 
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001d99f09b740>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x00000208a4df4440>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.HarfBuzz', loader=<gi.importer.DynamicImporter object at 0x000001d99f09b740>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.HarfBuzz', loader=<gi.importer.DynamicImporter object at 0x00000208a4df4440>)"
 

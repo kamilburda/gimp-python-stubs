@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -215,8 +214,8 @@ class SelectionData(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SelectionData), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkSelectionData (3867688352)>, '__dict__': <attribute '__dict__' of 'SelectionData' objects>, '__weakref__': <attribute '__weakref__' of 'SelectionData' objects>, '__doc__': None, 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_data_type': gi.FunctionInfo(get_data_type, bound=None), 'get_data': gi.FunctionInfo(get_data, bound=None), 'get_display': gi.FunctionInfo(get_display, bound=None), 'get_format': gi.FunctionInfo(get_format, bound=None), 'get_length': gi.FunctionInfo(get_length, bound=None), 'get_pixbuf': gi.FunctionInfo(get_pixbuf, bound=None), 'get_selection': gi.FunctionInfo(get_selection, bound=None), 'get_target': gi.FunctionInfo(get_target, bound=None), 'get_targets': gi.FunctionInfo(get_targets, bound=None), 'get_text': gi.FunctionInfo(get_text, bound=None), 'get_uris': gi.FunctionInfo(get_uris, bound=None), 'set': gi.FunctionInfo(set, bound=None), 'set_pixbuf': gi.FunctionInfo(set_pixbuf, bound=None), 'set_text': gi.FunctionInfo(set_text, bound=None), 'set_uris': gi.FunctionInfo(set_uris, bound=None), 'targets_include_image': gi.FunctionInfo(targets_include_image, bound=None), 'targets_include_rich_text': gi.FunctionInfo(targets_include_rich_text, bound=None), 'targets_include_text': gi.FunctionInfo(targets_include_text, bound=None), 'targets_include_uri': gi.FunctionInfo(targets_include_uri, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GtkSelectionData (3867688352)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SelectionData), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkSelectionData (3418527968)>, '__dict__': <attribute '__dict__' of 'SelectionData' objects>, '__weakref__': <attribute '__weakref__' of 'SelectionData' objects>, '__doc__': None, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_data_type': gi.FunctionInfo(get_data_type), 'get_data': gi.FunctionInfo(get_data), 'get_display': gi.FunctionInfo(get_display), 'get_format': gi.FunctionInfo(get_format), 'get_length': gi.FunctionInfo(get_length), 'get_pixbuf': gi.FunctionInfo(get_pixbuf), 'get_selection': gi.FunctionInfo(get_selection), 'get_target': gi.FunctionInfo(get_target), 'get_targets': gi.FunctionInfo(get_targets), 'get_text': gi.FunctionInfo(get_text), 'get_uris': gi.FunctionInfo(get_uris), 'set': gi.FunctionInfo(set), 'set_pixbuf': gi.FunctionInfo(set_pixbuf), 'set_text': gi.FunctionInfo(set_text), 'set_uris': gi.FunctionInfo(set_uris), 'targets_include_image': gi.FunctionInfo(targets_include_image), 'targets_include_rich_text': gi.FunctionInfo(targets_include_rich_text), 'targets_include_text': gi.FunctionInfo(targets_include_text), 'targets_include_uri': gi.FunctionInfo(targets_include_uri)})"
+    __gtype__ = None # (!) real value is '<GType GtkSelectionData (3418527968)>'
     __info__ = StructInfo(SelectionData)
 
 

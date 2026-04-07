@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -163,7 +162,7 @@ class FlowBoxClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FlowBoxClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FlowBoxClass' objects>, '__weakref__': <attribute '__weakref__' of 'FlowBoxClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceabd4310>, 'child_activated': <property object at 0x000002eceabd4400>, 'selected_children_changed': <property object at 0x000002eceabd4540>, 'activate_cursor_child': <property object at 0x000002eceabd4630>, 'toggle_cursor_child': <property object at 0x000002eceabd4720>, 'move_cursor': <property object at 0x000002eceabd4810>, 'select_all': <property object at 0x000002eceabd4900>, 'unselect_all': <property object at 0x000002eceabd49f0>, '_gtk_reserved1': <property object at 0x000002eceabd4ae0>, '_gtk_reserved2': <property object at 0x000002eceabd4bd0>, '_gtk_reserved3': <property object at 0x000002eceabd4cc0>, '_gtk_reserved4': <property object at 0x000002eceabd4db0>, '_gtk_reserved5': <property object at 0x000002eceabd4ea0>, '_gtk_reserved6': <property object at 0x000002eceabd4f90>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FlowBoxClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FlowBoxClass' objects>, '__weakref__': <attribute '__weakref__' of 'FlowBoxClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18ff470>, 'child_activated': <property object at 0x000002bfd18ff560>, 'selected_children_changed': <property object at 0x000002bfd18ff6a0>, 'activate_cursor_child': <property object at 0x000002bfd18ff790>, 'toggle_cursor_child': <property object at 0x000002bfd18ff880>, 'move_cursor': <property object at 0x000002bfd18ff970>, 'select_all': <property object at 0x000002bfd18ffa60>, 'unselect_all': <property object at 0x000002bfd18ffb50>, '_gtk_reserved1': <property object at 0x000002bfd18ffc40>, '_gtk_reserved2': <property object at 0x000002bfd18ffd30>, '_gtk_reserved3': <property object at 0x000002bfd18ffe20>, '_gtk_reserved4': <property object at 0x000002bfd18fff10>, '_gtk_reserved5': <property object at 0x000002bfd18f4040>, '_gtk_reserved6': <property object at 0x000002bfd18f4130>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(FlowBoxClass)
 

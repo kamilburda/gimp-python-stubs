@@ -1,28 +1,26 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
 from .Layer import Layer
 
-class TextLayer(Layer):
+from .Rasterizable import Rasterizable
+
+class TextLayer(Layer, Rasterizable):
     """
     :Constructors:
     
@@ -79,20 +77,20 @@ class TextLayer(Layer):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -135,6 +133,12 @@ class TextLayer(Layer):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def edit_bucket_fill(self, fill_type, x, y): # real signature unknown; restored from __doc__
@@ -200,17 +204,17 @@ class TextLayer(Layer):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -382,6 +386,42 @@ class TextLayer(Layer):
         """ get_opacity(self) -> float """
         return 0.0
 
+    def get_outline(self): # real signature unknown; restored from __doc__
+        """ get_outline(self) -> Gimp.TextOutline """
+        pass
+
+    def get_outline_antialias(self): # real signature unknown; restored from __doc__
+        """ get_outline_antialias(self) -> bool """
+        return False
+
+    def get_outline_cap_style(self): # real signature unknown; restored from __doc__
+        """ get_outline_cap_style(self) -> Gimp.CapStyle """
+        pass
+
+    def get_outline_color(self): # real signature unknown; restored from __doc__
+        """ get_outline_color(self) -> Gegl.Color """
+        pass
+
+    def get_outline_dash_offset(self): # real signature unknown; restored from __doc__
+        """ get_outline_dash_offset(self) -> float """
+        return 0.0
+
+    def get_outline_direction(self): # real signature unknown; restored from __doc__
+        """ get_outline_direction(self) -> Gimp.TextOutlineDirection """
+        pass
+
+    def get_outline_join_style(self): # real signature unknown; restored from __doc__
+        """ get_outline_join_style(self) -> Gimp.JoinStyle """
+        pass
+
+    def get_outline_miter_limit(self): # real signature unknown; restored from __doc__
+        """ get_outline_miter_limit(self) -> float """
+        return 0.0
+
+    def get_outline_width(self): # real signature unknown; restored from __doc__
+        """ get_outline_width(self) -> float, outline_unit:Gimp.Unit """
+        return 0.0
+
     def get_parasite(self, name): # real signature unknown; restored from __doc__
         """ get_parasite(self, name:str) -> Gimp.Parasite """
         pass
@@ -455,20 +495,20 @@ class TextLayer(Layer):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -522,6 +562,10 @@ class TextLayer(Layer):
         """ id_is_layer_mask(item_id:int) -> bool """
         return False
 
+    def id_is_link_layer(self, item_id): # real signature unknown; restored from __doc__
+        """ id_is_link_layer(item_id:int) -> bool """
+        return False
+
     def id_is_path(self, item_id): # real signature unknown; restored from __doc__
         """ id_is_path(item_id:int) -> bool """
         return False
@@ -536,6 +580,10 @@ class TextLayer(Layer):
 
     def id_is_valid(self, item_id): # real signature unknown; restored from __doc__
         """ id_is_valid(item_id:int) -> bool """
+        return False
+
+    def id_is_vector_layer(self, item_id): # real signature unknown; restored from __doc__
+        """ id_is_vector_layer(item_id:int) -> bool """
         return False
 
     def install_properties(self, pspecs): # real signature unknown; restored from __doc__
@@ -602,8 +650,16 @@ class TextLayer(Layer):
         """ is_layer_mask(self) -> bool """
         return False
 
+    def is_link_layer(self): # real signature unknown; restored from __doc__
+        """ is_link_layer(self) -> bool """
+        return False
+
     def is_path(self): # real signature unknown; restored from __doc__
         """ is_path(self) -> bool """
+        return False
+
+    def is_rasterized(self): # real signature unknown; restored from __doc__
+        """ is_rasterized(self) -> bool """
         return False
 
     def is_rgb(self): # real signature unknown; restored from __doc__
@@ -620,6 +676,10 @@ class TextLayer(Layer):
 
     def is_valid(self): # real signature unknown; restored from __doc__
         """ is_valid(self) -> bool """
+        return False
+
+    def is_vector_layer(self): # real signature unknown; restored from __doc__
+        """ is_vector_layer(self) -> bool """
         return False
 
     def levels(self, channel, low_input, high_input, clamp_input, gamma, low_output, high_output, clamp_output): # real signature unknown; restored from __doc__
@@ -654,7 +714,8 @@ class TextLayer(Layer):
         """ merge_shadow(self, undo:bool) -> bool """
         return False
 
-    def new(self, image, text, font, size, unit): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, image, text, font, size, unit): # real signature unknown; restored from __doc__
         """ new(image:Gimp.Image, text:str, font:Gimp.Font, size:float, unit:Gimp.Unit) -> Gimp.TextLayer """
         pass
 
@@ -698,6 +759,10 @@ class TextLayer(Layer):
         """ posterize(self, levels:int) -> bool """
         return False
 
+    def rasterize(self): # real signature unknown; restored from __doc__
+        """ rasterize(self) -> bool """
+        return False
+
     def ref(self, *args, **kargs): # reliably restored by inspect
         # no doc
         pass
@@ -724,6 +789,10 @@ class TextLayer(Layer):
 
     def resize_to_image_size(self): # real signature unknown; restored from __doc__
         """ resize_to_image_size(self) -> bool """
+        return False
+
+    def restore(self): # real signature unknown; restored from __doc__
+        """ restore(self) -> bool """
         return False
 
     def run_dispose(self): # real signature unknown; restored from __doc__
@@ -850,6 +919,42 @@ class TextLayer(Layer):
         """ set_opacity(self, opacity:float) -> bool """
         return False
 
+    def set_outline(self, outline): # real signature unknown; restored from __doc__
+        """ set_outline(self, outline:Gimp.TextOutline) -> bool """
+        return False
+
+    def set_outline_antialias(self, outline_antialias): # real signature unknown; restored from __doc__
+        """ set_outline_antialias(self, outline_antialias:bool) -> bool """
+        return False
+
+    def set_outline_cap_style(self, outline_cap_style): # real signature unknown; restored from __doc__
+        """ set_outline_cap_style(self, outline_cap_style:Gimp.CapStyle) -> bool """
+        return False
+
+    def set_outline_color(self, color): # real signature unknown; restored from __doc__
+        """ set_outline_color(self, color:Gegl.Color) -> bool """
+        return False
+
+    def set_outline_dash_offset(self, outline_dash_offset): # real signature unknown; restored from __doc__
+        """ set_outline_dash_offset(self, outline_dash_offset:float) -> bool """
+        return False
+
+    def set_outline_direction(self, outline_direction): # real signature unknown; restored from __doc__
+        """ set_outline_direction(self, outline_direction:Gimp.TextOutlineDirection) -> bool """
+        return False
+
+    def set_outline_join_style(self, outline_join_style): # real signature unknown; restored from __doc__
+        """ set_outline_join_style(self, outline_join_style:Gimp.JoinStyle) -> bool """
+        return False
+
+    def set_outline_miter_limit(self, outline_miter_limit): # real signature unknown; restored from __doc__
+        """ set_outline_miter_limit(self, outline_miter_limit:float) -> bool """
+        return False
+
+    def set_outline_width(self, outline_width, outline_unit): # real signature unknown; restored from __doc__
+        """ set_outline_width(self, outline_width:float, outline_unit:Gimp.Unit) -> bool """
+        return False
+
     def set_pixel(self, x_coord, y_coord, color): # real signature unknown; restored from __doc__
         """ set_pixel(self, x_coord:int, y_coord:int, color:Gegl.Color) -> bool """
         return False
@@ -967,20 +1072,20 @@ class TextLayer(Layer):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -1101,6 +1206,9 @@ class TextLayer(Layer):
         """
         pass
 
+    def __weakref__(self, *args, **kwargs): # real signature unknown
+        pass
+
     g_type_instance = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     parent_instance = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -1114,12 +1222,14 @@ class TextLayer(Layer):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001dcd5f5afe0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001268f2ed270>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TextLayer), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpTextLayer (3644683792)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_by_id': gi.FunctionInfo(get_by_id, bound=None), 'get_antialias': gi.FunctionInfo(get_antialias, bound=None), 'get_base_direction': gi.FunctionInfo(get_base_direction, bound=None), 'get_color': gi.FunctionInfo(get_color, bound=None), 'get_font': gi.FunctionInfo(get_font, bound=None), 'get_font_size': gi.FunctionInfo(get_font_size, bound=None), 'get_hint_style': gi.FunctionInfo(get_hint_style, bound=None), 'get_indent': gi.FunctionInfo(get_indent, bound=None), 'get_justification': gi.FunctionInfo(get_justification, bound=None), 'get_kerning': gi.FunctionInfo(get_kerning, bound=None), 'get_language': gi.FunctionInfo(get_language, bound=None), 'get_letter_spacing': gi.FunctionInfo(get_letter_spacing, bound=None), 'get_line_spacing': gi.FunctionInfo(get_line_spacing, bound=None), 'get_markup': gi.FunctionInfo(get_markup, bound=None), 'get_text': gi.FunctionInfo(get_text, bound=None), 'resize': gi.FunctionInfo(resize, bound=None), 'set_antialias': gi.FunctionInfo(set_antialias, bound=None), 'set_base_direction': gi.FunctionInfo(set_base_direction, bound=None), 'set_color': gi.FunctionInfo(set_color, bound=None), 'set_font': gi.FunctionInfo(set_font, bound=None), 'set_font_size': gi.FunctionInfo(set_font_size, bound=None), 'set_hint_style': gi.FunctionInfo(set_hint_style, bound=None), 'set_indent': gi.FunctionInfo(set_indent, bound=None), 'set_justification': gi.FunctionInfo(set_justification, bound=None), 'set_kerning': gi.FunctionInfo(set_kerning, bound=None), 'set_language': gi.FunctionInfo(set_language, bound=None), 'set_letter_spacing': gi.FunctionInfo(set_letter_spacing, bound=None), 'set_line_spacing': gi.FunctionInfo(set_line_spacing, bound=None), 'set_markup': gi.FunctionInfo(set_markup, bound=None), 'set_text': gi.FunctionInfo(set_text, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TextLayer), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpTextLayer (2359064672)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_by_id': <staticmethod(gi.FunctionInfo(get_by_id))>, 'get_antialias': gi.FunctionInfo(get_antialias), 'get_base_direction': gi.FunctionInfo(get_base_direction), 'get_color': gi.FunctionInfo(get_color), 'get_font': gi.FunctionInfo(get_font), 'get_font_size': gi.FunctionInfo(get_font_size), 'get_hint_style': gi.FunctionInfo(get_hint_style), 'get_indent': gi.FunctionInfo(get_indent), 'get_justification': gi.FunctionInfo(get_justification), 'get_kerning': gi.FunctionInfo(get_kerning), 'get_language': gi.FunctionInfo(get_language), 'get_letter_spacing': gi.FunctionInfo(get_letter_spacing), 'get_line_spacing': gi.FunctionInfo(get_line_spacing), 'get_markup': gi.FunctionInfo(get_markup), 'get_outline': gi.FunctionInfo(get_outline), 'get_outline_antialias': gi.FunctionInfo(get_outline_antialias), 'get_outline_cap_style': gi.FunctionInfo(get_outline_cap_style), 'get_outline_color': gi.FunctionInfo(get_outline_color), 'get_outline_dash_offset': gi.FunctionInfo(get_outline_dash_offset), 'get_outline_direction': gi.FunctionInfo(get_outline_direction), 'get_outline_join_style': gi.FunctionInfo(get_outline_join_style), 'get_outline_miter_limit': gi.FunctionInfo(get_outline_miter_limit), 'get_outline_width': gi.FunctionInfo(get_outline_width), 'get_text': gi.FunctionInfo(get_text), 'resize': gi.FunctionInfo(resize), 'set_antialias': gi.FunctionInfo(set_antialias), 'set_base_direction': gi.FunctionInfo(set_base_direction), 'set_color': gi.FunctionInfo(set_color), 'set_font': gi.FunctionInfo(set_font), 'set_font_size': gi.FunctionInfo(set_font_size), 'set_hint_style': gi.FunctionInfo(set_hint_style), 'set_indent': gi.FunctionInfo(set_indent), 'set_justification': gi.FunctionInfo(set_justification), 'set_kerning': gi.FunctionInfo(set_kerning), 'set_language': gi.FunctionInfo(set_language), 'set_letter_spacing': gi.FunctionInfo(set_letter_spacing), 'set_line_spacing': gi.FunctionInfo(set_line_spacing), 'set_markup': gi.FunctionInfo(set_markup), 'set_outline': gi.FunctionInfo(set_outline), 'set_outline_antialias': gi.FunctionInfo(set_outline_antialias), 'set_outline_cap_style': gi.FunctionInfo(set_outline_cap_style), 'set_outline_color': gi.FunctionInfo(set_outline_color), 'set_outline_dash_offset': gi.FunctionInfo(set_outline_dash_offset), 'set_outline_direction': gi.FunctionInfo(set_outline_direction), 'set_outline_join_style': gi.FunctionInfo(set_outline_join_style), 'set_outline_miter_limit': gi.FunctionInfo(set_outline_miter_limit), 'set_outline_width': gi.FunctionInfo(set_outline_width), 'set_text': gi.FunctionInfo(set_text)})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GimpTextLayer\n\nProperties from GimpItem:\n  id -> gint: The item id\n    The item id for internal use\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpTextLayer (3644683792)>'
+    __gtype__ = None # (!) real value is '<GType GimpTextLayer (2359064672)>'
     __info__ = ObjectInfo(TextLayer)
+    __static_attributes__ = ()
 
 

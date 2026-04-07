@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class AttrList(__gi.Boxed):
@@ -58,7 +56,8 @@ class AttrList(__gi.Boxed):
         """ insert_before(self, attr:Pango.Attribute) """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Pango.AttrList """
         pass
 
@@ -194,8 +193,8 @@ class AttrList(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrList), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoAttrList (4081755904)>, '__dict__': <attribute '__dict__' of 'AttrList' objects>, '__weakref__': <attribute '__weakref__' of 'AttrList' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'change': gi.FunctionInfo(change, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'filter': gi.FunctionInfo(filter, bound=None), 'get_attributes': gi.FunctionInfo(get_attributes, bound=None), 'get_iterator': gi.FunctionInfo(get_iterator, bound=None), 'insert': gi.FunctionInfo(insert, bound=None), 'insert_before': gi.FunctionInfo(insert_before, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'splice': gi.FunctionInfo(splice, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'update': gi.FunctionInfo(update, bound=None), 'from_string': gi.FunctionInfo(from_string, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x00000213f5fb7880>})"
-    __gtype__ = None # (!) real value is '<GType PangoAttrList (4081755904)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrList), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoAttrList (857390560)>, '__dict__': <attribute '__dict__' of 'AttrList' objects>, '__weakref__': <attribute '__weakref__' of 'AttrList' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'change': gi.FunctionInfo(change), 'copy': gi.FunctionInfo(copy), 'equal': gi.FunctionInfo(equal), 'filter': gi.FunctionInfo(filter), 'get_attributes': gi.FunctionInfo(get_attributes), 'get_iterator': gi.FunctionInfo(get_iterator), 'insert': gi.FunctionInfo(insert), 'insert_before': gi.FunctionInfo(insert_before), 'ref': gi.FunctionInfo(ref), 'splice': gi.FunctionInfo(splice), 'to_string': gi.FunctionInfo(to_string), 'unref': gi.FunctionInfo(unref), 'update': gi.FunctionInfo(update), 'from_string': <staticmethod(gi.FunctionInfo(from_string))>, '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000028034ff1010>})"
+    __gtype__ = None # (!) real value is '<GType PangoAttrList (857390560)>'
     __info__ = StructInfo(AttrList)
 
 

@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -69,7 +65,8 @@ class Parasite(__gi.Boxed):
         """ is_undoable(self) -> bool """
         return False
 
-    def new(self, name, flags, data=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, name, flags, data=None): # real signature unknown; restored from __doc__
         """ new(name:str, flags:int, data:list=None) -> Gimp.Parasite """
         pass
 
@@ -193,8 +190,8 @@ class Parasite(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Parasite), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpParasite (3595414736)>, '__dict__': <attribute '__dict__' of 'Parasite' objects>, '__weakref__': <attribute '__weakref__' of 'Parasite' objects>, '__doc__': None, 'name': <property object at 0x000001dcd92de340>, 'flags': <property object at 0x000001dcd92de430>, 'size': <property object at 0x000001dcd92de520>, 'data': <property object at 0x000001dcd92de610>, 'new': gi.FunctionInfo(new, bound=None), 'compare': gi.FunctionInfo(compare, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_data': gi.FunctionInfo(get_data, bound=None), 'get_flags': gi.FunctionInfo(get_flags, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'has_flag': gi.FunctionInfo(has_flag, bound=None), 'is_persistent': gi.FunctionInfo(is_persistent, bound=None), 'is_type': gi.FunctionInfo(is_type, bound=None), 'is_undoable': gi.FunctionInfo(is_undoable, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GimpParasite (3595414736)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Parasite), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpParasite (2360868928)>, '__dict__': <attribute '__dict__' of 'Parasite' objects>, '__weakref__': <attribute '__weakref__' of 'Parasite' objects>, '__doc__': None, 'name': <property object at 0x000001268f52d6c0>, 'flags': <property object at 0x000001268f52d7b0>, 'size': <property object at 0x000001268f52d8a0>, 'data': <property object at 0x000001268f52d990>, 'new': <classmethod(gi.FunctionInfo(new))>, 'compare': gi.FunctionInfo(compare), 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_data': gi.FunctionInfo(get_data), 'get_flags': gi.FunctionInfo(get_flags), 'get_name': gi.FunctionInfo(get_name), 'has_flag': gi.FunctionInfo(has_flag), 'is_persistent': gi.FunctionInfo(is_persistent), 'is_type': gi.FunctionInfo(is_type), 'is_undoable': gi.FunctionInfo(is_undoable)})"
+    __gtype__ = None # (!) real value is '<GType GimpParasite (2360868928)>'
     __info__ = StructInfo(Parasite)
 
 

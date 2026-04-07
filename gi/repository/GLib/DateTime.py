@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class DateTime(__gi.Boxed):
@@ -167,55 +165,68 @@ class DateTime(__gi.Boxed):
         """ is_daylight_savings(self) -> bool """
         return False
 
-    def new(self, tz, year, month, day, hour, minute, seconds): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, tz, year, month, day, hour, minute, seconds): # real signature unknown; restored from __doc__
         """ new(tz:GLib.TimeZone, year:int, month:int, day:int, hour:int, minute:int, seconds:float) -> GLib.DateTime or None """
         pass
 
-    def new_from_iso8601(self, text, default_tz=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_iso8601(cls, text, default_tz=None): # real signature unknown; restored from __doc__
         """ new_from_iso8601(text:str, default_tz:GLib.TimeZone=None) -> GLib.DateTime or None """
         pass
 
-    def new_from_timeval_local(self, tv): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_timeval_local(cls, tv): # real signature unknown; restored from __doc__
         """ new_from_timeval_local(tv:GLib.TimeVal) -> GLib.DateTime or None """
         pass
 
-    def new_from_timeval_utc(self, tv): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_timeval_utc(cls, tv): # real signature unknown; restored from __doc__
         """ new_from_timeval_utc(tv:GLib.TimeVal) -> GLib.DateTime or None """
         pass
 
-    def new_from_unix_local(self, t): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_unix_local(cls, t): # real signature unknown; restored from __doc__
         """ new_from_unix_local(t:int) -> GLib.DateTime or None """
         pass
 
-    def new_from_unix_local_usec(self, usecs): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_unix_local_usec(cls, usecs): # real signature unknown; restored from __doc__
         """ new_from_unix_local_usec(usecs:int) -> GLib.DateTime or None """
         pass
 
-    def new_from_unix_utc(self, t): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_unix_utc(cls, t): # real signature unknown; restored from __doc__
         """ new_from_unix_utc(t:int) -> GLib.DateTime or None """
         pass
 
-    def new_from_unix_utc_usec(self, usecs): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_unix_utc_usec(cls, usecs): # real signature unknown; restored from __doc__
         """ new_from_unix_utc_usec(usecs:int) -> GLib.DateTime or None """
         pass
 
-    def new_local(self, year, month, day, hour, minute, seconds): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_local(cls, year, month, day, hour, minute, seconds): # real signature unknown; restored from __doc__
         """ new_local(year:int, month:int, day:int, hour:int, minute:int, seconds:float) -> GLib.DateTime or None """
         pass
 
-    def new_now(self, tz): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_now(cls, tz): # real signature unknown; restored from __doc__
         """ new_now(tz:GLib.TimeZone) -> GLib.DateTime or None """
         pass
 
-    def new_now_local(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_now_local(cls): # real signature unknown; restored from __doc__
         """ new_now_local() -> GLib.DateTime or None """
         pass
 
-    def new_now_utc(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_now_utc(cls): # real signature unknown; restored from __doc__
         """ new_now_utc() -> GLib.DateTime or None """
         pass
 
-    def new_utc(self, year, month, day, hour, minute, seconds): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_utc(cls, year, month, day, hour, minute, seconds): # real signature unknown; restored from __doc__
         """ new_utc(year:int, month:int, day:int, hour:int, minute:int, seconds:float) -> GLib.DateTime or None """
         pass
 
@@ -363,8 +374,8 @@ class DateTime(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DateTime), '__module__': 'gi.repository.GLib', '__gtype__': <GType GDateTime (155716160)>, '__dict__': <attribute '__dict__' of 'DateTime' objects>, '__weakref__': <attribute '__weakref__' of 'DateTime' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'new_from_iso8601': gi.FunctionInfo(new_from_iso8601, bound=None), 'new_from_timeval_local': gi.FunctionInfo(new_from_timeval_local, bound=None), 'new_from_timeval_utc': gi.FunctionInfo(new_from_timeval_utc, bound=None), 'new_from_unix_local': gi.FunctionInfo(new_from_unix_local, bound=None), 'new_from_unix_local_usec': gi.FunctionInfo(new_from_unix_local_usec, bound=None), 'new_from_unix_utc': gi.FunctionInfo(new_from_unix_utc, bound=None), 'new_from_unix_utc_usec': gi.FunctionInfo(new_from_unix_utc_usec, bound=None), 'new_local': gi.FunctionInfo(new_local, bound=None), 'new_now': gi.FunctionInfo(new_now, bound=None), 'new_now_local': gi.FunctionInfo(new_now_local, bound=None), 'new_now_utc': gi.FunctionInfo(new_now_utc, bound=None), 'new_utc': gi.FunctionInfo(new_utc, bound=None), 'add': gi.FunctionInfo(add, bound=None), 'add_days': gi.FunctionInfo(add_days, bound=None), 'add_full': gi.FunctionInfo(add_full, bound=None), 'add_hours': gi.FunctionInfo(add_hours, bound=None), 'add_minutes': gi.FunctionInfo(add_minutes, bound=None), 'add_months': gi.FunctionInfo(add_months, bound=None), 'add_seconds': gi.FunctionInfo(add_seconds, bound=None), 'add_weeks': gi.FunctionInfo(add_weeks, bound=None), 'add_years': gi.FunctionInfo(add_years, bound=None), 'compare': gi.FunctionInfo(compare, bound=None), 'difference': gi.FunctionInfo(difference, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'format': gi.FunctionInfo(format, bound=None), 'format_iso8601': gi.FunctionInfo(format_iso8601, bound=None), 'get_day_of_month': gi.FunctionInfo(get_day_of_month, bound=None), 'get_day_of_week': gi.FunctionInfo(get_day_of_week, bound=None), 'get_day_of_year': gi.FunctionInfo(get_day_of_year, bound=None), 'get_hour': gi.FunctionInfo(get_hour, bound=None), 'get_microsecond': gi.FunctionInfo(get_microsecond, bound=None), 'get_minute': gi.FunctionInfo(get_minute, bound=None), 'get_month': gi.FunctionInfo(get_month, bound=None), 'get_second': gi.FunctionInfo(get_second, bound=None), 'get_seconds': gi.FunctionInfo(get_seconds, bound=None), 'get_timezone': gi.FunctionInfo(get_timezone, bound=None), 'get_timezone_abbreviation': gi.FunctionInfo(get_timezone_abbreviation, bound=None), 'get_utc_offset': gi.FunctionInfo(get_utc_offset, bound=None), 'get_week_numbering_year': gi.FunctionInfo(get_week_numbering_year, bound=None), 'get_week_of_year': gi.FunctionInfo(get_week_of_year, bound=None), 'get_year': gi.FunctionInfo(get_year, bound=None), 'get_ymd': gi.FunctionInfo(get_ymd, bound=None), 'hash': gi.FunctionInfo(hash, bound=None), 'is_daylight_savings': gi.FunctionInfo(is_daylight_savings, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'to_local': gi.FunctionInfo(to_local, bound=None), 'to_timeval': gi.FunctionInfo(to_timeval, bound=None), 'to_timezone': gi.FunctionInfo(to_timezone, bound=None), 'to_unix': gi.FunctionInfo(to_unix, bound=None), 'to_unix_usec': gi.FunctionInfo(to_unix_usec, bound=None), 'to_utc': gi.FunctionInfo(to_utc, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GDateTime (155716160)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DateTime), '__module__': 'gi.repository.GLib', '__gtype__': <GType GDateTime (2640518400)>, '__dict__': <attribute '__dict__' of 'DateTime' objects>, '__weakref__': <attribute '__weakref__' of 'DateTime' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_from_iso8601': <classmethod(gi.FunctionInfo(new_from_iso8601))>, 'new_from_timeval_local': <classmethod(gi.FunctionInfo(new_from_timeval_local))>, 'new_from_timeval_utc': <classmethod(gi.FunctionInfo(new_from_timeval_utc))>, 'new_from_unix_local': <classmethod(gi.FunctionInfo(new_from_unix_local))>, 'new_from_unix_local_usec': <classmethod(gi.FunctionInfo(new_from_unix_local_usec))>, 'new_from_unix_utc': <classmethod(gi.FunctionInfo(new_from_unix_utc))>, 'new_from_unix_utc_usec': <classmethod(gi.FunctionInfo(new_from_unix_utc_usec))>, 'new_local': <classmethod(gi.FunctionInfo(new_local))>, 'new_now': <classmethod(gi.FunctionInfo(new_now))>, 'new_now_local': <classmethod(gi.FunctionInfo(new_now_local))>, 'new_now_utc': <classmethod(gi.FunctionInfo(new_now_utc))>, 'new_utc': <classmethod(gi.FunctionInfo(new_utc))>, 'add': gi.FunctionInfo(add), 'add_days': gi.FunctionInfo(add_days), 'add_full': gi.FunctionInfo(add_full), 'add_hours': gi.FunctionInfo(add_hours), 'add_minutes': gi.FunctionInfo(add_minutes), 'add_months': gi.FunctionInfo(add_months), 'add_seconds': gi.FunctionInfo(add_seconds), 'add_weeks': gi.FunctionInfo(add_weeks), 'add_years': gi.FunctionInfo(add_years), 'compare': gi.FunctionInfo(compare), 'difference': gi.FunctionInfo(difference), 'equal': gi.FunctionInfo(equal), 'format': gi.FunctionInfo(format), 'format_iso8601': gi.FunctionInfo(format_iso8601), 'get_day_of_month': gi.FunctionInfo(get_day_of_month), 'get_day_of_week': gi.FunctionInfo(get_day_of_week), 'get_day_of_year': gi.FunctionInfo(get_day_of_year), 'get_hour': gi.FunctionInfo(get_hour), 'get_microsecond': gi.FunctionInfo(get_microsecond), 'get_minute': gi.FunctionInfo(get_minute), 'get_month': gi.FunctionInfo(get_month), 'get_second': gi.FunctionInfo(get_second), 'get_seconds': gi.FunctionInfo(get_seconds), 'get_timezone': gi.FunctionInfo(get_timezone), 'get_timezone_abbreviation': gi.FunctionInfo(get_timezone_abbreviation), 'get_utc_offset': gi.FunctionInfo(get_utc_offset), 'get_week_numbering_year': gi.FunctionInfo(get_week_numbering_year), 'get_week_of_year': gi.FunctionInfo(get_week_of_year), 'get_year': gi.FunctionInfo(get_year), 'get_ymd': gi.FunctionInfo(get_ymd), 'hash': gi.FunctionInfo(hash), 'is_daylight_savings': gi.FunctionInfo(is_daylight_savings), 'ref': gi.FunctionInfo(ref), 'to_local': gi.FunctionInfo(to_local), 'to_timeval': gi.FunctionInfo(to_timeval), 'to_timezone': gi.FunctionInfo(to_timezone), 'to_unix': gi.FunctionInfo(to_unix), 'to_unix_usec': gi.FunctionInfo(to_unix_usec), 'to_utc': gi.FunctionInfo(to_utc), 'unref': gi.FunctionInfo(unref), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GDateTime (2640518400)>'
     __info__ = StructInfo(DateTime)
 
 

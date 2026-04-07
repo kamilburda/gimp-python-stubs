@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class IntComboBoxClass(__gi.Struct):
@@ -161,7 +154,7 @@ class IntComboBoxClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IntComboBoxClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IntComboBoxClass' objects>, '__weakref__': <attribute '__weakref__' of 'IntComboBoxClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb74e6980>, '_gimp_reserved0': <property object at 0x000001eeb74e6a70>, '_gimp_reserved1': <property object at 0x000001eeb74e6b60>, '_gimp_reserved2': <property object at 0x000001eeb74e6c50>, '_gimp_reserved3': <property object at 0x000001eeb74e6d40>, '_gimp_reserved4': <property object at 0x000001eeb74e6e30>, '_gimp_reserved5': <property object at 0x000001eeb74e6f20>, '_gimp_reserved6': <property object at 0x000001eeb74e7010>, '_gimp_reserved7': <property object at 0x000001eeb74e7100>, '_gimp_reserved8': <property object at 0x000001eeb74e71f0>, '_gimp_reserved9': <property object at 0x000001eeb74e72e0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IntComboBoxClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IntComboBoxClass' objects>, '__weakref__': <attribute '__weakref__' of 'IntComboBoxClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1d1e160>, '_gimp_reserved0': <property object at 0x0000020ee1d1e250>, '_gimp_reserved1': <property object at 0x0000020ee1d1e340>, '_gimp_reserved2': <property object at 0x0000020ee1d1e430>, '_gimp_reserved3': <property object at 0x0000020ee1d1e520>, '_gimp_reserved4': <property object at 0x0000020ee1d1e610>, '_gimp_reserved5': <property object at 0x0000020ee1d1e700>, '_gimp_reserved6': <property object at 0x0000020ee1d1e7f0>, '_gimp_reserved7': <property object at 0x0000020ee1d1e8e0>, '_gimp_reserved8': <property object at 0x0000020ee1d1e9d0>, '_gimp_reserved9': <property object at 0x0000020ee1d1eac0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(IntComboBoxClass)
 

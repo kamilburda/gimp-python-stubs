@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Regex(__gi.Boxed):
@@ -95,7 +93,8 @@ class Regex(__gi.Boxed):
         """ match_simple(pattern:str, string:str, compile_options:GLib.RegexCompileFlags, match_options:GLib.RegexMatchFlags) -> bool """
         return False
 
-    def new(self, pattern, compile_options, match_options): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, pattern, compile_options, match_options): # real signature unknown; restored from __doc__
         """ new(pattern:str, compile_options:GLib.RegexCompileFlags, match_options:GLib.RegexMatchFlags) -> GLib.Regex or None """
         pass
 
@@ -243,8 +242,8 @@ class Regex(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Regex), '__module__': 'gi.repository.GLib', '__gtype__': <GType GRegex (163505888)>, '__dict__': <attribute '__dict__' of 'Regex' objects>, '__weakref__': <attribute '__weakref__' of 'Regex' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'get_capture_count': gi.FunctionInfo(get_capture_count, bound=None), 'get_compile_flags': gi.FunctionInfo(get_compile_flags, bound=None), 'get_has_cr_or_lf': gi.FunctionInfo(get_has_cr_or_lf, bound=None), 'get_match_flags': gi.FunctionInfo(get_match_flags, bound=None), 'get_max_backref': gi.FunctionInfo(get_max_backref, bound=None), 'get_max_lookbehind': gi.FunctionInfo(get_max_lookbehind, bound=None), 'get_pattern': gi.FunctionInfo(get_pattern, bound=None), 'get_string_number': gi.FunctionInfo(get_string_number, bound=None), 'match': gi.FunctionInfo(match, bound=None), 'match_all': gi.FunctionInfo(match_all, bound=None), 'match_all_full': gi.FunctionInfo(match_all_full, bound=None), 'match_full': gi.FunctionInfo(match_full, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'replace': gi.FunctionInfo(replace, bound=None), 'replace_eval': gi.FunctionInfo(replace_eval, bound=None), 'replace_literal': gi.FunctionInfo(replace_literal, bound=None), 'split': gi.FunctionInfo(split, bound=None), 'split_full': gi.FunctionInfo(split_full, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'check_replacement': gi.FunctionInfo(check_replacement, bound=None), 'error_quark': gi.FunctionInfo(error_quark, bound=None), 'escape_nul': gi.FunctionInfo(escape_nul, bound=None), 'escape_string': gi.FunctionInfo(escape_string, bound=None), 'match_simple': gi.FunctionInfo(match_simple, bound=None), 'split_simple': gi.FunctionInfo(split_simple, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GRegex (163505888)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Regex), '__module__': 'gi.repository.GLib', '__gtype__': <GType GRegex (2640521952)>, '__dict__': <attribute '__dict__' of 'Regex' objects>, '__weakref__': <attribute '__weakref__' of 'Regex' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_capture_count': gi.FunctionInfo(get_capture_count), 'get_compile_flags': gi.FunctionInfo(get_compile_flags), 'get_has_cr_or_lf': gi.FunctionInfo(get_has_cr_or_lf), 'get_match_flags': gi.FunctionInfo(get_match_flags), 'get_max_backref': gi.FunctionInfo(get_max_backref), 'get_max_lookbehind': gi.FunctionInfo(get_max_lookbehind), 'get_pattern': gi.FunctionInfo(get_pattern), 'get_string_number': gi.FunctionInfo(get_string_number), 'match': gi.FunctionInfo(match), 'match_all': gi.FunctionInfo(match_all), 'match_all_full': gi.FunctionInfo(match_all_full), 'match_full': gi.FunctionInfo(match_full), 'ref': gi.FunctionInfo(ref), 'replace': gi.FunctionInfo(replace), 'replace_eval': gi.FunctionInfo(replace_eval), 'replace_literal': gi.FunctionInfo(replace_literal), 'split': gi.FunctionInfo(split), 'split_full': gi.FunctionInfo(split_full), 'unref': gi.FunctionInfo(unref), 'check_replacement': <staticmethod(gi.FunctionInfo(check_replacement))>, 'error_quark': <staticmethod(gi.FunctionInfo(error_quark))>, 'escape_nul': <staticmethod(gi.FunctionInfo(escape_nul))>, 'escape_string': <staticmethod(gi.FunctionInfo(escape_string))>, 'match_simple': <staticmethod(gi.FunctionInfo(match_simple))>, 'split_simple': <staticmethod(gi.FunctionInfo(split_simple))>, '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GRegex (2640521952)>'
     __info__ = StructInfo(Regex)
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -57,7 +56,8 @@ class TargetList(__gi.Boxed):
         """ find(self, target:Gdk.Atom) -> bool, info:int """
         return False
 
-    def new(self, targets=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, targets=None): # real signature unknown; restored from __doc__
         """ new(targets:list=None) -> Gtk.TargetList """
         pass
 
@@ -185,8 +185,8 @@ class TargetList(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TargetList), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkTargetList (3923963456)>, '__dict__': <attribute '__dict__' of 'TargetList' objects>, '__weakref__': <attribute '__weakref__' of 'TargetList' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'add': gi.FunctionInfo(add, bound=None), 'add_image_targets': gi.FunctionInfo(add_image_targets, bound=None), 'add_rich_text_targets': gi.FunctionInfo(add_rich_text_targets, bound=None), 'add_table': gi.FunctionInfo(add_table, bound=None), 'add_text_targets': gi.FunctionInfo(add_text_targets, bound=None), 'add_uri_targets': gi.FunctionInfo(add_uri_targets, bound=None), 'find': gi.FunctionInfo(find, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002ece8827880>})"
-    __gtype__ = None # (!) real value is '<GType GtkTargetList (3923963456)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TargetList), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkTargetList (3414244848)>, '__dict__': <attribute '__dict__' of 'TargetList' objects>, '__weakref__': <attribute '__weakref__' of 'TargetList' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'add': gi.FunctionInfo(add), 'add_image_targets': gi.FunctionInfo(add_image_targets), 'add_rich_text_targets': gi.FunctionInfo(add_rich_text_targets), 'add_table': gi.FunctionInfo(add_table), 'add_text_targets': gi.FunctionInfo(add_text_targets), 'add_uri_targets': gi.FunctionInfo(add_uri_targets), 'find': gi.FunctionInfo(find), 'ref': gi.FunctionInfo(ref), 'remove': gi.FunctionInfo(remove), 'unref': gi.FunctionInfo(unref), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000002bfce305010>})"
+    __gtype__ = None # (!) real value is '<GType GtkTargetList (3414244848)>'
     __info__ = StructInfo(TargetList)
 
 

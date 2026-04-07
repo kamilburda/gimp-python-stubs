@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class MemChunk(__gi.Struct):
@@ -158,7 +156,7 @@ class MemChunk(__gi.Struct):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MemChunk), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MemChunk' objects>, '__weakref__': <attribute '__weakref__' of 'MemChunk' objects>, '__doc__': None, 'alloc': gi.FunctionInfo(alloc, bound=None), 'alloc0': gi.FunctionInfo(alloc0, bound=None), 'clean': gi.FunctionInfo(clean, bound=None), 'destroy': gi.FunctionInfo(destroy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'print_': gi.FunctionInfo(print, bound=None), 'reset': gi.FunctionInfo(reset, bound=None), 'info': gi.FunctionInfo(info, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MemChunk), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MemChunk' objects>, '__weakref__': <attribute '__weakref__' of 'MemChunk' objects>, '__doc__': None, 'alloc': gi.FunctionInfo(alloc), 'alloc0': gi.FunctionInfo(alloc0), 'clean': gi.FunctionInfo(clean), 'destroy': gi.FunctionInfo(destroy), 'free': gi.FunctionInfo(free), 'print_': gi.FunctionInfo(print), 'reset': gi.FunctionInfo(reset), 'info': <staticmethod(gi.FunctionInfo(info))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(MemChunk)
 

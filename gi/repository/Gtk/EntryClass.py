@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -175,7 +174,7 @@ class EntryClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EntryClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EntryClass' objects>, '__weakref__': <attribute '__weakref__' of 'EntryClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceabbc400>, 'populate_popup': <property object at 0x000002eceabbc4f0>, 'activate': <property object at 0x000002eceabbc5e0>, 'move_cursor': <property object at 0x000002eceabbc6d0>, 'insert_at_cursor': <property object at 0x000002eceabbc7c0>, 'delete_from_cursor': <property object at 0x000002eceabbc8b0>, 'backspace': <property object at 0x000002eceabbc9a0>, 'cut_clipboard': <property object at 0x000002eceabbca90>, 'copy_clipboard': <property object at 0x000002eceabbcb80>, 'paste_clipboard': <property object at 0x000002eceabbcc70>, 'toggle_overwrite': <property object at 0x000002eceabbcd60>, 'get_text_area_size': <property object at 0x000002eceabbce50>, 'get_frame_size': <property object at 0x000002eceabbcf40>, 'insert_emoji': <property object at 0x000002eceabbd030>, 'toggle_direction': <property object at 0x000002eceabbd120>, '_gtk_reserved1': <property object at 0x000002eceabbd210>, '_gtk_reserved2': <property object at 0x000002eceabbd300>, '_gtk_reserved3': <property object at 0x000002eceabbd3f0>, '_gtk_reserved4': <property object at 0x000002eceabbd4e0>, '_gtk_reserved5': <property object at 0x000002eceabbd5d0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EntryClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EntryClass' objects>, '__weakref__': <attribute '__weakref__' of 'EntryClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd1773650>, 'populate_popup': <property object at 0x000002bfd1773740>, 'activate': <property object at 0x000002bfd1773830>, 'move_cursor': <property object at 0x000002bfd1773920>, 'insert_at_cursor': <property object at 0x000002bfd1773a10>, 'delete_from_cursor': <property object at 0x000002bfd1773b00>, 'backspace': <property object at 0x000002bfd1773bf0>, 'cut_clipboard': <property object at 0x000002bfd1773ce0>, 'copy_clipboard': <property object at 0x000002bfd1773dd0>, 'paste_clipboard': <property object at 0x000002bfd1773ec0>, 'toggle_overwrite': <property object at 0x000002bfd1773fb0>, 'get_text_area_size': <property object at 0x000002bfd175c0e0>, 'get_frame_size': <property object at 0x000002bfd175c1d0>, 'insert_emoji': <property object at 0x000002bfd175c2c0>, 'toggle_direction': <property object at 0x000002bfd175c3b0>, '_gtk_reserved1': <property object at 0x000002bfd175c4a0>, '_gtk_reserved2': <property object at 0x000002bfd175c590>, '_gtk_reserved3': <property object at 0x000002bfd175c680>, '_gtk_reserved4': <property object at 0x000002bfd175c770>, '_gtk_reserved5': <property object at 0x000002bfd175c860>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(EntryClass)
 

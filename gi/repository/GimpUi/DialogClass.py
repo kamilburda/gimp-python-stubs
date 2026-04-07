@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class DialogClass(__gi.Struct):
@@ -161,7 +154,7 @@ class DialogClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DialogClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DialogClass' objects>, '__weakref__': <attribute '__weakref__' of 'DialogClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb74da390>, '_gimp_reserved0': <property object at 0x000001eeb74da480>, '_gimp_reserved1': <property object at 0x000001eeb74da570>, '_gimp_reserved2': <property object at 0x000001eeb74da660>, '_gimp_reserved3': <property object at 0x000001eeb74da750>, '_gimp_reserved4': <property object at 0x000001eeb74da840>, '_gimp_reserved5': <property object at 0x000001eeb74da930>, '_gimp_reserved6': <property object at 0x000001eeb74daa20>, '_gimp_reserved7': <property object at 0x000001eeb74dab10>, '_gimp_reserved8': <property object at 0x000001eeb74dac00>, '_gimp_reserved9': <property object at 0x000001eeb74dacf0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DialogClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DialogClass' objects>, '__weakref__': <attribute '__weakref__' of 'DialogClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1d258a0>, '_gimp_reserved0': <property object at 0x0000020ee1d25990>, '_gimp_reserved1': <property object at 0x0000020ee1d25a80>, '_gimp_reserved2': <property object at 0x0000020ee1d25b70>, '_gimp_reserved3': <property object at 0x0000020ee1d25c60>, '_gimp_reserved4': <property object at 0x0000020ee1d25d50>, '_gimp_reserved5': <property object at 0x0000020ee1d25e40>, '_gimp_reserved6': <property object at 0x0000020ee1d25f30>, '_gimp_reserved7': <property object at 0x0000020ee1d26020>, '_gimp_reserved8': <property object at 0x0000020ee1d26110>, '_gimp_reserved9': <property object at 0x0000020ee1d26200>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(DialogClass)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -140,10 +139,10 @@ class DevicePad(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(DevicePad), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkDevicePad (2579722688)>, '__dict__': <attribute '__dict__' of 'DevicePad' objects>, '__weakref__': <attribute '__weakref__' of 'DevicePad' objects>, '__doc__': None, '__gsignals__': {}, 'get_feature_group': gi.FunctionInfo(get_feature_group, bound=None), 'get_group_n_modes': gi.FunctionInfo(get_group_n_modes, bound=None), 'get_n_features': gi.FunctionInfo(get_n_features, bound=None), 'get_n_groups': gi.FunctionInfo(get_n_groups, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(DevicePad), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkDevicePad (587609280)>, '__dict__': <attribute '__dict__' of 'DevicePad' objects>, '__weakref__': <attribute '__weakref__' of 'DevicePad' objects>, '__doc__': None, '__gsignals__': {}, 'get_feature_group': gi.FunctionInfo(get_feature_group), 'get_group_n_modes': gi.FunctionInfo(get_group_n_modes), 'get_n_features': gi.FunctionInfo(get_n_features), 'get_n_groups': gi.FunctionInfo(get_n_groups)})"
     __gdoc__ = 'Interface GdkDevicePad\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkDevicePad (2579722688)>'
+    __gtype__ = None # (!) real value is '<GType GdkDevicePad (587609280)>'
     __info__ = InterfaceInfo(DevicePad)
 
 

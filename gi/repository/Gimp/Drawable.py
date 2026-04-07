@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -70,20 +66,20 @@ class Drawable(Item):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -118,6 +114,12 @@ class Drawable(Item):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def edit_bucket_fill(self, fill_type, x, y): # real signature unknown; restored from __doc__
@@ -179,17 +181,17 @@ class Drawable(Item):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -334,20 +336,20 @@ class Drawable(Item):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -401,6 +403,10 @@ class Drawable(Item):
         """ id_is_layer_mask(item_id:int) -> bool """
         return False
 
+    def id_is_link_layer(self, item_id): # real signature unknown; restored from __doc__
+        """ id_is_link_layer(item_id:int) -> bool """
+        return False
+
     def id_is_path(self, item_id): # real signature unknown; restored from __doc__
         """ id_is_path(item_id:int) -> bool """
         return False
@@ -415,6 +421,10 @@ class Drawable(Item):
 
     def id_is_valid(self, item_id): # real signature unknown; restored from __doc__
         """ id_is_valid(item_id:int) -> bool """
+        return False
+
+    def id_is_vector_layer(self, item_id): # real signature unknown; restored from __doc__
+        """ id_is_vector_layer(item_id:int) -> bool """
         return False
 
     def install_properties(self, pspecs): # real signature unknown; restored from __doc__
@@ -477,6 +487,10 @@ class Drawable(Item):
         """ is_layer_mask(self) -> bool """
         return False
 
+    def is_link_layer(self): # real signature unknown; restored from __doc__
+        """ is_link_layer(self) -> bool """
+        return False
+
     def is_path(self): # real signature unknown; restored from __doc__
         """ is_path(self) -> bool """
         return False
@@ -495,6 +509,10 @@ class Drawable(Item):
 
     def is_valid(self): # real signature unknown; restored from __doc__
         """ is_valid(self) -> bool """
+        return False
+
+    def is_vector_layer(self): # real signature unknown; restored from __doc__
+        """ is_vector_layer(self) -> bool """
         return False
 
     def levels(self, channel, low_input, high_input, clamp_input, gamma, low_output, high_output, clamp_output): # real signature unknown; restored from __doc__
@@ -710,20 +728,20 @@ class Drawable(Item):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -857,12 +875,14 @@ class Drawable(Item):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001dcd6734280>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001268f2ef280>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Drawable), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpDrawable (3599984448)>, '__doc__': None, '__gsignals__': {}, 'get_by_id': gi.FunctionInfo(get_by_id, bound=None), 'append_filter': gi.FunctionInfo(append_filter, bound=None), 'brightness_contrast': gi.FunctionInfo(brightness_contrast, bound=None), 'color_balance': gi.FunctionInfo(color_balance, bound=None), 'colorize_hsl': gi.FunctionInfo(colorize_hsl, bound=None), 'curves_explicit': gi.FunctionInfo(curves_explicit, bound=None), 'curves_spline': gi.FunctionInfo(curves_spline, bound=None), 'desaturate': gi.FunctionInfo(desaturate, bound=None), 'edit_bucket_fill': gi.FunctionInfo(edit_bucket_fill, bound=None), 'edit_clear': gi.FunctionInfo(edit_clear, bound=None), 'edit_fill': gi.FunctionInfo(edit_fill, bound=None), 'edit_gradient_fill': gi.FunctionInfo(edit_gradient_fill, bound=None), 'edit_stroke_item': gi.FunctionInfo(edit_stroke_item, bound=None), 'edit_stroke_selection': gi.FunctionInfo(edit_stroke_selection, bound=None), 'equalize': gi.FunctionInfo(equalize, bound=None), 'extract_component': gi.FunctionInfo(extract_component, bound=None), 'fill': gi.FunctionInfo(fill, bound=None), 'foreground_extract': gi.FunctionInfo(foreground_extract, bound=None), 'free_shadow': gi.FunctionInfo(free_shadow, bound=None), 'get_bpp': gi.FunctionInfo(get_bpp, bound=None), 'get_buffer': gi.FunctionInfo(get_buffer, bound=None), 'get_filters': gi.FunctionInfo(get_filters, bound=None), 'get_format': gi.FunctionInfo(get_format, bound=None), 'get_height': gi.FunctionInfo(get_height, bound=None), 'get_offsets': gi.FunctionInfo(get_offsets, bound=None), 'get_pixel': gi.FunctionInfo(get_pixel, bound=None), 'get_shadow_buffer': gi.FunctionInfo(get_shadow_buffer, bound=None), 'get_sub_thumbnail': gi.FunctionInfo(get_sub_thumbnail, bound=None), 'get_sub_thumbnail_data': gi.FunctionInfo(get_sub_thumbnail_data, bound=None), 'get_thumbnail': gi.FunctionInfo(get_thumbnail, bound=None), 'get_thumbnail_data': gi.FunctionInfo(get_thumbnail_data, bound=None), 'get_thumbnail_format': gi.FunctionInfo(get_thumbnail_format, bound=None), 'get_width': gi.FunctionInfo(get_width, bound=None), 'has_alpha': gi.FunctionInfo(has_alpha, bound=None), 'histogram': gi.FunctionInfo(histogram, bound=None), 'hue_saturation': gi.FunctionInfo(hue_saturation, bound=None), 'invert': gi.FunctionInfo(invert, bound=None), 'is_gray': gi.FunctionInfo(is_gray, bound=None), 'is_indexed': gi.FunctionInfo(is_indexed, bound=None), 'is_rgb': gi.FunctionInfo(is_rgb, bound=None), 'levels': gi.FunctionInfo(levels, bound=None), 'levels_stretch': gi.FunctionInfo(levels_stretch, bound=None), 'mask_bounds': gi.FunctionInfo(mask_bounds, bound=None), 'mask_intersect': gi.FunctionInfo(mask_intersect, bound=None), 'merge_filter': gi.FunctionInfo(merge_filter, bound=None), 'merge_filters': gi.FunctionInfo(merge_filters, bound=None), 'merge_shadow': gi.FunctionInfo(merge_shadow, bound=None), 'offset': gi.FunctionInfo(offset, bound=None), 'posterize': gi.FunctionInfo(posterize, bound=None), 'set_pixel': gi.FunctionInfo(set_pixel, bound=None), 'shadows_highlights': gi.FunctionInfo(shadows_highlights, bound=None), 'threshold': gi.FunctionInfo(threshold, bound=None), 'type': gi.FunctionInfo(type, bound=None), 'type_with_alpha': gi.FunctionInfo(type_with_alpha, bound=None), 'update': gi.FunctionInfo(update, bound=None), 'parent_instance': <property object at 0x000001dcd90ac2c0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Drawable), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpDrawable (2362342224)>, '__doc__': None, '__gsignals__': {}, 'get_by_id': <staticmethod(gi.FunctionInfo(get_by_id))>, 'append_filter': gi.FunctionInfo(append_filter), 'brightness_contrast': gi.FunctionInfo(brightness_contrast), 'color_balance': gi.FunctionInfo(color_balance), 'colorize_hsl': gi.FunctionInfo(colorize_hsl), 'curves_explicit': gi.FunctionInfo(curves_explicit), 'curves_spline': gi.FunctionInfo(curves_spline), 'desaturate': gi.FunctionInfo(desaturate), 'edit_bucket_fill': gi.FunctionInfo(edit_bucket_fill), 'edit_clear': gi.FunctionInfo(edit_clear), 'edit_fill': gi.FunctionInfo(edit_fill), 'edit_gradient_fill': gi.FunctionInfo(edit_gradient_fill), 'edit_stroke_item': gi.FunctionInfo(edit_stroke_item), 'edit_stroke_selection': gi.FunctionInfo(edit_stroke_selection), 'equalize': gi.FunctionInfo(equalize), 'extract_component': gi.FunctionInfo(extract_component), 'fill': gi.FunctionInfo(fill), 'foreground_extract': gi.FunctionInfo(foreground_extract), 'free_shadow': gi.FunctionInfo(free_shadow), 'get_bpp': gi.FunctionInfo(get_bpp), 'get_buffer': gi.FunctionInfo(get_buffer), 'get_filters': gi.FunctionInfo(get_filters), 'get_format': gi.FunctionInfo(get_format), 'get_height': gi.FunctionInfo(get_height), 'get_offsets': gi.FunctionInfo(get_offsets), 'get_pixel': gi.FunctionInfo(get_pixel), 'get_shadow_buffer': gi.FunctionInfo(get_shadow_buffer), 'get_sub_thumbnail': gi.FunctionInfo(get_sub_thumbnail), 'get_sub_thumbnail_data': gi.FunctionInfo(get_sub_thumbnail_data), 'get_thumbnail': gi.FunctionInfo(get_thumbnail), 'get_thumbnail_data': gi.FunctionInfo(get_thumbnail_data), 'get_thumbnail_format': gi.FunctionInfo(get_thumbnail_format), 'get_width': gi.FunctionInfo(get_width), 'has_alpha': gi.FunctionInfo(has_alpha), 'histogram': gi.FunctionInfo(histogram), 'hue_saturation': gi.FunctionInfo(hue_saturation), 'invert': gi.FunctionInfo(invert), 'is_gray': gi.FunctionInfo(is_gray), 'is_indexed': gi.FunctionInfo(is_indexed), 'is_rgb': gi.FunctionInfo(is_rgb), 'levels': gi.FunctionInfo(levels), 'levels_stretch': gi.FunctionInfo(levels_stretch), 'mask_bounds': gi.FunctionInfo(mask_bounds), 'mask_intersect': gi.FunctionInfo(mask_intersect), 'merge_filter': gi.FunctionInfo(merge_filter), 'merge_filters': gi.FunctionInfo(merge_filters), 'merge_shadow': gi.FunctionInfo(merge_shadow), 'offset': gi.FunctionInfo(offset), 'posterize': gi.FunctionInfo(posterize), 'set_pixel': gi.FunctionInfo(set_pixel), 'shadows_highlights': gi.FunctionInfo(shadows_highlights), 'threshold': gi.FunctionInfo(threshold), 'type': gi.FunctionInfo(type), 'type_with_alpha': gi.FunctionInfo(type_with_alpha), 'update': gi.FunctionInfo(update), 'parent_instance': <property object at 0x000001268f32e660>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GimpDrawable\n\nProperties from GimpItem:\n  id -> gint: The item id\n    The item id for internal use\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpDrawable (3599984448)>'
+    __gtype__ = None # (!) real value is '<GType GimpDrawable (2362342224)>'
     __info__ = ObjectInfo(Drawable)
+    __static_attributes__ = ()
 
 

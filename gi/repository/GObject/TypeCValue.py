@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -53,7 +52,11 @@ class TypeCValue(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -155,7 +158,7 @@ class TypeCValue(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': gi.UnionInfo(TypeCValue), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeCValue' objects>, '__weakref__': <attribute '__weakref__' of 'TypeCValue' objects>, '__doc__': None, 'v_int': <property object at 0x0000010b07a22ac0>, 'v_long': <property object at 0x0000010b07a22bb0>, 'v_int64': <property object at 0x0000010b07a22ca0>, 'v_double': <property object at 0x0000010b07a22d90>, 'v_pointer': <property object at 0x0000010b07a22e80>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': gi.UnionInfo(TypeCValue), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeCValue' objects>, '__weakref__': <attribute '__weakref__' of 'TypeCValue' objects>, '__doc__': None, 'v_int': <property object at 0x000001dd11e49a30>, 'v_long': <property object at 0x000001dd11e49b20>, 'v_int64': <property object at 0x000001dd11e49c10>, 'v_double': <property object at 0x000001dd11e49d00>, 'v_pointer': <property object at 0x000001dd11e49df0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = gi.UnionInfo(TypeCValue)
 

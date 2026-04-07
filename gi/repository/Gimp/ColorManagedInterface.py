@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,7 +153,7 @@ class ColorManagedInterface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ColorManagedInterface), '__module__': 'gi.repository.Gimp', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ColorManagedInterface' objects>, '__weakref__': <attribute '__weakref__' of 'ColorManagedInterface' objects>, '__doc__': None, 'base_iface': <property object at 0x000001dcd90ad6c0>, 'get_icc_profile': <property object at 0x000001dcd90ad7b0>, 'profile_changed': <property object at 0x000001dcd90ad8a0>, 'simulation_profile_changed': <property object at 0x000001dcd90ad9e0>, 'simulation_intent_changed': <property object at 0x000001dcd90adad0>, 'simulation_bpc_changed': <property object at 0x000001dcd90adb70>, 'get_color_profile': <property object at 0x000001dcd90adc60>, 'get_simulation_profile': <property object at 0x000001dcd90add50>, 'get_simulation_intent': <property object at 0x000001dcd90ade40>, 'get_simulation_bpc': <property object at 0x000001dcd90adf30>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ColorManagedInterface), '__module__': 'gi.repository.Gimp', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ColorManagedInterface' objects>, '__weakref__': <attribute '__weakref__' of 'ColorManagedInterface' objects>, '__doc__': None, 'base_iface': <property object at 0x000001268f32fab0>, 'get_icc_profile': <property object at 0x000001268f32fba0>, 'profile_changed': <property object at 0x000001268f32fc90>, 'simulation_profile_changed': <property object at 0x000001268f32fdd0>, 'simulation_intent_changed': <property object at 0x000001268f32fec0>, 'simulation_bpc_changed': <property object at 0x000001268f32ff60>, 'get_color_profile': <property object at 0x000001268f314090>, 'get_simulation_profile': <property object at 0x000001268f314180>, 'get_simulation_intent': <property object at 0x000001268f314270>, 'get_simulation_bpc': <property object at 0x000001268f314360>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ColorManagedInterface)
 

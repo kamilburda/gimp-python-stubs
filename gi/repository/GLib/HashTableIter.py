@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class HashTableIter(__gi.Struct):
@@ -169,7 +167,7 @@ class HashTableIter(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HashTableIter), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'HashTableIter' objects>, '__weakref__': <attribute '__weakref__' of 'HashTableIter' objects>, '__doc__': None, 'dummy1': <property object at 0x000002830bf149f0>, 'dummy2': <property object at 0x000002830bf14ae0>, 'dummy3': <property object at 0x000002830bf14bd0>, 'dummy4': <property object at 0x000002830bf14cc0>, 'dummy5': <property object at 0x000002830bf14db0>, 'dummy6': <property object at 0x000002830bf14ea0>, 'get_hash_table': gi.FunctionInfo(get_hash_table, bound=None), 'init': gi.FunctionInfo(init, bound=None), 'next': gi.FunctionInfo(next, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'replace': gi.FunctionInfo(replace, bound=None), 'steal': gi.FunctionInfo(steal, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HashTableIter), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'HashTableIter' objects>, '__weakref__': <attribute '__weakref__' of 'HashTableIter' objects>, '__doc__': None, 'dummy1': <property object at 0x0000018e9ff89440>, 'dummy2': <property object at 0x0000018e9ff89530>, 'dummy3': <property object at 0x0000018e9ff89c10>, 'dummy4': <property object at 0x0000018e9ff89d00>, 'dummy5': <property object at 0x0000018e9ff89df0>, 'dummy6': <property object at 0x0000018e9ff89ee0>, 'get_hash_table': gi.FunctionInfo(get_hash_table), 'init': gi.FunctionInfo(init), 'next': gi.FunctionInfo(next), 'remove': gi.FunctionInfo(remove), 'replace': gi.FunctionInfo(replace), 'steal': gi.FunctionInfo(steal)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(HashTableIter)
 

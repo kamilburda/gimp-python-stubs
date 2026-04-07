@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class String(__gi.Boxed):
@@ -60,7 +58,8 @@ class String(__gi.Boxed):
         """ assign(self, rval:str) -> GLib.String """
         pass
 
-    def copy(self, *args, **kwargs): # real signature unknown
+    def copy(self): # real signature unknown; restored from __doc__
+        """ copy(self) -> GLib.String """
         pass
 
     def down(self): # real signature unknown; restored from __doc__
@@ -107,15 +106,18 @@ class String(__gi.Boxed):
         """ insert_unichar(self, pos:int, wc:str) -> GLib.String """
         pass
 
-    def new(self, init=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, init=None): # real signature unknown; restored from __doc__
         """ new(init:str=None) -> GLib.String """
         pass
 
-    def new_len(self, init, len): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_len(cls, init, len): # real signature unknown; restored from __doc__
         """ new_len(init:str, len:int) -> GLib.String """
         pass
 
-    def new_take(self, init=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_take(cls, init=None): # real signature unknown; restored from __doc__
         """ new_take(init:str=None) -> GLib.String """
         pass
 
@@ -151,7 +153,8 @@ class String(__gi.Boxed):
         """ set_size(self, len:int) -> GLib.String """
         pass
 
-    def sized_new(self, dfl_size): # real signature unknown; restored from __doc__
+    @classmethod
+    def sized_new(cls, dfl_size): # real signature unknown; restored from __doc__
         """ sized_new(dfl_size:int) -> GLib.String """
         pass
 
@@ -281,8 +284,8 @@ class String(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(String), '__module__': 'gi.repository.GLib', '__gtype__': <GType GString (154890112)>, '__dict__': <attribute '__dict__' of 'String' objects>, '__weakref__': <attribute '__weakref__' of 'String' objects>, '__doc__': None, 'str': <property object at 0x000002830bec1f80>, 'len': <property object at 0x000002830bec2070>, 'allocated_len': <property object at 0x000002830bec2160>, 'new': gi.FunctionInfo(new, bound=None), 'new_len': gi.FunctionInfo(new_len, bound=None), 'new_take': gi.FunctionInfo(new_take, bound=None), 'sized_new': gi.FunctionInfo(sized_new, bound=None), 'append': gi.FunctionInfo(append, bound=None), 'append_c': gi.FunctionInfo(append_c, bound=None), 'append_len': gi.FunctionInfo(append_len, bound=None), 'append_unichar': gi.FunctionInfo(append_unichar, bound=None), 'append_uri_escaped': gi.FunctionInfo(append_uri_escaped, bound=None), 'ascii_down': gi.FunctionInfo(ascii_down, bound=None), 'ascii_up': gi.FunctionInfo(ascii_up, bound=None), 'assign': gi.FunctionInfo(assign, bound=None), 'down': gi.FunctionInfo(down, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'erase': gi.FunctionInfo(erase, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'free_and_steal': gi.FunctionInfo(free_and_steal, bound=None), 'free_to_bytes': gi.FunctionInfo(free_to_bytes, bound=None), 'hash': gi.FunctionInfo(hash, bound=None), 'insert': gi.FunctionInfo(insert, bound=None), 'insert_c': gi.FunctionInfo(insert_c, bound=None), 'insert_len': gi.FunctionInfo(insert_len, bound=None), 'insert_unichar': gi.FunctionInfo(insert_unichar, bound=None), 'overwrite': gi.FunctionInfo(overwrite, bound=None), 'overwrite_len': gi.FunctionInfo(overwrite_len, bound=None), 'prepend': gi.FunctionInfo(prepend, bound=None), 'prepend_c': gi.FunctionInfo(prepend_c, bound=None), 'prepend_len': gi.FunctionInfo(prepend_len, bound=None), 'prepend_unichar': gi.FunctionInfo(prepend_unichar, bound=None), 'replace': gi.FunctionInfo(replace, bound=None), 'set_size': gi.FunctionInfo(set_size, bound=None), 'truncate': gi.FunctionInfo(truncate, bound=None), 'up': gi.FunctionInfo(up, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GString (154890112)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(String), '__module__': 'gi.repository.GLib', '__gtype__': <GType GString (2636579408)>, '__dict__': <attribute '__dict__' of 'String' objects>, '__weakref__': <attribute '__weakref__' of 'String' objects>, '__doc__': None, 'str': <property object at 0x0000018ea0067ba0>, 'len': <property object at 0x0000018ea0067ab0>, 'allocated_len': <property object at 0x0000018ea00679c0>, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_len': <classmethod(gi.FunctionInfo(new_len))>, 'new_take': <classmethod(gi.FunctionInfo(new_take))>, 'sized_new': <classmethod(gi.FunctionInfo(sized_new))>, 'append': gi.FunctionInfo(append), 'append_c': gi.FunctionInfo(append_c), 'append_len': gi.FunctionInfo(append_len), 'append_unichar': gi.FunctionInfo(append_unichar), 'append_uri_escaped': gi.FunctionInfo(append_uri_escaped), 'ascii_down': gi.FunctionInfo(ascii_down), 'ascii_up': gi.FunctionInfo(ascii_up), 'assign': gi.FunctionInfo(assign), 'copy': gi.FunctionInfo(copy), 'down': gi.FunctionInfo(down), 'equal': gi.FunctionInfo(equal), 'erase': gi.FunctionInfo(erase), 'free': gi.FunctionInfo(free), 'free_and_steal': gi.FunctionInfo(free_and_steal), 'free_to_bytes': gi.FunctionInfo(free_to_bytes), 'hash': gi.FunctionInfo(hash), 'insert': gi.FunctionInfo(insert), 'insert_c': gi.FunctionInfo(insert_c), 'insert_len': gi.FunctionInfo(insert_len), 'insert_unichar': gi.FunctionInfo(insert_unichar), 'overwrite': gi.FunctionInfo(overwrite), 'overwrite_len': gi.FunctionInfo(overwrite_len), 'prepend': gi.FunctionInfo(prepend), 'prepend_c': gi.FunctionInfo(prepend_c), 'prepend_len': gi.FunctionInfo(prepend_len), 'prepend_unichar': gi.FunctionInfo(prepend_unichar), 'replace': gi.FunctionInfo(replace), 'set_size': gi.FunctionInfo(set_size), 'truncate': gi.FunctionInfo(truncate), 'up': gi.FunctionInfo(up)})"
+    __gtype__ = None # (!) real value is '<GType GString (2636579408)>'
     __info__ = StructInfo(String)
 
 

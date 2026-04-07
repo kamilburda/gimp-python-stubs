@@ -1,21 +1,13 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
 class ot_var_axis_t(__gi.Struct):
@@ -145,7 +137,7 @@ class ot_var_axis_t(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ot_var_axis_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ot_var_axis_t' objects>, '__weakref__': <attribute '__weakref__' of 'ot_var_axis_t' objects>, '__doc__': None, 'tag': <property object at 0x000001d9a15c85e0>, 'name_id': <property object at 0x000001d9a15c86d0>, 'min_value': <property object at 0x000001d9a15c87c0>, 'default_value': <property object at 0x000001d9a15c88b0>, 'max_value': <property object at 0x000001d9a15c89a0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ot_var_axis_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ot_var_axis_t' objects>, '__weakref__': <attribute '__weakref__' of 'ot_var_axis_t' objects>, '__doc__': None, 'tag': <property object at 0x00000208a5099e90>, 'name_id': <property object at 0x00000208a5099f80>, 'min_value': <property object at 0x00000208a509a070>, 'default_value': <property object at 0x00000208a509a160>, 'max_value': <property object at 0x00000208a509a250>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ot_var_axis_t)
 

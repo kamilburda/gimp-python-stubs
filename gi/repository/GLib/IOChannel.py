@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 from .IOChannel import IOChannel
@@ -92,7 +90,7 @@ class IOChannel(IOChannel):
         pass
 
     def read(self, max_count=-1): # reliably restored by inspect
-        # no doc
+        """ Reads data from a :obj:`~gi.repository.GLib.IOChannel`. """
         pass
 
     def readline(self, size_hint=-1): # reliably restored by inspect
@@ -103,8 +101,8 @@ class IOChannel(IOChannel):
         # no doc
         pass
 
-    def read_chars(self): # real signature unknown; restored from __doc__
-        """ read_chars(self) -> GLib.IOStatus, buf:list, bytes_read:int """
+    def read_chars(self, max_count=-1): # reliably restored by inspect
+        """ Alias for GLib.IOChannel.read(). """
         pass
 
     def read_line(self): # real signature unknown; restored from __doc__
@@ -389,8 +387,10 @@ class IOChannel(IOChannel):
         2: 2,
     }
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__new__': <staticmethod(<function IOChannel.__new__ at 0x000002830be227a0>)>, '__init__': <function IOChannel.__init__ at 0x000002830be22840>, 'read': <function IOChannel.read at 0x000002830be228e0>, 'readline': <function IOChannel.readline at 0x000002830be22980>, 'readlines': <function IOChannel.readlines at 0x000002830be22a20>, 'write': <function IOChannel.write at 0x000002830be22ac0>, 'writelines': <function IOChannel.writelines at 0x000002830be22b60>, '_whence_map': {0: <enum G_SEEK_SET of type GLib.SeekType>, 1: <enum G_SEEK_CUR of type GLib.SeekType>, 2: <enum G_SEEK_END of type GLib.SeekType>}, 'seek': <function IOChannel.seek at 0x000002830be22d40>, 'add_watch': <function IOChannel.add_watch at 0x000002830be22e80>, '__iter__': <function IOChannel.__iter__ at 0x000002830be22f20>, '__next__': <function IOChannel.__next__ at 0x000002830be22fc0>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType GIOChannel (155712016)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__firstlineno__': 834, '__new__': <staticmethod(<function IOChannel.__new__ at 0x0000018e9feeaa30>)>, '__init__': <function IOChannel.__init__ at 0x0000018e9feeaae0>, 'read': <function IOChannel.read at 0x0000018e9feeac40>, 'read_chars': <function IOChannel.read_chars at 0x0000018e9feeada0>, 'readline': <function IOChannel.readline at 0x0000018e9feeaf00>, 'readlines': <function IOChannel.readlines at 0x0000018e9feeb060>, 'write': <function IOChannel.write at 0x0000018e9feeb1c0>, 'writelines': <function IOChannel.writelines at 0x0000018e9feeb320>, '_whence_map': {0: <SeekType.SET: 1>, 1: <SeekType.CUR: 0>, 2: <SeekType.END: 2>}, 'seek': <function IOChannel.seek at 0x0000018e9feeb480>, 'add_watch': <function IOChannel.add_watch at 0x0000018e9feeb690>, '__iter__': <function IOChannel.__iter__ at 0x0000018e9feeb740>, '__next__': <function IOChannel.__next__ at 0x0000018e9feeb8a0>, '__static_attributes__': (), '__doc__': None})"
+    __firstlineno__ = 834
+    __gtype__ = None # (!) real value is '<GType GIOChannel (2640112096)>'
     __info__ = StructInfo(IOChannel)
+    __static_attributes__ = ()
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -153,7 +152,7 @@ class Geometry(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Geometry), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Geometry' objects>, '__weakref__': <attribute '__weakref__' of 'Geometry' objects>, '__doc__': None, 'min_width': <property object at 0x000002459c469260>, 'min_height': <property object at 0x000002459c469350>, 'max_width': <property object at 0x000002459c469440>, 'max_height': <property object at 0x000002459c469530>, 'base_width': <property object at 0x000002459c469620>, 'base_height': <property object at 0x000002459c469710>, 'width_inc': <property object at 0x000002459c469800>, 'height_inc': <property object at 0x000002459c4698f0>, 'min_aspect': <property object at 0x000002459c4699e0>, 'max_aspect': <property object at 0x000002459c469ad0>, 'win_gravity': <property object at 0x000002459c469bc0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Geometry), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Geometry' objects>, '__weakref__': <attribute '__weakref__' of 'Geometry' objects>, '__doc__': None, 'min_width': <property object at 0x000001872580e6b0>, 'min_height': <property object at 0x000001872580e7a0>, 'max_width': <property object at 0x000001872580e890>, 'max_height': <property object at 0x000001872580e980>, 'base_width': <property object at 0x000001872580ea70>, 'base_height': <property object at 0x000001872580eb60>, 'width_inc': <property object at 0x000001872580ec50>, 'height_inc': <property object at 0x000001872580ed40>, 'min_aspect': <property object at 0x000001872580ee30>, 'max_aspect': <property object at 0x000001872580ef20>, 'win_gravity': <property object at 0x000001872580f010>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Geometry)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -159,7 +158,7 @@ class ListBoxClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ListBoxClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ListBoxClass' objects>, '__weakref__': <attribute '__weakref__' of 'ListBoxClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceac09bc0>, 'row_selected': <property object at 0x000002eceac09cb0>, 'row_activated': <property object at 0x000002eceac09da0>, 'activate_cursor_row': <property object at 0x000002eceac09e90>, 'toggle_cursor_row': <property object at 0x000002eceac09f80>, 'move_cursor': <property object at 0x000002eceac0a070>, 'selected_rows_changed': <property object at 0x000002eceac0a160>, 'select_all': <property object at 0x000002eceac0a250>, 'unselect_all': <property object at 0x000002eceac0a340>, '_gtk_reserved1': <property object at 0x000002eceac0a430>, '_gtk_reserved2': <property object at 0x000002eceac0a520>, '_gtk_reserved3': <property object at 0x000002eceac0a610>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ListBoxClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ListBoxClass' objects>, '__weakref__': <attribute '__weakref__' of 'ListBoxClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18b8b80>, 'row_selected': <property object at 0x000002bfd18b8c70>, 'row_activated': <property object at 0x000002bfd18b8d60>, 'activate_cursor_row': <property object at 0x000002bfd18b8e50>, 'toggle_cursor_row': <property object at 0x000002bfd18b8f40>, 'move_cursor': <property object at 0x000002bfd18b9030>, 'selected_rows_changed': <property object at 0x000002bfd18b9120>, 'select_all': <property object at 0x000002bfd18b9210>, 'unselect_all': <property object at 0x000002bfd18b9300>, '_gtk_reserved1': <property object at 0x000002bfd18b93f0>, '_gtk_reserved2': <property object at 0x000002bfd18b94e0>, '_gtk_reserved3': <property object at 0x000002bfd18b95d0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ListBoxClass)
 

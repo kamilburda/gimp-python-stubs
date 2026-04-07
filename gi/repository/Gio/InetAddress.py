@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -24,6 +29,7 @@ class InetAddress(__gi_overrides_GObject.Object):
         InetAddress(**properties)
         new_any(family:Gio.SocketFamily) -> Gio.InetAddress
         new_from_bytes(bytes:list, family:Gio.SocketFamily) -> Gio.InetAddress
+        new_from_bytes_with_ipv6_info(bytes:list, family:Gio.SocketFamily, flowinfo:int, scope_id:int) -> Gio.InetAddress
         new_from_string(string:str) -> Gio.InetAddress or None
         new_loopback(family:Gio.SocketFamily) -> Gio.InetAddress
     """
@@ -47,7 +53,7 @@ class InetAddress(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -75,6 +81,9 @@ class InetAddress(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_to_string(self, *args, **kwargs): # real signature unknown
@@ -130,6 +139,10 @@ class InetAddress(__gi_overrides_GObject.Object):
         """ get_family(self) -> Gio.SocketFamily """
         pass
 
+    def get_flowinfo(self): # real signature unknown; restored from __doc__
+        """ get_flowinfo(self) -> int """
+        return 0
+
     def get_is_any(self): # real signature unknown; restored from __doc__
         """ get_is_any(self) -> bool """
         return False
@@ -183,6 +196,10 @@ class InetAddress(__gi_overrides_GObject.Object):
     def get_qdata(self, *args, **kargs): # reliably restored by inspect
         # no doc
         pass
+
+    def get_scope_id(self): # real signature unknown; restored from __doc__
+        """ get_scope_id(self) -> int """
+        return 0
 
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
@@ -254,19 +271,28 @@ class InetAddress(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_any(self, family): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_any(cls, family): # real signature unknown; restored from __doc__
         """ new_any(family:Gio.SocketFamily) -> Gio.InetAddress """
         pass
 
-    def new_from_bytes(self, bytes, family): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_bytes(cls, bytes, family): # real signature unknown; restored from __doc__
         """ new_from_bytes(bytes:list, family:Gio.SocketFamily) -> Gio.InetAddress """
         pass
 
-    def new_from_string(self, string): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_bytes_with_ipv6_info(cls, bytes, family, flowinfo, scope_id): # real signature unknown; restored from __doc__
+        """ new_from_bytes_with_ipv6_info(bytes:list, family:Gio.SocketFamily, flowinfo:int, scope_id:int) -> Gio.InetAddress """
+        pass
+
+    @classmethod
+    def new_from_string(cls, string): # real signature unknown; restored from __doc__
         """ new_from_string(string:str) -> Gio.InetAddress or None """
         pass
 
-    def new_loopback(self, family): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_loopback(cls, family): # real signature unknown; restored from __doc__
         """ new_loopback(family:Gio.SocketFamily) -> Gio.InetAddress """
         pass
 
@@ -347,20 +373,20 @@ class InetAddress(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -390,7 +416,11 @@ class InetAddress(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -492,12 +522,12 @@ class InetAddress(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a793750d00>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7085afb0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(InetAddress), '__module__': 'gi.repository.Gio', '__gtype__': <GType GInetAddress (2466387040)>, '__doc__': None, '__gsignals__': {}, 'new_any': gi.FunctionInfo(new_any, bound=None), 'new_from_bytes': gi.FunctionInfo(new_from_bytes, bound=None), 'new_from_string': gi.FunctionInfo(new_from_string, bound=None), 'new_loopback': gi.FunctionInfo(new_loopback, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'get_family': gi.FunctionInfo(get_family, bound=None), 'get_is_any': gi.FunctionInfo(get_is_any, bound=None), 'get_is_link_local': gi.FunctionInfo(get_is_link_local, bound=None), 'get_is_loopback': gi.FunctionInfo(get_is_loopback, bound=None), 'get_is_mc_global': gi.FunctionInfo(get_is_mc_global, bound=None), 'get_is_mc_link_local': gi.FunctionInfo(get_is_mc_link_local, bound=None), 'get_is_mc_node_local': gi.FunctionInfo(get_is_mc_node_local, bound=None), 'get_is_mc_org_local': gi.FunctionInfo(get_is_mc_org_local, bound=None), 'get_is_mc_site_local': gi.FunctionInfo(get_is_mc_site_local, bound=None), 'get_is_multicast': gi.FunctionInfo(get_is_multicast, bound=None), 'get_is_site_local': gi.FunctionInfo(get_is_site_local, bound=None), 'get_native_size': gi.FunctionInfo(get_native_size, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None), 'do_to_string': gi.VFuncInfo(to_string, bound=None), 'parent_instance': <property object at 0x000001a793df8270>, 'priv': <property object at 0x000001a793df8360>})"
-    __gdoc__ = 'Object GInetAddress\n\nProperties from GInetAddress:\n  family -> GSocketFamily: family\n  bytes -> gpointer: bytes\n  is-any -> gboolean: is-any\n  is-loopback -> gboolean: is-loopback\n  is-link-local -> gboolean: is-link-local\n  is-site-local -> gboolean: is-site-local\n  is-multicast -> gboolean: is-multicast\n  is-mc-global -> gboolean: is-mc-global\n  is-mc-link-local -> gboolean: is-mc-link-local\n  is-mc-node-local -> gboolean: is-mc-node-local\n  is-mc-org-local -> gboolean: is-mc-org-local\n  is-mc-site-local -> gboolean: is-mc-site-local\n\nSignals from GObject:\n  notify (GParam)\n\n'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(InetAddress), '__module__': 'gi.repository.Gio', '__gtype__': <GType GInetAddress (1848625520)>, '__doc__': None, '__gsignals__': {}, 'new_any': <classmethod(gi.FunctionInfo(new_any))>, 'new_from_bytes': <classmethod(gi.FunctionInfo(new_from_bytes))>, 'new_from_bytes_with_ipv6_info': <classmethod(gi.FunctionInfo(new_from_bytes_with_ipv6_info))>, 'new_from_string': <classmethod(gi.FunctionInfo(new_from_string))>, 'new_loopback': <classmethod(gi.FunctionInfo(new_loopback))>, 'equal': gi.FunctionInfo(equal), 'get_family': gi.FunctionInfo(get_family), 'get_flowinfo': gi.FunctionInfo(get_flowinfo), 'get_is_any': gi.FunctionInfo(get_is_any), 'get_is_link_local': gi.FunctionInfo(get_is_link_local), 'get_is_loopback': gi.FunctionInfo(get_is_loopback), 'get_is_mc_global': gi.FunctionInfo(get_is_mc_global), 'get_is_mc_link_local': gi.FunctionInfo(get_is_mc_link_local), 'get_is_mc_node_local': gi.FunctionInfo(get_is_mc_node_local), 'get_is_mc_org_local': gi.FunctionInfo(get_is_mc_org_local), 'get_is_mc_site_local': gi.FunctionInfo(get_is_mc_site_local), 'get_is_multicast': gi.FunctionInfo(get_is_multicast), 'get_is_site_local': gi.FunctionInfo(get_is_site_local), 'get_native_size': gi.FunctionInfo(get_native_size), 'get_scope_id': gi.FunctionInfo(get_scope_id), 'to_string': gi.FunctionInfo(to_string), 'do_to_string': gi.VFuncInfo(to_string), 'parent_instance': <property object at 0x000001ea70933650>, 'priv': <property object at 0x000001ea70933740>})"
+    __gdoc__ = 'Object GInetAddress\n\nProperties from GInetAddress:\n  family -> GSocketFamily: family\n  bytes -> gpointer: bytes\n  is-any -> gboolean: is-any\n  is-loopback -> gboolean: is-loopback\n  is-link-local -> gboolean: is-link-local\n  is-site-local -> gboolean: is-site-local\n  is-multicast -> gboolean: is-multicast\n  is-mc-global -> gboolean: is-mc-global\n  is-mc-link-local -> gboolean: is-mc-link-local\n  is-mc-node-local -> gboolean: is-mc-node-local\n  is-mc-org-local -> gboolean: is-mc-org-local\n  is-mc-site-local -> gboolean: is-mc-site-local\n  flowinfo -> guint: flowinfo\n  scope-id -> guint: scope-id\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GInetAddress (2466387040)>'
+    __gtype__ = None # (!) real value is '<GType GInetAddress (1848625520)>'
     __info__ = ObjectInfo(InetAddress)
 
 

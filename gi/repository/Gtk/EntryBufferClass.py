@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -165,7 +164,7 @@ class EntryBufferClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EntryBufferClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EntryBufferClass' objects>, '__weakref__': <attribute '__weakref__' of 'EntryBufferClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceab7b470>, 'inserted_text': <property object at 0x000002eceab7b560>, 'deleted_text': <property object at 0x000002eceab7b650>, 'get_text': <property object at 0x000002eceab7b740>, 'get_length': <property object at 0x000002eceab7b830>, 'insert_text': <property object at 0x000002eceab7b920>, 'delete_text': <property object at 0x000002eceab7ba10>, '_gtk_reserved1': <property object at 0x000002eceab7bb00>, '_gtk_reserved2': <property object at 0x000002eceab7bbf0>, '_gtk_reserved3': <property object at 0x000002eceab7bce0>, '_gtk_reserved4': <property object at 0x000002eceab7bdd0>, '_gtk_reserved5': <property object at 0x000002eceab7bec0>, '_gtk_reserved6': <property object at 0x000002eceab7bfb0>, '_gtk_reserved7': <property object at 0x000002eceabbc0e0>, '_gtk_reserved8': <property object at 0x000002eceabbc1d0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EntryBufferClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EntryBufferClass' objects>, '__weakref__': <attribute '__weakref__' of 'EntryBufferClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd1772700>, 'inserted_text': <property object at 0x000002bfd17727f0>, 'deleted_text': <property object at 0x000002bfd17728e0>, 'get_text': <property object at 0x000002bfd17729d0>, 'get_length': <property object at 0x000002bfd1772ac0>, 'insert_text': <property object at 0x000002bfd1772bb0>, 'delete_text': <property object at 0x000002bfd1772ca0>, '_gtk_reserved1': <property object at 0x000002bfd1772d90>, '_gtk_reserved2': <property object at 0x000002bfd1772e80>, '_gtk_reserved3': <property object at 0x000002bfd1772f70>, '_gtk_reserved4': <property object at 0x000002bfd1773060>, '_gtk_reserved5': <property object at 0x000002bfd1773150>, '_gtk_reserved6': <property object at 0x000002bfd1773240>, '_gtk_reserved7': <property object at 0x000002bfd1773330>, '_gtk_reserved8': <property object at 0x000002bfd1773420>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(EntryBufferClass)
 

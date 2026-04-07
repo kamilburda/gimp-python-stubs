@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ScrolledPreviewClass(__gi.Struct):
@@ -161,7 +154,7 @@ class ScrolledPreviewClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ScrolledPreviewClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ScrolledPreviewClass' objects>, '__weakref__': <attribute '__weakref__' of 'ScrolledPreviewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb751b010>, '_gimp_reserved0': <property object at 0x000001eeb751b100>, '_gimp_reserved1': <property object at 0x000001eeb751b1f0>, '_gimp_reserved2': <property object at 0x000001eeb751b2e0>, '_gimp_reserved3': <property object at 0x000001eeb751b3d0>, '_gimp_reserved4': <property object at 0x000001eeb751b4c0>, '_gimp_reserved5': <property object at 0x000001eeb751b5b0>, '_gimp_reserved6': <property object at 0x000001eeb751b6a0>, '_gimp_reserved7': <property object at 0x000001eeb751b790>, '_gimp_reserved8': <property object at 0x000001eeb751b880>, '_gimp_reserved9': <property object at 0x000001eeb751b970>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ScrolledPreviewClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ScrolledPreviewClass' objects>, '__weakref__': <attribute '__weakref__' of 'ScrolledPreviewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1ceeac0>, '_gimp_reserved0': <property object at 0x0000020ee1ceebb0>, '_gimp_reserved1': <property object at 0x0000020ee1ceeca0>, '_gimp_reserved2': <property object at 0x0000020ee1ceed90>, '_gimp_reserved3': <property object at 0x0000020ee1ceee80>, '_gimp_reserved4': <property object at 0x0000020ee1ceef70>, '_gimp_reserved5': <property object at 0x0000020ee1cef060>, '_gimp_reserved6': <property object at 0x0000020ee1cef150>, '_gimp_reserved7': <property object at 0x0000020ee1cef240>, '_gimp_reserved8': <property object at 0x0000020ee1cef330>, '_gimp_reserved9': <property object at 0x0000020ee1cef420>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ScrolledPreviewClass)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -106,20 +105,20 @@ class CellArea(__gi_repository_GObject.InitiallyUnowned, Buildable, CellLayout):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -172,12 +171,18 @@ class CellArea(__gi_repository_GObject.InitiallyUnowned, Buildable, CellLayout):
         """ apply_attributes(self, tree_model:Gtk.TreeModel, iter:Gtk.TreeIter, is_expander:bool, is_expanded:bool) """
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_copy_context(self, *args, **kwargs): # real signature unknown
         """ copy_context(self, context:Gtk.CellAreaContext) -> Gtk.CellAreaContext """
         pass
 
     def do_create_context(self, *args, **kwargs): # real signature unknown
         """ create_context(self) -> Gtk.CellAreaContext """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_event(self, *args, **kwargs): # real signature unknown
@@ -276,17 +281,17 @@ class CellArea(__gi_repository_GObject.InitiallyUnowned, Buildable, CellLayout):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -379,20 +384,20 @@ class CellArea(__gi_repository_GObject.InitiallyUnowned, Buildable, CellLayout):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -597,20 +602,20 @@ class CellArea(__gi_repository_GObject.InitiallyUnowned, Buildable, CellLayout):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -749,12 +754,14 @@ class CellArea(__gi_repository_GObject.InitiallyUnowned, Buildable, CellLayout):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ece9ab2020>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17f0c10>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(CellArea), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCellArea (3855027888)>, '__doc__': None, '__gsignals__': {}, 'find_cell_property': <classmethod(gi.FunctionInfo(find_cell_property, bound=None))>, 'install_cell_property': <classmethod(gi.FunctionInfo(install_cell_property, bound=None))>, 'list_cell_properties': <classmethod(gi.FunctionInfo(list_cell_properties, bound=None))>, 'activate': gi.FunctionInfo(activate, bound=None), 'activate_cell': gi.FunctionInfo(activate_cell, bound=None), 'add': gi.FunctionInfo(add, bound=None), 'add_focus_sibling': gi.FunctionInfo(add_focus_sibling, bound=None), 'apply_attributes': gi.FunctionInfo(apply_attributes, bound=None), 'attribute_connect': gi.FunctionInfo(attribute_connect, bound=None), 'attribute_disconnect': gi.FunctionInfo(attribute_disconnect, bound=None), 'attribute_get_column': gi.FunctionInfo(attribute_get_column, bound=None), 'cell_get_property': gi.FunctionInfo(cell_get_property, bound=None), 'cell_set_property': gi.FunctionInfo(cell_set_property, bound=None), 'copy_context': gi.FunctionInfo(copy_context, bound=None), 'create_context': gi.FunctionInfo(create_context, bound=None), 'event': gi.FunctionInfo(event, bound=None), 'focus': gi.FunctionInfo(focus, bound=None), 'foreach': gi.FunctionInfo(foreach, bound=None), 'foreach_alloc': gi.FunctionInfo(foreach_alloc, bound=None), 'get_cell_allocation': gi.FunctionInfo(get_cell_allocation, bound=None), 'get_cell_at_position': gi.FunctionInfo(get_cell_at_position, bound=None), 'get_current_path_string': gi.FunctionInfo(get_current_path_string, bound=None), 'get_edit_widget': gi.FunctionInfo(get_edit_widget, bound=None), 'get_edited_cell': gi.FunctionInfo(get_edited_cell, bound=None), 'get_focus_cell': gi.FunctionInfo(get_focus_cell, bound=None), 'get_focus_from_sibling': gi.FunctionInfo(get_focus_from_sibling, bound=None), 'get_focus_siblings': gi.FunctionInfo(get_focus_siblings, bound=None), 'get_preferred_height': gi.FunctionInfo(get_preferred_height, bound=None), 'get_preferred_height_for_width': gi.FunctionInfo(get_preferred_height_for_width, bound=None), 'get_preferred_width': gi.FunctionInfo(get_preferred_width, bound=None), 'get_preferred_width_for_height': gi.FunctionInfo(get_preferred_width_for_height, bound=None), 'get_request_mode': gi.FunctionInfo(get_request_mode, bound=None), 'has_renderer': gi.FunctionInfo(has_renderer, bound=None), 'inner_cell_area': gi.FunctionInfo(inner_cell_area, bound=None), 'is_activatable': gi.FunctionInfo(is_activatable, bound=None), 'is_focus_sibling': gi.FunctionInfo(is_focus_sibling, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'remove_focus_sibling': gi.FunctionInfo(remove_focus_sibling, bound=None), 'render': gi.FunctionInfo(render, bound=None), 'request_renderer': gi.FunctionInfo(request_renderer, bound=None), 'set_focus_cell': gi.FunctionInfo(set_focus_cell, bound=None), 'stop_editing': gi.FunctionInfo(stop_editing, bound=None), 'do_activate': gi.VFuncInfo(activate, bound=None), 'do_add': gi.VFuncInfo(add, bound=None), 'do_apply_attributes': gi.VFuncInfo(apply_attributes, bound=None), 'do_copy_context': gi.VFuncInfo(copy_context, bound=None), 'do_create_context': gi.VFuncInfo(create_context, bound=None), 'do_event': gi.VFuncInfo(event, bound=None), 'do_focus': gi.VFuncInfo(focus, bound=None), 'do_foreach': gi.VFuncInfo(foreach, bound=None), 'do_foreach_alloc': gi.VFuncInfo(foreach_alloc, bound=None), 'do_get_cell_property': gi.VFuncInfo(get_cell_property, bound=None), 'do_get_preferred_height': gi.VFuncInfo(get_preferred_height, bound=None), 'do_get_preferred_height_for_width': gi.VFuncInfo(get_preferred_height_for_width, bound=None), 'do_get_preferred_width': gi.VFuncInfo(get_preferred_width, bound=None), 'do_get_preferred_width_for_height': gi.VFuncInfo(get_preferred_width_for_height, bound=None), 'do_get_request_mode': gi.VFuncInfo(get_request_mode, bound=None), 'do_is_activatable': gi.VFuncInfo(is_activatable, bound=None), 'do_remove': gi.VFuncInfo(remove, bound=None), 'do_render': gi.VFuncInfo(render, bound=None), 'do_set_cell_property': gi.VFuncInfo(set_cell_property, bound=None), 'parent_instance': <property object at 0x000002ece8ff65c0>, 'priv': <property object at 0x000002ece8ff66b0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(CellArea), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCellArea (3428511472)>, '__doc__': None, '__gsignals__': {}, 'find_cell_property': <classmethod(gi.FunctionInfo(find_cell_property))>, 'install_cell_property': <classmethod(gi.FunctionInfo(install_cell_property))>, 'list_cell_properties': <classmethod(gi.FunctionInfo(list_cell_properties))>, 'activate': gi.FunctionInfo(activate), 'activate_cell': gi.FunctionInfo(activate_cell), 'add': gi.FunctionInfo(add), 'add_focus_sibling': gi.FunctionInfo(add_focus_sibling), 'apply_attributes': gi.FunctionInfo(apply_attributes), 'attribute_connect': gi.FunctionInfo(attribute_connect), 'attribute_disconnect': gi.FunctionInfo(attribute_disconnect), 'attribute_get_column': gi.FunctionInfo(attribute_get_column), 'cell_get_property': gi.FunctionInfo(cell_get_property), 'cell_set_property': gi.FunctionInfo(cell_set_property), 'copy_context': gi.FunctionInfo(copy_context), 'create_context': gi.FunctionInfo(create_context), 'event': gi.FunctionInfo(event), 'focus': gi.FunctionInfo(focus), 'foreach': gi.FunctionInfo(foreach), 'foreach_alloc': gi.FunctionInfo(foreach_alloc), 'get_cell_allocation': gi.FunctionInfo(get_cell_allocation), 'get_cell_at_position': gi.FunctionInfo(get_cell_at_position), 'get_current_path_string': gi.FunctionInfo(get_current_path_string), 'get_edit_widget': gi.FunctionInfo(get_edit_widget), 'get_edited_cell': gi.FunctionInfo(get_edited_cell), 'get_focus_cell': gi.FunctionInfo(get_focus_cell), 'get_focus_from_sibling': gi.FunctionInfo(get_focus_from_sibling), 'get_focus_siblings': gi.FunctionInfo(get_focus_siblings), 'get_preferred_height': gi.FunctionInfo(get_preferred_height), 'get_preferred_height_for_width': gi.FunctionInfo(get_preferred_height_for_width), 'get_preferred_width': gi.FunctionInfo(get_preferred_width), 'get_preferred_width_for_height': gi.FunctionInfo(get_preferred_width_for_height), 'get_request_mode': gi.FunctionInfo(get_request_mode), 'has_renderer': gi.FunctionInfo(has_renderer), 'inner_cell_area': gi.FunctionInfo(inner_cell_area), 'is_activatable': gi.FunctionInfo(is_activatable), 'is_focus_sibling': gi.FunctionInfo(is_focus_sibling), 'remove': gi.FunctionInfo(remove), 'remove_focus_sibling': gi.FunctionInfo(remove_focus_sibling), 'render': gi.FunctionInfo(render), 'request_renderer': gi.FunctionInfo(request_renderer), 'set_focus_cell': gi.FunctionInfo(set_focus_cell), 'stop_editing': gi.FunctionInfo(stop_editing), 'do_activate': gi.VFuncInfo(activate), 'do_add': gi.VFuncInfo(add), 'do_apply_attributes': gi.VFuncInfo(apply_attributes), 'do_copy_context': gi.VFuncInfo(copy_context), 'do_create_context': gi.VFuncInfo(create_context), 'do_event': gi.VFuncInfo(event), 'do_focus': gi.VFuncInfo(focus), 'do_foreach': gi.VFuncInfo(foreach), 'do_foreach_alloc': gi.VFuncInfo(foreach_alloc), 'do_get_cell_property': gi.VFuncInfo(get_cell_property), 'do_get_preferred_height': gi.VFuncInfo(get_preferred_height), 'do_get_preferred_height_for_width': gi.VFuncInfo(get_preferred_height_for_width), 'do_get_preferred_width': gi.VFuncInfo(get_preferred_width), 'do_get_preferred_width_for_height': gi.VFuncInfo(get_preferred_width_for_height), 'do_get_request_mode': gi.VFuncInfo(get_request_mode), 'do_is_activatable': gi.VFuncInfo(is_activatable), 'do_remove': gi.VFuncInfo(remove), 'do_render': gi.VFuncInfo(render), 'do_set_cell_property': gi.VFuncInfo(set_cell_property), 'parent_instance': <property object at 0x000002bfd1799940>, 'priv': <property object at 0x000002bfd1799a30>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkCellArea\n\nSignals from GtkCellArea:\n  apply-attributes (GtkTreeModel, GtkTreeIter, gboolean, gboolean)\n  add-editable (GtkCellRenderer, GtkCellEditable, GdkRectangle, gchararray)\n  remove-editable (GtkCellRenderer, GtkCellEditable)\n  focus-changed (GtkCellRenderer, gchararray)\n\nProperties from GtkCellArea:\n  focus-cell -> GtkCellRenderer: Focus Cell\n    The cell which currently has focus\n  edited-cell -> GtkCellRenderer: Edited Cell\n    The cell which is currently being edited\n  edit-widget -> GtkCellEditable: Edit Widget\n    The widget currently editing the edited cell\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkCellArea (3855027888)>'
+    __gtype__ = None # (!) real value is '<GType GtkCellArea (3428511472)>'
     __info__ = ObjectInfo(CellArea)
+    __static_attributes__ = ()
 
 

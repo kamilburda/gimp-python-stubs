@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -189,10 +182,10 @@ class Component(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Component), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkComponent (892042528)>, '__dict__': <attribute '__dict__' of 'Component' objects>, '__weakref__': <attribute '__weakref__' of 'Component' objects>, '__doc__': None, '__gsignals__': {}, 'contains': gi.FunctionInfo(contains, bound=None), 'get_alpha': gi.FunctionInfo(get_alpha, bound=None), 'get_extents': gi.FunctionInfo(get_extents, bound=None), 'get_layer': gi.FunctionInfo(get_layer, bound=None), 'get_mdi_zorder': gi.FunctionInfo(get_mdi_zorder, bound=None), 'get_position': gi.FunctionInfo(get_position, bound=None), 'get_size': gi.FunctionInfo(get_size, bound=None), 'grab_focus': gi.FunctionInfo(grab_focus, bound=None), 'ref_accessible_at_point': gi.FunctionInfo(ref_accessible_at_point, bound=None), 'remove_focus_handler': gi.FunctionInfo(remove_focus_handler, bound=None), 'scroll_to': gi.FunctionInfo(scroll_to, bound=None), 'scroll_to_point': gi.FunctionInfo(scroll_to_point, bound=None), 'set_extents': gi.FunctionInfo(set_extents, bound=None), 'set_position': gi.FunctionInfo(set_position, bound=None), 'set_size': gi.FunctionInfo(set_size, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Component), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkComponent (1534561920)>, '__dict__': <attribute '__dict__' of 'Component' objects>, '__weakref__': <attribute '__weakref__' of 'Component' objects>, '__doc__': None, '__gsignals__': {}, 'contains': gi.FunctionInfo(contains), 'get_alpha': gi.FunctionInfo(get_alpha), 'get_extents': gi.FunctionInfo(get_extents), 'get_layer': gi.FunctionInfo(get_layer), 'get_mdi_zorder': gi.FunctionInfo(get_mdi_zorder), 'get_position': gi.FunctionInfo(get_position), 'get_size': gi.FunctionInfo(get_size), 'grab_focus': gi.FunctionInfo(grab_focus), 'ref_accessible_at_point': gi.FunctionInfo(ref_accessible_at_point), 'remove_focus_handler': gi.FunctionInfo(remove_focus_handler), 'scroll_to': gi.FunctionInfo(scroll_to), 'scroll_to_point': gi.FunctionInfo(scroll_to_point), 'set_extents': gi.FunctionInfo(set_extents), 'set_position': gi.FunctionInfo(set_position), 'set_size': gi.FunctionInfo(set_size)})"
     __gdoc__ = 'Interface AtkComponent\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkComponent (892042528)>'
+    __gtype__ = None # (!) real value is '<GType AtkComponent (1534561920)>'
     __info__ = InterfaceInfo(Component)
 
 

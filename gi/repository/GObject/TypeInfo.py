@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -59,7 +58,11 @@ class TypeInfo(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -171,7 +174,7 @@ class TypeInfo(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TypeInfo), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeInfo' objects>, '__weakref__': <attribute '__weakref__' of 'TypeInfo' objects>, '__doc__': None, 'class_size': <property object at 0x0000010b07a23dd0>, 'base_init': <property object at 0x0000010b07a23ec0>, 'base_finalize': <property object at 0x0000010b07a23fb0>, 'class_init': <property object at 0x0000010b07a880e0>, 'class_finalize': <property object at 0x0000010b07a881d0>, 'class_data': <property object at 0x0000010b07a882c0>, 'instance_size': <property object at 0x0000010b07a883b0>, 'n_preallocs': <property object at 0x0000010b07a884a0>, 'instance_init': <property object at 0x0000010b07a88590>, 'value_table': <property object at 0x0000010b07a88680>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TypeInfo), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeInfo' objects>, '__weakref__': <attribute '__weakref__' of 'TypeInfo' objects>, '__doc__': None, 'class_size': <property object at 0x000001dd11e4a340>, 'base_init': <property object at 0x000001dd11e4a430>, 'base_finalize': <property object at 0x000001dd11e4a520>, 'class_init': <property object at 0x000001dd11e4a610>, 'class_finalize': <property object at 0x000001dd11e4a700>, 'class_data': <property object at 0x000001dd11e4a7f0>, 'instance_size': <property object at 0x000001dd11e4a8e0>, 'n_preallocs': <property object at 0x000001dd11e4a9d0>, 'instance_init': <property object at 0x000001dd11e4aac0>, 'value_table': <property object at 0x000001dd11e4abb0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TypeInfo)
 

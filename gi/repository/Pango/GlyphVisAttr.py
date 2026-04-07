@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class GlyphVisAttr(__gi.Struct):
@@ -135,7 +133,7 @@ class GlyphVisAttr(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphVisAttr), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'GlyphVisAttr' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphVisAttr' objects>, '__doc__': None, 'is_cluster_start': <property object at 0x00000213f6086e30>, 'is_color': <property object at 0x00000213f6086f20>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphVisAttr), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'GlyphVisAttr' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphVisAttr' objects>, '__doc__': None, 'is_cluster_start': <property object at 0x00000280355d5940>, 'is_color': <property object at 0x00000280355d5a30>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(GlyphVisAttr)
 

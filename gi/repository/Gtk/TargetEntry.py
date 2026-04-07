@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -35,7 +34,8 @@ class TargetEntry(__gi.Boxed):
         """ free(self) """
         pass
 
-    def new(self, target, flags, info): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, target, flags, info): # real signature unknown; restored from __doc__
         """ new(target:str, flags:int, info:int) -> Gtk.TargetEntry """
         pass
 
@@ -157,8 +157,8 @@ class TargetEntry(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TargetEntry), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkTargetEntry (3923962000)>, '__dict__': <attribute '__dict__' of 'TargetEntry' objects>, '__weakref__': <attribute '__weakref__' of 'TargetEntry' objects>, '__doc__': None, 'target': <property object at 0x000002ece9b76930>, 'flags': <property object at 0x000002ece9b76a20>, 'info': <property object at 0x000002ece9b76b10>, 'new': gi.FunctionInfo(new, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GtkTargetEntry (3923962000)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TargetEntry), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkTargetEntry (3414246480)>, '__dict__': <attribute '__dict__' of 'TargetEntry' objects>, '__weakref__': <attribute '__weakref__' of 'TargetEntry' objects>, '__doc__': None, 'target': <property object at 0x000002bfd3a0d0d0>, 'flags': <property object at 0x000002bfd3a0d1c0>, 'info': <property object at 0x000002bfd3a0d2b0>, 'new': <classmethod(gi.FunctionInfo(new))>, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free)})"
+    __gtype__ = None # (!) real value is '<GType GtkTargetEntry (3414246480)>'
     __info__ = StructInfo(TargetEntry)
 
 

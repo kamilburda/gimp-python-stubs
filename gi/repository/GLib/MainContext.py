@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 from .MainContext import MainContext
@@ -51,7 +49,7 @@ class MainContext(MainContext):
         pass
 
     def find_source_by_funcs_user_data(self, funcs, user_data=None): # real signature unknown; restored from __doc__
-        """ find_source_by_funcs_user_data(self, funcs:GLib.SourceFuncs, user_data=None) -> GLib.Source """
+        """ find_source_by_funcs_user_data(self, funcs:GLib.SourceFuncs, user_data=None) -> GLib.Source or None """
         pass
 
     def find_source_by_id(self, source_id): # real signature unknown; restored from __doc__
@@ -59,7 +57,7 @@ class MainContext(MainContext):
         pass
 
     def find_source_by_user_data(self, user_data=None): # real signature unknown; restored from __doc__
-        """ find_source_by_user_data(self, user_data=None) -> GLib.Source """
+        """ find_source_by_user_data(self, user_data=None) -> GLib.Source or None """
         pass
 
     def get_thread_default(self): # real signature unknown; restored from __doc__
@@ -98,13 +96,27 @@ class MainContext(MainContext):
         """ prepare(self) -> bool, priority:int """
         return False
 
+    def pusher_new(self): # real signature unknown; restored from __doc__
+        """ pusher_new(self) """
+        pass
+
     def push_thread_default(self): # real signature unknown; restored from __doc__
         """ push_thread_default(self) """
         pass
 
-    def query(self, max_priority): # real signature unknown; restored from __doc__
-        """ query(self, max_priority:int) -> int, timeout_:int, fds:list """
-        return 0
+    def query(self, max_priority): # reliably restored by inspect
+        """
+        Determines information necessary to poll this main loop.
+        
+        :param max_priority: maximum priority source to check
+        :returns:
+          The timeout (msec) used for polling,
+          and the list of poll fd's.
+        
+        Please also check the usage notes in the
+        `C documention <https://docs.gtk.org/glib/method.MainContext.query.html>`__.
+        """
+        pass
 
     def ref(self): # real signature unknown; restored from __doc__
         """ ref(self) -> GLib.MainContext """
@@ -246,8 +258,10 @@ class MainContext(MainContext):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', 'iteration': <function MainContext.iteration at 0x000002830be218a0>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType GMainContext (155713136)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__firstlineno__': 593, 'iteration': <function MainContext.iteration at 0x0000018e9fee8eb0>, 'query': <function MainContext.query at 0x0000018e9fee9010>, '__static_attributes__': (), '__doc__': None})"
+    __firstlineno__ = 593
+    __gtype__ = None # (!) real value is '<GType GMainContext (2636582000)>'
     __info__ = StructInfo(MainContext)
+    __static_attributes__ = ()
 
 

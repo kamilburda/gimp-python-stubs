@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -74,7 +79,11 @@ class Action(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -165,10 +174,10 @@ class Action(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Action), '__module__': 'gi.repository.Gio', '__gtype__': <GType GAction (2472609360)>, '__dict__': <attribute '__dict__' of 'Action' objects>, '__weakref__': <attribute '__weakref__' of 'Action' objects>, '__doc__': None, '__gsignals__': {}, 'name_is_valid': gi.FunctionInfo(name_is_valid, bound=None), 'parse_detailed_name': gi.FunctionInfo(parse_detailed_name, bound=None), 'print_detailed_name': gi.FunctionInfo(print_detailed_name, bound=None), 'activate': gi.FunctionInfo(activate, bound=None), 'change_state': gi.FunctionInfo(change_state, bound=None), 'get_enabled': gi.FunctionInfo(get_enabled, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_parameter_type': gi.FunctionInfo(get_parameter_type, bound=None), 'get_state': gi.FunctionInfo(get_state, bound=None), 'get_state_hint': gi.FunctionInfo(get_state_hint, bound=None), 'get_state_type': gi.FunctionInfo(get_state_type, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Action), '__module__': 'gi.repository.Gio', '__gtype__': <GType GAction (1838044464)>, '__dict__': <attribute '__dict__' of 'Action' objects>, '__weakref__': <attribute '__weakref__' of 'Action' objects>, '__doc__': None, '__gsignals__': {}, 'name_is_valid': <staticmethod(gi.FunctionInfo(name_is_valid))>, 'parse_detailed_name': <staticmethod(gi.FunctionInfo(parse_detailed_name))>, 'print_detailed_name': <staticmethod(gi.FunctionInfo(print_detailed_name))>, 'activate': gi.FunctionInfo(activate), 'change_state': gi.FunctionInfo(change_state), 'get_enabled': gi.FunctionInfo(get_enabled), 'get_name': gi.FunctionInfo(get_name), 'get_parameter_type': gi.FunctionInfo(get_parameter_type), 'get_state': gi.FunctionInfo(get_state), 'get_state_hint': gi.FunctionInfo(get_state_hint), 'get_state_type': gi.FunctionInfo(get_state_type)})"
     __gdoc__ = 'Interface GAction\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GAction (2472609360)>'
+    __gtype__ = None # (!) real value is '<GType GAction (1838044464)>'
     __info__ = InterfaceInfo(Action)
 
 

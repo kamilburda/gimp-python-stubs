@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class TlsDatabaseClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -158,7 +167,7 @@ class TlsDatabaseClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TlsDatabaseClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TlsDatabaseClass' objects>, '__weakref__': <attribute '__weakref__' of 'TlsDatabaseClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793dabab0>, 'verify_chain': <property object at 0x000001a793dabba0>, 'verify_chain_async': <property object at 0x000001a793dabce0>, 'verify_chain_finish': <property object at 0x000001a793dabdd0>, 'create_certificate_handle': <property object at 0x000001a793dabec0>, 'lookup_certificate_for_handle': <property object at 0x000001a793dabfb0>, 'lookup_certificate_for_handle_async': <property object at 0x000001a793da4090>, 'lookup_certificate_for_handle_finish': <property object at 0x000001a793da4180>, 'lookup_certificate_issuer': <property object at 0x000001a793da42c0>, 'lookup_certificate_issuer_async': <property object at 0x000001a793da43b0>, 'lookup_certificate_issuer_finish': <property object at 0x000001a793da4450>, 'lookup_certificates_issued_by': <property object at 0x000001a793da4590>, 'lookup_certificates_issued_by_async': <property object at 0x000001a793da4630>, 'lookup_certificates_issued_by_finish': <property object at 0x000001a793da4720>, 'padding': <property object at 0x000001a793da4810>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TlsDatabaseClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TlsDatabaseClass' objects>, '__weakref__': <attribute '__weakref__' of 'TlsDatabaseClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea709dfce0>, 'verify_chain': <property object at 0x000001ea709dfdd0>, 'verify_chain_async': <property object at 0x000001ea709dfec0>, 'verify_chain_finish': <property object at 0x000001ea709dffb0>, 'create_certificate_handle': <property object at 0x000001ea709e8130>, 'lookup_certificate_for_handle': <property object at 0x000001ea709e8220>, 'lookup_certificate_for_handle_async': <property object at 0x000001ea709e8310>, 'lookup_certificate_for_handle_finish': <property object at 0x000001ea709e8400>, 'lookup_certificate_issuer': <property object at 0x000001ea709e84f0>, 'lookup_certificate_issuer_async': <property object at 0x000001ea709e85e0>, 'lookup_certificate_issuer_finish': <property object at 0x000001ea709e86d0>, 'lookup_certificates_issued_by': <property object at 0x000001ea709e87c0>, 'lookup_certificates_issued_by_async': <property object at 0x000001ea709e88b0>, 'lookup_certificates_issued_by_finish': <property object at 0x000001ea709e89a0>, 'padding': <property object at 0x000001ea709e8a40>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TlsDatabaseClass)
 

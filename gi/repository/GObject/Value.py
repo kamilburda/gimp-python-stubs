@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -332,7 +331,11 @@ class Value(Value):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -431,8 +434,8 @@ class Value(Value):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GObject', '__init__': <function Value.__init__ at 0x0000010b078e7d80>, '_Value__g_type': <property object at 0x0000010b07913ec0>, 'set_boxed': <function Value.set_boxed at 0x0000010b078e7f60>, 'get_boxed': <function Value.get_boxed at 0x0000010b07928040>, 'set_value': <function Value.set_value at 0x0000010b079280e0>, 'get_value': <function Value.get_value at 0x0000010b07928180>, '__repr__': <function Value.__repr__ at 0x0000010b07928220>, '__doc__': None})"
-    __gtype__ = None # (!) forward: TYPE_VALUE, real value is '<GType GValue (83281280)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GObject', '__init__': <function Value.__init__ at 0x000001dd11de7f60>, '_Value__g_type': <property object at 0x000001dd11db3970>, 'set_boxed': <function Value.set_boxed at 0x000001dd11d98180>, 'get_boxed': <function Value.get_boxed at 0x000001dd11d98220>, 'set_value': <function Value.set_value at 0x000001dd11d982c0>, 'get_value': <function Value.get_value at 0x000001dd11d98360>, '__repr__': <function Value.__repr__ at 0x000001dd11d98400>, '__doc__': None})"
+    __gtype__ = None # (!) forward: TYPE_VALUE, real value is '<GType GValue (265149856)>'
     __info__ = StructInfo(Value)
 
 

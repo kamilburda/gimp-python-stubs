@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class EventType(__gobject.GEnum):
+class EventType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -124,12 +123,23 @@ class EventType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -158,6 +168,10 @@ class EventType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -192,7 +206,8 @@ class EventType(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -201,6 +216,14 @@ class EventType(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -228,8 +251,8 @@ class EventType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -260,15 +283,16 @@ class EventType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -332,7 +356,7 @@ class EventType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -374,10 +398,6 @@ class EventType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     2BUTTON_PRESS = 5
     3BUTTON_PRESS = 6
@@ -388,7 +408,6 @@ class EventType(__gobject.GEnum):
     DAMAGE = 36
     DELETE = 0
     DESTROY = 1
-    DOUBLE_BUTTON_PRESS = 5
     DRAG_ENTER = 22
     DRAG_LEAVE = 23
     DRAG_MOTION = 24
@@ -426,66 +445,12 @@ class EventType(__gobject.GEnum):
     TOUCH_CANCEL = 40
     TOUCH_END = 39
     TOUCH_UPDATE = 38
-    TRIPLE_BUTTON_PRESS = 6
     UNMAP = 15
     VISIBILITY_NOTIFY = 29
     WINDOW_STATE = 32
-    _2BUTTON_PRESS = 5
-    _3BUTTON_PRESS = 6
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gdk', '__dict__': <attribute '__dict__' of 'EventType' objects>, '__doc__': None, '__gtype__': <GType GdkEventType (2575320112)>, '__enum_values__': {-1: <enum GDK_NOTHING of type Gdk.EventType>, 0: <enum GDK_DELETE of type Gdk.EventType>, 1: <enum GDK_DESTROY of type Gdk.EventType>, 2: <enum GDK_EXPOSE of type Gdk.EventType>, 3: <enum GDK_MOTION_NOTIFY of type Gdk.EventType>, 4: <enum GDK_BUTTON_PRESS of type Gdk.EventType>, 5: <enum GDK_2BUTTON_PRESS of type Gdk.EventType>, 6: <enum GDK_3BUTTON_PRESS of type Gdk.EventType>, 7: <enum GDK_BUTTON_RELEASE of type Gdk.EventType>, 8: <enum GDK_KEY_PRESS of type Gdk.EventType>, 9: <enum GDK_KEY_RELEASE of type Gdk.EventType>, 10: <enum GDK_ENTER_NOTIFY of type Gdk.EventType>, 11: <enum GDK_LEAVE_NOTIFY of type Gdk.EventType>, 12: <enum GDK_FOCUS_CHANGE of type Gdk.EventType>, 13: <enum GDK_CONFIGURE of type Gdk.EventType>, 14: <enum GDK_MAP of type Gdk.EventType>, 15: <enum GDK_UNMAP of type Gdk.EventType>, 16: <enum GDK_PROPERTY_NOTIFY of type Gdk.EventType>, 17: <enum GDK_SELECTION_CLEAR of type Gdk.EventType>, 18: <enum GDK_SELECTION_REQUEST of type Gdk.EventType>, 19: <enum GDK_SELECTION_NOTIFY of type Gdk.EventType>, 20: <enum GDK_PROXIMITY_IN of type Gdk.EventType>, 21: <enum GDK_PROXIMITY_OUT of type Gdk.EventType>, 22: <enum GDK_DRAG_ENTER of type Gdk.EventType>, 23: <enum GDK_DRAG_LEAVE of type Gdk.EventType>, 24: <enum GDK_DRAG_MOTION of type Gdk.EventType>, 25: <enum GDK_DRAG_STATUS of type Gdk.EventType>, 26: <enum GDK_DROP_START of type Gdk.EventType>, 27: <enum GDK_DROP_FINISHED of type Gdk.EventType>, 28: <enum GDK_CLIENT_EVENT of type Gdk.EventType>, 29: <enum GDK_VISIBILITY_NOTIFY of type Gdk.EventType>, 31: <enum GDK_SCROLL of type Gdk.EventType>, 32: <enum GDK_WINDOW_STATE of type Gdk.EventType>, 33: <enum GDK_SETTING of type Gdk.EventType>, 34: <enum GDK_OWNER_CHANGE of type Gdk.EventType>, 35: <enum GDK_GRAB_BROKEN of type Gdk.EventType>, 36: <enum GDK_DAMAGE of type Gdk.EventType>, 37: <enum GDK_TOUCH_BEGIN of type Gdk.EventType>, 38: <enum GDK_TOUCH_UPDATE of type Gdk.EventType>, 39: <enum GDK_TOUCH_END of type Gdk.EventType>, 40: <enum GDK_TOUCH_CANCEL of type Gdk.EventType>, 41: <enum GDK_TOUCHPAD_SWIPE of type Gdk.EventType>, 42: <enum GDK_TOUCHPAD_PINCH of type Gdk.EventType>, 43: <enum GDK_PAD_BUTTON_PRESS of type Gdk.EventType>, 44: <enum GDK_PAD_BUTTON_RELEASE of type Gdk.EventType>, 45: <enum GDK_PAD_RING of type Gdk.EventType>, 46: <enum GDK_PAD_STRIP of type Gdk.EventType>, 47: <enum GDK_PAD_GROUP_MODE of type Gdk.EventType>, 48: <enum GDK_EVENT_LAST of type Gdk.EventType>}, '__info__': gi.EnumInfo(EventType), 'NOTHING': <enum GDK_NOTHING of type Gdk.EventType>, 'DELETE': <enum GDK_DELETE of type Gdk.EventType>, 'DESTROY': <enum GDK_DESTROY of type Gdk.EventType>, 'EXPOSE': <enum GDK_EXPOSE of type Gdk.EventType>, 'MOTION_NOTIFY': <enum GDK_MOTION_NOTIFY of type Gdk.EventType>, 'BUTTON_PRESS': <enum GDK_BUTTON_PRESS of type Gdk.EventType>, '2BUTTON_PRESS': <enum GDK_2BUTTON_PRESS of type Gdk.EventType>, 'DOUBLE_BUTTON_PRESS': <enum GDK_2BUTTON_PRESS of type Gdk.EventType>, '3BUTTON_PRESS': <enum GDK_3BUTTON_PRESS of type Gdk.EventType>, 'TRIPLE_BUTTON_PRESS': <enum GDK_3BUTTON_PRESS of type Gdk.EventType>, 'BUTTON_RELEASE': <enum GDK_BUTTON_RELEASE of type Gdk.EventType>, 'KEY_PRESS': <enum GDK_KEY_PRESS of type Gdk.EventType>, 'KEY_RELEASE': <enum GDK_KEY_RELEASE of type Gdk.EventType>, 'ENTER_NOTIFY': <enum GDK_ENTER_NOTIFY of type Gdk.EventType>, 'LEAVE_NOTIFY': <enum GDK_LEAVE_NOTIFY of type Gdk.EventType>, 'FOCUS_CHANGE': <enum GDK_FOCUS_CHANGE of type Gdk.EventType>, 'CONFIGURE': <enum GDK_CONFIGURE of type Gdk.EventType>, 'MAP': <enum GDK_MAP of type Gdk.EventType>, 'UNMAP': <enum GDK_UNMAP of type Gdk.EventType>, 'PROPERTY_NOTIFY': <enum GDK_PROPERTY_NOTIFY of type Gdk.EventType>, 'SELECTION_CLEAR': <enum GDK_SELECTION_CLEAR of type Gdk.EventType>, 'SELECTION_REQUEST': <enum GDK_SELECTION_REQUEST of type Gdk.EventType>, 'SELECTION_NOTIFY': <enum GDK_SELECTION_NOTIFY of type Gdk.EventType>, 'PROXIMITY_IN': <enum GDK_PROXIMITY_IN of type Gdk.EventType>, 'PROXIMITY_OUT': <enum GDK_PROXIMITY_OUT of type Gdk.EventType>, 'DRAG_ENTER': <enum GDK_DRAG_ENTER of type Gdk.EventType>, 'DRAG_LEAVE': <enum GDK_DRAG_LEAVE of type Gdk.EventType>, 'DRAG_MOTION': <enum GDK_DRAG_MOTION of type Gdk.EventType>, 'DRAG_STATUS': <enum GDK_DRAG_STATUS of type Gdk.EventType>, 'DROP_START': <enum GDK_DROP_START of type Gdk.EventType>, 'DROP_FINISHED': <enum GDK_DROP_FINISHED of type Gdk.EventType>, 'CLIENT_EVENT': <enum GDK_CLIENT_EVENT of type Gdk.EventType>, 'VISIBILITY_NOTIFY': <enum GDK_VISIBILITY_NOTIFY of type Gdk.EventType>, 'SCROLL': <enum GDK_SCROLL of type Gdk.EventType>, 'WINDOW_STATE': <enum GDK_WINDOW_STATE of type Gdk.EventType>, 'SETTING': <enum GDK_SETTING of type Gdk.EventType>, 'OWNER_CHANGE': <enum GDK_OWNER_CHANGE of type Gdk.EventType>, 'GRAB_BROKEN': <enum GDK_GRAB_BROKEN of type Gdk.EventType>, 'DAMAGE': <enum GDK_DAMAGE of type Gdk.EventType>, 'TOUCH_BEGIN': <enum GDK_TOUCH_BEGIN of type Gdk.EventType>, 'TOUCH_UPDATE': <enum GDK_TOUCH_UPDATE of type Gdk.EventType>, 'TOUCH_END': <enum GDK_TOUCH_END of type Gdk.EventType>, 'TOUCH_CANCEL': <enum GDK_TOUCH_CANCEL of type Gdk.EventType>, 'TOUCHPAD_SWIPE': <enum GDK_TOUCHPAD_SWIPE of type Gdk.EventType>, 'TOUCHPAD_PINCH': <enum GDK_TOUCHPAD_PINCH of type Gdk.EventType>, 'PAD_BUTTON_PRESS': <enum GDK_PAD_BUTTON_PRESS of type Gdk.EventType>, 'PAD_BUTTON_RELEASE': <enum GDK_PAD_BUTTON_RELEASE of type Gdk.EventType>, 'PAD_RING': <enum GDK_PAD_RING of type Gdk.EventType>, 'PAD_STRIP': <enum GDK_PAD_STRIP of type Gdk.EventType>, 'PAD_GROUP_MODE': <enum GDK_PAD_GROUP_MODE of type Gdk.EventType>, 'EVENT_LAST': <enum GDK_EVENT_LAST of type Gdk.EventType>, '_2BUTTON_PRESS': <enum GDK_2BUTTON_PRESS of type Gdk.EventType>, '_3BUTTON_PRESS': <enum GDK_3BUTTON_PRESS of type Gdk.EventType>})"
-    __enum_values__ = {
-        -1: -1,
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-        31: 31,
-        32: 32,
-        33: 33,
-        34: 34,
-        35: 35,
-        36: 36,
-        37: 37,
-        38: 38,
-        39: 39,
-        40: 40,
-        41: 41,
-        42: 42,
-        43: 43,
-        44: 44,
-        45: 45,
-        46: 46,
-        47: 47,
-        48: 48,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkEventType (2575320112)>'
-    __info__ = gi.EnumInfo(EventType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NOTHING': <EventType.NOTHING: -1>, 'DELETE': <EventType.DELETE: 0>, 'DESTROY': <EventType.DESTROY: 1>, 'EXPOSE': <EventType.EXPOSE: 2>, 'MOTION_NOTIFY': <EventType.MOTION_NOTIFY: 3>, 'BUTTON_PRESS': <EventType.BUTTON_PRESS: 4>, '2BUTTON_PRESS': <EventType.2BUTTON_PRESS: 5>, 'DOUBLE_BUTTON_PRESS': <EventType.2BUTTON_PRESS: 5>, '3BUTTON_PRESS': <EventType.3BUTTON_PRESS: 6>, 'TRIPLE_BUTTON_PRESS': <EventType.3BUTTON_PRESS: 6>, 'BUTTON_RELEASE': <EventType.BUTTON_RELEASE: 7>, 'KEY_PRESS': <EventType.KEY_PRESS: 8>, 'KEY_RELEASE': <EventType.KEY_RELEASE: 9>, 'ENTER_NOTIFY': <EventType.ENTER_NOTIFY: 10>, 'LEAVE_NOTIFY': <EventType.LEAVE_NOTIFY: 11>, 'FOCUS_CHANGE': <EventType.FOCUS_CHANGE: 12>, 'CONFIGURE': <EventType.CONFIGURE: 13>, 'MAP': <EventType.MAP: 14>, 'UNMAP': <EventType.UNMAP: 15>, 'PROPERTY_NOTIFY': <EventType.PROPERTY_NOTIFY: 16>, 'SELECTION_CLEAR': <EventType.SELECTION_CLEAR: 17>, 'SELECTION_REQUEST': <EventType.SELECTION_REQUEST: 18>, 'SELECTION_NOTIFY': <EventType.SELECTION_NOTIFY: 19>, 'PROXIMITY_IN': <EventType.PROXIMITY_IN: 20>, 'PROXIMITY_OUT': <EventType.PROXIMITY_OUT: 21>, 'DRAG_ENTER': <EventType.DRAG_ENTER: 22>, 'DRAG_LEAVE': <EventType.DRAG_LEAVE: 23>, 'DRAG_MOTION': <EventType.DRAG_MOTION: 24>, 'DRAG_STATUS': <EventType.DRAG_STATUS: 25>, 'DROP_START': <EventType.DROP_START: 26>, 'DROP_FINISHED': <EventType.DROP_FINISHED: 27>, 'CLIENT_EVENT': <EventType.CLIENT_EVENT: 28>, 'VISIBILITY_NOTIFY': <EventType.VISIBILITY_NOTIFY: 29>, 'SCROLL': <EventType.SCROLL: 31>, 'WINDOW_STATE': <EventType.WINDOW_STATE: 32>, 'SETTING': <EventType.SETTING: 33>, 'OWNER_CHANGE': <EventType.OWNER_CHANGE: 34>, 'GRAB_BROKEN': <EventType.GRAB_BROKEN: 35>, 'DAMAGE': <EventType.DAMAGE: 36>, 'TOUCH_BEGIN': <EventType.TOUCH_BEGIN: 37>, 'TOUCH_UPDATE': <EventType.TOUCH_UPDATE: 38>, 'TOUCH_END': <EventType.TOUCH_END: 39>, 'TOUCH_CANCEL': <EventType.TOUCH_CANCEL: 40>, 'TOUCHPAD_SWIPE': <EventType.TOUCHPAD_SWIPE: 41>, 'TOUCHPAD_PINCH': <EventType.TOUCHPAD_PINCH: 42>, 'PAD_BUTTON_PRESS': <EventType.PAD_BUTTON_PRESS: 43>, 'PAD_BUTTON_RELEASE': <EventType.PAD_BUTTON_RELEASE: 44>, 'PAD_RING': <EventType.PAD_RING: 45>, 'PAD_STRIP': <EventType.PAD_STRIP: 46>, 'PAD_GROUP_MODE': <EventType.PAD_GROUP_MODE: 47>, 'EVENT_LAST': <EventType.EVENT_LAST: 48>})"
+    __name__ = 'EventType'
+    __qualname__ = 'EventType'
 
 

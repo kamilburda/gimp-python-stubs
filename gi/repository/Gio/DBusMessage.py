@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -51,7 +56,7 @@ class DBusMessage(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -83,6 +88,9 @@ class DBusMessage(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -282,7 +290,8 @@ class DBusMessage(__gi_overrides_GObject.Object):
         """ lock(self) """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gio.DBusMessage """
         pass
 
@@ -290,11 +299,13 @@ class DBusMessage(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_from_blob(self, blob, capabilities): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_blob(cls, blob, capabilities): # real signature unknown; restored from __doc__
         """ new_from_blob(blob:list, capabilities:Gio.DBusCapabilityFlags) -> Gio.DBusMessage """
         pass
 
-    def new_method_call(self, name=None, path, interface_=None, method): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_method_call(cls, name=None, path, interface_=None, method): # real signature unknown; restored from __doc__
         """ new_method_call(name:str=None, path:str, interface_:str=None, method:str) -> Gio.DBusMessage """
         pass
 
@@ -306,7 +317,8 @@ class DBusMessage(__gi_overrides_GObject.Object):
         """ new_method_reply(self) -> Gio.DBusMessage """
         pass
 
-    def new_signal(self, path, interface_, signal): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_signal(cls, path, interface_, signal): # real signature unknown; restored from __doc__
         """ new_signal(path:str, interface_:str, signal:str) -> Gio.DBusMessage """
         pass
 
@@ -455,20 +467,20 @@ class DBusMessage(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -498,7 +510,11 @@ class DBusMessage(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -596,12 +612,12 @@ class DBusMessage(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a7937511b0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea708486d0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(DBusMessage), '__module__': 'gi.repository.Gio', '__gtype__': <GType GDBusMessage (2472619104)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_from_blob': gi.FunctionInfo(new_from_blob, bound=None), 'new_method_call': gi.FunctionInfo(new_method_call, bound=None), 'new_signal': gi.FunctionInfo(new_signal, bound=None), 'bytes_needed': gi.FunctionInfo(bytes_needed, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'get_arg0': gi.FunctionInfo(get_arg0, bound=None), 'get_arg0_path': gi.FunctionInfo(get_arg0_path, bound=None), 'get_body': gi.FunctionInfo(get_body, bound=None), 'get_byte_order': gi.FunctionInfo(get_byte_order, bound=None), 'get_destination': gi.FunctionInfo(get_destination, bound=None), 'get_error_name': gi.FunctionInfo(get_error_name, bound=None), 'get_flags': gi.FunctionInfo(get_flags, bound=None), 'get_header': gi.FunctionInfo(get_header, bound=None), 'get_header_fields': gi.FunctionInfo(get_header_fields, bound=None), 'get_interface': gi.FunctionInfo(get_interface, bound=None), 'get_locked': gi.FunctionInfo(get_locked, bound=None), 'get_member': gi.FunctionInfo(get_member, bound=None), 'get_message_type': gi.FunctionInfo(get_message_type, bound=None), 'get_num_unix_fds': gi.FunctionInfo(get_num_unix_fds, bound=None), 'get_path': gi.FunctionInfo(get_path, bound=None), 'get_reply_serial': gi.FunctionInfo(get_reply_serial, bound=None), 'get_sender': gi.FunctionInfo(get_sender, bound=None), 'get_serial': gi.FunctionInfo(get_serial, bound=None), 'get_signature': gi.FunctionInfo(get_signature, bound=None), 'lock': gi.FunctionInfo(lock, bound=None), 'new_method_error_literal': gi.FunctionInfo(new_method_error_literal, bound=None), 'new_method_reply': gi.FunctionInfo(new_method_reply, bound=None), 'print_': gi.FunctionInfo(print, bound=None), 'set_body': gi.FunctionInfo(set_body, bound=None), 'set_byte_order': gi.FunctionInfo(set_byte_order, bound=None), 'set_destination': gi.FunctionInfo(set_destination, bound=None), 'set_error_name': gi.FunctionInfo(set_error_name, bound=None), 'set_flags': gi.FunctionInfo(set_flags, bound=None), 'set_header': gi.FunctionInfo(set_header, bound=None), 'set_interface': gi.FunctionInfo(set_interface, bound=None), 'set_member': gi.FunctionInfo(set_member, bound=None), 'set_message_type': gi.FunctionInfo(set_message_type, bound=None), 'set_num_unix_fds': gi.FunctionInfo(set_num_unix_fds, bound=None), 'set_path': gi.FunctionInfo(set_path, bound=None), 'set_reply_serial': gi.FunctionInfo(set_reply_serial, bound=None), 'set_sender': gi.FunctionInfo(set_sender, bound=None), 'set_serial': gi.FunctionInfo(set_serial, bound=None), 'set_signature': gi.FunctionInfo(set_signature, bound=None), 'to_blob': gi.FunctionInfo(to_blob, bound=None), 'to_gerror': gi.FunctionInfo(to_gerror, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(DBusMessage), '__module__': 'gi.repository.Gio', '__gtype__': <GType GDBusMessage (1841874720)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_from_blob': <classmethod(gi.FunctionInfo(new_from_blob))>, 'new_method_call': <classmethod(gi.FunctionInfo(new_method_call))>, 'new_signal': <classmethod(gi.FunctionInfo(new_signal))>, 'bytes_needed': <staticmethod(gi.FunctionInfo(bytes_needed))>, 'copy': gi.FunctionInfo(copy), 'get_arg0': gi.FunctionInfo(get_arg0), 'get_arg0_path': gi.FunctionInfo(get_arg0_path), 'get_body': gi.FunctionInfo(get_body), 'get_byte_order': gi.FunctionInfo(get_byte_order), 'get_destination': gi.FunctionInfo(get_destination), 'get_error_name': gi.FunctionInfo(get_error_name), 'get_flags': gi.FunctionInfo(get_flags), 'get_header': gi.FunctionInfo(get_header), 'get_header_fields': gi.FunctionInfo(get_header_fields), 'get_interface': gi.FunctionInfo(get_interface), 'get_locked': gi.FunctionInfo(get_locked), 'get_member': gi.FunctionInfo(get_member), 'get_message_type': gi.FunctionInfo(get_message_type), 'get_num_unix_fds': gi.FunctionInfo(get_num_unix_fds), 'get_path': gi.FunctionInfo(get_path), 'get_reply_serial': gi.FunctionInfo(get_reply_serial), 'get_sender': gi.FunctionInfo(get_sender), 'get_serial': gi.FunctionInfo(get_serial), 'get_signature': gi.FunctionInfo(get_signature), 'lock': gi.FunctionInfo(lock), 'new_method_error_literal': gi.FunctionInfo(new_method_error_literal), 'new_method_reply': gi.FunctionInfo(new_method_reply), 'print_': gi.FunctionInfo(print), 'set_body': gi.FunctionInfo(set_body), 'set_byte_order': gi.FunctionInfo(set_byte_order), 'set_destination': gi.FunctionInfo(set_destination), 'set_error_name': gi.FunctionInfo(set_error_name), 'set_flags': gi.FunctionInfo(set_flags), 'set_header': gi.FunctionInfo(set_header), 'set_interface': gi.FunctionInfo(set_interface), 'set_member': gi.FunctionInfo(set_member), 'set_message_type': gi.FunctionInfo(set_message_type), 'set_num_unix_fds': gi.FunctionInfo(set_num_unix_fds), 'set_path': gi.FunctionInfo(set_path), 'set_reply_serial': gi.FunctionInfo(set_reply_serial), 'set_sender': gi.FunctionInfo(set_sender), 'set_serial': gi.FunctionInfo(set_serial), 'set_signature': gi.FunctionInfo(set_signature), 'to_blob': gi.FunctionInfo(to_blob), 'to_gerror': gi.FunctionInfo(to_gerror)})"
     __gdoc__ = 'Object GDBusMessage\n\nProperties from GDBusMessage:\n  locked -> gboolean: locked\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GDBusMessage (2472619104)>'
+    __gtype__ = None # (!) real value is '<GType GDBusMessage (1841874720)>'
     __info__ = ObjectInfo(DBusMessage)
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,17 +7,17 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class BuilderError(__gobject.GEnum):
+class BuilderError(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +76,7 @@ class BuilderError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -86,10 +85,6 @@ class BuilderError(__gobject.GEnum):
     def is_integer(self, *args, **kwargs): # real signature unknown
         """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
-
-    def quark(self): # real signature unknown; restored from __doc__
-        """ quark() -> int """
-        return 0
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
@@ -104,7 +99,7 @@ class BuilderError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -132,12 +127,23 @@ class BuilderError(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -166,6 +172,10 @@ class BuilderError(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -211,6 +221,14 @@ class BuilderError(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -236,8 +254,8 @@ class BuilderError(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -268,15 +286,16 @@ class BuilderError(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -340,7 +359,7 @@ class BuilderError(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -382,10 +401,6 @@ class BuilderError(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     DUPLICATE_ID = 8
     INVALID_ATTRIBUTE = 3
@@ -401,25 +416,9 @@ class BuilderError(__gobject.GEnum):
     TEMPLATE_MISMATCH = 10
     UNHANDLED_TAG = 1
     VERSION_MISMATCH = 7
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gtk', '__dict__': <attribute '__dict__' of 'BuilderError' objects>, '__doc__': None, '__gtype__': <GType GtkBuilderError (3855032592)>, '__enum_values__': {0: <enum GTK_BUILDER_ERROR_INVALID_TYPE_FUNCTION of type Gtk.BuilderError>, 1: <enum GTK_BUILDER_ERROR_UNHANDLED_TAG of type Gtk.BuilderError>, 2: <enum GTK_BUILDER_ERROR_MISSING_ATTRIBUTE of type Gtk.BuilderError>, 3: <enum GTK_BUILDER_ERROR_INVALID_ATTRIBUTE of type Gtk.BuilderError>, 4: <enum GTK_BUILDER_ERROR_INVALID_TAG of type Gtk.BuilderError>, 5: <enum GTK_BUILDER_ERROR_MISSING_PROPERTY_VALUE of type Gtk.BuilderError>, 6: <enum GTK_BUILDER_ERROR_INVALID_VALUE of type Gtk.BuilderError>, 7: <enum GTK_BUILDER_ERROR_VERSION_MISMATCH of type Gtk.BuilderError>, 8: <enum GTK_BUILDER_ERROR_DUPLICATE_ID of type Gtk.BuilderError>, 9: <enum GTK_BUILDER_ERROR_OBJECT_TYPE_REFUSED of type Gtk.BuilderError>, 10: <enum GTK_BUILDER_ERROR_TEMPLATE_MISMATCH of type Gtk.BuilderError>, 11: <enum GTK_BUILDER_ERROR_INVALID_PROPERTY of type Gtk.BuilderError>, 12: <enum GTK_BUILDER_ERROR_INVALID_SIGNAL of type Gtk.BuilderError>, 13: <enum GTK_BUILDER_ERROR_INVALID_ID of type Gtk.BuilderError>}, '__info__': gi.EnumInfo(BuilderError), 'INVALID_TYPE_FUNCTION': <enum GTK_BUILDER_ERROR_INVALID_TYPE_FUNCTION of type Gtk.BuilderError>, 'UNHANDLED_TAG': <enum GTK_BUILDER_ERROR_UNHANDLED_TAG of type Gtk.BuilderError>, 'MISSING_ATTRIBUTE': <enum GTK_BUILDER_ERROR_MISSING_ATTRIBUTE of type Gtk.BuilderError>, 'INVALID_ATTRIBUTE': <enum GTK_BUILDER_ERROR_INVALID_ATTRIBUTE of type Gtk.BuilderError>, 'INVALID_TAG': <enum GTK_BUILDER_ERROR_INVALID_TAG of type Gtk.BuilderError>, 'MISSING_PROPERTY_VALUE': <enum GTK_BUILDER_ERROR_MISSING_PROPERTY_VALUE of type Gtk.BuilderError>, 'INVALID_VALUE': <enum GTK_BUILDER_ERROR_INVALID_VALUE of type Gtk.BuilderError>, 'VERSION_MISMATCH': <enum GTK_BUILDER_ERROR_VERSION_MISMATCH of type Gtk.BuilderError>, 'DUPLICATE_ID': <enum GTK_BUILDER_ERROR_DUPLICATE_ID of type Gtk.BuilderError>, 'OBJECT_TYPE_REFUSED': <enum GTK_BUILDER_ERROR_OBJECT_TYPE_REFUSED of type Gtk.BuilderError>, 'TEMPLATE_MISMATCH': <enum GTK_BUILDER_ERROR_TEMPLATE_MISMATCH of type Gtk.BuilderError>, 'INVALID_PROPERTY': <enum GTK_BUILDER_ERROR_INVALID_PROPERTY of type Gtk.BuilderError>, 'INVALID_SIGNAL': <enum GTK_BUILDER_ERROR_INVALID_SIGNAL of type Gtk.BuilderError>, 'INVALID_ID': <enum GTK_BUILDER_ERROR_INVALID_ID of type Gtk.BuilderError>, 'quark': gi.FunctionInfo(quark, bound=None)})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-    }
-    __gtype__ = None # (!) real value is '<GType GtkBuilderError (3855032592)>'
-    __info__ = gi.EnumInfo(BuilderError)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'INVALID_TYPE_FUNCTION': <BuilderError.INVALID_TYPE_FUNCTION: 0>, 'UNHANDLED_TAG': <BuilderError.UNHANDLED_TAG: 1>, 'MISSING_ATTRIBUTE': <BuilderError.MISSING_ATTRIBUTE: 2>, 'INVALID_ATTRIBUTE': <BuilderError.INVALID_ATTRIBUTE: 3>, 'INVALID_TAG': <BuilderError.INVALID_TAG: 4>, 'MISSING_PROPERTY_VALUE': <BuilderError.MISSING_PROPERTY_VALUE: 5>, 'INVALID_VALUE': <BuilderError.INVALID_VALUE: 6>, 'VERSION_MISMATCH': <BuilderError.VERSION_MISMATCH: 7>, 'DUPLICATE_ID': <BuilderError.DUPLICATE_ID: 8>, 'OBJECT_TYPE_REFUSED': <BuilderError.OBJECT_TYPE_REFUSED: 9>, 'TEMPLATE_MISMATCH': <BuilderError.TEMPLATE_MISMATCH: 10>, 'INVALID_PROPERTY': <BuilderError.INVALID_PROPERTY: 11>, 'INVALID_SIGNAL': <BuilderError.INVALID_SIGNAL: 12>, 'INVALID_ID': <BuilderError.INVALID_ID: 13>})"
+    __name__ = 'BuilderError'
+    __qualname__ = 'BuilderError'
 
 

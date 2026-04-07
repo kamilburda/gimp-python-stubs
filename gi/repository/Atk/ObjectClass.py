@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -192,7 +185,7 @@ class ObjectClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ObjectClass), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ObjectClass' objects>, '__weakref__': <attribute '__weakref__' of 'ObjectClass' objects>, '__doc__': None, 'parent': <property object at 0x0000017338143240>, 'get_name': <property object at 0x0000017338143330>, 'get_description': <property object at 0x0000017338143420>, 'get_parent': <property object at 0x0000017338143510>, 'get_n_children': <property object at 0x0000017338143600>, 'ref_child': <property object at 0x00000173381436f0>, 'get_index_in_parent': <property object at 0x00000173381437e0>, 'ref_relation_set': <property object at 0x00000173381438d0>, 'get_role': <property object at 0x00000173381439c0>, 'get_layer': <property object at 0x0000017338143ab0>, 'get_mdi_zorder': <property object at 0x0000017338143ba0>, 'ref_state_set': <property object at 0x0000017338143c90>, 'set_name': <property object at 0x0000017338143d80>, 'set_description': <property object at 0x0000017338143e70>, 'set_parent': <property object at 0x0000017338143f60>, 'set_role': <property object at 0x000001733813c090>, 'connect_property_change_handler': <property object at 0x000001733813c1d0>, 'remove_property_change_handler': <property object at 0x000001733813c310>, 'initialize': <property object at 0x000001733813c3b0>, 'children_changed': <property object at 0x000001733813c4a0>, 'focus_event': <property object at 0x000001733813c590>, 'property_change': <property object at 0x000001733813c680>, 'state_change': <property object at 0x000001733813c770>, 'visible_data_changed': <property object at 0x000001733813c860>, 'active_descendant_changed': <property object at 0x000001733813c9a0>, 'get_attributes': <property object at 0x000001733813ca90>, 'get_object_locale': <property object at 0x000001733813cb80>, 'pad1': <property object at 0x000001733813cc70>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ObjectClass), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ObjectClass' objects>, '__weakref__': <attribute '__weakref__' of 'ObjectClass' objects>, '__doc__': None, 'parent': <property object at 0x000001c85daffab0>, 'get_name': <property object at 0x000001c85daffba0>, 'get_description': <property object at 0x000001c85daffc90>, 'get_parent': <property object at 0x000001c85daffd80>, 'get_n_children': <property object at 0x000001c85daffe70>, 'ref_child': <property object at 0x000001c85dafff60>, 'get_index_in_parent': <property object at 0x000001c85dc4c090>, 'ref_relation_set': <property object at 0x000001c85dc4c180>, 'get_role': <property object at 0x000001c85dc4c270>, 'get_layer': <property object at 0x000001c85dc4c360>, 'get_mdi_zorder': <property object at 0x000001c85dc4c450>, 'ref_state_set': <property object at 0x000001c85dc4c540>, 'set_name': <property object at 0x000001c85dc4c630>, 'set_description': <property object at 0x000001c85dc4c720>, 'set_parent': <property object at 0x000001c85dc4c810>, 'set_role': <property object at 0x000001c85dc4c900>, 'connect_property_change_handler': <property object at 0x000001c85dc4ca40>, 'remove_property_change_handler': <property object at 0x000001c85dc4cb80>, 'initialize': <property object at 0x000001c85dc4cc20>, 'children_changed': <property object at 0x000001c85dc4cd10>, 'focus_event': <property object at 0x000001c85dc4ce00>, 'property_change': <property object at 0x000001c85dc4cef0>, 'state_change': <property object at 0x000001c85dc4cfe0>, 'visible_data_changed': <property object at 0x000001c85dc4d0d0>, 'active_descendant_changed': <property object at 0x000001c85dc4d210>, 'get_attributes': <property object at 0x000001c85dc4d300>, 'get_object_locale': <property object at 0x000001c85dc4d3f0>, 'pad1': <property object at 0x000001c85dc4d4e0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ObjectClass)
 

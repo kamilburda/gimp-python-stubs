@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class VolumeIface(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -172,7 +181,7 @@ class VolumeIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VolumeIface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'VolumeIface' objects>, '__weakref__': <attribute '__weakref__' of 'VolumeIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001a793d73920>, 'changed': <property object at 0x000001a793d73a10>, 'removed': <property object at 0x000001a793d73b00>, 'get_name': <property object at 0x000001a793d73ba0>, 'get_icon': <property object at 0x000001a793d73c90>, 'get_uuid': <property object at 0x000001a793d73d80>, 'get_drive': <property object at 0x000001a793d73e70>, 'get_mount': <property object at 0x000001a793d73f60>, 'can_mount': <property object at 0x000001a793e70090>, 'can_eject': <property object at 0x000001a793e70180>, 'mount_fn': <property object at 0x000001a793e70270>, 'mount_finish': <property object at 0x000001a793e70360>, 'eject': <property object at 0x000001a793e70450>, 'eject_finish': <property object at 0x000001a793e70540>, 'get_identifier': <property object at 0x000001a793e70630>, 'enumerate_identifiers': <property object at 0x000001a793e70770>, 'should_automount': <property object at 0x000001a793e70860>, 'get_activation_root': <property object at 0x000001a793e70950>, 'eject_with_operation': <property object at 0x000001a793e70a40>, 'eject_with_operation_finish': <property object at 0x000001a793e70b30>, 'get_sort_key': <property object at 0x000001a793e70bd0>, 'get_symbolic_icon': <property object at 0x000001a793e70d10>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VolumeIface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'VolumeIface' objects>, '__weakref__': <attribute '__weakref__' of 'VolumeIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001ea709f9850>, 'changed': <property object at 0x000001ea709f9940>, 'removed': <property object at 0x000001ea709f9a30>, 'get_name': <property object at 0x000001ea709f9b20>, 'get_icon': <property object at 0x000001ea709f9c10>, 'get_uuid': <property object at 0x000001ea709f9d00>, 'get_drive': <property object at 0x000001ea709f9df0>, 'get_mount': <property object at 0x000001ea709f9ee0>, 'can_mount': <property object at 0x000001ea709f9fd0>, 'can_eject': <property object at 0x000001ea709fa0c0>, 'mount_fn': <property object at 0x000001ea709fa1b0>, 'mount_finish': <property object at 0x000001ea709fa2a0>, 'eject': <property object at 0x000001ea709fa390>, 'eject_finish': <property object at 0x000001ea709fa480>, 'get_identifier': <property object at 0x000001ea709fa570>, 'enumerate_identifiers': <property object at 0x000001ea709fa660>, 'should_automount': <property object at 0x000001ea709fa750>, 'get_activation_root': <property object at 0x000001ea709fa840>, 'eject_with_operation': <property object at 0x000001ea709fa930>, 'eject_with_operation_finish': <property object at 0x000001ea709faa70>, 'get_sort_key': <property object at 0x000001ea709fab10>, 'get_symbolic_icon': <property object at 0x000001ea709fac00>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(VolumeIface)
 

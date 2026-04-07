@@ -1,15 +1,7 @@
 # encoding: utf-8
 # module gi.repository.GioWin32
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GioWin32-2.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
@@ -24,114 +16,10 @@ _namespace = 'GioWin32'
 
 _version = '2.0'
 
-__weakref__ = None
-
 # functions
 
 def registry_settings_backend_new(registry_key=None): # real signature unknown; restored from __doc__
     """ registry_settings_backend_new(registry_key:str=None) -> Gio.SettingsBackend """
-    pass
-
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """ Default object formatter. """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    """ Might raise gi._gi.RepositoryError """
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
     pass
 
 # classes
@@ -181,7 +69,7 @@ class InputStream(__gi_repository_Gio.InputStream):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -221,6 +109,9 @@ class InputStream(__gi_repository_Gio.InputStream):
 
     def do_close_fn(self, *args, **kwargs): # real signature unknown
         """ close_fn(self, cancellable:Gio.Cancellable=None) -> bool """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_read_async(self, *args, **kwargs): # real signature unknown
@@ -284,16 +175,16 @@ class InputStream(__gi_repository_Gio.InputStream):
         """ getv(self, names:list, values:list) """
         pass
 
-    def get_close_handle(self, stream): # real signature unknown; restored from __doc__
-        """ get_close_handle(stream:Gio.Win32InputStream) -> bool """
+    def get_close_handle(self): # real signature unknown; restored from __doc__
+        """ get_close_handle(self) -> bool """
         return False
 
     def get_data(self, *args, **kargs): # reliably restored by inspect
         # no doc
         pass
 
-    def get_handle(self, stream): # real signature unknown; restored from __doc__
-        """ get_handle(stream:Gio.Win32InputStream) """
+    def get_handle(self): # real signature unknown; restored from __doc__
+        """ get_handle(self) """
         pass
 
     def get_properties(self, *args, **kwargs): # real signature unknown
@@ -380,7 +271,8 @@ class InputStream(__gi_repository_Gio.InputStream):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, handle=None, close_handle): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, handle=None, close_handle): # real signature unknown; restored from __doc__
         """ new(handle=None, close_handle:bool) -> Gio.InputStream """
         pass
 
@@ -456,8 +348,8 @@ class InputStream(__gi_repository_Gio.InputStream):
         """ run_dispose(self) """
         pass
 
-    def set_close_handle(self, stream, close_handle): # real signature unknown; restored from __doc__
-        """ set_close_handle(stream:Gio.Win32InputStream, close_handle:bool) """
+    def set_close_handle(self, close_handle): # real signature unknown; restored from __doc__
+        """ set_close_handle(self, close_handle:bool) """
         pass
 
     def set_data(self, *args, **kargs): # reliably restored by inspect
@@ -517,20 +409,20 @@ class InputStream(__gi_repository_Gio.InputStream):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -560,7 +452,11 @@ class InputStream(__gi_repository_Gio.InputStream):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -662,12 +558,12 @@ class InputStream(__gi_repository_Gio.InputStream):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002027ea0ac50>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ce9afe8460>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(InputStream), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType GWin32InputStream (2074872432)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_close_handle': gi.FunctionInfo(get_close_handle, bound=None), 'get_handle': gi.FunctionInfo(get_handle, bound=None), 'set_close_handle': gi.FunctionInfo(set_close_handle, bound=None), 'parent_instance': <property object at 0x000002027eb06840>, 'priv': <property object at 0x000002027e48c680>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(InputStream), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType GWin32InputStream (2593545904)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_close_handle': gi.FunctionInfo(get_close_handle), 'get_handle': gi.FunctionInfo(get_handle), 'set_close_handle': gi.FunctionInfo(set_close_handle), 'parent_instance': <property object at 0x000001ce9d3be2a0>, 'priv': <property object at 0x000001ce9d3be390>})"
     __gdoc__ = 'Object GWin32InputStream\n\nProperties from GWin32InputStream:\n  handle -> gpointer: handle\n  close-handle -> gboolean: close-handle\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GWin32InputStream (2074872432)>'
+    __gtype__ = None # (!) real value is '<GType GWin32InputStream (2593545904)>'
     __info__ = ObjectInfo(InputStream)
 
 
@@ -692,7 +588,11 @@ class InputStreamClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -796,7 +696,7 @@ class InputStreamClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(InputStreamClass), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'InputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'InputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002027e4aa520>, '_g_reserved1': <property object at 0x000002027eb34a90>, '_g_reserved2': <property object at 0x000002027eb36d40>, '_g_reserved3': <property object at 0x000002027eb36e30>, '_g_reserved4': <property object at 0x000002027eb36f20>, '_g_reserved5': <property object at 0x000002027eb37010>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(InputStreamClass), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'InputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'InputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ce9d3be4d0>, '_g_reserved1': <property object at 0x000001ce9d3be5c0>, '_g_reserved2': <property object at 0x000001ce9d3be6b0>, '_g_reserved3': <property object at 0x000001ce9d3be7a0>, '_g_reserved4': <property object at 0x000001ce9d3be890>, '_g_reserved5': <property object at 0x000001ce9d3be980>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(InputStreamClass)
 
@@ -816,7 +716,11 @@ class InputStreamPrivate(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -933,7 +837,11 @@ class NetworkMonitor(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -1029,7 +937,7 @@ class NetworkMonitor(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(NetworkMonitor), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'NetworkMonitor' objects>, '__weakref__': <attribute '__weakref__' of 'NetworkMonitor' objects>, '__doc__': None, 'parent_instance': <property object at 0x000002027eb371f0>, 'priv': <property object at 0x000002027eb372e0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(NetworkMonitor), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'NetworkMonitor' objects>, '__weakref__': <attribute '__weakref__' of 'NetworkMonitor' objects>, '__doc__': None, 'parent_instance': <property object at 0x000001ce9d3bfa60>, 'priv': <property object at 0x000001ce9d3bfb50>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(NetworkMonitor)
 
@@ -1055,7 +963,11 @@ class NetworkMonitorClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -1149,7 +1061,7 @@ class NetworkMonitorClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(NetworkMonitorClass), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'NetworkMonitorClass' objects>, '__weakref__': <attribute '__weakref__' of 'NetworkMonitorClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002027eb37420>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(NetworkMonitorClass), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'NetworkMonitorClass' objects>, '__weakref__': <attribute '__weakref__' of 'NetworkMonitorClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ce9d3bfd30>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(NetworkMonitorClass)
 
@@ -1169,7 +1081,11 @@ class NetworkMonitorPrivate(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -1310,7 +1226,7 @@ class OutputStream(__gi_repository_Gio.OutputStream):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -1350,6 +1266,9 @@ class OutputStream(__gi_repository_Gio.OutputStream):
 
     def do_close_fn(self, *args, **kwargs): # real signature unknown
         """ close_fn(self, cancellable:Gio.Cancellable=None) -> bool """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_flush(self, *args, **kwargs): # real signature unknown
@@ -1449,16 +1368,16 @@ class OutputStream(__gi_repository_Gio.OutputStream):
         """ getv(self, names:list, values:list) """
         pass
 
-    def get_close_handle(self, stream): # real signature unknown; restored from __doc__
-        """ get_close_handle(stream:Gio.Win32OutputStream) -> bool """
+    def get_close_handle(self): # real signature unknown; restored from __doc__
+        """ get_close_handle(self) -> bool """
         return False
 
     def get_data(self, *args, **kargs): # reliably restored by inspect
         # no doc
         pass
 
-    def get_handle(self, stream): # real signature unknown; restored from __doc__
-        """ get_handle(stream:Gio.Win32OutputStream) """
+    def get_handle(self): # real signature unknown; restored from __doc__
+        """ get_handle(self) """
         pass
 
     def get_properties(self, *args, **kwargs): # real signature unknown
@@ -1549,7 +1468,8 @@ class OutputStream(__gi_repository_Gio.OutputStream):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, handle=None, close_handle): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, handle=None, close_handle): # real signature unknown; restored from __doc__
         """ new(handle=None, close_handle:bool) -> Gio.OutputStream """
         pass
 
@@ -1589,8 +1509,8 @@ class OutputStream(__gi_repository_Gio.OutputStream):
         """ run_dispose(self) """
         pass
 
-    def set_close_handle(self, stream, close_handle): # real signature unknown; restored from __doc__
-        """ set_close_handle(stream:Gio.Win32OutputStream, close_handle:bool) """
+    def set_close_handle(self, close_handle): # real signature unknown; restored from __doc__
+        """ set_close_handle(self, close_handle:bool) """
         pass
 
     def set_data(self, *args, **kargs): # reliably restored by inspect
@@ -1710,20 +1630,20 @@ class OutputStream(__gi_repository_Gio.OutputStream):
         """ write_finish(self, result:Gio.AsyncResult) -> int """
         return 0
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -1753,7 +1673,11 @@ class OutputStream(__gi_repository_Gio.OutputStream):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -1855,12 +1779,12 @@ class OutputStream(__gi_repository_Gio.OutputStream):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002027ea0b040>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ce9d2c5cc0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(OutputStream), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType GWin32OutputStream (2074872544)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_close_handle': gi.FunctionInfo(get_close_handle, bound=None), 'get_handle': gi.FunctionInfo(get_handle, bound=None), 'set_close_handle': gi.FunctionInfo(set_close_handle, bound=None), 'parent_instance': <property object at 0x000002027eb37ab0>, 'priv': <property object at 0x000002027eb37ba0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(OutputStream), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType GWin32OutputStream (2593550944)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_close_handle': gi.FunctionInfo(get_close_handle), 'get_handle': gi.FunctionInfo(get_handle), 'set_close_handle': gi.FunctionInfo(set_close_handle), 'parent_instance': <property object at 0x000001ce9d3b0180>, 'priv': <property object at 0x000001ce9d3b0270>})"
     __gdoc__ = 'Object GWin32OutputStream\n\nProperties from GWin32OutputStream:\n  handle -> gpointer: handle\n  close-handle -> gboolean: close-handle\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GWin32OutputStream (2074872544)>'
+    __gtype__ = None # (!) real value is '<GType GWin32OutputStream (2593550944)>'
     __info__ = ObjectInfo(OutputStream)
 
 
@@ -1885,7 +1809,11 @@ class OutputStreamClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -1989,7 +1917,7 @@ class OutputStreamClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(OutputStreamClass), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'OutputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'OutputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002027eb37d30>, '_g_reserved1': <property object at 0x000002027eb37e20>, '_g_reserved2': <property object at 0x000002027eb37f10>, '_g_reserved3': <property object at 0x000002027eaf4040>, '_g_reserved4': <property object at 0x000002027eaf4130>, '_g_reserved5': <property object at 0x000002027eaf4220>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(OutputStreamClass), '__module__': 'gi.repository.GioWin32', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'OutputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'OutputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ce9d3b03b0>, '_g_reserved1': <property object at 0x000001ce9d3b04a0>, '_g_reserved2': <property object at 0x000001ce9d3b0590>, '_g_reserved3': <property object at 0x000001ce9d3b0680>, '_g_reserved4': <property object at 0x000001ce9d3b0770>, '_g_reserved5': <property object at 0x000001ce9d3b0860>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(OutputStreamClass)
 
@@ -2009,7 +1937,11 @@ class OutputStreamPrivate(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -2105,133 +2037,11 @@ class OutputStreamPrivate(__gi.Struct):
     __info__ = StructInfo(OutputStreamPrivate)
 
 
-class __class__(object):
-    """
-    An object which wraps an introspection typelib.
-    
-        This wrapping creates a python module like representation of the typelib
-        using gi repository as a foundation. Accessing attributes of the module
-        will dynamically pull them in and create wrappers for the members.
-        These members are then cached on this introspection module.
-    """
-    def __delattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement delattr(self, name). """
-        pass
-
-    def __dir__(self): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __eq__(self, *args, **kwargs): # real signature unknown
-        """ Return self==value. """
-        pass
-
-    def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
-        pass
-
-    def __getattribute__(self, *args, **kwargs): # real signature unknown
-        """ Return getattr(self, name). """
-        pass
-
-    def __getattr__(self, name): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __getstate__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __ge__(self, *args, **kwargs): # real signature unknown
-        """ Return self>=value. """
-        pass
-
-    def __gt__(self, *args, **kwargs): # real signature unknown
-        """ Return self>value. """
-        pass
-
-    def __hash__(self, *args, **kwargs): # real signature unknown
-        """ Return hash(self). """
-        pass
-
-    def __init_subclass__(self, *args, **kwargs): # real signature unknown
-        """
-        This method is called when a class is subclassed.
-        
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-        pass
-
-    def __init__(self, namespace, version=None): # reliably restored by inspect
-        """ Might raise gi._gi.RepositoryError """
-        pass
-
-    def __le__(self, *args, **kwargs): # real signature unknown
-        """ Return self<=value. """
-        pass
-
-    def __lt__(self, *args, **kwargs): # real signature unknown
-        """ Return self<value. """
-        pass
-
-    @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
-        pass
-
-    def __ne__(self, *args, **kwargs): # real signature unknown
-        """ Return self!=value. """
-        pass
-
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __reduce__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __repr__(self): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __setattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement setattr(self, name, value). """
-        pass
-
-    def __sizeof__(self, *args, **kwargs): # real signature unknown
-        """ Size of object in memory, in bytes. """
-        pass
-
-    def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
-        pass
-
-    def __subclasshook__(self, *args, **kwargs): # real signature unknown
-        """
-        Abstract classes can override this to customize issubclass().
-        
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-        pass
-
-    __weakref__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """list of weak references to the object"""
-
-
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.module', '__doc__': 'An object which wraps an introspection typelib.\\n\\n    This wrapping creates a python module like representation of the typelib\\n    using gi repository as a foundation. Accessing attributes of the module\\n    will dynamically pull them in and create wrappers for the members.\\n    These members are then cached on this introspection module.\\n    ', '__init__': <function IntrospectionModule.__init__ at 0x000002027e408720>, '__getattr__': <function IntrospectionModule.__getattr__ at 0x000002027e408900>, '__repr__': <function IntrospectionModule.__repr__ at 0x000002027e4089a0>, '__dir__': <function IntrospectionModule.__dir__ at 0x000002027e408a40>, '__dict__': <attribute '__dict__' of 'IntrospectionModule' objects>, '__weakref__': <attribute '__weakref__' of 'IntrospectionModule' objects>})"
-
-
 # variables with complex values
 
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000002027db32090>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001ce9af16fc0>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GioWin32', loader=<gi.importer.DynamicImporter object at 0x000002027db32090>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GioWin32', loader=<gi.importer.DynamicImporter object at 0x000001ce9af16fc0>)"
 

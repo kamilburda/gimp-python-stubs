@@ -4,9 +4,9 @@
 # no doc
 
 # imports
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
+import enum as __enum
 import gi as __gi
 import gobject as __gobject
 
@@ -38,9 +38,14 @@ class Async(object):
         pass
 
     def __del__(self, *args, **kwargs): # real signature unknown
+        """ Called when the instance is about to be destroyed. """
         pass
 
     def __init__(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Implement iter(self). """
         pass
 
     @staticmethod # known case of __new__

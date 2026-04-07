@@ -1,26 +1,20 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class BablVariant(__gobject.GEnum):
+class BablVariant(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -130,12 +124,23 @@ class BablVariant(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -164,6 +169,10 @@ class BablVariant(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -198,7 +207,8 @@ class BablVariant(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +217,14 @@ class BablVariant(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -234,8 +252,8 @@ class BablVariant(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -266,15 +284,16 @@ class BablVariant(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -338,7 +357,7 @@ class BablVariant(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -380,10 +399,6 @@ class BablVariant(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ADD_ALPHA = 8
     FLOAT = 0
@@ -394,20 +409,9 @@ class BablVariant(__gobject.GEnum):
     PERCEPTUAL = 3
     PERCEPTUAL_PREMULTIPLIED = 5
     PERCEPTUAL_PREMULTIPLIED_IF_ALPHA = 7
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gegl', '__dict__': <attribute '__dict__' of 'BablVariant' objects>, '__doc__': None, '__gtype__': <GType GeglBablVariant (426594912)>, '__enum_values__': {0: <enum Float of type Gegl.BablVariant>, 1: <enum Linear of type Gegl.BablVariant>, 2: <enum Non-linear of type Gegl.BablVariant>, 3: <enum Perceptual of type Gegl.BablVariant>, 4: <enum Linear-premultiplied of type Gegl.BablVariant>, 5: <enum Perceptual-premultiplied of type Gegl.BablVariant>, 6: <enum Linear-premultiplied-if-alpha of type Gegl.BablVariant>, 7: <enum Perceptual-premultiplied-if-alpha of type Gegl.BablVariant>, 8: <enum add-alpha of type Gegl.BablVariant>}, '__info__': gi.EnumInfo(BablVariant), 'FLOAT': <enum Float of type Gegl.BablVariant>, 'LINEAR': <enum Linear of type Gegl.BablVariant>, 'NON_LINEAR': <enum Non-linear of type Gegl.BablVariant>, 'PERCEPTUAL': <enum Perceptual of type Gegl.BablVariant>, 'LINEAR_PREMULTIPLIED': <enum Linear-premultiplied of type Gegl.BablVariant>, 'PERCEPTUAL_PREMULTIPLIED': <enum Perceptual-premultiplied of type Gegl.BablVariant>, 'LINEAR_PREMULTIPLIED_IF_ALPHA': <enum Linear-premultiplied-if-alpha of type Gegl.BablVariant>, 'PERCEPTUAL_PREMULTIPLIED_IF_ALPHA': <enum Perceptual-premultiplied-if-alpha of type Gegl.BablVariant>, 'ADD_ALPHA': <enum add-alpha of type Gegl.BablVariant>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-    }
-    __gtype__ = None # (!) real value is '<GType GeglBablVariant (426594912)>'
-    __info__ = gi.EnumInfo(BablVariant)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'FLOAT': <BablVariant.FLOAT: 0>, 'LINEAR': <BablVariant.LINEAR: 1>, 'NON_LINEAR': <BablVariant.NON_LINEAR: 2>, 'PERCEPTUAL': <BablVariant.PERCEPTUAL: 3>, 'LINEAR_PREMULTIPLIED': <BablVariant.LINEAR_PREMULTIPLIED: 4>, 'PERCEPTUAL_PREMULTIPLIED': <BablVariant.PERCEPTUAL_PREMULTIPLIED: 5>, 'LINEAR_PREMULTIPLIED_IF_ALPHA': <BablVariant.LINEAR_PREMULTIPLIED_IF_ALPHA: 6>, 'PERCEPTUAL_PREMULTIPLIED_IF_ALPHA': <BablVariant.PERCEPTUAL_PREMULTIPLIED_IF_ALPHA: 7>, 'ADD_ALPHA': <BablVariant.ADD_ALPHA: 8>})"
+    __name__ = 'BablVariant'
+    __qualname__ = 'BablVariant'
 
 

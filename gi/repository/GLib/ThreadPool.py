@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ThreadPool(__gi.Struct):
@@ -191,7 +189,7 @@ class ThreadPool(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ThreadPool), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ThreadPool' objects>, '__weakref__': <attribute '__weakref__' of 'ThreadPool' objects>, '__doc__': None, 'func': <property object at 0x000002830bec3740>, 'user_data': <property object at 0x000002830bec3830>, 'exclusive': <property object at 0x000002830bec3920>, 'free': gi.FunctionInfo(free, bound=None), 'get_max_threads': gi.FunctionInfo(get_max_threads, bound=None), 'get_num_threads': gi.FunctionInfo(get_num_threads, bound=None), 'move_to_front': gi.FunctionInfo(move_to_front, bound=None), 'push': gi.FunctionInfo(push, bound=None), 'set_max_threads': gi.FunctionInfo(set_max_threads, bound=None), 'unprocessed': gi.FunctionInfo(unprocessed, bound=None), 'get_max_idle_time': gi.FunctionInfo(get_max_idle_time, bound=None), 'get_max_unused_threads': gi.FunctionInfo(get_max_unused_threads, bound=None), 'get_num_unused_threads': gi.FunctionInfo(get_num_unused_threads, bound=None), 'set_max_idle_time': gi.FunctionInfo(set_max_idle_time, bound=None), 'set_max_unused_threads': gi.FunctionInfo(set_max_unused_threads, bound=None), 'stop_unused_threads': gi.FunctionInfo(stop_unused_threads, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ThreadPool), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ThreadPool' objects>, '__weakref__': <attribute '__weakref__' of 'ThreadPool' objects>, '__doc__': None, 'func': <property object at 0x0000018ea0050fe0>, 'user_data': <property object at 0x0000018ea0051170>, 'exclusive': <property object at 0x0000018ea0051260>, 'free': gi.FunctionInfo(free), 'get_max_threads': gi.FunctionInfo(get_max_threads), 'get_num_threads': gi.FunctionInfo(get_num_threads), 'move_to_front': gi.FunctionInfo(move_to_front), 'push': gi.FunctionInfo(push), 'set_max_threads': gi.FunctionInfo(set_max_threads), 'unprocessed': gi.FunctionInfo(unprocessed), 'get_max_idle_time': <staticmethod(gi.FunctionInfo(get_max_idle_time))>, 'get_max_unused_threads': <staticmethod(gi.FunctionInfo(get_max_unused_threads))>, 'get_num_unused_threads': <staticmethod(gi.FunctionInfo(get_num_unused_threads))>, 'set_max_idle_time': <staticmethod(gi.FunctionInfo(set_max_idle_time))>, 'set_max_unused_threads': <staticmethod(gi.FunctionInfo(set_max_unused_threads))>, 'stop_unused_threads': <staticmethod(gi.FunctionInfo(stop_unused_threads))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ThreadPool)
 

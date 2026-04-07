@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class CrossingMode(__gobject.GEnum):
+class CrossingMode(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -124,12 +123,23 @@ class CrossingMode(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -158,6 +168,10 @@ class CrossingMode(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -192,7 +206,8 @@ class CrossingMode(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -201,6 +216,14 @@ class CrossingMode(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -228,8 +251,8 @@ class CrossingMode(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -260,15 +283,16 @@ class CrossingMode(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -332,7 +356,7 @@ class CrossingMode(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -374,10 +398,6 @@ class CrossingMode(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     DEVICE_SWITCH = 8
     GRAB = 1
@@ -388,20 +408,9 @@ class CrossingMode(__gobject.GEnum):
     TOUCH_BEGIN = 6
     TOUCH_END = 7
     UNGRAB = 2
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gdk', '__dict__': <attribute '__dict__' of 'CrossingMode' objects>, '__doc__': None, '__gtype__': <GType GdkCrossingMode (2579726496)>, '__enum_values__': {0: <enum GDK_CROSSING_NORMAL of type Gdk.CrossingMode>, 1: <enum GDK_CROSSING_GRAB of type Gdk.CrossingMode>, 2: <enum GDK_CROSSING_UNGRAB of type Gdk.CrossingMode>, 3: <enum GDK_CROSSING_GTK_GRAB of type Gdk.CrossingMode>, 4: <enum GDK_CROSSING_GTK_UNGRAB of type Gdk.CrossingMode>, 5: <enum GDK_CROSSING_STATE_CHANGED of type Gdk.CrossingMode>, 6: <enum GDK_CROSSING_TOUCH_BEGIN of type Gdk.CrossingMode>, 7: <enum GDK_CROSSING_TOUCH_END of type Gdk.CrossingMode>, 8: <enum GDK_CROSSING_DEVICE_SWITCH of type Gdk.CrossingMode>}, '__info__': gi.EnumInfo(CrossingMode), 'NORMAL': <enum GDK_CROSSING_NORMAL of type Gdk.CrossingMode>, 'GRAB': <enum GDK_CROSSING_GRAB of type Gdk.CrossingMode>, 'UNGRAB': <enum GDK_CROSSING_UNGRAB of type Gdk.CrossingMode>, 'GTK_GRAB': <enum GDK_CROSSING_GTK_GRAB of type Gdk.CrossingMode>, 'GTK_UNGRAB': <enum GDK_CROSSING_GTK_UNGRAB of type Gdk.CrossingMode>, 'STATE_CHANGED': <enum GDK_CROSSING_STATE_CHANGED of type Gdk.CrossingMode>, 'TOUCH_BEGIN': <enum GDK_CROSSING_TOUCH_BEGIN of type Gdk.CrossingMode>, 'TOUCH_END': <enum GDK_CROSSING_TOUCH_END of type Gdk.CrossingMode>, 'DEVICE_SWITCH': <enum GDK_CROSSING_DEVICE_SWITCH of type Gdk.CrossingMode>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkCrossingMode (2579726496)>'
-    __info__ = gi.EnumInfo(CrossingMode)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NORMAL': <CrossingMode.NORMAL: 0>, 'GRAB': <CrossingMode.GRAB: 1>, 'UNGRAB': <CrossingMode.UNGRAB: 2>, 'GTK_GRAB': <CrossingMode.GTK_GRAB: 3>, 'GTK_UNGRAB': <CrossingMode.GTK_UNGRAB: 4>, 'STATE_CHANGED': <CrossingMode.STATE_CHANGED: 5>, 'TOUCH_BEGIN': <CrossingMode.TOUCH_BEGIN: 6>, 'TOUCH_END': <CrossingMode.TOUCH_END: 7>, 'DEVICE_SWITCH': <CrossingMode.DEVICE_SWITCH: 8>})"
+    __name__ = 'CrossingMode'
+    __qualname__ = 'CrossingMode'
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -336,45 +335,45 @@ class Event(Event):
 
 
     _UNION_MEMBERS = {
-        <enum GDK_DELETE of type Gdk.EventType>: 'any',
-        <enum GDK_DESTROY of type Gdk.EventType>: 'any',
-        <enum GDK_EXPOSE of type Gdk.EventType>: 'expose',
-        <enum GDK_MOTION_NOTIFY of type Gdk.EventType>: 'motion',
-        <enum GDK_BUTTON_PRESS of type Gdk.EventType>: 'button',
-        <enum GDK_2BUTTON_PRESS of type Gdk.EventType>: 'button',
-        <enum GDK_3BUTTON_PRESS of type Gdk.EventType>: 'button',
-        <enum GDK_BUTTON_RELEASE of type Gdk.EventType>: 'button',
-        <enum GDK_KEY_PRESS of type Gdk.EventType>: 'key',
-        <enum GDK_KEY_RELEASE of type Gdk.EventType>: 'key',
-        <enum GDK_ENTER_NOTIFY of type Gdk.EventType>: 'crossing',
-        <enum GDK_LEAVE_NOTIFY of type Gdk.EventType>: 'crossing',
-        <enum GDK_FOCUS_CHANGE of type Gdk.EventType>: 'focus_change',
-        <enum GDK_CONFIGURE of type Gdk.EventType>: 'configure',
-        <enum GDK_MAP of type Gdk.EventType>: 'any',
-        <enum GDK_UNMAP of type Gdk.EventType>: 'any',
-        <enum GDK_PROPERTY_NOTIFY of type Gdk.EventType>: 'property',
-        <enum GDK_SELECTION_CLEAR of type Gdk.EventType>: 'selection',
-        <enum GDK_SELECTION_REQUEST of type Gdk.EventType>: 'selection',
-        <enum GDK_SELECTION_NOTIFY of type Gdk.EventType>: 'selection',
-        <enum GDK_PROXIMITY_IN of type Gdk.EventType>: 'proximity',
-        <enum GDK_PROXIMITY_OUT of type Gdk.EventType>: 'proximity',
-        <enum GDK_DRAG_ENTER of type Gdk.EventType>: 'dnd',
-        <enum GDK_DRAG_LEAVE of type Gdk.EventType>: 'dnd',
-        <enum GDK_DRAG_MOTION of type Gdk.EventType>: 'dnd',
-        <enum GDK_DRAG_STATUS of type Gdk.EventType>: 'dnd',
-        <enum GDK_DROP_START of type Gdk.EventType>: 'dnd',
-        <enum GDK_DROP_FINISHED of type Gdk.EventType>: 'dnd',
-        <enum GDK_CLIENT_EVENT of type Gdk.EventType>: 'client',
-        <enum GDK_VISIBILITY_NOTIFY of type Gdk.EventType>: 'visibility',
-        <enum GDK_SCROLL of type Gdk.EventType>: 'scroll',
-        <enum GDK_TOUCH_BEGIN of type Gdk.EventType>: 'touch',
-        <enum GDK_TOUCH_UPDATE of type Gdk.EventType>: 'touch',
-        <enum GDK_TOUCH_END of type Gdk.EventType>: 'touch',
-        <enum GDK_TOUCH_CANCEL of type Gdk.EventType>: 'touch',
+        <EventType.DELETE: 0>: 'any',
+        <EventType.DESTROY: 1>: 'any',
+        <EventType.EXPOSE: 2>: 'expose',
+        <EventType.MOTION_NOTIFY: 3>: 'motion',
+        <EventType.BUTTON_PRESS: 4>: 'button',
+        <EventType.2BUTTON_PRESS: 5>: 'button',
+        <EventType.3BUTTON_PRESS: 6>: 'button',
+        <EventType.BUTTON_RELEASE: 7>: 'button',
+        <EventType.KEY_PRESS: 8>: 'key',
+        <EventType.KEY_RELEASE: 9>: 'key',
+        <EventType.ENTER_NOTIFY: 10>: 'crossing',
+        <EventType.LEAVE_NOTIFY: 11>: 'crossing',
+        <EventType.FOCUS_CHANGE: 12>: 'focus_change',
+        <EventType.CONFIGURE: 13>: 'configure',
+        <EventType.MAP: 14>: 'any',
+        <EventType.UNMAP: 15>: 'any',
+        <EventType.PROPERTY_NOTIFY: 16>: 'property',
+        <EventType.SELECTION_CLEAR: 17>: 'selection',
+        <EventType.SELECTION_REQUEST: 18>: 'selection',
+        <EventType.SELECTION_NOTIFY: 19>: 'selection',
+        <EventType.PROXIMITY_IN: 20>: 'proximity',
+        <EventType.PROXIMITY_OUT: 21>: 'proximity',
+        <EventType.DRAG_ENTER: 22>: 'dnd',
+        <EventType.DRAG_LEAVE: 23>: 'dnd',
+        <EventType.DRAG_MOTION: 24>: 'dnd',
+        <EventType.DRAG_STATUS: 25>: 'dnd',
+        <EventType.DROP_START: 26>: 'dnd',
+        <EventType.DROP_FINISHED: 27>: 'dnd',
+        <EventType.CLIENT_EVENT: 28>: 'client',
+        <EventType.VISIBILITY_NOTIFY: 29>: 'visibility',
+        <EventType.SCROLL: 31>: 'scroll',
+        <EventType.TOUCH_BEGIN: 37>: 'touch',
+        <EventType.TOUCH_UPDATE: 38>: 'touch',
+        <EventType.TOUCH_END: 39>: 'touch',
+        <EventType.TOUCH_CANCEL: 40>: 'touch',
     }
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gdk', '_UNION_MEMBERS': {<enum GDK_DELETE of type Gdk.EventType>: 'any', <enum GDK_DESTROY of type Gdk.EventType>: 'any', <enum GDK_MOTION_NOTIFY of type Gdk.EventType>: 'motion', <enum GDK_BUTTON_PRESS of type Gdk.EventType>: 'button', <enum GDK_BUTTON_RELEASE of type Gdk.EventType>: 'button', <enum GDK_KEY_PRESS of type Gdk.EventType>: 'key', <enum GDK_KEY_RELEASE of type Gdk.EventType>: 'key', <enum GDK_ENTER_NOTIFY of type Gdk.EventType>: 'crossing', <enum GDK_LEAVE_NOTIFY of type Gdk.EventType>: 'crossing', <enum GDK_FOCUS_CHANGE of type Gdk.EventType>: 'focus_change', <enum GDK_CONFIGURE of type Gdk.EventType>: 'configure', <enum GDK_PROXIMITY_IN of type Gdk.EventType>: 'proximity', <enum GDK_PROXIMITY_OUT of type Gdk.EventType>: 'proximity', <enum GDK_DRAG_ENTER of type Gdk.EventType>: 'dnd', <enum GDK_DRAG_LEAVE of type Gdk.EventType>: 'dnd', <enum GDK_DRAG_MOTION of type Gdk.EventType>: 'dnd', <enum GDK_DROP_START of type Gdk.EventType>: 'dnd', <enum GDK_2BUTTON_PRESS of type Gdk.EventType>: 'button', <enum GDK_3BUTTON_PRESS of type Gdk.EventType>: 'button', <enum GDK_PROPERTY_NOTIFY of type Gdk.EventType>: 'property', <enum GDK_SELECTION_CLEAR of type Gdk.EventType>: 'selection', <enum GDK_SELECTION_REQUEST of type Gdk.EventType>: 'selection', <enum GDK_SELECTION_NOTIFY of type Gdk.EventType>: 'selection', <enum GDK_DRAG_STATUS of type Gdk.EventType>: 'dnd', <enum GDK_DROP_FINISHED of type Gdk.EventType>: 'dnd', <enum GDK_CLIENT_EVENT of type Gdk.EventType>: 'client', <enum GDK_VISIBILITY_NOTIFY of type Gdk.EventType>: 'visibility', <enum GDK_SCROLL of type Gdk.EventType>: 'scroll', <enum GDK_EXPOSE of type Gdk.EventType>: 'expose', <enum GDK_MAP of type Gdk.EventType>: 'any', <enum GDK_UNMAP of type Gdk.EventType>: 'any', <enum GDK_TOUCH_BEGIN of type Gdk.EventType>: 'touch', <enum GDK_TOUCH_UPDATE of type Gdk.EventType>: 'touch', <enum GDK_TOUCH_END of type Gdk.EventType>: 'touch', <enum GDK_TOUCH_CANCEL of type Gdk.EventType>: 'touch'}, '__getattr__': <function Event.__getattr__ at 0x000002459bda6200>, '__setattr__': <function Event.__setattr__ at 0x000002459bda62a0>, '__repr__': <function Event.__repr__ at 0x000002459bda6340>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType GdkEvent (2575317872)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gdk', '_UNION_MEMBERS': {<EventType.DELETE: 0>: 'any', <EventType.DESTROY: 1>: 'any', <EventType.MOTION_NOTIFY: 3>: 'motion', <EventType.BUTTON_PRESS: 4>: 'button', <EventType.BUTTON_RELEASE: 7>: 'button', <EventType.KEY_PRESS: 8>: 'key', <EventType.KEY_RELEASE: 9>: 'key', <EventType.ENTER_NOTIFY: 10>: 'crossing', <EventType.LEAVE_NOTIFY: 11>: 'crossing', <EventType.FOCUS_CHANGE: 12>: 'focus_change', <EventType.CONFIGURE: 13>: 'configure', <EventType.PROXIMITY_IN: 20>: 'proximity', <EventType.PROXIMITY_OUT: 21>: 'proximity', <EventType.DRAG_ENTER: 22>: 'dnd', <EventType.DRAG_LEAVE: 23>: 'dnd', <EventType.DRAG_MOTION: 24>: 'dnd', <EventType.DROP_START: 26>: 'dnd', <EventType.2BUTTON_PRESS: 5>: 'button', <EventType.3BUTTON_PRESS: 6>: 'button', <EventType.PROPERTY_NOTIFY: 16>: 'property', <EventType.SELECTION_CLEAR: 17>: 'selection', <EventType.SELECTION_REQUEST: 18>: 'selection', <EventType.SELECTION_NOTIFY: 19>: 'selection', <EventType.DRAG_STATUS: 25>: 'dnd', <EventType.DROP_FINISHED: 27>: 'dnd', <EventType.CLIENT_EVENT: 28>: 'client', <EventType.VISIBILITY_NOTIFY: 29>: 'visibility', <EventType.SCROLL: 31>: 'scroll', <EventType.EXPOSE: 2>: 'expose', <EventType.MAP: 14>: 'any', <EventType.UNMAP: 15>: 'any', <EventType.TOUCH_BEGIN: 37>: 'touch', <EventType.TOUCH_UPDATE: 38>: 'touch', <EventType.TOUCH_END: 39>: 'touch', <EventType.TOUCH_CANCEL: 40>: 'touch'}, '__getattr__': <function Event.__getattr__ at 0x000001872518b420>, '__setattr__': <function Event.__setattr__ at 0x000001872518b4c0>, '__repr__': <function Event.__repr__ at 0x000001872518b560>, '__doc__': None})"
+    __gtype__ = None # (!) real value is '<GType GdkEvent (585160224)>'
     __info__ = gi.UnionInfo(Event)
 
 

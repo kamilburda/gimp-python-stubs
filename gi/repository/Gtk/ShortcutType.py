@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,17 +7,17 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class ShortcutType(__gobject.GEnum):
+class ShortcutType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +76,7 @@ class ShortcutType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +99,7 @@ class ShortcutType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +127,23 @@ class ShortcutType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +172,10 @@ class ShortcutType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +221,14 @@ class ShortcutType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +254,8 @@ class ShortcutType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +286,16 @@ class ShortcutType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +359,7 @@ class ShortcutType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -378,10 +401,6 @@ class ShortcutType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ACCELERATOR = 0
     GESTURE = 7
@@ -391,19 +410,9 @@ class ShortcutType(__gobject.GEnum):
     GESTURE_STRETCH = 2
     GESTURE_TWO_FINGER_SWIPE_LEFT = 5
     GESTURE_TWO_FINGER_SWIPE_RIGHT = 6
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gtk', '__dict__': <attribute '__dict__' of 'ShortcutType' objects>, '__doc__': None, '__gtype__': <GType GtkShortcutType (3923966928)>, '__enum_values__': {0: <enum GTK_SHORTCUT_ACCELERATOR of type Gtk.ShortcutType>, 1: <enum GTK_SHORTCUT_GESTURE_PINCH of type Gtk.ShortcutType>, 2: <enum GTK_SHORTCUT_GESTURE_STRETCH of type Gtk.ShortcutType>, 3: <enum GTK_SHORTCUT_GESTURE_ROTATE_CLOCKWISE of type Gtk.ShortcutType>, 4: <enum GTK_SHORTCUT_GESTURE_ROTATE_COUNTERCLOCKWISE of type Gtk.ShortcutType>, 5: <enum GTK_SHORTCUT_GESTURE_TWO_FINGER_SWIPE_LEFT of type Gtk.ShortcutType>, 6: <enum GTK_SHORTCUT_GESTURE_TWO_FINGER_SWIPE_RIGHT of type Gtk.ShortcutType>, 7: <enum GTK_SHORTCUT_GESTURE of type Gtk.ShortcutType>}, '__info__': gi.EnumInfo(ShortcutType), 'ACCELERATOR': <enum GTK_SHORTCUT_ACCELERATOR of type Gtk.ShortcutType>, 'GESTURE_PINCH': <enum GTK_SHORTCUT_GESTURE_PINCH of type Gtk.ShortcutType>, 'GESTURE_STRETCH': <enum GTK_SHORTCUT_GESTURE_STRETCH of type Gtk.ShortcutType>, 'GESTURE_ROTATE_CLOCKWISE': <enum GTK_SHORTCUT_GESTURE_ROTATE_CLOCKWISE of type Gtk.ShortcutType>, 'GESTURE_ROTATE_COUNTERCLOCKWISE': <enum GTK_SHORTCUT_GESTURE_ROTATE_COUNTERCLOCKWISE of type Gtk.ShortcutType>, 'GESTURE_TWO_FINGER_SWIPE_LEFT': <enum GTK_SHORTCUT_GESTURE_TWO_FINGER_SWIPE_LEFT of type Gtk.ShortcutType>, 'GESTURE_TWO_FINGER_SWIPE_RIGHT': <enum GTK_SHORTCUT_GESTURE_TWO_FINGER_SWIPE_RIGHT of type Gtk.ShortcutType>, 'GESTURE': <enum GTK_SHORTCUT_GESTURE of type Gtk.ShortcutType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-    }
-    __gtype__ = None # (!) real value is '<GType GtkShortcutType (3923966928)>'
-    __info__ = gi.EnumInfo(ShortcutType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'ACCELERATOR': <ShortcutType.ACCELERATOR: 0>, 'GESTURE_PINCH': <ShortcutType.GESTURE_PINCH: 1>, 'GESTURE_STRETCH': <ShortcutType.GESTURE_STRETCH: 2>, 'GESTURE_ROTATE_CLOCKWISE': <ShortcutType.GESTURE_ROTATE_CLOCKWISE: 3>, 'GESTURE_ROTATE_COUNTERCLOCKWISE': <ShortcutType.GESTURE_ROTATE_COUNTERCLOCKWISE: 4>, 'GESTURE_TWO_FINGER_SWIPE_LEFT': <ShortcutType.GESTURE_TWO_FINGER_SWIPE_LEFT: 5>, 'GESTURE_TWO_FINGER_SWIPE_RIGHT': <ShortcutType.GESTURE_TWO_FINGER_SWIPE_RIGHT: 6>, 'GESTURE': <ShortcutType.GESTURE: 7>})"
+    __name__ = 'ShortcutType'
+    __qualname__ = 'ShortcutType'
 
 

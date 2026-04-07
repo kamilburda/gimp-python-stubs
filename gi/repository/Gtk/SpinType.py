@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,17 +7,17 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class SpinType(__gobject.GEnum):
+class SpinType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +76,7 @@ class SpinType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +99,7 @@ class SpinType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +127,23 @@ class SpinType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +172,10 @@ class SpinType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +221,14 @@ class SpinType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +254,8 @@ class SpinType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +286,16 @@ class SpinType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +359,7 @@ class SpinType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -378,10 +401,6 @@ class SpinType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     END = 5
     HOME = 4
@@ -390,18 +409,9 @@ class SpinType(__gobject.GEnum):
     STEP_BACKWARD = 1
     STEP_FORWARD = 0
     USER_DEFINED = 6
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gtk', '__dict__': <attribute '__dict__' of 'SpinType' objects>, '__doc__': None, '__gtype__': <GType GtkSpinType (3923965808)>, '__enum_values__': {0: <enum GTK_SPIN_STEP_FORWARD of type Gtk.SpinType>, 1: <enum GTK_SPIN_STEP_BACKWARD of type Gtk.SpinType>, 2: <enum GTK_SPIN_PAGE_FORWARD of type Gtk.SpinType>, 3: <enum GTK_SPIN_PAGE_BACKWARD of type Gtk.SpinType>, 4: <enum GTK_SPIN_HOME of type Gtk.SpinType>, 5: <enum GTK_SPIN_END of type Gtk.SpinType>, 6: <enum GTK_SPIN_USER_DEFINED of type Gtk.SpinType>}, '__info__': gi.EnumInfo(SpinType), 'STEP_FORWARD': <enum GTK_SPIN_STEP_FORWARD of type Gtk.SpinType>, 'STEP_BACKWARD': <enum GTK_SPIN_STEP_BACKWARD of type Gtk.SpinType>, 'PAGE_FORWARD': <enum GTK_SPIN_PAGE_FORWARD of type Gtk.SpinType>, 'PAGE_BACKWARD': <enum GTK_SPIN_PAGE_BACKWARD of type Gtk.SpinType>, 'HOME': <enum GTK_SPIN_HOME of type Gtk.SpinType>, 'END': <enum GTK_SPIN_END of type Gtk.SpinType>, 'USER_DEFINED': <enum GTK_SPIN_USER_DEFINED of type Gtk.SpinType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-    }
-    __gtype__ = None # (!) real value is '<GType GtkSpinType (3923965808)>'
-    __info__ = gi.EnumInfo(SpinType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'STEP_FORWARD': <SpinType.STEP_FORWARD: 0>, 'STEP_BACKWARD': <SpinType.STEP_BACKWARD: 1>, 'PAGE_FORWARD': <SpinType.PAGE_FORWARD: 2>, 'PAGE_BACKWARD': <SpinType.PAGE_BACKWARD: 3>, 'HOME': <SpinType.HOME: 4>, 'END': <SpinType.END: 5>, 'USER_DEFINED': <SpinType.USER_DEFINED: 6>})"
+    __name__ = 'SpinType'
+    __qualname__ = 'SpinType'
 
 

@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class IOFlags(__gobject.GFlags):
+class IOFlags(__enum.IntFlag):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class IOFlags(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class IOFlags(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -114,8 +112,8 @@ class IOFlags(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -126,12 +124,16 @@ class IOFlags(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +162,10 @@ class IOFlags(__gobject.GFlags):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -201,8 +207,16 @@ class IOFlags(__gobject.GFlags):
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -230,16 +244,16 @@ class IOFlags(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -254,24 +268,24 @@ class IOFlags(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -290,8 +304,8 @@ class IOFlags(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -322,8 +336,8 @@ class IOFlags(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -335,7 +349,7 @@ class IOFlags(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -361,16 +375,12 @@ class IOFlags(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -381,34 +391,15 @@ class IOFlags(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     APPEND = 1
-    GET_MASK = 31
     IS_READABLE = 4
     IS_SEEKABLE = 16
     IS_WRITABLE = 8
-    IS_WRITEABLE = 8
-    MASK = 31
     NONBLOCK = 2
-    NONE = 0
-    SET_MASK = 3
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'IOFlags' objects>, '__doc__': None, '__gtype__': <GType PyGLibIOFlags (155713696)>, '__flags_values__': {0: <flags 0 of type GLib.IOFlags>, 1: <flags G_IO_FLAG_APPEND of type GLib.IOFlags>, 2: <flags G_IO_FLAG_NONBLOCK of type GLib.IOFlags>, 4: <flags G_IO_FLAG_IS_READABLE of type GLib.IOFlags>, 8: <flags G_IO_FLAG_IS_WRITABLE | G_IO_FLAG_IS_WRITEABLE of type GLib.IOFlags>, 16: <flags G_IO_FLAG_IS_SEEKABLE of type GLib.IOFlags>, 31: <flags G_IO_FLAG_APPEND | G_IO_FLAG_NONBLOCK | G_IO_FLAG_IS_READABLE | G_IO_FLAG_IS_WRITABLE | G_IO_FLAG_IS_WRITEABLE | G_IO_FLAG_IS_SEEKABLE | G_IO_FLAG_MASK | G_IO_FLAG_GET_MASK | G_IO_FLAG_SET_MASK of type GLib.IOFlags>, 3: <flags G_IO_FLAG_APPEND | G_IO_FLAG_NONBLOCK | G_IO_FLAG_SET_MASK of type GLib.IOFlags>}, '__info__': gi.EnumInfo(IOFlags), 'NONE': <flags 0 of type GLib.IOFlags>, 'APPEND': <flags G_IO_FLAG_APPEND of type GLib.IOFlags>, 'NONBLOCK': <flags G_IO_FLAG_NONBLOCK of type GLib.IOFlags>, 'IS_READABLE': <flags G_IO_FLAG_IS_READABLE of type GLib.IOFlags>, 'IS_WRITABLE': <flags G_IO_FLAG_IS_WRITABLE | G_IO_FLAG_IS_WRITEABLE of type GLib.IOFlags>, 'IS_WRITEABLE': <flags G_IO_FLAG_IS_WRITABLE | G_IO_FLAG_IS_WRITEABLE of type GLib.IOFlags>, 'IS_SEEKABLE': <flags G_IO_FLAG_IS_SEEKABLE of type GLib.IOFlags>, 'MASK': <flags G_IO_FLAG_APPEND | G_IO_FLAG_NONBLOCK | G_IO_FLAG_IS_READABLE | G_IO_FLAG_IS_WRITABLE | G_IO_FLAG_IS_WRITEABLE | G_IO_FLAG_IS_SEEKABLE | G_IO_FLAG_MASK | G_IO_FLAG_GET_MASK | G_IO_FLAG_SET_MASK of type GLib.IOFlags>, 'GET_MASK': <flags G_IO_FLAG_APPEND | G_IO_FLAG_NONBLOCK | G_IO_FLAG_IS_READABLE | G_IO_FLAG_IS_WRITABLE | G_IO_FLAG_IS_WRITEABLE | G_IO_FLAG_IS_SEEKABLE | G_IO_FLAG_MASK | G_IO_FLAG_GET_MASK | G_IO_FLAG_SET_MASK of type GLib.IOFlags>, 'SET_MASK': <flags G_IO_FLAG_APPEND | G_IO_FLAG_NONBLOCK | G_IO_FLAG_SET_MASK of type GLib.IOFlags>})"
-    __flags_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        8: 8,
-        16: 16,
-        31: 31,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibIOFlags (155713696)>'
-    __info__ = gi.EnumInfo(IOFlags)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'NONE': <IOFlags.NONE: 0>, 'APPEND': <IOFlags.APPEND: 1>, 'NONBLOCK': <IOFlags.NONBLOCK: 2>, 'IS_READABLE': <IOFlags.IS_READABLE: 4>, 'IS_WRITABLE': <IOFlags.IS_WRITABLE: 8>, 'IS_WRITEABLE': <IOFlags.IS_WRITABLE: 8>, 'IS_SEEKABLE': <IOFlags.IS_SEEKABLE: 16>, 'MASK': <IOFlags.MASK: 31>, 'GET_MASK': <IOFlags.MASK: 31>, 'SET_MASK': <IOFlags.SET_MASK: 3>})"
+    __name__ = 'IOFlags'
+    __qualname__ = 'IOFlags'
 
 

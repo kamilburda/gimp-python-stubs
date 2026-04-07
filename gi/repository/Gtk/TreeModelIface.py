@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -177,7 +176,7 @@ class TreeModelIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TreeModelIface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TreeModelIface' objects>, '__weakref__': <attribute '__weakref__' of 'TreeModelIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002ece9b5b510>, 'row_changed': <property object at 0x000002ece9b5b600>, 'row_inserted': <property object at 0x000002ece9b5b6f0>, 'row_has_child_toggled': <property object at 0x000002ece9b5b7e0>, 'row_deleted': <property object at 0x000002ece9b5b8d0>, 'rows_reordered': <property object at 0x000002ece9b5b9c0>, 'get_flags': <property object at 0x000002ece9b5bab0>, 'get_n_columns': <property object at 0x000002ece9b5bba0>, 'get_column_type': <property object at 0x000002ece9b5bc90>, 'get_iter': <property object at 0x000002ece9b5bd80>, 'get_path': <property object at 0x000002ece9b5be70>, 'get_value': <property object at 0x000002ece9b5bf60>, 'iter_next': <property object at 0x000002ece9b50090>, 'iter_previous': <property object at 0x000002ece9b50180>, 'iter_children': <property object at 0x000002ece9b50270>, 'iter_has_child': <property object at 0x000002ece9b50360>, 'iter_n_children': <property object at 0x000002ece9b50450>, 'iter_nth_child': <property object at 0x000002ece9b50540>, 'iter_parent': <property object at 0x000002ece9b50630>, 'ref_node': <property object at 0x000002ece9b50720>, 'unref_node': <property object at 0x000002ece9b50810>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TreeModelIface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TreeModelIface' objects>, '__weakref__': <attribute '__weakref__' of 'TreeModelIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002bfd3a2db70>, 'row_changed': <property object at 0x000002bfd3a2dd50>, 'row_inserted': <property object at 0x000002bfd3a2de40>, 'row_has_child_toggled': <property object at 0x000002bfd3a2df30>, 'row_deleted': <property object at 0x000002bfd3a2e020>, 'rows_reordered': <property object at 0x000002bfd3a2e110>, 'get_flags': <property object at 0x000002bfd3a2e200>, 'get_n_columns': <property object at 0x000002bfd3a2e2f0>, 'get_column_type': <property object at 0x000002bfd3a2e3e0>, 'get_iter': <property object at 0x000002bfd3a2e4d0>, 'get_path': <property object at 0x000002bfd3a2e5c0>, 'get_value': <property object at 0x000002bfd3a2e6b0>, 'iter_next': <property object at 0x000002bfd3a2e7a0>, 'iter_previous': <property object at 0x000002bfd3a2e890>, 'iter_children': <property object at 0x000002bfd3a2e980>, 'iter_has_child': <property object at 0x000002bfd3a2ea70>, 'iter_n_children': <property object at 0x000002bfd3a2eb60>, 'iter_nth_child': <property object at 0x000002bfd3a2ec50>, 'iter_parent': <property object at 0x000002bfd3a2ed40>, 'ref_node': <property object at 0x000002bfd3a2ee30>, 'unref_node': <property object at 0x000002bfd3a2ef20>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TreeModelIface)
 

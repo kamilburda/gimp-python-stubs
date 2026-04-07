@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class DebugKey(__gi.Struct):
@@ -137,7 +135,7 @@ class DebugKey(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DebugKey), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DebugKey' objects>, '__weakref__': <attribute '__weakref__' of 'DebugKey' objects>, '__doc__': None, 'key': <property object at 0x000002830bf14310>, 'value': <property object at 0x000002830bf14400>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DebugKey), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DebugKey' objects>, '__weakref__': <attribute '__weakref__' of 'DebugKey' objects>, '__doc__': None, 'key': <property object at 0x0000018e9ff88d10>, 'value': <property object at 0x0000018e9ff88ea0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(DebugKey)
 

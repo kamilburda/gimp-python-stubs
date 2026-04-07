@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -241,10 +240,9 @@ class SignalOverride(__gi__signalhelper.Signal):
 
     def isprintable(self, *args, **kwargs): # real signature unknown
         """
-        Return True if the string is printable, False otherwise.
+        Return True if all characters in the string are printable, False otherwise.
         
-        A string is printable if all of its characters are considered printable in
-        repr() or if it is empty.
+        A character is printable if repr() may use it in its output.
         """
         pass
 
@@ -537,7 +535,7 @@ class SignalOverride(__gi__signalhelper.Signal):
         pass
 
     def __contains__(self, *args, **kwargs): # real signature unknown
-        """ Return key in self. """
+        """ Return bool(key in self). """
         pass
 
     def __delattr__(self, *args, **kwargs): # real signature unknown
@@ -682,6 +680,6 @@ class SignalOverride(__gi__signalhelper.Signal):
 
     BoundSignal = None # (!) real value is "<class 'gi._signalhelper.Signal.BoundSignal'>"
     __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi._signalhelper', '__doc__': 'Specialized sub-class of Signal which can be used as a decorator for overriding\\n    existing signals on GObjects.\\n\\n    :Example:\\n\\n    .. code-block:: python\\n\\n        class MyWidget(Gtk.Widget):\\n            @GObject.SignalOverride\\n            def configure_event(self):\\n                pass\\n    ', 'get_signal_args': <function SignalOverride.get_signal_args at 0x0000010b078afb00>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi._signalhelper', '__doc__': 'Specialized sub-class of Signal which can be used as a decorator for overriding\\n    existing signals on GObjects.\\n\\n    :Example:\\n\\n    .. code-block:: python\\n\\n        class MyWidget(Gtk.Widget):\\n            @GObject.SignalOverride\\n            def configure_event(self):\\n                pass\\n    ', 'get_signal_args': <function SignalOverride.get_signal_args at 0x000001dd11ddc4a0>})"
 
 

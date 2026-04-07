@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class TimeZone(__gi.Boxed):
@@ -55,23 +53,28 @@ class TimeZone(__gi.Boxed):
         """ is_dst(self, interval:int) -> bool """
         return False
 
-    def new(self, identifier=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, identifier=None): # real signature unknown; restored from __doc__
         """ new(identifier:str=None) -> GLib.TimeZone """
         pass
 
-    def new_identifier(self, identifier=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_identifier(cls, identifier=None): # real signature unknown; restored from __doc__
         """ new_identifier(identifier:str=None) -> GLib.TimeZone or None """
         pass
 
-    def new_local(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_local(cls): # real signature unknown; restored from __doc__
         """ new_local() -> GLib.TimeZone """
         pass
 
-    def new_offset(self, seconds): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_offset(cls, seconds): # real signature unknown; restored from __doc__
         """ new_offset(seconds:int) -> GLib.TimeZone """
         pass
 
-    def new_utc(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_utc(cls): # real signature unknown; restored from __doc__
         """ new_utc() -> GLib.TimeZone """
         pass
 
@@ -195,8 +198,8 @@ class TimeZone(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TimeZone), '__module__': 'gi.repository.GLib', '__gtype__': <GType GTimeZone (163510928)>, '__dict__': <attribute '__dict__' of 'TimeZone' objects>, '__weakref__': <attribute '__weakref__' of 'TimeZone' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'new_identifier': gi.FunctionInfo(new_identifier, bound=None), 'new_local': gi.FunctionInfo(new_local, bound=None), 'new_offset': gi.FunctionInfo(new_offset, bound=None), 'new_utc': gi.FunctionInfo(new_utc, bound=None), 'adjust_time': gi.FunctionInfo(adjust_time, bound=None), 'find_interval': gi.FunctionInfo(find_interval, bound=None), 'get_abbreviation': gi.FunctionInfo(get_abbreviation, bound=None), 'get_identifier': gi.FunctionInfo(get_identifier, bound=None), 'get_offset': gi.FunctionInfo(get_offset, bound=None), 'is_dst': gi.FunctionInfo(is_dst, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GTimeZone (163510928)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TimeZone), '__module__': 'gi.repository.GLib', '__gtype__': <GType GTimeZone (2640520704)>, '__dict__': <attribute '__dict__' of 'TimeZone' objects>, '__weakref__': <attribute '__weakref__' of 'TimeZone' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_identifier': <classmethod(gi.FunctionInfo(new_identifier))>, 'new_local': <classmethod(gi.FunctionInfo(new_local))>, 'new_offset': <classmethod(gi.FunctionInfo(new_offset))>, 'new_utc': <classmethod(gi.FunctionInfo(new_utc))>, 'adjust_time': gi.FunctionInfo(adjust_time), 'find_interval': gi.FunctionInfo(find_interval), 'get_abbreviation': gi.FunctionInfo(get_abbreviation), 'get_identifier': gi.FunctionInfo(get_identifier), 'get_offset': gi.FunctionInfo(get_offset), 'is_dst': gi.FunctionInfo(is_dst), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GTimeZone (2640520704)>'
     __info__ = StructInfo(TimeZone)
 
 

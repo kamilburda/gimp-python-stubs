@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,7 +156,7 @@ class AccelLabelClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AccelLabelClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AccelLabelClass' objects>, '__weakref__': <attribute '__weakref__' of 'AccelLabelClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece8fad440>, 'signal_quote1': <property object at 0x000002ece8fad530>, 'signal_quote2': <property object at 0x000002ece8fad620>, 'mod_name_shift': <property object at 0x000002ece8fad710>, 'mod_name_control': <property object at 0x000002ece8fad800>, 'mod_name_alt': <property object at 0x000002ece8fad8f0>, 'mod_separator': <property object at 0x000002ece8fad9e0>, '_gtk_reserved1': <property object at 0x000002ece8fadad0>, '_gtk_reserved2': <property object at 0x000002ece8fadbc0>, '_gtk_reserved3': <property object at 0x000002ece8fadcb0>, '_gtk_reserved4': <property object at 0x000002ece8fadda0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AccelLabelClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AccelLabelClass' objects>, '__weakref__': <attribute '__weakref__' of 'AccelLabelClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd17bc360>, 'signal_quote1': <property object at 0x000002bfd17bc450>, 'signal_quote2': <property object at 0x000002bfd17bc540>, 'mod_name_shift': <property object at 0x000002bfd17bc630>, 'mod_name_control': <property object at 0x000002bfd17bc720>, 'mod_name_alt': <property object at 0x000002bfd17bc810>, 'mod_separator': <property object at 0x000002bfd17bc900>, '_gtk_reserved1': <property object at 0x000002bfd17bc9f0>, '_gtk_reserved2': <property object at 0x000002bfd17bcae0>, '_gtk_reserved3': <property object at 0x000002bfd17bcbd0>, '_gtk_reserved4': <property object at 0x000002bfd17bccc0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(AccelLabelClass)
 

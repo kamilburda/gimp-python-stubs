@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class MappedFile(__gi.Boxed):
@@ -44,11 +42,13 @@ class MappedFile(__gi.Boxed):
         """ get_length(self) -> int """
         return 0
 
-    def new(self, filename, writable): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, filename, writable): # real signature unknown; restored from __doc__
         """ new(filename:str, writable:bool) -> GLib.MappedFile """
         pass
 
-    def new_from_fd(self, fd, writable): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_fd(cls, fd, writable): # real signature unknown; restored from __doc__
         """ new_from_fd(fd:int, writable:bool) -> GLib.MappedFile """
         pass
 
@@ -172,8 +172,8 @@ class MappedFile(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MappedFile), '__module__': 'gi.repository.GLib', '__gtype__': <GType GMappedFile (163504208)>, '__dict__': <attribute '__dict__' of 'MappedFile' objects>, '__weakref__': <attribute '__weakref__' of 'MappedFile' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'new_from_fd': gi.FunctionInfo(new_from_fd, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_bytes': gi.FunctionInfo(get_bytes, bound=None), 'get_contents': gi.FunctionInfo(get_contents, bound=None), 'get_length': gi.FunctionInfo(get_length, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GMappedFile (163504208)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MappedFile), '__module__': 'gi.repository.GLib', '__gtype__': <GType GMappedFile (2640520128)>, '__dict__': <attribute '__dict__' of 'MappedFile' objects>, '__weakref__': <attribute '__weakref__' of 'MappedFile' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_from_fd': <classmethod(gi.FunctionInfo(new_from_fd))>, 'free': gi.FunctionInfo(free), 'get_bytes': gi.FunctionInfo(get_bytes), 'get_contents': gi.FunctionInfo(get_contents), 'get_length': gi.FunctionInfo(get_length), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GMappedFile (2640520128)>'
     __info__ = StructInfo(MappedFile)
 
 

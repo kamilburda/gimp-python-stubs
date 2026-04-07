@@ -1,28 +1,32 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class DBusMessageHeaderField(__gobject.GEnum):
+class DBusMessageHeaderField(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -81,6 +85,10 @@ class DBusMessageHeaderField(__gobject.GEnum):
         """
         pass
 
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return an array of bytes representing an integer.
@@ -122,12 +130,23 @@ class DBusMessageHeaderField(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -151,10 +170,15 @@ class DBusMessageHeaderField(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -189,7 +213,8 @@ class DBusMessageHeaderField(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -198,6 +223,14 @@ class DBusMessageHeaderField(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -225,8 +258,8 @@ class DBusMessageHeaderField(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -257,15 +290,16 @@ class DBusMessageHeaderField(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -329,7 +363,7 @@ class DBusMessageHeaderField(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -371,10 +405,6 @@ class DBusMessageHeaderField(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     DESTINATION = 6
     ERROR_NAME = 4
@@ -386,21 +416,9 @@ class DBusMessageHeaderField(__gobject.GEnum):
     REPLY_SERIAL = 5
     SENDER = 7
     SIGNATURE = 8
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gio', '__dict__': <attribute '__dict__' of 'DBusMessageHeaderField' objects>, '__doc__': None, '__gtype__': <GType GDBusMessageHeaderField (2472615296)>, '__enum_values__': {0: <enum G_DBUS_MESSAGE_HEADER_FIELD_INVALID of type Gio.DBusMessageHeaderField>, 1: <enum G_DBUS_MESSAGE_HEADER_FIELD_PATH of type Gio.DBusMessageHeaderField>, 2: <enum G_DBUS_MESSAGE_HEADER_FIELD_INTERFACE of type Gio.DBusMessageHeaderField>, 3: <enum G_DBUS_MESSAGE_HEADER_FIELD_MEMBER of type Gio.DBusMessageHeaderField>, 4: <enum G_DBUS_MESSAGE_HEADER_FIELD_ERROR_NAME of type Gio.DBusMessageHeaderField>, 5: <enum G_DBUS_MESSAGE_HEADER_FIELD_REPLY_SERIAL of type Gio.DBusMessageHeaderField>, 6: <enum G_DBUS_MESSAGE_HEADER_FIELD_DESTINATION of type Gio.DBusMessageHeaderField>, 7: <enum G_DBUS_MESSAGE_HEADER_FIELD_SENDER of type Gio.DBusMessageHeaderField>, 8: <enum G_DBUS_MESSAGE_HEADER_FIELD_SIGNATURE of type Gio.DBusMessageHeaderField>, 9: <enum G_DBUS_MESSAGE_HEADER_FIELD_NUM_UNIX_FDS of type Gio.DBusMessageHeaderField>}, '__info__': gi.EnumInfo(DBusMessageHeaderField), 'INVALID': <enum G_DBUS_MESSAGE_HEADER_FIELD_INVALID of type Gio.DBusMessageHeaderField>, 'PATH': <enum G_DBUS_MESSAGE_HEADER_FIELD_PATH of type Gio.DBusMessageHeaderField>, 'INTERFACE': <enum G_DBUS_MESSAGE_HEADER_FIELD_INTERFACE of type Gio.DBusMessageHeaderField>, 'MEMBER': <enum G_DBUS_MESSAGE_HEADER_FIELD_MEMBER of type Gio.DBusMessageHeaderField>, 'ERROR_NAME': <enum G_DBUS_MESSAGE_HEADER_FIELD_ERROR_NAME of type Gio.DBusMessageHeaderField>, 'REPLY_SERIAL': <enum G_DBUS_MESSAGE_HEADER_FIELD_REPLY_SERIAL of type Gio.DBusMessageHeaderField>, 'DESTINATION': <enum G_DBUS_MESSAGE_HEADER_FIELD_DESTINATION of type Gio.DBusMessageHeaderField>, 'SENDER': <enum G_DBUS_MESSAGE_HEADER_FIELD_SENDER of type Gio.DBusMessageHeaderField>, 'SIGNATURE': <enum G_DBUS_MESSAGE_HEADER_FIELD_SIGNATURE of type Gio.DBusMessageHeaderField>, 'NUM_UNIX_FDS': <enum G_DBUS_MESSAGE_HEADER_FIELD_NUM_UNIX_FDS of type Gio.DBusMessageHeaderField>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-    }
-    __gtype__ = None # (!) real value is '<GType GDBusMessageHeaderField (2472615296)>'
-    __info__ = gi.EnumInfo(DBusMessageHeaderField)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'INVALID': <DBusMessageHeaderField.INVALID: 0>, 'PATH': <DBusMessageHeaderField.PATH: 1>, 'INTERFACE': <DBusMessageHeaderField.INTERFACE: 2>, 'MEMBER': <DBusMessageHeaderField.MEMBER: 3>, 'ERROR_NAME': <DBusMessageHeaderField.ERROR_NAME: 4>, 'REPLY_SERIAL': <DBusMessageHeaderField.REPLY_SERIAL: 5>, 'DESTINATION': <DBusMessageHeaderField.DESTINATION: 6>, 'SENDER': <DBusMessageHeaderField.SENDER: 7>, 'SIGNATURE': <DBusMessageHeaderField.SIGNATURE: 8>, 'NUM_UNIX_FDS': <DBusMessageHeaderField.NUM_UNIX_FDS: 9>})"
+    __name__ = 'DBusMessageHeaderField'
+    __qualname__ = 'DBusMessageHeaderField'
 
 

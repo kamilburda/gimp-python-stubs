@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Analysis(__gi.Struct):
@@ -149,7 +147,7 @@ class Analysis(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Analysis), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Analysis' objects>, '__weakref__': <attribute '__weakref__' of 'Analysis' objects>, '__doc__': None, 'shape_engine': <property object at 0x00000213f60e6570>, 'lang_engine': <property object at 0x00000213f60e6520>, 'font': <property object at 0x00000213f60e6390>, 'level': <property object at 0x00000213f60e6e30>, 'gravity': <property object at 0x00000213f60e6f20>, 'flags': <property object at 0x00000213f60e7010>, 'script': <property object at 0x00000213f60e7100>, 'language': <property object at 0x00000213f60e71f0>, 'extra_attrs': <property object at 0x00000213f60e72e0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Analysis), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Analysis' objects>, '__weakref__': <attribute '__weakref__' of 'Analysis' objects>, '__doc__': None, 'shape_engine': <property object at 0x00000280356095d0>, 'lang_engine': <property object at 0x00000280356096c0>, 'font': <property object at 0x0000028035609120>, 'level': <property object at 0x0000028035609710>, 'gravity': <property object at 0x0000028035609800>, 'flags': <property object at 0x00000280356098f0>, 'script': <property object at 0x00000280356099e0>, 'language': <property object at 0x0000028035609ad0>, 'extra_attrs': <property object at 0x0000028035609bc0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Analysis)
 

@@ -1,23 +1,30 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-from .DBusConnection import DBusConnection
+from .AsyncInitable import AsyncInitable
 
-class DBusConnection(DBusConnection):
+from .Initable import Initable
+
+class DBusConnection(__gi_overrides_GObject.Object, AsyncInitable, Initable):
     """
     :Constructors:
     
@@ -77,7 +84,7 @@ class DBusConnection(DBusConnection):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -105,6 +112,9 @@ class DBusConnection(DBusConnection):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -308,7 +318,8 @@ class DBusConnection(DBusConnection):
         """ newv_async(object_type:GType, n_parameters:int, parameters:GObject.Parameter, io_priority:int, cancellable:Gio.Cancellable=None, callback:Gio.AsyncReadyCallback=None, user_data=None) """
         pass
 
-    def new_finish(self, res): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_finish(cls, res): # real signature unknown; restored from __doc__
         """ new_finish(res:Gio.AsyncResult) -> Gio.DBusConnection """
         pass
 
@@ -316,15 +327,18 @@ class DBusConnection(DBusConnection):
         """ new_for_address(address:str, flags:Gio.DBusConnectionFlags, observer:Gio.DBusAuthObserver=None, cancellable:Gio.Cancellable=None, callback:Gio.AsyncReadyCallback=None, user_data=None) """
         pass
 
-    def new_for_address_finish(self, res): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_for_address_finish(cls, res): # real signature unknown; restored from __doc__
         """ new_for_address_finish(res:Gio.AsyncResult) -> Gio.DBusConnection """
         pass
 
-    def new_for_address_sync(self, address, flags, observer=None, cancellable=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_for_address_sync(cls, address, flags, observer=None, cancellable=None): # real signature unknown; restored from __doc__
         """ new_for_address_sync(address:str, flags:Gio.DBusConnectionFlags, observer:Gio.DBusAuthObserver=None, cancellable:Gio.Cancellable=None) -> Gio.DBusConnection """
         pass
 
-    def new_sync(self, stream, guid=None, flags, observer=None, cancellable=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_sync(cls, stream, guid=None, flags, observer=None, cancellable=None): # real signature unknown; restored from __doc__
         """ new_sync(stream:Gio.IOStream, guid:str=None, flags:Gio.DBusConnectionFlags, observer:Gio.DBusAuthObserver=None, cancellable:Gio.Cancellable=None) -> Gio.DBusConnection """
         pass
 
@@ -348,9 +362,13 @@ class DBusConnection(DBusConnection):
         # no doc
         pass
 
-    def register_object(self, object_path, interface_info, method_call_closure=None, get_property_closure=None, set_property_closure=None): # reliably restored by inspect
-        # no doc
-        pass
+    def register_object(self, object_path, interface_info, method_call_closure=None, get_property_closure=None, set_property_closure=None): # real signature unknown; restored from __doc__
+        """ register_object(self, object_path:str, interface_info:Gio.DBusInterfaceInfo, method_call_closure:GObject.Closure=None, get_property_closure:GObject.Closure=None, set_property_closure:GObject.Closure=None) -> int """
+        return 0
+
+    def register_object_with_closures2(self, object_path, interface_info, method_call_closure=None, get_property_closure=None, set_property_closure=None): # real signature unknown; restored from __doc__
+        """ register_object_with_closures2(self, object_path:str, interface_info:Gio.DBusInterfaceInfo, method_call_closure:GObject.Closure=None, get_property_closure:GObject.Closure=None, set_property_closure:GObject.Closure=None) -> int """
+        return 0
 
     def register_subtree(self, object_path, vtable, flags, user_data=None, user_data_free_func): # real signature unknown; restored from __doc__
         """ register_subtree(self, object_path:str, vtable:Gio.DBusSubtreeVTable, flags:Gio.DBusSubtreeFlags, user_data=None, user_data_free_func:GLib.DestroyNotify) -> int """
@@ -461,20 +479,20 @@ class DBusConnection(DBusConnection):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -504,7 +522,11 @@ class DBusConnection(DBusConnection):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -536,8 +558,7 @@ class DBusConnection(DBusConnection):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # reliably restored by inspect
-        # no doc
+    def __init__(self, **properties): # real signature unknown; restored from __doc__
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -606,12 +627,12 @@ class DBusConnection(DBusConnection):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a7937508e0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7084a770>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gio', '__init__': <function _warn_init.<locals>.new_init at 0x000001a7938baf20>, 'register_object': <function DBusConnection.register_object at 0x000001a7938bafc0>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(DBusConnection), '__module__': 'gi.repository.Gio', '__gtype__': <GType GDBusConnection (1841878560)>, '__doc__': None, '__gsignals__': {}, 'new_finish': <classmethod(gi.FunctionInfo(new_finish))>, 'new_for_address_finish': <classmethod(gi.FunctionInfo(new_for_address_finish))>, 'new_for_address_sync': <classmethod(gi.FunctionInfo(new_for_address_sync))>, 'new_sync': <classmethod(gi.FunctionInfo(new_sync))>, 'new': <staticmethod(gi.FunctionInfo(new))>, 'new_for_address': <staticmethod(gi.FunctionInfo(new_for_address))>, 'add_filter': gi.FunctionInfo(add_filter), 'call': gi.FunctionInfo(call), 'call_finish': gi.FunctionInfo(call_finish), 'call_sync': gi.FunctionInfo(call_sync), 'close': gi.FunctionInfo(close), 'close_finish': gi.FunctionInfo(close_finish), 'close_sync': gi.FunctionInfo(close_sync), 'emit_signal': gi.FunctionInfo(emit_signal), 'export_action_group': gi.FunctionInfo(export_action_group), 'export_menu_model': gi.FunctionInfo(export_menu_model), 'flush': gi.FunctionInfo(flush), 'flush_finish': gi.FunctionInfo(flush_finish), 'flush_sync': gi.FunctionInfo(flush_sync), 'get_capabilities': gi.FunctionInfo(get_capabilities), 'get_exit_on_close': gi.FunctionInfo(get_exit_on_close), 'get_flags': gi.FunctionInfo(get_flags), 'get_guid': gi.FunctionInfo(get_guid), 'get_last_serial': gi.FunctionInfo(get_last_serial), 'get_peer_credentials': gi.FunctionInfo(get_peer_credentials), 'get_stream': gi.FunctionInfo(get_stream), 'get_unique_name': gi.FunctionInfo(get_unique_name), 'is_closed': gi.FunctionInfo(is_closed), 'register_object': gi.FunctionInfo(register_object), 'register_object_with_closures2': gi.FunctionInfo(register_object_with_closures2), 'register_subtree': gi.FunctionInfo(register_subtree), 'remove_filter': gi.FunctionInfo(remove_filter), 'send_message': gi.FunctionInfo(send_message), 'send_message_with_reply': gi.FunctionInfo(send_message_with_reply), 'send_message_with_reply_finish': gi.FunctionInfo(send_message_with_reply_finish), 'send_message_with_reply_sync': gi.FunctionInfo(send_message_with_reply_sync), 'set_exit_on_close': gi.FunctionInfo(set_exit_on_close), 'signal_subscribe': gi.FunctionInfo(signal_subscribe), 'signal_unsubscribe': gi.FunctionInfo(signal_unsubscribe), 'start_message_processing': gi.FunctionInfo(start_message_processing), 'unexport_action_group': gi.FunctionInfo(unexport_action_group), 'unexport_menu_model': gi.FunctionInfo(unexport_menu_model), 'unregister_object': gi.FunctionInfo(unregister_object), 'unregister_subtree': gi.FunctionInfo(unregister_subtree)})"
     __gdoc__ = 'Object GDBusConnection\n\nSignals from GDBusConnection:\n  closed (gboolean, GError)\n\nProperties from GDBusConnection:\n  stream -> GIOStream: stream\n  address -> gchararray: address\n  flags -> GDBusConnectionFlags: flags\n  guid -> gchararray: guid\n  unique-name -> gchararray: unique-name\n  closed -> gboolean: closed\n  exit-on-close -> gboolean: exit-on-close\n  capabilities -> GDBusCapabilityFlags: capabilities\n  authentication-observer -> GDBusAuthObserver: authentication-observer\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GDBusConnection (2430928432)>'
+    __gtype__ = None # (!) real value is '<GType GDBusConnection (1841878560)>'
     __info__ = ObjectInfo(DBusConnection)
 
 

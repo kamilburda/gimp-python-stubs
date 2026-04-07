@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -146,7 +139,7 @@ class TextSelection(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextSelection), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextSelection' objects>, '__weakref__': <attribute '__weakref__' of 'TextSelection' objects>, '__doc__': None, 'start_object': <property object at 0x000001733812d3f0>, 'start_offset': <property object at 0x000001733812d4e0>, 'end_object': <property object at 0x000001733812d5d0>, 'end_offset': <property object at 0x000001733812d6c0>, 'start_is_active': <property object at 0x000001733812d7b0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextSelection), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextSelection' objects>, '__weakref__': <attribute '__weakref__' of 'TextSelection' objects>, '__doc__': None, 'start_object': <property object at 0x000001c85dc2ddf0>, 'start_offset': <property object at 0x000001c85dc2dee0>, 'end_object': <property object at 0x000001c85dc2dfd0>, 'end_offset': <property object at 0x000001c85dc2e0c0>, 'start_is_active': <property object at 0x000001c85dc2e1b0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TextSelection)
 

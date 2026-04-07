@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -38,7 +43,8 @@ class SettingsSchemaSource(__gi.Boxed):
         """ lookup(self, schema_id:str, recursive:bool) -> Gio.SettingsSchema or None """
         pass
 
-    def new_from_directory(self, directory, parent=None, trusted): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_directory(cls, directory, parent=None, trusted): # real signature unknown; restored from __doc__
         """ new_from_directory(directory:str, parent:Gio.SettingsSchemaSource=None, trusted:bool) -> Gio.SettingsSchemaSource """
         pass
 
@@ -66,7 +72,11 @@ class SettingsSchemaSource(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -157,8 +167,8 @@ class SettingsSchemaSource(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SettingsSchemaSource), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSettingsSchemaSource (2466389840)>, '__dict__': <attribute '__dict__' of 'SettingsSchemaSource' objects>, '__weakref__': <attribute '__weakref__' of 'SettingsSchemaSource' objects>, '__doc__': None, 'new_from_directory': gi.FunctionInfo(new_from_directory, bound=None), 'list_schemas': gi.FunctionInfo(list_schemas, bound=None), 'lookup': gi.FunctionInfo(lookup, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'get_default': gi.FunctionInfo(get_default, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GSettingsSchemaSource (2466389840)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SettingsSchemaSource), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSettingsSchemaSource (1841603312)>, '__dict__': <attribute '__dict__' of 'SettingsSchemaSource' objects>, '__weakref__': <attribute '__weakref__' of 'SettingsSchemaSource' objects>, '__doc__': None, 'new_from_directory': <classmethod(gi.FunctionInfo(new_from_directory))>, 'list_schemas': gi.FunctionInfo(list_schemas), 'lookup': gi.FunctionInfo(lookup), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), 'get_default': <staticmethod(gi.FunctionInfo(get_default))>})"
+    __gtype__ = None # (!) real value is '<GType GSettingsSchemaSource (1841603312)>'
     __info__ = StructInfo(SettingsSchemaSource)
 
 

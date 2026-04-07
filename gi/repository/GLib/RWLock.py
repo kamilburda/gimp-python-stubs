@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class RWLock(__gi.Struct):
@@ -169,7 +167,7 @@ class RWLock(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RWLock), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RWLock' objects>, '__weakref__': <attribute '__weakref__' of 'RWLock' objects>, '__doc__': None, 'p': <property object at 0x000002830bef5800>, 'i': <property object at 0x000002830bef58f0>, 'clear': gi.FunctionInfo(clear, bound=None), 'init': gi.FunctionInfo(init, bound=None), 'reader_lock': gi.FunctionInfo(reader_lock, bound=None), 'reader_trylock': gi.FunctionInfo(reader_trylock, bound=None), 'reader_unlock': gi.FunctionInfo(reader_unlock, bound=None), 'writer_lock': gi.FunctionInfo(writer_lock, bound=None), 'writer_trylock': gi.FunctionInfo(writer_trylock, bound=None), 'writer_unlock': gi.FunctionInfo(writer_unlock, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RWLock), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RWLock' objects>, '__weakref__': <attribute '__weakref__' of 'RWLock' objects>, '__doc__': None, 'p': <property object at 0x0000018ea007aed0>, 'i': <property object at 0x0000018ea007afc0>, 'clear': gi.FunctionInfo(clear), 'init': gi.FunctionInfo(init), 'reader_lock': gi.FunctionInfo(reader_lock), 'reader_trylock': gi.FunctionInfo(reader_trylock), 'reader_unlock': gi.FunctionInfo(reader_unlock), 'writer_lock': gi.FunctionInfo(writer_lock), 'writer_trylock': gi.FunctionInfo(writer_trylock), 'writer_unlock': gi.FunctionInfo(writer_unlock)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(RWLock)
 

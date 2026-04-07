@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -79,7 +78,11 @@ class ObjectClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -201,7 +204,7 @@ class ObjectClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ObjectClass), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ObjectClass' objects>, '__weakref__': <attribute '__weakref__' of 'ObjectClass' objects>, '__doc__': None, 'g_type_class': <property object at 0x0000010b07a59da0>, 'construct_properties': <property object at 0x0000010b07a59ee0>, 'constructor': <property object at 0x0000010b07a59f80>, 'set_property': <property object at 0x0000010b07a5a070>, 'get_property': <property object at 0x0000010b07a5a160>, 'dispose': <property object at 0x0000010b07a5a250>, 'finalize': <property object at 0x0000010b07a5a340>, 'dispatch_properties_changed': <property object at 0x0000010b07a5a480>, 'notify': <property object at 0x0000010b07a5a520>, 'constructed': <property object at 0x0000010b07a5a610>, 'flags': <property object at 0x0000010b07a5a700>, 'n_construct_properties': <property object at 0x0000010b07a5a840>, 'pspecs': <property object at 0x0000010b07a5a8e0>, 'n_pspecs': <property object at 0x0000010b07a5a9d0>, 'pdummy': <property object at 0x0000010b07a5aac0>, 'find_property': gi.FunctionInfo(find_property, bound=None), 'install_properties': gi.FunctionInfo(install_properties, bound=None), 'install_property': gi.FunctionInfo(install_property, bound=None), 'list_properties': gi.FunctionInfo(list_properties, bound=None), 'override_property': gi.FunctionInfo(override_property, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ObjectClass), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ObjectClass' objects>, '__weakref__': <attribute '__weakref__' of 'ObjectClass' objects>, '__doc__': None, 'g_type_class': <property object at 0x000001dd11e5a2f0>, 'construct_properties': <property object at 0x000001dd11e5a3e0>, 'constructor': <property object at 0x000001dd11e5a4d0>, 'set_property': <property object at 0x000001dd11e5a5c0>, 'get_property': <property object at 0x000001dd11e5a6b0>, 'dispose': <property object at 0x000001dd11e5a7a0>, 'finalize': <property object at 0x000001dd11e5a890>, 'dispatch_properties_changed': <property object at 0x000001dd11e5a9d0>, 'notify': <property object at 0x000001dd11e5aa70>, 'constructed': <property object at 0x000001dd11e5ab60>, 'flags': <property object at 0x000001dd11e5ac50>, 'n_construct_properties': <property object at 0x000001dd11e5ad40>, 'pspecs': <property object at 0x000001dd11e5ae30>, 'n_pspecs': <property object at 0x000001dd11e5af20>, 'pdummy': <property object at 0x000001dd11e5b010>, 'find_property': gi.FunctionInfo(find_property), 'install_properties': gi.FunctionInfo(install_properties), 'install_property': gi.FunctionInfo(install_property), 'list_properties': gi.FunctionInfo(list_properties), 'override_property': gi.FunctionInfo(override_property)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ObjectClass)
 

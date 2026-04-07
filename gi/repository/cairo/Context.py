@@ -1,20 +1,13 @@
 # encoding: utf-8
 # module gi.repository.cairo
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Context(__gi.Boxed):
@@ -38,7 +31,11 @@ class Context(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -129,8 +126,8 @@ class Context(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Context), '__module__': 'gi.repository.cairo', '__gtype__': <GType CairoContext (4003646352)>, '__dict__': <attribute '__dict__' of 'Context' objects>, '__weakref__': <attribute '__weakref__' of 'Context' objects>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType CairoContext (4003646352)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Context), '__module__': 'gi.repository.cairo', '__gtype__': <GType CairoContext (577011008)>, '__dict__': <attribute '__dict__' of 'Context' objects>, '__weakref__': <attribute '__weakref__' of 'Context' objects>, '__doc__': None})"
+    __gtype__ = None # (!) real value is '<GType CairoContext (577011008)>'
     __info__ = StructInfo(Context)
 
 

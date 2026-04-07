@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class AttrSize(__gi.Struct):
@@ -145,7 +143,7 @@ class AttrSize(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrSize), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AttrSize' objects>, '__weakref__': <attribute '__weakref__' of 'AttrSize' objects>, '__doc__': None, 'attr': <property object at 0x00000213f608cc20>, 'size': <property object at 0x00000213f608cd10>, 'absolute': <property object at 0x00000213f608ce00>, 'new': gi.FunctionInfo(new, bound=None), 'new_absolute': gi.FunctionInfo(new_absolute, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrSize), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AttrSize' objects>, '__weakref__': <attribute '__weakref__' of 'AttrSize' objects>, '__doc__': None, 'attr': <property object at 0x000002803560b560>, 'size': <property object at 0x000002803560b600>, 'absolute': <property object at 0x000002803560b6f0>, 'new': <staticmethod(gi.FunctionInfo(new))>, 'new_absolute': <staticmethod(gi.FunctionInfo(new_absolute))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(AttrSize)
 

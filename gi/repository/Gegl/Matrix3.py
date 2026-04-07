@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -73,7 +67,8 @@ class Matrix3(__gi.Boxed):
         """ multiply(self, right:Gegl.Matrix3, product:Gegl.Matrix3) """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gegl.Matrix3 """
         pass
 
@@ -212,8 +207,8 @@ class Matrix3(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Matrix3), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglMatrix3 (426594240)>, '__dict__': <attribute '__dict__' of 'Matrix3' objects>, '__weakref__': <attribute '__weakref__' of 'Matrix3' objects>, '__doc__': None, 'coeff': <property object at 0x000002761b94ecf0>, 'new': gi.FunctionInfo(new, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'copy_into': gi.FunctionInfo(copy_into, bound=None), 'determinant': gi.FunctionInfo(determinant, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'identity': gi.FunctionInfo(identity, bound=None), 'invert': gi.FunctionInfo(invert, bound=None), 'is_affine': gi.FunctionInfo(is_affine, bound=None), 'is_identity': gi.FunctionInfo(is_identity, bound=None), 'is_scale': gi.FunctionInfo(is_scale, bound=None), 'is_translate': gi.FunctionInfo(is_translate, bound=None), 'multiply': gi.FunctionInfo(multiply, bound=None), 'originate': gi.FunctionInfo(originate, bound=None), 'parse_string': gi.FunctionInfo(parse_string, bound=None), 'round_error': gi.FunctionInfo(round_error, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None), 'transform_point': gi.FunctionInfo(transform_point, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002761b8a7880>})"
-    __gtype__ = None # (!) real value is '<GType GeglMatrix3 (426594240)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Matrix3), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglMatrix3 (3652620768)>, '__dict__': <attribute '__dict__' of 'Matrix3' objects>, '__weakref__': <attribute '__weakref__' of 'Matrix3' objects>, '__doc__': None, 'coeff': <property object at 0x000001ebdc263d80>, 'new': <classmethod(gi.FunctionInfo(new))>, 'copy': gi.FunctionInfo(copy), 'copy_into': gi.FunctionInfo(copy_into), 'determinant': gi.FunctionInfo(determinant), 'equal': gi.FunctionInfo(equal), 'identity': gi.FunctionInfo(identity), 'invert': gi.FunctionInfo(invert), 'is_affine': gi.FunctionInfo(is_affine), 'is_identity': gi.FunctionInfo(is_identity), 'is_scale': gi.FunctionInfo(is_scale), 'is_translate': gi.FunctionInfo(is_translate), 'multiply': gi.FunctionInfo(multiply), 'originate': gi.FunctionInfo(originate), 'parse_string': gi.FunctionInfo(parse_string), 'round_error': gi.FunctionInfo(round_error), 'to_string': gi.FunctionInfo(to_string), 'transform_point': gi.FunctionInfo(transform_point), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000001ebdc19cfe0>})"
+    __gtype__ = None # (!) real value is '<GType GeglMatrix3 (3652620768)>'
     __info__ = StructInfo(Matrix3)
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -161,7 +160,7 @@ class TableChild(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TableChild), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TableChild' objects>, '__weakref__': <attribute '__weakref__' of 'TableChild' objects>, '__doc__': None, 'widget': <property object at 0x000002ece9b74e50>, 'left_attach': <property object at 0x000002ece9b74f40>, 'right_attach': <property object at 0x000002ece9b75030>, 'top_attach': <property object at 0x000002ece9b75120>, 'bottom_attach': <property object at 0x000002ece9b75210>, 'xpadding': <property object at 0x000002ece9b75300>, 'ypadding': <property object at 0x000002ece9b753f0>, 'xexpand': <property object at 0x000002ece9b754e0>, 'yexpand': <property object at 0x000002ece9b755d0>, 'xshrink': <property object at 0x000002ece9b756c0>, 'yshrink': <property object at 0x000002ece9b757b0>, 'xfill': <property object at 0x000002ece9b758a0>, 'yfill': <property object at 0x000002ece9b75990>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TableChild), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TableChild' objects>, '__weakref__': <attribute '__weakref__' of 'TableChild' objects>, '__doc__': None, 'widget': <property object at 0x000002bfd3a03600>, 'left_attach': <property object at 0x000002bfd3a036f0>, 'right_attach': <property object at 0x000002bfd3a037e0>, 'top_attach': <property object at 0x000002bfd3a038d0>, 'bottom_attach': <property object at 0x000002bfd3a039c0>, 'xpadding': <property object at 0x000002bfd3a03ab0>, 'ypadding': <property object at 0x000002bfd3a03ba0>, 'xexpand': <property object at 0x000002bfd3a03c90>, 'yexpand': <property object at 0x000002bfd3a03d30>, 'xshrink': <property object at 0x000002bfd3a03e20>, 'yshrink': <property object at 0x000002bfd3a03f10>, 'xfill': <property object at 0x000002bfd3a0c040>, 'yfill': <property object at 0x000002bfd3a0c130>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TableChild)
 

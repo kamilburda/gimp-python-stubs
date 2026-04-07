@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class AttrIterator(__gi.Boxed):
@@ -155,8 +153,8 @@ class AttrIterator(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrIterator), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoAttrIterator (4081756128)>, '__dict__': <attribute '__dict__' of 'AttrIterator' objects>, '__weakref__': <attribute '__weakref__' of 'AttrIterator' objects>, '__doc__': None, 'copy': gi.FunctionInfo(copy, bound=None), 'destroy': gi.FunctionInfo(destroy, bound=None), 'get': gi.FunctionInfo(get, bound=None), 'get_attrs': gi.FunctionInfo(get_attrs, bound=None), 'get_font': gi.FunctionInfo(get_font, bound=None), 'next': gi.FunctionInfo(next, bound=None), 'range': gi.FunctionInfo(range, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType PangoAttrIterator (4081756128)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrIterator), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoAttrIterator (857389504)>, '__dict__': <attribute '__dict__' of 'AttrIterator' objects>, '__weakref__': <attribute '__weakref__' of 'AttrIterator' objects>, '__doc__': None, 'copy': gi.FunctionInfo(copy), 'destroy': gi.FunctionInfo(destroy), 'get': gi.FunctionInfo(get), 'get_attrs': gi.FunctionInfo(get_attrs), 'get_font': gi.FunctionInfo(get_font), 'next': gi.FunctionInfo(next), 'range': gi.FunctionInfo(range)})"
+    __gtype__ = None # (!) real value is '<GType PangoAttrIterator (857389504)>'
     __info__ = StructInfo(AttrIterator)
 
 

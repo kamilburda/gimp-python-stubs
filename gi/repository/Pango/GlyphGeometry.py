@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class GlyphGeometry(__gi.Struct):
@@ -137,7 +135,7 @@ class GlyphGeometry(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphGeometry), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'GlyphGeometry' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphGeometry' objects>, '__doc__': None, 'width': <property object at 0x00000213f60856c0>, 'x_offset': <property object at 0x00000213f60857b0>, 'y_offset': <property object at 0x00000213f60858a0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphGeometry), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'GlyphGeometry' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphGeometry' objects>, '__doc__': None, 'width': <property object at 0x00000280355d4180>, 'x_offset': <property object at 0x00000280355d4270>, 'y_offset': <property object at 0x00000280355d4360>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(GlyphGeometry)
 

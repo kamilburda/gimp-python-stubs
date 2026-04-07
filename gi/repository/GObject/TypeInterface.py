@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -59,11 +58,11 @@ class TypeInterface(__gi.Struct):
         return GType
 
     def peek(self, instance_class, iface_type): # real signature unknown; restored from __doc__
-        """ peek(instance_class:GObject.TypeClass, iface_type:GType) -> GObject.TypeInterface """
+        """ peek(instance_class:GObject.TypeClass, iface_type:GType) -> GObject.TypeInterface or None """
         pass
 
     def peek_parent(self): # real signature unknown; restored from __doc__
-        """ peek_parent(self) -> GObject.TypeInterface """
+        """ peek_parent(self) -> GObject.TypeInterface or None """
         pass
 
     def prerequisites(self, interface_type): # real signature unknown; restored from __doc__
@@ -83,7 +82,11 @@ class TypeInterface(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -179,7 +182,7 @@ class TypeInterface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TypeInterface), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeInterface' objects>, '__weakref__': <attribute '__weakref__' of 'TypeInterface' objects>, '__doc__': None, 'g_type': <property object at 0x0000010b07a889a0>, 'g_instance_type': <property object at 0x0000010b07a88a90>, 'peek_parent': gi.FunctionInfo(peek_parent, bound=None), 'add_prerequisite': gi.FunctionInfo(add_prerequisite, bound=None), 'get_plugin': gi.FunctionInfo(get_plugin, bound=None), 'instantiatable_prerequisite': gi.FunctionInfo(instantiatable_prerequisite, bound=None), 'peek': gi.FunctionInfo(peek, bound=None), 'prerequisites': gi.FunctionInfo(prerequisites, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TypeInterface), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeInterface' objects>, '__weakref__': <attribute '__weakref__' of 'TypeInterface' objects>, '__doc__': None, 'g_type': <property object at 0x000001dd11e4ae30>, 'g_instance_type': <property object at 0x000001dd11e4af20>, 'peek_parent': gi.FunctionInfo(peek_parent), 'add_prerequisite': <staticmethod(gi.FunctionInfo(add_prerequisite))>, 'get_plugin': <staticmethod(gi.FunctionInfo(get_plugin))>, 'instantiatable_prerequisite': <staticmethod(gi.FunctionInfo(instantiatable_prerequisite))>, 'peek': <staticmethod(gi.FunctionInfo(peek))>, 'prerequisites': <staticmethod(gi.FunctionInfo(prerequisites))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TypeInterface)
 

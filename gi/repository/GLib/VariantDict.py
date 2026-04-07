@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class VariantDict(__gi.Boxed):
@@ -47,7 +45,8 @@ class VariantDict(__gi.Boxed):
         """ lookup_value(self, key:str, expected_type:GLib.VariantType=None) -> GLib.Variant or None """
         pass
 
-    def new(self, from_asv=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, from_asv=None): # real signature unknown; restored from __doc__
         """ new(from_asv:GLib.Variant=None) -> GLib.VariantDict """
         pass
 
@@ -175,8 +174,8 @@ class VariantDict(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VariantDict), '__module__': 'gi.repository.GLib', '__gtype__': <GType GVariantDict (155119840)>, '__dict__': <attribute '__dict__' of 'VariantDict' objects>, '__weakref__': <attribute '__weakref__' of 'VariantDict' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'clear': gi.FunctionInfo(clear, bound=None), 'contains': gi.FunctionInfo(contains, bound=None), 'end': gi.FunctionInfo(end, bound=None), 'insert_value': gi.FunctionInfo(insert_value, bound=None), 'lookup_value': gi.FunctionInfo(lookup_value, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GVariantDict (155119840)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VariantDict), '__module__': 'gi.repository.GLib', '__gtype__': <GType GVariantDict (2640520896)>, '__dict__': <attribute '__dict__' of 'VariantDict' objects>, '__weakref__': <attribute '__weakref__' of 'VariantDict' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'clear': gi.FunctionInfo(clear), 'contains': gi.FunctionInfo(contains), 'end': gi.FunctionInfo(end), 'insert_value': gi.FunctionInfo(insert_value), 'lookup_value': gi.FunctionInfo(lookup_value), 'ref': gi.FunctionInfo(ref), 'remove': gi.FunctionInfo(remove), 'unref': gi.FunctionInfo(unref), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GVariantDict (2640520896)>'
     __info__ = StructInfo(VariantDict)
 
 

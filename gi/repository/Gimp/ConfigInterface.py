@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -186,10 +182,10 @@ class ConfigInterface(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ConfigInterface), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpConfigInterface (3599983552)>, '__dict__': <attribute '__dict__' of 'ConfigInterface' objects>, '__weakref__': <attribute '__weakref__' of 'ConfigInterface' objects>, '__doc__': None, '__gsignals__': {}, 'build_data_path': gi.FunctionInfo(build_data_path, bound=None), 'build_plug_in_path': gi.FunctionInfo(build_plug_in_path, bound=None), 'build_system_path': gi.FunctionInfo(build_system_path, bound=None), 'build_writable_path': gi.FunctionInfo(build_writable_path, bound=None), 'deserialize_return': gi.FunctionInfo(deserialize_return, bound=None), 'diff': gi.FunctionInfo(diff, bound=None), 'error_quark': gi.FunctionInfo(error_quark, bound=None), 'param_spec_duplicate': gi.FunctionInfo(param_spec_duplicate, bound=None), 'reset_properties': gi.FunctionInfo(reset_properties, bound=None), 'reset_property': gi.FunctionInfo(reset_property, bound=None), 'serialize_value': gi.FunctionInfo(serialize_value, bound=None), 'string_append_escaped': gi.FunctionInfo(string_append_escaped, bound=None), 'sync': gi.FunctionInfo(sync, bound=None), 'type_register': gi.FunctionInfo(type_register, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ConfigInterface), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpConfigInterface (2362478528)>, '__dict__': <attribute '__dict__' of 'ConfigInterface' objects>, '__weakref__': <attribute '__weakref__' of 'ConfigInterface' objects>, '__doc__': None, '__gsignals__': {}, 'build_data_path': <staticmethod(gi.FunctionInfo(build_data_path))>, 'build_plug_in_path': <staticmethod(gi.FunctionInfo(build_plug_in_path))>, 'build_system_path': <staticmethod(gi.FunctionInfo(build_system_path))>, 'build_writable_path': <staticmethod(gi.FunctionInfo(build_writable_path))>, 'deserialize_return': <staticmethod(gi.FunctionInfo(deserialize_return))>, 'diff': <staticmethod(gi.FunctionInfo(diff))>, 'error_quark': <staticmethod(gi.FunctionInfo(error_quark))>, 'param_spec_duplicate': <staticmethod(gi.FunctionInfo(param_spec_duplicate))>, 'reset_properties': <staticmethod(gi.FunctionInfo(reset_properties))>, 'reset_property': <staticmethod(gi.FunctionInfo(reset_property))>, 'serialize_value': <staticmethod(gi.FunctionInfo(serialize_value))>, 'string_append_escaped': <staticmethod(gi.FunctionInfo(string_append_escaped))>, 'sync': <staticmethod(gi.FunctionInfo(sync))>, 'type_register': <staticmethod(gi.FunctionInfo(type_register))>})"
     __gdoc__ = 'Interface GimpConfigInterface\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpConfigInterface (3599983552)>'
+    __gtype__ = None # (!) real value is '<GType GimpConfigInterface (2362478528)>'
     __info__ = InterfaceInfo(ConfigInterface)
 
 

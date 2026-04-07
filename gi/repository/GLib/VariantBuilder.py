@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class VariantBuilder(__gi.Boxed):
@@ -39,7 +37,8 @@ class VariantBuilder(__gi.Boxed):
         """ end(self) -> GLib.Variant """
         pass
 
-    def new(self, type): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, type): # real signature unknown; restored from __doc__
         """ new(type:GLib.VariantType) -> GLib.VariantBuilder """
         pass
 
@@ -167,8 +166,8 @@ class VariantBuilder(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VariantBuilder), '__module__': 'gi.repository.GLib', '__gtype__': <GType GVariantBuilder (155119728)>, '__dict__': <attribute '__dict__' of 'VariantBuilder' objects>, '__weakref__': <attribute '__weakref__' of 'VariantBuilder' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'add_value': gi.FunctionInfo(add_value, bound=None), 'close': gi.FunctionInfo(close, bound=None), 'end': gi.FunctionInfo(end, bound=None), 'open': gi.FunctionInfo(open, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GVariantBuilder (155119728)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(VariantBuilder), '__module__': 'gi.repository.GLib', '__gtype__': <GType GVariantBuilder (2640519264)>, '__dict__': <attribute '__dict__' of 'VariantBuilder' objects>, '__weakref__': <attribute '__weakref__' of 'VariantBuilder' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'add_value': gi.FunctionInfo(add_value), 'close': gi.FunctionInfo(close), 'end': gi.FunctionInfo(end), 'open': gi.FunctionInfo(open), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GVariantBuilder (2640519264)>'
     __info__ = StructInfo(VariantBuilder)
 
 

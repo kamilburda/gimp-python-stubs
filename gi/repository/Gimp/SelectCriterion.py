@@ -1,26 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class SelectCriterion(__gobject.GEnum):
+class SelectCriterion(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -79,7 +75,7 @@ class SelectCriterion(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -102,7 +98,7 @@ class SelectCriterion(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -130,12 +126,23 @@ class SelectCriterion(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -164,6 +171,10 @@ class SelectCriterion(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -209,6 +220,14 @@ class SelectCriterion(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -234,8 +253,8 @@ class SelectCriterion(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -266,15 +285,16 @@ class SelectCriterion(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -338,7 +358,7 @@ class SelectCriterion(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -380,10 +400,6 @@ class SelectCriterion(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ALPHA = 10
     COMPOSITE = 0
@@ -396,22 +412,9 @@ class SelectCriterion(__gobject.GEnum):
     RGB_BLUE = 3
     RGB_GREEN = 2
     RGB_RED = 1
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gimp', '__dict__': <attribute '__dict__' of 'SelectCriterion' objects>, '__doc__': None, '__gtype__': <GType GimpSelectCriterion (3595423808)>, '__enum_values__': {0: <enum GIMP_SELECT_CRITERION_COMPOSITE of type Gimp.SelectCriterion>, 1: <enum GIMP_SELECT_CRITERION_RGB_RED of type Gimp.SelectCriterion>, 2: <enum GIMP_SELECT_CRITERION_RGB_GREEN of type Gimp.SelectCriterion>, 3: <enum GIMP_SELECT_CRITERION_RGB_BLUE of type Gimp.SelectCriterion>, 4: <enum GIMP_SELECT_CRITERION_HSV_HUE of type Gimp.SelectCriterion>, 5: <enum GIMP_SELECT_CRITERION_HSV_SATURATION of type Gimp.SelectCriterion>, 6: <enum GIMP_SELECT_CRITERION_HSV_VALUE of type Gimp.SelectCriterion>, 7: <enum GIMP_SELECT_CRITERION_LCH_LIGHTNESS of type Gimp.SelectCriterion>, 8: <enum GIMP_SELECT_CRITERION_LCH_CHROMA of type Gimp.SelectCriterion>, 9: <enum GIMP_SELECT_CRITERION_LCH_HUE of type Gimp.SelectCriterion>, 10: <enum GIMP_SELECT_CRITERION_ALPHA of type Gimp.SelectCriterion>}, '__info__': gi.EnumInfo(SelectCriterion), 'COMPOSITE': <enum GIMP_SELECT_CRITERION_COMPOSITE of type Gimp.SelectCriterion>, 'RGB_RED': <enum GIMP_SELECT_CRITERION_RGB_RED of type Gimp.SelectCriterion>, 'RGB_GREEN': <enum GIMP_SELECT_CRITERION_RGB_GREEN of type Gimp.SelectCriterion>, 'RGB_BLUE': <enum GIMP_SELECT_CRITERION_RGB_BLUE of type Gimp.SelectCriterion>, 'HSV_HUE': <enum GIMP_SELECT_CRITERION_HSV_HUE of type Gimp.SelectCriterion>, 'HSV_SATURATION': <enum GIMP_SELECT_CRITERION_HSV_SATURATION of type Gimp.SelectCriterion>, 'HSV_VALUE': <enum GIMP_SELECT_CRITERION_HSV_VALUE of type Gimp.SelectCriterion>, 'LCH_LIGHTNESS': <enum GIMP_SELECT_CRITERION_LCH_LIGHTNESS of type Gimp.SelectCriterion>, 'LCH_CHROMA': <enum GIMP_SELECT_CRITERION_LCH_CHROMA of type Gimp.SelectCriterion>, 'LCH_HUE': <enum GIMP_SELECT_CRITERION_LCH_HUE of type Gimp.SelectCriterion>, 'ALPHA': <enum GIMP_SELECT_CRITERION_ALPHA of type Gimp.SelectCriterion>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-    }
-    __gtype__ = None # (!) real value is '<GType GimpSelectCriterion (3595423808)>'
-    __info__ = gi.EnumInfo(SelectCriterion)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'COMPOSITE': <SelectCriterion.COMPOSITE: 0>, 'RGB_RED': <SelectCriterion.RGB_RED: 1>, 'RGB_GREEN': <SelectCriterion.RGB_GREEN: 2>, 'RGB_BLUE': <SelectCriterion.RGB_BLUE: 3>, 'HSV_HUE': <SelectCriterion.HSV_HUE: 4>, 'HSV_SATURATION': <SelectCriterion.HSV_SATURATION: 5>, 'HSV_VALUE': <SelectCriterion.HSV_VALUE: 6>, 'LCH_LIGHTNESS': <SelectCriterion.LCH_LIGHTNESS: 7>, 'LCH_CHROMA': <SelectCriterion.LCH_CHROMA: 8>, 'LCH_HUE': <SelectCriterion.LCH_HUE: 9>, 'ALPHA': <SelectCriterion.ALPHA: 10>})"
+    __name__ = 'SelectCriterion'
+    __qualname__ = 'SelectCriterion'
 
 

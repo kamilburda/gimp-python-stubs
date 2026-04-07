@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -169,10 +162,10 @@ class Document(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Document), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkDocument (892042752)>, '__dict__': <attribute '__dict__' of 'Document' objects>, '__weakref__': <attribute '__weakref__' of 'Document' objects>, '__doc__': None, '__gsignals__': {}, 'get_attribute_value': gi.FunctionInfo(get_attribute_value, bound=None), 'get_attributes': gi.FunctionInfo(get_attributes, bound=None), 'get_current_page_number': gi.FunctionInfo(get_current_page_number, bound=None), 'get_document': gi.FunctionInfo(get_document, bound=None), 'get_document_type': gi.FunctionInfo(get_document_type, bound=None), 'get_locale': gi.FunctionInfo(get_locale, bound=None), 'get_page_count': gi.FunctionInfo(get_page_count, bound=None), 'get_text_selections': gi.FunctionInfo(get_text_selections, bound=None), 'set_attribute_value': gi.FunctionInfo(set_attribute_value, bound=None), 'set_text_selections': gi.FunctionInfo(set_text_selections, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Document), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkDocument (1534560192)>, '__dict__': <attribute '__dict__' of 'Document' objects>, '__weakref__': <attribute '__weakref__' of 'Document' objects>, '__doc__': None, '__gsignals__': {}, 'get_attribute_value': gi.FunctionInfo(get_attribute_value), 'get_attributes': gi.FunctionInfo(get_attributes), 'get_current_page_number': gi.FunctionInfo(get_current_page_number), 'get_document': gi.FunctionInfo(get_document), 'get_document_type': gi.FunctionInfo(get_document_type), 'get_locale': gi.FunctionInfo(get_locale), 'get_page_count': gi.FunctionInfo(get_page_count), 'get_text_selections': gi.FunctionInfo(get_text_selections), 'set_attribute_value': gi.FunctionInfo(set_attribute_value), 'set_text_selections': gi.FunctionInfo(set_text_selections)})"
     __gdoc__ = 'Interface AtkDocument\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkDocument (892042752)>'
+    __gtype__ = None # (!) real value is '<GType AtkDocument (1534560192)>'
     __info__ = InterfaceInfo(Document)
 
 

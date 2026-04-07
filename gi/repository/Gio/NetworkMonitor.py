@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -58,7 +63,11 @@ class NetworkMonitor(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -149,10 +158,10 @@ class NetworkMonitor(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(NetworkMonitor), '__module__': 'gi.repository.Gio', '__gtype__': <GType GNetworkMonitor (2472620448)>, '__dict__': <attribute '__dict__' of 'NetworkMonitor' objects>, '__weakref__': <attribute '__weakref__' of 'NetworkMonitor' objects>, '__doc__': None, '__gsignals__': {}, 'get_default': gi.FunctionInfo(get_default, bound=None), 'can_reach': gi.FunctionInfo(can_reach, bound=None), 'can_reach_async': gi.FunctionInfo(can_reach_async, bound=None), 'can_reach_finish': gi.FunctionInfo(can_reach_finish, bound=None), 'get_connectivity': gi.FunctionInfo(get_connectivity, bound=None), 'get_network_available': gi.FunctionInfo(get_network_available, bound=None), 'get_network_metered': gi.FunctionInfo(get_network_metered, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(NetworkMonitor), '__module__': 'gi.repository.Gio', '__gtype__': <GType GNetworkMonitor (1838041104)>, '__dict__': <attribute '__dict__' of 'NetworkMonitor' objects>, '__weakref__': <attribute '__weakref__' of 'NetworkMonitor' objects>, '__doc__': None, '__gsignals__': {}, 'get_default': <staticmethod(gi.FunctionInfo(get_default))>, 'can_reach': gi.FunctionInfo(can_reach), 'can_reach_async': gi.FunctionInfo(can_reach_async), 'can_reach_finish': gi.FunctionInfo(can_reach_finish), 'get_connectivity': gi.FunctionInfo(get_connectivity), 'get_network_available': gi.FunctionInfo(get_network_available), 'get_network_metered': gi.FunctionInfo(get_network_metered)})"
     __gdoc__ = 'Interface GNetworkMonitor\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GNetworkMonitor (2472620448)>'
+    __gtype__ = None # (!) real value is '<GType GNetworkMonitor (1838041104)>'
     __info__ = InterfaceInfo(NetworkMonitor)
 
 

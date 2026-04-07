@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class ActionGroupInterface(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -158,7 +167,7 @@ class ActionGroupInterface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ActionGroupInterface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ActionGroupInterface' objects>, '__weakref__': <attribute '__weakref__' of 'ActionGroupInterface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001a793d84720>, 'has_action': <property object at 0x000001a793d84810>, 'list_actions': <property object at 0x000001a793d84900>, 'get_action_enabled': <property object at 0x000001a793d84a40>, 'get_action_parameter_type': <property object at 0x000001a793d84b30>, 'get_action_state_type': <property object at 0x000001a793d84c20>, 'get_action_state_hint': <property object at 0x000001a793d84d10>, 'get_action_state': <property object at 0x000001a793d84e00>, 'change_action_state': <property object at 0x000001a793d84ef0>, 'activate_action': <property object at 0x000001a793d84f90>, 'action_added': <property object at 0x000001a793d85080>, 'action_removed': <property object at 0x000001a793d85170>, 'action_enabled_changed': <property object at 0x000001a793d852b0>, 'action_state_changed': <property object at 0x000001a793d853a0>, 'query_action': <property object at 0x000001a793d85440>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ActionGroupInterface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ActionGroupInterface' objects>, '__weakref__': <attribute '__weakref__' of 'ActionGroupInterface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001ea703fbd80>, 'has_action': <property object at 0x000001ea703fbe70>, 'list_actions': <property object at 0x000001ea703fbf60>, 'get_action_enabled': <property object at 0x000001ea70408090>, 'get_action_parameter_type': <property object at 0x000001ea704081d0>, 'get_action_state_type': <property object at 0x000001ea70408270>, 'get_action_state_hint': <property object at 0x000001ea70408360>, 'get_action_state': <property object at 0x000001ea70408450>, 'change_action_state': <property object at 0x000001ea70408540>, 'activate_action': <property object at 0x000001ea70408630>, 'action_added': <property object at 0x000001ea70408720>, 'action_removed': <property object at 0x000001ea70408810>, 'action_enabled_changed': <property object at 0x000001ea70408900>, 'action_state_changed': <property object at 0x000001ea704089f0>, 'query_action': <property object at 0x000001ea70408ae0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ActionGroupInterface)
 

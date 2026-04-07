@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class GlyphItemIter(__gi.Boxed):
@@ -174,8 +172,8 @@ class GlyphItemIter(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphItemIter), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoGlyphItemIter (4081762960)>, '__dict__': <attribute '__dict__' of 'GlyphItemIter' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphItemIter' objects>, '__doc__': None, 'glyph_item': <property object at 0x00000213f6086200>, 'text': <property object at 0x00000213f60862f0>, 'start_glyph': <property object at 0x00000213f60863e0>, 'start_index': <property object at 0x00000213f60864d0>, 'start_char': <property object at 0x00000213f60865c0>, 'end_glyph': <property object at 0x00000213f60866b0>, 'end_index': <property object at 0x00000213f60867a0>, 'end_char': <property object at 0x00000213f6086890>, 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'init_end': gi.FunctionInfo(init_end, bound=None), 'init_start': gi.FunctionInfo(init_start, bound=None), 'next_cluster': gi.FunctionInfo(next_cluster, bound=None), 'prev_cluster': gi.FunctionInfo(prev_cluster, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType PangoGlyphItemIter (4081762960)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphItemIter), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoGlyphItemIter (843940320)>, '__dict__': <attribute '__dict__' of 'GlyphItemIter' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphItemIter' objects>, '__doc__': None, 'glyph_item': <property object at 0x00000280355d4cc0>, 'text': <property object at 0x00000280355d4db0>, 'start_glyph': <property object at 0x00000280355d4ea0>, 'start_index': <property object at 0x00000280355d4f90>, 'start_char': <property object at 0x00000280355d5080>, 'end_glyph': <property object at 0x00000280355d5170>, 'end_index': <property object at 0x00000280355d5260>, 'end_char': <property object at 0x00000280355d5350>, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'init_end': gi.FunctionInfo(init_end), 'init_start': gi.FunctionInfo(init_start), 'next_cluster': gi.FunctionInfo(next_cluster), 'prev_cluster': gi.FunctionInfo(prev_cluster)})"
+    __gtype__ = None # (!) real value is '<GType PangoGlyphItemIter (843940320)>'
     __info__ = StructInfo(GlyphItemIter)
 
 

@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class UnixCredentialsMessageClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -134,7 +143,7 @@ class UnixCredentialsMessageClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(UnixCredentialsMessageClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'UnixCredentialsMessageClass' objects>, '__weakref__': <attribute '__weakref__' of 'UnixCredentialsMessageClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793d708b0>, '_g_reserved1': <property object at 0x000001a793d709a0>, '_g_reserved2': <property object at 0x000001a793d70a90>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(UnixCredentialsMessageClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'UnixCredentialsMessageClass' objects>, '__weakref__': <attribute '__weakref__' of 'UnixCredentialsMessageClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea709eb010>, '_g_reserved1': <property object at 0x000001ea709eb100>, '_g_reserved2': <property object at 0x000001ea709eb1f0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(UnixCredentialsMessageClass)
 

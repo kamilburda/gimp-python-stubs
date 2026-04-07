@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -153,7 +152,7 @@ class LockButtonClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LockButtonClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'LockButtonClass' objects>, '__weakref__': <attribute '__weakref__' of 'LockButtonClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceac0bc90>, 'reserved0': <property object at 0x000002eceac0bd80>, 'reserved1': <property object at 0x000002eceac0be70>, 'reserved2': <property object at 0x000002eceac0bf60>, 'reserved3': <property object at 0x000002eceac10090>, 'reserved4': <property object at 0x000002eceac10180>, 'reserved5': <property object at 0x000002eceac10270>, 'reserved6': <property object at 0x000002eceac10360>, 'reserved7': <property object at 0x000002eceac10450>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LockButtonClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'LockButtonClass' objects>, '__weakref__': <attribute '__weakref__' of 'LockButtonClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18bac50>, 'reserved0': <property object at 0x000002bfd18bad40>, 'reserved1': <property object at 0x000002bfd18bae30>, 'reserved2': <property object at 0x000002bfd18baf20>, 'reserved3': <property object at 0x000002bfd18bb010>, 'reserved4': <property object at 0x000002bfd18bb100>, 'reserved5': <property object at 0x000002bfd18bb1f0>, 'reserved6': <property object at 0x000002bfd18bb2e0>, 'reserved7': <property object at 0x000002bfd18bb3d0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(LockButtonClass)
 

@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -68,7 +73,11 @@ class SettingsSchema(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -159,8 +168,8 @@ class SettingsSchema(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SettingsSchema), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSettingsSchema (2466396000)>, '__dict__': <attribute '__dict__' of 'SettingsSchema' objects>, '__weakref__': <attribute '__weakref__' of 'SettingsSchema' objects>, '__doc__': None, 'get_id': gi.FunctionInfo(get_id, bound=None), 'get_key': gi.FunctionInfo(get_key, bound=None), 'get_path': gi.FunctionInfo(get_path, bound=None), 'has_key': gi.FunctionInfo(has_key, bound=None), 'list_children': gi.FunctionInfo(list_children, bound=None), 'list_keys': gi.FunctionInfo(list_keys, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GSettingsSchema (2466396000)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(SettingsSchema), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSettingsSchema (1841602832)>, '__dict__': <attribute '__dict__' of 'SettingsSchema' objects>, '__weakref__': <attribute '__weakref__' of 'SettingsSchema' objects>, '__doc__': None, 'get_id': gi.FunctionInfo(get_id), 'get_key': gi.FunctionInfo(get_key), 'get_path': gi.FunctionInfo(get_path), 'has_key': gi.FunctionInfo(has_key), 'list_children': gi.FunctionInfo(list_children), 'list_keys': gi.FunctionInfo(list_keys), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref)})"
+    __gtype__ = None # (!) real value is '<GType GSettingsSchema (1841602832)>'
     __info__ = StructInfo(SettingsSchema)
 
 

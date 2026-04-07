@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,17 +7,17 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class DeleteType(__gobject.GEnum):
+class DeleteType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +76,7 @@ class DeleteType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +99,7 @@ class DeleteType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +127,23 @@ class DeleteType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +172,10 @@ class DeleteType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +221,14 @@ class DeleteType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +254,8 @@ class DeleteType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +286,16 @@ class DeleteType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +359,7 @@ class DeleteType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -378,10 +401,6 @@ class DeleteType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CHARS = 0
     DISPLAY_LINES = 3
@@ -391,19 +410,9 @@ class DeleteType(__gobject.GEnum):
     WHITESPACE = 7
     WORDS = 2
     WORD_ENDS = 1
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gtk', '__dict__': <attribute '__dict__' of 'DeleteType' objects>, '__doc__': None, '__gtype__': <GType GtkDeleteType (3923969392)>, '__enum_values__': {0: <enum GTK_DELETE_CHARS of type Gtk.DeleteType>, 1: <enum GTK_DELETE_WORD_ENDS of type Gtk.DeleteType>, 2: <enum GTK_DELETE_WORDS of type Gtk.DeleteType>, 3: <enum GTK_DELETE_DISPLAY_LINES of type Gtk.DeleteType>, 4: <enum GTK_DELETE_DISPLAY_LINE_ENDS of type Gtk.DeleteType>, 5: <enum GTK_DELETE_PARAGRAPH_ENDS of type Gtk.DeleteType>, 6: <enum GTK_DELETE_PARAGRAPHS of type Gtk.DeleteType>, 7: <enum GTK_DELETE_WHITESPACE of type Gtk.DeleteType>}, '__info__': gi.EnumInfo(DeleteType), 'CHARS': <enum GTK_DELETE_CHARS of type Gtk.DeleteType>, 'WORD_ENDS': <enum GTK_DELETE_WORD_ENDS of type Gtk.DeleteType>, 'WORDS': <enum GTK_DELETE_WORDS of type Gtk.DeleteType>, 'DISPLAY_LINES': <enum GTK_DELETE_DISPLAY_LINES of type Gtk.DeleteType>, 'DISPLAY_LINE_ENDS': <enum GTK_DELETE_DISPLAY_LINE_ENDS of type Gtk.DeleteType>, 'PARAGRAPH_ENDS': <enum GTK_DELETE_PARAGRAPH_ENDS of type Gtk.DeleteType>, 'PARAGRAPHS': <enum GTK_DELETE_PARAGRAPHS of type Gtk.DeleteType>, 'WHITESPACE': <enum GTK_DELETE_WHITESPACE of type Gtk.DeleteType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-    }
-    __gtype__ = None # (!) real value is '<GType GtkDeleteType (3923969392)>'
-    __info__ = gi.EnumInfo(DeleteType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'CHARS': <DeleteType.CHARS: 0>, 'WORD_ENDS': <DeleteType.WORD_ENDS: 1>, 'WORDS': <DeleteType.WORDS: 2>, 'DISPLAY_LINES': <DeleteType.DISPLAY_LINES: 3>, 'DISPLAY_LINE_ENDS': <DeleteType.DISPLAY_LINE_ENDS: 4>, 'PARAGRAPH_ENDS': <DeleteType.PARAGRAPH_ENDS: 5>, 'PARAGRAPHS': <DeleteType.PARAGRAPHS: 6>, 'WHITESPACE': <DeleteType.WHITESPACE: 7>})"
+    __name__ = 'DeleteType'
+    __qualname__ = 'DeleteType'
 
 

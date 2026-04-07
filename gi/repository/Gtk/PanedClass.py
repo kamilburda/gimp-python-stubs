@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,7 +156,7 @@ class PanedClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PanedClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PanedClass' objects>, '__weakref__': <attribute '__weakref__' of 'PanedClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceac308b0>, 'cycle_child_focus': <property object at 0x000002eceac309a0>, 'toggle_handle_focus': <property object at 0x000002eceac30a90>, 'move_handle': <property object at 0x000002eceac30b80>, 'cycle_handle_focus': <property object at 0x000002eceac30c70>, 'accept_position': <property object at 0x000002eceac30d60>, 'cancel_position': <property object at 0x000002eceac30e50>, '_gtk_reserved1': <property object at 0x000002eceac30f40>, '_gtk_reserved2': <property object at 0x000002eceac31030>, '_gtk_reserved3': <property object at 0x000002eceac31120>, '_gtk_reserved4': <property object at 0x000002eceac31210>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PanedClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PanedClass' objects>, '__weakref__': <attribute '__weakref__' of 'PanedClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18a3510>, 'cycle_child_focus': <property object at 0x000002bfd18a3600>, 'toggle_handle_focus': <property object at 0x000002bfd18a36f0>, 'move_handle': <property object at 0x000002bfd18a37e0>, 'cycle_handle_focus': <property object at 0x000002bfd18a38d0>, 'accept_position': <property object at 0x000002bfd18a39c0>, 'cancel_position': <property object at 0x000002bfd18a3ab0>, '_gtk_reserved1': <property object at 0x000002bfd18a3ba0>, '_gtk_reserved2': <property object at 0x000002bfd18a3c90>, '_gtk_reserved3': <property object at 0x000002bfd18a3d80>, '_gtk_reserved4': <property object at 0x000002bfd18a3e70>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PanedClass)
 

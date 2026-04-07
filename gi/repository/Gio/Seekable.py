@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -50,7 +55,11 @@ class Seekable(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -141,10 +150,10 @@ class Seekable(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Seekable), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSeekable (2435158128)>, '__dict__': <attribute '__dict__' of 'Seekable' objects>, '__weakref__': <attribute '__weakref__' of 'Seekable' objects>, '__doc__': None, '__gsignals__': {}, 'can_seek': gi.FunctionInfo(can_seek, bound=None), 'can_truncate': gi.FunctionInfo(can_truncate, bound=None), 'seek': gi.FunctionInfo(seek, bound=None), 'tell': gi.FunctionInfo(tell, bound=None), 'truncate': gi.FunctionInfo(truncate, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Seekable), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSeekable (1838038320)>, '__dict__': <attribute '__dict__' of 'Seekable' objects>, '__weakref__': <attribute '__weakref__' of 'Seekable' objects>, '__doc__': None, '__gsignals__': {}, 'can_seek': gi.FunctionInfo(can_seek), 'can_truncate': gi.FunctionInfo(can_truncate), 'seek': gi.FunctionInfo(seek), 'tell': gi.FunctionInfo(tell), 'truncate': gi.FunctionInfo(truncate)})"
     __gdoc__ = 'Interface GSeekable\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GSeekable (2435158128)>'
+    __gtype__ = None # (!) real value is '<GType GSeekable (1838038320)>'
     __info__ = InterfaceInfo(Seekable)
 
 

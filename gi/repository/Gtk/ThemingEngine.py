@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -46,20 +45,20 @@ class ThemingEngine(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -74,6 +73,12 @@ class ThemingEngine(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_render_activity(self, *args, **kwargs): # real signature unknown
@@ -159,17 +164,17 @@ class ThemingEngine(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -247,20 +252,20 @@ class ThemingEngine(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -407,20 +412,20 @@ class ThemingEngine(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -556,12 +561,14 @@ class ThemingEngine(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ecee308520>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd1913f10>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ThemingEngine), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkThemingEngine (3922676672)>, '__doc__': None, '__gsignals__': {}, 'load': gi.FunctionInfo(load, bound=None), 'get_background_color': gi.FunctionInfo(get_background_color, bound=None), 'get_border': gi.FunctionInfo(get_border, bound=None), 'get_border_color': gi.FunctionInfo(get_border_color, bound=None), 'get_color': gi.FunctionInfo(get_color, bound=None), 'get_direction': gi.FunctionInfo(get_direction, bound=None), 'get_font': gi.FunctionInfo(get_font, bound=None), 'get_junction_sides': gi.FunctionInfo(get_junction_sides, bound=None), 'get_margin': gi.FunctionInfo(get_margin, bound=None), 'get_padding': gi.FunctionInfo(get_padding, bound=None), 'get_path': gi.FunctionInfo(get_path, bound=None), 'get_property': gi.FunctionInfo(get_property, bound=None), 'get_screen': gi.FunctionInfo(get_screen, bound=None), 'get_state': gi.FunctionInfo(get_state, bound=None), 'get_style_property': gi.FunctionInfo(get_style_property, bound=None), 'has_class': gi.FunctionInfo(has_class, bound=None), 'has_region': gi.FunctionInfo(has_region, bound=None), 'lookup_color': gi.FunctionInfo(lookup_color, bound=None), 'state_is_running': gi.FunctionInfo(state_is_running, bound=None), 'do_render_activity': gi.VFuncInfo(render_activity, bound=None), 'do_render_arrow': gi.VFuncInfo(render_arrow, bound=None), 'do_render_background': gi.VFuncInfo(render_background, bound=None), 'do_render_check': gi.VFuncInfo(render_check, bound=None), 'do_render_expander': gi.VFuncInfo(render_expander, bound=None), 'do_render_extension': gi.VFuncInfo(render_extension, bound=None), 'do_render_focus': gi.VFuncInfo(render_focus, bound=None), 'do_render_frame': gi.VFuncInfo(render_frame, bound=None), 'do_render_frame_gap': gi.VFuncInfo(render_frame_gap, bound=None), 'do_render_handle': gi.VFuncInfo(render_handle, bound=None), 'do_render_icon': gi.VFuncInfo(render_icon, bound=None), 'do_render_icon_surface': gi.VFuncInfo(render_icon_surface, bound=None), 'do_render_layout': gi.VFuncInfo(render_layout, bound=None), 'do_render_line': gi.VFuncInfo(render_line, bound=None), 'do_render_option': gi.VFuncInfo(render_option, bound=None), 'do_render_slider': gi.VFuncInfo(render_slider, bound=None), 'parent_object': <property object at 0x000002ece9b67100>, 'priv': <property object at 0x000002ece9b671f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ThemingEngine), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkThemingEngine (3414247152)>, '__doc__': None, '__gsignals__': {}, 'load': <staticmethod(gi.FunctionInfo(load))>, 'get_background_color': gi.FunctionInfo(get_background_color), 'get_border': gi.FunctionInfo(get_border), 'get_border_color': gi.FunctionInfo(get_border_color), 'get_color': gi.FunctionInfo(get_color), 'get_direction': gi.FunctionInfo(get_direction), 'get_font': gi.FunctionInfo(get_font), 'get_junction_sides': gi.FunctionInfo(get_junction_sides), 'get_margin': gi.FunctionInfo(get_margin), 'get_padding': gi.FunctionInfo(get_padding), 'get_path': gi.FunctionInfo(get_path), 'get_property': gi.FunctionInfo(get_property), 'get_screen': gi.FunctionInfo(get_screen), 'get_state': gi.FunctionInfo(get_state), 'get_style_property': gi.FunctionInfo(get_style_property), 'has_class': gi.FunctionInfo(has_class), 'has_region': gi.FunctionInfo(has_region), 'lookup_color': gi.FunctionInfo(lookup_color), 'state_is_running': gi.FunctionInfo(state_is_running), 'do_render_activity': gi.VFuncInfo(render_activity), 'do_render_arrow': gi.VFuncInfo(render_arrow), 'do_render_background': gi.VFuncInfo(render_background), 'do_render_check': gi.VFuncInfo(render_check), 'do_render_expander': gi.VFuncInfo(render_expander), 'do_render_extension': gi.VFuncInfo(render_extension), 'do_render_focus': gi.VFuncInfo(render_focus), 'do_render_frame': gi.VFuncInfo(render_frame), 'do_render_frame_gap': gi.VFuncInfo(render_frame_gap), 'do_render_handle': gi.VFuncInfo(render_handle), 'do_render_icon': gi.VFuncInfo(render_icon), 'do_render_icon_surface': gi.VFuncInfo(render_icon_surface), 'do_render_layout': gi.VFuncInfo(render_layout), 'do_render_line': gi.VFuncInfo(render_line), 'do_render_option': gi.VFuncInfo(render_option), 'do_render_slider': gi.VFuncInfo(render_slider), 'parent_object': <property object at 0x000002bfd3a1d940>, 'priv': <property object at 0x000002bfd3a1d6c0>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkThemingEngine\n\nProperties from GtkThemingEngine:\n  name -> gchararray: Name\n    Theming engine name\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkThemingEngine (3922676672)>'
+    __gtype__ = None # (!) real value is '<GType GtkThemingEngine (3414247152)>'
     __info__ = ObjectInfo(ThemingEngine)
+    __static_attributes__ = ()
 
 

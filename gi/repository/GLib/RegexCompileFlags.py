@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class RegexCompileFlags(__gobject.GFlags):
+class RegexCompileFlags(__enum.IntFlag):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class RegexCompileFlags(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class RegexCompileFlags(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -114,8 +112,8 @@ class RegexCompileFlags(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -126,12 +124,16 @@ class RegexCompileFlags(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +162,10 @@ class RegexCompileFlags(__gobject.GFlags):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -201,8 +207,16 @@ class RegexCompileFlags(__gobject.GFlags):
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -230,16 +244,16 @@ class RegexCompileFlags(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -254,24 +268,24 @@ class RegexCompileFlags(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -290,8 +304,8 @@ class RegexCompileFlags(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -322,8 +336,8 @@ class RegexCompileFlags(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -335,7 +349,7 @@ class RegexCompileFlags(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -361,16 +375,12 @@ class RegexCompileFlags(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -381,15 +391,10 @@ class RegexCompileFlags(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ANCHORED = 16
     BSR_ANYCRLF = 8388608
     CASELESS = 1
-    DEFAULT = 0
     DOLLAR_ENDONLY = 32
     DOTALL = 4
     DUPNAMES = 524288
@@ -397,38 +402,15 @@ class RegexCompileFlags(__gobject.GFlags):
     FIRSTLINE = 262144
     JAVASCRIPT_COMPAT = 33554432
     MULTILINE = 2
-    NEWLINE_ANYCRLF = 5242880
     NEWLINE_CR = 1048576
-    NEWLINE_CRLF = 3145728
     NEWLINE_LF = 2097152
     NO_AUTO_CAPTURE = 4096
     OPTIMIZE = 8192
     RAW = 2048
     UNGREEDY = 512
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'RegexCompileFlags' objects>, '__doc__': None, '__gtype__': <GType PyGLibRegexCompileFlags (163505552)>, '__flags_values__': {0: <flags 0 of type GLib.RegexCompileFlags>, 1: <flags G_REGEX_CASELESS of type GLib.RegexCompileFlags>, 2: <flags G_REGEX_MULTILINE of type GLib.RegexCompileFlags>, 4: <flags G_REGEX_DOTALL of type GLib.RegexCompileFlags>, 8: <flags G_REGEX_EXTENDED of type GLib.RegexCompileFlags>, 16: <flags G_REGEX_ANCHORED of type GLib.RegexCompileFlags>, 32: <flags G_REGEX_DOLLAR_ENDONLY of type GLib.RegexCompileFlags>, 512: <flags G_REGEX_UNGREEDY of type GLib.RegexCompileFlags>, 2048: <flags G_REGEX_RAW of type GLib.RegexCompileFlags>, 4096: <flags G_REGEX_NO_AUTO_CAPTURE of type GLib.RegexCompileFlags>, 8192: <flags G_REGEX_OPTIMIZE of type GLib.RegexCompileFlags>, 262144: <flags G_REGEX_FIRSTLINE of type GLib.RegexCompileFlags>, 524288: <flags G_REGEX_DUPNAMES of type GLib.RegexCompileFlags>, 1048576: <flags G_REGEX_NEWLINE_CR of type GLib.RegexCompileFlags>, 2097152: <flags G_REGEX_NEWLINE_LF of type GLib.RegexCompileFlags>, 3145728: <flags G_REGEX_NEWLINE_CR | G_REGEX_NEWLINE_LF | G_REGEX_NEWLINE_CRLF of type GLib.RegexCompileFlags>, 5242880: <flags G_REGEX_NEWLINE_CR | G_REGEX_NEWLINE_ANYCRLF of type GLib.RegexCompileFlags>, 8388608: <flags G_REGEX_BSR_ANYCRLF of type GLib.RegexCompileFlags>, 33554432: <flags G_REGEX_JAVASCRIPT_COMPAT of type GLib.RegexCompileFlags>}, '__info__': gi.EnumInfo(RegexCompileFlags), 'DEFAULT': <flags 0 of type GLib.RegexCompileFlags>, 'CASELESS': <flags G_REGEX_CASELESS of type GLib.RegexCompileFlags>, 'MULTILINE': <flags G_REGEX_MULTILINE of type GLib.RegexCompileFlags>, 'DOTALL': <flags G_REGEX_DOTALL of type GLib.RegexCompileFlags>, 'EXTENDED': <flags G_REGEX_EXTENDED of type GLib.RegexCompileFlags>, 'ANCHORED': <flags G_REGEX_ANCHORED of type GLib.RegexCompileFlags>, 'DOLLAR_ENDONLY': <flags G_REGEX_DOLLAR_ENDONLY of type GLib.RegexCompileFlags>, 'UNGREEDY': <flags G_REGEX_UNGREEDY of type GLib.RegexCompileFlags>, 'RAW': <flags G_REGEX_RAW of type GLib.RegexCompileFlags>, 'NO_AUTO_CAPTURE': <flags G_REGEX_NO_AUTO_CAPTURE of type GLib.RegexCompileFlags>, 'OPTIMIZE': <flags G_REGEX_OPTIMIZE of type GLib.RegexCompileFlags>, 'FIRSTLINE': <flags G_REGEX_FIRSTLINE of type GLib.RegexCompileFlags>, 'DUPNAMES': <flags G_REGEX_DUPNAMES of type GLib.RegexCompileFlags>, 'NEWLINE_CR': <flags G_REGEX_NEWLINE_CR of type GLib.RegexCompileFlags>, 'NEWLINE_LF': <flags G_REGEX_NEWLINE_LF of type GLib.RegexCompileFlags>, 'NEWLINE_CRLF': <flags G_REGEX_NEWLINE_CR | G_REGEX_NEWLINE_LF | G_REGEX_NEWLINE_CRLF of type GLib.RegexCompileFlags>, 'NEWLINE_ANYCRLF': <flags G_REGEX_NEWLINE_CR | G_REGEX_NEWLINE_ANYCRLF of type GLib.RegexCompileFlags>, 'BSR_ANYCRLF': <flags G_REGEX_BSR_ANYCRLF of type GLib.RegexCompileFlags>, 'JAVASCRIPT_COMPAT': <flags G_REGEX_JAVASCRIPT_COMPAT of type GLib.RegexCompileFlags>})"
-    __flags_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-        512: 512,
-        2048: 2048,
-        4096: 4096,
-        8192: 8192,
-        262144: 262144,
-        524288: 524288,
-        1048576: 1048576,
-        2097152: 2097152,
-        3145728: 3145728,
-        5242880: 5242880,
-        8388608: 8388608,
-        33554432: 33554432,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibRegexCompileFlags (163505552)>'
-    __info__ = gi.EnumInfo(RegexCompileFlags)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'DEFAULT': <RegexCompileFlags.DEFAULT: 0>, 'CASELESS': <RegexCompileFlags.CASELESS: 1>, 'MULTILINE': <RegexCompileFlags.MULTILINE: 2>, 'DOTALL': <RegexCompileFlags.DOTALL: 4>, 'EXTENDED': <RegexCompileFlags.EXTENDED: 8>, 'ANCHORED': <RegexCompileFlags.ANCHORED: 16>, 'DOLLAR_ENDONLY': <RegexCompileFlags.DOLLAR_ENDONLY: 32>, 'UNGREEDY': <RegexCompileFlags.UNGREEDY: 512>, 'RAW': <RegexCompileFlags.RAW: 2048>, 'NO_AUTO_CAPTURE': <RegexCompileFlags.NO_AUTO_CAPTURE: 4096>, 'OPTIMIZE': <RegexCompileFlags.OPTIMIZE: 8192>, 'FIRSTLINE': <RegexCompileFlags.FIRSTLINE: 262144>, 'DUPNAMES': <RegexCompileFlags.DUPNAMES: 524288>, 'NEWLINE_CR': <RegexCompileFlags.NEWLINE_CR: 1048576>, 'NEWLINE_LF': <RegexCompileFlags.NEWLINE_LF: 2097152>, 'NEWLINE_CRLF': <RegexCompileFlags.NEWLINE_CRLF: 3145728>, 'NEWLINE_ANYCRLF': <RegexCompileFlags.NEWLINE_ANYCRLF: 5242880>, 'BSR_ANYCRLF': <RegexCompileFlags.BSR_ANYCRLF: 8388608>, 'JAVASCRIPT_COMPAT': <RegexCompileFlags.JAVASCRIPT_COMPAT: 33554432>})"
+    __name__ = 'RegexCompileFlags'
+    __qualname__ = 'RegexCompileFlags'
 
 

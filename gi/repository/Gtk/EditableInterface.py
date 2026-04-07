@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,7 +156,7 @@ class EditableInterface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EditableInterface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EditableInterface' objects>, '__weakref__': <attribute '__weakref__' of 'EditableInterface' objects>, '__doc__': None, 'base_iface': <property object at 0x000002eceab79df0>, 'insert_text': <property object at 0x000002eceab79ee0>, 'delete_text': <property object at 0x000002eceab79fd0>, 'changed': <property object at 0x000002eceab7a0c0>, 'do_insert_text': <property object at 0x000002eceab7a1b0>, 'do_delete_text': <property object at 0x000002eceab7a2a0>, 'get_chars': <property object at 0x000002eceab7a390>, 'set_selection_bounds': <property object at 0x000002eceab7a480>, 'get_selection_bounds': <property object at 0x000002eceab7a570>, 'set_position': <property object at 0x000002eceab7a660>, 'get_position': <property object at 0x000002eceab7a750>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EditableInterface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EditableInterface' objects>, '__weakref__': <attribute '__weakref__' of 'EditableInterface' objects>, '__doc__': None, 'base_iface': <property object at 0x000002bfd1771030>, 'insert_text': <property object at 0x000002bfd1771120>, 'delete_text': <property object at 0x000002bfd1771210>, 'changed': <property object at 0x000002bfd1771300>, 'do_insert_text': <property object at 0x000002bfd17713f0>, 'do_delete_text': <property object at 0x000002bfd17714e0>, 'get_chars': <property object at 0x000002bfd17715d0>, 'set_selection_bounds': <property object at 0x000002bfd17716c0>, 'get_selection_bounds': <property object at 0x000002bfd17717b0>, 'set_position': <property object at 0x000002bfd17718a0>, 'get_position': <property object at 0x000002bfd1771990>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(EditableInterface)
 

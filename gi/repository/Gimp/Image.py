@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -78,20 +74,20 @@ class Image(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -156,6 +152,12 @@ class Image(__gi_overrides_GObject.Object):
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
+        pass
+
     def duplicate(self): # real signature unknown; restored from __doc__
         """ duplicate(self) -> Gimp.Image """
         pass
@@ -215,17 +217,17 @@ class Image(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -482,20 +484,20 @@ class Image(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -605,7 +607,8 @@ class Image(__gi_overrides_GObject.Object):
         """ metadata_save_prepare(self, mime_type:str, suggested_flags:Gimp.MetadataSaveFlags) -> Gimp.Metadata """
         pass
 
-    def new(self, width, height, type): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, width, height, type): # real signature unknown; restored from __doc__
         """ new(width:int, height:int, type:Gimp.ImageBaseType) -> Gimp.Image """
         pass
 
@@ -613,7 +616,8 @@ class Image(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_with_precision(self, width, height, type, precision): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_with_precision(cls, width, height, type, precision): # real signature unknown; restored from __doc__
         """ new_with_precision(width:int, height:int, type:Gimp.ImageBaseType, precision:Gimp.Precision) -> Gimp.Image """
         pass
 
@@ -898,20 +902,20 @@ class Image(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -1043,12 +1047,14 @@ class Image(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001dcd90fcbb0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001268f3b0310>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Image), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpImage (3595410368)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_with_precision': gi.FunctionInfo(new_with_precision, bound=None), 'convert_set_dither_matrix': gi.FunctionInfo(convert_set_dither_matrix, bound=None), 'get_by_id': gi.FunctionInfo(get_by_id, bound=None), 'id_is_valid': gi.FunctionInfo(id_is_valid, bound=None), 'metadata_load_thumbnail': gi.FunctionInfo(metadata_load_thumbnail, bound=None), 'add_hguide': gi.FunctionInfo(add_hguide, bound=None), 'add_sample_point': gi.FunctionInfo(add_sample_point, bound=None), 'add_vguide': gi.FunctionInfo(add_vguide, bound=None), 'attach_parasite': gi.FunctionInfo(attach_parasite, bound=None), 'autocrop': gi.FunctionInfo(autocrop, bound=None), 'autocrop_selected_layers': gi.FunctionInfo(autocrop_selected_layers, bound=None), 'clean_all': gi.FunctionInfo(clean_all, bound=None), 'convert_color_profile': gi.FunctionInfo(convert_color_profile, bound=None), 'convert_color_profile_from_file': gi.FunctionInfo(convert_color_profile_from_file, bound=None), 'convert_grayscale': gi.FunctionInfo(convert_grayscale, bound=None), 'convert_indexed': gi.FunctionInfo(convert_indexed, bound=None), 'convert_precision': gi.FunctionInfo(convert_precision, bound=None), 'convert_rgb': gi.FunctionInfo(convert_rgb, bound=None), 'crop': gi.FunctionInfo(crop, bound=None), 'delete': gi.FunctionInfo(delete, bound=None), 'delete_guide': gi.FunctionInfo(delete_guide, bound=None), 'delete_sample_point': gi.FunctionInfo(delete_sample_point, bound=None), 'detach_parasite': gi.FunctionInfo(detach_parasite, bound=None), 'duplicate': gi.FunctionInfo(duplicate, bound=None), 'export_path_to_file': gi.FunctionInfo(export_path_to_file, bound=None), 'export_path_to_string': gi.FunctionInfo(export_path_to_string, bound=None), 'find_next_guide': gi.FunctionInfo(find_next_guide, bound=None), 'find_next_sample_point': gi.FunctionInfo(find_next_sample_point, bound=None), 'flatten': gi.FunctionInfo(flatten, bound=None), 'flip': gi.FunctionInfo(flip, bound=None), 'floating_sel_attached_to': gi.FunctionInfo(floating_sel_attached_to, bound=None), 'freeze_channels': gi.FunctionInfo(freeze_channels, bound=None), 'freeze_layers': gi.FunctionInfo(freeze_layers, bound=None), 'freeze_paths': gi.FunctionInfo(freeze_paths, bound=None), 'get_base_type': gi.FunctionInfo(get_base_type, bound=None), 'get_channel_by_name': gi.FunctionInfo(get_channel_by_name, bound=None), 'get_channel_by_tattoo': gi.FunctionInfo(get_channel_by_tattoo, bound=None), 'get_channels': gi.FunctionInfo(get_channels, bound=None), 'get_color_profile': gi.FunctionInfo(get_color_profile, bound=None), 'get_component_active': gi.FunctionInfo(get_component_active, bound=None), 'get_component_visible': gi.FunctionInfo(get_component_visible, bound=None), 'get_default_new_layer_mode': gi.FunctionInfo(get_default_new_layer_mode, bound=None), 'get_effective_color_profile': gi.FunctionInfo(get_effective_color_profile, bound=None), 'get_exported_file': gi.FunctionInfo(get_exported_file, bound=None), 'get_file': gi.FunctionInfo(get_file, bound=None), 'get_floating_sel': gi.FunctionInfo(get_floating_sel, bound=None), 'get_guide_orientation': gi.FunctionInfo(get_guide_orientation, bound=None), 'get_guide_position': gi.FunctionInfo(get_guide_position, bound=None), 'get_height': gi.FunctionInfo(get_height, bound=None), 'get_id': gi.FunctionInfo(get_id, bound=None), 'get_imported_file': gi.FunctionInfo(get_imported_file, bound=None), 'get_item_position': gi.FunctionInfo(get_item_position, bound=None), 'get_layer_by_name': gi.FunctionInfo(get_layer_by_name, bound=None), 'get_layer_by_tattoo': gi.FunctionInfo(get_layer_by_tattoo, bound=None), 'get_layers': gi.FunctionInfo(get_layers, bound=None), 'get_metadata': gi.FunctionInfo(get_metadata, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_palette': gi.FunctionInfo(get_palette, bound=None), 'get_parasite': gi.FunctionInfo(get_parasite, bound=None), 'get_parasite_list': gi.FunctionInfo(get_parasite_list, bound=None), 'get_path_by_name': gi.FunctionInfo(get_path_by_name, bound=None), 'get_path_by_tattoo': gi.FunctionInfo(get_path_by_tattoo, bound=None), 'get_paths': gi.FunctionInfo(get_paths, bound=None), 'get_precision': gi.FunctionInfo(get_precision, bound=None), 'get_resolution': gi.FunctionInfo(get_resolution, bound=None), 'get_sample_point_position': gi.FunctionInfo(get_sample_point_position, bound=None), 'get_selected_channels': gi.FunctionInfo(get_selected_channels, bound=None), 'get_selected_drawables': gi.FunctionInfo(get_selected_drawables, bound=None), 'get_selected_layers': gi.FunctionInfo(get_selected_layers, bound=None), 'get_selected_paths': gi.FunctionInfo(get_selected_paths, bound=None), 'get_selection': gi.FunctionInfo(get_selection, bound=None), 'get_simulation_bpc': gi.FunctionInfo(get_simulation_bpc, bound=None), 'get_simulation_intent': gi.FunctionInfo(get_simulation_intent, bound=None), 'get_simulation_profile': gi.FunctionInfo(get_simulation_profile, bound=None), 'get_tattoo_state': gi.FunctionInfo(get_tattoo_state, bound=None), 'get_thumbnail': gi.FunctionInfo(get_thumbnail, bound=None), 'get_thumbnail_data': gi.FunctionInfo(get_thumbnail_data, bound=None), 'get_unit': gi.FunctionInfo(get_unit, bound=None), 'get_width': gi.FunctionInfo(get_width, bound=None), 'get_xcf_file': gi.FunctionInfo(get_xcf_file, bound=None), 'grid_get_background_color': gi.FunctionInfo(grid_get_background_color, bound=None), 'grid_get_foreground_color': gi.FunctionInfo(grid_get_foreground_color, bound=None), 'grid_get_offset': gi.FunctionInfo(grid_get_offset, bound=None), 'grid_get_spacing': gi.FunctionInfo(grid_get_spacing, bound=None), 'grid_get_style': gi.FunctionInfo(grid_get_style, bound=None), 'grid_set_background_color': gi.FunctionInfo(grid_set_background_color, bound=None), 'grid_set_foreground_color': gi.FunctionInfo(grid_set_foreground_color, bound=None), 'grid_set_offset': gi.FunctionInfo(grid_set_offset, bound=None), 'grid_set_spacing': gi.FunctionInfo(grid_set_spacing, bound=None), 'grid_set_style': gi.FunctionInfo(grid_set_style, bound=None), 'import_paths_from_file': gi.FunctionInfo(import_paths_from_file, bound=None), 'import_paths_from_string': gi.FunctionInfo(import_paths_from_string, bound=None), 'insert_channel': gi.FunctionInfo(insert_channel, bound=None), 'insert_layer': gi.FunctionInfo(insert_layer, bound=None), 'insert_path': gi.FunctionInfo(insert_path, bound=None), 'is_dirty': gi.FunctionInfo(is_dirty, bound=None), 'is_valid': gi.FunctionInfo(is_valid, bound=None), 'lower_item': gi.FunctionInfo(lower_item, bound=None), 'lower_item_to_bottom': gi.FunctionInfo(lower_item_to_bottom, bound=None), 'merge_down': gi.FunctionInfo(merge_down, bound=None), 'merge_visible_layers': gi.FunctionInfo(merge_visible_layers, bound=None), 'metadata_save_filter': gi.FunctionInfo(metadata_save_filter, bound=None), 'metadata_save_prepare': gi.FunctionInfo(metadata_save_prepare, bound=None), 'pick_color': gi.FunctionInfo(pick_color, bound=None), 'pick_correlate_layer': gi.FunctionInfo(pick_correlate_layer, bound=None), 'policy_color_profile': gi.FunctionInfo(policy_color_profile, bound=None), 'policy_rotate': gi.FunctionInfo(policy_rotate, bound=None), 'raise_item': gi.FunctionInfo(raise_item, bound=None), 'raise_item_to_top': gi.FunctionInfo(raise_item_to_top, bound=None), 'remove_channel': gi.FunctionInfo(remove_channel, bound=None), 'remove_layer': gi.FunctionInfo(remove_layer, bound=None), 'remove_path': gi.FunctionInfo(remove_path, bound=None), 'reorder_item': gi.FunctionInfo(reorder_item, bound=None), 'resize': gi.FunctionInfo(resize, bound=None), 'resize_to_layers': gi.FunctionInfo(resize_to_layers, bound=None), 'rotate': gi.FunctionInfo(rotate, bound=None), 'scale': gi.FunctionInfo(scale, bound=None), 'select_color': gi.FunctionInfo(select_color, bound=None), 'select_contiguous_color': gi.FunctionInfo(select_contiguous_color, bound=None), 'select_ellipse': gi.FunctionInfo(select_ellipse, bound=None), 'select_item': gi.FunctionInfo(select_item, bound=None), 'select_polygon': gi.FunctionInfo(select_polygon, bound=None), 'select_rectangle': gi.FunctionInfo(select_rectangle, bound=None), 'select_round_rectangle': gi.FunctionInfo(select_round_rectangle, bound=None), 'set_color_profile': gi.FunctionInfo(set_color_profile, bound=None), 'set_color_profile_from_file': gi.FunctionInfo(set_color_profile_from_file, bound=None), 'set_component_active': gi.FunctionInfo(set_component_active, bound=None), 'set_component_visible': gi.FunctionInfo(set_component_visible, bound=None), 'set_file': gi.FunctionInfo(set_file, bound=None), 'set_metadata': gi.FunctionInfo(set_metadata, bound=None), 'set_palette': gi.FunctionInfo(set_palette, bound=None), 'set_resolution': gi.FunctionInfo(set_resolution, bound=None), 'set_selected_channels': gi.FunctionInfo(set_selected_channels, bound=None), 'set_selected_layers': gi.FunctionInfo(set_selected_layers, bound=None), 'set_selected_paths': gi.FunctionInfo(set_selected_paths, bound=None), 'set_simulation_bpc': gi.FunctionInfo(set_simulation_bpc, bound=None), 'set_simulation_intent': gi.FunctionInfo(set_simulation_intent, bound=None), 'set_simulation_profile': gi.FunctionInfo(set_simulation_profile, bound=None), 'set_simulation_profile_from_file': gi.FunctionInfo(set_simulation_profile_from_file, bound=None), 'set_tattoo_state': gi.FunctionInfo(set_tattoo_state, bound=None), 'set_unit': gi.FunctionInfo(set_unit, bound=None), 'take_selected_channels': gi.FunctionInfo(take_selected_channels, bound=None), 'take_selected_layers': gi.FunctionInfo(take_selected_layers, bound=None), 'take_selected_paths': gi.FunctionInfo(take_selected_paths, bound=None), 'thaw_channels': gi.FunctionInfo(thaw_channels, bound=None), 'thaw_layers': gi.FunctionInfo(thaw_layers, bound=None), 'thaw_paths': gi.FunctionInfo(thaw_paths, bound=None), 'undo_disable': gi.FunctionInfo(undo_disable, bound=None), 'undo_enable': gi.FunctionInfo(undo_enable, bound=None), 'undo_freeze': gi.FunctionInfo(undo_freeze, bound=None), 'undo_group_end': gi.FunctionInfo(undo_group_end, bound=None), 'undo_group_start': gi.FunctionInfo(undo_group_start, bound=None), 'undo_is_enabled': gi.FunctionInfo(undo_is_enabled, bound=None), 'undo_thaw': gi.FunctionInfo(undo_thaw, bound=None), 'unset_active_channel': gi.FunctionInfo(unset_active_channel, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Image), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpImage (2359059520)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_with_precision': <classmethod(gi.FunctionInfo(new_with_precision))>, 'convert_set_dither_matrix': <staticmethod(gi.FunctionInfo(convert_set_dither_matrix))>, 'get_by_id': <staticmethod(gi.FunctionInfo(get_by_id))>, 'id_is_valid': <staticmethod(gi.FunctionInfo(id_is_valid))>, 'metadata_load_thumbnail': <staticmethod(gi.FunctionInfo(metadata_load_thumbnail))>, 'add_hguide': gi.FunctionInfo(add_hguide), 'add_sample_point': gi.FunctionInfo(add_sample_point), 'add_vguide': gi.FunctionInfo(add_vguide), 'attach_parasite': gi.FunctionInfo(attach_parasite), 'autocrop': gi.FunctionInfo(autocrop), 'autocrop_selected_layers': gi.FunctionInfo(autocrop_selected_layers), 'clean_all': gi.FunctionInfo(clean_all), 'convert_color_profile': gi.FunctionInfo(convert_color_profile), 'convert_color_profile_from_file': gi.FunctionInfo(convert_color_profile_from_file), 'convert_grayscale': gi.FunctionInfo(convert_grayscale), 'convert_indexed': gi.FunctionInfo(convert_indexed), 'convert_precision': gi.FunctionInfo(convert_precision), 'convert_rgb': gi.FunctionInfo(convert_rgb), 'crop': gi.FunctionInfo(crop), 'delete': gi.FunctionInfo(delete), 'delete_guide': gi.FunctionInfo(delete_guide), 'delete_sample_point': gi.FunctionInfo(delete_sample_point), 'detach_parasite': gi.FunctionInfo(detach_parasite), 'duplicate': gi.FunctionInfo(duplicate), 'export_path_to_file': gi.FunctionInfo(export_path_to_file), 'export_path_to_string': gi.FunctionInfo(export_path_to_string), 'find_next_guide': gi.FunctionInfo(find_next_guide), 'find_next_sample_point': gi.FunctionInfo(find_next_sample_point), 'flatten': gi.FunctionInfo(flatten), 'flip': gi.FunctionInfo(flip), 'floating_sel_attached_to': gi.FunctionInfo(floating_sel_attached_to), 'freeze_channels': gi.FunctionInfo(freeze_channels), 'freeze_layers': gi.FunctionInfo(freeze_layers), 'freeze_paths': gi.FunctionInfo(freeze_paths), 'get_base_type': gi.FunctionInfo(get_base_type), 'get_channel_by_name': gi.FunctionInfo(get_channel_by_name), 'get_channel_by_tattoo': gi.FunctionInfo(get_channel_by_tattoo), 'get_channels': gi.FunctionInfo(get_channels), 'get_color_profile': gi.FunctionInfo(get_color_profile), 'get_component_active': gi.FunctionInfo(get_component_active), 'get_component_visible': gi.FunctionInfo(get_component_visible), 'get_default_new_layer_mode': gi.FunctionInfo(get_default_new_layer_mode), 'get_effective_color_profile': gi.FunctionInfo(get_effective_color_profile), 'get_exported_file': gi.FunctionInfo(get_exported_file), 'get_file': gi.FunctionInfo(get_file), 'get_floating_sel': gi.FunctionInfo(get_floating_sel), 'get_guide_orientation': gi.FunctionInfo(get_guide_orientation), 'get_guide_position': gi.FunctionInfo(get_guide_position), 'get_height': gi.FunctionInfo(get_height), 'get_id': gi.FunctionInfo(get_id), 'get_imported_file': gi.FunctionInfo(get_imported_file), 'get_item_position': gi.FunctionInfo(get_item_position), 'get_layer_by_name': gi.FunctionInfo(get_layer_by_name), 'get_layer_by_tattoo': gi.FunctionInfo(get_layer_by_tattoo), 'get_layers': gi.FunctionInfo(get_layers), 'get_metadata': gi.FunctionInfo(get_metadata), 'get_name': gi.FunctionInfo(get_name), 'get_palette': gi.FunctionInfo(get_palette), 'get_parasite': gi.FunctionInfo(get_parasite), 'get_parasite_list': gi.FunctionInfo(get_parasite_list), 'get_path_by_name': gi.FunctionInfo(get_path_by_name), 'get_path_by_tattoo': gi.FunctionInfo(get_path_by_tattoo), 'get_paths': gi.FunctionInfo(get_paths), 'get_precision': gi.FunctionInfo(get_precision), 'get_resolution': gi.FunctionInfo(get_resolution), 'get_sample_point_position': gi.FunctionInfo(get_sample_point_position), 'get_selected_channels': gi.FunctionInfo(get_selected_channels), 'get_selected_drawables': gi.FunctionInfo(get_selected_drawables), 'get_selected_layers': gi.FunctionInfo(get_selected_layers), 'get_selected_paths': gi.FunctionInfo(get_selected_paths), 'get_selection': gi.FunctionInfo(get_selection), 'get_simulation_bpc': gi.FunctionInfo(get_simulation_bpc), 'get_simulation_intent': gi.FunctionInfo(get_simulation_intent), 'get_simulation_profile': gi.FunctionInfo(get_simulation_profile), 'get_tattoo_state': gi.FunctionInfo(get_tattoo_state), 'get_thumbnail': gi.FunctionInfo(get_thumbnail), 'get_thumbnail_data': gi.FunctionInfo(get_thumbnail_data), 'get_unit': gi.FunctionInfo(get_unit), 'get_width': gi.FunctionInfo(get_width), 'get_xcf_file': gi.FunctionInfo(get_xcf_file), 'grid_get_background_color': gi.FunctionInfo(grid_get_background_color), 'grid_get_foreground_color': gi.FunctionInfo(grid_get_foreground_color), 'grid_get_offset': gi.FunctionInfo(grid_get_offset), 'grid_get_spacing': gi.FunctionInfo(grid_get_spacing), 'grid_get_style': gi.FunctionInfo(grid_get_style), 'grid_set_background_color': gi.FunctionInfo(grid_set_background_color), 'grid_set_foreground_color': gi.FunctionInfo(grid_set_foreground_color), 'grid_set_offset': gi.FunctionInfo(grid_set_offset), 'grid_set_spacing': gi.FunctionInfo(grid_set_spacing), 'grid_set_style': gi.FunctionInfo(grid_set_style), 'import_paths_from_file': gi.FunctionInfo(import_paths_from_file), 'import_paths_from_string': gi.FunctionInfo(import_paths_from_string), 'insert_channel': gi.FunctionInfo(insert_channel), 'insert_layer': gi.FunctionInfo(insert_layer), 'insert_path': gi.FunctionInfo(insert_path), 'is_dirty': gi.FunctionInfo(is_dirty), 'is_valid': gi.FunctionInfo(is_valid), 'lower_item': gi.FunctionInfo(lower_item), 'lower_item_to_bottom': gi.FunctionInfo(lower_item_to_bottom), 'merge_down': gi.FunctionInfo(merge_down), 'merge_visible_layers': gi.FunctionInfo(merge_visible_layers), 'metadata_save_filter': gi.FunctionInfo(metadata_save_filter), 'metadata_save_prepare': gi.FunctionInfo(metadata_save_prepare), 'pick_color': gi.FunctionInfo(pick_color), 'pick_correlate_layer': gi.FunctionInfo(pick_correlate_layer), 'policy_color_profile': gi.FunctionInfo(policy_color_profile), 'policy_rotate': gi.FunctionInfo(policy_rotate), 'raise_item': gi.FunctionInfo(raise_item), 'raise_item_to_top': gi.FunctionInfo(raise_item_to_top), 'remove_channel': gi.FunctionInfo(remove_channel), 'remove_layer': gi.FunctionInfo(remove_layer), 'remove_path': gi.FunctionInfo(remove_path), 'reorder_item': gi.FunctionInfo(reorder_item), 'resize': gi.FunctionInfo(resize), 'resize_to_layers': gi.FunctionInfo(resize_to_layers), 'rotate': gi.FunctionInfo(rotate), 'scale': gi.FunctionInfo(scale), 'select_color': gi.FunctionInfo(select_color), 'select_contiguous_color': gi.FunctionInfo(select_contiguous_color), 'select_ellipse': gi.FunctionInfo(select_ellipse), 'select_item': gi.FunctionInfo(select_item), 'select_polygon': gi.FunctionInfo(select_polygon), 'select_rectangle': gi.FunctionInfo(select_rectangle), 'select_round_rectangle': gi.FunctionInfo(select_round_rectangle), 'set_color_profile': gi.FunctionInfo(set_color_profile), 'set_color_profile_from_file': gi.FunctionInfo(set_color_profile_from_file), 'set_component_active': gi.FunctionInfo(set_component_active), 'set_component_visible': gi.FunctionInfo(set_component_visible), 'set_file': gi.FunctionInfo(set_file), 'set_metadata': gi.FunctionInfo(set_metadata), 'set_palette': gi.FunctionInfo(set_palette), 'set_resolution': gi.FunctionInfo(set_resolution), 'set_selected_channels': gi.FunctionInfo(set_selected_channels), 'set_selected_layers': gi.FunctionInfo(set_selected_layers), 'set_selected_paths': gi.FunctionInfo(set_selected_paths), 'set_simulation_bpc': gi.FunctionInfo(set_simulation_bpc), 'set_simulation_intent': gi.FunctionInfo(set_simulation_intent), 'set_simulation_profile': gi.FunctionInfo(set_simulation_profile), 'set_simulation_profile_from_file': gi.FunctionInfo(set_simulation_profile_from_file), 'set_tattoo_state': gi.FunctionInfo(set_tattoo_state), 'set_unit': gi.FunctionInfo(set_unit), 'take_selected_channels': gi.FunctionInfo(take_selected_channels), 'take_selected_layers': gi.FunctionInfo(take_selected_layers), 'take_selected_paths': gi.FunctionInfo(take_selected_paths), 'thaw_channels': gi.FunctionInfo(thaw_channels), 'thaw_layers': gi.FunctionInfo(thaw_layers), 'thaw_paths': gi.FunctionInfo(thaw_paths), 'undo_disable': gi.FunctionInfo(undo_disable), 'undo_enable': gi.FunctionInfo(undo_enable), 'undo_freeze': gi.FunctionInfo(undo_freeze), 'undo_group_end': gi.FunctionInfo(undo_group_end), 'undo_group_start': gi.FunctionInfo(undo_group_start), 'undo_is_enabled': gi.FunctionInfo(undo_is_enabled), 'undo_thaw': gi.FunctionInfo(undo_thaw), 'unset_active_channel': gi.FunctionInfo(unset_active_channel)})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GimpImage\n\nProperties from GimpImage:\n  id -> gint: The image id\n    The image id for internal use\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpImage (3595410368)>'
+    __gtype__ = None # (!) real value is '<GType GimpImage (2359059520)>'
     __info__ = ObjectInfo(Image)
+    __static_attributes__ = ()
 
 

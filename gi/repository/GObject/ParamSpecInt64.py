@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -139,7 +138,11 @@ class ParamSpecInt64(__gi_overrides_GObject.ParamSpec):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -256,10 +259,10 @@ class ParamSpecInt64(__gi_overrides_GObject.ParamSpec):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ParamSpecInt64), '__module__': 'gi.repository.GObject', '__gtype__': <GType GParamInt64 (83211056)>, '__doc__': None, '__gsignals__': {}, 'parent_instance': <property object at 0x0000010b07a2d760>, 'minimum': <property object at 0x0000010b07a2d850>, 'maximum': <property object at 0x0000010b07a2d940>, 'default_value': <property object at 0x0000010b07a2da30>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ParamSpecInt64), '__module__': 'gi.repository.GObject', '__gtype__': <GType GParamInt64 (259904912)>, '__doc__': None, '__gsignals__': {}, 'parent_instance': <property object at 0x000001dd11e4d350>, 'minimum': <property object at 0x000001dd11e4d440>, 'maximum': <property object at 0x000001dd11e4d530>, 'default_value': <property object at 0x000001dd11e4d620>})"
     __gproperties__ = {
         'blurb': (
-            None, # (!) real value is '<GType PyObject (83216768)>'
+            None, # (!) real value is '<GType PyObject (255842896)>'
             '',
             '',
             3,
@@ -267,7 +270,7 @@ class ParamSpecInt64(__gi_overrides_GObject.ParamSpec):
         'nick': '<value is a self-reference, replaced by this string>',
     }
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GParamInt64 (83211056)>'
+    __gtype__ = None # (!) real value is '<GType GParamInt64 (259904912)>'
     __info__ = ObjectInfo(ParamSpecInt64)
 
 

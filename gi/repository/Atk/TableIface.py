@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -210,7 +203,7 @@ class TableIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TableIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TableIface' objects>, '__weakref__': <attribute '__weakref__' of 'TableIface' objects>, '__doc__': None, 'parent': <property object at 0x0000017338130db0>, 'ref_at': <property object at 0x0000017338130ea0>, 'get_index_at': <property object at 0x0000017338130f90>, 'get_column_at_index': <property object at 0x0000017338131080>, 'get_row_at_index': <property object at 0x0000017338131170>, 'get_n_columns': <property object at 0x0000017338131260>, 'get_n_rows': <property object at 0x0000017338131350>, 'get_column_extent_at': <property object at 0x0000017338131440>, 'get_row_extent_at': <property object at 0x0000017338131530>, 'get_caption': <property object at 0x0000017338131620>, 'get_column_description': <property object at 0x0000017338131710>, 'get_column_header': <property object at 0x0000017338131800>, 'get_row_description': <property object at 0x00000173381318f0>, 'get_row_header': <property object at 0x00000173381319e0>, 'get_summary': <property object at 0x0000017338131ad0>, 'set_caption': <property object at 0x0000017338131bc0>, 'set_column_description': <property object at 0x0000017338131cb0>, 'set_column_header': <property object at 0x0000017338131da0>, 'set_row_description': <property object at 0x0000017338131e90>, 'set_row_header': <property object at 0x0000017338131f80>, 'set_summary': <property object at 0x0000017338132070>, 'get_selected_columns': <property object at 0x0000017338132160>, 'get_selected_rows': <property object at 0x0000017338132250>, 'is_column_selected': <property object at 0x0000017338132340>, 'is_row_selected': <property object at 0x0000017338132430>, 'is_selected': <property object at 0x0000017338132520>, 'add_row_selection': <property object at 0x0000017338132610>, 'remove_row_selection': <property object at 0x0000017338132700>, 'add_column_selection': <property object at 0x00000173381327f0>, 'remove_column_selection': <property object at 0x00000173381328e0>, 'row_inserted': <property object at 0x00000173381329d0>, 'column_inserted': <property object at 0x0000017338132ac0>, 'row_deleted': <property object at 0x0000017338132bb0>, 'column_deleted': <property object at 0x0000017338132ca0>, 'row_reordered': <property object at 0x0000017338132d90>, 'column_reordered': <property object at 0x0000017338132e80>, 'model_changed': <property object at 0x0000017338132f70>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TableIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TableIface' objects>, '__weakref__': <attribute '__weakref__' of 'TableIface' objects>, '__doc__': None, 'parent': <property object at 0x000001c85dc40860>, 'ref_at': <property object at 0x000001c85dc40770>, 'get_index_at': <property object at 0x000001c85dc40680>, 'get_column_at_index': <property object at 0x000001c85dc40590>, 'get_row_at_index': <property object at 0x000001c85dc404a0>, 'get_n_columns': <property object at 0x000001c85dc403b0>, 'get_n_rows': <property object at 0x000001c85dc402c0>, 'get_column_extent_at': <property object at 0x000001c85dc401d0>, 'get_row_extent_at': <property object at 0x000001c85dc400e0>, 'get_caption': <property object at 0x000001c85dc41ee0>, 'get_column_description': <property object at 0x000001c85dc41fd0>, 'get_column_header': <property object at 0x000001c85dc420c0>, 'get_row_description': <property object at 0x000001c85dc421b0>, 'get_row_header': <property object at 0x000001c85dc422a0>, 'get_summary': <property object at 0x000001c85dc42390>, 'set_caption': <property object at 0x000001c85dc42480>, 'set_column_description': <property object at 0x000001c85dc42570>, 'set_column_header': <property object at 0x000001c85dc42660>, 'set_row_description': <property object at 0x000001c85dc42750>, 'set_row_header': <property object at 0x000001c85dc42840>, 'set_summary': <property object at 0x000001c85dc42930>, 'get_selected_columns': <property object at 0x000001c85dc42a20>, 'get_selected_rows': <property object at 0x000001c85dc42b10>, 'is_column_selected': <property object at 0x000001c85dc42c00>, 'is_row_selected': <property object at 0x000001c85dc42cf0>, 'is_selected': <property object at 0x000001c85dc42de0>, 'add_row_selection': <property object at 0x000001c85dc42ed0>, 'remove_row_selection': <property object at 0x000001c85dc42fc0>, 'add_column_selection': <property object at 0x000001c85dc430b0>, 'remove_column_selection': <property object at 0x000001c85dc431a0>, 'row_inserted': <property object at 0x000001c85dc43290>, 'column_inserted': <property object at 0x000001c85dc43380>, 'row_deleted': <property object at 0x000001c85dc43470>, 'column_deleted': <property object at 0x000001c85dc43560>, 'row_reordered': <property object at 0x000001c85dc43650>, 'column_reordered': <property object at 0x000001c85dc43740>, 'model_changed': <property object at 0x000001c85dc43830>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TableIface)
 

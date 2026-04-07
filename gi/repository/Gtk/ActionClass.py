@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -161,7 +160,7 @@ class ActionClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ActionClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ActionClass' objects>, '__weakref__': <attribute '__weakref__' of 'ActionClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece8faf790>, 'activate': <property object at 0x000002ece8faf880>, 'menu_item_type': <property object at 0x000002ece8faf970>, 'toolbar_item_type': <property object at 0x000002ece8fafa60>, 'create_menu_item': <property object at 0x000002ece8fafb50>, 'create_tool_item': <property object at 0x000002ece8fafc40>, 'connect_proxy': <property object at 0x000002ece8fafd30>, 'disconnect_proxy': <property object at 0x000002ece8fafe20>, 'create_menu': <property object at 0x000002ece8faff10>, '_gtk_reserved1': <property object at 0x000002ece8fb4040>, '_gtk_reserved2': <property object at 0x000002ece8fb4130>, '_gtk_reserved3': <property object at 0x000002ece8fb4220>, '_gtk_reserved4': <property object at 0x000002ece8fb4310>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ActionClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ActionClass' objects>, '__weakref__': <attribute '__weakref__' of 'ActionClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd17be7f0>, 'activate': <property object at 0x000002bfd17be8e0>, 'menu_item_type': <property object at 0x000002bfd17be9d0>, 'toolbar_item_type': <property object at 0x000002bfd17beac0>, 'create_menu_item': <property object at 0x000002bfd17bebb0>, 'create_tool_item': <property object at 0x000002bfd17beca0>, 'connect_proxy': <property object at 0x000002bfd17bed90>, 'disconnect_proxy': <property object at 0x000002bfd17bee80>, 'create_menu': <property object at 0x000002bfd17bef70>, '_gtk_reserved1': <property object at 0x000002bfd17bf060>, '_gtk_reserved2': <property object at 0x000002bfd17bf150>, '_gtk_reserved3': <property object at 0x000002bfd17bf240>, '_gtk_reserved4': <property object at 0x000002bfd17bf330>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ActionClass)
 

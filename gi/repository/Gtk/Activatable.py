@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -152,10 +151,10 @@ class Activatable(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Activatable), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkActivatable (3867805248)>, '__dict__': <attribute '__dict__' of 'Activatable' objects>, '__weakref__': <attribute '__weakref__' of 'Activatable' objects>, '__doc__': None, '__gsignals__': {}, 'do_set_related_action': gi.FunctionInfo(do_set_related_action, bound=None), 'get_related_action': gi.FunctionInfo(get_related_action, bound=None), 'get_use_action_appearance': gi.FunctionInfo(get_use_action_appearance, bound=None), 'set_related_action': gi.FunctionInfo(set_related_action, bound=None), 'set_use_action_appearance': gi.FunctionInfo(set_use_action_appearance, bound=None), 'sync_action_properties': gi.FunctionInfo(sync_action_properties, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Activatable), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkActivatable (3416384784)>, '__dict__': <attribute '__dict__' of 'Activatable' objects>, '__weakref__': <attribute '__weakref__' of 'Activatable' objects>, '__doc__': None, '__gsignals__': {}, 'do_set_related_action': gi.FunctionInfo(do_set_related_action), 'get_related_action': gi.FunctionInfo(get_related_action), 'get_use_action_appearance': gi.FunctionInfo(get_use_action_appearance), 'set_related_action': gi.FunctionInfo(set_related_action), 'set_use_action_appearance': gi.FunctionInfo(set_use_action_appearance), 'sync_action_properties': gi.FunctionInfo(sync_action_properties)})"
     __gdoc__ = 'Interface GtkActivatable\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkActivatable (3867805248)>'
+    __gtype__ = None # (!) real value is '<GType GtkActivatable (3416384784)>'
     __info__ = InterfaceInfo(Activatable)
 
 

@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -48,7 +42,7 @@ class Config(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -76,6 +70,9 @@ class Config(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -272,20 +269,20 @@ class Config(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -417,12 +414,12 @@ class Config(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002761b7f8b80>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ebdc0f7be0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Config), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglConfig (426592560)>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Config), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglConfig (3652620576)>, '__doc__': None, '__gsignals__': {}})"
     __gdoc__ = "Object GeglConfig\n\nProperties from GeglConfig:\n  quality -> gdouble: Quality\n    quality/speed trade off 1.0 = full quality, 0.0 = full speed\n  tile-cache-size -> guint64: Tile Cache size\n    size of tile cache in bytes\n  chunk-size -> gint: Chunk size\n    the number of pixels processed simultaneously by GEGL.\n  swap -> gchararray: Swap\n    where gegl stores it's swap files\n  swap-compression -> gchararray: Swap compression\n    compression algorithm used for data stored in the swap\n  tile-width -> gint: Tile width\n    default tile width for created buffers.\n  tile-height -> gint: Tile height\n    default tile height for created buffers.\n  threads -> gint: Number of threads\n    Number of concurrent evaluation threads\n  use-opencl -> gboolean: Use OpenCL\n    Try to use OpenCL\n  queue-size -> gint: Queue size\n    Maximum size of a file backend's writer thread queue (in bytes)\n  application-license -> gchararray: Application license\n    A list of additional licenses to allow for operations\n  mipmap-rendering -> gboolean: mipmap rendering\n    Enable code paths for mipmap preview rendering, uses approximations for 50% 25% etc zoom factors to reduce processing.\n\nSignals from GObject:\n  notify (GParam)\n\n"
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglConfig (426592560)>'
+    __gtype__ = None # (!) real value is '<GType GeglConfig (3652620576)>'
     __info__ = ObjectInfo(Config)
 
 

@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class VariantClass(__gobject.GEnum):
+class VariantClass(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class VariantClass(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class VariantClass(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -126,12 +124,23 @@ class VariantClass(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +169,10 @@ class VariantClass(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -205,6 +218,14 @@ class VariantClass(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -230,8 +251,8 @@ class VariantClass(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -262,15 +283,16 @@ class VariantClass(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -334,7 +356,7 @@ class VariantClass(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -376,10 +398,6 @@ class VariantClass(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ARRAY = 97
     BOOLEAN = 98
@@ -399,29 +417,9 @@ class VariantClass(__gobject.GEnum):
     UINT32 = 117
     UINT64 = 116
     VARIANT = 118
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'VariantClass' objects>, '__doc__': None, '__gtype__': <GType PyGLibVariantClass (155124768)>, '__enum_values__': {98: <enum G_VARIANT_CLASS_BOOLEAN of type GLib.VariantClass>, 121: <enum G_VARIANT_CLASS_BYTE of type GLib.VariantClass>, 110: <enum G_VARIANT_CLASS_INT16 of type GLib.VariantClass>, 113: <enum G_VARIANT_CLASS_UINT16 of type GLib.VariantClass>, 105: <enum G_VARIANT_CLASS_INT32 of type GLib.VariantClass>, 117: <enum G_VARIANT_CLASS_UINT32 of type GLib.VariantClass>, 120: <enum G_VARIANT_CLASS_INT64 of type GLib.VariantClass>, 116: <enum G_VARIANT_CLASS_UINT64 of type GLib.VariantClass>, 104: <enum G_VARIANT_CLASS_HANDLE of type GLib.VariantClass>, 100: <enum G_VARIANT_CLASS_DOUBLE of type GLib.VariantClass>, 115: <enum G_VARIANT_CLASS_STRING of type GLib.VariantClass>, 111: <enum G_VARIANT_CLASS_OBJECT_PATH of type GLib.VariantClass>, 103: <enum G_VARIANT_CLASS_SIGNATURE of type GLib.VariantClass>, 118: <enum G_VARIANT_CLASS_VARIANT of type GLib.VariantClass>, 109: <enum G_VARIANT_CLASS_MAYBE of type GLib.VariantClass>, 97: <enum G_VARIANT_CLASS_ARRAY of type GLib.VariantClass>, 40: <enum G_VARIANT_CLASS_TUPLE of type GLib.VariantClass>, 123: <enum G_VARIANT_CLASS_DICT_ENTRY of type GLib.VariantClass>}, '__info__': gi.EnumInfo(VariantClass), 'BOOLEAN': <enum G_VARIANT_CLASS_BOOLEAN of type GLib.VariantClass>, 'BYTE': <enum G_VARIANT_CLASS_BYTE of type GLib.VariantClass>, 'INT16': <enum G_VARIANT_CLASS_INT16 of type GLib.VariantClass>, 'UINT16': <enum G_VARIANT_CLASS_UINT16 of type GLib.VariantClass>, 'INT32': <enum G_VARIANT_CLASS_INT32 of type GLib.VariantClass>, 'UINT32': <enum G_VARIANT_CLASS_UINT32 of type GLib.VariantClass>, 'INT64': <enum G_VARIANT_CLASS_INT64 of type GLib.VariantClass>, 'UINT64': <enum G_VARIANT_CLASS_UINT64 of type GLib.VariantClass>, 'HANDLE': <enum G_VARIANT_CLASS_HANDLE of type GLib.VariantClass>, 'DOUBLE': <enum G_VARIANT_CLASS_DOUBLE of type GLib.VariantClass>, 'STRING': <enum G_VARIANT_CLASS_STRING of type GLib.VariantClass>, 'OBJECT_PATH': <enum G_VARIANT_CLASS_OBJECT_PATH of type GLib.VariantClass>, 'SIGNATURE': <enum G_VARIANT_CLASS_SIGNATURE of type GLib.VariantClass>, 'VARIANT': <enum G_VARIANT_CLASS_VARIANT of type GLib.VariantClass>, 'MAYBE': <enum G_VARIANT_CLASS_MAYBE of type GLib.VariantClass>, 'ARRAY': <enum G_VARIANT_CLASS_ARRAY of type GLib.VariantClass>, 'TUPLE': <enum G_VARIANT_CLASS_TUPLE of type GLib.VariantClass>, 'DICT_ENTRY': <enum G_VARIANT_CLASS_DICT_ENTRY of type GLib.VariantClass>})"
-    __enum_values__ = {
-        40: 40,
-        97: 97,
-        98: 98,
-        100: 100,
-        103: 103,
-        104: 104,
-        105: 105,
-        109: 109,
-        110: 110,
-        111: 111,
-        113: 113,
-        115: 115,
-        116: 116,
-        117: 117,
-        118: 118,
-        120: 120,
-        121: 121,
-        123: 123,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibVariantClass (155124768)>'
-    __info__ = gi.EnumInfo(VariantClass)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'BOOLEAN': <VariantClass.BOOLEAN: 98>, 'BYTE': <VariantClass.BYTE: 121>, 'INT16': <VariantClass.INT16: 110>, 'UINT16': <VariantClass.UINT16: 113>, 'INT32': <VariantClass.INT32: 105>, 'UINT32': <VariantClass.UINT32: 117>, 'INT64': <VariantClass.INT64: 120>, 'UINT64': <VariantClass.UINT64: 116>, 'HANDLE': <VariantClass.HANDLE: 104>, 'DOUBLE': <VariantClass.DOUBLE: 100>, 'STRING': <VariantClass.STRING: 115>, 'OBJECT_PATH': <VariantClass.OBJECT_PATH: 111>, 'SIGNATURE': <VariantClass.SIGNATURE: 103>, 'VARIANT': <VariantClass.VARIANT: 118>, 'MAYBE': <VariantClass.MAYBE: 109>, 'ARRAY': <VariantClass.ARRAY: 97>, 'TUPLE': <VariantClass.TUPLE: 40>, 'DICT_ENTRY': <VariantClass.DICT_ENTRY: 123>})"
+    __name__ = 'VariantClass'
+    __qualname__ = 'VariantClass'
 
 

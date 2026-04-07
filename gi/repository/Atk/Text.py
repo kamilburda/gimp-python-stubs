@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -221,10 +214,10 @@ class Text(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Text), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkText (892679856)>, '__dict__': <attribute '__dict__' of 'Text' objects>, '__weakref__': <attribute '__weakref__' of 'Text' objects>, '__doc__': None, '__gsignals__': {}, 'free_ranges': gi.FunctionInfo(free_ranges, bound=None), 'add_selection': gi.FunctionInfo(add_selection, bound=None), 'get_bounded_ranges': gi.FunctionInfo(get_bounded_ranges, bound=None), 'get_caret_offset': gi.FunctionInfo(get_caret_offset, bound=None), 'get_character_at_offset': gi.FunctionInfo(get_character_at_offset, bound=None), 'get_character_count': gi.FunctionInfo(get_character_count, bound=None), 'get_character_extents': gi.FunctionInfo(get_character_extents, bound=None), 'get_default_attributes': gi.FunctionInfo(get_default_attributes, bound=None), 'get_n_selections': gi.FunctionInfo(get_n_selections, bound=None), 'get_offset_at_point': gi.FunctionInfo(get_offset_at_point, bound=None), 'get_range_extents': gi.FunctionInfo(get_range_extents, bound=None), 'get_run_attributes': gi.FunctionInfo(get_run_attributes, bound=None), 'get_selection': gi.FunctionInfo(get_selection, bound=None), 'get_string_at_offset': gi.FunctionInfo(get_string_at_offset, bound=None), 'get_text': gi.FunctionInfo(get_text, bound=None), 'get_text_after_offset': gi.FunctionInfo(get_text_after_offset, bound=None), 'get_text_at_offset': gi.FunctionInfo(get_text_at_offset, bound=None), 'get_text_before_offset': gi.FunctionInfo(get_text_before_offset, bound=None), 'remove_selection': gi.FunctionInfo(remove_selection, bound=None), 'scroll_substring_to': gi.FunctionInfo(scroll_substring_to, bound=None), 'scroll_substring_to_point': gi.FunctionInfo(scroll_substring_to_point, bound=None), 'set_caret_offset': gi.FunctionInfo(set_caret_offset, bound=None), 'set_selection': gi.FunctionInfo(set_selection, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Text), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkText (1534561440)>, '__dict__': <attribute '__dict__' of 'Text' objects>, '__weakref__': <attribute '__weakref__' of 'Text' objects>, '__doc__': None, '__gsignals__': {}, 'free_ranges': <staticmethod(gi.FunctionInfo(free_ranges))>, 'add_selection': gi.FunctionInfo(add_selection), 'get_bounded_ranges': gi.FunctionInfo(get_bounded_ranges), 'get_caret_offset': gi.FunctionInfo(get_caret_offset), 'get_character_at_offset': gi.FunctionInfo(get_character_at_offset), 'get_character_count': gi.FunctionInfo(get_character_count), 'get_character_extents': gi.FunctionInfo(get_character_extents), 'get_default_attributes': gi.FunctionInfo(get_default_attributes), 'get_n_selections': gi.FunctionInfo(get_n_selections), 'get_offset_at_point': gi.FunctionInfo(get_offset_at_point), 'get_range_extents': gi.FunctionInfo(get_range_extents), 'get_run_attributes': gi.FunctionInfo(get_run_attributes), 'get_selection': gi.FunctionInfo(get_selection), 'get_string_at_offset': gi.FunctionInfo(get_string_at_offset), 'get_text': gi.FunctionInfo(get_text), 'get_text_after_offset': gi.FunctionInfo(get_text_after_offset), 'get_text_at_offset': gi.FunctionInfo(get_text_at_offset), 'get_text_before_offset': gi.FunctionInfo(get_text_before_offset), 'remove_selection': gi.FunctionInfo(remove_selection), 'scroll_substring_to': gi.FunctionInfo(scroll_substring_to), 'scroll_substring_to_point': gi.FunctionInfo(scroll_substring_to_point), 'set_caret_offset': gi.FunctionInfo(set_caret_offset), 'set_selection': gi.FunctionInfo(set_selection)})"
     __gdoc__ = 'Interface AtkText\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkText (892679856)>'
+    __gtype__ = None # (!) real value is '<GType AtkText (1534561440)>'
     __info__ = InterfaceInfo(Text)
 
 

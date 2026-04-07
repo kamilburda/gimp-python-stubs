@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -82,7 +87,7 @@ class Socket(__gi_overrides_GObject.Object, DatagramBased, Initable):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -114,6 +119,9 @@ class Socket(__gi_overrides_GObject.Object, DatagramBased, Initable):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -333,7 +341,8 @@ class Socket(__gi_overrides_GObject.Object, DatagramBased, Initable):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, family, type, protocol): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, family, type, protocol): # real signature unknown; restored from __doc__
         """ new(family:Gio.SocketFamily, type:Gio.SocketType, protocol:Gio.SocketProtocol) -> Gio.Socket """
         pass
 
@@ -341,7 +350,8 @@ class Socket(__gi_overrides_GObject.Object, DatagramBased, Initable):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_from_fd(self, fd): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_fd(cls, fd): # real signature unknown; restored from __doc__
         """ new_from_fd(fd:int) -> Gio.Socket """
         pass
 
@@ -514,20 +524,20 @@ class Socket(__gi_overrides_GObject.Object, DatagramBased, Initable):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -557,7 +567,11 @@ class Socket(__gi_overrides_GObject.Object, DatagramBased, Initable):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -662,12 +676,12 @@ class Socket(__gi_overrides_GObject.Object, DatagramBased, Initable):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb79d0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70868340>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Socket), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSocket (2466391968)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_from_fd': gi.FunctionInfo(new_from_fd, bound=None), 'accept': gi.FunctionInfo(accept, bound=None), 'bind': gi.FunctionInfo(bind, bound=None), 'check_connect_result': gi.FunctionInfo(check_connect_result, bound=None), 'close': gi.FunctionInfo(close, bound=None), 'condition_check': gi.FunctionInfo(condition_check, bound=None), 'condition_timed_wait': gi.FunctionInfo(condition_timed_wait, bound=None), 'condition_wait': gi.FunctionInfo(condition_wait, bound=None), 'connect': gi.FunctionInfo(connect, bound=None), 'connection_factory_create_connection': gi.FunctionInfo(connection_factory_create_connection, bound=None), 'get_available_bytes': gi.FunctionInfo(get_available_bytes, bound=None), 'get_blocking': gi.FunctionInfo(get_blocking, bound=None), 'get_broadcast': gi.FunctionInfo(get_broadcast, bound=None), 'get_credentials': gi.FunctionInfo(get_credentials, bound=None), 'get_family': gi.FunctionInfo(get_family, bound=None), 'get_fd': gi.FunctionInfo(get_fd, bound=None), 'get_keepalive': gi.FunctionInfo(get_keepalive, bound=None), 'get_listen_backlog': gi.FunctionInfo(get_listen_backlog, bound=None), 'get_local_address': gi.FunctionInfo(get_local_address, bound=None), 'get_multicast_loopback': gi.FunctionInfo(get_multicast_loopback, bound=None), 'get_multicast_ttl': gi.FunctionInfo(get_multicast_ttl, bound=None), 'get_option': gi.FunctionInfo(get_option, bound=None), 'get_protocol': gi.FunctionInfo(get_protocol, bound=None), 'get_remote_address': gi.FunctionInfo(get_remote_address, bound=None), 'get_socket_type': gi.FunctionInfo(get_socket_type, bound=None), 'get_timeout': gi.FunctionInfo(get_timeout, bound=None), 'get_ttl': gi.FunctionInfo(get_ttl, bound=None), 'is_closed': gi.FunctionInfo(is_closed, bound=None), 'is_connected': gi.FunctionInfo(is_connected, bound=None), 'join_multicast_group': gi.FunctionInfo(join_multicast_group, bound=None), 'join_multicast_group_ssm': gi.FunctionInfo(join_multicast_group_ssm, bound=None), 'leave_multicast_group': gi.FunctionInfo(leave_multicast_group, bound=None), 'leave_multicast_group_ssm': gi.FunctionInfo(leave_multicast_group_ssm, bound=None), 'listen': gi.FunctionInfo(listen, bound=None), 'receive': gi.FunctionInfo(receive, bound=None), 'receive_bytes': gi.FunctionInfo(receive_bytes, bound=None), 'receive_bytes_from': gi.FunctionInfo(receive_bytes_from, bound=None), 'receive_from': gi.FunctionInfo(receive_from, bound=None), 'receive_message': gi.FunctionInfo(receive_message, bound=None), 'receive_messages': gi.FunctionInfo(receive_messages, bound=None), 'receive_with_blocking': gi.FunctionInfo(receive_with_blocking, bound=None), 'send': gi.FunctionInfo(send, bound=None), 'send_message': gi.FunctionInfo(send_message, bound=None), 'send_message_with_timeout': gi.FunctionInfo(send_message_with_timeout, bound=None), 'send_messages': gi.FunctionInfo(send_messages, bound=None), 'send_to': gi.FunctionInfo(send_to, bound=None), 'send_with_blocking': gi.FunctionInfo(send_with_blocking, bound=None), 'set_blocking': gi.FunctionInfo(set_blocking, bound=None), 'set_broadcast': gi.FunctionInfo(set_broadcast, bound=None), 'set_keepalive': gi.FunctionInfo(set_keepalive, bound=None), 'set_listen_backlog': gi.FunctionInfo(set_listen_backlog, bound=None), 'set_multicast_loopback': gi.FunctionInfo(set_multicast_loopback, bound=None), 'set_multicast_ttl': gi.FunctionInfo(set_multicast_ttl, bound=None), 'set_option': gi.FunctionInfo(set_option, bound=None), 'set_timeout': gi.FunctionInfo(set_timeout, bound=None), 'set_ttl': gi.FunctionInfo(set_ttl, bound=None), 'shutdown': gi.FunctionInfo(shutdown, bound=None), 'speaks_ipv4': gi.FunctionInfo(speaks_ipv4, bound=None), 'parent_instance': <property object at 0x000001a793dc9ee0>, 'priv': <property object at 0x000001a793dc9fd0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Socket), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSocket (1841599664)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_from_fd': <classmethod(gi.FunctionInfo(new_from_fd))>, 'accept': gi.FunctionInfo(accept), 'bind': gi.FunctionInfo(bind), 'check_connect_result': gi.FunctionInfo(check_connect_result), 'close': gi.FunctionInfo(close), 'condition_check': gi.FunctionInfo(condition_check), 'condition_timed_wait': gi.FunctionInfo(condition_timed_wait), 'condition_wait': gi.FunctionInfo(condition_wait), 'connect': gi.FunctionInfo(connect), 'connection_factory_create_connection': gi.FunctionInfo(connection_factory_create_connection), 'get_available_bytes': gi.FunctionInfo(get_available_bytes), 'get_blocking': gi.FunctionInfo(get_blocking), 'get_broadcast': gi.FunctionInfo(get_broadcast), 'get_credentials': gi.FunctionInfo(get_credentials), 'get_family': gi.FunctionInfo(get_family), 'get_fd': gi.FunctionInfo(get_fd), 'get_keepalive': gi.FunctionInfo(get_keepalive), 'get_listen_backlog': gi.FunctionInfo(get_listen_backlog), 'get_local_address': gi.FunctionInfo(get_local_address), 'get_multicast_loopback': gi.FunctionInfo(get_multicast_loopback), 'get_multicast_ttl': gi.FunctionInfo(get_multicast_ttl), 'get_option': gi.FunctionInfo(get_option), 'get_protocol': gi.FunctionInfo(get_protocol), 'get_remote_address': gi.FunctionInfo(get_remote_address), 'get_socket_type': gi.FunctionInfo(get_socket_type), 'get_timeout': gi.FunctionInfo(get_timeout), 'get_ttl': gi.FunctionInfo(get_ttl), 'is_closed': gi.FunctionInfo(is_closed), 'is_connected': gi.FunctionInfo(is_connected), 'join_multicast_group': gi.FunctionInfo(join_multicast_group), 'join_multicast_group_ssm': gi.FunctionInfo(join_multicast_group_ssm), 'leave_multicast_group': gi.FunctionInfo(leave_multicast_group), 'leave_multicast_group_ssm': gi.FunctionInfo(leave_multicast_group_ssm), 'listen': gi.FunctionInfo(listen), 'receive': gi.FunctionInfo(receive), 'receive_bytes': gi.FunctionInfo(receive_bytes), 'receive_bytes_from': gi.FunctionInfo(receive_bytes_from), 'receive_from': gi.FunctionInfo(receive_from), 'receive_message': gi.FunctionInfo(receive_message), 'receive_messages': gi.FunctionInfo(receive_messages), 'receive_with_blocking': gi.FunctionInfo(receive_with_blocking), 'send': gi.FunctionInfo(send), 'send_message': gi.FunctionInfo(send_message), 'send_message_with_timeout': gi.FunctionInfo(send_message_with_timeout), 'send_messages': gi.FunctionInfo(send_messages), 'send_to': gi.FunctionInfo(send_to), 'send_with_blocking': gi.FunctionInfo(send_with_blocking), 'set_blocking': gi.FunctionInfo(set_blocking), 'set_broadcast': gi.FunctionInfo(set_broadcast), 'set_keepalive': gi.FunctionInfo(set_keepalive), 'set_listen_backlog': gi.FunctionInfo(set_listen_backlog), 'set_multicast_loopback': gi.FunctionInfo(set_multicast_loopback), 'set_multicast_ttl': gi.FunctionInfo(set_multicast_ttl), 'set_option': gi.FunctionInfo(set_option), 'set_timeout': gi.FunctionInfo(set_timeout), 'set_ttl': gi.FunctionInfo(set_ttl), 'shutdown': gi.FunctionInfo(shutdown), 'speaks_ipv4': gi.FunctionInfo(speaks_ipv4), 'parent_instance': <property object at 0x000001ea709c5bc0>, 'priv': <property object at 0x000001ea709c5cb0>})"
     __gdoc__ = 'Object GSocket\n\nProperties from GSocket:\n  family -> GSocketFamily: family\n  type -> GSocketType: type\n  protocol -> GSocketProtocol: protocol\n  fd -> gint: fd\n  blocking -> gboolean: blocking\n  listen-backlog -> gint: listen-backlog\n  keepalive -> gboolean: keepalive\n  local-address -> GSocketAddress: local-address\n  remote-address -> GSocketAddress: remote-address\n  timeout -> guint: timeout\n  ttl -> guint: ttl\n  broadcast -> gboolean: broadcast\n  multicast-loopback -> gboolean: multicast-loopback\n  multicast-ttl -> guint: multicast-ttl\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GSocket (2466391968)>'
+    __gtype__ = None # (!) real value is '<GType GSocket (1841599664)>'
     __info__ = ObjectInfo(Socket)
 
 

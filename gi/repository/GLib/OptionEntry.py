@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class OptionEntry(__gi.Struct):
@@ -147,7 +145,7 @@ class OptionEntry(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(OptionEntry), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'OptionEntry' objects>, '__weakref__': <attribute '__weakref__' of 'OptionEntry' objects>, '__doc__': None, 'long_name': <property object at 0x000002830bef46d0>, 'short_name': <property object at 0x000002830bef47c0>, 'flags': <property object at 0x000002830bef48b0>, 'arg': <property object at 0x000002830bef49a0>, 'arg_data': <property object at 0x000002830bef4a90>, 'description': <property object at 0x000002830bef4b80>, 'arg_description': <property object at 0x000002830bef4c70>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(OptionEntry), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'OptionEntry' objects>, '__weakref__': <attribute '__weakref__' of 'OptionEntry' objects>, '__doc__': None, 'long_name': <property object at 0x0000018ea0079d00>, 'short_name': <property object at 0x0000018ea0079c10>, 'flags': <property object at 0x0000018ea0079ee0>, 'arg': <property object at 0x0000018ea0079fd0>, 'arg_data': <property object at 0x0000018ea007a0c0>, 'description': <property object at 0x0000018ea007a1b0>, 'arg_description': <property object at 0x0000018ea007a2a0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(OptionEntry)
 

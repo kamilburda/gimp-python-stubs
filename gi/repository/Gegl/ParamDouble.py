@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -244,10 +238,10 @@ class ParamDouble(__gi_repository_GObject.ParamSpecDouble):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ParamDouble), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglParamDouble (420746288)>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ParamDouble), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglParamDouble (3652017600)>, '__doc__': None, '__gsignals__': {}})"
     __gproperties__ = {
         'blurb': (
-            None, # (!) real value is '<GType PyObject (421319728)>'
+            None, # (!) real value is '<GType PyObject (3653560928)>'
             '',
             '',
             3,
@@ -255,7 +249,7 @@ class ParamDouble(__gi_repository_GObject.ParamSpecDouble):
         'nick': '<value is a self-reference, replaced by this string>',
     }
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglParamDouble (420746288)>'
+    __gtype__ = None # (!) real value is '<GType GeglParamDouble (3652017600)>'
     __info__ = ObjectInfo(ParamDouble)
 
 

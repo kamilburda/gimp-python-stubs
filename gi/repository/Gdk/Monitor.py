@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -42,7 +41,7 @@ class Monitor(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -70,6 +69,9 @@ class Monitor(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -310,20 +312,20 @@ class Monitor(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -455,12 +457,12 @@ class Monitor(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002459a3d2a10>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x00000187257dc0a0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Monitor), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkMonitor (2579383360)>, '__doc__': None, '__gsignals__': {}, 'get_display': gi.FunctionInfo(get_display, bound=None), 'get_geometry': gi.FunctionInfo(get_geometry, bound=None), 'get_height_mm': gi.FunctionInfo(get_height_mm, bound=None), 'get_manufacturer': gi.FunctionInfo(get_manufacturer, bound=None), 'get_model': gi.FunctionInfo(get_model, bound=None), 'get_refresh_rate': gi.FunctionInfo(get_refresh_rate, bound=None), 'get_scale_factor': gi.FunctionInfo(get_scale_factor, bound=None), 'get_subpixel_layout': gi.FunctionInfo(get_subpixel_layout, bound=None), 'get_width_mm': gi.FunctionInfo(get_width_mm, bound=None), 'get_workarea': gi.FunctionInfo(get_workarea, bound=None), 'is_primary': gi.FunctionInfo(is_primary, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Monitor), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkMonitor (585157440)>, '__doc__': None, '__gsignals__': {}, 'get_display': gi.FunctionInfo(get_display), 'get_geometry': gi.FunctionInfo(get_geometry), 'get_height_mm': gi.FunctionInfo(get_height_mm), 'get_manufacturer': gi.FunctionInfo(get_manufacturer), 'get_model': gi.FunctionInfo(get_model), 'get_refresh_rate': gi.FunctionInfo(get_refresh_rate), 'get_scale_factor': gi.FunctionInfo(get_scale_factor), 'get_subpixel_layout': gi.FunctionInfo(get_subpixel_layout), 'get_width_mm': gi.FunctionInfo(get_width_mm), 'get_workarea': gi.FunctionInfo(get_workarea), 'is_primary': gi.FunctionInfo(is_primary)})"
     __gdoc__ = 'Object GdkMonitor\n\nSignals from GdkMonitor:\n  invalidate ()\n\nProperties from GdkMonitor:\n  display -> GdkDisplay: Display\n    The display of the monitor\n  manufacturer -> gchararray: Manufacturer\n    The manufacturer name\n  model -> gchararray: Model\n    The model name\n  scale-factor -> gint: Scale factor\n    The scale factor\n  geometry -> GdkRectangle: Geometry\n    The geometry of the monitor\n  workarea -> GdkRectangle: Workarea\n    The workarea of the monitor\n  width-mm -> gint: Physical width\n    The width of the monitor, in millimeters\n  height-mm -> gint: Physical height\n    The height of the monitor, in millimeters\n  refresh-rate -> gint: Refresh rate\n    The refresh rate, in millihertz\n  subpixel-layout -> GdkSubpixelLayout: Subpixel layout\n    The subpixel layout\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkMonitor (2579383360)>'
+    __gtype__ = None # (!) real value is '<GType GdkMonitor (585157440)>'
     __info__ = ObjectInfo(Monitor)
 
 

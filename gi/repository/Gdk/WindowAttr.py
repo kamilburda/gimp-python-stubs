@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -159,7 +158,7 @@ class WindowAttr(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(WindowAttr), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'WindowAttr' objects>, '__weakref__': <attribute '__weakref__' of 'WindowAttr' objects>, '__doc__': None, 'title': <property object at 0x000002459c46b2e0>, 'event_mask': <property object at 0x000002459c46b3d0>, 'x': <property object at 0x000002459c46b4c0>, 'y': <property object at 0x000002459c46b5b0>, 'width': <property object at 0x000002459c46b6a0>, 'height': <property object at 0x000002459c46b790>, 'wclass': <property object at 0x000002459c46b880>, 'visual': <property object at 0x000002459c46b970>, 'window_type': <property object at 0x000002459c46ba60>, 'cursor': <property object at 0x000002459c46bb50>, 'wmclass_name': <property object at 0x000002459c46bc40>, 'wmclass_class': <property object at 0x000002459c46bd30>, 'override_redirect': <property object at 0x000002459c46be20>, 'type_hint': <property object at 0x000002459c46bf10>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(WindowAttr), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'WindowAttr' objects>, '__weakref__': <attribute '__weakref__' of 'WindowAttr' objects>, '__doc__': None, 'title': <property object at 0x00000187257949a0>, 'event_mask': <property object at 0x0000018725794a90>, 'x': <property object at 0x0000018725794b80>, 'y': <property object at 0x0000018725794c70>, 'width': <property object at 0x0000018725794d60>, 'height': <property object at 0x0000018725794e50>, 'wclass': <property object at 0x0000018725794f40>, 'visual': <property object at 0x0000018725795030>, 'window_type': <property object at 0x0000018725795120>, 'cursor': <property object at 0x0000018725795210>, 'wmclass_name': <property object at 0x0000018725795300>, 'wmclass_class': <property object at 0x00000187257953f0>, 'override_redirect': <property object at 0x00000187257954e0>, 'type_hint': <property object at 0x00000187257955d0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(WindowAttr)
 

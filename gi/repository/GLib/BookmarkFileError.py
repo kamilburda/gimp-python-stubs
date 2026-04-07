@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class BookmarkFileError(__gobject.GEnum):
+class BookmarkFileError(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class BookmarkFileError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class BookmarkFileError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -126,12 +124,23 @@ class BookmarkFileError(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +169,10 @@ class BookmarkFileError(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -205,6 +218,14 @@ class BookmarkFileError(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -230,8 +251,8 @@ class BookmarkFileError(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -262,15 +283,16 @@ class BookmarkFileError(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -334,7 +356,7 @@ class BookmarkFileError(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -376,10 +398,6 @@ class BookmarkFileError(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     APP_NOT_REGISTERED = 2
     FILE_NOT_FOUND = 7
@@ -389,19 +407,9 @@ class BookmarkFileError(__gobject.GEnum):
     UNKNOWN_ENCODING = 5
     URI_NOT_FOUND = 3
     WRITE = 6
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'BookmarkFileError' objects>, '__doc__': None, '__gtype__': <GType PyGLibBookmarkFileError (155715040)>, '__enum_values__': {0: <enum G_BOOKMARK_FILE_ERROR_INVALID_URI of type GLib.BookmarkFileError>, 1: <enum G_BOOKMARK_FILE_ERROR_INVALID_VALUE of type GLib.BookmarkFileError>, 2: <enum G_BOOKMARK_FILE_ERROR_APP_NOT_REGISTERED of type GLib.BookmarkFileError>, 3: <enum G_BOOKMARK_FILE_ERROR_URI_NOT_FOUND of type GLib.BookmarkFileError>, 4: <enum G_BOOKMARK_FILE_ERROR_READ of type GLib.BookmarkFileError>, 5: <enum G_BOOKMARK_FILE_ERROR_UNKNOWN_ENCODING of type GLib.BookmarkFileError>, 6: <enum G_BOOKMARK_FILE_ERROR_WRITE of type GLib.BookmarkFileError>, 7: <enum G_BOOKMARK_FILE_ERROR_FILE_NOT_FOUND of type GLib.BookmarkFileError>}, '__info__': gi.EnumInfo(BookmarkFileError), 'INVALID_URI': <enum G_BOOKMARK_FILE_ERROR_INVALID_URI of type GLib.BookmarkFileError>, 'INVALID_VALUE': <enum G_BOOKMARK_FILE_ERROR_INVALID_VALUE of type GLib.BookmarkFileError>, 'APP_NOT_REGISTERED': <enum G_BOOKMARK_FILE_ERROR_APP_NOT_REGISTERED of type GLib.BookmarkFileError>, 'URI_NOT_FOUND': <enum G_BOOKMARK_FILE_ERROR_URI_NOT_FOUND of type GLib.BookmarkFileError>, 'READ': <enum G_BOOKMARK_FILE_ERROR_READ of type GLib.BookmarkFileError>, 'UNKNOWN_ENCODING': <enum G_BOOKMARK_FILE_ERROR_UNKNOWN_ENCODING of type GLib.BookmarkFileError>, 'WRITE': <enum G_BOOKMARK_FILE_ERROR_WRITE of type GLib.BookmarkFileError>, 'FILE_NOT_FOUND': <enum G_BOOKMARK_FILE_ERROR_FILE_NOT_FOUND of type GLib.BookmarkFileError>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibBookmarkFileError (155715040)>'
-    __info__ = gi.EnumInfo(BookmarkFileError)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'INVALID_URI': <BookmarkFileError.INVALID_URI: 0>, 'INVALID_VALUE': <BookmarkFileError.INVALID_VALUE: 1>, 'APP_NOT_REGISTERED': <BookmarkFileError.APP_NOT_REGISTERED: 2>, 'URI_NOT_FOUND': <BookmarkFileError.URI_NOT_FOUND: 3>, 'READ': <BookmarkFileError.READ: 4>, 'UNKNOWN_ENCODING': <BookmarkFileError.UNKNOWN_ENCODING: 5>, 'WRITE': <BookmarkFileError.WRITE: 6>, 'FILE_NOT_FOUND': <BookmarkFileError.FILE_NOT_FOUND: 7>})"
+    __name__ = 'BookmarkFileError'
+    __qualname__ = 'BookmarkFileError'
 
 

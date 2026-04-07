@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class VariantParseError(__gobject.GEnum):
+class VariantParseError(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class VariantParseError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class VariantParseError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -126,12 +124,23 @@ class VariantParseError(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +169,10 @@ class VariantParseError(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -205,6 +218,14 @@ class VariantParseError(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -230,8 +251,8 @@ class VariantParseError(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -262,15 +283,16 @@ class VariantParseError(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -334,7 +356,7 @@ class VariantParseError(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -376,10 +398,6 @@ class VariantParseError(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     BASIC_TYPE_EXPECTED = 1
     CANNOT_INFER_TYPE = 2
@@ -400,30 +418,9 @@ class VariantParseError(__gobject.GEnum):
     UNKNOWN_KEYWORD = 15
     UNTERMINATED_STRING_CONSTANT = 16
     VALUE_EXPECTED = 17
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'VariantParseError' objects>, '__doc__': None, '__gtype__': <GType PyGLibVariantParseError (155120400)>, '__enum_values__': {0: <enum G_VARIANT_PARSE_ERROR_FAILED of type GLib.VariantParseError>, 1: <enum G_VARIANT_PARSE_ERROR_BASIC_TYPE_EXPECTED of type GLib.VariantParseError>, 2: <enum G_VARIANT_PARSE_ERROR_CANNOT_INFER_TYPE of type GLib.VariantParseError>, 3: <enum G_VARIANT_PARSE_ERROR_DEFINITE_TYPE_EXPECTED of type GLib.VariantParseError>, 4: <enum G_VARIANT_PARSE_ERROR_INPUT_NOT_AT_END of type GLib.VariantParseError>, 5: <enum G_VARIANT_PARSE_ERROR_INVALID_CHARACTER of type GLib.VariantParseError>, 6: <enum G_VARIANT_PARSE_ERROR_INVALID_FORMAT_STRING of type GLib.VariantParseError>, 7: <enum G_VARIANT_PARSE_ERROR_INVALID_OBJECT_PATH of type GLib.VariantParseError>, 8: <enum G_VARIANT_PARSE_ERROR_INVALID_SIGNATURE of type GLib.VariantParseError>, 9: <enum G_VARIANT_PARSE_ERROR_INVALID_TYPE_STRING of type GLib.VariantParseError>, 10: <enum G_VARIANT_PARSE_ERROR_NO_COMMON_TYPE of type GLib.VariantParseError>, 11: <enum G_VARIANT_PARSE_ERROR_NUMBER_OUT_OF_RANGE of type GLib.VariantParseError>, 12: <enum G_VARIANT_PARSE_ERROR_NUMBER_TOO_BIG of type GLib.VariantParseError>, 13: <enum G_VARIANT_PARSE_ERROR_TYPE_ERROR of type GLib.VariantParseError>, 14: <enum G_VARIANT_PARSE_ERROR_UNEXPECTED_TOKEN of type GLib.VariantParseError>, 15: <enum G_VARIANT_PARSE_ERROR_UNKNOWN_KEYWORD of type GLib.VariantParseError>, 16: <enum G_VARIANT_PARSE_ERROR_UNTERMINATED_STRING_CONSTANT of type GLib.VariantParseError>, 17: <enum G_VARIANT_PARSE_ERROR_VALUE_EXPECTED of type GLib.VariantParseError>, 18: <enum G_VARIANT_PARSE_ERROR_RECURSION of type GLib.VariantParseError>}, '__info__': gi.EnumInfo(VariantParseError), 'FAILED': <enum G_VARIANT_PARSE_ERROR_FAILED of type GLib.VariantParseError>, 'BASIC_TYPE_EXPECTED': <enum G_VARIANT_PARSE_ERROR_BASIC_TYPE_EXPECTED of type GLib.VariantParseError>, 'CANNOT_INFER_TYPE': <enum G_VARIANT_PARSE_ERROR_CANNOT_INFER_TYPE of type GLib.VariantParseError>, 'DEFINITE_TYPE_EXPECTED': <enum G_VARIANT_PARSE_ERROR_DEFINITE_TYPE_EXPECTED of type GLib.VariantParseError>, 'INPUT_NOT_AT_END': <enum G_VARIANT_PARSE_ERROR_INPUT_NOT_AT_END of type GLib.VariantParseError>, 'INVALID_CHARACTER': <enum G_VARIANT_PARSE_ERROR_INVALID_CHARACTER of type GLib.VariantParseError>, 'INVALID_FORMAT_STRING': <enum G_VARIANT_PARSE_ERROR_INVALID_FORMAT_STRING of type GLib.VariantParseError>, 'INVALID_OBJECT_PATH': <enum G_VARIANT_PARSE_ERROR_INVALID_OBJECT_PATH of type GLib.VariantParseError>, 'INVALID_SIGNATURE': <enum G_VARIANT_PARSE_ERROR_INVALID_SIGNATURE of type GLib.VariantParseError>, 'INVALID_TYPE_STRING': <enum G_VARIANT_PARSE_ERROR_INVALID_TYPE_STRING of type GLib.VariantParseError>, 'NO_COMMON_TYPE': <enum G_VARIANT_PARSE_ERROR_NO_COMMON_TYPE of type GLib.VariantParseError>, 'NUMBER_OUT_OF_RANGE': <enum G_VARIANT_PARSE_ERROR_NUMBER_OUT_OF_RANGE of type GLib.VariantParseError>, 'NUMBER_TOO_BIG': <enum G_VARIANT_PARSE_ERROR_NUMBER_TOO_BIG of type GLib.VariantParseError>, 'TYPE_ERROR': <enum G_VARIANT_PARSE_ERROR_TYPE_ERROR of type GLib.VariantParseError>, 'UNEXPECTED_TOKEN': <enum G_VARIANT_PARSE_ERROR_UNEXPECTED_TOKEN of type GLib.VariantParseError>, 'UNKNOWN_KEYWORD': <enum G_VARIANT_PARSE_ERROR_UNKNOWN_KEYWORD of type GLib.VariantParseError>, 'UNTERMINATED_STRING_CONSTANT': <enum G_VARIANT_PARSE_ERROR_UNTERMINATED_STRING_CONSTANT of type GLib.VariantParseError>, 'VALUE_EXPECTED': <enum G_VARIANT_PARSE_ERROR_VALUE_EXPECTED of type GLib.VariantParseError>, 'RECURSION': <enum G_VARIANT_PARSE_ERROR_RECURSION of type GLib.VariantParseError>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibVariantParseError (155120400)>'
-    __info__ = gi.EnumInfo(VariantParseError)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'FAILED': <VariantParseError.FAILED: 0>, 'BASIC_TYPE_EXPECTED': <VariantParseError.BASIC_TYPE_EXPECTED: 1>, 'CANNOT_INFER_TYPE': <VariantParseError.CANNOT_INFER_TYPE: 2>, 'DEFINITE_TYPE_EXPECTED': <VariantParseError.DEFINITE_TYPE_EXPECTED: 3>, 'INPUT_NOT_AT_END': <VariantParseError.INPUT_NOT_AT_END: 4>, 'INVALID_CHARACTER': <VariantParseError.INVALID_CHARACTER: 5>, 'INVALID_FORMAT_STRING': <VariantParseError.INVALID_FORMAT_STRING: 6>, 'INVALID_OBJECT_PATH': <VariantParseError.INVALID_OBJECT_PATH: 7>, 'INVALID_SIGNATURE': <VariantParseError.INVALID_SIGNATURE: 8>, 'INVALID_TYPE_STRING': <VariantParseError.INVALID_TYPE_STRING: 9>, 'NO_COMMON_TYPE': <VariantParseError.NO_COMMON_TYPE: 10>, 'NUMBER_OUT_OF_RANGE': <VariantParseError.NUMBER_OUT_OF_RANGE: 11>, 'NUMBER_TOO_BIG': <VariantParseError.NUMBER_TOO_BIG: 12>, 'TYPE_ERROR': <VariantParseError.TYPE_ERROR: 13>, 'UNEXPECTED_TOKEN': <VariantParseError.UNEXPECTED_TOKEN: 14>, 'UNKNOWN_KEYWORD': <VariantParseError.UNKNOWN_KEYWORD: 15>, 'UNTERMINATED_STRING_CONSTANT': <VariantParseError.UNTERMINATED_STRING_CONSTANT: 16>, 'VALUE_EXPECTED': <VariantParseError.VALUE_EXPECTED: 17>, 'RECURSION': <VariantParseError.RECURSION: 18>})"
+    __name__ = 'VariantParseError'
+    __qualname__ = 'VariantParseError'
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -163,7 +162,7 @@ class RcProperty(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RcProperty), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RcProperty' objects>, '__weakref__': <attribute '__weakref__' of 'RcProperty' objects>, '__doc__': None, 'type_name': <property object at 0x000002eceac4aa70>, 'property_name': <property object at 0x000002eceac4ab60>, 'origin': <property object at 0x000002eceac4ac50>, 'value': <property object at 0x000002eceac4ad40>, 'parse_border': gi.FunctionInfo(parse_border, bound=None), 'parse_color': gi.FunctionInfo(parse_color, bound=None), 'parse_enum': gi.FunctionInfo(parse_enum, bound=None), 'parse_flags': gi.FunctionInfo(parse_flags, bound=None), 'parse_requisition': gi.FunctionInfo(parse_requisition, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RcProperty), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RcProperty' objects>, '__weakref__': <attribute '__weakref__' of 'RcProperty' objects>, '__doc__': None, 'type_name': <property object at 0x000002bfd1871670>, 'property_name': <property object at 0x000002bfd18717b0>, 'origin': <property object at 0x000002bfd18718a0>, 'value': <property object at 0x000002bfd1871990>, 'parse_border': <staticmethod(gi.FunctionInfo(parse_border))>, 'parse_color': <staticmethod(gi.FunctionInfo(parse_color))>, 'parse_enum': <staticmethod(gi.FunctionInfo(parse_enum))>, 'parse_flags': <staticmethod(gi.FunctionInfo(parse_flags))>, 'parse_requisition': <staticmethod(gi.FunctionInfo(parse_requisition))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(RcProperty)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class WindowType(__gobject.GEnum):
+class WindowType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -124,12 +123,23 @@ class WindowType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -158,6 +168,10 @@ class WindowType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -192,7 +206,8 @@ class WindowType(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -201,6 +216,14 @@ class WindowType(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -228,8 +251,8 @@ class WindowType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -260,15 +283,16 @@ class WindowType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -332,7 +356,7 @@ class WindowType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -374,10 +398,6 @@ class WindowType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CHILD = 2
     FOREIGN = 4
@@ -386,18 +406,9 @@ class WindowType(__gobject.GEnum):
     SUBSURFACE = 6
     TEMP = 3
     TOPLEVEL = 1
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gdk', '__dict__': <attribute '__dict__' of 'WindowType' objects>, '__doc__': None, '__gtype__': <GType GdkWindowType (2579734448)>, '__enum_values__': {0: <enum GDK_WINDOW_ROOT of type Gdk.WindowType>, 1: <enum GDK_WINDOW_TOPLEVEL of type Gdk.WindowType>, 2: <enum GDK_WINDOW_CHILD of type Gdk.WindowType>, 3: <enum GDK_WINDOW_TEMP of type Gdk.WindowType>, 4: <enum GDK_WINDOW_FOREIGN of type Gdk.WindowType>, 5: <enum GDK_WINDOW_OFFSCREEN of type Gdk.WindowType>, 6: <enum GDK_WINDOW_SUBSURFACE of type Gdk.WindowType>}, '__info__': gi.EnumInfo(WindowType), 'ROOT': <enum GDK_WINDOW_ROOT of type Gdk.WindowType>, 'TOPLEVEL': <enum GDK_WINDOW_TOPLEVEL of type Gdk.WindowType>, 'CHILD': <enum GDK_WINDOW_CHILD of type Gdk.WindowType>, 'TEMP': <enum GDK_WINDOW_TEMP of type Gdk.WindowType>, 'FOREIGN': <enum GDK_WINDOW_FOREIGN of type Gdk.WindowType>, 'OFFSCREEN': <enum GDK_WINDOW_OFFSCREEN of type Gdk.WindowType>, 'SUBSURFACE': <enum GDK_WINDOW_SUBSURFACE of type Gdk.WindowType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkWindowType (2579734448)>'
-    __info__ = gi.EnumInfo(WindowType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'ROOT': <WindowType.ROOT: 0>, 'TOPLEVEL': <WindowType.TOPLEVEL: 1>, 'CHILD': <WindowType.CHILD: 2>, 'TEMP': <WindowType.TEMP: 3>, 'FOREIGN': <WindowType.FOREIGN: 4>, 'OFFSCREEN': <WindowType.OFFSCREEN: 5>, 'SUBSURFACE': <WindowType.SUBSURFACE: 6>})"
+    __name__ = 'WindowType'
+    __qualname__ = 'WindowType'
 
 

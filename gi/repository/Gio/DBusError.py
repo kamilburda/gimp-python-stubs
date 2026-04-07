@@ -1,28 +1,32 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class DBusError(__gobject.GEnum):
+class DBusError(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -61,10 +65,6 @@ class DBusError(__gobject.GEnum):
         """ Returns self, the complex conjugate of any int. """
         pass
 
-    def encode_gerror(self, error): # real signature unknown; restored from __doc__
-        """ encode_gerror(error:error) -> str """
-        return ""
-
     def from_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return the integer represented by the given array of bytes.
@@ -85,33 +85,9 @@ class DBusError(__gobject.GEnum):
         """
         pass
 
-    def get_remote_error(self, error): # real signature unknown; restored from __doc__
-        """ get_remote_error(error:error) -> str or None """
-        return ""
-
-    def is_remote_error(self, error): # real signature unknown; restored from __doc__
-        """ is_remote_error(error:error) -> bool """
-        return False
-
-    def new_for_dbus_error(self, dbus_error_name, dbus_error_message): # real signature unknown; restored from __doc__
-        """ new_for_dbus_error(dbus_error_name:str, dbus_error_message:str) -> error """
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
-
-    def quark(self): # real signature unknown; restored from __doc__
-        """ quark() -> int """
-        return 0
-
-    def register_error(self, error_domain, error_code, dbus_error_name): # real signature unknown; restored from __doc__
-        """ register_error(error_domain:int, error_code:int, dbus_error_name:str) -> bool """
-        return False
-
-    def register_error_domain(self, error_domain_quark_name, quark_volatile, entries): # real signature unknown; restored from __doc__
-        """ register_error_domain(error_domain_quark_name:str, quark_volatile:int, entries:list) """
-        pass
-
-    def strip_remote_error(self, error): # real signature unknown; restored from __doc__
-        """ strip_remote_error(error:error) -> bool """
-        return False
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
@@ -134,10 +110,6 @@ class DBusError(__gobject.GEnum):
         """
         pass
 
-    def unregister_error(self, error_domain, error_code, dbus_error_name): # real signature unknown; restored from __doc__
-        """ unregister_error(error_domain:int, error_code:int, dbus_error_name:str) -> bool """
-        return False
-
     def __abs__(self, *args, **kwargs): # real signature unknown
         """ abs(self) """
         pass
@@ -158,12 +130,23 @@ class DBusError(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -187,10 +170,15 @@ class DBusError(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -225,7 +213,8 @@ class DBusError(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -234,6 +223,14 @@ class DBusError(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -261,8 +258,8 @@ class DBusError(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -293,15 +290,16 @@ class DBusError(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -365,7 +363,7 @@ class DBusError(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -406,10 +404,6 @@ class DBusError(__gobject.GEnum):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     ACCESS_DENIED = 9
@@ -457,56 +451,9 @@ class DBusError(__gobject.GEnum):
     UNKNOWN_METHOD = 19
     UNKNOWN_OBJECT = 41
     UNKNOWN_PROPERTY = 43
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gio', '__dict__': <attribute '__dict__' of 'DBusError' objects>, '__doc__': None, '__gtype__': <GType GDBusError (2472614176)>, '__enum_values__': {0: <enum G_DBUS_ERROR_FAILED of type Gio.DBusError>, 1: <enum G_DBUS_ERROR_NO_MEMORY of type Gio.DBusError>, 2: <enum G_DBUS_ERROR_SERVICE_UNKNOWN of type Gio.DBusError>, 3: <enum G_DBUS_ERROR_NAME_HAS_NO_OWNER of type Gio.DBusError>, 4: <enum G_DBUS_ERROR_NO_REPLY of type Gio.DBusError>, 5: <enum G_DBUS_ERROR_IO_ERROR of type Gio.DBusError>, 6: <enum G_DBUS_ERROR_BAD_ADDRESS of type Gio.DBusError>, 7: <enum G_DBUS_ERROR_NOT_SUPPORTED of type Gio.DBusError>, 8: <enum G_DBUS_ERROR_LIMITS_EXCEEDED of type Gio.DBusError>, 9: <enum G_DBUS_ERROR_ACCESS_DENIED of type Gio.DBusError>, 10: <enum G_DBUS_ERROR_AUTH_FAILED of type Gio.DBusError>, 11: <enum G_DBUS_ERROR_NO_SERVER of type Gio.DBusError>, 12: <enum G_DBUS_ERROR_TIMEOUT of type Gio.DBusError>, 13: <enum G_DBUS_ERROR_NO_NETWORK of type Gio.DBusError>, 14: <enum G_DBUS_ERROR_ADDRESS_IN_USE of type Gio.DBusError>, 15: <enum G_DBUS_ERROR_DISCONNECTED of type Gio.DBusError>, 16: <enum G_DBUS_ERROR_INVALID_ARGS of type Gio.DBusError>, 17: <enum G_DBUS_ERROR_FILE_NOT_FOUND of type Gio.DBusError>, 18: <enum G_DBUS_ERROR_FILE_EXISTS of type Gio.DBusError>, 19: <enum G_DBUS_ERROR_UNKNOWN_METHOD of type Gio.DBusError>, 20: <enum G_DBUS_ERROR_TIMED_OUT of type Gio.DBusError>, 21: <enum G_DBUS_ERROR_MATCH_RULE_NOT_FOUND of type Gio.DBusError>, 22: <enum G_DBUS_ERROR_MATCH_RULE_INVALID of type Gio.DBusError>, 23: <enum G_DBUS_ERROR_SPAWN_EXEC_FAILED of type Gio.DBusError>, 24: <enum G_DBUS_ERROR_SPAWN_FORK_FAILED of type Gio.DBusError>, 25: <enum G_DBUS_ERROR_SPAWN_CHILD_EXITED of type Gio.DBusError>, 26: <enum G_DBUS_ERROR_SPAWN_CHILD_SIGNALED of type Gio.DBusError>, 27: <enum G_DBUS_ERROR_SPAWN_FAILED of type Gio.DBusError>, 28: <enum G_DBUS_ERROR_SPAWN_SETUP_FAILED of type Gio.DBusError>, 29: <enum G_DBUS_ERROR_SPAWN_CONFIG_INVALID of type Gio.DBusError>, 30: <enum G_DBUS_ERROR_SPAWN_SERVICE_INVALID of type Gio.DBusError>, 31: <enum G_DBUS_ERROR_SPAWN_SERVICE_NOT_FOUND of type Gio.DBusError>, 32: <enum G_DBUS_ERROR_SPAWN_PERMISSIONS_INVALID of type Gio.DBusError>, 33: <enum G_DBUS_ERROR_SPAWN_FILE_INVALID of type Gio.DBusError>, 34: <enum G_DBUS_ERROR_SPAWN_NO_MEMORY of type Gio.DBusError>, 35: <enum G_DBUS_ERROR_UNIX_PROCESS_ID_UNKNOWN of type Gio.DBusError>, 36: <enum G_DBUS_ERROR_INVALID_SIGNATURE of type Gio.DBusError>, 37: <enum G_DBUS_ERROR_INVALID_FILE_CONTENT of type Gio.DBusError>, 38: <enum G_DBUS_ERROR_SELINUX_SECURITY_CONTEXT_UNKNOWN of type Gio.DBusError>, 39: <enum G_DBUS_ERROR_ADT_AUDIT_DATA_UNKNOWN of type Gio.DBusError>, 40: <enum G_DBUS_ERROR_OBJECT_PATH_IN_USE of type Gio.DBusError>, 41: <enum G_DBUS_ERROR_UNKNOWN_OBJECT of type Gio.DBusError>, 42: <enum G_DBUS_ERROR_UNKNOWN_INTERFACE of type Gio.DBusError>, 43: <enum G_DBUS_ERROR_UNKNOWN_PROPERTY of type Gio.DBusError>, 44: <enum G_DBUS_ERROR_PROPERTY_READ_ONLY of type Gio.DBusError>}, '__info__': gi.EnumInfo(DBusError), 'FAILED': <enum G_DBUS_ERROR_FAILED of type Gio.DBusError>, 'NO_MEMORY': <enum G_DBUS_ERROR_NO_MEMORY of type Gio.DBusError>, 'SERVICE_UNKNOWN': <enum G_DBUS_ERROR_SERVICE_UNKNOWN of type Gio.DBusError>, 'NAME_HAS_NO_OWNER': <enum G_DBUS_ERROR_NAME_HAS_NO_OWNER of type Gio.DBusError>, 'NO_REPLY': <enum G_DBUS_ERROR_NO_REPLY of type Gio.DBusError>, 'IO_ERROR': <enum G_DBUS_ERROR_IO_ERROR of type Gio.DBusError>, 'BAD_ADDRESS': <enum G_DBUS_ERROR_BAD_ADDRESS of type Gio.DBusError>, 'NOT_SUPPORTED': <enum G_DBUS_ERROR_NOT_SUPPORTED of type Gio.DBusError>, 'LIMITS_EXCEEDED': <enum G_DBUS_ERROR_LIMITS_EXCEEDED of type Gio.DBusError>, 'ACCESS_DENIED': <enum G_DBUS_ERROR_ACCESS_DENIED of type Gio.DBusError>, 'AUTH_FAILED': <enum G_DBUS_ERROR_AUTH_FAILED of type Gio.DBusError>, 'NO_SERVER': <enum G_DBUS_ERROR_NO_SERVER of type Gio.DBusError>, 'TIMEOUT': <enum G_DBUS_ERROR_TIMEOUT of type Gio.DBusError>, 'NO_NETWORK': <enum G_DBUS_ERROR_NO_NETWORK of type Gio.DBusError>, 'ADDRESS_IN_USE': <enum G_DBUS_ERROR_ADDRESS_IN_USE of type Gio.DBusError>, 'DISCONNECTED': <enum G_DBUS_ERROR_DISCONNECTED of type Gio.DBusError>, 'INVALID_ARGS': <enum G_DBUS_ERROR_INVALID_ARGS of type Gio.DBusError>, 'FILE_NOT_FOUND': <enum G_DBUS_ERROR_FILE_NOT_FOUND of type Gio.DBusError>, 'FILE_EXISTS': <enum G_DBUS_ERROR_FILE_EXISTS of type Gio.DBusError>, 'UNKNOWN_METHOD': <enum G_DBUS_ERROR_UNKNOWN_METHOD of type Gio.DBusError>, 'TIMED_OUT': <enum G_DBUS_ERROR_TIMED_OUT of type Gio.DBusError>, 'MATCH_RULE_NOT_FOUND': <enum G_DBUS_ERROR_MATCH_RULE_NOT_FOUND of type Gio.DBusError>, 'MATCH_RULE_INVALID': <enum G_DBUS_ERROR_MATCH_RULE_INVALID of type Gio.DBusError>, 'SPAWN_EXEC_FAILED': <enum G_DBUS_ERROR_SPAWN_EXEC_FAILED of type Gio.DBusError>, 'SPAWN_FORK_FAILED': <enum G_DBUS_ERROR_SPAWN_FORK_FAILED of type Gio.DBusError>, 'SPAWN_CHILD_EXITED': <enum G_DBUS_ERROR_SPAWN_CHILD_EXITED of type Gio.DBusError>, 'SPAWN_CHILD_SIGNALED': <enum G_DBUS_ERROR_SPAWN_CHILD_SIGNALED of type Gio.DBusError>, 'SPAWN_FAILED': <enum G_DBUS_ERROR_SPAWN_FAILED of type Gio.DBusError>, 'SPAWN_SETUP_FAILED': <enum G_DBUS_ERROR_SPAWN_SETUP_FAILED of type Gio.DBusError>, 'SPAWN_CONFIG_INVALID': <enum G_DBUS_ERROR_SPAWN_CONFIG_INVALID of type Gio.DBusError>, 'SPAWN_SERVICE_INVALID': <enum G_DBUS_ERROR_SPAWN_SERVICE_INVALID of type Gio.DBusError>, 'SPAWN_SERVICE_NOT_FOUND': <enum G_DBUS_ERROR_SPAWN_SERVICE_NOT_FOUND of type Gio.DBusError>, 'SPAWN_PERMISSIONS_INVALID': <enum G_DBUS_ERROR_SPAWN_PERMISSIONS_INVALID of type Gio.DBusError>, 'SPAWN_FILE_INVALID': <enum G_DBUS_ERROR_SPAWN_FILE_INVALID of type Gio.DBusError>, 'SPAWN_NO_MEMORY': <enum G_DBUS_ERROR_SPAWN_NO_MEMORY of type Gio.DBusError>, 'UNIX_PROCESS_ID_UNKNOWN': <enum G_DBUS_ERROR_UNIX_PROCESS_ID_UNKNOWN of type Gio.DBusError>, 'INVALID_SIGNATURE': <enum G_DBUS_ERROR_INVALID_SIGNATURE of type Gio.DBusError>, 'INVALID_FILE_CONTENT': <enum G_DBUS_ERROR_INVALID_FILE_CONTENT of type Gio.DBusError>, 'SELINUX_SECURITY_CONTEXT_UNKNOWN': <enum G_DBUS_ERROR_SELINUX_SECURITY_CONTEXT_UNKNOWN of type Gio.DBusError>, 'ADT_AUDIT_DATA_UNKNOWN': <enum G_DBUS_ERROR_ADT_AUDIT_DATA_UNKNOWN of type Gio.DBusError>, 'OBJECT_PATH_IN_USE': <enum G_DBUS_ERROR_OBJECT_PATH_IN_USE of type Gio.DBusError>, 'UNKNOWN_OBJECT': <enum G_DBUS_ERROR_UNKNOWN_OBJECT of type Gio.DBusError>, 'UNKNOWN_INTERFACE': <enum G_DBUS_ERROR_UNKNOWN_INTERFACE of type Gio.DBusError>, 'UNKNOWN_PROPERTY': <enum G_DBUS_ERROR_UNKNOWN_PROPERTY of type Gio.DBusError>, 'PROPERTY_READ_ONLY': <enum G_DBUS_ERROR_PROPERTY_READ_ONLY of type Gio.DBusError>, 'encode_gerror': gi.FunctionInfo(encode_gerror, bound=None), 'get_remote_error': gi.FunctionInfo(get_remote_error, bound=None), 'is_remote_error': gi.FunctionInfo(is_remote_error, bound=None), 'new_for_dbus_error': gi.FunctionInfo(new_for_dbus_error, bound=None), 'quark': gi.FunctionInfo(quark, bound=None), 'register_error': gi.FunctionInfo(register_error, bound=None), 'register_error_domain': gi.FunctionInfo(register_error_domain, bound=None), 'strip_remote_error': gi.FunctionInfo(strip_remote_error, bound=None), 'unregister_error': gi.FunctionInfo(unregister_error, bound=None)})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-        30: 30,
-        31: 31,
-        32: 32,
-        33: 33,
-        34: 34,
-        35: 35,
-        36: 36,
-        37: 37,
-        38: 38,
-        39: 39,
-        40: 40,
-        41: 41,
-        42: 42,
-        43: 43,
-        44: 44,
-    }
-    __gtype__ = None # (!) real value is '<GType GDBusError (2472614176)>'
-    __info__ = gi.EnumInfo(DBusError)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'FAILED': <DBusError.FAILED: 0>, 'NO_MEMORY': <DBusError.NO_MEMORY: 1>, 'SERVICE_UNKNOWN': <DBusError.SERVICE_UNKNOWN: 2>, 'NAME_HAS_NO_OWNER': <DBusError.NAME_HAS_NO_OWNER: 3>, 'NO_REPLY': <DBusError.NO_REPLY: 4>, 'IO_ERROR': <DBusError.IO_ERROR: 5>, 'BAD_ADDRESS': <DBusError.BAD_ADDRESS: 6>, 'NOT_SUPPORTED': <DBusError.NOT_SUPPORTED: 7>, 'LIMITS_EXCEEDED': <DBusError.LIMITS_EXCEEDED: 8>, 'ACCESS_DENIED': <DBusError.ACCESS_DENIED: 9>, 'AUTH_FAILED': <DBusError.AUTH_FAILED: 10>, 'NO_SERVER': <DBusError.NO_SERVER: 11>, 'TIMEOUT': <DBusError.TIMEOUT: 12>, 'NO_NETWORK': <DBusError.NO_NETWORK: 13>, 'ADDRESS_IN_USE': <DBusError.ADDRESS_IN_USE: 14>, 'DISCONNECTED': <DBusError.DISCONNECTED: 15>, 'INVALID_ARGS': <DBusError.INVALID_ARGS: 16>, 'FILE_NOT_FOUND': <DBusError.FILE_NOT_FOUND: 17>, 'FILE_EXISTS': <DBusError.FILE_EXISTS: 18>, 'UNKNOWN_METHOD': <DBusError.UNKNOWN_METHOD: 19>, 'TIMED_OUT': <DBusError.TIMED_OUT: 20>, 'MATCH_RULE_NOT_FOUND': <DBusError.MATCH_RULE_NOT_FOUND: 21>, 'MATCH_RULE_INVALID': <DBusError.MATCH_RULE_INVALID: 22>, 'SPAWN_EXEC_FAILED': <DBusError.SPAWN_EXEC_FAILED: 23>, 'SPAWN_FORK_FAILED': <DBusError.SPAWN_FORK_FAILED: 24>, 'SPAWN_CHILD_EXITED': <DBusError.SPAWN_CHILD_EXITED: 25>, 'SPAWN_CHILD_SIGNALED': <DBusError.SPAWN_CHILD_SIGNALED: 26>, 'SPAWN_FAILED': <DBusError.SPAWN_FAILED: 27>, 'SPAWN_SETUP_FAILED': <DBusError.SPAWN_SETUP_FAILED: 28>, 'SPAWN_CONFIG_INVALID': <DBusError.SPAWN_CONFIG_INVALID: 29>, 'SPAWN_SERVICE_INVALID': <DBusError.SPAWN_SERVICE_INVALID: 30>, 'SPAWN_SERVICE_NOT_FOUND': <DBusError.SPAWN_SERVICE_NOT_FOUND: 31>, 'SPAWN_PERMISSIONS_INVALID': <DBusError.SPAWN_PERMISSIONS_INVALID: 32>, 'SPAWN_FILE_INVALID': <DBusError.SPAWN_FILE_INVALID: 33>, 'SPAWN_NO_MEMORY': <DBusError.SPAWN_NO_MEMORY: 34>, 'UNIX_PROCESS_ID_UNKNOWN': <DBusError.UNIX_PROCESS_ID_UNKNOWN: 35>, 'INVALID_SIGNATURE': <DBusError.INVALID_SIGNATURE: 36>, 'INVALID_FILE_CONTENT': <DBusError.INVALID_FILE_CONTENT: 37>, 'SELINUX_SECURITY_CONTEXT_UNKNOWN': <DBusError.SELINUX_SECURITY_CONTEXT_UNKNOWN: 38>, 'ADT_AUDIT_DATA_UNKNOWN': <DBusError.ADT_AUDIT_DATA_UNKNOWN: 39>, 'OBJECT_PATH_IN_USE': <DBusError.OBJECT_PATH_IN_USE: 40>, 'UNKNOWN_OBJECT': <DBusError.UNKNOWN_OBJECT: 41>, 'UNKNOWN_INTERFACE': <DBusError.UNKNOWN_INTERFACE: 42>, 'UNKNOWN_PROPERTY': <DBusError.UNKNOWN_PROPERTY: 43>, 'PROPERTY_READ_ONLY': <DBusError.PROPERTY_READ_ONLY: 44>})"
+    __name__ = 'DBusError'
+    __qualname__ = 'DBusError'
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -252,10 +251,10 @@ class RecentChooser(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(RecentChooser), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkRecentChooser (3867806816)>, '__dict__': <attribute '__dict__' of 'RecentChooser' objects>, '__weakref__': <attribute '__weakref__' of 'RecentChooser' objects>, '__doc__': None, '__gsignals__': {}, 'add_filter': gi.FunctionInfo(add_filter, bound=None), 'get_current_item': gi.FunctionInfo(get_current_item, bound=None), 'get_current_uri': gi.FunctionInfo(get_current_uri, bound=None), 'get_filter': gi.FunctionInfo(get_filter, bound=None), 'get_items': gi.FunctionInfo(get_items, bound=None), 'get_limit': gi.FunctionInfo(get_limit, bound=None), 'get_local_only': gi.FunctionInfo(get_local_only, bound=None), 'get_select_multiple': gi.FunctionInfo(get_select_multiple, bound=None), 'get_show_icons': gi.FunctionInfo(get_show_icons, bound=None), 'get_show_not_found': gi.FunctionInfo(get_show_not_found, bound=None), 'get_show_private': gi.FunctionInfo(get_show_private, bound=None), 'get_show_tips': gi.FunctionInfo(get_show_tips, bound=None), 'get_sort_type': gi.FunctionInfo(get_sort_type, bound=None), 'get_uris': gi.FunctionInfo(get_uris, bound=None), 'list_filters': gi.FunctionInfo(list_filters, bound=None), 'remove_filter': gi.FunctionInfo(remove_filter, bound=None), 'select_all': gi.FunctionInfo(select_all, bound=None), 'select_uri': gi.FunctionInfo(select_uri, bound=None), 'set_current_uri': gi.FunctionInfo(set_current_uri, bound=None), 'set_filter': gi.FunctionInfo(set_filter, bound=None), 'set_limit': gi.FunctionInfo(set_limit, bound=None), 'set_local_only': gi.FunctionInfo(set_local_only, bound=None), 'set_select_multiple': gi.FunctionInfo(set_select_multiple, bound=None), 'set_show_icons': gi.FunctionInfo(set_show_icons, bound=None), 'set_show_not_found': gi.FunctionInfo(set_show_not_found, bound=None), 'set_show_private': gi.FunctionInfo(set_show_private, bound=None), 'set_show_tips': gi.FunctionInfo(set_show_tips, bound=None), 'set_sort_func': gi.FunctionInfo(set_sort_func, bound=None), 'set_sort_type': gi.FunctionInfo(set_sort_type, bound=None), 'unselect_all': gi.FunctionInfo(unselect_all, bound=None), 'unselect_uri': gi.FunctionInfo(unselect_uri, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(RecentChooser), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkRecentChooser (3416388336)>, '__dict__': <attribute '__dict__' of 'RecentChooser' objects>, '__weakref__': <attribute '__weakref__' of 'RecentChooser' objects>, '__doc__': None, '__gsignals__': {}, 'add_filter': gi.FunctionInfo(add_filter), 'get_current_item': gi.FunctionInfo(get_current_item), 'get_current_uri': gi.FunctionInfo(get_current_uri), 'get_filter': gi.FunctionInfo(get_filter), 'get_items': gi.FunctionInfo(get_items), 'get_limit': gi.FunctionInfo(get_limit), 'get_local_only': gi.FunctionInfo(get_local_only), 'get_select_multiple': gi.FunctionInfo(get_select_multiple), 'get_show_icons': gi.FunctionInfo(get_show_icons), 'get_show_not_found': gi.FunctionInfo(get_show_not_found), 'get_show_private': gi.FunctionInfo(get_show_private), 'get_show_tips': gi.FunctionInfo(get_show_tips), 'get_sort_type': gi.FunctionInfo(get_sort_type), 'get_uris': gi.FunctionInfo(get_uris), 'list_filters': gi.FunctionInfo(list_filters), 'remove_filter': gi.FunctionInfo(remove_filter), 'select_all': gi.FunctionInfo(select_all), 'select_uri': gi.FunctionInfo(select_uri), 'set_current_uri': gi.FunctionInfo(set_current_uri), 'set_filter': gi.FunctionInfo(set_filter), 'set_limit': gi.FunctionInfo(set_limit), 'set_local_only': gi.FunctionInfo(set_local_only), 'set_select_multiple': gi.FunctionInfo(set_select_multiple), 'set_show_icons': gi.FunctionInfo(set_show_icons), 'set_show_not_found': gi.FunctionInfo(set_show_not_found), 'set_show_private': gi.FunctionInfo(set_show_private), 'set_show_tips': gi.FunctionInfo(set_show_tips), 'set_sort_func': gi.FunctionInfo(set_sort_func), 'set_sort_type': gi.FunctionInfo(set_sort_type), 'unselect_all': gi.FunctionInfo(unselect_all), 'unselect_uri': gi.FunctionInfo(unselect_uri)})"
     __gdoc__ = 'Interface GtkRecentChooser\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkRecentChooser (3867806816)>'
+    __gtype__ = None # (!) real value is '<GType GtkRecentChooser (3416388336)>'
     __info__ = InterfaceInfo(RecentChooser)
 
 

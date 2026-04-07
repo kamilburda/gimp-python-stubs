@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -145,7 +144,7 @@ class ActionableInterface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ActionableInterface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ActionableInterface' objects>, '__weakref__': <attribute '__weakref__' of 'ActionableInterface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002ece8fb50d0>, 'get_action_name': <property object at 0x000002ece8fb51c0>, 'set_action_name': <property object at 0x000002ece8fb52b0>, 'get_action_target_value': <property object at 0x000002ece8fb53a0>, 'set_action_target_value': <property object at 0x000002ece8fb5490>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ActionableInterface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ActionableInterface' objects>, '__weakref__': <attribute '__weakref__' of 'ActionableInterface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002bfd17b4130>, 'get_action_name': <property object at 0x000002bfd17b4220>, 'set_action_name': <property object at 0x000002bfd17b4310>, 'get_action_target_value': <property object at 0x000002bfd17b4400>, 'set_action_target_value': <property object at 0x000002bfd17b44f0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ActionableInterface)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -50,20 +49,20 @@ class PrintSettings(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -82,6 +81,12 @@ class PrintSettings(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -107,17 +112,17 @@ class PrintSettings(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -274,20 +279,20 @@ class PrintSettings(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -349,7 +354,8 @@ class PrintSettings(__gi_overrides_GObject.Object):
         """ load_key_file(self, key_file:GLib.KeyFile, group_name:str=None) -> bool """
         return False
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.PrintSettings """
         pass
 
@@ -357,15 +363,18 @@ class PrintSettings(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_from_file(self, file_name): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_file(cls, file_name): # real signature unknown; restored from __doc__
         """ new_from_file(file_name:str) -> Gtk.PrintSettings """
         pass
 
-    def new_from_gvariant(self, variant): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_gvariant(cls, variant): # real signature unknown; restored from __doc__
         """ new_from_gvariant(variant:GLib.Variant) -> Gtk.PrintSettings """
         pass
 
-    def new_from_key_file(self, key_file, group_name=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_key_file(cls, key_file, group_name=None): # real signature unknown; restored from __doc__
         """ new_from_key_file(key_file:GLib.KeyFile, group_name:str=None) -> Gtk.PrintSettings """
         pass
 
@@ -578,20 +587,20 @@ class PrintSettings(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -723,12 +732,14 @@ class PrintSettings(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002eceabb0be0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd1906830>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PrintSettings), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkPrintSettings (3923954720)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_from_file': gi.FunctionInfo(new_from_file, bound=None), 'new_from_gvariant': gi.FunctionInfo(new_from_gvariant, bound=None), 'new_from_key_file': gi.FunctionInfo(new_from_key_file, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'foreach': gi.FunctionInfo(foreach, bound=None), 'get': gi.FunctionInfo(get, bound=None), 'get_bool': gi.FunctionInfo(get_bool, bound=None), 'get_collate': gi.FunctionInfo(get_collate, bound=None), 'get_default_source': gi.FunctionInfo(get_default_source, bound=None), 'get_dither': gi.FunctionInfo(get_dither, bound=None), 'get_double': gi.FunctionInfo(get_double, bound=None), 'get_double_with_default': gi.FunctionInfo(get_double_with_default, bound=None), 'get_duplex': gi.FunctionInfo(get_duplex, bound=None), 'get_finishings': gi.FunctionInfo(get_finishings, bound=None), 'get_int': gi.FunctionInfo(get_int, bound=None), 'get_int_with_default': gi.FunctionInfo(get_int_with_default, bound=None), 'get_length': gi.FunctionInfo(get_length, bound=None), 'get_media_type': gi.FunctionInfo(get_media_type, bound=None), 'get_n_copies': gi.FunctionInfo(get_n_copies, bound=None), 'get_number_up': gi.FunctionInfo(get_number_up, bound=None), 'get_number_up_layout': gi.FunctionInfo(get_number_up_layout, bound=None), 'get_orientation': gi.FunctionInfo(get_orientation, bound=None), 'get_output_bin': gi.FunctionInfo(get_output_bin, bound=None), 'get_page_ranges': gi.FunctionInfo(get_page_ranges, bound=None), 'get_page_set': gi.FunctionInfo(get_page_set, bound=None), 'get_paper_height': gi.FunctionInfo(get_paper_height, bound=None), 'get_paper_size': gi.FunctionInfo(get_paper_size, bound=None), 'get_paper_width': gi.FunctionInfo(get_paper_width, bound=None), 'get_print_pages': gi.FunctionInfo(get_print_pages, bound=None), 'get_printer': gi.FunctionInfo(get_printer, bound=None), 'get_printer_lpi': gi.FunctionInfo(get_printer_lpi, bound=None), 'get_quality': gi.FunctionInfo(get_quality, bound=None), 'get_resolution': gi.FunctionInfo(get_resolution, bound=None), 'get_resolution_x': gi.FunctionInfo(get_resolution_x, bound=None), 'get_resolution_y': gi.FunctionInfo(get_resolution_y, bound=None), 'get_reverse': gi.FunctionInfo(get_reverse, bound=None), 'get_scale': gi.FunctionInfo(get_scale, bound=None), 'get_use_color': gi.FunctionInfo(get_use_color, bound=None), 'has_key': gi.FunctionInfo(has_key, bound=None), 'load_file': gi.FunctionInfo(load_file, bound=None), 'load_key_file': gi.FunctionInfo(load_key_file, bound=None), 'set': gi.FunctionInfo(set, bound=None), 'set_bool': gi.FunctionInfo(set_bool, bound=None), 'set_collate': gi.FunctionInfo(set_collate, bound=None), 'set_default_source': gi.FunctionInfo(set_default_source, bound=None), 'set_dither': gi.FunctionInfo(set_dither, bound=None), 'set_double': gi.FunctionInfo(set_double, bound=None), 'set_duplex': gi.FunctionInfo(set_duplex, bound=None), 'set_finishings': gi.FunctionInfo(set_finishings, bound=None), 'set_int': gi.FunctionInfo(set_int, bound=None), 'set_length': gi.FunctionInfo(set_length, bound=None), 'set_media_type': gi.FunctionInfo(set_media_type, bound=None), 'set_n_copies': gi.FunctionInfo(set_n_copies, bound=None), 'set_number_up': gi.FunctionInfo(set_number_up, bound=None), 'set_number_up_layout': gi.FunctionInfo(set_number_up_layout, bound=None), 'set_orientation': gi.FunctionInfo(set_orientation, bound=None), 'set_output_bin': gi.FunctionInfo(set_output_bin, bound=None), 'set_page_ranges': gi.FunctionInfo(set_page_ranges, bound=None), 'set_page_set': gi.FunctionInfo(set_page_set, bound=None), 'set_paper_height': gi.FunctionInfo(set_paper_height, bound=None), 'set_paper_size': gi.FunctionInfo(set_paper_size, bound=None), 'set_paper_width': gi.FunctionInfo(set_paper_width, bound=None), 'set_print_pages': gi.FunctionInfo(set_print_pages, bound=None), 'set_printer': gi.FunctionInfo(set_printer, bound=None), 'set_printer_lpi': gi.FunctionInfo(set_printer_lpi, bound=None), 'set_quality': gi.FunctionInfo(set_quality, bound=None), 'set_resolution': gi.FunctionInfo(set_resolution, bound=None), 'set_resolution_xy': gi.FunctionInfo(set_resolution_xy, bound=None), 'set_reverse': gi.FunctionInfo(set_reverse, bound=None), 'set_scale': gi.FunctionInfo(set_scale, bound=None), 'set_use_color': gi.FunctionInfo(set_use_color, bound=None), 'to_file': gi.FunctionInfo(to_file, bound=None), 'to_gvariant': gi.FunctionInfo(to_gvariant, bound=None), 'to_key_file': gi.FunctionInfo(to_key_file, bound=None), 'unset': gi.FunctionInfo(unset, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PrintSettings), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkPrintSettings (3540061408)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_from_file': <classmethod(gi.FunctionInfo(new_from_file))>, 'new_from_gvariant': <classmethod(gi.FunctionInfo(new_from_gvariant))>, 'new_from_key_file': <classmethod(gi.FunctionInfo(new_from_key_file))>, 'copy': gi.FunctionInfo(copy), 'foreach': gi.FunctionInfo(foreach), 'get': gi.FunctionInfo(get), 'get_bool': gi.FunctionInfo(get_bool), 'get_collate': gi.FunctionInfo(get_collate), 'get_default_source': gi.FunctionInfo(get_default_source), 'get_dither': gi.FunctionInfo(get_dither), 'get_double': gi.FunctionInfo(get_double), 'get_double_with_default': gi.FunctionInfo(get_double_with_default), 'get_duplex': gi.FunctionInfo(get_duplex), 'get_finishings': gi.FunctionInfo(get_finishings), 'get_int': gi.FunctionInfo(get_int), 'get_int_with_default': gi.FunctionInfo(get_int_with_default), 'get_length': gi.FunctionInfo(get_length), 'get_media_type': gi.FunctionInfo(get_media_type), 'get_n_copies': gi.FunctionInfo(get_n_copies), 'get_number_up': gi.FunctionInfo(get_number_up), 'get_number_up_layout': gi.FunctionInfo(get_number_up_layout), 'get_orientation': gi.FunctionInfo(get_orientation), 'get_output_bin': gi.FunctionInfo(get_output_bin), 'get_page_ranges': gi.FunctionInfo(get_page_ranges), 'get_page_set': gi.FunctionInfo(get_page_set), 'get_paper_height': gi.FunctionInfo(get_paper_height), 'get_paper_size': gi.FunctionInfo(get_paper_size), 'get_paper_width': gi.FunctionInfo(get_paper_width), 'get_print_pages': gi.FunctionInfo(get_print_pages), 'get_printer': gi.FunctionInfo(get_printer), 'get_printer_lpi': gi.FunctionInfo(get_printer_lpi), 'get_quality': gi.FunctionInfo(get_quality), 'get_resolution': gi.FunctionInfo(get_resolution), 'get_resolution_x': gi.FunctionInfo(get_resolution_x), 'get_resolution_y': gi.FunctionInfo(get_resolution_y), 'get_reverse': gi.FunctionInfo(get_reverse), 'get_scale': gi.FunctionInfo(get_scale), 'get_use_color': gi.FunctionInfo(get_use_color), 'has_key': gi.FunctionInfo(has_key), 'load_file': gi.FunctionInfo(load_file), 'load_key_file': gi.FunctionInfo(load_key_file), 'set': gi.FunctionInfo(set), 'set_bool': gi.FunctionInfo(set_bool), 'set_collate': gi.FunctionInfo(set_collate), 'set_default_source': gi.FunctionInfo(set_default_source), 'set_dither': gi.FunctionInfo(set_dither), 'set_double': gi.FunctionInfo(set_double), 'set_duplex': gi.FunctionInfo(set_duplex), 'set_finishings': gi.FunctionInfo(set_finishings), 'set_int': gi.FunctionInfo(set_int), 'set_length': gi.FunctionInfo(set_length), 'set_media_type': gi.FunctionInfo(set_media_type), 'set_n_copies': gi.FunctionInfo(set_n_copies), 'set_number_up': gi.FunctionInfo(set_number_up), 'set_number_up_layout': gi.FunctionInfo(set_number_up_layout), 'set_orientation': gi.FunctionInfo(set_orientation), 'set_output_bin': gi.FunctionInfo(set_output_bin), 'set_page_ranges': gi.FunctionInfo(set_page_ranges), 'set_page_set': gi.FunctionInfo(set_page_set), 'set_paper_height': gi.FunctionInfo(set_paper_height), 'set_paper_size': gi.FunctionInfo(set_paper_size), 'set_paper_width': gi.FunctionInfo(set_paper_width), 'set_print_pages': gi.FunctionInfo(set_print_pages), 'set_printer': gi.FunctionInfo(set_printer), 'set_printer_lpi': gi.FunctionInfo(set_printer_lpi), 'set_quality': gi.FunctionInfo(set_quality), 'set_resolution': gi.FunctionInfo(set_resolution), 'set_resolution_xy': gi.FunctionInfo(set_resolution_xy), 'set_reverse': gi.FunctionInfo(set_reverse), 'set_scale': gi.FunctionInfo(set_scale), 'set_use_color': gi.FunctionInfo(set_use_color), 'to_file': gi.FunctionInfo(to_file), 'to_gvariant': gi.FunctionInfo(to_gvariant), 'to_key_file': gi.FunctionInfo(to_key_file), 'unset': gi.FunctionInfo(unset)})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkPrintSettings\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkPrintSettings (3923954720)>'
+    __gtype__ = None # (!) real value is '<GType GtkPrintSettings (3540061408)>'
     __info__ = ObjectInfo(PrintSettings)
+    __static_attributes__ = ()
 
 

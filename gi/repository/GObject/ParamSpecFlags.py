@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,25 +19,27 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
 
-class ParamSpecFlags(__gi_overrides_GObject.ParamSpec):
+from .ParamSpecFlags import ParamSpecFlags
+
+class ParamSpecFlags(ParamSpecFlags):
     """
     :Constructors:
     
@@ -76,6 +77,10 @@ class ParamSpecFlags(__gi_overrides_GObject.ParamSpec):
 
     def do_value_validate(self, *args, **kwargs): # real signature unknown
         """ value_validate(self, value:GObject.Value) -> bool """
+        pass
+
+    def flags_class(self, *args, **kwargs): # real signature unknown
+        """  """
         pass
 
     def get_blurb(self): # real signature unknown; restored from __doc__
@@ -139,7 +144,11 @@ class ParamSpecFlags(__gi_overrides_GObject.ParamSpec):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -230,8 +239,6 @@ class ParamSpecFlags(__gi_overrides_GObject.ParamSpec):
 
     flags = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
-    flags_class = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
     g_type_instance = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -254,18 +261,17 @@ class ParamSpecFlags(__gi_overrides_GObject.ParamSpec):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ParamSpecFlags), '__module__': 'gi.repository.GObject', '__gtype__': <GType GParamFlags (83209600)>, '__doc__': None, '__gsignals__': {}, 'parent_instance': <property object at 0x0000010b07a2c810>, 'flags_class': <property object at 0x0000010b07a2c900>, 'default_value': <property object at 0x0000010b07a2c9f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GObject', 'flags_class': <GObject Property flags_class (PyObject)>, '__doc__': None, '__gproperties__': {'flags_class': (<GType PyObject (255842896)>, '', '', 3)}, 'do_get_property': <function install_properties.<locals>.obj_get_property at 0x000001dd11d9ab60>, 'do_set_property': <function install_properties.<locals>.obj_set_property at 0x000001dd11d9ac00>, '__gsignals__': {}})"
     __gproperties__ = {
-        'blurb': (
-            None, # (!) real value is '<GType PyObject (83216768)>'
+        'flags_class': (
+            None, # (!) real value is '<GType PyObject (255842896)>'
             '',
             '',
             3,
         ),
-        'nick': '<value is a self-reference, replaced by this string>',
     }
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GParamFlags (83209600)>'
+    __gtype__ = None # (!) real value is '<GType GParamFlags (252363424)>'
     __info__ = ObjectInfo(ParamSpecFlags)
 
 

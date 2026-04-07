@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class ScrollType(__gobject.GEnum):
+class ScrollType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -78,7 +71,7 @@ class ScrollType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -101,7 +94,7 @@ class ScrollType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -129,12 +122,23 @@ class ScrollType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -163,6 +167,10 @@ class ScrollType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -208,6 +216,14 @@ class ScrollType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -233,8 +249,8 @@ class ScrollType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -265,15 +281,16 @@ class ScrollType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -337,7 +354,7 @@ class ScrollType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -379,10 +396,6 @@ class ScrollType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ANYWHERE = 6
     BOTTOM_EDGE = 3
@@ -391,18 +404,9 @@ class ScrollType(__gobject.GEnum):
     RIGHT_EDGE = 5
     TOP_EDGE = 2
     TOP_LEFT = 0
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Atk', '__dict__': <attribute '__dict__' of 'ScrollType' objects>, '__doc__': None, '__gtype__': <GType AtkScrollType (892678848)>, '__enum_values__': {0: <enum ATK_SCROLL_TOP_LEFT of type Atk.ScrollType>, 1: <enum ATK_SCROLL_BOTTOM_RIGHT of type Atk.ScrollType>, 2: <enum ATK_SCROLL_TOP_EDGE of type Atk.ScrollType>, 3: <enum ATK_SCROLL_BOTTOM_EDGE of type Atk.ScrollType>, 4: <enum ATK_SCROLL_LEFT_EDGE of type Atk.ScrollType>, 5: <enum ATK_SCROLL_RIGHT_EDGE of type Atk.ScrollType>, 6: <enum ATK_SCROLL_ANYWHERE of type Atk.ScrollType>}, '__info__': gi.EnumInfo(ScrollType), 'TOP_LEFT': <enum ATK_SCROLL_TOP_LEFT of type Atk.ScrollType>, 'BOTTOM_RIGHT': <enum ATK_SCROLL_BOTTOM_RIGHT of type Atk.ScrollType>, 'TOP_EDGE': <enum ATK_SCROLL_TOP_EDGE of type Atk.ScrollType>, 'BOTTOM_EDGE': <enum ATK_SCROLL_BOTTOM_EDGE of type Atk.ScrollType>, 'LEFT_EDGE': <enum ATK_SCROLL_LEFT_EDGE of type Atk.ScrollType>, 'RIGHT_EDGE': <enum ATK_SCROLL_RIGHT_EDGE of type Atk.ScrollType>, 'ANYWHERE': <enum ATK_SCROLL_ANYWHERE of type Atk.ScrollType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-    }
-    __gtype__ = None # (!) real value is '<GType AtkScrollType (892678848)>'
-    __info__ = gi.EnumInfo(ScrollType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'TOP_LEFT': <ScrollType.TOP_LEFT: 0>, 'BOTTOM_RIGHT': <ScrollType.BOTTOM_RIGHT: 1>, 'TOP_EDGE': <ScrollType.TOP_EDGE: 2>, 'BOTTOM_EDGE': <ScrollType.BOTTOM_EDGE: 3>, 'LEFT_EDGE': <ScrollType.LEFT_EDGE: 4>, 'RIGHT_EDGE': <ScrollType.RIGHT_EDGE: 5>, 'ANYWHERE': <ScrollType.ANYWHERE: 6>})"
+    __name__ = 'ScrollType'
+    __qualname__ = 'ScrollType'
 
 

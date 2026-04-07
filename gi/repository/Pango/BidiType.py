@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,12 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class BidiType(__gobject.GEnum):
+class BidiType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -59,10 +57,6 @@ class BidiType(__gobject.GEnum):
         """ Returns self, the complex conjugate of any int. """
         pass
 
-    def for_unichar(self, ch): # real signature unknown; restored from __doc__
-        """ for_unichar(ch:str) -> Pango.BidiType """
-        pass
-
     def from_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return the integer represented by the given array of bytes.
@@ -77,7 +71,7 @@ class BidiType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +94,7 @@ class BidiType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +122,23 @@ class BidiType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +167,10 @@ class BidiType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +216,14 @@ class BidiType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +249,8 @@ class BidiType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +281,16 @@ class BidiType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +354,7 @@ class BidiType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -378,10 +396,6 @@ class BidiType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     AL = 4
     AN = 11
@@ -406,34 +420,9 @@ class BidiType(__gobject.GEnum):
     RLO = 6
     S = 16
     WS = 17
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Pango', '__dict__': <attribute '__dict__' of 'BidiType' objects>, '__doc__': None, '__gtype__': <GType PangoBidiType (4081758144)>, '__enum_values__': {0: <enum PANGO_BIDI_TYPE_L of type Pango.BidiType>, 1: <enum PANGO_BIDI_TYPE_LRE of type Pango.BidiType>, 2: <enum PANGO_BIDI_TYPE_LRO of type Pango.BidiType>, 3: <enum PANGO_BIDI_TYPE_R of type Pango.BidiType>, 4: <enum PANGO_BIDI_TYPE_AL of type Pango.BidiType>, 5: <enum PANGO_BIDI_TYPE_RLE of type Pango.BidiType>, 6: <enum PANGO_BIDI_TYPE_RLO of type Pango.BidiType>, 7: <enum PANGO_BIDI_TYPE_PDF of type Pango.BidiType>, 8: <enum PANGO_BIDI_TYPE_EN of type Pango.BidiType>, 9: <enum PANGO_BIDI_TYPE_ES of type Pango.BidiType>, 10: <enum PANGO_BIDI_TYPE_ET of type Pango.BidiType>, 11: <enum PANGO_BIDI_TYPE_AN of type Pango.BidiType>, 12: <enum PANGO_BIDI_TYPE_CS of type Pango.BidiType>, 13: <enum PANGO_BIDI_TYPE_NSM of type Pango.BidiType>, 14: <enum PANGO_BIDI_TYPE_BN of type Pango.BidiType>, 15: <enum PANGO_BIDI_TYPE_B of type Pango.BidiType>, 16: <enum PANGO_BIDI_TYPE_S of type Pango.BidiType>, 17: <enum PANGO_BIDI_TYPE_WS of type Pango.BidiType>, 18: <enum PANGO_BIDI_TYPE_ON of type Pango.BidiType>, 19: <enum PANGO_BIDI_TYPE_LRI of type Pango.BidiType>, 20: <enum PANGO_BIDI_TYPE_RLI of type Pango.BidiType>, 21: <enum PANGO_BIDI_TYPE_FSI of type Pango.BidiType>, 22: <enum PANGO_BIDI_TYPE_PDI of type Pango.BidiType>}, '__info__': gi.EnumInfo(BidiType), 'L': <enum PANGO_BIDI_TYPE_L of type Pango.BidiType>, 'LRE': <enum PANGO_BIDI_TYPE_LRE of type Pango.BidiType>, 'LRO': <enum PANGO_BIDI_TYPE_LRO of type Pango.BidiType>, 'R': <enum PANGO_BIDI_TYPE_R of type Pango.BidiType>, 'AL': <enum PANGO_BIDI_TYPE_AL of type Pango.BidiType>, 'RLE': <enum PANGO_BIDI_TYPE_RLE of type Pango.BidiType>, 'RLO': <enum PANGO_BIDI_TYPE_RLO of type Pango.BidiType>, 'PDF': <enum PANGO_BIDI_TYPE_PDF of type Pango.BidiType>, 'EN': <enum PANGO_BIDI_TYPE_EN of type Pango.BidiType>, 'ES': <enum PANGO_BIDI_TYPE_ES of type Pango.BidiType>, 'ET': <enum PANGO_BIDI_TYPE_ET of type Pango.BidiType>, 'AN': <enum PANGO_BIDI_TYPE_AN of type Pango.BidiType>, 'CS': <enum PANGO_BIDI_TYPE_CS of type Pango.BidiType>, 'NSM': <enum PANGO_BIDI_TYPE_NSM of type Pango.BidiType>, 'BN': <enum PANGO_BIDI_TYPE_BN of type Pango.BidiType>, 'B': <enum PANGO_BIDI_TYPE_B of type Pango.BidiType>, 'S': <enum PANGO_BIDI_TYPE_S of type Pango.BidiType>, 'WS': <enum PANGO_BIDI_TYPE_WS of type Pango.BidiType>, 'ON': <enum PANGO_BIDI_TYPE_ON of type Pango.BidiType>, 'LRI': <enum PANGO_BIDI_TYPE_LRI of type Pango.BidiType>, 'RLI': <enum PANGO_BIDI_TYPE_RLI of type Pango.BidiType>, 'FSI': <enum PANGO_BIDI_TYPE_FSI of type Pango.BidiType>, 'PDI': <enum PANGO_BIDI_TYPE_PDI of type Pango.BidiType>, 'for_unichar': gi.FunctionInfo(for_unichar, bound=None)})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-    }
-    __gtype__ = None # (!) real value is '<GType PangoBidiType (4081758144)>'
-    __info__ = gi.EnumInfo(BidiType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'L': <BidiType.L: 0>, 'LRE': <BidiType.LRE: 1>, 'LRO': <BidiType.LRO: 2>, 'R': <BidiType.R: 3>, 'AL': <BidiType.AL: 4>, 'RLE': <BidiType.RLE: 5>, 'RLO': <BidiType.RLO: 6>, 'PDF': <BidiType.PDF: 7>, 'EN': <BidiType.EN: 8>, 'ES': <BidiType.ES: 9>, 'ET': <BidiType.ET: 10>, 'AN': <BidiType.AN: 11>, 'CS': <BidiType.CS: 12>, 'NSM': <BidiType.NSM: 13>, 'BN': <BidiType.BN: 14>, 'B': <BidiType.B: 15>, 'S': <BidiType.S: 16>, 'WS': <BidiType.WS: 17>, 'ON': <BidiType.ON: 18>, 'LRI': <BidiType.LRI: 19>, 'RLI': <BidiType.RLI: 20>, 'FSI': <BidiType.FSI: 21>, 'PDI': <BidiType.PDI: 22>})"
+    __name__ = 'BidiType'
+    __qualname__ = 'BidiType'
 
 

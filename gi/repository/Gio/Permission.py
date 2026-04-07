@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -55,7 +60,7 @@ class Permission(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -95,6 +100,9 @@ class Permission(__gi_overrides_GObject.Object):
 
     def do_acquire_finish(self, *args, **kwargs): # real signature unknown
         """ acquire_finish(self, result:Gio.AsyncResult) -> bool """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_release(self, *args, **kwargs): # real signature unknown
@@ -331,20 +339,20 @@ class Permission(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -374,7 +382,11 @@ class Permission(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -476,12 +488,12 @@ class Permission(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb7f40>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70861a50>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Permission), '__module__': 'gi.repository.Gio', '__gtype__': <GType GPermission (2466390288)>, '__doc__': None, '__gsignals__': {}, 'acquire': gi.FunctionInfo(acquire, bound=None), 'acquire_async': gi.FunctionInfo(acquire_async, bound=None), 'acquire_finish': gi.FunctionInfo(acquire_finish, bound=None), 'get_allowed': gi.FunctionInfo(get_allowed, bound=None), 'get_can_acquire': gi.FunctionInfo(get_can_acquire, bound=None), 'get_can_release': gi.FunctionInfo(get_can_release, bound=None), 'impl_update': gi.FunctionInfo(impl_update, bound=None), 'release': gi.FunctionInfo(release, bound=None), 'release_async': gi.FunctionInfo(release_async, bound=None), 'release_finish': gi.FunctionInfo(release_finish, bound=None), 'do_acquire': gi.VFuncInfo(acquire, bound=None), 'do_acquire_async': gi.VFuncInfo(acquire_async, bound=None), 'do_acquire_finish': gi.VFuncInfo(acquire_finish, bound=None), 'do_release': gi.VFuncInfo(release, bound=None), 'do_release_async': gi.VFuncInfo(release_async, bound=None), 'do_release_finish': gi.VFuncInfo(release_finish, bound=None), 'parent_instance': <property object at 0x000001a793de3290>, 'priv': <property object at 0x000001a793de3380>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Permission), '__module__': 'gi.repository.Gio', '__gtype__': <GType GPermission (1841603600)>, '__doc__': None, '__gsignals__': {}, 'acquire': gi.FunctionInfo(acquire), 'acquire_async': gi.FunctionInfo(acquire_async), 'acquire_finish': gi.FunctionInfo(acquire_finish), 'get_allowed': gi.FunctionInfo(get_allowed), 'get_can_acquire': gi.FunctionInfo(get_can_acquire), 'get_can_release': gi.FunctionInfo(get_can_release), 'impl_update': gi.FunctionInfo(impl_update), 'release': gi.FunctionInfo(release), 'release_async': gi.FunctionInfo(release_async), 'release_finish': gi.FunctionInfo(release_finish), 'do_acquire': gi.VFuncInfo(acquire), 'do_acquire_async': gi.VFuncInfo(acquire_async), 'do_acquire_finish': gi.VFuncInfo(acquire_finish), 'do_release': gi.VFuncInfo(release), 'do_release_async': gi.VFuncInfo(release_async), 'do_release_finish': gi.VFuncInfo(release_finish), 'parent_instance': <property object at 0x000001ea709ad6c0>, 'priv': <property object at 0x000001ea709ad7b0>})"
     __gdoc__ = 'Object GPermission\n\nProperties from GPermission:\n  allowed -> gboolean: allowed\n  can-acquire -> gboolean: can-acquire\n  can-release -> gboolean: can-release\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GPermission (2466390288)>'
+    __gtype__ = None # (!) real value is '<GType GPermission (1841603600)>'
     __info__ = ObjectInfo(Permission)
 
 

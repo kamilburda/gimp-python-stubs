@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -46,7 +45,7 @@ class GLContext(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -74,6 +73,9 @@ class GLContext(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -334,20 +336,20 @@ class GLContext(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -479,12 +481,12 @@ class GLContext(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002459c412fb0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x00000187257da980>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(GLContext), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkGLContext (2579721568)>, '__doc__': None, '__gsignals__': {}, 'clear_current': gi.FunctionInfo(clear_current, bound=None), 'get_current': gi.FunctionInfo(get_current, bound=None), 'get_debug_enabled': gi.FunctionInfo(get_debug_enabled, bound=None), 'get_display': gi.FunctionInfo(get_display, bound=None), 'get_forward_compatible': gi.FunctionInfo(get_forward_compatible, bound=None), 'get_required_version': gi.FunctionInfo(get_required_version, bound=None), 'get_shared_context': gi.FunctionInfo(get_shared_context, bound=None), 'get_use_es': gi.FunctionInfo(get_use_es, bound=None), 'get_version': gi.FunctionInfo(get_version, bound=None), 'get_window': gi.FunctionInfo(get_window, bound=None), 'is_legacy': gi.FunctionInfo(is_legacy, bound=None), 'make_current': gi.FunctionInfo(make_current, bound=None), 'realize': gi.FunctionInfo(realize, bound=None), 'set_debug_enabled': gi.FunctionInfo(set_debug_enabled, bound=None), 'set_forward_compatible': gi.FunctionInfo(set_forward_compatible, bound=None), 'set_required_version': gi.FunctionInfo(set_required_version, bound=None), 'set_use_es': gi.FunctionInfo(set_use_es, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(GLContext), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkGLContext (587609952)>, '__doc__': None, '__gsignals__': {}, 'clear_current': <staticmethod(gi.FunctionInfo(clear_current))>, 'get_current': <staticmethod(gi.FunctionInfo(get_current))>, 'get_debug_enabled': gi.FunctionInfo(get_debug_enabled), 'get_display': gi.FunctionInfo(get_display), 'get_forward_compatible': gi.FunctionInfo(get_forward_compatible), 'get_required_version': gi.FunctionInfo(get_required_version), 'get_shared_context': gi.FunctionInfo(get_shared_context), 'get_use_es': gi.FunctionInfo(get_use_es), 'get_version': gi.FunctionInfo(get_version), 'get_window': gi.FunctionInfo(get_window), 'is_legacy': gi.FunctionInfo(is_legacy), 'make_current': gi.FunctionInfo(make_current), 'realize': gi.FunctionInfo(realize), 'set_debug_enabled': gi.FunctionInfo(set_debug_enabled), 'set_forward_compatible': gi.FunctionInfo(set_forward_compatible), 'set_required_version': gi.FunctionInfo(set_required_version), 'set_use_es': gi.FunctionInfo(set_use_es)})"
     __gdoc__ = 'Object GdkGLContext\n\nProperties from GdkGLContext:\n  display -> GdkDisplay: Display\n    The GDK display used to create the GL context\n  window -> GdkWindow: Window\n    The GDK window bound to the GL context\n  shared-context -> GdkGLContext: Shared context\n    The GL context this context shares data with\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkGLContext (2579721568)>'
+    __gtype__ = None # (!) real value is '<GType GdkGLContext (587609952)>'
     __info__ = ObjectInfo(GLContext)
 
 

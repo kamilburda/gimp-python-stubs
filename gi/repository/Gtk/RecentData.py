@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -149,7 +148,7 @@ class RecentData(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RecentData), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RecentData' objects>, '__weakref__': <attribute '__weakref__' of 'RecentData' objects>, '__doc__': None, 'display_name': <property object at 0x000002eceac53470>, 'description': <property object at 0x000002eceac53560>, 'mime_type': <property object at 0x000002eceac53650>, 'app_name': <property object at 0x000002eceac53740>, 'app_exec': <property object at 0x000002eceac53830>, 'groups': <property object at 0x000002eceac53920>, 'is_private': <property object at 0x000002eceac53a10>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RecentData), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RecentData' objects>, '__weakref__': <attribute '__weakref__' of 'RecentData' objects>, '__doc__': None, 'display_name': <property object at 0x000002bfd1865fd0>, 'description': <property object at 0x000002bfd18660c0>, 'mime_type': <property object at 0x000002bfd18661b0>, 'app_name': <property object at 0x000002bfd18662a0>, 'app_exec': <property object at 0x000002bfd1866390>, 'groups': <property object at 0x000002bfd1866480>, 'is_private': <property object at 0x000002bfd1866570>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(RecentData)
 

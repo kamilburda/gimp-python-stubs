@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class RelationType(__gobject.GEnum):
+class RelationType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -64,10 +57,6 @@ class RelationType(__gobject.GEnum):
         """ Returns self, the complex conjugate of any int. """
         pass
 
-    def for_name(self, name): # real signature unknown; restored from __doc__
-        """ for_name(name:str) -> Atk.RelationType """
-        pass
-
     def from_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return the integer represented by the given array of bytes.
@@ -82,22 +71,14 @@ class RelationType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
         pass
 
-    def get_name(self, type): # real signature unknown; restored from __doc__
-        """ get_name(type:Atk.RelationType) -> str """
-        return ""
-
     def is_integer(self, *args, **kwargs): # real signature unknown
         """ Returns True. Exists for duck type compatibility with float.is_integer. """
-        pass
-
-    def register(self, name): # real signature unknown; restored from __doc__
-        """ register(name:str) -> Atk.RelationType """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -113,7 +94,7 @@ class RelationType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -141,12 +122,23 @@ class RelationType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -175,6 +167,10 @@ class RelationType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -220,6 +216,14 @@ class RelationType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -245,8 +249,8 @@ class RelationType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -277,15 +281,16 @@ class RelationType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -349,7 +354,7 @@ class RelationType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -391,10 +396,6 @@ class RelationType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CONTROLLED_BY = 1
     CONTROLLER_FOR = 2
@@ -418,33 +419,9 @@ class RelationType(__gobject.GEnum):
     PARENT_WINDOW_OF = 13
     POPUP_FOR = 12
     SUBWINDOW_OF = 9
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Atk', '__dict__': <attribute '__dict__' of 'RelationType' objects>, '__doc__': None, '__gtype__': <GType AtkRelationType (892677280)>, '__enum_values__': {0: <enum ATK_RELATION_NULL of type Atk.RelationType>, 1: <enum ATK_RELATION_CONTROLLED_BY of type Atk.RelationType>, 2: <enum ATK_RELATION_CONTROLLER_FOR of type Atk.RelationType>, 3: <enum ATK_RELATION_LABEL_FOR of type Atk.RelationType>, 4: <enum ATK_RELATION_LABELLED_BY of type Atk.RelationType>, 5: <enum ATK_RELATION_MEMBER_OF of type Atk.RelationType>, 6: <enum ATK_RELATION_NODE_CHILD_OF of type Atk.RelationType>, 7: <enum ATK_RELATION_FLOWS_TO of type Atk.RelationType>, 8: <enum ATK_RELATION_FLOWS_FROM of type Atk.RelationType>, 9: <enum ATK_RELATION_SUBWINDOW_OF of type Atk.RelationType>, 10: <enum ATK_RELATION_EMBEDS of type Atk.RelationType>, 11: <enum ATK_RELATION_EMBEDDED_BY of type Atk.RelationType>, 12: <enum ATK_RELATION_POPUP_FOR of type Atk.RelationType>, 13: <enum ATK_RELATION_PARENT_WINDOW_OF of type Atk.RelationType>, 14: <enum ATK_RELATION_DESCRIBED_BY of type Atk.RelationType>, 15: <enum ATK_RELATION_DESCRIPTION_FOR of type Atk.RelationType>, 16: <enum ATK_RELATION_NODE_PARENT_OF of type Atk.RelationType>, 17: <enum ATK_RELATION_DETAILS of type Atk.RelationType>, 18: <enum ATK_RELATION_DETAILS_FOR of type Atk.RelationType>, 19: <enum ATK_RELATION_ERROR_MESSAGE of type Atk.RelationType>, 20: <enum ATK_RELATION_ERROR_FOR of type Atk.RelationType>, 21: <enum ATK_RELATION_LAST_DEFINED of type Atk.RelationType>}, '__info__': gi.EnumInfo(RelationType), 'NULL': <enum ATK_RELATION_NULL of type Atk.RelationType>, 'CONTROLLED_BY': <enum ATK_RELATION_CONTROLLED_BY of type Atk.RelationType>, 'CONTROLLER_FOR': <enum ATK_RELATION_CONTROLLER_FOR of type Atk.RelationType>, 'LABEL_FOR': <enum ATK_RELATION_LABEL_FOR of type Atk.RelationType>, 'LABELLED_BY': <enum ATK_RELATION_LABELLED_BY of type Atk.RelationType>, 'MEMBER_OF': <enum ATK_RELATION_MEMBER_OF of type Atk.RelationType>, 'NODE_CHILD_OF': <enum ATK_RELATION_NODE_CHILD_OF of type Atk.RelationType>, 'FLOWS_TO': <enum ATK_RELATION_FLOWS_TO of type Atk.RelationType>, 'FLOWS_FROM': <enum ATK_RELATION_FLOWS_FROM of type Atk.RelationType>, 'SUBWINDOW_OF': <enum ATK_RELATION_SUBWINDOW_OF of type Atk.RelationType>, 'EMBEDS': <enum ATK_RELATION_EMBEDS of type Atk.RelationType>, 'EMBEDDED_BY': <enum ATK_RELATION_EMBEDDED_BY of type Atk.RelationType>, 'POPUP_FOR': <enum ATK_RELATION_POPUP_FOR of type Atk.RelationType>, 'PARENT_WINDOW_OF': <enum ATK_RELATION_PARENT_WINDOW_OF of type Atk.RelationType>, 'DESCRIBED_BY': <enum ATK_RELATION_DESCRIBED_BY of type Atk.RelationType>, 'DESCRIPTION_FOR': <enum ATK_RELATION_DESCRIPTION_FOR of type Atk.RelationType>, 'NODE_PARENT_OF': <enum ATK_RELATION_NODE_PARENT_OF of type Atk.RelationType>, 'DETAILS': <enum ATK_RELATION_DETAILS of type Atk.RelationType>, 'DETAILS_FOR': <enum ATK_RELATION_DETAILS_FOR of type Atk.RelationType>, 'ERROR_MESSAGE': <enum ATK_RELATION_ERROR_MESSAGE of type Atk.RelationType>, 'ERROR_FOR': <enum ATK_RELATION_ERROR_FOR of type Atk.RelationType>, 'LAST_DEFINED': <enum ATK_RELATION_LAST_DEFINED of type Atk.RelationType>, 'for_name': gi.FunctionInfo(for_name, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'register': gi.FunctionInfo(register, bound=None)})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-    }
-    __gtype__ = None # (!) real value is '<GType AtkRelationType (892677280)>'
-    __info__ = gi.EnumInfo(RelationType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NULL': <RelationType.NULL: 0>, 'CONTROLLED_BY': <RelationType.CONTROLLED_BY: 1>, 'CONTROLLER_FOR': <RelationType.CONTROLLER_FOR: 2>, 'LABEL_FOR': <RelationType.LABEL_FOR: 3>, 'LABELLED_BY': <RelationType.LABELLED_BY: 4>, 'MEMBER_OF': <RelationType.MEMBER_OF: 5>, 'NODE_CHILD_OF': <RelationType.NODE_CHILD_OF: 6>, 'FLOWS_TO': <RelationType.FLOWS_TO: 7>, 'FLOWS_FROM': <RelationType.FLOWS_FROM: 8>, 'SUBWINDOW_OF': <RelationType.SUBWINDOW_OF: 9>, 'EMBEDS': <RelationType.EMBEDS: 10>, 'EMBEDDED_BY': <RelationType.EMBEDDED_BY: 11>, 'POPUP_FOR': <RelationType.POPUP_FOR: 12>, 'PARENT_WINDOW_OF': <RelationType.PARENT_WINDOW_OF: 13>, 'DESCRIBED_BY': <RelationType.DESCRIBED_BY: 14>, 'DESCRIPTION_FOR': <RelationType.DESCRIPTION_FOR: 15>, 'NODE_PARENT_OF': <RelationType.NODE_PARENT_OF: 16>, 'DETAILS': <RelationType.DETAILS: 17>, 'DETAILS_FOR': <RelationType.DETAILS_FOR: 18>, 'ERROR_MESSAGE': <RelationType.ERROR_MESSAGE: 19>, 'ERROR_FOR': <RelationType.ERROR_FOR: 20>, 'LAST_DEFINED': <RelationType.LAST_DEFINED: 21>})"
+    __name__ = 'RelationType'
+    __qualname__ = 'RelationType'
 
 

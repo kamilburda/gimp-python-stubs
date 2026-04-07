@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -136,7 +135,7 @@ class Atom(__gi.Struct):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Atom), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Atom' objects>, '__weakref__': <attribute '__weakref__' of 'Atom' objects>, '__doc__': None, 'name': gi.FunctionInfo(name, bound=None), 'intern': gi.FunctionInfo(intern, bound=None), 'intern_static_string': gi.FunctionInfo(intern_static_string, bound=None), '__str__': <function _gdk_atom_str at 0x000002459bf22520>, '__repr__': <function _gdk_atom_repr at 0x000002459bf225c0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Atom), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Atom' objects>, '__weakref__': <attribute '__weakref__' of 'Atom' objects>, '__doc__': None, 'name': gi.FunctionInfo(name), 'intern': <staticmethod(gi.FunctionInfo(intern))>, 'intern_static_string': <staticmethod(gi.FunctionInfo(intern_static_string))>, '__str__': <function _gdk_atom_str at 0x00000187252af7e0>, '__repr__': <function _gdk_atom_repr at 0x00000187252af880>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Atom)
 

@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -144,7 +137,7 @@ class MiscClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MiscClass), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MiscClass' objects>, '__weakref__': <attribute '__weakref__' of 'MiscClass' objects>, '__doc__': None, 'parent': <property object at 0x00000173381425c0>, 'threads_enter': <property object at 0x00000173381426b0>, 'threads_leave': <property object at 0x00000173381427a0>, 'vfuncs': <property object at 0x0000017338142890>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MiscClass), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MiscClass' objects>, '__weakref__': <attribute '__weakref__' of 'MiscClass' objects>, '__doc__': None, 'parent': <property object at 0x000001c85dafeb10>, 'threads_enter': <property object at 0x000001c85dafee30>, 'threads_leave': <property object at 0x000001c85dafef20>, 'vfuncs': <property object at 0x000001c85daff010>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(MiscClass)
 

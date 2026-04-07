@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class DBusObjectIface(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -140,7 +149,7 @@ class DBusObjectIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DBusObjectIface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DBusObjectIface' objects>, '__weakref__': <attribute '__weakref__' of 'DBusObjectIface' objects>, '__doc__': None, 'parent_iface': <property object at 0x000001a793e6afc0>, 'get_object_path': <property object at 0x000001a793e6b0b0>, 'get_interfaces': <property object at 0x000001a793e6b1a0>, 'get_interface': <property object at 0x000001a793e6b290>, 'interface_added': <property object at 0x000001a793e6b380>, 'interface_removed': <property object at 0x000001a793e6b4c0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DBusObjectIface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DBusObjectIface' objects>, '__weakref__': <attribute '__weakref__' of 'DBusObjectIface' objects>, '__doc__': None, 'parent_iface': <property object at 0x000001ea70968090>, 'get_object_path': <property object at 0x000001ea70968180>, 'get_interfaces': <property object at 0x000001ea70968270>, 'get_interface': <property object at 0x000001ea70968360>, 'interface_added': <property object at 0x000001ea70968450>, 'interface_removed': <property object at 0x000001ea70968540>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(DBusObjectIface)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,17 +7,17 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
+class Application(__gi_overrides_Gio.Application):
     """
     :Constructors:
     
@@ -59,8 +58,39 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
         """ add_action(self, action:Gio.Action) """
         pass
 
-    def add_action_entries(self, entries, user_data=None): # real signature unknown; restored from __doc__
-        """ add_action_entries(self, entries:list, user_data=None) """
+    def add_action_entries(self, entries, user_data=None): # reliably restored by inspect
+        """
+        The ``add_action_entries()`` method is a convenience function for creating
+        multiple :class:`~gi.repository.Gio.SimpleAction` instances and adding them
+        to a :class:`~gi.repository.Gio.ActionMap`.
+        Each action is constructed as per one entry.
+        
+        :param list entries:
+            List of entry tuples for :meth:`add_action` method. The entry tuple can
+            vary in size with the following information:
+        
+            * The name of the action. Must be specified.
+            * The callback to connect to the "activate" signal of the
+              action. Since GLib 2.40, this can be ``None`` for stateful
+              actions, in which case the default handler is used. For
+              boolean-stated actions with no parameter, this is a toggle.
+              For other state types (and parameter type equal to the state
+              type) this will be a function that just calls change_state
+              (which you should provide).
+            * The type of the parameter that must be passed to the activate
+              function for this action, given as a single :class:`~gi.repository.GLib.Variant` type
+              string (or ``None`` for no parameter)
+            * The initial state for this action, given in GLib.Variant text
+              format. The state is parsed with no extra type information, so
+              type tags must be added to the string if they are necessary.
+              Stateless actions should give ``None`` here.
+            * The callback to connect to the "change-state" signal of the
+              action. All stateful actions should provide a handler here;
+              stateless actions should not.
+        
+        :param user_data:
+            The user data for signal connections, or ``None``
+        """
         pass
 
     def add_main_option(self, long_name, short_name, flags, arg, description, arg_description=None): # real signature unknown; restored from __doc__
@@ -107,20 +137,20 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -128,6 +158,24 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
         pass
 
     def connect_object_after(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def create_asyncio_task(self, coro): # reliably restored by inspect
+        """
+        Safely create an asyncio task. The application will not quit until the
+        task completes. For potentially longer running tasks, you should add
+        cancellation logic to abort a task when it is not needed anymore (e.g.
+        cancelling it from the Gtk.Window.do_unmap event).
+        
+        Note that python will only log a raised exception if the Task is
+        destroyed without the result having been collected. However, this does
+        also not happen when the task is cancelled. As such, be careful to not
+        cancel tasks that are already finished.
+        
+        You can deal with this by either only storing a weak reference to the
+        Task, by explicitly collecting the result, or by only cancelling it if
+        it is not done already.
+        """
         pass
 
     def disconnect(*args, **kwargs): # reliably restored by inspect
@@ -157,12 +205,18 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
         """ command_line(self, command_line:Gio.ApplicationCommandLine) -> int """
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_dbus_register(self, *args, **kwargs): # real signature unknown
         """ dbus_register(self, connection:Gio.DBusConnection, object_path:str) -> bool """
         pass
 
     def do_dbus_unregister(self, *args, **kwargs): # real signature unknown
         """ dbus_unregister(self, connection:Gio.DBusConnection, object_path:str) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_handle_local_options(self, *args, **kwargs): # real signature unknown
@@ -224,17 +278,17 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -355,20 +409,20 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -454,7 +508,8 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
         """ mark_busy(self) """
         pass
 
-    def new(self, application_id=None, flags): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, application_id=None, flags): # real signature unknown; restored from __doc__
         """ new(application_id:str=None, flags:Gio.ApplicationFlags) -> Gtk.Application """
         pass
 
@@ -651,20 +706,20 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
         """ withdraw_notification(self, id:str) """
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -730,7 +785,8 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
         """
         pass
 
-    def __init__(self, **properties): # real signature unknown; restored from __doc__
+    def __init__(self, *args, **kwargs): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -805,12 +861,16 @@ class Application(__gi_overrides_Gio.Application, __gi_overrides_Gio.ActionMap):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ece9ab5b10>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17e9d20>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Application), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkApplication (3867667856)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'add_accelerator': gi.FunctionInfo(add_accelerator, bound=None), 'add_window': gi.FunctionInfo(add_window, bound=None), 'get_accels_for_action': gi.FunctionInfo(get_accels_for_action, bound=None), 'get_actions_for_accel': gi.FunctionInfo(get_actions_for_accel, bound=None), 'get_active_window': gi.FunctionInfo(get_active_window, bound=None), 'get_app_menu': gi.FunctionInfo(get_app_menu, bound=None), 'get_menu_by_id': gi.FunctionInfo(get_menu_by_id, bound=None), 'get_menubar': gi.FunctionInfo(get_menubar, bound=None), 'get_window_by_id': gi.FunctionInfo(get_window_by_id, bound=None), 'get_windows': gi.FunctionInfo(get_windows, bound=None), 'inhibit': gi.FunctionInfo(inhibit, bound=None), 'is_inhibited': gi.FunctionInfo(is_inhibited, bound=None), 'list_action_descriptions': gi.FunctionInfo(list_action_descriptions, bound=None), 'prefers_app_menu': gi.FunctionInfo(prefers_app_menu, bound=None), 'remove_accelerator': gi.FunctionInfo(remove_accelerator, bound=None), 'remove_window': gi.FunctionInfo(remove_window, bound=None), 'set_accels_for_action': gi.FunctionInfo(set_accels_for_action, bound=None), 'set_app_menu': gi.FunctionInfo(set_app_menu, bound=None), 'set_menubar': gi.FunctionInfo(set_menubar, bound=None), 'uninhibit': gi.FunctionInfo(uninhibit, bound=None), 'do_window_added': gi.VFuncInfo(window_added, bound=None), 'do_window_removed': gi.VFuncInfo(window_removed, bound=None), 'parent': <property object at 0x000002ece8fb7b00>, 'priv': <property object at 0x000002ece8fb7bf0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Application), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkApplication (3426667456)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'add_accelerator': gi.FunctionInfo(add_accelerator), 'add_window': gi.FunctionInfo(add_window), 'get_accels_for_action': gi.FunctionInfo(get_accels_for_action), 'get_actions_for_accel': gi.FunctionInfo(get_actions_for_accel), 'get_active_window': gi.FunctionInfo(get_active_window), 'get_app_menu': gi.FunctionInfo(get_app_menu), 'get_menu_by_id': gi.FunctionInfo(get_menu_by_id), 'get_menubar': gi.FunctionInfo(get_menubar), 'get_window_by_id': gi.FunctionInfo(get_window_by_id), 'get_windows': gi.FunctionInfo(get_windows), 'inhibit': gi.FunctionInfo(inhibit), 'is_inhibited': gi.FunctionInfo(is_inhibited), 'list_action_descriptions': gi.FunctionInfo(list_action_descriptions), 'prefers_app_menu': gi.FunctionInfo(prefers_app_menu), 'remove_accelerator': gi.FunctionInfo(remove_accelerator), 'remove_window': gi.FunctionInfo(remove_window), 'set_accels_for_action': gi.FunctionInfo(set_accels_for_action), 'set_app_menu': gi.FunctionInfo(set_app_menu), 'set_menubar': gi.FunctionInfo(set_menubar), 'uninhibit': gi.FunctionInfo(uninhibit), 'do_window_added': gi.VFuncInfo(window_added), 'do_window_removed': gi.VFuncInfo(window_removed), 'parent': <property object at 0x000002bfd17b6c00>, 'priv': <property object at 0x000002bfd17b6cf0>})"
+    __firstlineno__ = 127
     __gdoc__ = 'Object GtkApplication\n\nSignals from GtkApplication:\n  window-added (GtkWindow)\n  window-removed (GtkWindow)\n  query-end ()\n\nProperties from GtkApplication:\n  register-session -> gboolean: Register session\n    Register with the session manager\n  screensaver-active -> gboolean: Screensaver Active\n    Whether the screensaver is active\n  app-menu -> GMenuModel: Application menu\n    The GMenuModel for the application menu\n  menubar -> GMenuModel: Menubar\n    The GMenuModel for the menubar\n  active-window -> GtkWindow: Active window\n    The window which most recently had focus\n\nSignals from GActionGroup:\n  action-added (gchararray)\n  action-removed (gchararray)\n  action-enabled-changed (gchararray, gboolean)\n  action-state-changed (gchararray, GVariant)\n\nSignals from GApplication:\n  activate ()\n  startup ()\n  shutdown ()\n  open (gpointer, gint, gchararray)\n  command-line (GApplicationCommandLine) -> gint\n  handle-local-options (GVariantDict) -> gint\n  name-lost () -> gboolean\n\nProperties from GApplication:\n  application-id -> gchararray: application-id\n  version -> gchararray: version\n  flags -> GApplicationFlags: flags\n  resource-base-path -> gchararray: resource-base-path\n  is-registered -> gboolean: is-registered\n  is-remote -> gboolean: is-remote\n  inactivity-timeout -> guint: inactivity-timeout\n  action-group -> GActionGroup: action-group\n  is-busy -> gboolean: is-busy\n\nSignals from GActionGroup:\n  action-added (gchararray)\n  action-removed (gchararray)\n  action-enabled-changed (gchararray, gboolean)\n  action-state-changed (gchararray, GVariant)\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkApplication (3867667856)>'
+    __gtype__ = None # (!) real value is '<GType GtkApplication (3426667456)>'
     __info__ = ObjectInfo(Application)
+    __static_attributes__ = (
+        '_asyncio_tasks',
+    )
 
 

@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -81,7 +75,8 @@ class Rectangle(__gi.Boxed):
         """ is_infinite_plane(self) -> bool """
         return False
 
-    def new(self, x, y, width, height): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, x, y, width, height): # real signature unknown; restored from __doc__
         """ new(x:int, y:int, width:int, height:int) -> Gegl.Rectangle """
         pass
 
@@ -221,8 +216,8 @@ class Rectangle(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Rectangle), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglRectangle (420741248)>, '__dict__': <attribute '__dict__' of 'Rectangle' objects>, '__weakref__': <attribute '__weakref__' of 'Rectangle' objects>, '__doc__': None, 'x': <property object at 0x000002761b908ea0>, 'y': <property object at 0x000002761b908f90>, 'width': <property object at 0x000002761b909080>, 'height': <property object at 0x000002761b909170>, 'new': gi.FunctionInfo(new, bound=None), 'align': gi.FunctionInfo(align, bound=None), 'align_to_buffer': gi.FunctionInfo(align_to_buffer, bound=None), 'bounding_box': gi.FunctionInfo(bounding_box, bound=None), 'contains': gi.FunctionInfo(contains, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'dump': gi.FunctionInfo(dump, bound=None), 'dup': gi.FunctionInfo(dup, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'equal_coords': gi.FunctionInfo(equal_coords, bound=None), 'intersect': gi.FunctionInfo(intersect, bound=None), 'is_empty': gi.FunctionInfo(is_empty, bound=None), 'is_infinite_plane': gi.FunctionInfo(is_infinite_plane, bound=None), 'set': gi.FunctionInfo(set, bound=None), 'subtract': gi.FunctionInfo(subtract, bound=None), 'subtract_bounding_box': gi.FunctionInfo(subtract_bounding_box, bound=None), 'xor': gi.FunctionInfo(xor, bound=None), 'infinite_plane': gi.FunctionInfo(infinite_plane, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GeglRectangle (420741248)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Rectangle), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglRectangle (3657338208)>, '__dict__': <attribute '__dict__' of 'Rectangle' objects>, '__weakref__': <attribute '__weakref__' of 'Rectangle' objects>, '__doc__': None, 'x': <property object at 0x000001ebdc201da0>, 'y': <property object at 0x000001ebdc201e90>, 'width': <property object at 0x000001ebdc201f80>, 'height': <property object at 0x000001ebdc202070>, 'new': <classmethod(gi.FunctionInfo(new))>, 'align': gi.FunctionInfo(align), 'align_to_buffer': gi.FunctionInfo(align_to_buffer), 'bounding_box': gi.FunctionInfo(bounding_box), 'contains': gi.FunctionInfo(contains), 'copy': gi.FunctionInfo(copy), 'dump': gi.FunctionInfo(dump), 'dup': gi.FunctionInfo(dup), 'equal': gi.FunctionInfo(equal), 'equal_coords': gi.FunctionInfo(equal_coords), 'intersect': gi.FunctionInfo(intersect), 'is_empty': gi.FunctionInfo(is_empty), 'is_infinite_plane': gi.FunctionInfo(is_infinite_plane), 'set': gi.FunctionInfo(set), 'subtract': gi.FunctionInfo(subtract), 'subtract_bounding_box': gi.FunctionInfo(subtract_bounding_box), 'xor': gi.FunctionInfo(xor), 'infinite_plane': <staticmethod(gi.FunctionInfo(infinite_plane))>})"
+    __gtype__ = None # (!) real value is '<GType GeglRectangle (3657338208)>'
     __info__ = StructInfo(Rectangle)
 
 

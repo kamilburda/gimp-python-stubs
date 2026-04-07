@@ -1,24 +1,16 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
-class ot_metrics_tag_t(__gobject.GFlags):
+class ot_metrics_tag_t(__enum.IntFlag):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +69,7 @@ class ot_metrics_tag_t(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +92,7 @@ class ot_metrics_tag_t(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -116,8 +108,8 @@ class ot_metrics_tag_t(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -128,12 +120,16 @@ class ot_metrics_tag_t(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +158,10 @@ class ot_metrics_tag_t(__gobject.GFlags):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -203,8 +203,16 @@ class ot_metrics_tag_t(__gobject.GFlags):
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -232,16 +240,16 @@ class ot_metrics_tag_t(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -256,24 +264,24 @@ class ot_metrics_tag_t(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -292,8 +300,8 @@ class ot_metrics_tag_t(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -324,8 +332,8 @@ class ot_metrics_tag_t(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -337,7 +345,7 @@ class ot_metrics_tag_t(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -363,16 +371,12 @@ class ot_metrics_tag_t(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -383,72 +387,10 @@ class ot_metrics_tag_t(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-
-    B_OT_METRICS_TAG_CAP_HEIGHT = 1668311156
-    B_OT_METRICS_TAG_HORIZONTAL_ASCENDER = 1751216995
-    B_OT_METRICS_TAG_HORIZONTAL_CARET_OFFSET = 1751347046
-    B_OT_METRICS_TAG_HORIZONTAL_CARET_RISE = 1751347827
-    B_OT_METRICS_TAG_HORIZONTAL_CARET_RUN = 1751347822
-    B_OT_METRICS_TAG_HORIZONTAL_CLIPPING_ASCENT = 1751346273
-    B_OT_METRICS_TAG_HORIZONTAL_CLIPPING_DESCENT = 1751346276
-    B_OT_METRICS_TAG_HORIZONTAL_DESCENDER = 1751413603
-    B_OT_METRICS_TAG_HORIZONTAL_LINE_GAP = 1751934832
-    B_OT_METRICS_TAG_STRIKEOUT_OFFSET = 1937011311
-    B_OT_METRICS_TAG_STRIKEOUT_SIZE = 1937011315
-    B_OT_METRICS_TAG_SUBSCRIPT_EM_X_OFFSET = 1935833199
-    B_OT_METRICS_TAG_SUBSCRIPT_EM_X_SIZE = 1935833203
-    B_OT_METRICS_TAG_SUBSCRIPT_EM_Y_OFFSET = 1935833455
-    B_OT_METRICS_TAG_SUBSCRIPT_EM_Y_SIZE = 1935833459
-    B_OT_METRICS_TAG_SUPERSCRIPT_EM_X_OFFSET = 1936750703
-    B_OT_METRICS_TAG_SUPERSCRIPT_EM_X_SIZE = 1936750707
-    B_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_OFFSET = 1936750959
-    B_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_SIZE = 1936750963
-    B_OT_METRICS_TAG_UNDERLINE_OFFSET = 1970168943
-    B_OT_METRICS_TAG_UNDERLINE_SIZE = 1970168947
-    B_OT_METRICS_TAG_VERTICAL_ASCENDER = 1986098019
-    B_OT_METRICS_TAG_VERTICAL_CARET_OFFSET = 1986228070
-    B_OT_METRICS_TAG_VERTICAL_CARET_RISE = 1986228851
-    B_OT_METRICS_TAG_VERTICAL_CARET_RUN = 1986228846
-    B_OT_METRICS_TAG_VERTICAL_DESCENDER = 1986294627
-    B_OT_METRICS_TAG_VERTICAL_LINE_GAP = 1986815856
-    B_OT_METRICS_TAG_X_HEIGHT = 2020108148
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.HarfBuzz', '__dict__': <attribute '__dict__' of 'ot_metrics_tag_t' objects>, '__doc__': None, '__gtype__': <GType PyHarfBuzzot_metrics_tag_t (2667604864)>, '__flags_values__': {1751216995: <flags HB_OT_METRICS_TAG_HORIZONTAL_ASCENDER of type HarfBuzz.ot_metrics_tag_t>, 1751413603: <flags HB_OT_METRICS_TAG_HORIZONTAL_DESCENDER of type HarfBuzz.ot_metrics_tag_t>, 1751934832: <flags HB_OT_METRICS_TAG_HORIZONTAL_LINE_GAP of type HarfBuzz.ot_metrics_tag_t>, 1751346273: <flags HB_OT_METRICS_TAG_HORIZONTAL_CLIPPING_ASCENT of type HarfBuzz.ot_metrics_tag_t>, 1751346276: <flags HB_OT_METRICS_TAG_HORIZONTAL_CLIPPING_DESCENT of type HarfBuzz.ot_metrics_tag_t>, 1986098019: <flags HB_OT_METRICS_TAG_VERTICAL_ASCENDER of type HarfBuzz.ot_metrics_tag_t>, 1986294627: <flags HB_OT_METRICS_TAG_VERTICAL_DESCENDER of type HarfBuzz.ot_metrics_tag_t>, 1986815856: <flags HB_OT_METRICS_TAG_VERTICAL_LINE_GAP of type HarfBuzz.ot_metrics_tag_t>, 1751347827: <flags HB_OT_METRICS_TAG_HORIZONTAL_CARET_RISE of type HarfBuzz.ot_metrics_tag_t>, 1751347822: <flags HB_OT_METRICS_TAG_HORIZONTAL_CARET_RUN of type HarfBuzz.ot_metrics_tag_t>, 1751347046: <flags HB_OT_METRICS_TAG_HORIZONTAL_CLIPPING_DESCENT | HB_OT_METRICS_TAG_HORIZONTAL_CARET_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 1986228851: <flags HB_OT_METRICS_TAG_VERTICAL_CARET_RISE of type HarfBuzz.ot_metrics_tag_t>, 1986228846: <flags HB_OT_METRICS_TAG_VERTICAL_CARET_RUN of type HarfBuzz.ot_metrics_tag_t>, 1986228070: <flags HB_OT_METRICS_TAG_VERTICAL_CARET_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 2020108148: <flags HB_OT_METRICS_TAG_X_HEIGHT of type HarfBuzz.ot_metrics_tag_t>, 1668311156: <flags HB_OT_METRICS_TAG_CAP_HEIGHT of type HarfBuzz.ot_metrics_tag_t>, 1935833203: <flags HB_OT_METRICS_TAG_SUBSCRIPT_EM_X_SIZE of type HarfBuzz.ot_metrics_tag_t>, 1935833459: <flags HB_OT_METRICS_TAG_SUBSCRIPT_EM_X_SIZE | HB_OT_METRICS_TAG_SUBSCRIPT_EM_Y_SIZE of type HarfBuzz.ot_metrics_tag_t>, 1935833199: <flags HB_OT_METRICS_TAG_SUBSCRIPT_EM_X_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 1935833455: <flags HB_OT_METRICS_TAG_SUBSCRIPT_EM_X_OFFSET | HB_OT_METRICS_TAG_SUBSCRIPT_EM_Y_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 1936750707: <flags HB_OT_METRICS_TAG_SUPERSCRIPT_EM_X_SIZE of type HarfBuzz.ot_metrics_tag_t>, 1936750963: <flags HB_OT_METRICS_TAG_SUPERSCRIPT_EM_X_SIZE | HB_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_SIZE of type HarfBuzz.ot_metrics_tag_t>, 1936750703: <flags HB_OT_METRICS_TAG_SUPERSCRIPT_EM_X_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 1936750959: <flags HB_OT_METRICS_TAG_SUPERSCRIPT_EM_X_OFFSET | HB_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 1937011315: <flags HB_OT_METRICS_TAG_STRIKEOUT_SIZE of type HarfBuzz.ot_metrics_tag_t>, 1937011311: <flags HB_OT_METRICS_TAG_STRIKEOUT_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 1970168947: <flags HB_OT_METRICS_TAG_UNDERLINE_SIZE of type HarfBuzz.ot_metrics_tag_t>, 1970168943: <flags HB_OT_METRICS_TAG_UNDERLINE_OFFSET of type HarfBuzz.ot_metrics_tag_t>}, '__info__': gi.EnumInfo(ot_metrics_tag_t), 'B_OT_METRICS_TAG_HORIZONTAL_ASCENDER': <flags HB_OT_METRICS_TAG_HORIZONTAL_ASCENDER of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_HORIZONTAL_DESCENDER': <flags HB_OT_METRICS_TAG_HORIZONTAL_DESCENDER of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_HORIZONTAL_LINE_GAP': <flags HB_OT_METRICS_TAG_HORIZONTAL_LINE_GAP of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_HORIZONTAL_CLIPPING_ASCENT': <flags HB_OT_METRICS_TAG_HORIZONTAL_CLIPPING_ASCENT of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_HORIZONTAL_CLIPPING_DESCENT': <flags HB_OT_METRICS_TAG_HORIZONTAL_CLIPPING_DESCENT of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_VERTICAL_ASCENDER': <flags HB_OT_METRICS_TAG_VERTICAL_ASCENDER of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_VERTICAL_DESCENDER': <flags HB_OT_METRICS_TAG_VERTICAL_DESCENDER of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_VERTICAL_LINE_GAP': <flags HB_OT_METRICS_TAG_VERTICAL_LINE_GAP of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_HORIZONTAL_CARET_RISE': <flags HB_OT_METRICS_TAG_HORIZONTAL_CARET_RISE of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_HORIZONTAL_CARET_RUN': <flags HB_OT_METRICS_TAG_HORIZONTAL_CARET_RUN of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_HORIZONTAL_CARET_OFFSET': <flags HB_OT_METRICS_TAG_HORIZONTAL_CLIPPING_DESCENT | HB_OT_METRICS_TAG_HORIZONTAL_CARET_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_VERTICAL_CARET_RISE': <flags HB_OT_METRICS_TAG_VERTICAL_CARET_RISE of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_VERTICAL_CARET_RUN': <flags HB_OT_METRICS_TAG_VERTICAL_CARET_RUN of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_VERTICAL_CARET_OFFSET': <flags HB_OT_METRICS_TAG_VERTICAL_CARET_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_X_HEIGHT': <flags HB_OT_METRICS_TAG_X_HEIGHT of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_CAP_HEIGHT': <flags HB_OT_METRICS_TAG_CAP_HEIGHT of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_SUBSCRIPT_EM_X_SIZE': <flags HB_OT_METRICS_TAG_SUBSCRIPT_EM_X_SIZE of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_SUBSCRIPT_EM_Y_SIZE': <flags HB_OT_METRICS_TAG_SUBSCRIPT_EM_X_SIZE | HB_OT_METRICS_TAG_SUBSCRIPT_EM_Y_SIZE of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_SUBSCRIPT_EM_X_OFFSET': <flags HB_OT_METRICS_TAG_SUBSCRIPT_EM_X_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_SUBSCRIPT_EM_Y_OFFSET': <flags HB_OT_METRICS_TAG_SUBSCRIPT_EM_X_OFFSET | HB_OT_METRICS_TAG_SUBSCRIPT_EM_Y_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_SUPERSCRIPT_EM_X_SIZE': <flags HB_OT_METRICS_TAG_SUPERSCRIPT_EM_X_SIZE of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_SIZE': <flags HB_OT_METRICS_TAG_SUPERSCRIPT_EM_X_SIZE | HB_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_SIZE of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_SUPERSCRIPT_EM_X_OFFSET': <flags HB_OT_METRICS_TAG_SUPERSCRIPT_EM_X_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_OFFSET': <flags HB_OT_METRICS_TAG_SUPERSCRIPT_EM_X_OFFSET | HB_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_STRIKEOUT_SIZE': <flags HB_OT_METRICS_TAG_STRIKEOUT_SIZE of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_STRIKEOUT_OFFSET': <flags HB_OT_METRICS_TAG_STRIKEOUT_OFFSET of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_UNDERLINE_SIZE': <flags HB_OT_METRICS_TAG_UNDERLINE_SIZE of type HarfBuzz.ot_metrics_tag_t>, 'B_OT_METRICS_TAG_UNDERLINE_OFFSET': <flags HB_OT_METRICS_TAG_UNDERLINE_OFFSET of type HarfBuzz.ot_metrics_tag_t>})"
-    __flags_values__ = {
-        1668311156: 1668311156,
-        1751216995: 1751216995,
-        1751346273: 1751346273,
-        1751346276: 1751346276,
-        1751347046: 1751347046,
-        1751347822: 1751347822,
-        1751347827: 1751347827,
-        1751413603: 1751413603,
-        1751934832: 1751934832,
-        1935833199: 1935833199,
-        1935833203: 1935833203,
-        1935833455: 1935833455,
-        1935833459: 1935833459,
-        1936750703: 1936750703,
-        1936750707: 1936750707,
-        1936750959: 1936750959,
-        1936750963: 1936750963,
-        1937011311: 1937011311,
-        1937011315: 1937011315,
-        1970168943: 1970168943,
-        1970168947: 1970168947,
-        1986098019: 1986098019,
-        1986228070: 1986228070,
-        1986228846: 1986228846,
-        1986228851: 1986228851,
-        1986294627: 1986294627,
-        1986815856: 1986815856,
-        2020108148: 2020108148,
-    }
-    __gtype__ = None # (!) real value is '<GType PyHarfBuzzot_metrics_tag_t (2667604864)>'
-    __info__ = gi.EnumInfo(ot_metrics_tag_t)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'B_OT_METRICS_TAG_HORIZONTAL_ASCENDER': <ot_metrics_tag_t.B_OT_METRICS_TAG_HORIZONTAL_ASCENDER: 1751216995>, 'B_OT_METRICS_TAG_HORIZONTAL_DESCENDER': <ot_metrics_tag_t.B_OT_METRICS_TAG_HORIZONTAL_DESCENDER: 1751413603>, 'B_OT_METRICS_TAG_HORIZONTAL_LINE_GAP': <ot_metrics_tag_t.B_OT_METRICS_TAG_HORIZONTAL_LINE_GAP: 1751934832>, 'B_OT_METRICS_TAG_HORIZONTAL_CLIPPING_ASCENT': <ot_metrics_tag_t.B_OT_METRICS_TAG_HORIZONTAL_CLIPPING_ASCENT: 1751346273>, 'B_OT_METRICS_TAG_HORIZONTAL_CLIPPING_DESCENT': <ot_metrics_tag_t.B_OT_METRICS_TAG_HORIZONTAL_CLIPPING_DESCENT: 1751346276>, 'B_OT_METRICS_TAG_VERTICAL_ASCENDER': <ot_metrics_tag_t.B_OT_METRICS_TAG_VERTICAL_ASCENDER: 1986098019>, 'B_OT_METRICS_TAG_VERTICAL_DESCENDER': <ot_metrics_tag_t.B_OT_METRICS_TAG_VERTICAL_DESCENDER: 1986294627>, 'B_OT_METRICS_TAG_VERTICAL_LINE_GAP': <ot_metrics_tag_t.B_OT_METRICS_TAG_VERTICAL_LINE_GAP: 1986815856>, 'B_OT_METRICS_TAG_HORIZONTAL_CARET_RISE': <ot_metrics_tag_t.B_OT_METRICS_TAG_HORIZONTAL_CARET_RISE: 1751347827>, 'B_OT_METRICS_TAG_HORIZONTAL_CARET_RUN': <ot_metrics_tag_t.B_OT_METRICS_TAG_HORIZONTAL_CARET_RUN: 1751347822>, 'B_OT_METRICS_TAG_HORIZONTAL_CARET_OFFSET': <ot_metrics_tag_t.B_OT_METRICS_TAG_HORIZONTAL_CARET_OFFSET: 1751347046>, 'B_OT_METRICS_TAG_VERTICAL_CARET_RISE': <ot_metrics_tag_t.B_OT_METRICS_TAG_VERTICAL_CARET_RISE: 1986228851>, 'B_OT_METRICS_TAG_VERTICAL_CARET_RUN': <ot_metrics_tag_t.B_OT_METRICS_TAG_VERTICAL_CARET_RUN: 1986228846>, 'B_OT_METRICS_TAG_VERTICAL_CARET_OFFSET': <ot_metrics_tag_t.B_OT_METRICS_TAG_VERTICAL_CARET_OFFSET: 1986228070>, 'B_OT_METRICS_TAG_X_HEIGHT': <ot_metrics_tag_t.B_OT_METRICS_TAG_X_HEIGHT: 2020108148>, 'B_OT_METRICS_TAG_CAP_HEIGHT': <ot_metrics_tag_t.B_OT_METRICS_TAG_CAP_HEIGHT: 1668311156>, 'B_OT_METRICS_TAG_SUBSCRIPT_EM_X_SIZE': <ot_metrics_tag_t.B_OT_METRICS_TAG_SUBSCRIPT_EM_X_SIZE: 1935833203>, 'B_OT_METRICS_TAG_SUBSCRIPT_EM_Y_SIZE': <ot_metrics_tag_t.B_OT_METRICS_TAG_SUBSCRIPT_EM_Y_SIZE: 1935833459>, 'B_OT_METRICS_TAG_SUBSCRIPT_EM_X_OFFSET': <ot_metrics_tag_t.B_OT_METRICS_TAG_SUBSCRIPT_EM_X_OFFSET: 1935833199>, 'B_OT_METRICS_TAG_SUBSCRIPT_EM_Y_OFFSET': <ot_metrics_tag_t.B_OT_METRICS_TAG_SUBSCRIPT_EM_Y_OFFSET: 1935833455>, 'B_OT_METRICS_TAG_SUPERSCRIPT_EM_X_SIZE': <ot_metrics_tag_t.B_OT_METRICS_TAG_SUPERSCRIPT_EM_X_SIZE: 1936750707>, 'B_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_SIZE': <ot_metrics_tag_t.B_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_SIZE: 1936750963>, 'B_OT_METRICS_TAG_SUPERSCRIPT_EM_X_OFFSET': <ot_metrics_tag_t.B_OT_METRICS_TAG_SUPERSCRIPT_EM_X_OFFSET: 1936750703>, 'B_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_OFFSET': <ot_metrics_tag_t.B_OT_METRICS_TAG_SUPERSCRIPT_EM_Y_OFFSET: 1936750959>, 'B_OT_METRICS_TAG_STRIKEOUT_SIZE': <ot_metrics_tag_t.B_OT_METRICS_TAG_STRIKEOUT_SIZE: 1937011315>, 'B_OT_METRICS_TAG_STRIKEOUT_OFFSET': <ot_metrics_tag_t.B_OT_METRICS_TAG_STRIKEOUT_OFFSET: 1937011311>, 'B_OT_METRICS_TAG_UNDERLINE_SIZE': <ot_metrics_tag_t.B_OT_METRICS_TAG_UNDERLINE_SIZE: 1970168947>, 'B_OT_METRICS_TAG_UNDERLINE_OFFSET': <ot_metrics_tag_t.B_OT_METRICS_TAG_UNDERLINE_OFFSET: 1970168943>})"
+    __name__ = 'ot_metrics_tag_t'
+    __qualname__ = 'ot_metrics_tag_t'
 
 

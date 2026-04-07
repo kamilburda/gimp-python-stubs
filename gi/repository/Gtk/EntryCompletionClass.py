@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -153,7 +152,7 @@ class EntryCompletionClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EntryCompletionClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EntryCompletionClass' objects>, '__weakref__': <attribute '__weakref__' of 'EntryCompletionClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceabbd990>, 'match_selected': <property object at 0x000002eceabbda80>, 'action_activated': <property object at 0x000002eceabbdb70>, 'insert_prefix': <property object at 0x000002eceabbdc60>, 'cursor_on_match': <property object at 0x000002eceabbdd50>, 'no_matches': <property object at 0x000002eceabbde40>, '_gtk_reserved0': <property object at 0x000002eceabbdf30>, '_gtk_reserved1': <property object at 0x000002eceabbe020>, '_gtk_reserved2': <property object at 0x000002eceabbe110>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EntryCompletionClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EntryCompletionClass' objects>, '__weakref__': <attribute '__weakref__' of 'EntryCompletionClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd175cc70>, 'match_selected': <property object at 0x000002bfd175cd60>, 'action_activated': <property object at 0x000002bfd175ce50>, 'insert_prefix': <property object at 0x000002bfd175cf40>, 'cursor_on_match': <property object at 0x000002bfd175d030>, 'no_matches': <property object at 0x000002bfd175d120>, '_gtk_reserved0': <property object at 0x000002bfd175d210>, '_gtk_reserved1': <property object at 0x000002bfd175d300>, '_gtk_reserved2': <property object at 0x000002bfd175d3f0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(EntryCompletionClass)
 

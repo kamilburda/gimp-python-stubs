@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -153,7 +152,7 @@ class WindowClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(WindowClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'WindowClass' objects>, '__weakref__': <attribute '__weakref__' of 'WindowClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece9b3d080>, 'set_focus': <property object at 0x000002ece9b3d170>, 'activate_focus': <property object at 0x000002ece9b3d260>, 'activate_default': <property object at 0x000002ece9b3d350>, 'keys_changed': <property object at 0x000002ece9b3d440>, 'enable_debugging': <property object at 0x000002ece9b3d530>, '_gtk_reserved1': <property object at 0x000002ece9b3d620>, '_gtk_reserved2': <property object at 0x000002ece9b3d710>, '_gtk_reserved3': <property object at 0x000002ece9b3d800>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(WindowClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'WindowClass' objects>, '__weakref__': <attribute '__weakref__' of 'WindowClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd3a4b560>, 'set_focus': <property object at 0x000002bfd3a4b650>, 'activate_focus': <property object at 0x000002bfd3a4b740>, 'activate_default': <property object at 0x000002bfd3a4b830>, 'keys_changed': <property object at 0x000002bfd3a4b920>, 'enable_debugging': <property object at 0x000002bfd3a4ba10>, '_gtk_reserved1': <property object at 0x000002bfd3a4bb00>, '_gtk_reserved2': <property object at 0x000002bfd3a4bbf0>, '_gtk_reserved3': <property object at 0x000002bfd3a4bce0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(WindowClass)
 

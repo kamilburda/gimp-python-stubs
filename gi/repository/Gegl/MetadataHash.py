@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -51,7 +45,7 @@ class MetadataHash(MetadataStore):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -83,6 +77,9 @@ class MetadataHash(MetadataStore):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_has_value(self, *args, **kwargs): # real signature unknown
@@ -314,7 +311,8 @@ class MetadataHash(MetadataStore):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gegl.MetadataStore """
         pass
 
@@ -475,20 +473,20 @@ class MetadataHash(MetadataStore):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -625,12 +623,12 @@ class MetadataHash(MetadataStore):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002761b7fbdc0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ebdc0e6ad0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(MetadataHash), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglMetadataHash (426594800)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(MetadataHash), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglMetadataHash (3645307312)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>})"
     __gdoc__ = 'Object GeglMetadataHash\n\nSignals from GeglMetadataStore:\n  changed (GParam)\n  mapped (gchararray, gboolean)\n  unmapped (gchararray, gchararray)\n  generate-value (GParam, GValue) -> gboolean\n  parse-value (GParam, GValue) -> gboolean\n\nProperties from GeglMetadataStore:\n  resolution-unit -> GeglResolutionUnit: Resolution Unit\n    Units for image resolution\n  resolution-x -> gdouble: Resolution X\n    X Resolution\n  resolution-y -> gdouble: Resolution Y\n    X Resolution\n  file-module-name -> gchararray: File Module Name\n    Name of currently active file module or NULL\n  title -> gchararray: Title\n    Short title or caption\n  artist -> gchararray: Artist\n    Name of image creator\n  description -> gchararray: Description\n    Description of image (possibly long)\n  copyright -> gchararray: Copyright\n    Copyright notice\n  disclaimer -> gchararray: Disclaimer\n    Legal disclaimer\n  warning -> gchararray: Warning\n    Warning of nature of content\n  comment -> gchararray: Comment\n    Miscellaneous comment\n  software -> gchararray: Software\n    Software used to create the image\n  source -> gchararray: Source\n    Device used to create the image\n  timestamp -> GDateTime: Timestamp\n    Image creation time\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglMetadataHash (426594800)>'
+    __gtype__ = None # (!) real value is '<GType GeglMetadataHash (3645307312)>'
     __info__ = ObjectInfo(MetadataHash)
 
 

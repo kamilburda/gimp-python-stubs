@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class GrabStatus(__gobject.GEnum):
+class GrabStatus(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -124,12 +123,23 @@ class GrabStatus(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -158,6 +168,10 @@ class GrabStatus(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -192,7 +206,8 @@ class GrabStatus(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -201,6 +216,14 @@ class GrabStatus(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -228,8 +251,8 @@ class GrabStatus(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -260,15 +283,16 @@ class GrabStatus(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -332,7 +356,7 @@ class GrabStatus(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -374,10 +398,6 @@ class GrabStatus(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ALREADY_GRABBED = 1
     FAILED = 5
@@ -385,17 +405,9 @@ class GrabStatus(__gobject.GEnum):
     INVALID_TIME = 2
     NOT_VIEWABLE = 3
     SUCCESS = 0
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gdk', '__dict__': <attribute '__dict__' of 'GrabStatus' objects>, '__doc__': None, '__gtype__': <GType GdkGrabStatus (2579728848)>, '__enum_values__': {0: <enum GDK_GRAB_SUCCESS of type Gdk.GrabStatus>, 1: <enum GDK_GRAB_ALREADY_GRABBED of type Gdk.GrabStatus>, 2: <enum GDK_GRAB_INVALID_TIME of type Gdk.GrabStatus>, 3: <enum GDK_GRAB_NOT_VIEWABLE of type Gdk.GrabStatus>, 4: <enum GDK_GRAB_FROZEN of type Gdk.GrabStatus>, 5: <enum GDK_GRAB_FAILED of type Gdk.GrabStatus>}, '__info__': gi.EnumInfo(GrabStatus), 'SUCCESS': <enum GDK_GRAB_SUCCESS of type Gdk.GrabStatus>, 'ALREADY_GRABBED': <enum GDK_GRAB_ALREADY_GRABBED of type Gdk.GrabStatus>, 'INVALID_TIME': <enum GDK_GRAB_INVALID_TIME of type Gdk.GrabStatus>, 'NOT_VIEWABLE': <enum GDK_GRAB_NOT_VIEWABLE of type Gdk.GrabStatus>, 'FROZEN': <enum GDK_GRAB_FROZEN of type Gdk.GrabStatus>, 'FAILED': <enum GDK_GRAB_FAILED of type Gdk.GrabStatus>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkGrabStatus (2579728848)>'
-    __info__ = gi.EnumInfo(GrabStatus)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'SUCCESS': <GrabStatus.SUCCESS: 0>, 'ALREADY_GRABBED': <GrabStatus.ALREADY_GRABBED: 1>, 'INVALID_TIME': <GrabStatus.INVALID_TIME: 2>, 'NOT_VIEWABLE': <GrabStatus.NOT_VIEWABLE: 3>, 'FROZEN': <GrabStatus.FROZEN: 4>, 'FAILED': <GrabStatus.FAILED: 5>})"
+    __name__ = 'GrabStatus'
+    __qualname__ = 'GrabStatus'
 
 

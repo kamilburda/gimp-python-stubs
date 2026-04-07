@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -173,7 +172,7 @@ class TextViewClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextViewClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextViewClass' objects>, '__weakref__': <attribute '__weakref__' of 'TextViewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece9b65c10>, 'populate_popup': <property object at 0x000002ece9b65d00>, 'move_cursor': <property object at 0x000002ece9b65df0>, 'set_anchor': <property object at 0x000002ece9b65ee0>, 'insert_at_cursor': <property object at 0x000002ece9b65fd0>, 'delete_from_cursor': <property object at 0x000002ece9b660c0>, 'backspace': <property object at 0x000002ece9b661b0>, 'cut_clipboard': <property object at 0x000002ece9b662a0>, 'copy_clipboard': <property object at 0x000002ece9b66390>, 'paste_clipboard': <property object at 0x000002ece9b66480>, 'toggle_overwrite': <property object at 0x000002ece9b66570>, 'create_buffer': <property object at 0x000002ece9b66660>, 'draw_layer': <property object at 0x000002ece9b66750>, 'extend_selection': <property object at 0x000002ece9b66840>, 'insert_emoji': <property object at 0x000002ece9b66930>, '_gtk_reserved1': <property object at 0x000002ece9b66a20>, '_gtk_reserved2': <property object at 0x000002ece9b66b10>, '_gtk_reserved3': <property object at 0x000002ece9b66c00>, '_gtk_reserved4': <property object at 0x000002ece9b66cf0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextViewClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextViewClass' objects>, '__weakref__': <attribute '__weakref__' of 'TextViewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd3a1c450>, 'populate_popup': <property object at 0x000002bfd3a1c540>, 'move_cursor': <property object at 0x000002bfd3a1c630>, 'set_anchor': <property object at 0x000002bfd3a1c720>, 'insert_at_cursor': <property object at 0x000002bfd3a1c810>, 'delete_from_cursor': <property object at 0x000002bfd3a1c900>, 'backspace': <property object at 0x000002bfd3a1c9f0>, 'cut_clipboard': <property object at 0x000002bfd3a1cae0>, 'copy_clipboard': <property object at 0x000002bfd3a1cbd0>, 'paste_clipboard': <property object at 0x000002bfd3a1ccc0>, 'toggle_overwrite': <property object at 0x000002bfd3a1cdb0>, 'create_buffer': <property object at 0x000002bfd3a1cea0>, 'draw_layer': <property object at 0x000002bfd3a1cf90>, 'extend_selection': <property object at 0x000002bfd3a1d080>, 'insert_emoji': <property object at 0x000002bfd3a1d170>, '_gtk_reserved1': <property object at 0x000002bfd3a1d260>, '_gtk_reserved2': <property object at 0x000002bfd3a1d350>, '_gtk_reserved3': <property object at 0x000002bfd3a1d440>, '_gtk_reserved4': <property object at 0x000002bfd3a1d530>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TextViewClass)
 

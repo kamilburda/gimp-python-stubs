@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -152,7 +145,7 @@ class StreamableContentIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StreamableContentIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StreamableContentIface' objects>, '__weakref__': <attribute '__weakref__' of 'StreamableContentIface' objects>, '__doc__': None, 'parent': <property object at 0x000001733813fdd0>, 'get_n_mime_types': <property object at 0x000001733813fec0>, 'get_mime_type': <property object at 0x000001733813ffb0>, 'get_stream': <property object at 0x00000173381300e0>, 'get_uri': <property object at 0x00000173381301d0>, 'pad1': <property object at 0x00000173381302c0>, 'pad2': <property object at 0x00000173381303b0>, 'pad3': <property object at 0x00000173381304a0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StreamableContentIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StreamableContentIface' objects>, '__weakref__': <attribute '__weakref__' of 'StreamableContentIface' objects>, '__doc__': None, 'parent': <property object at 0x000001c85dc40c20>, 'get_n_mime_types': <property object at 0x000001c85dc40d10>, 'get_mime_type': <property object at 0x000001c85dc40e00>, 'get_stream': <property object at 0x000001c85dc40ef0>, 'get_uri': <property object at 0x000001c85dc40fe0>, 'pad1': <property object at 0x000001c85dc410d0>, 'pad2': <property object at 0x000001c85dc411c0>, 'pad3': <property object at 0x000001c85dc412b0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(StreamableContentIface)
 

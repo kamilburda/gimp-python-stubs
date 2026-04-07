@@ -1,24 +1,16 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
-class paint_composite_mode_t(__gobject.GEnum):
+class paint_composite_mode_t(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +69,7 @@ class paint_composite_mode_t(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +92,7 @@ class paint_composite_mode_t(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +120,23 @@ class paint_composite_mode_t(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +165,10 @@ class paint_composite_mode_t(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +214,14 @@ class paint_composite_mode_t(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +247,8 @@ class paint_composite_mode_t(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +279,16 @@ class paint_composite_mode_t(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +352,7 @@ class paint_composite_mode_t(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -378,10 +394,6 @@ class paint_composite_mode_t(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CLEAR = 0
     COLOR_BURN = 18
@@ -411,39 +423,9 @@ class paint_composite_mode_t(__gobject.GEnum):
     SRC_OUT = 7
     SRC_OVER = 3
     XOR = 11
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.HarfBuzz', '__dict__': <attribute '__dict__' of 'paint_composite_mode_t' objects>, '__doc__': None, '__gtype__': <GType PyHarfBuzzpaint_composite_mode_t (2667607104)>, '__enum_values__': {0: <enum HB_PAINT_COMPOSITE_MODE_CLEAR of type HarfBuzz.paint_composite_mode_t>, 1: <enum HB_PAINT_COMPOSITE_MODE_SRC of type HarfBuzz.paint_composite_mode_t>, 2: <enum HB_PAINT_COMPOSITE_MODE_DEST of type HarfBuzz.paint_composite_mode_t>, 3: <enum HB_PAINT_COMPOSITE_MODE_SRC_OVER of type HarfBuzz.paint_composite_mode_t>, 4: <enum HB_PAINT_COMPOSITE_MODE_DEST_OVER of type HarfBuzz.paint_composite_mode_t>, 5: <enum HB_PAINT_COMPOSITE_MODE_SRC_IN of type HarfBuzz.paint_composite_mode_t>, 6: <enum HB_PAINT_COMPOSITE_MODE_DEST_IN of type HarfBuzz.paint_composite_mode_t>, 7: <enum HB_PAINT_COMPOSITE_MODE_SRC_OUT of type HarfBuzz.paint_composite_mode_t>, 8: <enum HB_PAINT_COMPOSITE_MODE_DEST_OUT of type HarfBuzz.paint_composite_mode_t>, 9: <enum HB_PAINT_COMPOSITE_MODE_SRC_ATOP of type HarfBuzz.paint_composite_mode_t>, 10: <enum HB_PAINT_COMPOSITE_MODE_DEST_ATOP of type HarfBuzz.paint_composite_mode_t>, 11: <enum HB_PAINT_COMPOSITE_MODE_XOR of type HarfBuzz.paint_composite_mode_t>, 12: <enum HB_PAINT_COMPOSITE_MODE_PLUS of type HarfBuzz.paint_composite_mode_t>, 13: <enum HB_PAINT_COMPOSITE_MODE_SCREEN of type HarfBuzz.paint_composite_mode_t>, 14: <enum HB_PAINT_COMPOSITE_MODE_OVERLAY of type HarfBuzz.paint_composite_mode_t>, 15: <enum HB_PAINT_COMPOSITE_MODE_DARKEN of type HarfBuzz.paint_composite_mode_t>, 16: <enum HB_PAINT_COMPOSITE_MODE_LIGHTEN of type HarfBuzz.paint_composite_mode_t>, 17: <enum HB_PAINT_COMPOSITE_MODE_COLOR_DODGE of type HarfBuzz.paint_composite_mode_t>, 18: <enum HB_PAINT_COMPOSITE_MODE_COLOR_BURN of type HarfBuzz.paint_composite_mode_t>, 19: <enum HB_PAINT_COMPOSITE_MODE_HARD_LIGHT of type HarfBuzz.paint_composite_mode_t>, 20: <enum HB_PAINT_COMPOSITE_MODE_SOFT_LIGHT of type HarfBuzz.paint_composite_mode_t>, 21: <enum HB_PAINT_COMPOSITE_MODE_DIFFERENCE of type HarfBuzz.paint_composite_mode_t>, 22: <enum HB_PAINT_COMPOSITE_MODE_EXCLUSION of type HarfBuzz.paint_composite_mode_t>, 23: <enum HB_PAINT_COMPOSITE_MODE_MULTIPLY of type HarfBuzz.paint_composite_mode_t>, 24: <enum HB_PAINT_COMPOSITE_MODE_HSL_HUE of type HarfBuzz.paint_composite_mode_t>, 25: <enum HB_PAINT_COMPOSITE_MODE_HSL_SATURATION of type HarfBuzz.paint_composite_mode_t>, 26: <enum HB_PAINT_COMPOSITE_MODE_HSL_COLOR of type HarfBuzz.paint_composite_mode_t>, 27: <enum HB_PAINT_COMPOSITE_MODE_HSL_LUMINOSITY of type HarfBuzz.paint_composite_mode_t>}, '__info__': gi.EnumInfo(paint_composite_mode_t), 'CLEAR': <enum HB_PAINT_COMPOSITE_MODE_CLEAR of type HarfBuzz.paint_composite_mode_t>, 'SRC': <enum HB_PAINT_COMPOSITE_MODE_SRC of type HarfBuzz.paint_composite_mode_t>, 'DEST': <enum HB_PAINT_COMPOSITE_MODE_DEST of type HarfBuzz.paint_composite_mode_t>, 'SRC_OVER': <enum HB_PAINT_COMPOSITE_MODE_SRC_OVER of type HarfBuzz.paint_composite_mode_t>, 'DEST_OVER': <enum HB_PAINT_COMPOSITE_MODE_DEST_OVER of type HarfBuzz.paint_composite_mode_t>, 'SRC_IN': <enum HB_PAINT_COMPOSITE_MODE_SRC_IN of type HarfBuzz.paint_composite_mode_t>, 'DEST_IN': <enum HB_PAINT_COMPOSITE_MODE_DEST_IN of type HarfBuzz.paint_composite_mode_t>, 'SRC_OUT': <enum HB_PAINT_COMPOSITE_MODE_SRC_OUT of type HarfBuzz.paint_composite_mode_t>, 'DEST_OUT': <enum HB_PAINT_COMPOSITE_MODE_DEST_OUT of type HarfBuzz.paint_composite_mode_t>, 'SRC_ATOP': <enum HB_PAINT_COMPOSITE_MODE_SRC_ATOP of type HarfBuzz.paint_composite_mode_t>, 'DEST_ATOP': <enum HB_PAINT_COMPOSITE_MODE_DEST_ATOP of type HarfBuzz.paint_composite_mode_t>, 'XOR': <enum HB_PAINT_COMPOSITE_MODE_XOR of type HarfBuzz.paint_composite_mode_t>, 'PLUS': <enum HB_PAINT_COMPOSITE_MODE_PLUS of type HarfBuzz.paint_composite_mode_t>, 'SCREEN': <enum HB_PAINT_COMPOSITE_MODE_SCREEN of type HarfBuzz.paint_composite_mode_t>, 'OVERLAY': <enum HB_PAINT_COMPOSITE_MODE_OVERLAY of type HarfBuzz.paint_composite_mode_t>, 'DARKEN': <enum HB_PAINT_COMPOSITE_MODE_DARKEN of type HarfBuzz.paint_composite_mode_t>, 'LIGHTEN': <enum HB_PAINT_COMPOSITE_MODE_LIGHTEN of type HarfBuzz.paint_composite_mode_t>, 'COLOR_DODGE': <enum HB_PAINT_COMPOSITE_MODE_COLOR_DODGE of type HarfBuzz.paint_composite_mode_t>, 'COLOR_BURN': <enum HB_PAINT_COMPOSITE_MODE_COLOR_BURN of type HarfBuzz.paint_composite_mode_t>, 'HARD_LIGHT': <enum HB_PAINT_COMPOSITE_MODE_HARD_LIGHT of type HarfBuzz.paint_composite_mode_t>, 'SOFT_LIGHT': <enum HB_PAINT_COMPOSITE_MODE_SOFT_LIGHT of type HarfBuzz.paint_composite_mode_t>, 'DIFFERENCE': <enum HB_PAINT_COMPOSITE_MODE_DIFFERENCE of type HarfBuzz.paint_composite_mode_t>, 'EXCLUSION': <enum HB_PAINT_COMPOSITE_MODE_EXCLUSION of type HarfBuzz.paint_composite_mode_t>, 'MULTIPLY': <enum HB_PAINT_COMPOSITE_MODE_MULTIPLY of type HarfBuzz.paint_composite_mode_t>, 'HSL_HUE': <enum HB_PAINT_COMPOSITE_MODE_HSL_HUE of type HarfBuzz.paint_composite_mode_t>, 'HSL_SATURATION': <enum HB_PAINT_COMPOSITE_MODE_HSL_SATURATION of type HarfBuzz.paint_composite_mode_t>, 'HSL_COLOR': <enum HB_PAINT_COMPOSITE_MODE_HSL_COLOR of type HarfBuzz.paint_composite_mode_t>, 'HSL_LUMINOSITY': <enum HB_PAINT_COMPOSITE_MODE_HSL_LUMINOSITY of type HarfBuzz.paint_composite_mode_t>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-    }
-    __gtype__ = None # (!) real value is '<GType PyHarfBuzzpaint_composite_mode_t (2667607104)>'
-    __info__ = gi.EnumInfo(paint_composite_mode_t)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'CLEAR': <paint_composite_mode_t.CLEAR: 0>, 'SRC': <paint_composite_mode_t.SRC: 1>, 'DEST': <paint_composite_mode_t.DEST: 2>, 'SRC_OVER': <paint_composite_mode_t.SRC_OVER: 3>, 'DEST_OVER': <paint_composite_mode_t.DEST_OVER: 4>, 'SRC_IN': <paint_composite_mode_t.SRC_IN: 5>, 'DEST_IN': <paint_composite_mode_t.DEST_IN: 6>, 'SRC_OUT': <paint_composite_mode_t.SRC_OUT: 7>, 'DEST_OUT': <paint_composite_mode_t.DEST_OUT: 8>, 'SRC_ATOP': <paint_composite_mode_t.SRC_ATOP: 9>, 'DEST_ATOP': <paint_composite_mode_t.DEST_ATOP: 10>, 'XOR': <paint_composite_mode_t.XOR: 11>, 'PLUS': <paint_composite_mode_t.PLUS: 12>, 'SCREEN': <paint_composite_mode_t.SCREEN: 13>, 'OVERLAY': <paint_composite_mode_t.OVERLAY: 14>, 'DARKEN': <paint_composite_mode_t.DARKEN: 15>, 'LIGHTEN': <paint_composite_mode_t.LIGHTEN: 16>, 'COLOR_DODGE': <paint_composite_mode_t.COLOR_DODGE: 17>, 'COLOR_BURN': <paint_composite_mode_t.COLOR_BURN: 18>, 'HARD_LIGHT': <paint_composite_mode_t.HARD_LIGHT: 19>, 'SOFT_LIGHT': <paint_composite_mode_t.SOFT_LIGHT: 20>, 'DIFFERENCE': <paint_composite_mode_t.DIFFERENCE: 21>, 'EXCLUSION': <paint_composite_mode_t.EXCLUSION: 22>, 'MULTIPLY': <paint_composite_mode_t.MULTIPLY: 23>, 'HSL_HUE': <paint_composite_mode_t.HSL_HUE: 24>, 'HSL_SATURATION': <paint_composite_mode_t.HSL_SATURATION: 25>, 'HSL_COLOR': <paint_composite_mode_t.HSL_COLOR: 26>, 'HSL_LUMINOSITY': <paint_composite_mode_t.HSL_LUMINOSITY: 27>})"
+    __name__ = 'paint_composite_mode_t'
+    __qualname__ = 'paint_composite_mode_t'
 
 

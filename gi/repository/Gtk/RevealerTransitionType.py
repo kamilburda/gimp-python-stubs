@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,17 +7,17 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class RevealerTransitionType(__gobject.GEnum):
+class RevealerTransitionType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +76,7 @@ class RevealerTransitionType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +99,7 @@ class RevealerTransitionType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +127,23 @@ class RevealerTransitionType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +172,10 @@ class RevealerTransitionType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +221,14 @@ class RevealerTransitionType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +254,8 @@ class RevealerTransitionType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +286,16 @@ class RevealerTransitionType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +359,7 @@ class RevealerTransitionType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -378,10 +401,6 @@ class RevealerTransitionType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CROSSFADE = 1
     NONE = 0
@@ -389,17 +408,9 @@ class RevealerTransitionType(__gobject.GEnum):
     SLIDE_LEFT = 3
     SLIDE_RIGHT = 2
     SLIDE_UP = 4
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gtk', '__dict__': <attribute '__dict__' of 'RevealerTransitionType' objects>, '__doc__': None, '__gtype__': <GType GtkRevealerTransitionType (3923955280)>, '__enum_values__': {0: <enum GTK_REVEALER_TRANSITION_TYPE_NONE of type Gtk.RevealerTransitionType>, 1: <enum GTK_REVEALER_TRANSITION_TYPE_CROSSFADE of type Gtk.RevealerTransitionType>, 2: <enum GTK_REVEALER_TRANSITION_TYPE_SLIDE_RIGHT of type Gtk.RevealerTransitionType>, 3: <enum GTK_REVEALER_TRANSITION_TYPE_SLIDE_LEFT of type Gtk.RevealerTransitionType>, 4: <enum GTK_REVEALER_TRANSITION_TYPE_SLIDE_UP of type Gtk.RevealerTransitionType>, 5: <enum GTK_REVEALER_TRANSITION_TYPE_SLIDE_DOWN of type Gtk.RevealerTransitionType>}, '__info__': gi.EnumInfo(RevealerTransitionType), 'NONE': <enum GTK_REVEALER_TRANSITION_TYPE_NONE of type Gtk.RevealerTransitionType>, 'CROSSFADE': <enum GTK_REVEALER_TRANSITION_TYPE_CROSSFADE of type Gtk.RevealerTransitionType>, 'SLIDE_RIGHT': <enum GTK_REVEALER_TRANSITION_TYPE_SLIDE_RIGHT of type Gtk.RevealerTransitionType>, 'SLIDE_LEFT': <enum GTK_REVEALER_TRANSITION_TYPE_SLIDE_LEFT of type Gtk.RevealerTransitionType>, 'SLIDE_UP': <enum GTK_REVEALER_TRANSITION_TYPE_SLIDE_UP of type Gtk.RevealerTransitionType>, 'SLIDE_DOWN': <enum GTK_REVEALER_TRANSITION_TYPE_SLIDE_DOWN of type Gtk.RevealerTransitionType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-    }
-    __gtype__ = None # (!) real value is '<GType GtkRevealerTransitionType (3923955280)>'
-    __info__ = gi.EnumInfo(RevealerTransitionType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NONE': <RevealerTransitionType.NONE: 0>, 'CROSSFADE': <RevealerTransitionType.CROSSFADE: 1>, 'SLIDE_RIGHT': <RevealerTransitionType.SLIDE_RIGHT: 2>, 'SLIDE_LEFT': <RevealerTransitionType.SLIDE_LEFT: 3>, 'SLIDE_UP': <RevealerTransitionType.SLIDE_UP: 4>, 'SLIDE_DOWN': <RevealerTransitionType.SLIDE_DOWN: 5>})"
+    __name__ = 'RevealerTransitionType'
+    __qualname__ = 'RevealerTransitionType'
 
 

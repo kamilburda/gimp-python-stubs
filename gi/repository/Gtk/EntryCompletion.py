@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -76,20 +75,20 @@ class EntryCompletion(__gi_overrides_GObject.Object, Buildable, CellLayout):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -130,8 +129,14 @@ class EntryCompletion(__gi_overrides_GObject.Object, Buildable, CellLayout):
         """ action_activated(self, index_:int) """
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_cursor_on_match(self, *args, **kwargs): # real signature unknown
         """ cursor_on_match(self, model:Gtk.TreeModel, iter:Gtk.TreeIter) -> bool """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_insert_prefix(self, *args, **kwargs): # real signature unknown
@@ -165,17 +170,17 @@ class EntryCompletion(__gi_overrides_GObject.Object, Buildable, CellLayout):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -256,20 +261,20 @@ class EntryCompletion(__gi_overrides_GObject.Object, Buildable, CellLayout):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -331,7 +336,8 @@ class EntryCompletion(__gi_overrides_GObject.Object, Buildable, CellLayout):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.EntryCompletion """
         pass
 
@@ -339,7 +345,8 @@ class EntryCompletion(__gi_overrides_GObject.Object, Buildable, CellLayout):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_with_area(self, area): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_with_area(cls, area): # real signature unknown; restored from __doc__
         """ new_with_area(area:Gtk.CellArea) -> Gtk.EntryCompletion """
         pass
 
@@ -480,20 +487,20 @@ class EntryCompletion(__gi_overrides_GObject.Object, Buildable, CellLayout):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -632,12 +639,14 @@ class EntryCompletion(__gi_overrides_GObject.Object, Buildable, CellLayout):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ece9abed70>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17ea320>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(EntryCompletion), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkEntryCompletion (3923972080)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_with_area': gi.FunctionInfo(new_with_area, bound=None), 'complete': gi.FunctionInfo(complete, bound=None), 'compute_prefix': gi.FunctionInfo(compute_prefix, bound=None), 'delete_action': gi.FunctionInfo(delete_action, bound=None), 'get_completion_prefix': gi.FunctionInfo(get_completion_prefix, bound=None), 'get_entry': gi.FunctionInfo(get_entry, bound=None), 'get_inline_completion': gi.FunctionInfo(get_inline_completion, bound=None), 'get_inline_selection': gi.FunctionInfo(get_inline_selection, bound=None), 'get_minimum_key_length': gi.FunctionInfo(get_minimum_key_length, bound=None), 'get_model': gi.FunctionInfo(get_model, bound=None), 'get_popup_completion': gi.FunctionInfo(get_popup_completion, bound=None), 'get_popup_set_width': gi.FunctionInfo(get_popup_set_width, bound=None), 'get_popup_single_match': gi.FunctionInfo(get_popup_single_match, bound=None), 'get_text_column': gi.FunctionInfo(get_text_column, bound=None), 'insert_action_markup': gi.FunctionInfo(insert_action_markup, bound=None), 'insert_action_text': gi.FunctionInfo(insert_action_text, bound=None), 'insert_prefix': gi.FunctionInfo(insert_prefix, bound=None), 'set_inline_completion': gi.FunctionInfo(set_inline_completion, bound=None), 'set_inline_selection': gi.FunctionInfo(set_inline_selection, bound=None), 'set_match_func': gi.FunctionInfo(set_match_func, bound=None), 'set_minimum_key_length': gi.FunctionInfo(set_minimum_key_length, bound=None), 'set_model': gi.FunctionInfo(set_model, bound=None), 'set_popup_completion': gi.FunctionInfo(set_popup_completion, bound=None), 'set_popup_set_width': gi.FunctionInfo(set_popup_set_width, bound=None), 'set_popup_single_match': gi.FunctionInfo(set_popup_single_match, bound=None), 'set_text_column': gi.FunctionInfo(set_text_column, bound=None), 'do_action_activated': gi.VFuncInfo(action_activated, bound=None), 'do_cursor_on_match': gi.VFuncInfo(cursor_on_match, bound=None), 'do_insert_prefix': gi.VFuncInfo(insert_prefix, bound=None), 'do_match_selected': gi.VFuncInfo(match_selected, bound=None), 'do_no_matches': gi.VFuncInfo(no_matches, bound=None), 'parent_instance': <property object at 0x000002eceabbd760>, 'priv': <property object at 0x000002eceabbd850>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(EntryCompletion), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkEntryCompletion (3537896528)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_with_area': <classmethod(gi.FunctionInfo(new_with_area))>, 'complete': gi.FunctionInfo(complete), 'compute_prefix': gi.FunctionInfo(compute_prefix), 'delete_action': gi.FunctionInfo(delete_action), 'get_completion_prefix': gi.FunctionInfo(get_completion_prefix), 'get_entry': gi.FunctionInfo(get_entry), 'get_inline_completion': gi.FunctionInfo(get_inline_completion), 'get_inline_selection': gi.FunctionInfo(get_inline_selection), 'get_minimum_key_length': gi.FunctionInfo(get_minimum_key_length), 'get_model': gi.FunctionInfo(get_model), 'get_popup_completion': gi.FunctionInfo(get_popup_completion), 'get_popup_set_width': gi.FunctionInfo(get_popup_set_width), 'get_popup_single_match': gi.FunctionInfo(get_popup_single_match), 'get_text_column': gi.FunctionInfo(get_text_column), 'insert_action_markup': gi.FunctionInfo(insert_action_markup), 'insert_action_text': gi.FunctionInfo(insert_action_text), 'insert_prefix': gi.FunctionInfo(insert_prefix), 'set_inline_completion': gi.FunctionInfo(set_inline_completion), 'set_inline_selection': gi.FunctionInfo(set_inline_selection), 'set_match_func': gi.FunctionInfo(set_match_func), 'set_minimum_key_length': gi.FunctionInfo(set_minimum_key_length), 'set_model': gi.FunctionInfo(set_model), 'set_popup_completion': gi.FunctionInfo(set_popup_completion), 'set_popup_set_width': gi.FunctionInfo(set_popup_set_width), 'set_popup_single_match': gi.FunctionInfo(set_popup_single_match), 'set_text_column': gi.FunctionInfo(set_text_column), 'do_action_activated': gi.VFuncInfo(action_activated), 'do_cursor_on_match': gi.VFuncInfo(cursor_on_match), 'do_insert_prefix': gi.VFuncInfo(insert_prefix), 'do_match_selected': gi.VFuncInfo(match_selected), 'do_no_matches': gi.VFuncInfo(no_matches), 'parent_instance': <property object at 0x000002bfd175ca40>, 'priv': <property object at 0x000002bfd175cb30>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkEntryCompletion\n\nSignals from GtkEntryCompletion:\n  insert-prefix (gchararray) -> gboolean\n  match-selected (GtkTreeModel, GtkTreeIter) -> gboolean\n  cursor-on-match (GtkTreeModel, GtkTreeIter) -> gboolean\n  no-matches ()\n  action-activated (gint)\n\nProperties from GtkEntryCompletion:\n  model -> GtkTreeModel: Completion Model\n    The model to find matches in\n  minimum-key-length -> gint: Minimum Key Length\n    Minimum length of the search key in order to look up matches\n  text-column -> gint: Text column\n    The column of the model containing the strings.\n  inline-completion -> gboolean: Inline completion\n    Whether the common prefix should be inserted automatically\n  popup-completion -> gboolean: Popup completion\n    Whether the completions should be shown in a popup window\n  popup-set-width -> gboolean: Popup set width\n    If TRUE, the popup window will have the same size as the entry\n  popup-single-match -> gboolean: Popup single match\n    If TRUE, the popup window will appear for a single match.\n  inline-selection -> gboolean: Inline selection\n    Your description here\n  cell-area -> GtkCellArea: Cell Area\n    The GtkCellArea used to layout cells\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkEntryCompletion (3923972080)>'
+    __gtype__ = None # (!) real value is '<GType GtkEntryCompletion (3537896528)>'
     __info__ = ObjectInfo(EntryCompletion)
+    __static_attributes__ = ()
 
 

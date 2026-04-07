@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -165,7 +164,7 @@ class MenuShellClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MenuShellClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MenuShellClass' objects>, '__weakref__': <attribute '__weakref__' of 'MenuShellClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceac13dd0>, 'submenu_placement': <property object at 0x000002eceac13ec0>, 'deactivate': <property object at 0x000002eceac13fb0>, 'selection_done': <property object at 0x000002eceac1c0e0>, 'move_current': <property object at 0x000002eceac1c1d0>, 'activate_current': <property object at 0x000002eceac1c2c0>, 'cancel': <property object at 0x000002eceac1c3b0>, 'select_item': <property object at 0x000002eceac1c4a0>, 'insert': <property object at 0x000002eceac1c590>, 'get_popup_delay': <property object at 0x000002eceac1c680>, 'move_selected': <property object at 0x000002eceac1c770>, '_gtk_reserved1': <property object at 0x000002eceac1c860>, '_gtk_reserved2': <property object at 0x000002eceac1c950>, '_gtk_reserved3': <property object at 0x000002eceac1ca40>, '_gtk_reserved4': <property object at 0x000002eceac1cb30>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MenuShellClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MenuShellClass' objects>, '__weakref__': <attribute '__weakref__' of 'MenuShellClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18b6d40>, 'submenu_placement': <property object at 0x000002bfd18b6e30>, 'deactivate': <property object at 0x000002bfd18b6f20>, 'selection_done': <property object at 0x000002bfd18b7010>, 'move_current': <property object at 0x000002bfd18b7100>, 'activate_current': <property object at 0x000002bfd18b71f0>, 'cancel': <property object at 0x000002bfd18b72e0>, 'select_item': <property object at 0x000002bfd18b73d0>, 'insert': <property object at 0x000002bfd18b74c0>, 'get_popup_delay': <property object at 0x000002bfd18b75b0>, 'move_selected': <property object at 0x000002bfd18b76a0>, '_gtk_reserved1': <property object at 0x000002bfd18b7790>, '_gtk_reserved2': <property object at 0x000002bfd18b7880>, '_gtk_reserved3': <property object at 0x000002bfd18b7970>, '_gtk_reserved4': <property object at 0x000002bfd18b7a60>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(MenuShellClass)
 

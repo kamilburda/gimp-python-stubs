@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -52,7 +57,11 @@ class ListModel(ListModel):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -155,10 +164,10 @@ class ListModel(ListModel):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gio', '__getitem__': <function ListModel.__getitem__ at 0x000001a7938ba660>, '__contains__': <function ListModel.__contains__ at 0x000001a793940360>, '__len__': <function ListModel.__len__ at 0x000001a793940400>, '__iter__': <function ListModel.__iter__ at 0x000001a7939404a0>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gio', '__getitem__': <function ListModel.__getitem__ at 0x000001ea7028ae80>, '__contains__': <function ListModel.__contains__ at 0x000001ea70308b80>, '__len__': <function ListModel.__len__ at 0x000001ea70308c20>, '__iter__': <function ListModel.__iter__ at 0x000001ea70308cc0>, '__doc__': None, '__gsignals__': {}})"
     __gdoc__ = 'Interface GListModel\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GListModel (2430931008)>'
+    __gtype__ = None # (!) real value is '<GType GListModel (1845785344)>'
     __info__ = InterfaceInfo(ListModel)
 
 

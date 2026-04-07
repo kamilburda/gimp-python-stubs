@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -140,6 +139,11 @@ class TreeModelRowIter(object):
 
 
     __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__init__': <function TreeModelRowIter.__init__ at 0x000002ece8a7a660>, '__next__': <function TreeModelRowIter.__next__ at 0x000002ece8a7a700>, '__iter__': <function TreeModelRowIter.__iter__ at 0x000002ece8a7a7a0>, '__dict__': <attribute '__dict__' of 'TreeModelRowIter' objects>, '__weakref__': <attribute '__weakref__' of 'TreeModelRowIter' objects>, '__doc__': None})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__firstlineno__': 1280, '__init__': <function TreeModelRowIter.__init__ at 0x000002bfcebd2820>, '__next__': <function TreeModelRowIter.__next__ at 0x000002bfcebd28d0>, '__iter__': <function TreeModelRowIter.__iter__ at 0x000002bfcebd2980>, '__static_attributes__': ('iter', 'model'), '__dict__': <attribute '__dict__' of 'TreeModelRowIter' objects>, '__weakref__': <attribute '__weakref__' of 'TreeModelRowIter' objects>, '__doc__': None})"
+    __firstlineno__ = 1280
+    __static_attributes__ = (
+        'iter',
+        'model',
+    )
 
 

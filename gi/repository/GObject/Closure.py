@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -59,11 +58,13 @@ class Closure(__gi.Boxed):
         """ invoke(self, param_values:list, invocation_hint=None) -> return_value:GObject.Value """
         pass
 
-    def new_object(self, sizeof_closure, p_object): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_object(cls, sizeof_closure, p_object): # real signature unknown; restored from __doc__
         """ new_object(sizeof_closure:int, object:GObject.Object) -> GObject.Closure """
         pass
 
-    def new_simple(self, sizeof_closure, data=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_simple(cls, sizeof_closure, data=None): # real signature unknown; restored from __doc__
         """ new_simple(sizeof_closure:int, data=None) -> GObject.Closure """
         pass
 
@@ -95,7 +96,11 @@ class Closure(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -213,8 +218,8 @@ class Closure(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Closure), '__module__': 'gi.repository.GObject', '__gtype__': <GType GClosure (83287104)>, '__dict__': <attribute '__dict__' of 'Closure' objects>, '__weakref__': <attribute '__weakref__' of 'Closure' objects>, '__doc__': None, 'ref_count': <property object at 0x0000010b07a4dfd0>, 'meta_marshal_nouse': <property object at 0x0000010b07a4e110>, 'n_guards': <property object at 0x0000010b07a4e200>, 'n_fnotifiers': <property object at 0x0000010b07a4e2f0>, 'n_inotifiers': <property object at 0x0000010b07a4e3e0>, 'in_inotify': <property object at 0x0000010b07a4e4d0>, 'floating': <property object at 0x0000010b07a4e5c0>, 'derivative_flag': <property object at 0x0000010b07a4e6b0>, 'in_marshal': <property object at 0x0000010b07a4e7a0>, 'is_invalid': <property object at 0x0000010b07a4e890>, 'marshal': <property object at 0x0000010b07a4e980>, 'data': <property object at 0x0000010b07a4ea70>, 'notifiers': <property object at 0x0000010b07a4eb60>, 'new_object': gi.FunctionInfo(new_object, bound=None), 'new_simple': gi.FunctionInfo(new_simple, bound=None), 'invalidate': gi.FunctionInfo(invalidate, bound=None), 'invoke': gi.FunctionInfo(invoke, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'sink': gi.FunctionInfo(sink, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GClosure (83287104)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Closure), '__module__': 'gi.repository.GObject', '__gtype__': <GType GClosure (265147936)>, '__dict__': <attribute '__dict__' of 'Closure' objects>, '__weakref__': <attribute '__weakref__' of 'Closure' objects>, '__doc__': None, 'ref_count': <property object at 0x000001dd11ea6ca0>, 'meta_marshal_nouse': <property object at 0x000001dd11ea6d90>, 'n_guards': <property object at 0x000001dd11ea6e80>, 'n_fnotifiers': <property object at 0x000001dd11ea6f70>, 'n_inotifiers': <property object at 0x000001dd11ea7060>, 'in_inotify': <property object at 0x000001dd11ea7150>, 'floating': <property object at 0x000001dd11ea7240>, 'derivative_flag': <property object at 0x000001dd11ea7330>, 'in_marshal': <property object at 0x000001dd11ea7420>, 'is_invalid': <property object at 0x000001dd11ea7510>, 'marshal': <property object at 0x000001dd11ea7600>, 'data': <property object at 0x000001dd11ea76f0>, 'notifiers': <property object at 0x000001dd11ea77e0>, 'new_object': <classmethod(gi.FunctionInfo(new_object))>, 'new_simple': <classmethod(gi.FunctionInfo(new_simple))>, 'invalidate': gi.FunctionInfo(invalidate), 'invoke': gi.FunctionInfo(invoke), 'ref': gi.FunctionInfo(ref), 'sink': gi.FunctionInfo(sink), 'unref': gi.FunctionInfo(unref)})"
+    __gtype__ = None # (!) real value is '<GType GClosure (265147936)>'
     __info__ = StructInfo(Closure)
 
 

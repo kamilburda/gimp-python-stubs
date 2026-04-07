@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -138,7 +143,11 @@ class DtlsConnection(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -229,10 +238,10 @@ class DtlsConnection(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(DtlsConnection), '__module__': 'gi.repository.Gio', '__gtype__': <GType GDtlsConnection (2472623920)>, '__dict__': <attribute '__dict__' of 'DtlsConnection' objects>, '__weakref__': <attribute '__weakref__' of 'DtlsConnection' objects>, '__doc__': None, '__gsignals__': {}, 'close': gi.FunctionInfo(close, bound=None), 'close_async': gi.FunctionInfo(close_async, bound=None), 'close_finish': gi.FunctionInfo(close_finish, bound=None), 'emit_accept_certificate': gi.FunctionInfo(emit_accept_certificate, bound=None), 'get_certificate': gi.FunctionInfo(get_certificate, bound=None), 'get_channel_binding_data': gi.FunctionInfo(get_channel_binding_data, bound=None), 'get_ciphersuite_name': gi.FunctionInfo(get_ciphersuite_name, bound=None), 'get_database': gi.FunctionInfo(get_database, bound=None), 'get_interaction': gi.FunctionInfo(get_interaction, bound=None), 'get_negotiated_protocol': gi.FunctionInfo(get_negotiated_protocol, bound=None), 'get_peer_certificate': gi.FunctionInfo(get_peer_certificate, bound=None), 'get_peer_certificate_errors': gi.FunctionInfo(get_peer_certificate_errors, bound=None), 'get_protocol_version': gi.FunctionInfo(get_protocol_version, bound=None), 'get_rehandshake_mode': gi.FunctionInfo(get_rehandshake_mode, bound=None), 'get_require_close_notify': gi.FunctionInfo(get_require_close_notify, bound=None), 'handshake': gi.FunctionInfo(handshake, bound=None), 'handshake_async': gi.FunctionInfo(handshake_async, bound=None), 'handshake_finish': gi.FunctionInfo(handshake_finish, bound=None), 'set_advertised_protocols': gi.FunctionInfo(set_advertised_protocols, bound=None), 'set_certificate': gi.FunctionInfo(set_certificate, bound=None), 'set_database': gi.FunctionInfo(set_database, bound=None), 'set_interaction': gi.FunctionInfo(set_interaction, bound=None), 'set_rehandshake_mode': gi.FunctionInfo(set_rehandshake_mode, bound=None), 'set_require_close_notify': gi.FunctionInfo(set_require_close_notify, bound=None), 'shutdown': gi.FunctionInfo(shutdown, bound=None), 'shutdown_async': gi.FunctionInfo(shutdown_async, bound=None), 'shutdown_finish': gi.FunctionInfo(shutdown_finish, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(DtlsConnection), '__module__': 'gi.repository.Gio', '__gtype__': <GType GDtlsConnection (1848619088)>, '__dict__': <attribute '__dict__' of 'DtlsConnection' objects>, '__weakref__': <attribute '__weakref__' of 'DtlsConnection' objects>, '__doc__': None, '__gsignals__': {}, 'close': gi.FunctionInfo(close), 'close_async': gi.FunctionInfo(close_async), 'close_finish': gi.FunctionInfo(close_finish), 'emit_accept_certificate': gi.FunctionInfo(emit_accept_certificate), 'get_certificate': gi.FunctionInfo(get_certificate), 'get_channel_binding_data': gi.FunctionInfo(get_channel_binding_data), 'get_ciphersuite_name': gi.FunctionInfo(get_ciphersuite_name), 'get_database': gi.FunctionInfo(get_database), 'get_interaction': gi.FunctionInfo(get_interaction), 'get_negotiated_protocol': gi.FunctionInfo(get_negotiated_protocol), 'get_peer_certificate': gi.FunctionInfo(get_peer_certificate), 'get_peer_certificate_errors': gi.FunctionInfo(get_peer_certificate_errors), 'get_protocol_version': gi.FunctionInfo(get_protocol_version), 'get_rehandshake_mode': gi.FunctionInfo(get_rehandshake_mode), 'get_require_close_notify': gi.FunctionInfo(get_require_close_notify), 'handshake': gi.FunctionInfo(handshake), 'handshake_async': gi.FunctionInfo(handshake_async), 'handshake_finish': gi.FunctionInfo(handshake_finish), 'set_advertised_protocols': gi.FunctionInfo(set_advertised_protocols), 'set_certificate': gi.FunctionInfo(set_certificate), 'set_database': gi.FunctionInfo(set_database), 'set_interaction': gi.FunctionInfo(set_interaction), 'set_rehandshake_mode': gi.FunctionInfo(set_rehandshake_mode), 'set_require_close_notify': gi.FunctionInfo(set_require_close_notify), 'shutdown': gi.FunctionInfo(shutdown), 'shutdown_async': gi.FunctionInfo(shutdown_async), 'shutdown_finish': gi.FunctionInfo(shutdown_finish)})"
     __gdoc__ = 'Interface GDtlsConnection\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GDtlsConnection (2472623920)>'
+    __gtype__ = None # (!) real value is '<GType GDtlsConnection (1848619088)>'
     __info__ = InterfaceInfo(DtlsConnection)
 
 

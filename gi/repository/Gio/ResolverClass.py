@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class ResolverClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -162,7 +171,7 @@ class ResolverClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ResolverClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ResolverClass' objects>, '__weakref__': <attribute '__weakref__' of 'ResolverClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793ddbd80>, 'reload': <property object at 0x000001a793ddbe70>, 'lookup_by_name': <property object at 0x000001a793ddbf60>, 'lookup_by_name_async': <property object at 0x000001a793dd00e0>, 'lookup_by_name_finish': <property object at 0x000001a793dd01d0>, 'lookup_by_address': <property object at 0x000001a793dd02c0>, 'lookup_by_address_async': <property object at 0x000001a793dd03b0>, 'lookup_by_address_finish': <property object at 0x000001a793dd04a0>, 'lookup_service': <property object at 0x000001a793dd0540>, 'lookup_service_async': <property object at 0x000001a793dd0680>, 'lookup_service_finish': <property object at 0x000001a793dd0720>, 'lookup_records': <property object at 0x000001a793dd07c0>, 'lookup_records_async': <property object at 0x000001a793dd0900>, 'lookup_records_finish': <property object at 0x000001a793dd09f0>, 'lookup_by_name_with_flags_async': <property object at 0x000001a793dd0ae0>, 'lookup_by_name_with_flags_finish': <property object at 0x000001a793dd0b80>, 'lookup_by_name_with_flags': <property object at 0x000001a793dd0cc0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ResolverClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ResolverClass' objects>, '__weakref__': <attribute '__weakref__' of 'ResolverClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea709b96c0>, 'reload': <property object at 0x000001ea709b97b0>, 'lookup_by_name': <property object at 0x000001ea709b98a0>, 'lookup_by_name_async': <property object at 0x000001ea709b9990>, 'lookup_by_name_finish': <property object at 0x000001ea709b9a80>, 'lookup_by_address': <property object at 0x000001ea709b9b70>, 'lookup_by_address_async': <property object at 0x000001ea709b9c60>, 'lookup_by_address_finish': <property object at 0x000001ea709b9da0>, 'lookup_service': <property object at 0x000001ea709b9e40>, 'lookup_service_async': <property object at 0x000001ea709b9f30>, 'lookup_service_finish': <property object at 0x000001ea709ba020>, 'lookup_records': <property object at 0x000001ea709ba110>, 'lookup_records_async': <property object at 0x000001ea709ba200>, 'lookup_records_finish': <property object at 0x000001ea709ba2f0>, 'lookup_by_name_with_flags_async': <property object at 0x000001ea709ba430>, 'lookup_by_name_with_flags_finish': <property object at 0x000001ea709ba520>, 'lookup_by_name_with_flags': <property object at 0x000001ea709ba610>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ResolverClass)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -163,7 +162,7 @@ class MenuItemClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MenuItemClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MenuItemClass' objects>, '__weakref__': <attribute '__weakref__' of 'MenuItemClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceac12ca0>, 'hide_on_activate': <property object at 0x000002eceac12d90>, 'activate': <property object at 0x000002eceac12e80>, 'activate_item': <property object at 0x000002eceac12f70>, 'toggle_size_request': <property object at 0x000002eceac13060>, 'toggle_size_allocate': <property object at 0x000002eceac13150>, 'set_label': <property object at 0x000002eceac13240>, 'get_label': <property object at 0x000002eceac13330>, 'select': <property object at 0x000002eceac13420>, 'deselect': <property object at 0x000002eceac13510>, '_gtk_reserved1': <property object at 0x000002eceac13600>, '_gtk_reserved2': <property object at 0x000002eceac136f0>, '_gtk_reserved3': <property object at 0x000002eceac137e0>, '_gtk_reserved4': <property object at 0x000002eceac138d0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MenuItemClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MenuItemClass' objects>, '__weakref__': <attribute '__weakref__' of 'MenuItemClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18b5c10>, 'hide_on_activate': <property object at 0x000002bfd18b5d00>, 'activate': <property object at 0x000002bfd18b5df0>, 'activate_item': <property object at 0x000002bfd18b5ee0>, 'toggle_size_request': <property object at 0x000002bfd18b5fd0>, 'toggle_size_allocate': <property object at 0x000002bfd18b60c0>, 'set_label': <property object at 0x000002bfd18b61b0>, 'get_label': <property object at 0x000002bfd18b62a0>, 'select': <property object at 0x000002bfd18b6390>, 'deselect': <property object at 0x000002bfd18b6480>, '_gtk_reserved1': <property object at 0x000002bfd18b6570>, '_gtk_reserved2': <property object at 0x000002bfd18b6660>, '_gtk_reserved3': <property object at 0x000002bfd18b6750>, '_gtk_reserved4': <property object at 0x000002bfd18b6840>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(MenuItemClass)
 

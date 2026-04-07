@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Rand(__gi.Boxed):
@@ -50,15 +48,18 @@ class Rand(__gi.Boxed):
         """ int_range(self, begin:int, end:int) -> int """
         return 0
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> GLib.Rand """
         pass
 
-    def new_with_seed(self, seed): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_with_seed(cls, seed): # real signature unknown; restored from __doc__
         """ new_with_seed(seed:int) -> GLib.Rand """
         pass
 
-    def new_with_seed_array(self, seed, seed_length): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_with_seed_array(cls, seed, seed_length): # real signature unknown; restored from __doc__
         """ new_with_seed_array(seed:int, seed_length:int) -> GLib.Rand """
         pass
 
@@ -182,8 +183,8 @@ class Rand(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Rand), '__module__': 'gi.repository.GLib', '__gtype__': <GType GRand (163504544)>, '__dict__': <attribute '__dict__' of 'Rand' objects>, '__weakref__': <attribute '__weakref__' of 'Rand' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'new_with_seed': gi.FunctionInfo(new_with_seed, bound=None), 'new_with_seed_array': gi.FunctionInfo(new_with_seed_array, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'double': gi.FunctionInfo(double, bound=None), 'double_range': gi.FunctionInfo(double_range, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'int': gi.FunctionInfo(int, bound=None), 'int_range': gi.FunctionInfo(int_range, bound=None), 'set_seed': gi.FunctionInfo(set_seed, bound=None), 'set_seed_array': gi.FunctionInfo(set_seed_array, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GRand (163504544)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Rand), '__module__': 'gi.repository.GLib', '__gtype__': <GType GRand (2640519168)>, '__dict__': <attribute '__dict__' of 'Rand' objects>, '__weakref__': <attribute '__weakref__' of 'Rand' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_with_seed': <classmethod(gi.FunctionInfo(new_with_seed))>, 'new_with_seed_array': <classmethod(gi.FunctionInfo(new_with_seed_array))>, 'copy': gi.FunctionInfo(copy), 'double': gi.FunctionInfo(double), 'double_range': gi.FunctionInfo(double_range), 'free': gi.FunctionInfo(free), 'int': gi.FunctionInfo(int), 'int_range': gi.FunctionInfo(int_range), 'set_seed': gi.FunctionInfo(set_seed), 'set_seed_array': gi.FunctionInfo(set_seed_array), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GRand (2640519168)>'
     __info__ = StructInfo(Rand)
 
 

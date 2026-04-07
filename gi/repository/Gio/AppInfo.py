@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -190,7 +195,11 @@ class AppInfo(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -281,10 +290,10 @@ class AppInfo(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(AppInfo), '__module__': 'gi.repository.Gio', '__gtype__': <GType GAppInfo (2472614848)>, '__dict__': <attribute '__dict__' of 'AppInfo' objects>, '__weakref__': <attribute '__weakref__' of 'AppInfo' objects>, '__doc__': None, '__gsignals__': {}, 'create_from_commandline': gi.FunctionInfo(create_from_commandline, bound=None), 'get_all': gi.FunctionInfo(get_all, bound=None), 'get_all_for_type': gi.FunctionInfo(get_all_for_type, bound=None), 'get_default_for_type': gi.FunctionInfo(get_default_for_type, bound=None), 'get_default_for_type_async': gi.FunctionInfo(get_default_for_type_async, bound=None), 'get_default_for_type_finish': gi.FunctionInfo(get_default_for_type_finish, bound=None), 'get_default_for_uri_scheme': gi.FunctionInfo(get_default_for_uri_scheme, bound=None), 'get_default_for_uri_scheme_async': gi.FunctionInfo(get_default_for_uri_scheme_async, bound=None), 'get_default_for_uri_scheme_finish': gi.FunctionInfo(get_default_for_uri_scheme_finish, bound=None), 'get_fallback_for_type': gi.FunctionInfo(get_fallback_for_type, bound=None), 'get_recommended_for_type': gi.FunctionInfo(get_recommended_for_type, bound=None), 'launch_default_for_uri': gi.FunctionInfo(launch_default_for_uri, bound=None), 'launch_default_for_uri_async': gi.FunctionInfo(launch_default_for_uri_async, bound=None), 'launch_default_for_uri_finish': gi.FunctionInfo(launch_default_for_uri_finish, bound=None), 'reset_type_associations': gi.FunctionInfo(reset_type_associations, bound=None), 'add_supports_type': gi.FunctionInfo(add_supports_type, bound=None), 'can_delete': gi.FunctionInfo(can_delete, bound=None), 'can_remove_supports_type': gi.FunctionInfo(can_remove_supports_type, bound=None), 'delete': gi.FunctionInfo(delete, bound=None), 'dup': gi.FunctionInfo(dup, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'get_commandline': gi.FunctionInfo(get_commandline, bound=None), 'get_description': gi.FunctionInfo(get_description, bound=None), 'get_display_name': gi.FunctionInfo(get_display_name, bound=None), 'get_executable': gi.FunctionInfo(get_executable, bound=None), 'get_icon': gi.FunctionInfo(get_icon, bound=None), 'get_id': gi.FunctionInfo(get_id, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_supported_types': gi.FunctionInfo(get_supported_types, bound=None), 'launch': gi.FunctionInfo(launch, bound=None), 'launch_uris': gi.FunctionInfo(launch_uris, bound=None), 'launch_uris_async': gi.FunctionInfo(launch_uris_async, bound=None), 'launch_uris_finish': gi.FunctionInfo(launch_uris_finish, bound=None), 'remove_supports_type': gi.FunctionInfo(remove_supports_type, bound=None), 'set_as_default_for_extension': gi.FunctionInfo(set_as_default_for_extension, bound=None), 'set_as_default_for_type': gi.FunctionInfo(set_as_default_for_type, bound=None), 'set_as_last_used_for_type': gi.FunctionInfo(set_as_last_used_for_type, bound=None), 'should_show': gi.FunctionInfo(should_show, bound=None), 'supports_files': gi.FunctionInfo(supports_files, bound=None), 'supports_uris': gi.FunctionInfo(supports_uris, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(AppInfo), '__module__': 'gi.repository.Gio', '__gtype__': <GType GAppInfo (1838043120)>, '__dict__': <attribute '__dict__' of 'AppInfo' objects>, '__weakref__': <attribute '__weakref__' of 'AppInfo' objects>, '__doc__': None, '__gsignals__': {}, 'create_from_commandline': <staticmethod(gi.FunctionInfo(create_from_commandline))>, 'get_all': <staticmethod(gi.FunctionInfo(get_all))>, 'get_all_for_type': <staticmethod(gi.FunctionInfo(get_all_for_type))>, 'get_default_for_type': <staticmethod(gi.FunctionInfo(get_default_for_type))>, 'get_default_for_type_async': <staticmethod(gi.FunctionInfo(get_default_for_type_async))>, 'get_default_for_type_finish': <staticmethod(gi.FunctionInfo(get_default_for_type_finish))>, 'get_default_for_uri_scheme': <staticmethod(gi.FunctionInfo(get_default_for_uri_scheme))>, 'get_default_for_uri_scheme_async': <staticmethod(gi.FunctionInfo(get_default_for_uri_scheme_async))>, 'get_default_for_uri_scheme_finish': <staticmethod(gi.FunctionInfo(get_default_for_uri_scheme_finish))>, 'get_fallback_for_type': <staticmethod(gi.FunctionInfo(get_fallback_for_type))>, 'get_recommended_for_type': <staticmethod(gi.FunctionInfo(get_recommended_for_type))>, 'launch_default_for_uri': <staticmethod(gi.FunctionInfo(launch_default_for_uri))>, 'launch_default_for_uri_async': <staticmethod(gi.FunctionInfo(launch_default_for_uri_async))>, 'launch_default_for_uri_finish': <staticmethod(gi.FunctionInfo(launch_default_for_uri_finish))>, 'reset_type_associations': <staticmethod(gi.FunctionInfo(reset_type_associations))>, 'add_supports_type': gi.FunctionInfo(add_supports_type), 'can_delete': gi.FunctionInfo(can_delete), 'can_remove_supports_type': gi.FunctionInfo(can_remove_supports_type), 'delete': gi.FunctionInfo(delete), 'dup': gi.FunctionInfo(dup), 'equal': gi.FunctionInfo(equal), 'get_commandline': gi.FunctionInfo(get_commandline), 'get_description': gi.FunctionInfo(get_description), 'get_display_name': gi.FunctionInfo(get_display_name), 'get_executable': gi.FunctionInfo(get_executable), 'get_icon': gi.FunctionInfo(get_icon), 'get_id': gi.FunctionInfo(get_id), 'get_name': gi.FunctionInfo(get_name), 'get_supported_types': gi.FunctionInfo(get_supported_types), 'launch': gi.FunctionInfo(launch), 'launch_uris': gi.FunctionInfo(launch_uris), 'launch_uris_async': gi.FunctionInfo(launch_uris_async), 'launch_uris_finish': gi.FunctionInfo(launch_uris_finish), 'remove_supports_type': gi.FunctionInfo(remove_supports_type), 'set_as_default_for_extension': gi.FunctionInfo(set_as_default_for_extension), 'set_as_default_for_type': gi.FunctionInfo(set_as_default_for_type), 'set_as_last_used_for_type': gi.FunctionInfo(set_as_last_used_for_type), 'should_show': gi.FunctionInfo(should_show), 'supports_files': gi.FunctionInfo(supports_files), 'supports_uris': gi.FunctionInfo(supports_uris)})"
     __gdoc__ = 'Interface GAppInfo\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GAppInfo (2472614848)>'
+    __gtype__ = None # (!) real value is '<GType GAppInfo (1838043120)>'
     __info__ = InterfaceInfo(AppInfo)
 
 

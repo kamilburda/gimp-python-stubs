@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -53,7 +49,7 @@ MAX_RESOLUTION = 1048576.0
 
 MICRO_VERSION = 0
 
-MINOR_VERSION = 0
+MINOR_VERSION = 2
 
 MIN_IMAGE_SIZE = 1
 
@@ -88,13 +84,11 @@ PARASITE_UNDOABLE = 2
 
 PIXPIPE_MAXDIM = 4
 
-VERSION = '3.0.0-RC3'
+VERSION = '3.2.0-RC3'
 
 _namespace = 'Gimp'
 
 _version = '3.0'
-
-__weakref__ = None
 
 # functions
 
@@ -200,6 +194,10 @@ def cairo_checkerboard_create(cr, size, light, dark): # real signature unknown; 
 
 def cairo_surface_create_buffer(surface, format): # real signature unknown; restored from __doc__
     """ cairo_surface_create_buffer(surface:cairo.Surface, format:Babl.Object) -> Gegl.Buffer """
+    pass
+
+def cairo_surface_get_buffer(surface, format, sync_back): # real signature unknown; restored from __doc__
+    """ cairo_surface_get_buffer(surface:cairo.Surface, format:Babl.Object, sync_back:bool) -> Gegl.Buffer """
     pass
 
 def cairo_surface_get_format(surface): # real signature unknown; restored from __doc__
@@ -506,6 +504,14 @@ def context_get_opacity(): # real signature unknown; restored from __doc__
     """ context_get_opacity() -> float """
     return 0.0
 
+def context_get_paint_fade_length(): # real signature unknown; restored from __doc__
+    """ context_get_paint_fade_length() -> float """
+    return 0.0
+
+def context_get_paint_fade_repeat(): # real signature unknown; restored from __doc__
+    """ context_get_paint_fade_repeat() -> Gimp.RepeatMode """
+    pass
+
 def context_get_paint_method(): # real signature unknown; restored from __doc__
     """ context_get_paint_method() -> str """
     return ""
@@ -756,6 +762,14 @@ def context_set_mypaint_brush(name): # real signature unknown; restored from __d
 
 def context_set_opacity(opacity): # real signature unknown; restored from __doc__
     """ context_set_opacity(opacity:float) -> bool """
+    return False
+
+def context_set_paint_fade_length(fade_length): # real signature unknown; restored from __doc__
+    """ context_set_paint_fade_length(fade_length:float) -> bool """
+    return False
+
+def context_set_paint_fade_repeat(fade_repeat): # real signature unknown; restored from __doc__
+    """ context_set_paint_fade_repeat(fade_repeat:Gimp.RepeatMode) -> bool """
     return False
 
 def context_set_paint_method(name): # real signature unknown; restored from __doc__
@@ -1214,6 +1228,18 @@ def icon_theme_dir(): # real signature unknown; restored from __doc__
     """ icon_theme_dir() -> str """
     return ""
 
+def images_close_popup(callback): # real signature unknown; restored from __doc__
+    """ images_close_popup(callback:str) -> bool """
+    return False
+
+def images_popup(callback, popup_title, initial_image=None, parent_window=None): # real signature unknown; restored from __doc__
+    """ images_popup(callback:str, popup_title:str, initial_image:Gimp.Image=None, parent_window:GLib.Bytes=None) -> bool """
+    return False
+
+def images_set_popup(callback, image): # real signature unknown; restored from __doc__
+    """ images_set_popup(callback:str, image:Gimp.Image) -> bool """
+    return False
+
 def installation_directory(): # real signature unknown; restored from __doc__
     """ installation_directory() -> str """
     return ""
@@ -1228,6 +1254,18 @@ def int32_array_set_values(array, values, static_data): # real signature unknown
 
 def is_canonical_identifier(identifier): # real signature unknown; restored from __doc__
     """ is_canonical_identifier(identifier:str) -> bool """
+    return False
+
+def items_close_popup(callback): # real signature unknown; restored from __doc__
+    """ items_close_popup(callback:str) -> bool """
+    return False
+
+def items_popup(callback, popup_title, item_type, initial_item=None, parent_window=None): # real signature unknown; restored from __doc__
+    """ items_popup(callback:str, popup_title:str, item_type:str, initial_item:Gimp.Item=None, parent_window:GLib.Bytes=None) -> bool """
+    return False
+
+def items_set_popup(callback, item): # real signature unknown; restored from __doc__
+    """ items_set_popup(callback:str, item:Gimp.Item) -> bool """
     return False
 
 def locale_directory(): # real signature unknown; restored from __doc__
@@ -1334,6 +1372,10 @@ def param_spec_core_object_array_get_object_type(pspec): # real signature unknow
     """ param_spec_core_object_array_get_object_type(pspec:GObject.ParamSpec) -> GType """
     pass
 
+def param_spec_curve(name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
+    """ param_spec_curve(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec """
+    pass
+
 def param_spec_display(name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
     """ param_spec_display(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec """
     pass
@@ -1418,6 +1460,10 @@ def param_spec_layer_mask(name, nick, blurb, none_ok, flags): # real signature u
     """ param_spec_layer_mask(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec """
     pass
 
+def param_spec_link_layer(name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
+    """ param_spec_link_layer(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec """
+    pass
+
 def param_spec_matrix2(name, nick, blurb, default_value, flags): # real signature unknown; restored from __doc__
     """ param_spec_matrix2(name:str, nick:str, blurb:str, default_value:Gimp.Matrix2, flags:GObject.ParamFlags) -> GObject.ParamSpec """
     pass
@@ -1462,6 +1508,10 @@ def param_spec_pattern(name, nick, blurb, none_ok, default_value=None, default_t
     """ param_spec_pattern(name:str, nick:str, blurb:str, none_ok:bool, default_value:Gimp.Pattern=None, default_to_context:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec """
     pass
 
+def param_spec_rasterizable(name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
+    """ param_spec_rasterizable(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec """
+    pass
+
 def param_spec_resource(name, nick, blurb, resource_type, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
     """ param_spec_resource(name:str, nick:str, blurb:str, resource_type:GType, none_ok:bool, default_value:Gimp.Resource=None, default_to_context:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec """
     pass
@@ -1500,6 +1550,10 @@ def param_spec_value_array(name, nick, blurb, element_spec=None, flags): # real 
 
 def param_spec_value_array_get_element_spec(pspec): # real signature unknown; restored from __doc__
     """ param_spec_value_array_get_element_spec(pspec:GObject.ParamSpec) -> GObject.ParamSpec """
+    pass
+
+def param_spec_vector_layer(name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
+    """ param_spec_vector_layer(name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) -> GObject.ParamSpec """
     pass
 
 def patterns_close_popup(pattern_callback): # real signature unknown; restored from __doc__
@@ -1690,6 +1744,10 @@ def units_to_points(value, unit, resolution): # real signature unknown; restored
     """ units_to_points(value:float, unit:Gimp.Unit, resolution:float) -> float """
     return 0.0
 
+def update_metadata(): # real signature unknown; restored from __doc__
+    """ update_metadata() -> bool """
+    return False
+
 def user_time(): # real signature unknown; restored from __doc__
     """ user_time() -> int """
     return 0
@@ -1774,112 +1832,6 @@ def wm_class(): # real signature unknown; restored from __doc__
     """ wm_class() -> str """
     return ""
 
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """
-    Default object formatter.
-    
-    Return str(self) if format_spec is empty. Raise TypeError otherwise.
-    """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    """ Might raise gi._gi.RepositoryError """
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
-    pass
-
 # classes
 
 from .AddMaskType import AddMaskType
@@ -1927,6 +1879,11 @@ from .ConfigWriter import ConfigWriter
 from .ConvertDitherType import ConvertDitherType
 from .ConvertPaletteType import ConvertPaletteType
 from .ConvolveType import ConvolveType
+from .CpuAccelFlags import CpuAccelFlags
+from .Curve import Curve
+from .CurveClass import CurveClass
+from .CurvePointType import CurvePointType
+from .CurveType import CurveType
 from .DesaturateMode import DesaturateMode
 from .Display import Display
 from .DisplayClass import DisplayClass
@@ -1982,6 +1939,9 @@ from .LayerCompositeMode import LayerCompositeMode
 from .LayerMask import LayerMask
 from .LayerMaskClass import LayerMaskClass
 from .LayerMode import LayerMode
+from .Rasterizable import Rasterizable
+from .LinkLayer import LinkLayer
+from .LinkLayerClass import LinkLayerClass
 from .LoadProcedure import LoadProcedure
 from .LoadProcedureClass import LoadProcedureClass
 from .MaskApplyMode import MaskApplyMode
@@ -2019,6 +1979,7 @@ from .ParamChoice import ParamChoice
 from .ParamColor import ParamColor
 from .ParamConfigPath import ParamConfigPath
 from .ParamCoreObjectArray import ParamCoreObjectArray
+from .ParamCurve import ParamCurve
 from .ParamDisplay import ParamDisplay
 from .ParamDoubleArray import ParamDoubleArray
 from .ParamDrawableFilter import ParamDrawableFilter
@@ -2031,6 +1992,7 @@ from .ParamGroupLayer import ParamGroupLayer
 from .ParamImage import ParamImage
 from .ParamInt32Array import ParamInt32Array
 from .ParamLayerMask import ParamLayerMask
+from .ParamLinkLayer import ParamLinkLayer
 from .ParamMatrix2 import ParamMatrix2
 from .ParamMatrix3 import ParamMatrix3
 from .ParamMemsize import ParamMemsize
@@ -2038,12 +2000,14 @@ from .ParamPalette import ParamPalette
 from .ParamParasite import ParamParasite
 from .ParamPath import ParamPath
 from .ParamPattern import ParamPattern
+from .ParamRasterizable import ParamRasterizable
 from .ParamSelection import ParamSelection
 from .ParamSpecObject import ParamSpecObject
 from .ParamSpecObjectClass import ParamSpecObjectClass
 from .ParamTextLayer import ParamTextLayer
 from .ParamUnit import ParamUnit
 from .ParamValueArray import ParamValueArray
+from .ParamVectorLayer import ParamVectorLayer
 from .Parasite import Parasite
 from .Path import Path
 from .PathClass import PathClass
@@ -2066,6 +2030,7 @@ from .ProcedureConfigClass import ProcedureConfigClass
 from .ProcedureSensitivityMask import ProcedureSensitivityMask
 from .ProgressCommand import ProgressCommand
 from .ProgressVtable import ProgressVtable
+from .RasterizableInterface import RasterizableInterface
 from .RepeatMode import RepeatMode
 from .ResourceClass import ResourceClass
 from .RotationType import RotationType
@@ -2082,11 +2047,14 @@ from .TextHintStyle import TextHintStyle
 from .TextJustification import TextJustification
 from .TextLayer import TextLayer
 from .TextLayerClass import TextLayerClass
+from .TextOutline import TextOutline
+from .TextOutlineDirection import TextOutlineDirection
 from .ThumbnailProcedure import ThumbnailProcedure
 from .ThumbnailProcedureClass import ThumbnailProcedureClass
 from .TransferMode import TransferMode
 from .TransformDirection import TransformDirection
 from .TransformResize import TransformResize
+from .TRCType import TRCType
 from .Unit import Unit
 from .UnitClass import UnitClass
 from .UnitID import UnitID
@@ -2094,15 +2062,16 @@ from .ValueArray import ValueArray
 from .Vector2 import Vector2
 from .Vector3 import Vector3
 from .Vector4 import Vector4
+from .VectorLayer import VectorLayer
+from .VectorLayerClass import VectorLayerClass
 from .VectorLoadData import VectorLoadData
 from .VectorLoadProcedure import VectorLoadProcedure
 from .VectorLoadProcedureClass import VectorLoadProcedureClass
-from .__class__ import __class__
 # variables with complex values
 
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001dcd66d06b0>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001268d638440>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Gimp', loader=<gi.importer.DynamicImporter object at 0x000001dcd66d06b0>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Gimp', loader=<gi.importer.DynamicImporter object at 0x000001268d638440>)"
 

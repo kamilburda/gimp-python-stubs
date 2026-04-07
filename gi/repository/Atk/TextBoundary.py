@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class TextBoundary(__gobject.GEnum):
+class TextBoundary(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -78,7 +71,7 @@ class TextBoundary(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -101,7 +94,7 @@ class TextBoundary(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -129,12 +122,23 @@ class TextBoundary(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -163,6 +167,10 @@ class TextBoundary(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -208,6 +216,14 @@ class TextBoundary(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -233,8 +249,8 @@ class TextBoundary(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -265,15 +281,16 @@ class TextBoundary(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -337,7 +354,7 @@ class TextBoundary(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -379,10 +396,6 @@ class TextBoundary(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CHAR = 0
     LINE_END = 6
@@ -391,18 +404,9 @@ class TextBoundary(__gobject.GEnum):
     SENTENCE_START = 3
     WORD_END = 2
     WORD_START = 1
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Atk', '__dict__': <attribute '__dict__' of 'TextBoundary' objects>, '__doc__': None, '__gtype__': <GType AtkTextBoundary (892680976)>, '__enum_values__': {0: <enum ATK_TEXT_BOUNDARY_CHAR of type Atk.TextBoundary>, 1: <enum ATK_TEXT_BOUNDARY_WORD_START of type Atk.TextBoundary>, 2: <enum ATK_TEXT_BOUNDARY_WORD_END of type Atk.TextBoundary>, 3: <enum ATK_TEXT_BOUNDARY_SENTENCE_START of type Atk.TextBoundary>, 4: <enum ATK_TEXT_BOUNDARY_SENTENCE_END of type Atk.TextBoundary>, 5: <enum ATK_TEXT_BOUNDARY_LINE_START of type Atk.TextBoundary>, 6: <enum ATK_TEXT_BOUNDARY_LINE_END of type Atk.TextBoundary>}, '__info__': gi.EnumInfo(TextBoundary), 'CHAR': <enum ATK_TEXT_BOUNDARY_CHAR of type Atk.TextBoundary>, 'WORD_START': <enum ATK_TEXT_BOUNDARY_WORD_START of type Atk.TextBoundary>, 'WORD_END': <enum ATK_TEXT_BOUNDARY_WORD_END of type Atk.TextBoundary>, 'SENTENCE_START': <enum ATK_TEXT_BOUNDARY_SENTENCE_START of type Atk.TextBoundary>, 'SENTENCE_END': <enum ATK_TEXT_BOUNDARY_SENTENCE_END of type Atk.TextBoundary>, 'LINE_START': <enum ATK_TEXT_BOUNDARY_LINE_START of type Atk.TextBoundary>, 'LINE_END': <enum ATK_TEXT_BOUNDARY_LINE_END of type Atk.TextBoundary>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-    }
-    __gtype__ = None # (!) real value is '<GType AtkTextBoundary (892680976)>'
-    __info__ = gi.EnumInfo(TextBoundary)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'CHAR': <TextBoundary.CHAR: 0>, 'WORD_START': <TextBoundary.WORD_START: 1>, 'WORD_END': <TextBoundary.WORD_END: 2>, 'SENTENCE_START': <TextBoundary.SENTENCE_START: 3>, 'SENTENCE_END': <TextBoundary.SENTENCE_END: 4>, 'LINE_START': <TextBoundary.LINE_START: 5>, 'LINE_END': <TextBoundary.LINE_END: 6>})"
+    __name__ = 'TextBoundary'
+    __qualname__ = 'TextBoundary'
 
 

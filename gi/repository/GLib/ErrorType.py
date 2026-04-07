@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class ErrorType(__gobject.GEnum):
+class ErrorType(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class ErrorType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class ErrorType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -126,12 +124,23 @@ class ErrorType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +169,10 @@ class ErrorType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -205,6 +218,14 @@ class ErrorType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -230,8 +251,8 @@ class ErrorType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -262,15 +283,16 @@ class ErrorType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -334,7 +356,7 @@ class ErrorType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -376,10 +398,6 @@ class ErrorType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     DIGIT_RADIX = 5
     FLOAT_MALFORMED = 7
@@ -389,19 +407,9 @@ class ErrorType(__gobject.GEnum):
     UNEXP_EOF_IN_COMMENT = 3
     UNEXP_EOF_IN_STRING = 2
     UNKNOWN = 0
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'ErrorType' objects>, '__doc__': None, '__gtype__': <GType PyGLibErrorType (154890896)>, '__enum_values__': {0: <enum G_ERR_UNKNOWN of type GLib.ErrorType>, 1: <enum G_ERR_UNEXP_EOF of type GLib.ErrorType>, 2: <enum G_ERR_UNEXP_EOF_IN_STRING of type GLib.ErrorType>, 3: <enum G_ERR_UNEXP_EOF_IN_COMMENT of type GLib.ErrorType>, 4: <enum G_ERR_NON_DIGIT_IN_CONST of type GLib.ErrorType>, 5: <enum G_ERR_DIGIT_RADIX of type GLib.ErrorType>, 6: <enum G_ERR_FLOAT_RADIX of type GLib.ErrorType>, 7: <enum G_ERR_FLOAT_MALFORMED of type GLib.ErrorType>}, '__info__': gi.EnumInfo(ErrorType), 'UNKNOWN': <enum G_ERR_UNKNOWN of type GLib.ErrorType>, 'UNEXP_EOF': <enum G_ERR_UNEXP_EOF of type GLib.ErrorType>, 'UNEXP_EOF_IN_STRING': <enum G_ERR_UNEXP_EOF_IN_STRING of type GLib.ErrorType>, 'UNEXP_EOF_IN_COMMENT': <enum G_ERR_UNEXP_EOF_IN_COMMENT of type GLib.ErrorType>, 'NON_DIGIT_IN_CONST': <enum G_ERR_NON_DIGIT_IN_CONST of type GLib.ErrorType>, 'DIGIT_RADIX': <enum G_ERR_DIGIT_RADIX of type GLib.ErrorType>, 'FLOAT_RADIX': <enum G_ERR_FLOAT_RADIX of type GLib.ErrorType>, 'FLOAT_MALFORMED': <enum G_ERR_FLOAT_MALFORMED of type GLib.ErrorType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibErrorType (154890896)>'
-    __info__ = gi.EnumInfo(ErrorType)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'UNKNOWN': <ErrorType.UNKNOWN: 0>, 'UNEXP_EOF': <ErrorType.UNEXP_EOF: 1>, 'UNEXP_EOF_IN_STRING': <ErrorType.UNEXP_EOF_IN_STRING: 2>, 'UNEXP_EOF_IN_COMMENT': <ErrorType.UNEXP_EOF_IN_COMMENT: 3>, 'NON_DIGIT_IN_CONST': <ErrorType.NON_DIGIT_IN_CONST: 4>, 'DIGIT_RADIX': <ErrorType.DIGIT_RADIX: 5>, 'FLOAT_RADIX': <ErrorType.FLOAT_RADIX: 6>, 'FLOAT_MALFORMED': <ErrorType.FLOAT_MALFORMED: 7>})"
+    __name__ = 'ErrorType'
+    __qualname__ = 'ErrorType'
 
 

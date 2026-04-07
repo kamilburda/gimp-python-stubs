@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -49,7 +43,7 @@ class Color(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -77,6 +71,9 @@ class Color(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def duplicate(self): # real signature unknown; restored from __doc__
@@ -232,7 +229,8 @@ class Color(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, string): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, string): # real signature unknown; restored from __doc__
         """ new(string:str) -> Gegl.Color """
         pass
 
@@ -341,20 +339,20 @@ class Color(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -490,12 +488,12 @@ class Color(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x0000027618c86c50>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ebda7cbc40>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Color), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglColor (426591776)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'duplicate': gi.FunctionInfo(duplicate, bound=None), 'get_bytes': gi.FunctionInfo(get_bytes, bound=None), 'get_cmyk': gi.FunctionInfo(get_cmyk, bound=None), 'get_components': gi.FunctionInfo(get_components, bound=None), 'get_format': gi.FunctionInfo(get_format, bound=None), 'get_hsla': gi.FunctionInfo(get_hsla, bound=None), 'get_hsva': gi.FunctionInfo(get_hsva, bound=None), 'get_rgba': gi.FunctionInfo(get_rgba, bound=None), 'get_rgba_with_space': gi.FunctionInfo(get_rgba_with_space, bound=None), 'set_bytes': gi.FunctionInfo(set_bytes, bound=None), 'set_cmyk': gi.FunctionInfo(set_cmyk, bound=None), 'set_components': gi.FunctionInfo(set_components, bound=None), 'set_hsla': gi.FunctionInfo(set_hsla, bound=None), 'set_hsva': gi.FunctionInfo(set_hsva, bound=None), 'set_rgba': gi.FunctionInfo(set_rgba, bound=None), 'set_rgba_with_space': gi.FunctionInfo(set_rgba_with_space, bound=None), 'parent_instance': <property object at 0x000002761b94dcb0>, 'priv': <property object at 0x000002761b94dda0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Color), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglColor (3652620192)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'duplicate': gi.FunctionInfo(duplicate), 'get_bytes': gi.FunctionInfo(get_bytes), 'get_cmyk': gi.FunctionInfo(get_cmyk), 'get_components': gi.FunctionInfo(get_components), 'get_format': gi.FunctionInfo(get_format), 'get_hsla': gi.FunctionInfo(get_hsla), 'get_hsva': gi.FunctionInfo(get_hsva), 'get_rgba': gi.FunctionInfo(get_rgba), 'get_rgba_with_space': gi.FunctionInfo(get_rgba_with_space), 'set_bytes': gi.FunctionInfo(set_bytes), 'set_cmyk': gi.FunctionInfo(set_cmyk), 'set_components': gi.FunctionInfo(set_components), 'set_hsla': gi.FunctionInfo(set_hsla), 'set_hsva': gi.FunctionInfo(set_hsva), 'set_rgba': gi.FunctionInfo(set_rgba), 'set_rgba_with_space': gi.FunctionInfo(set_rgba_with_space), 'parent_instance': <property object at 0x000001ebdc262cf0>, 'priv': <property object at 0x000001ebdc262de0>})"
     __gdoc__ = 'Object GeglColor\n\nProperties from GeglColor:\n  string -> gchararray: String\n    A String representation of the GeglColor\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglColor (426591776)>'
+    __gtype__ = None # (!) real value is '<GType GeglColor (3652620192)>'
     __info__ = ObjectInfo(Color)
 
 

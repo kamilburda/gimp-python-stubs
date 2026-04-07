@@ -1,21 +1,13 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
 class color_line_t(__gi.Struct):
@@ -161,7 +153,7 @@ class color_line_t(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(color_line_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'color_line_t' objects>, '__weakref__': <attribute '__weakref__' of 'color_line_t' objects>, '__doc__': None, 'data': <property object at 0x000001d9a1609b20>, 'get_color_stops': <property object at 0x000001d9a1609c10>, 'get_color_stops_user_data': <property object at 0x000001d9a1609d50>, 'get_extend': <property object at 0x000001d9a1609e40>, 'get_extend_user_data': <property object at 0x000001d9a1609f30>, 'reserved0': <property object at 0x000001d9a160a020>, 'reserved1': <property object at 0x000001d9a160a110>, 'reserved2': <property object at 0x000001d9a160a200>, 'reserved3': <property object at 0x000001d9a160a2f0>, 'reserved5': <property object at 0x000001d9a160a3e0>, 'reserved6': <property object at 0x000001d9a160a4d0>, 'reserved7': <property object at 0x000001d9a160a5c0>, 'reserved8': <property object at 0x000001d9a160a6b0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(color_line_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'color_line_t' objects>, '__weakref__': <attribute '__weakref__' of 'color_line_t' objects>, '__doc__': None, 'data': <property object at 0x00000208a4feb100>, 'get_color_stops': <property object at 0x00000208a4feb830>, 'get_color_stops_user_data': <property object at 0x00000208a4feb970>, 'get_extend': <property object at 0x00000208a4feba60>, 'get_extend_user_data': <property object at 0x00000208a4febb50>, 'reserved0': <property object at 0x00000208a4feaed0>, 'reserved1': <property object at 0x00000208a4feade0>, 'reserved2': <property object at 0x00000208a4feacf0>, 'reserved3': <property object at 0x00000208a4feac00>, 'reserved5': <property object at 0x00000208a4feab10>, 'reserved6': <property object at 0x00000208a4feaa20>, 'reserved7': <property object at 0x00000208a4fea930>, 'reserved8': <property object at 0x00000208a4fea840>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(color_line_t)
 

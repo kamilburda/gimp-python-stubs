@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -46,7 +51,11 @@ class AsyncResult(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -137,10 +146,10 @@ class AsyncResult(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(AsyncResult), '__module__': 'gi.repository.Gio', '__gtype__': <GType GAsyncResult (2472611936)>, '__dict__': <attribute '__dict__' of 'AsyncResult' objects>, '__weakref__': <attribute '__weakref__' of 'AsyncResult' objects>, '__doc__': None, '__gsignals__': {}, 'get_source_object': gi.FunctionInfo(get_source_object, bound=None), 'get_user_data': gi.FunctionInfo(get_user_data, bound=None), 'is_tagged': gi.FunctionInfo(is_tagged, bound=None), 'legacy_propagate_error': gi.FunctionInfo(legacy_propagate_error, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(AsyncResult), '__module__': 'gi.repository.Gio', '__gtype__': <GType GAsyncResult (1841874144)>, '__dict__': <attribute '__dict__' of 'AsyncResult' objects>, '__weakref__': <attribute '__weakref__' of 'AsyncResult' objects>, '__doc__': None, '__gsignals__': {}, 'get_source_object': gi.FunctionInfo(get_source_object), 'get_user_data': gi.FunctionInfo(get_user_data), 'is_tagged': gi.FunctionInfo(is_tagged), 'legacy_propagate_error': gi.FunctionInfo(legacy_propagate_error)})"
     __gdoc__ = 'Interface GAsyncResult\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GAsyncResult (2472611936)>'
+    __gtype__ = None # (!) real value is '<GType GAsyncResult (1841874144)>'
     __info__ = InterfaceInfo(AsyncResult)
 
 

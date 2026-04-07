@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,7 +156,7 @@ class WindowClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(WindowClass), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'WindowClass' objects>, '__weakref__': <attribute '__weakref__' of 'WindowClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002459c4480e0>, 'pick_embedded_child': <property object at 0x000002459c4481d0>, 'to_embedder': <property object at 0x000002459c4482c0>, 'from_embedder': <property object at 0x000002459c4483b0>, 'create_surface': <property object at 0x000002459c4484a0>, '_gdk_reserved1': <property object at 0x000002459c448590>, '_gdk_reserved2': <property object at 0x000002459c448680>, '_gdk_reserved3': <property object at 0x000002459c448770>, '_gdk_reserved4': <property object at 0x000002459c448860>, '_gdk_reserved5': <property object at 0x000002459c448950>, '_gdk_reserved6': <property object at 0x000002459c448a40>, '_gdk_reserved7': <property object at 0x000002459c448b30>, '_gdk_reserved8': <property object at 0x000002459c448c20>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(WindowClass), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'WindowClass' objects>, '__weakref__': <attribute '__weakref__' of 'WindowClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000018725795760>, 'pick_embedded_child': <property object at 0x0000018725795850>, 'to_embedder': <property object at 0x0000018725795940>, 'from_embedder': <property object at 0x0000018725795a30>, 'create_surface': <property object at 0x0000018725795b20>, '_gdk_reserved1': <property object at 0x0000018725795c10>, '_gdk_reserved2': <property object at 0x0000018725795d00>, '_gdk_reserved3': <property object at 0x0000018725795df0>, '_gdk_reserved4': <property object at 0x0000018725795ee0>, '_gdk_reserved5': <property object at 0x0000018725795fd0>, '_gdk_reserved6': <property object at 0x00000187257960c0>, '_gdk_reserved7': <property object at 0x00000187257961b0>, '_gdk_reserved8': <property object at 0x00000187257962a0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(WindowClass)
 

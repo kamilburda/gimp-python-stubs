@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -50,7 +55,11 @@ class ProxyResolver(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -141,10 +150,10 @@ class ProxyResolver(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ProxyResolver), '__module__': 'gi.repository.Gio', '__gtype__': <GType GProxyResolver (2472621904)>, '__dict__': <attribute '__dict__' of 'ProxyResolver' objects>, '__weakref__': <attribute '__weakref__' of 'ProxyResolver' objects>, '__doc__': None, '__gsignals__': {}, 'get_default': gi.FunctionInfo(get_default, bound=None), 'is_supported': gi.FunctionInfo(is_supported, bound=None), 'lookup': gi.FunctionInfo(lookup, bound=None), 'lookup_async': gi.FunctionInfo(lookup_async, bound=None), 'lookup_finish': gi.FunctionInfo(lookup_finish, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ProxyResolver), '__module__': 'gi.repository.Gio', '__gtype__': <GType GProxyResolver (1848623216)>, '__dict__': <attribute '__dict__' of 'ProxyResolver' objects>, '__weakref__': <attribute '__weakref__' of 'ProxyResolver' objects>, '__doc__': None, '__gsignals__': {}, 'get_default': <staticmethod(gi.FunctionInfo(get_default))>, 'is_supported': gi.FunctionInfo(is_supported), 'lookup': gi.FunctionInfo(lookup), 'lookup_async': gi.FunctionInfo(lookup_async), 'lookup_finish': gi.FunctionInfo(lookup_finish)})"
     __gdoc__ = 'Interface GProxyResolver\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GProxyResolver (2472621904)>'
+    __gtype__ = None # (!) real value is '<GType GProxyResolver (1848623216)>'
     __info__ = InterfaceInfo(ProxyResolver)
 
 

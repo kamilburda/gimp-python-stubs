@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class MarkupParseContext(__gi.Boxed):
@@ -51,7 +49,8 @@ class MarkupParseContext(__gi.Boxed):
         """ get_user_data(self) """
         pass
 
-    def new(self, parser, flags, user_data=None, user_data_dnotify): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, parser, flags, user_data=None, user_data_dnotify): # real signature unknown; restored from __doc__
         """ new(parser:GLib.MarkupParser, flags:GLib.MarkupParseFlags, user_data=None, user_data_dnotify:GLib.DestroyNotify) -> GLib.MarkupParseContext """
         pass
 
@@ -187,8 +186,8 @@ class MarkupParseContext(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MarkupParseContext), '__module__': 'gi.repository.GLib', '__gtype__': <GType GMarkupParseContext (163504432)>, '__dict__': <attribute '__dict__' of 'MarkupParseContext' objects>, '__weakref__': <attribute '__weakref__' of 'MarkupParseContext' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'end_parse': gi.FunctionInfo(end_parse, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_element': gi.FunctionInfo(get_element, bound=None), 'get_element_stack': gi.FunctionInfo(get_element_stack, bound=None), 'get_position': gi.FunctionInfo(get_position, bound=None), 'get_user_data': gi.FunctionInfo(get_user_data, bound=None), 'parse': gi.FunctionInfo(parse, bound=None), 'pop': gi.FunctionInfo(pop, bound=None), 'push': gi.FunctionInfo(push, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GMarkupParseContext (163504432)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MarkupParseContext), '__module__': 'gi.repository.GLib', '__gtype__': <GType GMarkupParseContext (2640521472)>, '__dict__': <attribute '__dict__' of 'MarkupParseContext' objects>, '__weakref__': <attribute '__weakref__' of 'MarkupParseContext' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'end_parse': gi.FunctionInfo(end_parse), 'free': gi.FunctionInfo(free), 'get_element': gi.FunctionInfo(get_element), 'get_element_stack': gi.FunctionInfo(get_element_stack), 'get_position': gi.FunctionInfo(get_position), 'get_user_data': gi.FunctionInfo(get_user_data), 'parse': gi.FunctionInfo(parse), 'pop': gi.FunctionInfo(pop), 'push': gi.FunctionInfo(push), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GMarkupParseContext (2640521472)>'
     __info__ = StructInfo(MarkupParseContext)
 
 

@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class FileOutputStreamClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -158,7 +167,7 @@ class FileOutputStreamClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FileOutputStreamClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FileOutputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'FileOutputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793e09800>, 'tell': <property object at 0x000001a793e098f0>, 'can_seek': <property object at 0x000001a793e099e0>, 'seek': <property object at 0x000001a793e09ad0>, 'can_truncate': <property object at 0x000001a793e09bc0>, 'truncate_fn': <property object at 0x000001a793e09cb0>, 'query_info': <property object at 0x000001a793e09da0>, 'query_info_async': <property object at 0x000001a793e09ee0>, 'query_info_finish': <property object at 0x000001a793e09fd0>, 'get_etag': <property object at 0x000001a793e0a070>, '_g_reserved1': <property object at 0x000001a793e0a160>, '_g_reserved2': <property object at 0x000001a793e0a250>, '_g_reserved3': <property object at 0x000001a793e0a340>, '_g_reserved4': <property object at 0x000001a793e0a430>, '_g_reserved5': <property object at 0x000001a793e0a520>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FileOutputStreamClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FileOutputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'FileOutputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea7093f9c0>, 'tell': <property object at 0x000001ea7093fab0>, 'can_seek': <property object at 0x000001ea7093fba0>, 'seek': <property object at 0x000001ea7093fc90>, 'can_truncate': <property object at 0x000001ea7093fd80>, 'truncate_fn': <property object at 0x000001ea7093fe70>, 'query_info': <property object at 0x000001ea7093ff60>, 'query_info_async': <property object at 0x000001ea70930090>, 'query_info_finish': <property object at 0x000001ea70930180>, 'get_etag': <property object at 0x000001ea70930270>, '_g_reserved1': <property object at 0x000001ea70930360>, '_g_reserved2': <property object at 0x000001ea70930450>, '_g_reserved3': <property object at 0x000001ea70930540>, '_g_reserved4': <property object at 0x000001ea70930630>, '_g_reserved5': <property object at 0x000001ea70930720>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(FileOutputStreamClass)
 

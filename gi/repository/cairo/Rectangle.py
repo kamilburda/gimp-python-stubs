@@ -1,20 +1,13 @@
 # encoding: utf-8
 # module gi.repository.cairo
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Rectangle(__gi.Boxed):
@@ -44,7 +37,11 @@ class Rectangle(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -144,8 +141,8 @@ class Rectangle(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Rectangle), '__module__': 'gi.repository.cairo', '__gtype__': <GType CairoRectangle (4004032816)>, '__dict__': <attribute '__dict__' of 'Rectangle' objects>, '__weakref__': <attribute '__weakref__' of 'Rectangle' objects>, '__doc__': None, 'x': <property object at 0x00000161ef2387c0>, 'y': <property object at 0x00000161ef2388b0>, 'width': <property object at 0x00000161ef2389a0>, 'height': <property object at 0x00000161ef238a90>})"
-    __gtype__ = None # (!) real value is '<GType CairoRectangle (4004032816)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Rectangle), '__module__': 'gi.repository.cairo', '__gtype__': <GType CairoRectangle (575361808)>, '__dict__': <attribute '__dict__' of 'Rectangle' objects>, '__weakref__': <attribute '__weakref__' of 'Rectangle' objects>, '__doc__': None, 'x': <property object at 0x0000020224925ad0>, 'y': <property object at 0x0000020224925cb0>, 'width': <property object at 0x00000202249259e0>, 'height': <property object at 0x00000202249258f0>})"
+    __gtype__ = None # (!) real value is '<GType CairoRectangle (575361808)>'
     __info__ = StructInfo(Rectangle)
 
 

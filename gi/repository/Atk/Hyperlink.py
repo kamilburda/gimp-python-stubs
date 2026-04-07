@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -49,20 +42,20 @@ class Hyperlink(__gi_overrides_GObject.Object, Action):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -82,6 +75,12 @@ class Hyperlink(__gi_overrides_GObject.Object, Action):
     def do_action(self, i): # real signature unknown; restored from __doc__
         """ do_action(self, i:int) -> bool """
         return False
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
+        pass
 
     def do_get_end_index(self, *args, **kwargs): # real signature unknown
         """ get_end_index(self) -> int """
@@ -138,17 +137,17 @@ class Hyperlink(__gi_overrides_GObject.Object, Action):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -213,20 +212,20 @@ class Hyperlink(__gi_overrides_GObject.Object, Action):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -369,20 +368,20 @@ class Hyperlink(__gi_overrides_GObject.Object, Action):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -519,12 +518,14 @@ class Hyperlink(__gi_overrides_GObject.Object, Action):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001733802a290>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001c85bf8c220>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Hyperlink), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkHyperlink (892047232)>, '__doc__': None, '__gsignals__': {}, 'get_end_index': gi.FunctionInfo(get_end_index, bound=None), 'get_n_anchors': gi.FunctionInfo(get_n_anchors, bound=None), 'get_object': gi.FunctionInfo(get_object, bound=None), 'get_start_index': gi.FunctionInfo(get_start_index, bound=None), 'get_uri': gi.FunctionInfo(get_uri, bound=None), 'is_inline': gi.FunctionInfo(is_inline, bound=None), 'is_selected_link': gi.FunctionInfo(is_selected_link, bound=None), 'is_valid': gi.FunctionInfo(is_valid, bound=None), 'do_get_end_index': gi.VFuncInfo(get_end_index, bound=None), 'do_get_n_anchors': gi.VFuncInfo(get_n_anchors, bound=None), 'do_get_object': gi.VFuncInfo(get_object, bound=None), 'do_get_start_index': gi.VFuncInfo(get_start_index, bound=None), 'do_get_uri': gi.VFuncInfo(get_uri, bound=None), 'do_is_selected_link': gi.VFuncInfo(is_selected_link, bound=None), 'do_is_valid': gi.VFuncInfo(is_valid, bound=None), 'do_link_activated': gi.VFuncInfo(link_activated, bound=None), 'do_link_state': gi.VFuncInfo(link_state, bound=None), 'parent': <property object at 0x00000173381401d0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Hyperlink), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkHyperlink (1534563360)>, '__doc__': None, '__gsignals__': {}, 'get_end_index': gi.FunctionInfo(get_end_index), 'get_n_anchors': gi.FunctionInfo(get_n_anchors), 'get_object': gi.FunctionInfo(get_object), 'get_start_index': gi.FunctionInfo(get_start_index), 'get_uri': gi.FunctionInfo(get_uri), 'is_inline': gi.FunctionInfo(is_inline), 'is_selected_link': gi.FunctionInfo(is_selected_link), 'is_valid': gi.FunctionInfo(is_valid), 'do_get_end_index': gi.VFuncInfo(get_end_index), 'do_get_n_anchors': gi.VFuncInfo(get_n_anchors), 'do_get_object': gi.VFuncInfo(get_object), 'do_get_start_index': gi.VFuncInfo(get_start_index), 'do_get_uri': gi.VFuncInfo(get_uri), 'do_is_selected_link': gi.VFuncInfo(is_selected_link), 'do_is_valid': gi.VFuncInfo(is_valid), 'do_link_activated': gi.VFuncInfo(link_activated), 'do_link_state': gi.VFuncInfo(link_state), 'parent': <property object at 0x000001c85dafc8b0>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object AtkHyperlink\n\nSignals from AtkHyperlink:\n  link-activated ()\n\nProperties from AtkHyperlink:\n  selected-link -> gboolean: Selected Link\n    Specifies whether the AtkHyperlink object is selected\n  number-of-anchors -> gint: Number of Anchors\n    The number of anchors associated with the AtkHyperlink object\n  end-index -> gint: End index\n    The end index of the AtkHyperlink object\n  start-index -> gint: Start index\n    The start index of the AtkHyperlink object\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkHyperlink (892047232)>'
+    __gtype__ = None # (!) real value is '<GType AtkHyperlink (1534563360)>'
     __info__ = ObjectInfo(Hyperlink)
+    __static_attributes__ = ()
 
 

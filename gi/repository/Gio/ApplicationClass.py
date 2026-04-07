@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class ApplicationClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -162,7 +171,7 @@ class ApplicationClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ApplicationClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ApplicationClass' objects>, '__weakref__': <attribute '__weakref__' of 'ApplicationClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793d89580>, 'startup': <property object at 0x000001a793d89670>, 'activate': <property object at 0x000001a793d89760>, 'open': <property object at 0x000001a793d89850>, 'command_line': <property object at 0x000001a793d89940>, 'local_command_line': <property object at 0x000001a793d89a80>, 'before_emit': <property object at 0x000001a793d89b70>, 'after_emit': <property object at 0x000001a793d89c60>, 'add_platform_data': <property object at 0x000001a793d89da0>, 'quit_mainloop': <property object at 0x000001a793d89e90>, 'run_mainloop': <property object at 0x000001a793d89f80>, 'shutdown': <property object at 0x000001a793d8a070>, 'dbus_register': <property object at 0x000001a793d8a160>, 'dbus_unregister': <property object at 0x000001a793d8a250>, 'handle_local_options': <property object at 0x000001a793d8a390>, 'name_lost': <property object at 0x000001a793d8a480>, 'padding': <property object at 0x000001a793d8a570>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ApplicationClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ApplicationClass' objects>, '__weakref__': <attribute '__weakref__' of 'ApplicationClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea703f4540>, 'startup': <property object at 0x000001ea703f4630>, 'activate': <property object at 0x000001ea703f4720>, 'open': <property object at 0x000001ea703f4810>, 'command_line': <property object at 0x000001ea703f4900>, 'local_command_line': <property object at 0x000001ea703f49f0>, 'before_emit': <property object at 0x000001ea703f4ae0>, 'after_emit': <property object at 0x000001ea703f4bd0>, 'add_platform_data': <property object at 0x000001ea703f4cc0>, 'quit_mainloop': <property object at 0x000001ea703f4db0>, 'run_mainloop': <property object at 0x000001ea703f4ea0>, 'shutdown': <property object at 0x000001ea703f4f90>, 'dbus_register': <property object at 0x000001ea703f5080>, 'dbus_unregister': <property object at 0x000001ea703f5170>, 'handle_local_options': <property object at 0x000001ea703f5260>, 'name_lost': <property object at 0x000001ea703f5350>, 'padding': <property object at 0x000001ea703f5440>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ApplicationClass)
 

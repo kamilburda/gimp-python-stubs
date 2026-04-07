@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class MountOperationClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -160,7 +169,7 @@ class MountOperationClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MountOperationClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MountOperationClass' objects>, '__weakref__': <attribute '__weakref__' of 'MountOperationClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793ded490>, 'ask_password': <property object at 0x000001a793ded580>, 'ask_question': <property object at 0x000001a793ded670>, 'reply': <property object at 0x000001a793ded760>, 'aborted': <property object at 0x000001a793ded850>, 'show_processes': <property object at 0x000001a793ded940>, 'show_unmount_progress': <property object at 0x000001a793deda80>, '_g_reserved1': <property object at 0x000001a793dedb70>, '_g_reserved2': <property object at 0x000001a793dedc60>, '_g_reserved3': <property object at 0x000001a793dedd50>, '_g_reserved4': <property object at 0x000001a793dede40>, '_g_reserved5': <property object at 0x000001a793dedf30>, '_g_reserved6': <property object at 0x000001a793dee020>, '_g_reserved7': <property object at 0x000001a793dee110>, '_g_reserved8': <property object at 0x000001a793dee200>, '_g_reserved9': <property object at 0x000001a793dee2f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MountOperationClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MountOperationClass' objects>, '__weakref__': <attribute '__weakref__' of 'MountOperationClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea709a6390>, 'ask_password': <property object at 0x000001ea709a6480>, 'ask_question': <property object at 0x000001ea709a6570>, 'reply': <property object at 0x000001ea709a6660>, 'aborted': <property object at 0x000001ea709a6750>, 'show_processes': <property object at 0x000001ea709a6840>, 'show_unmount_progress': <property object at 0x000001ea709a6930>, '_g_reserved1': <property object at 0x000001ea709a6a20>, '_g_reserved2': <property object at 0x000001ea709a6b10>, '_g_reserved3': <property object at 0x000001ea709a6c00>, '_g_reserved4': <property object at 0x000001ea709a6cf0>, '_g_reserved5': <property object at 0x000001ea709a6de0>, '_g_reserved6': <property object at 0x000001ea709a6ed0>, '_g_reserved7': <property object at 0x000001ea709a6fc0>, '_g_reserved8': <property object at 0x000001ea709a70b0>, '_g_reserved9': <property object at 0x000001ea709a71a0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(MountOperationClass)
 

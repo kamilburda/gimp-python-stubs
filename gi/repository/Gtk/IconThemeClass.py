@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -147,7 +146,7 @@ class IconThemeClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IconThemeClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IconThemeClass' objects>, '__weakref__': <attribute '__weakref__' of 'IconThemeClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceabf1a80>, 'changed': <property object at 0x000002eceabf1b70>, '_gtk_reserved1': <property object at 0x000002eceabf1c60>, '_gtk_reserved2': <property object at 0x000002eceabf1d50>, '_gtk_reserved3': <property object at 0x000002eceabf1e40>, '_gtk_reserved4': <property object at 0x000002eceabf1f30>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IconThemeClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IconThemeClass' objects>, '__weakref__': <attribute '__weakref__' of 'IconThemeClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18d8e00>, 'changed': <property object at 0x000002bfd18d8ef0>, '_gtk_reserved1': <property object at 0x000002bfd18d8fe0>, '_gtk_reserved2': <property object at 0x000002bfd18d90d0>, '_gtk_reserved3': <property object at 0x000002bfd18d91c0>, '_gtk_reserved4': <property object at 0x000002bfd18d92b0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(IconThemeClass)
 

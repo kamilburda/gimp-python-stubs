@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -35,7 +34,8 @@ class Border(__gi.Boxed):
         """ free(self) """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.Border """
         pass
 
@@ -160,8 +160,8 @@ class Border(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Border), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkBorder (3867686896)>, '__dict__': <attribute '__dict__' of 'Border' objects>, '__weakref__': <attribute '__weakref__' of 'Border' objects>, '__doc__': None, 'left': <property object at 0x000002ece8fcce50>, 'right': <property object at 0x000002ece8fccf40>, 'top': <property object at 0x000002ece8fcd030>, 'bottom': <property object at 0x000002ece8fcd120>, 'new': gi.FunctionInfo(new, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002ece8827880>})"
-    __gtype__ = None # (!) real value is '<GType GtkBorder (3867686896)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Border), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkBorder (3418527584)>, '__dict__': <attribute '__dict__' of 'Border' objects>, '__weakref__': <attribute '__weakref__' of 'Border' objects>, '__doc__': None, 'left': <property object at 0x000002bfd17a4090>, 'right': <property object at 0x000002bfd17a4180>, 'top': <property object at 0x000002bfd17a4270>, 'bottom': <property object at 0x000002bfd17a4360>, 'new': <classmethod(gi.FunctionInfo(new))>, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000002bfce305010>})"
+    __gtype__ = None # (!) real value is '<GType GtkBorder (3418527584)>'
     __info__ = StructInfo(Border)
 
 

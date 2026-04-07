@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -46,7 +51,7 @@ class ProxyAddress(InetSocketAddress):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -74,6 +79,9 @@ class ProxyAddress(InetSocketAddress):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_family(self, *args, **kwargs): # real signature unknown
@@ -261,7 +269,8 @@ class ProxyAddress(InetSocketAddress):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, inetaddr, port, protocol, dest_hostname, dest_port, username=None, password=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, inetaddr, port, protocol, dest_hostname, dest_port, username=None, password=None): # real signature unknown; restored from __doc__
         """ new(inetaddr:Gio.InetAddress, port:int, protocol:str, dest_hostname:str, dest_port:int, username:str=None, password:str=None) -> Gio.SocketAddress """
         pass
 
@@ -362,20 +371,20 @@ class ProxyAddress(InetSocketAddress):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -405,7 +414,11 @@ class ProxyAddress(InetSocketAddress):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -510,12 +523,12 @@ class ProxyAddress(InetSocketAddress):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb68f0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70861870>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ProxyAddress), '__module__': 'gi.repository.Gio', '__gtype__': <GType GProxyAddress (2466399312)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_destination_hostname': gi.FunctionInfo(get_destination_hostname, bound=None), 'get_destination_port': gi.FunctionInfo(get_destination_port, bound=None), 'get_destination_protocol': gi.FunctionInfo(get_destination_protocol, bound=None), 'get_password': gi.FunctionInfo(get_password, bound=None), 'get_protocol': gi.FunctionInfo(get_protocol, bound=None), 'get_uri': gi.FunctionInfo(get_uri, bound=None), 'get_username': gi.FunctionInfo(get_username, bound=None), 'parent_instance': <property object at 0x000001a793dd92b0>, 'priv': <property object at 0x000001a793dd93a0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ProxyAddress), '__module__': 'gi.repository.Gio', '__gtype__': <GType GProxyAddress (1841529200)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_destination_hostname': gi.FunctionInfo(get_destination_hostname), 'get_destination_port': gi.FunctionInfo(get_destination_port), 'get_destination_protocol': gi.FunctionInfo(get_destination_protocol), 'get_password': gi.FunctionInfo(get_password), 'get_protocol': gi.FunctionInfo(get_protocol), 'get_uri': gi.FunctionInfo(get_uri), 'get_username': gi.FunctionInfo(get_username), 'parent_instance': <property object at 0x000001ea709af100>, 'priv': <property object at 0x000001ea709af1f0>})"
     __gdoc__ = 'Object GProxyAddress\n\nProperties from GProxyAddress:\n  protocol -> gchararray: protocol\n  destination-protocol -> gchararray: destination-protocol\n  destination-hostname -> gchararray: destination-hostname\n  destination-port -> guint: destination-port\n  username -> gchararray: username\n  password -> gchararray: password\n  uri -> gchararray: uri\n\nProperties from GInetSocketAddress:\n  address -> GInetAddress: address\n  port -> guint: port\n  flowinfo -> guint: flowinfo\n  scope-id -> guint: scope-id\n\nProperties from GSocketAddress:\n  family -> GSocketFamily: family\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GProxyAddress (2466399312)>'
+    __gtype__ = None # (!) real value is '<GType GProxyAddress (1841529200)>'
     __info__ = ObjectInfo(ProxyAddress)
 
 

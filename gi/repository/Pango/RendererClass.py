@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class RendererClass(__gi.Struct):
@@ -161,7 +159,7 @@ class RendererClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RendererClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RendererClass' objects>, '__weakref__': <attribute '__weakref__' of 'RendererClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000213f6079d00>, 'draw_glyphs': <property object at 0x00000213f6079df0>, 'draw_rectangle': <property object at 0x00000213f6079ee0>, 'draw_error_underline': <property object at 0x00000213f6079fd0>, 'draw_shape': <property object at 0x00000213f607a0c0>, 'draw_trapezoid': <property object at 0x00000213f607a1b0>, 'draw_glyph': <property object at 0x00000213f607a2a0>, 'part_changed': <property object at 0x00000213f607a390>, 'begin': <property object at 0x00000213f607a480>, 'end': <property object at 0x00000213f607a570>, 'prepare_run': <property object at 0x00000213f607a660>, 'draw_glyph_item': <property object at 0x00000213f607a750>, '_pango_reserved2': <property object at 0x00000213f607a840>, '_pango_reserved3': <property object at 0x00000213f607a930>, '_pango_reserved4': <property object at 0x00000213f607aa20>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RendererClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RendererClass' objects>, '__weakref__': <attribute '__weakref__' of 'RendererClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000280355cc9f0>, 'draw_glyphs': <property object at 0x00000280355ccae0>, 'draw_rectangle': <property object at 0x00000280355ccbd0>, 'draw_error_underline': <property object at 0x00000280355cccc0>, 'draw_shape': <property object at 0x00000280355ccdb0>, 'draw_trapezoid': <property object at 0x00000280355ccea0>, 'draw_glyph': <property object at 0x00000280355ccf90>, 'part_changed': <property object at 0x00000280355cd080>, 'begin': <property object at 0x00000280355cd170>, 'end': <property object at 0x00000280355cd260>, 'prepare_run': <property object at 0x00000280355cd350>, 'draw_glyph_item': <property object at 0x00000280355cd440>, '_pango_reserved2': <property object at 0x00000280355cd530>, '_pango_reserved3': <property object at 0x00000280355cd620>, '_pango_reserved4': <property object at 0x00000280355cd710>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(RendererClass)
 

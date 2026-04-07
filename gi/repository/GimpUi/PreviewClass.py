@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class PreviewClass(__gi.Struct):
@@ -175,7 +168,7 @@ class PreviewClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PreviewClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PreviewClass' objects>, '__weakref__': <attribute '__weakref__' of 'PreviewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb74f39c0>, 'draw': <property object at 0x000001eeb74f3ab0>, 'draw_thumb': <property object at 0x000001eeb74f3ba0>, 'draw_buffer': <property object at 0x000001eeb74f3c90>, 'set_cursor': <property object at 0x000001eeb74f3d80>, 'transform': <property object at 0x000001eeb74f3e70>, 'untransform': <property object at 0x000001eeb74f3f60>, 'invalidated': <property object at 0x000001eeb7518090>, '_gimp_reserved0': <property object at 0x000001eeb7518180>, '_gimp_reserved1': <property object at 0x000001eeb7518270>, '_gimp_reserved2': <property object at 0x000001eeb7518360>, '_gimp_reserved3': <property object at 0x000001eeb7518450>, '_gimp_reserved4': <property object at 0x000001eeb7518540>, '_gimp_reserved5': <property object at 0x000001eeb7518630>, '_gimp_reserved6': <property object at 0x000001eeb7518720>, '_gimp_reserved7': <property object at 0x000001eeb7518810>, '_gimp_reserved8': <property object at 0x000001eeb7518900>, '_gimp_reserved9': <property object at 0x000001eeb75189f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PreviewClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PreviewClass' objects>, '__weakref__': <attribute '__weakref__' of 'PreviewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1d17470>, 'draw': <property object at 0x0000020ee1d17560>, 'draw_thumb': <property object at 0x0000020ee1d17650>, 'draw_buffer': <property object at 0x0000020ee1d17740>, 'set_cursor': <property object at 0x0000020ee1d17830>, 'transform': <property object at 0x0000020ee1d17920>, 'untransform': <property object at 0x0000020ee1d17a10>, 'invalidated': <property object at 0x0000020ee1d17b00>, '_gimp_reserved0': <property object at 0x0000020ee1d17bf0>, '_gimp_reserved1': <property object at 0x0000020ee1d17ce0>, '_gimp_reserved2': <property object at 0x0000020ee1d17dd0>, '_gimp_reserved3': <property object at 0x0000020ee1d17ec0>, '_gimp_reserved4': <property object at 0x0000020ee1d17fb0>, '_gimp_reserved5': <property object at 0x0000020ee1cec0e0>, '_gimp_reserved6': <property object at 0x0000020ee1cec1d0>, '_gimp_reserved7': <property object at 0x0000020ee1cec2c0>, '_gimp_reserved8': <property object at 0x0000020ee1cec3b0>, '_gimp_reserved9': <property object at 0x0000020ee1cec4a0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PreviewClass)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -178,8 +177,8 @@ class RGBA(RGBA):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gdk', '__init__': <function RGBA.__init__ at 0x000002459bda5a80>, '__eq__': <function RGBA.__eq__ at 0x000002459bda5b20>, '__ne__': <function RGBA.__ne__ at 0x000002459bda5bc0>, '__repr__': <function RGBA.__repr__ at 0x000002459bda5c60>, '__iter__': <function RGBA.__iter__ at 0x000002459bda5d00>, 'to_color': <function RGBA.to_color at 0x000002459bda5da0>, 'from_color': <classmethod(<function RGBA.from_color at 0x000002459bda5e40>)>, '__doc__': None, '__hash__': None})"
-    __gtype__ = None # (!) real value is '<GType GdkRGBA (2575320000)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gdk', '__init__': <function RGBA.__init__ at 0x000001872518aac0>, '__eq__': <function RGBA.__eq__ at 0x000001872518ab60>, '__ne__': <function RGBA.__ne__ at 0x000001872518ac00>, '__repr__': <function RGBA.__repr__ at 0x000001872518aca0>, '__iter__': <function RGBA.__iter__ at 0x000001872518ad40>, 'to_color': <function RGBA.to_color at 0x000001872518ade0>, 'from_color': <classmethod(<function RGBA.from_color at 0x000001872518ae80>)>, '__doc__': None, '__hash__': None})"
+    __gtype__ = None # (!) real value is '<GType GdkRGBA (585151488)>'
     __hash__ = None
     __info__ = StructInfo(RGBA)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -70,7 +69,8 @@ class IconSource(__gi.Boxed):
         """ get_state_wildcarded(self) -> bool """
         return False
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.IconSource """
         pass
 
@@ -222,8 +222,8 @@ class IconSource(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IconSource), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkIconSource (3923978912)>, '__dict__': <attribute '__dict__' of 'IconSource' objects>, '__weakref__': <attribute '__weakref__' of 'IconSource' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_direction': gi.FunctionInfo(get_direction, bound=None), 'get_direction_wildcarded': gi.FunctionInfo(get_direction_wildcarded, bound=None), 'get_filename': gi.FunctionInfo(get_filename, bound=None), 'get_icon_name': gi.FunctionInfo(get_icon_name, bound=None), 'get_pixbuf': gi.FunctionInfo(get_pixbuf, bound=None), 'get_size': gi.FunctionInfo(get_size, bound=None), 'get_size_wildcarded': gi.FunctionInfo(get_size_wildcarded, bound=None), 'get_state': gi.FunctionInfo(get_state, bound=None), 'get_state_wildcarded': gi.FunctionInfo(get_state_wildcarded, bound=None), 'set_direction': gi.FunctionInfo(set_direction, bound=None), 'set_direction_wildcarded': gi.FunctionInfo(set_direction_wildcarded, bound=None), 'set_filename': gi.FunctionInfo(set_filename, bound=None), 'set_icon_name': gi.FunctionInfo(set_icon_name, bound=None), 'set_pixbuf': gi.FunctionInfo(set_pixbuf, bound=None), 'set_size': gi.FunctionInfo(set_size, bound=None), 'set_size_wildcarded': gi.FunctionInfo(set_size_wildcarded, bound=None), 'set_state': gi.FunctionInfo(set_state, bound=None), 'set_state_wildcarded': gi.FunctionInfo(set_state_wildcarded, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002ece8827880>})"
-    __gtype__ = None # (!) real value is '<GType GtkIconSource (3923978912)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IconSource), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkIconSource (3538517888)>, '__dict__': <attribute '__dict__' of 'IconSource' objects>, '__weakref__': <attribute '__weakref__' of 'IconSource' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_direction': gi.FunctionInfo(get_direction), 'get_direction_wildcarded': gi.FunctionInfo(get_direction_wildcarded), 'get_filename': gi.FunctionInfo(get_filename), 'get_icon_name': gi.FunctionInfo(get_icon_name), 'get_pixbuf': gi.FunctionInfo(get_pixbuf), 'get_size': gi.FunctionInfo(get_size), 'get_size_wildcarded': gi.FunctionInfo(get_size_wildcarded), 'get_state': gi.FunctionInfo(get_state), 'get_state_wildcarded': gi.FunctionInfo(get_state_wildcarded), 'set_direction': gi.FunctionInfo(set_direction), 'set_direction_wildcarded': gi.FunctionInfo(set_direction_wildcarded), 'set_filename': gi.FunctionInfo(set_filename), 'set_icon_name': gi.FunctionInfo(set_icon_name), 'set_pixbuf': gi.FunctionInfo(set_pixbuf), 'set_size': gi.FunctionInfo(set_size), 'set_size_wildcarded': gi.FunctionInfo(set_size_wildcarded), 'set_state': gi.FunctionInfo(set_state), 'set_state_wildcarded': gi.FunctionInfo(set_state_wildcarded), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000002bfce305010>})"
+    __gtype__ = None # (!) real value is '<GType GtkIconSource (3538517888)>'
     __info__ = StructInfo(IconSource)
 
 

@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class LabeledClass(__gi.Struct):
@@ -165,7 +158,7 @@ class LabeledClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LabeledClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'LabeledClass' objects>, '__weakref__': <attribute '__weakref__' of 'LabeledClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb74f1300>, 'mnemonic_widget_changed': <property object at 0x000001eeb74f13f0>, 'populate': <property object at 0x000001eeb74f14e0>, '_gimp_reserved0': <property object at 0x000001eeb74f15d0>, '_gimp_reserved1': <property object at 0x000001eeb74f16c0>, '_gimp_reserved2': <property object at 0x000001eeb74f17b0>, '_gimp_reserved3': <property object at 0x000001eeb74f18a0>, '_gimp_reserved4': <property object at 0x000001eeb74f1990>, '_gimp_reserved5': <property object at 0x000001eeb74f1a80>, '_gimp_reserved6': <property object at 0x000001eeb74f1b70>, '_gimp_reserved7': <property object at 0x000001eeb74f1c60>, '_gimp_reserved8': <property object at 0x000001eeb74f1d50>, '_gimp_reserved9': <property object at 0x000001eeb74f1e40>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LabeledClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'LabeledClass' objects>, '__weakref__': <attribute '__weakref__' of 'LabeledClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1d14db0>, 'mnemonic_widget_changed': <property object at 0x0000020ee1d14ea0>, 'populate': <property object at 0x0000020ee1d14f90>, '_gimp_reserved0': <property object at 0x0000020ee1d15080>, '_gimp_reserved1': <property object at 0x0000020ee1d15170>, '_gimp_reserved2': <property object at 0x0000020ee1d15260>, '_gimp_reserved3': <property object at 0x0000020ee1d15350>, '_gimp_reserved4': <property object at 0x0000020ee1d15440>, '_gimp_reserved5': <property object at 0x0000020ee1d15530>, '_gimp_reserved6': <property object at 0x0000020ee1d15620>, '_gimp_reserved7': <property object at 0x0000020ee1d15710>, '_gimp_reserved8': <property object at 0x0000020ee1d15800>, '_gimp_reserved9': <property object at 0x0000020ee1d158f0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(LabeledClass)
 

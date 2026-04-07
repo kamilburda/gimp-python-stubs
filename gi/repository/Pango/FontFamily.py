@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class FontFamily(__gi_overrides_GObject.Object, __gi_overrides_Gio.ListModel):
@@ -42,20 +40,20 @@ class FontFamily(__gi_overrides_GObject.Object, __gi_overrides_Gio.ListModel):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -70,6 +68,12 @@ class FontFamily(__gi_overrides_GObject.Object, __gi_overrides_Gio.ListModel):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_face(self, *args, **kwargs): # real signature unknown
@@ -111,17 +115,17 @@ class FontFamily(__gi_overrides_GObject.Object, __gi_overrides_Gio.ListModel):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -166,20 +170,20 @@ class FontFamily(__gi_overrides_GObject.Object, __gi_overrides_Gio.ListModel):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -322,20 +326,20 @@ class FontFamily(__gi_overrides_GObject.Object, __gi_overrides_Gio.ListModel):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -344,6 +348,19 @@ class FontFamily(__gi_overrides_GObject.Object, __gi_overrides_Gio.ListModel):
 
     def _unsupported_method(self, *args, **kargs): # reliably restored by inspect
         # no doc
+        pass
+
+    def __class_getitem__(self, *args, **kwargs): # real signature unknown
+        """
+        Parameterizes a generic class.
+        
+        At least, parameterizing a generic class is the *main* thing this
+        method does. For example, for some generic class `Foo`, this is called
+        when we do `Foo[int]` - there, with `cls=Foo` and `params=int`.
+        
+        However, note that this method is also called when defining generic
+        classes in the first place with `class Foo[T]: ...`.
+        """
         pass
 
     def __contains__(self, item): # reliably restored by inspect
@@ -401,12 +418,7 @@ class FontFamily(__gi_overrides_GObject.Object, __gi_overrides_Gio.ListModel):
         pass
 
     def __init_subclass__(self, *args, **kwargs): # real signature unknown
-        """
-        This method is called when a class is subclassed.
-        
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
+        """ Function to initialize subclasses. """
         pass
 
     def __init__(self, **properties): # real signature unknown; restored from __doc__
@@ -488,12 +500,19 @@ class FontFamily(__gi_overrides_GObject.Object, __gi_overrides_Gio.ListModel):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x00000213f4556ec0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x00000280336fabf0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(FontFamily), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoFontFamily (4081764528)>, '__doc__': None, '__gsignals__': {}, 'get_face': gi.FunctionInfo(get_face, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'is_monospace': gi.FunctionInfo(is_monospace, bound=None), 'is_variable': gi.FunctionInfo(is_variable, bound=None), 'list_faces': gi.FunctionInfo(list_faces, bound=None), 'do_get_face': gi.VFuncInfo(get_face, bound=None), 'do_get_name': gi.VFuncInfo(get_name, bound=None), 'do_is_monospace': gi.VFuncInfo(is_monospace, bound=None), 'do_is_variable': gi.VFuncInfo(is_variable, bound=None), 'do_list_faces': gi.VFuncInfo(list_faces, bound=None), 'parent_instance': <property object at 0x00000213f608ee80>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(FontFamily), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoFontFamily (857393920)>, '__doc__': None, '__parameters__': (), '__gsignals__': {}, 'get_face': gi.FunctionInfo(get_face), 'get_name': gi.FunctionInfo(get_name), 'is_monospace': gi.FunctionInfo(is_monospace), 'is_variable': gi.FunctionInfo(is_variable), 'list_faces': gi.FunctionInfo(list_faces), 'do_get_face': gi.VFuncInfo(get_face), 'do_get_name': gi.VFuncInfo(get_name), 'do_is_monospace': gi.VFuncInfo(is_monospace), 'do_is_variable': gi.VFuncInfo(is_variable), 'do_list_faces': gi.VFuncInfo(list_faces), 'parent_instance': <property object at 0x00000280355e58f0>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object PangoFontFamily\n\nProperties from PangoFontFamily:\n  item-type -> GType: \n    \n  n-items -> guint: \n    \n  name -> gchararray: \n    \n  is-monospace -> gboolean: \n    \n  is-variable -> gboolean: \n    \n\nSignals from GListModel:\n  items-changed (guint, guint, guint)\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType PangoFontFamily (4081764528)>'
+    __gtype__ = None # (!) real value is '<GType PangoFontFamily (857393920)>'
     __info__ = ObjectInfo(FontFamily)
+    __orig_bases__ = (
+        None, # (!) real value is "<class 'gi.repository.Gio.ListModel'>"
+        typing.Generic[~ObjectItemType],
+    )
+    __parameters__ = ()
+    __static_attributes__ = ()
 
 

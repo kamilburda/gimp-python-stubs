@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,7 +151,7 @@ class MetadataStoreClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MetadataStoreClass), '__module__': 'gi.repository.Gegl', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MetadataStoreClass' objects>, '__weakref__': <attribute '__weakref__' of 'MetadataStoreClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002761b910180>, '_declare': <property object at 0x000002761b910270>, 'pspec': <property object at 0x000002761b910360>, 'set_value': <property object at 0x000002761b910450>, '_get_value': <property object at 0x000002761b910540>, 'has_value': <property object at 0x000002761b910630>, 'register_hook': <property object at 0x000002761b910720>, 'parse_value': <property object at 0x000002761b910810>, 'generate_value': <property object at 0x000002761b910900>, 'padding': <property object at 0x000002761b9109f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MetadataStoreClass), '__module__': 'gi.repository.Gegl', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MetadataStoreClass' objects>, '__weakref__': <attribute '__weakref__' of 'MetadataStoreClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ebdc20d260>, '_declare': <property object at 0x000001ebdc20d350>, 'pspec': <property object at 0x000001ebdc20d440>, 'set_value': <property object at 0x000001ebdc20d530>, '_get_value': <property object at 0x000001ebdc20d620>, 'has_value': <property object at 0x000001ebdc20d710>, 'register_hook': <property object at 0x000001ebdc20d800>, 'parse_value': <property object at 0x000001ebdc20d8f0>, 'generate_value': <property object at 0x000001ebdc20d9e0>, 'padding': <property object at 0x000001ebdc20dad0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(MetadataStoreClass)
 

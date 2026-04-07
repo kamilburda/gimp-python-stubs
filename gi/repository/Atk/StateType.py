@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class StateType(__gobject.GEnum):
+class StateType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -64,10 +57,6 @@ class StateType(__gobject.GEnum):
         """ Returns self, the complex conjugate of any int. """
         pass
 
-    def for_name(self, name): # real signature unknown; restored from __doc__
-        """ for_name(name:str) -> Atk.StateType """
-        pass
-
     def from_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return the integer represented by the given array of bytes.
@@ -82,22 +71,14 @@ class StateType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
         pass
 
-    def get_name(self, type): # real signature unknown; restored from __doc__
-        """ get_name(type:Atk.StateType) -> str """
-        return ""
-
     def is_integer(self, *args, **kwargs): # real signature unknown
         """ Returns True. Exists for duck type compatibility with float.is_integer. """
-        pass
-
-    def register(self, name): # real signature unknown; restored from __doc__
-        """ register(name:str) -> Atk.StateType """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -113,7 +94,7 @@ class StateType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -141,12 +122,23 @@ class StateType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -175,6 +167,10 @@ class StateType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -220,6 +216,14 @@ class StateType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -245,8 +249,8 @@ class StateType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -277,15 +281,16 @@ class StateType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -349,7 +354,7 @@ class StateType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -390,10 +395,6 @@ class StateType(__gobject.GEnum):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     ACTIVE = 1
@@ -441,56 +442,9 @@ class StateType(__gobject.GEnum):
     VERTICAL = 27
     VISIBLE = 28
     VISITED = 38
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Atk', '__dict__': <attribute '__dict__' of 'StateType' objects>, '__doc__': None, '__gtype__': <GType AtkStateType (892675712)>, '__enum_values__': {0: <enum ATK_STATE_INVALID of type Atk.StateType>, 1: <enum ATK_STATE_ACTIVE of type Atk.StateType>, 2: <enum ATK_STATE_ARMED of type Atk.StateType>, 3: <enum ATK_STATE_BUSY of type Atk.StateType>, 4: <enum ATK_STATE_CHECKED of type Atk.StateType>, 5: <enum ATK_STATE_DEFUNCT of type Atk.StateType>, 6: <enum ATK_STATE_EDITABLE of type Atk.StateType>, 7: <enum ATK_STATE_ENABLED of type Atk.StateType>, 8: <enum ATK_STATE_EXPANDABLE of type Atk.StateType>, 9: <enum ATK_STATE_EXPANDED of type Atk.StateType>, 10: <enum ATK_STATE_FOCUSABLE of type Atk.StateType>, 11: <enum ATK_STATE_FOCUSED of type Atk.StateType>, 12: <enum ATK_STATE_HORIZONTAL of type Atk.StateType>, 13: <enum ATK_STATE_ICONIFIED of type Atk.StateType>, 14: <enum ATK_STATE_MODAL of type Atk.StateType>, 15: <enum ATK_STATE_MULTI_LINE of type Atk.StateType>, 16: <enum ATK_STATE_MULTISELECTABLE of type Atk.StateType>, 17: <enum ATK_STATE_OPAQUE of type Atk.StateType>, 18: <enum ATK_STATE_PRESSED of type Atk.StateType>, 19: <enum ATK_STATE_RESIZABLE of type Atk.StateType>, 20: <enum ATK_STATE_SELECTABLE of type Atk.StateType>, 21: <enum ATK_STATE_SELECTED of type Atk.StateType>, 22: <enum ATK_STATE_SENSITIVE of type Atk.StateType>, 23: <enum ATK_STATE_SHOWING of type Atk.StateType>, 24: <enum ATK_STATE_SINGLE_LINE of type Atk.StateType>, 25: <enum ATK_STATE_STALE of type Atk.StateType>, 26: <enum ATK_STATE_TRANSIENT of type Atk.StateType>, 27: <enum ATK_STATE_VERTICAL of type Atk.StateType>, 28: <enum ATK_STATE_VISIBLE of type Atk.StateType>, 29: <enum ATK_STATE_MANAGES_DESCENDANTS of type Atk.StateType>, 30: <enum ATK_STATE_INDETERMINATE of type Atk.StateType>, 31: <enum ATK_STATE_TRUNCATED of type Atk.StateType>, 32: <enum ATK_STATE_REQUIRED of type Atk.StateType>, 33: <enum ATK_STATE_INVALID_ENTRY of type Atk.StateType>, 34: <enum ATK_STATE_SUPPORTS_AUTOCOMPLETION of type Atk.StateType>, 35: <enum ATK_STATE_SELECTABLE_TEXT of type Atk.StateType>, 36: <enum ATK_STATE_DEFAULT of type Atk.StateType>, 37: <enum ATK_STATE_ANIMATED of type Atk.StateType>, 38: <enum ATK_STATE_VISITED of type Atk.StateType>, 39: <enum ATK_STATE_CHECKABLE of type Atk.StateType>, 40: <enum ATK_STATE_HAS_POPUP of type Atk.StateType>, 41: <enum ATK_STATE_HAS_TOOLTIP of type Atk.StateType>, 42: <enum ATK_STATE_READ_ONLY of type Atk.StateType>, 43: <enum ATK_STATE_COLLAPSED of type Atk.StateType>, 44: <enum ATK_STATE_LAST_DEFINED of type Atk.StateType>}, '__info__': gi.EnumInfo(StateType), 'INVALID': <enum ATK_STATE_INVALID of type Atk.StateType>, 'ACTIVE': <enum ATK_STATE_ACTIVE of type Atk.StateType>, 'ARMED': <enum ATK_STATE_ARMED of type Atk.StateType>, 'BUSY': <enum ATK_STATE_BUSY of type Atk.StateType>, 'CHECKED': <enum ATK_STATE_CHECKED of type Atk.StateType>, 'DEFUNCT': <enum ATK_STATE_DEFUNCT of type Atk.StateType>, 'EDITABLE': <enum ATK_STATE_EDITABLE of type Atk.StateType>, 'ENABLED': <enum ATK_STATE_ENABLED of type Atk.StateType>, 'EXPANDABLE': <enum ATK_STATE_EXPANDABLE of type Atk.StateType>, 'EXPANDED': <enum ATK_STATE_EXPANDED of type Atk.StateType>, 'FOCUSABLE': <enum ATK_STATE_FOCUSABLE of type Atk.StateType>, 'FOCUSED': <enum ATK_STATE_FOCUSED of type Atk.StateType>, 'HORIZONTAL': <enum ATK_STATE_HORIZONTAL of type Atk.StateType>, 'ICONIFIED': <enum ATK_STATE_ICONIFIED of type Atk.StateType>, 'MODAL': <enum ATK_STATE_MODAL of type Atk.StateType>, 'MULTI_LINE': <enum ATK_STATE_MULTI_LINE of type Atk.StateType>, 'MULTISELECTABLE': <enum ATK_STATE_MULTISELECTABLE of type Atk.StateType>, 'OPAQUE': <enum ATK_STATE_OPAQUE of type Atk.StateType>, 'PRESSED': <enum ATK_STATE_PRESSED of type Atk.StateType>, 'RESIZABLE': <enum ATK_STATE_RESIZABLE of type Atk.StateType>, 'SELECTABLE': <enum ATK_STATE_SELECTABLE of type Atk.StateType>, 'SELECTED': <enum ATK_STATE_SELECTED of type Atk.StateType>, 'SENSITIVE': <enum ATK_STATE_SENSITIVE of type Atk.StateType>, 'SHOWING': <enum ATK_STATE_SHOWING of type Atk.StateType>, 'SINGLE_LINE': <enum ATK_STATE_SINGLE_LINE of type Atk.StateType>, 'STALE': <enum ATK_STATE_STALE of type Atk.StateType>, 'TRANSIENT': <enum ATK_STATE_TRANSIENT of type Atk.StateType>, 'VERTICAL': <enum ATK_STATE_VERTICAL of type Atk.StateType>, 'VISIBLE': <enum ATK_STATE_VISIBLE of type Atk.StateType>, 'MANAGES_DESCENDANTS': <enum ATK_STATE_MANAGES_DESCENDANTS of type Atk.StateType>, 'INDETERMINATE': <enum ATK_STATE_INDETERMINATE of type Atk.StateType>, 'TRUNCATED': <enum ATK_STATE_TRUNCATED of type Atk.StateType>, 'REQUIRED': <enum ATK_STATE_REQUIRED of type Atk.StateType>, 'INVALID_ENTRY': <enum ATK_STATE_INVALID_ENTRY of type Atk.StateType>, 'SUPPORTS_AUTOCOMPLETION': <enum ATK_STATE_SUPPORTS_AUTOCOMPLETION of type Atk.StateType>, 'SELECTABLE_TEXT': <enum ATK_STATE_SELECTABLE_TEXT of type Atk.StateType>, 'DEFAULT': <enum ATK_STATE_DEFAULT of type Atk.StateType>, 'ANIMATED': <enum ATK_STATE_ANIMATED of type Atk.StateType>, 'VISITED': <enum ATK_STATE_VISITED of type Atk.StateType>, 'CHECKABLE': <enum ATK_STATE_CHECKABLE of type Atk.StateType>, 'HAS_POPUP': <enum ATK_STATE_HAS_POPUP of type Atk.StateType>, 'HAS_TOOLTIP': <enum ATK_STATE_HAS_TOOLTIP of type Atk.StateType>, 'READ_ONLY': <enum ATK_STATE_READ_ONLY of type Atk.StateType>, 'COLLAPSED': <enum ATK_STATE_COLLAPSED of type Atk.StateType>, 'LAST_DEFINED': <enum ATK_STATE_LAST_DEFINED of type Atk.StateType>, 'for_name': gi.FunctionInfo(for_name, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'register': gi.FunctionInfo(register, bound=None)})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-        30: 30,
-        31: 31,
-        32: 32,
-        33: 33,
-        34: 34,
-        35: 35,
-        36: 36,
-        37: 37,
-        38: 38,
-        39: 39,
-        40: 40,
-        41: 41,
-        42: 42,
-        43: 43,
-        44: 44,
-    }
-    __gtype__ = None # (!) real value is '<GType AtkStateType (892675712)>'
-    __info__ = gi.EnumInfo(StateType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'INVALID': <StateType.INVALID: 0>, 'ACTIVE': <StateType.ACTIVE: 1>, 'ARMED': <StateType.ARMED: 2>, 'BUSY': <StateType.BUSY: 3>, 'CHECKED': <StateType.CHECKED: 4>, 'DEFUNCT': <StateType.DEFUNCT: 5>, 'EDITABLE': <StateType.EDITABLE: 6>, 'ENABLED': <StateType.ENABLED: 7>, 'EXPANDABLE': <StateType.EXPANDABLE: 8>, 'EXPANDED': <StateType.EXPANDED: 9>, 'FOCUSABLE': <StateType.FOCUSABLE: 10>, 'FOCUSED': <StateType.FOCUSED: 11>, 'HORIZONTAL': <StateType.HORIZONTAL: 12>, 'ICONIFIED': <StateType.ICONIFIED: 13>, 'MODAL': <StateType.MODAL: 14>, 'MULTI_LINE': <StateType.MULTI_LINE: 15>, 'MULTISELECTABLE': <StateType.MULTISELECTABLE: 16>, 'OPAQUE': <StateType.OPAQUE: 17>, 'PRESSED': <StateType.PRESSED: 18>, 'RESIZABLE': <StateType.RESIZABLE: 19>, 'SELECTABLE': <StateType.SELECTABLE: 20>, 'SELECTED': <StateType.SELECTED: 21>, 'SENSITIVE': <StateType.SENSITIVE: 22>, 'SHOWING': <StateType.SHOWING: 23>, 'SINGLE_LINE': <StateType.SINGLE_LINE: 24>, 'STALE': <StateType.STALE: 25>, 'TRANSIENT': <StateType.TRANSIENT: 26>, 'VERTICAL': <StateType.VERTICAL: 27>, 'VISIBLE': <StateType.VISIBLE: 28>, 'MANAGES_DESCENDANTS': <StateType.MANAGES_DESCENDANTS: 29>, 'INDETERMINATE': <StateType.INDETERMINATE: 30>, 'TRUNCATED': <StateType.TRUNCATED: 31>, 'REQUIRED': <StateType.REQUIRED: 32>, 'INVALID_ENTRY': <StateType.INVALID_ENTRY: 33>, 'SUPPORTS_AUTOCOMPLETION': <StateType.SUPPORTS_AUTOCOMPLETION: 34>, 'SELECTABLE_TEXT': <StateType.SELECTABLE_TEXT: 35>, 'DEFAULT': <StateType.DEFAULT: 36>, 'ANIMATED': <StateType.ANIMATED: 37>, 'VISITED': <StateType.VISITED: 38>, 'CHECKABLE': <StateType.CHECKABLE: 39>, 'HAS_POPUP': <StateType.HAS_POPUP: 40>, 'HAS_TOOLTIP': <StateType.HAS_TOOLTIP: 41>, 'READ_ONLY': <StateType.READ_ONLY: 42>, 'COLLAPSED': <StateType.COLLAPSED: 43>, 'LAST_DEFINED': <StateType.LAST_DEFINED: 44>})"
+    __name__ = 'StateType'
+    __qualname__ = 'StateType'
 
 

@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -152,7 +145,7 @@ class EditableTextIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EditableTextIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EditableTextIface' objects>, '__weakref__': <attribute '__weakref__' of 'EditableTextIface' objects>, '__doc__': None, 'parent_interface': <property object at 0x000001733817ed40>, 'set_run_attributes': <property object at 0x000001733817ee30>, 'set_text_contents': <property object at 0x000001733817ef20>, 'insert_text': <property object at 0x000001733817f010>, 'copy_text': <property object at 0x000001733817f100>, 'cut_text': <property object at 0x000001733817f1f0>, 'delete_text': <property object at 0x000001733817f2e0>, 'paste_text': <property object at 0x000001733817f3d0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EditableTextIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EditableTextIface' objects>, '__weakref__': <attribute '__weakref__' of 'EditableTextIface' objects>, '__doc__': None, 'parent_interface': <property object at 0x000001c85dc87420>, 'set_run_attributes': <property object at 0x000001c85dc87510>, 'set_text_contents': <property object at 0x000001c85dc87600>, 'insert_text': <property object at 0x000001c85dc876f0>, 'copy_text': <property object at 0x000001c85dc877e0>, 'cut_text': <property object at 0x000001c85dc878d0>, 'delete_text': <property object at 0x000001c85dc879c0>, 'paste_text': <property object at 0x000001c85dc87ab0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(EditableTextIface)
 

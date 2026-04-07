@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -70,7 +75,7 @@ class Subprocess(__gi_overrides_GObject.Object, Initable):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -98,6 +103,9 @@ class Subprocess(__gi_overrides_GObject.Object, Initable):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -265,7 +273,8 @@ class Subprocess(__gi_overrides_GObject.Object, Initable):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, argv, flags): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, argv, flags): # real signature unknown; restored from __doc__
         """ new(argv:list, flags:Gio.SubprocessFlags) -> Gio.Subprocess """
         pass
 
@@ -370,20 +379,20 @@ class Subprocess(__gi_overrides_GObject.Object, Initable):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -413,7 +422,11 @@ class Subprocess(__gi_overrides_GObject.Object, Initable):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -514,12 +527,12 @@ class Subprocess(__gi_overrides_GObject.Object, Initable):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb5c00>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7086b640>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Subprocess), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSubprocess (2466397344)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'communicate': gi.FunctionInfo(communicate, bound=None), 'communicate_async': gi.FunctionInfo(communicate_async, bound=None), 'communicate_finish': gi.FunctionInfo(communicate_finish, bound=None), 'communicate_utf8': gi.FunctionInfo(communicate_utf8, bound=None), 'communicate_utf8_async': gi.FunctionInfo(communicate_utf8_async, bound=None), 'communicate_utf8_finish': gi.FunctionInfo(communicate_utf8_finish, bound=None), 'force_exit': gi.FunctionInfo(force_exit, bound=None), 'get_exit_status': gi.FunctionInfo(get_exit_status, bound=None), 'get_identifier': gi.FunctionInfo(get_identifier, bound=None), 'get_if_exited': gi.FunctionInfo(get_if_exited, bound=None), 'get_if_signaled': gi.FunctionInfo(get_if_signaled, bound=None), 'get_status': gi.FunctionInfo(get_status, bound=None), 'get_stderr_pipe': gi.FunctionInfo(get_stderr_pipe, bound=None), 'get_stdin_pipe': gi.FunctionInfo(get_stdin_pipe, bound=None), 'get_stdout_pipe': gi.FunctionInfo(get_stdout_pipe, bound=None), 'get_successful': gi.FunctionInfo(get_successful, bound=None), 'get_term_sig': gi.FunctionInfo(get_term_sig, bound=None), 'wait': gi.FunctionInfo(wait, bound=None), 'wait_async': gi.FunctionInfo(wait_async, bound=None), 'wait_check': gi.FunctionInfo(wait_check, bound=None), 'wait_check_async': gi.FunctionInfo(wait_check_async, bound=None), 'wait_check_finish': gi.FunctionInfo(wait_check_finish, bound=None), 'wait_finish': gi.FunctionInfo(wait_finish, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Subprocess), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSubprocess (1841605712)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'communicate': gi.FunctionInfo(communicate), 'communicate_async': gi.FunctionInfo(communicate_async), 'communicate_finish': gi.FunctionInfo(communicate_finish), 'communicate_utf8': gi.FunctionInfo(communicate_utf8), 'communicate_utf8_async': gi.FunctionInfo(communicate_utf8_async), 'communicate_utf8_finish': gi.FunctionInfo(communicate_utf8_finish), 'force_exit': gi.FunctionInfo(force_exit), 'get_exit_status': gi.FunctionInfo(get_exit_status), 'get_identifier': gi.FunctionInfo(get_identifier), 'get_if_exited': gi.FunctionInfo(get_if_exited), 'get_if_signaled': gi.FunctionInfo(get_if_signaled), 'get_status': gi.FunctionInfo(get_status), 'get_stderr_pipe': gi.FunctionInfo(get_stderr_pipe), 'get_stdin_pipe': gi.FunctionInfo(get_stdin_pipe), 'get_stdout_pipe': gi.FunctionInfo(get_stdout_pipe), 'get_successful': gi.FunctionInfo(get_successful), 'get_term_sig': gi.FunctionInfo(get_term_sig), 'wait': gi.FunctionInfo(wait), 'wait_async': gi.FunctionInfo(wait_async), 'wait_check': gi.FunctionInfo(wait_check), 'wait_check_async': gi.FunctionInfo(wait_check_async), 'wait_check_finish': gi.FunctionInfo(wait_check_finish), 'wait_finish': gi.FunctionInfo(wait_finish)})"
     __gdoc__ = 'Object GSubprocess\n\nProperties from GSubprocess:\n  flags -> GSubprocessFlags: flags\n  argv -> GStrv: argv\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GSubprocess (2466397344)>'
+    __gtype__ = None # (!) real value is '<GType GSubprocess (1841605712)>'
     __info__ = ObjectInfo(Subprocess)
 
 

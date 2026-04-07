@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Hmac(__gi.Boxed):
@@ -36,7 +34,8 @@ class Hmac(__gi.Boxed):
         """ get_string(self) -> str """
         return ""
 
-    def new(self, digest_type, key): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, digest_type, key): # real signature unknown; restored from __doc__
         """ new(digest_type:GLib.ChecksumType, key:list) -> GLib.Hmac or None """
         pass
 
@@ -164,8 +163,8 @@ class Hmac(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Hmac), '__module__': 'gi.repository.GLib', '__gtype__': <GType GHmac (163512048)>, '__dict__': <attribute '__dict__' of 'Hmac' objects>, '__weakref__': <attribute '__weakref__' of 'Hmac' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'get_digest': gi.FunctionInfo(get_digest, bound=None), 'get_string': gi.FunctionInfo(get_string, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'update': gi.FunctionInfo(update, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GHmac (163512048)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Hmac), '__module__': 'gi.repository.GLib', '__gtype__': <GType GHmac (2640519552)>, '__dict__': <attribute '__dict__' of 'Hmac' objects>, '__weakref__': <attribute '__weakref__' of 'Hmac' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'copy': gi.FunctionInfo(copy), 'get_digest': gi.FunctionInfo(get_digest), 'get_string': gi.FunctionInfo(get_string), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), 'update': gi.FunctionInfo(update), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GHmac (2640519552)>'
     __info__ = StructInfo(Hmac)
 
 

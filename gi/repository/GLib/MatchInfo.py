@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class MatchInfo(__gi.Boxed):
@@ -192,8 +190,8 @@ class MatchInfo(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MatchInfo), '__module__': 'gi.repository.GLib', '__gtype__': <GType GMatchInfo (163508912)>, '__dict__': <attribute '__dict__' of 'MatchInfo' objects>, '__weakref__': <attribute '__weakref__' of 'MatchInfo' objects>, '__doc__': None, 'expand_references': gi.FunctionInfo(expand_references, bound=None), 'fetch': gi.FunctionInfo(fetch, bound=None), 'fetch_all': gi.FunctionInfo(fetch_all, bound=None), 'fetch_named': gi.FunctionInfo(fetch_named, bound=None), 'fetch_named_pos': gi.FunctionInfo(fetch_named_pos, bound=None), 'fetch_pos': gi.FunctionInfo(fetch_pos, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_match_count': gi.FunctionInfo(get_match_count, bound=None), 'get_regex': gi.FunctionInfo(get_regex, bound=None), 'get_string': gi.FunctionInfo(get_string, bound=None), 'is_partial_match': gi.FunctionInfo(is_partial_match, bound=None), 'matches': gi.FunctionInfo(matches, bound=None), 'next': gi.FunctionInfo(next, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GMatchInfo (163508912)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MatchInfo), '__module__': 'gi.repository.GLib', '__gtype__': <GType GMatchInfo (2640522240)>, '__dict__': <attribute '__dict__' of 'MatchInfo' objects>, '__weakref__': <attribute '__weakref__' of 'MatchInfo' objects>, '__doc__': None, 'expand_references': gi.FunctionInfo(expand_references), 'fetch': gi.FunctionInfo(fetch), 'fetch_all': gi.FunctionInfo(fetch_all), 'fetch_named': gi.FunctionInfo(fetch_named), 'fetch_named_pos': gi.FunctionInfo(fetch_named_pos), 'fetch_pos': gi.FunctionInfo(fetch_pos), 'free': gi.FunctionInfo(free), 'get_match_count': gi.FunctionInfo(get_match_count), 'get_regex': gi.FunctionInfo(get_regex), 'get_string': gi.FunctionInfo(get_string), 'is_partial_match': gi.FunctionInfo(is_partial_match), 'matches': gi.FunctionInfo(matches), 'next': gi.FunctionInfo(next), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref)})"
+    __gtype__ = None # (!) real value is '<GType GMatchInfo (2640522240)>'
     __info__ = StructInfo(MatchInfo)
 
 

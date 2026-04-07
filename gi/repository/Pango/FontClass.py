@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class FontClass(__gi.Struct):
@@ -149,7 +147,7 @@ class FontClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000213f608dcb0>, 'describe': <property object at 0x00000213f608dda0>, 'get_coverage': <property object at 0x00000213f608de90>, 'get_glyph_extents': <property object at 0x00000213f608df80>, 'get_metrics': <property object at 0x00000213f608e070>, 'get_font_map': <property object at 0x00000213f608e160>, 'describe_absolute': <property object at 0x00000213f608e250>, 'get_features': <property object at 0x00000213f608e340>, 'create_hb_font': <property object at 0x00000213f608e430>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000280355e4720>, 'describe': <property object at 0x00000280355e4810>, 'get_coverage': <property object at 0x00000280355e4900>, 'get_glyph_extents': <property object at 0x00000280355e49f0>, 'get_metrics': <property object at 0x00000280355e4ae0>, 'get_font_map': <property object at 0x00000280355e4bd0>, 'describe_absolute': <property object at 0x00000280355e4cc0>, 'get_features': <property object at 0x00000280355e4db0>, 'create_hb_font': <property object at 0x00000280355e4ea0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(FontClass)
 

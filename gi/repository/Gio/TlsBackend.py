@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -74,7 +79,11 @@ class TlsBackend(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -165,10 +174,10 @@ class TlsBackend(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(TlsBackend), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTlsBackend (2472618096)>, '__dict__': <attribute '__dict__' of 'TlsBackend' objects>, '__weakref__': <attribute '__weakref__' of 'TlsBackend' objects>, '__doc__': None, '__gsignals__': {}, 'get_default': gi.FunctionInfo(get_default, bound=None), 'get_certificate_type': gi.FunctionInfo(get_certificate_type, bound=None), 'get_client_connection_type': gi.FunctionInfo(get_client_connection_type, bound=None), 'get_default_database': gi.FunctionInfo(get_default_database, bound=None), 'get_dtls_client_connection_type': gi.FunctionInfo(get_dtls_client_connection_type, bound=None), 'get_dtls_server_connection_type': gi.FunctionInfo(get_dtls_server_connection_type, bound=None), 'get_file_database_type': gi.FunctionInfo(get_file_database_type, bound=None), 'get_server_connection_type': gi.FunctionInfo(get_server_connection_type, bound=None), 'set_default_database': gi.FunctionInfo(set_default_database, bound=None), 'supports_dtls': gi.FunctionInfo(supports_dtls, bound=None), 'supports_tls': gi.FunctionInfo(supports_tls, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(TlsBackend), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTlsBackend (1848623504)>, '__dict__': <attribute '__dict__' of 'TlsBackend' objects>, '__weakref__': <attribute '__weakref__' of 'TlsBackend' objects>, '__doc__': None, '__gsignals__': {}, 'get_default': <staticmethod(gi.FunctionInfo(get_default))>, 'get_certificate_type': gi.FunctionInfo(get_certificate_type), 'get_client_connection_type': gi.FunctionInfo(get_client_connection_type), 'get_default_database': gi.FunctionInfo(get_default_database), 'get_dtls_client_connection_type': gi.FunctionInfo(get_dtls_client_connection_type), 'get_dtls_server_connection_type': gi.FunctionInfo(get_dtls_server_connection_type), 'get_file_database_type': gi.FunctionInfo(get_file_database_type), 'get_server_connection_type': gi.FunctionInfo(get_server_connection_type), 'set_default_database': gi.FunctionInfo(set_default_database), 'supports_dtls': gi.FunctionInfo(supports_dtls), 'supports_tls': gi.FunctionInfo(supports_tls)})"
     __gdoc__ = 'Interface GTlsBackend\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GTlsBackend (2472618096)>'
+    __gtype__ = None # (!) real value is '<GType GTlsBackend (1848623504)>'
     __info__ = InterfaceInfo(TlsBackend)
 
 

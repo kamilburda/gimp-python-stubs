@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -33,15 +29,18 @@ class Scanner(__gi.Boxed):
     def copy(self, *args, **kwargs): # real signature unknown
         pass
 
-    def new_file(self, file): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_file(cls, file): # real signature unknown; restored from __doc__
         """ new_file(file:Gio.File) -> Gimp.Scanner """
         pass
 
-    def new_stream(self, input): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_stream(cls, input): # real signature unknown; restored from __doc__
         """ new_stream(input:Gio.InputStream) -> Gimp.Scanner """
         pass
 
-    def new_string(self, text): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_string(cls, text): # real signature unknown; restored from __doc__
         """ new_string(text:list) -> Gimp.Scanner """
         pass
 
@@ -208,8 +207,8 @@ class Scanner(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Scanner), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpScanner (3595414624)>, '__dict__': <attribute '__dict__' of 'Scanner' objects>, '__weakref__': <attribute '__weakref__' of 'Scanner' objects>, '__doc__': None, 'new_file': gi.FunctionInfo(new_file, bound=None), 'new_stream': gi.FunctionInfo(new_stream, bound=None), 'new_string': gi.FunctionInfo(new_string, bound=None), 'parse_boolean': gi.FunctionInfo(parse_boolean, bound=None), 'parse_color': gi.FunctionInfo(parse_color, bound=None), 'parse_data': gi.FunctionInfo(parse_data, bound=None), 'parse_double': gi.FunctionInfo(parse_double, bound=None), 'parse_identifier': gi.FunctionInfo(parse_identifier, bound=None), 'parse_int': gi.FunctionInfo(parse_int, bound=None), 'parse_int64': gi.FunctionInfo(parse_int64, bound=None), 'parse_matrix2': gi.FunctionInfo(parse_matrix2, bound=None), 'parse_string': gi.FunctionInfo(parse_string, bound=None), 'parse_string_no_validate': gi.FunctionInfo(parse_string_no_validate, bound=None), 'parse_token': gi.FunctionInfo(parse_token, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GimpScanner (3595414624)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Scanner), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpScanner (2360878288)>, '__dict__': <attribute '__dict__' of 'Scanner' objects>, '__weakref__': <attribute '__weakref__' of 'Scanner' objects>, '__doc__': None, 'new_file': <classmethod(gi.FunctionInfo(new_file))>, 'new_stream': <classmethod(gi.FunctionInfo(new_stream))>, 'new_string': <classmethod(gi.FunctionInfo(new_string))>, 'parse_boolean': gi.FunctionInfo(parse_boolean), 'parse_color': gi.FunctionInfo(parse_color), 'parse_data': gi.FunctionInfo(parse_data), 'parse_double': gi.FunctionInfo(parse_double), 'parse_identifier': gi.FunctionInfo(parse_identifier), 'parse_int': gi.FunctionInfo(parse_int), 'parse_int64': gi.FunctionInfo(parse_int64), 'parse_matrix2': gi.FunctionInfo(parse_matrix2), 'parse_string': gi.FunctionInfo(parse_string), 'parse_string_no_validate': gi.FunctionInfo(parse_string_no_validate), 'parse_token': gi.FunctionInfo(parse_token), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref)})"
+    __gtype__ = None # (!) real value is '<GType GimpScanner (2360878288)>'
     __info__ = StructInfo(Scanner)
 
 

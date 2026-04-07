@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -164,10 +163,10 @@ class ToolShell(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ToolShell), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkToolShell (3922673424)>, '__dict__': <attribute '__dict__' of 'ToolShell' objects>, '__weakref__': <attribute '__weakref__' of 'ToolShell' objects>, '__doc__': None, '__gsignals__': {}, 'get_ellipsize_mode': gi.FunctionInfo(get_ellipsize_mode, bound=None), 'get_icon_size': gi.FunctionInfo(get_icon_size, bound=None), 'get_orientation': gi.FunctionInfo(get_orientation, bound=None), 'get_relief_style': gi.FunctionInfo(get_relief_style, bound=None), 'get_style': gi.FunctionInfo(get_style, bound=None), 'get_text_alignment': gi.FunctionInfo(get_text_alignment, bound=None), 'get_text_orientation': gi.FunctionInfo(get_text_orientation, bound=None), 'get_text_size_group': gi.FunctionInfo(get_text_size_group, bound=None), 'rebuild_menu': gi.FunctionInfo(rebuild_menu, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ToolShell), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkToolShell (3414248112)>, '__dict__': <attribute '__dict__' of 'ToolShell' objects>, '__weakref__': <attribute '__weakref__' of 'ToolShell' objects>, '__doc__': None, '__gsignals__': {}, 'get_ellipsize_mode': gi.FunctionInfo(get_ellipsize_mode), 'get_icon_size': gi.FunctionInfo(get_icon_size), 'get_orientation': gi.FunctionInfo(get_orientation), 'get_relief_style': gi.FunctionInfo(get_relief_style), 'get_style': gi.FunctionInfo(get_style), 'get_text_alignment': gi.FunctionInfo(get_text_alignment), 'get_text_orientation': gi.FunctionInfo(get_text_orientation), 'get_text_size_group': gi.FunctionInfo(get_text_size_group), 'rebuild_menu': gi.FunctionInfo(rebuild_menu)})"
     __gdoc__ = 'Interface GtkToolShell\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkToolShell (3922673424)>'
+    __gtype__ = None # (!) real value is '<GType GtkToolShell (3414248112)>'
     __info__ = InterfaceInfo(ToolShell)
 
 

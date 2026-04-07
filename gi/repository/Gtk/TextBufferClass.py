@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -171,7 +170,7 @@ class TextBufferClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextBufferClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextBufferClass' objects>, '__weakref__': <attribute '__weakref__' of 'TextBufferClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece9b6d800>, 'insert_text': <property object at 0x000002ece9b6d8f0>, 'insert_pixbuf': <property object at 0x000002ece9b6d9e0>, 'insert_child_anchor': <property object at 0x000002ece9b6dad0>, 'delete_range': <property object at 0x000002ece9b6dbc0>, 'changed': <property object at 0x000002ece9b6dcb0>, 'modified_changed': <property object at 0x000002ece9b6dda0>, 'mark_set': <property object at 0x000002ece9b6de90>, 'mark_deleted': <property object at 0x000002ece9b6df80>, 'apply_tag': <property object at 0x000002ece9b6e070>, 'remove_tag': <property object at 0x000002ece9b6e160>, 'begin_user_action': <property object at 0x000002ece9b6e250>, 'end_user_action': <property object at 0x000002ece9b6e340>, 'paste_done': <property object at 0x000002ece9b6e430>, '_gtk_reserved1': <property object at 0x000002ece9b6e520>, '_gtk_reserved2': <property object at 0x000002ece9b6e610>, '_gtk_reserved3': <property object at 0x000002ece9b6e700>, '_gtk_reserved4': <property object at 0x000002ece9b6e7f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextBufferClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextBufferClass' objects>, '__weakref__': <attribute '__weakref__' of 'TextBufferClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd3a0ffb0>, 'insert_text': <property object at 0x000002bfd3a140e0>, 'insert_pixbuf': <property object at 0x000002bfd3a141d0>, 'insert_child_anchor': <property object at 0x000002bfd3a142c0>, 'delete_range': <property object at 0x000002bfd3a143b0>, 'changed': <property object at 0x000002bfd3a144a0>, 'modified_changed': <property object at 0x000002bfd3a14590>, 'mark_set': <property object at 0x000002bfd3a14680>, 'mark_deleted': <property object at 0x000002bfd3a14770>, 'apply_tag': <property object at 0x000002bfd3a14860>, 'remove_tag': <property object at 0x000002bfd3a14950>, 'begin_user_action': <property object at 0x000002bfd3a14a40>, 'end_user_action': <property object at 0x000002bfd3a14b30>, 'paste_done': <property object at 0x000002bfd3a14c20>, '_gtk_reserved1': <property object at 0x000002bfd3a14d10>, '_gtk_reserved2': <property object at 0x000002bfd3a14e00>, '_gtk_reserved3': <property object at 0x000002bfd3a14ef0>, '_gtk_reserved4': <property object at 0x000002bfd3a14fe0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TextBufferClass)
 

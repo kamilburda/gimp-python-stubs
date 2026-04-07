@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ProcedureDialogClass(__gi.Struct):
@@ -167,7 +160,7 @@ class ProcedureDialogClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ProcedureDialogClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ProcedureDialogClass' objects>, '__weakref__': <attribute '__weakref__' of 'ProcedureDialogClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb7518cc0>, 'fill_start': <property object at 0x000001eeb7518db0>, 'fill_end': <property object at 0x000001eeb7518ea0>, 'fill_list': <property object at 0x000001eeb7518f90>, '_gimp_reserved0': <property object at 0x000001eeb7519080>, '_gimp_reserved1': <property object at 0x000001eeb7519170>, '_gimp_reserved2': <property object at 0x000001eeb7519260>, '_gimp_reserved3': <property object at 0x000001eeb7519350>, '_gimp_reserved4': <property object at 0x000001eeb7519440>, '_gimp_reserved5': <property object at 0x000001eeb7519530>, '_gimp_reserved6': <property object at 0x000001eeb7519620>, '_gimp_reserved7': <property object at 0x000001eeb7519710>, '_gimp_reserved8': <property object at 0x000001eeb7519800>, '_gimp_reserved9': <property object at 0x000001eeb75198f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ProcedureDialogClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ProcedureDialogClass' objects>, '__weakref__': <attribute '__weakref__' of 'ProcedureDialogClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1cec770>, 'fill_start': <property object at 0x0000020ee1cec860>, 'fill_end': <property object at 0x0000020ee1cec950>, 'fill_list': <property object at 0x0000020ee1ceca40>, '_gimp_reserved0': <property object at 0x0000020ee1cecb30>, '_gimp_reserved1': <property object at 0x0000020ee1cecc20>, '_gimp_reserved2': <property object at 0x0000020ee1cecd10>, '_gimp_reserved3': <property object at 0x0000020ee1cece00>, '_gimp_reserved4': <property object at 0x0000020ee1cecef0>, '_gimp_reserved5': <property object at 0x0000020ee1cecfe0>, '_gimp_reserved6': <property object at 0x0000020ee1ced0d0>, '_gimp_reserved7': <property object at 0x0000020ee1ced1c0>, '_gimp_reserved8': <property object at 0x0000020ee1ced2b0>, '_gimp_reserved9': <property object at 0x0000020ee1ced3a0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ProcedureDialogClass)
 

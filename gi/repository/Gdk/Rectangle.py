@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,8 +156,8 @@ class Rectangle(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Rectangle), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkRectangle (2575321008)>, '__dict__': <attribute '__dict__' of 'Rectangle' objects>, '__weakref__': <attribute '__weakref__' of 'Rectangle' objects>, '__doc__': None, 'x': <property object at 0x000002459bd9fa60>, 'y': <property object at 0x000002459bd9fb50>, 'width': <property object at 0x000002459bd9fc40>, 'height': <property object at 0x000002459bd9fd30>, 'equal': gi.FunctionInfo(equal, bound=None), 'intersect': gi.FunctionInfo(intersect, bound=None), 'union': gi.FunctionInfo(union, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GdkRectangle (2575321008)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Rectangle), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkRectangle (585159072)>, '__dict__': <attribute '__dict__' of 'Rectangle' objects>, '__weakref__': <attribute '__weakref__' of 'Rectangle' objects>, '__doc__': None, 'x': <property object at 0x00000187252b8180>, 'y': <property object at 0x00000187252b8270>, 'width': <property object at 0x00000187252b8360>, 'height': <property object at 0x00000187252b8450>, 'equal': gi.FunctionInfo(equal), 'intersect': gi.FunctionInfo(intersect), 'union': gi.FunctionInfo(union)})"
+    __gtype__ = None # (!) real value is '<GType GdkRectangle (585159072)>'
     __info__ = StructInfo(Rectangle)
 
 

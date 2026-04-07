@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class FontMapClass(__gi.Struct):
@@ -149,7 +147,7 @@ class FontMapClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontMapClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontMapClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontMapClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000213f608f7e0>, 'load_font': <property object at 0x00000213f608f8d0>, 'list_families': <property object at 0x00000213f608f9c0>, 'load_fontset': <property object at 0x00000213f608fab0>, 'shape_engine_type': <property object at 0x00000213f608fba0>, 'get_serial': <property object at 0x00000213f608fc90>, 'changed': <property object at 0x00000213f608fd80>, 'get_family': <property object at 0x00000213f608fe70>, 'get_face': <property object at 0x00000213f608ff60>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontMapClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontMapClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontMapClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000280355e6250>, 'load_font': <property object at 0x00000280355e6340>, 'list_families': <property object at 0x00000280355e6430>, 'load_fontset': <property object at 0x00000280355e6520>, 'shape_engine_type': <property object at 0x00000280355e6610>, 'get_serial': <property object at 0x00000280355e6700>, 'changed': <property object at 0x00000280355e67f0>, 'get_family': <property object at 0x00000280355e68e0>, 'get_face': <property object at 0x00000280355e69d0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(FontMapClass)
 

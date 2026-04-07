@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -62,19 +58,23 @@ class ConfigWriter(__gi.Boxed):
         """ linefeed(self) """
         pass
 
-    def new_from_fd(self, fd): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_fd(cls, fd): # real signature unknown; restored from __doc__
         """ new_from_fd(fd:int) -> Gimp.ConfigWriter or None """
         pass
 
-    def new_from_file(self, file, atomic, header): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_file(cls, file, atomic, header): # real signature unknown; restored from __doc__
         """ new_from_file(file:Gio.File, atomic:bool, header:str) -> Gimp.ConfigWriter or None """
         pass
 
-    def new_from_stream(self, output, header): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_stream(cls, output, header): # real signature unknown; restored from __doc__
         """ new_from_stream(output:Gio.OutputStream, header:str) -> Gimp.ConfigWriter or None """
         pass
 
-    def new_from_string(self, string): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_string(cls, string): # real signature unknown; restored from __doc__
         """ new_from_string(string:GLib.String) -> Gimp.ConfigWriter or None """
         pass
 
@@ -213,8 +213,8 @@ class ConfigWriter(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ConfigWriter), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpConfigWriter (3595399728)>, '__dict__': <attribute '__dict__' of 'ConfigWriter' objects>, '__weakref__': <attribute '__weakref__' of 'ConfigWriter' objects>, '__doc__': None, 'new_from_fd': gi.FunctionInfo(new_from_fd, bound=None), 'new_from_file': gi.FunctionInfo(new_from_file, bound=None), 'new_from_stream': gi.FunctionInfo(new_from_stream, bound=None), 'new_from_string': gi.FunctionInfo(new_from_string, bound=None), 'close': gi.FunctionInfo(close, bound=None), 'comment': gi.FunctionInfo(comment, bound=None), 'comment_mode': gi.FunctionInfo(comment_mode, bound=None), 'data': gi.FunctionInfo(data, bound=None), 'finish': gi.FunctionInfo(finish, bound=None), 'identifier': gi.FunctionInfo(identifier, bound=None), 'linefeed': gi.FunctionInfo(linefeed, bound=None), 'open': gi.FunctionInfo(open, bound=None), 'print_': gi.FunctionInfo(print, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'revert': gi.FunctionInfo(revert, bound=None), 'string': gi.FunctionInfo(string, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GimpConfigWriter (3595399728)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ConfigWriter), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpConfigWriter (2406244640)>, '__dict__': <attribute '__dict__' of 'ConfigWriter' objects>, '__weakref__': <attribute '__weakref__' of 'ConfigWriter' objects>, '__doc__': None, 'new_from_fd': <classmethod(gi.FunctionInfo(new_from_fd))>, 'new_from_file': <classmethod(gi.FunctionInfo(new_from_file))>, 'new_from_stream': <classmethod(gi.FunctionInfo(new_from_stream))>, 'new_from_string': <classmethod(gi.FunctionInfo(new_from_string))>, 'close': gi.FunctionInfo(close), 'comment': gi.FunctionInfo(comment), 'comment_mode': gi.FunctionInfo(comment_mode), 'data': gi.FunctionInfo(data), 'finish': gi.FunctionInfo(finish), 'identifier': gi.FunctionInfo(identifier), 'linefeed': gi.FunctionInfo(linefeed), 'open': gi.FunctionInfo(open), 'print_': gi.FunctionInfo(print), 'ref': gi.FunctionInfo(ref), 'revert': gi.FunctionInfo(revert), 'string': gi.FunctionInfo(string), 'unref': gi.FunctionInfo(unref)})"
+    __gtype__ = None # (!) real value is '<GType GimpConfigWriter (2406244640)>'
     __info__ = StructInfo(ConfigWriter)
 
 

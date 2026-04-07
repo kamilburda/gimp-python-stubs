@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Date(__gi.Boxed):
@@ -107,6 +105,14 @@ class Date(__gi.Boxed):
         """ get_weekday(self) -> GLib.DateWeekday """
         pass
 
+    def get_weeks_in_year(self, year, first_day_of_week): # real signature unknown; restored from __doc__
+        """ get_weeks_in_year(year:int, first_day_of_week:GLib.DateWeekday) -> int """
+        return 0
+
+    def get_week_of_year(self, first_day_of_week): # real signature unknown; restored from __doc__
+        """ get_week_of_year(self, first_day_of_week:GLib.DateWeekday) -> int """
+        return 0
+
     def get_year(self): # real signature unknown; restored from __doc__
         """ get_year(self) -> int """
         return 0
@@ -123,15 +129,18 @@ class Date(__gi.Boxed):
         """ is_leap_year(year:int) -> bool """
         return False
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> GLib.Date """
         pass
 
-    def new_dmy(self, day, month, year): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_dmy(cls, day, month, year): # real signature unknown; restored from __doc__
         """ new_dmy(day:int, month:GLib.DateMonth, year:int) -> GLib.Date """
         pass
 
-    def new_julian(self, julian_day): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_julian(cls, julian_day): # real signature unknown; restored from __doc__
         """ new_julian(julian_day:int) -> GLib.Date """
         pass
 
@@ -348,8 +357,8 @@ class Date(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Date), '__module__': 'gi.repository.GLib', '__gtype__': <GType GDate (155708880)>, '__dict__': <attribute '__dict__' of 'Date' objects>, '__weakref__': <attribute '__weakref__' of 'Date' objects>, '__doc__': None, 'julian_days': <property object at 0x000002830bf1fa10>, 'julian': <property object at 0x000002830bf1fb00>, 'dmy': <property object at 0x000002830bf1fbf0>, 'day': <property object at 0x000002830bf1fce0>, 'month': <property object at 0x000002830bf1fdd0>, 'year': <property object at 0x000002830bf1fec0>, 'new': gi.FunctionInfo(new, bound=None), 'new_dmy': gi.FunctionInfo(new_dmy, bound=None), 'new_julian': gi.FunctionInfo(new_julian, bound=None), 'add_days': gi.FunctionInfo(add_days, bound=None), 'add_months': gi.FunctionInfo(add_months, bound=None), 'add_years': gi.FunctionInfo(add_years, bound=None), 'clamp': gi.FunctionInfo(clamp, bound=None), 'clear': gi.FunctionInfo(clear, bound=None), 'compare': gi.FunctionInfo(compare, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'days_between': gi.FunctionInfo(days_between, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_day': gi.FunctionInfo(get_day, bound=None), 'get_day_of_year': gi.FunctionInfo(get_day_of_year, bound=None), 'get_iso8601_week_of_year': gi.FunctionInfo(get_iso8601_week_of_year, bound=None), 'get_julian': gi.FunctionInfo(get_julian, bound=None), 'get_monday_week_of_year': gi.FunctionInfo(get_monday_week_of_year, bound=None), 'get_month': gi.FunctionInfo(get_month, bound=None), 'get_sunday_week_of_year': gi.FunctionInfo(get_sunday_week_of_year, bound=None), 'get_weekday': gi.FunctionInfo(get_weekday, bound=None), 'get_year': gi.FunctionInfo(get_year, bound=None), 'is_first_of_month': gi.FunctionInfo(is_first_of_month, bound=None), 'is_last_of_month': gi.FunctionInfo(is_last_of_month, bound=None), 'order': gi.FunctionInfo(order, bound=None), 'set_day': gi.FunctionInfo(set_day, bound=None), 'set_dmy': gi.FunctionInfo(set_dmy, bound=None), 'set_julian': gi.FunctionInfo(set_julian, bound=None), 'set_month': gi.FunctionInfo(set_month, bound=None), 'set_parse': gi.FunctionInfo(set_parse, bound=None), 'set_time': gi.FunctionInfo(set_time, bound=None), 'set_time_t': gi.FunctionInfo(set_time_t, bound=None), 'set_time_val': gi.FunctionInfo(set_time_val, bound=None), 'set_year': gi.FunctionInfo(set_year, bound=None), 'subtract_days': gi.FunctionInfo(subtract_days, bound=None), 'subtract_months': gi.FunctionInfo(subtract_months, bound=None), 'subtract_years': gi.FunctionInfo(subtract_years, bound=None), 'to_struct_tm': gi.FunctionInfo(to_struct_tm, bound=None), 'valid': gi.FunctionInfo(valid, bound=None), 'get_days_in_month': gi.FunctionInfo(get_days_in_month, bound=None), 'get_monday_weeks_in_year': gi.FunctionInfo(get_monday_weeks_in_year, bound=None), 'get_sunday_weeks_in_year': gi.FunctionInfo(get_sunday_weeks_in_year, bound=None), 'is_leap_year': gi.FunctionInfo(is_leap_year, bound=None), 'strftime': gi.FunctionInfo(strftime, bound=None), 'valid_day': gi.FunctionInfo(valid_day, bound=None), 'valid_dmy': gi.FunctionInfo(valid_dmy, bound=None), 'valid_julian': gi.FunctionInfo(valid_julian, bound=None), 'valid_month': gi.FunctionInfo(valid_month, bound=None), 'valid_weekday': gi.FunctionInfo(valid_weekday, bound=None), 'valid_year': gi.FunctionInfo(valid_year, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GDate (155708880)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Date), '__module__': 'gi.repository.GLib', '__gtype__': <GType GDate (2640519456)>, '__dict__': <attribute '__dict__' of 'Date' objects>, '__weakref__': <attribute '__weakref__' of 'Date' objects>, '__doc__': None, 'julian_days': <property object at 0x0000018e9ff884a0>, 'julian': <property object at 0x0000018e9ff883b0>, 'dmy': <property object at 0x0000018e9ff88630>, 'day': <property object at 0x0000018e9ff88720>, 'month': <property object at 0x0000018e9ff88810>, 'year': <property object at 0x0000018e9ff88900>, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_dmy': <classmethod(gi.FunctionInfo(new_dmy))>, 'new_julian': <classmethod(gi.FunctionInfo(new_julian))>, 'add_days': gi.FunctionInfo(add_days), 'add_months': gi.FunctionInfo(add_months), 'add_years': gi.FunctionInfo(add_years), 'clamp': gi.FunctionInfo(clamp), 'clear': gi.FunctionInfo(clear), 'compare': gi.FunctionInfo(compare), 'copy': gi.FunctionInfo(copy), 'days_between': gi.FunctionInfo(days_between), 'free': gi.FunctionInfo(free), 'get_day': gi.FunctionInfo(get_day), 'get_day_of_year': gi.FunctionInfo(get_day_of_year), 'get_iso8601_week_of_year': gi.FunctionInfo(get_iso8601_week_of_year), 'get_julian': gi.FunctionInfo(get_julian), 'get_monday_week_of_year': gi.FunctionInfo(get_monday_week_of_year), 'get_month': gi.FunctionInfo(get_month), 'get_sunday_week_of_year': gi.FunctionInfo(get_sunday_week_of_year), 'get_week_of_year': gi.FunctionInfo(get_week_of_year), 'get_weekday': gi.FunctionInfo(get_weekday), 'get_year': gi.FunctionInfo(get_year), 'is_first_of_month': gi.FunctionInfo(is_first_of_month), 'is_last_of_month': gi.FunctionInfo(is_last_of_month), 'order': gi.FunctionInfo(order), 'set_day': gi.FunctionInfo(set_day), 'set_dmy': gi.FunctionInfo(set_dmy), 'set_julian': gi.FunctionInfo(set_julian), 'set_month': gi.FunctionInfo(set_month), 'set_parse': gi.FunctionInfo(set_parse), 'set_time': gi.FunctionInfo(set_time), 'set_time_t': gi.FunctionInfo(set_time_t), 'set_time_val': gi.FunctionInfo(set_time_val), 'set_year': gi.FunctionInfo(set_year), 'subtract_days': gi.FunctionInfo(subtract_days), 'subtract_months': gi.FunctionInfo(subtract_months), 'subtract_years': gi.FunctionInfo(subtract_years), 'to_struct_tm': gi.FunctionInfo(to_struct_tm), 'valid': gi.FunctionInfo(valid), 'get_days_in_month': <staticmethod(gi.FunctionInfo(get_days_in_month))>, 'get_monday_weeks_in_year': <staticmethod(gi.FunctionInfo(get_monday_weeks_in_year))>, 'get_sunday_weeks_in_year': <staticmethod(gi.FunctionInfo(get_sunday_weeks_in_year))>, 'get_weeks_in_year': <staticmethod(gi.FunctionInfo(get_weeks_in_year))>, 'is_leap_year': <staticmethod(gi.FunctionInfo(is_leap_year))>, 'strftime': <staticmethod(gi.FunctionInfo(strftime))>, 'valid_day': <staticmethod(gi.FunctionInfo(valid_day))>, 'valid_dmy': <staticmethod(gi.FunctionInfo(valid_dmy))>, 'valid_julian': <staticmethod(gi.FunctionInfo(valid_julian))>, 'valid_month': <staticmethod(gi.FunctionInfo(valid_month))>, 'valid_weekday': <staticmethod(gi.FunctionInfo(valid_weekday))>, 'valid_year': <staticmethod(gi.FunctionInfo(valid_year))>, '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GDate (2640519456)>'
     __info__ = StructInfo(Date)
 
 

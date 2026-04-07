@@ -4,19 +4,19 @@
 # no doc
 
 # imports
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
+import enum as __enum
 import gi as __gi
 import gobject as __gobject
 
 
 class ArgInfo(__gi.BaseInfo):
     # no doc
-    def get_closure(self, *args, **kwargs): # real signature unknown
+    def get_closure_index(self, *args, **kwargs): # real signature unknown
         pass
 
-    def get_destroy(self, *args, **kwargs): # real signature unknown
+    def get_destroy_index(self, *args, **kwargs): # real signature unknown
         pass
 
     def get_direction(self, *args, **kwargs): # real signature unknown
@@ -28,7 +28,7 @@ class ArgInfo(__gi.BaseInfo):
     def get_scope(self, *args, **kwargs): # real signature unknown
         pass
 
-    def get_type(self, *args, **kwargs): # real signature unknown
+    def get_type_info(self, *args, **kwargs): # real signature unknown
         pass
 
     def is_caller_allocates(self, *args, **kwargs): # real signature unknown

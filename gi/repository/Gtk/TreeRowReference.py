@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -51,11 +50,13 @@ class TreeRowReference(__gi.Boxed):
         """ inserted(proxy:GObject.Object, path:Gtk.TreePath) """
         pass
 
-    def new(self, model, path): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, model, path): # real signature unknown; restored from __doc__
         """ new(model:Gtk.TreeModel, path:Gtk.TreePath) -> Gtk.TreeRowReference """
         pass
 
-    def new_proxy(self, proxy, model, path): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_proxy(cls, proxy, model, path): # real signature unknown; restored from __doc__
         """ new_proxy(proxy:GObject.Object, model:Gtk.TreeModel, path:Gtk.TreePath) -> Gtk.TreeRowReference """
         pass
 
@@ -175,8 +176,8 @@ class TreeRowReference(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TreeRowReference), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkTreeRowReference (3922675440)>, '__dict__': <attribute '__dict__' of 'TreeRowReference' objects>, '__weakref__': <attribute '__weakref__' of 'TreeRowReference' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'new_proxy': gi.FunctionInfo(new_proxy, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_model': gi.FunctionInfo(get_model, bound=None), 'get_path': gi.FunctionInfo(get_path, bound=None), 'valid': gi.FunctionInfo(valid, bound=None), 'deleted': gi.FunctionInfo(deleted, bound=None), 'inserted': gi.FunctionInfo(inserted, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002ece8827880>})"
-    __gtype__ = None # (!) real value is '<GType GtkTreeRowReference (3922675440)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TreeRowReference), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkTreeRowReference (3414251184)>, '__dict__': <attribute '__dict__' of 'TreeRowReference' objects>, '__weakref__': <attribute '__weakref__' of 'TreeRowReference' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_proxy': <classmethod(gi.FunctionInfo(new_proxy))>, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_model': gi.FunctionInfo(get_model), 'get_path': gi.FunctionInfo(get_path), 'valid': gi.FunctionInfo(valid), 'deleted': <staticmethod(gi.FunctionInfo(deleted))>, 'inserted': <staticmethod(gi.FunctionInfo(inserted))>, '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000002bfce305010>})"
+    __gtype__ = None # (!) real value is '<GType GtkTreeRowReference (3414251184)>'
     __info__ = StructInfo(TreeRowReference)
 
 

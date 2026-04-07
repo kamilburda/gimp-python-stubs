@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class SpawnError(__gobject.GEnum):
+class SpawnError(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class SpawnError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class SpawnError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -126,12 +124,23 @@ class SpawnError(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +169,10 @@ class SpawnError(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -205,6 +218,14 @@ class SpawnError(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -230,8 +251,8 @@ class SpawnError(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -262,15 +283,16 @@ class SpawnError(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -334,7 +356,7 @@ class SpawnError(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -376,12 +398,7 @@ class SpawnError(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-
-    2BIG = 5
     ACCES = 3
     CHDIR = 2
     FAILED = 19
@@ -402,31 +419,9 @@ class SpawnError(__gobject.GEnum):
     READ = 1
     TOO_BIG = 5
     TXTBUSY = 12
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'SpawnError' objects>, '__doc__': None, '__gtype__': <GType PyGLibSpawnError (163506000)>, '__enum_values__': {0: <enum G_SPAWN_ERROR_FORK of type GLib.SpawnError>, 1: <enum G_SPAWN_ERROR_READ of type GLib.SpawnError>, 2: <enum G_SPAWN_ERROR_CHDIR of type GLib.SpawnError>, 3: <enum G_SPAWN_ERROR_ACCES of type GLib.SpawnError>, 4: <enum G_SPAWN_ERROR_PERM of type GLib.SpawnError>, 5: <enum G_SPAWN_ERROR_TOO_BIG of type GLib.SpawnError>, 6: <enum G_SPAWN_ERROR_NOEXEC of type GLib.SpawnError>, 7: <enum G_SPAWN_ERROR_NAMETOOLONG of type GLib.SpawnError>, 8: <enum G_SPAWN_ERROR_NOENT of type GLib.SpawnError>, 9: <enum G_SPAWN_ERROR_NOMEM of type GLib.SpawnError>, 10: <enum G_SPAWN_ERROR_NOTDIR of type GLib.SpawnError>, 11: <enum G_SPAWN_ERROR_LOOP of type GLib.SpawnError>, 12: <enum G_SPAWN_ERROR_TXTBUSY of type GLib.SpawnError>, 13: <enum G_SPAWN_ERROR_IO of type GLib.SpawnError>, 14: <enum G_SPAWN_ERROR_NFILE of type GLib.SpawnError>, 15: <enum G_SPAWN_ERROR_MFILE of type GLib.SpawnError>, 16: <enum G_SPAWN_ERROR_INVAL of type GLib.SpawnError>, 17: <enum G_SPAWN_ERROR_ISDIR of type GLib.SpawnError>, 18: <enum G_SPAWN_ERROR_LIBBAD of type GLib.SpawnError>, 19: <enum G_SPAWN_ERROR_FAILED of type GLib.SpawnError>}, '__info__': gi.EnumInfo(SpawnError), 'FORK': <enum G_SPAWN_ERROR_FORK of type GLib.SpawnError>, 'READ': <enum G_SPAWN_ERROR_READ of type GLib.SpawnError>, 'CHDIR': <enum G_SPAWN_ERROR_CHDIR of type GLib.SpawnError>, 'ACCES': <enum G_SPAWN_ERROR_ACCES of type GLib.SpawnError>, 'PERM': <enum G_SPAWN_ERROR_PERM of type GLib.SpawnError>, 'TOO_BIG': <enum G_SPAWN_ERROR_TOO_BIG of type GLib.SpawnError>, '2BIG': <enum G_SPAWN_ERROR_TOO_BIG of type GLib.SpawnError>, 'NOEXEC': <enum G_SPAWN_ERROR_NOEXEC of type GLib.SpawnError>, 'NAMETOOLONG': <enum G_SPAWN_ERROR_NAMETOOLONG of type GLib.SpawnError>, 'NOENT': <enum G_SPAWN_ERROR_NOENT of type GLib.SpawnError>, 'NOMEM': <enum G_SPAWN_ERROR_NOMEM of type GLib.SpawnError>, 'NOTDIR': <enum G_SPAWN_ERROR_NOTDIR of type GLib.SpawnError>, 'LOOP': <enum G_SPAWN_ERROR_LOOP of type GLib.SpawnError>, 'TXTBUSY': <enum G_SPAWN_ERROR_TXTBUSY of type GLib.SpawnError>, 'IO': <enum G_SPAWN_ERROR_IO of type GLib.SpawnError>, 'NFILE': <enum G_SPAWN_ERROR_NFILE of type GLib.SpawnError>, 'MFILE': <enum G_SPAWN_ERROR_MFILE of type GLib.SpawnError>, 'INVAL': <enum G_SPAWN_ERROR_INVAL of type GLib.SpawnError>, 'ISDIR': <enum G_SPAWN_ERROR_ISDIR of type GLib.SpawnError>, 'LIBBAD': <enum G_SPAWN_ERROR_LIBBAD of type GLib.SpawnError>, 'FAILED': <enum G_SPAWN_ERROR_FAILED of type GLib.SpawnError>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibSpawnError (163506000)>'
-    __info__ = gi.EnumInfo(SpawnError)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'FORK': <SpawnError.FORK: 0>, 'READ': <SpawnError.READ: 1>, 'CHDIR': <SpawnError.CHDIR: 2>, 'ACCES': <SpawnError.ACCES: 3>, 'PERM': <SpawnError.PERM: 4>, 'TOO_BIG': <SpawnError.TOO_BIG: 5>, '2BIG': <SpawnError.TOO_BIG: 5>, 'NOEXEC': <SpawnError.NOEXEC: 6>, 'NAMETOOLONG': <SpawnError.NAMETOOLONG: 7>, 'NOENT': <SpawnError.NOENT: 8>, 'NOMEM': <SpawnError.NOMEM: 9>, 'NOTDIR': <SpawnError.NOTDIR: 10>, 'LOOP': <SpawnError.LOOP: 11>, 'TXTBUSY': <SpawnError.TXTBUSY: 12>, 'IO': <SpawnError.IO: 13>, 'NFILE': <SpawnError.NFILE: 14>, 'MFILE': <SpawnError.MFILE: 15>, 'INVAL': <SpawnError.INVAL: 16>, 'ISDIR': <SpawnError.ISDIR: 17>, 'LIBBAD': <SpawnError.LIBBAD: 18>, 'FAILED': <SpawnError.FAILED: 19>})"
+    __name__ = 'SpawnError'
+    __qualname__ = 'SpawnError'
 
 

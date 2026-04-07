@@ -4,9 +4,9 @@
 # no doc
 
 # imports
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
+import enum as __enum
 import gi as __gi
 import gobject as __gobject
 
@@ -44,13 +44,13 @@ def add_emission_hook(*args, **kwargs): # real signature unknown
 def enum_add(*args, **kwargs): # real signature unknown
     pass
 
-def enum_register_new_gtype_and_add(*args, **kwargs): # real signature unknown
+def enum_register(*args, **kwargs): # real signature unknown
     pass
 
 def flags_add(*args, **kwargs): # real signature unknown
     pass
 
-def flags_register_new_gtype_and_add(*args, **kwargs): # real signature unknown
+def flags_register(*args, **kwargs): # real signature unknown
     pass
 
 def hook_up_vfunc_implementation(*args, **kwargs): # real signature unknown
@@ -60,6 +60,9 @@ def io_channel_read(*args, **kwargs): # real signature unknown
     pass
 
 def list_properties(*args, **kwargs): # real signature unknown
+    pass
+
+def main_context_query(*args, **kwargs): # real signature unknown
     pass
 
 def new(*args, **kwargs): # real signature unknown
@@ -142,13 +145,12 @@ from .FieldInfoFlags import FieldInfoFlags
 from .FunctionInfo import FunctionInfo
 from .FunctionInfoFlags import FunctionInfoFlags
 from .Fundamental import Fundamental
+from .GEnum import GEnum
+from .GFlags import GFlags
 from .GObject import GObject
 from .GObjectWeakRef import GObjectWeakRef
-from .InfoType import InfoType
 from .InterfaceInfo import InterfaceInfo
 from .ObjectInfo import ObjectInfo
-from .OptionContext import OptionContext
-from .OptionGroup import OptionGroup
 from .Pid import Pid
 from .PropertyInfo import PropertyInfo
 from .PyGIDeprecationWarning import PyGIDeprecationWarning
@@ -172,21 +174,21 @@ from .VFuncInfoFlags import VFuncInfoFlags
 
 pygobject_version = (
     3,
-    50,
+    56,
     0,
 )
 
-TYPE_GSTRING = None # (!) real value is '<GType GString (1706563264)>'
+TYPE_GSTRING = None # (!) real value is '<GType GString (4105926720)>'
 
 TYPE_INVALID = None # (!) real value is '<GType invalid (0)>'
 
-_API = None # (!) real value is '<capsule object "gi._API" at 0x0000015b6662c2d0>'
+_API = None # (!) real value is '<capsule object "gi._API" at 0x000001c5f62d13f0>'
 
-_PyGObject_API = None # (!) real value is '<capsule object "gobject._PyGObject_API" at 0x0000015b65d475a0>'
+_PyGObject_API = None # (!) real value is '<capsule object "gobject._PyGObject_API" at 0x000001c5f62d1080>'
 
-__loader__ = None # (!) real value is '<_frozen_importlib_external.ExtensionFileLoader object at 0x0000015b65d446e0>'
+__loader__ = None # (!) real value is '<_frozen_importlib_external.ExtensionFileLoader object at 0x000001c5f5dcfba0>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi._gi', loader=<_frozen_importlib_external.ExtensionFileLoader object at 0x0000015b65d446e0>, origin='C:\\\\Program Files\\\\GIMP 3\\\\lib\\\\python3.12\\\\site-packages\\\\gi\\\\_gi.cp312-mingw_x86_64_ucrt_llvm.pyd')"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi._gi', loader=<_frozen_importlib_external.ExtensionFileLoader object at 0x000001c5f5dcfba0>)"
 

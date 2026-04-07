@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -140,10 +139,10 @@ class TreeDragSource(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(TreeDragSource), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkTreeDragSource (3867801776)>, '__dict__': <attribute '__dict__' of 'TreeDragSource' objects>, '__weakref__': <attribute '__weakref__' of 'TreeDragSource' objects>, '__doc__': None, '__gsignals__': {}, 'drag_data_delete': gi.FunctionInfo(drag_data_delete, bound=None), 'drag_data_get': gi.FunctionInfo(drag_data_get, bound=None), 'row_draggable': gi.FunctionInfo(row_draggable, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(TreeDragSource), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkTreeDragSource (3416387664)>, '__dict__': <attribute '__dict__' of 'TreeDragSource' objects>, '__weakref__': <attribute '__weakref__' of 'TreeDragSource' objects>, '__doc__': None, '__gsignals__': {}, 'drag_data_delete': gi.FunctionInfo(drag_data_delete), 'drag_data_get': gi.FunctionInfo(drag_data_get), 'row_draggable': gi.FunctionInfo(row_draggable)})"
     __gdoc__ = 'Interface GtkTreeDragSource\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkTreeDragSource (3867801776)>'
+    __gtype__ = None # (!) real value is '<GType GtkTreeDragSource (3416387664)>'
     __info__ = InterfaceInfo(TreeDragSource)
 
 

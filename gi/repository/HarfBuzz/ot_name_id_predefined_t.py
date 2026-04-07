@@ -1,24 +1,16 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
-class ot_name_id_predefined_t(__gobject.GEnum):
+class ot_name_id_predefined_t(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +69,7 @@ class ot_name_id_predefined_t(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +92,7 @@ class ot_name_id_predefined_t(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +120,23 @@ class ot_name_id_predefined_t(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +165,10 @@ class ot_name_id_predefined_t(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +214,14 @@ class ot_name_id_predefined_t(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +247,8 @@ class ot_name_id_predefined_t(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +279,16 @@ class ot_name_id_predefined_t(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +352,7 @@ class ot_name_id_predefined_t(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -378,10 +394,6 @@ class ot_name_id_predefined_t(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CID_FINDFONT_NAME = 20
     COPYRIGHT = 0
@@ -409,37 +421,9 @@ class ot_name_id_predefined_t(__gobject.GEnum):
     VERSION_STRING = 5
     WWS_FAMILY = 21
     WWS_SUBFAMILY = 22
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.HarfBuzz', '__dict__': <attribute '__dict__' of 'ot_name_id_predefined_t' objects>, '__doc__': None, '__gtype__': <GType PyHarfBuzzot_name_id_predefined_t (2667606992)>, '__enum_values__': {0: <enum HB_OT_NAME_ID_COPYRIGHT of type HarfBuzz.ot_name_id_predefined_t>, 1: <enum HB_OT_NAME_ID_FONT_FAMILY of type HarfBuzz.ot_name_id_predefined_t>, 2: <enum HB_OT_NAME_ID_FONT_SUBFAMILY of type HarfBuzz.ot_name_id_predefined_t>, 3: <enum HB_OT_NAME_ID_UNIQUE_ID of type HarfBuzz.ot_name_id_predefined_t>, 4: <enum HB_OT_NAME_ID_FULL_NAME of type HarfBuzz.ot_name_id_predefined_t>, 5: <enum HB_OT_NAME_ID_VERSION_STRING of type HarfBuzz.ot_name_id_predefined_t>, 6: <enum HB_OT_NAME_ID_POSTSCRIPT_NAME of type HarfBuzz.ot_name_id_predefined_t>, 7: <enum HB_OT_NAME_ID_TRADEMARK of type HarfBuzz.ot_name_id_predefined_t>, 8: <enum HB_OT_NAME_ID_MANUFACTURER of type HarfBuzz.ot_name_id_predefined_t>, 9: <enum HB_OT_NAME_ID_DESIGNER of type HarfBuzz.ot_name_id_predefined_t>, 10: <enum HB_OT_NAME_ID_DESCRIPTION of type HarfBuzz.ot_name_id_predefined_t>, 11: <enum HB_OT_NAME_ID_VENDOR_URL of type HarfBuzz.ot_name_id_predefined_t>, 12: <enum HB_OT_NAME_ID_DESIGNER_URL of type HarfBuzz.ot_name_id_predefined_t>, 13: <enum HB_OT_NAME_ID_LICENSE of type HarfBuzz.ot_name_id_predefined_t>, 14: <enum HB_OT_NAME_ID_LICENSE_URL of type HarfBuzz.ot_name_id_predefined_t>, 16: <enum HB_OT_NAME_ID_TYPOGRAPHIC_FAMILY of type HarfBuzz.ot_name_id_predefined_t>, 17: <enum HB_OT_NAME_ID_TYPOGRAPHIC_SUBFAMILY of type HarfBuzz.ot_name_id_predefined_t>, 18: <enum HB_OT_NAME_ID_MAC_FULL_NAME of type HarfBuzz.ot_name_id_predefined_t>, 19: <enum HB_OT_NAME_ID_SAMPLE_TEXT of type HarfBuzz.ot_name_id_predefined_t>, 20: <enum HB_OT_NAME_ID_CID_FINDFONT_NAME of type HarfBuzz.ot_name_id_predefined_t>, 21: <enum HB_OT_NAME_ID_WWS_FAMILY of type HarfBuzz.ot_name_id_predefined_t>, 22: <enum HB_OT_NAME_ID_WWS_SUBFAMILY of type HarfBuzz.ot_name_id_predefined_t>, 23: <enum HB_OT_NAME_ID_LIGHT_BACKGROUND of type HarfBuzz.ot_name_id_predefined_t>, 24: <enum HB_OT_NAME_ID_DARK_BACKGROUND of type HarfBuzz.ot_name_id_predefined_t>, 25: <enum HB_OT_NAME_ID_VARIATIONS_PS_PREFIX of type HarfBuzz.ot_name_id_predefined_t>, 65535: <enum HB_OT_NAME_ID_INVALID of type HarfBuzz.ot_name_id_predefined_t>}, '__info__': gi.EnumInfo(ot_name_id_predefined_t), 'COPYRIGHT': <enum HB_OT_NAME_ID_COPYRIGHT of type HarfBuzz.ot_name_id_predefined_t>, 'FONT_FAMILY': <enum HB_OT_NAME_ID_FONT_FAMILY of type HarfBuzz.ot_name_id_predefined_t>, 'FONT_SUBFAMILY': <enum HB_OT_NAME_ID_FONT_SUBFAMILY of type HarfBuzz.ot_name_id_predefined_t>, 'UNIQUE_ID': <enum HB_OT_NAME_ID_UNIQUE_ID of type HarfBuzz.ot_name_id_predefined_t>, 'FULL_NAME': <enum HB_OT_NAME_ID_FULL_NAME of type HarfBuzz.ot_name_id_predefined_t>, 'VERSION_STRING': <enum HB_OT_NAME_ID_VERSION_STRING of type HarfBuzz.ot_name_id_predefined_t>, 'POSTSCRIPT_NAME': <enum HB_OT_NAME_ID_POSTSCRIPT_NAME of type HarfBuzz.ot_name_id_predefined_t>, 'TRADEMARK': <enum HB_OT_NAME_ID_TRADEMARK of type HarfBuzz.ot_name_id_predefined_t>, 'MANUFACTURER': <enum HB_OT_NAME_ID_MANUFACTURER of type HarfBuzz.ot_name_id_predefined_t>, 'DESIGNER': <enum HB_OT_NAME_ID_DESIGNER of type HarfBuzz.ot_name_id_predefined_t>, 'DESCRIPTION': <enum HB_OT_NAME_ID_DESCRIPTION of type HarfBuzz.ot_name_id_predefined_t>, 'VENDOR_URL': <enum HB_OT_NAME_ID_VENDOR_URL of type HarfBuzz.ot_name_id_predefined_t>, 'DESIGNER_URL': <enum HB_OT_NAME_ID_DESIGNER_URL of type HarfBuzz.ot_name_id_predefined_t>, 'LICENSE': <enum HB_OT_NAME_ID_LICENSE of type HarfBuzz.ot_name_id_predefined_t>, 'LICENSE_URL': <enum HB_OT_NAME_ID_LICENSE_URL of type HarfBuzz.ot_name_id_predefined_t>, 'TYPOGRAPHIC_FAMILY': <enum HB_OT_NAME_ID_TYPOGRAPHIC_FAMILY of type HarfBuzz.ot_name_id_predefined_t>, 'TYPOGRAPHIC_SUBFAMILY': <enum HB_OT_NAME_ID_TYPOGRAPHIC_SUBFAMILY of type HarfBuzz.ot_name_id_predefined_t>, 'MAC_FULL_NAME': <enum HB_OT_NAME_ID_MAC_FULL_NAME of type HarfBuzz.ot_name_id_predefined_t>, 'SAMPLE_TEXT': <enum HB_OT_NAME_ID_SAMPLE_TEXT of type HarfBuzz.ot_name_id_predefined_t>, 'CID_FINDFONT_NAME': <enum HB_OT_NAME_ID_CID_FINDFONT_NAME of type HarfBuzz.ot_name_id_predefined_t>, 'WWS_FAMILY': <enum HB_OT_NAME_ID_WWS_FAMILY of type HarfBuzz.ot_name_id_predefined_t>, 'WWS_SUBFAMILY': <enum HB_OT_NAME_ID_WWS_SUBFAMILY of type HarfBuzz.ot_name_id_predefined_t>, 'LIGHT_BACKGROUND': <enum HB_OT_NAME_ID_LIGHT_BACKGROUND of type HarfBuzz.ot_name_id_predefined_t>, 'DARK_BACKGROUND': <enum HB_OT_NAME_ID_DARK_BACKGROUND of type HarfBuzz.ot_name_id_predefined_t>, 'VARIATIONS_PS_PREFIX': <enum HB_OT_NAME_ID_VARIATIONS_PS_PREFIX of type HarfBuzz.ot_name_id_predefined_t>, 'INVALID': <enum HB_OT_NAME_ID_INVALID of type HarfBuzz.ot_name_id_predefined_t>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        65535: 65535,
-    }
-    __gtype__ = None # (!) real value is '<GType PyHarfBuzzot_name_id_predefined_t (2667606992)>'
-    __info__ = gi.EnumInfo(ot_name_id_predefined_t)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'COPYRIGHT': <ot_name_id_predefined_t.COPYRIGHT: 0>, 'FONT_FAMILY': <ot_name_id_predefined_t.FONT_FAMILY: 1>, 'FONT_SUBFAMILY': <ot_name_id_predefined_t.FONT_SUBFAMILY: 2>, 'UNIQUE_ID': <ot_name_id_predefined_t.UNIQUE_ID: 3>, 'FULL_NAME': <ot_name_id_predefined_t.FULL_NAME: 4>, 'VERSION_STRING': <ot_name_id_predefined_t.VERSION_STRING: 5>, 'POSTSCRIPT_NAME': <ot_name_id_predefined_t.POSTSCRIPT_NAME: 6>, 'TRADEMARK': <ot_name_id_predefined_t.TRADEMARK: 7>, 'MANUFACTURER': <ot_name_id_predefined_t.MANUFACTURER: 8>, 'DESIGNER': <ot_name_id_predefined_t.DESIGNER: 9>, 'DESCRIPTION': <ot_name_id_predefined_t.DESCRIPTION: 10>, 'VENDOR_URL': <ot_name_id_predefined_t.VENDOR_URL: 11>, 'DESIGNER_URL': <ot_name_id_predefined_t.DESIGNER_URL: 12>, 'LICENSE': <ot_name_id_predefined_t.LICENSE: 13>, 'LICENSE_URL': <ot_name_id_predefined_t.LICENSE_URL: 14>, 'TYPOGRAPHIC_FAMILY': <ot_name_id_predefined_t.TYPOGRAPHIC_FAMILY: 16>, 'TYPOGRAPHIC_SUBFAMILY': <ot_name_id_predefined_t.TYPOGRAPHIC_SUBFAMILY: 17>, 'MAC_FULL_NAME': <ot_name_id_predefined_t.MAC_FULL_NAME: 18>, 'SAMPLE_TEXT': <ot_name_id_predefined_t.SAMPLE_TEXT: 19>, 'CID_FINDFONT_NAME': <ot_name_id_predefined_t.CID_FINDFONT_NAME: 20>, 'WWS_FAMILY': <ot_name_id_predefined_t.WWS_FAMILY: 21>, 'WWS_SUBFAMILY': <ot_name_id_predefined_t.WWS_SUBFAMILY: 22>, 'LIGHT_BACKGROUND': <ot_name_id_predefined_t.LIGHT_BACKGROUND: 23>, 'DARK_BACKGROUND': <ot_name_id_predefined_t.DARK_BACKGROUND: 24>, 'VARIATIONS_PS_PREFIX': <ot_name_id_predefined_t.VARIATIONS_PS_PREFIX: 25>, 'INVALID': <ot_name_id_predefined_t.INVALID: 65535>})"
+    __name__ = 'ot_name_id_predefined_t'
+    __qualname__ = 'ot_name_id_predefined_t'
 
 

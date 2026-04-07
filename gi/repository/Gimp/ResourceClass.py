@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -159,7 +155,7 @@ class ResourceClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ResourceClass), '__module__': 'gi.repository.Gimp', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ResourceClass' objects>, '__weakref__': <attribute '__weakref__' of 'ResourceClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001dcd92eb420>, '_gimp_reserved0': <property object at 0x000001dcd92eb510>, '_gimp_reserved1': <property object at 0x000001dcd92eb600>, '_gimp_reserved2': <property object at 0x000001dcd92eb6f0>, '_gimp_reserved3': <property object at 0x000001dcd92eb7e0>, '_gimp_reserved4': <property object at 0x000001dcd92eb8d0>, '_gimp_reserved5': <property object at 0x000001dcd92eb9c0>, '_gimp_reserved6': <property object at 0x000001dcd92ebab0>, '_gimp_reserved7': <property object at 0x000001dcd92ebba0>, '_gimp_reserved8': <property object at 0x000001dcd92ebc90>, '_gimp_reserved9': <property object at 0x000001dcd92ebd80>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ResourceClass), '__module__': 'gi.repository.Gimp', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ResourceClass' objects>, '__weakref__': <attribute '__weakref__' of 'ResourceClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001268f536930>, '_gimp_reserved0': <property object at 0x000001268f536840>, '_gimp_reserved1': <property object at 0x000001268f536ac0>, '_gimp_reserved2': <property object at 0x000001268f536bb0>, '_gimp_reserved3': <property object at 0x000001268f536ca0>, '_gimp_reserved4': <property object at 0x000001268f536d90>, '_gimp_reserved5': <property object at 0x000001268f536e80>, '_gimp_reserved6': <property object at 0x000001268f536f70>, '_gimp_reserved7': <property object at 0x000001268f537060>, '_gimp_reserved8': <property object at 0x000001268f537150>, '_gimp_reserved9': <property object at 0x000001268f537240>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ResourceClass)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -164,10 +163,10 @@ class Scrollable(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Scrollable), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkScrollable (3867807488)>, '__dict__': <attribute '__dict__' of 'Scrollable' objects>, '__weakref__': <attribute '__weakref__' of 'Scrollable' objects>, '__doc__': None, '__gsignals__': {}, 'get_border': gi.FunctionInfo(get_border, bound=None), 'get_hadjustment': gi.FunctionInfo(get_hadjustment, bound=None), 'get_hscroll_policy': gi.FunctionInfo(get_hscroll_policy, bound=None), 'get_vadjustment': gi.FunctionInfo(get_vadjustment, bound=None), 'get_vscroll_policy': gi.FunctionInfo(get_vscroll_policy, bound=None), 'set_hadjustment': gi.FunctionInfo(set_hadjustment, bound=None), 'set_hscroll_policy': gi.FunctionInfo(set_hscroll_policy, bound=None), 'set_vadjustment': gi.FunctionInfo(set_vadjustment, bound=None), 'set_vscroll_policy': gi.FunctionInfo(set_vscroll_policy, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Scrollable), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkScrollable (3416384496)>, '__dict__': <attribute '__dict__' of 'Scrollable' objects>, '__weakref__': <attribute '__weakref__' of 'Scrollable' objects>, '__doc__': None, '__gsignals__': {}, 'get_border': gi.FunctionInfo(get_border), 'get_hadjustment': gi.FunctionInfo(get_hadjustment), 'get_hscroll_policy': gi.FunctionInfo(get_hscroll_policy), 'get_vadjustment': gi.FunctionInfo(get_vadjustment), 'get_vscroll_policy': gi.FunctionInfo(get_vscroll_policy), 'set_hadjustment': gi.FunctionInfo(set_hadjustment), 'set_hscroll_policy': gi.FunctionInfo(set_hscroll_policy), 'set_vadjustment': gi.FunctionInfo(set_vadjustment), 'set_vscroll_policy': gi.FunctionInfo(set_vscroll_policy)})"
     __gdoc__ = 'Interface GtkScrollable\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkScrollable (3867807488)>'
+    __gtype__ = None # (!) real value is '<GType GtkScrollable (3416384496)>'
     __info__ = InterfaceInfo(Scrollable)
 
 

@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -53,7 +58,7 @@ class SocketClient(__gi_overrides_GObject.Object):
         """ connect_async(self, connectable:Gio.SocketConnectable, cancellable:Gio.Cancellable=None, callback:Gio.AsyncReadyCallback=None, user_data=None) """
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -121,6 +126,9 @@ class SocketClient(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_event(self, *args, **kwargs): # real signature unknown
@@ -280,7 +288,8 @@ class SocketClient(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gio.SocketClient """
         pass
 
@@ -397,20 +406,20 @@ class SocketClient(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -440,7 +449,11 @@ class SocketClient(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -542,12 +555,12 @@ class SocketClient(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb4ee0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70868e50>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(SocketClient), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSocketClient (2466395328)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'add_application_proxy': gi.FunctionInfo(add_application_proxy, bound=None), 'connect': gi.FunctionInfo(connect, bound=None), 'connect_async': gi.FunctionInfo(connect_async, bound=None), 'connect_finish': gi.FunctionInfo(connect_finish, bound=None), 'connect_to_host': gi.FunctionInfo(connect_to_host, bound=None), 'connect_to_host_async': gi.FunctionInfo(connect_to_host_async, bound=None), 'connect_to_host_finish': gi.FunctionInfo(connect_to_host_finish, bound=None), 'connect_to_service': gi.FunctionInfo(connect_to_service, bound=None), 'connect_to_service_async': gi.FunctionInfo(connect_to_service_async, bound=None), 'connect_to_service_finish': gi.FunctionInfo(connect_to_service_finish, bound=None), 'connect_to_uri': gi.FunctionInfo(connect_to_uri, bound=None), 'connect_to_uri_async': gi.FunctionInfo(connect_to_uri_async, bound=None), 'connect_to_uri_finish': gi.FunctionInfo(connect_to_uri_finish, bound=None), 'get_enable_proxy': gi.FunctionInfo(get_enable_proxy, bound=None), 'get_family': gi.FunctionInfo(get_family, bound=None), 'get_local_address': gi.FunctionInfo(get_local_address, bound=None), 'get_protocol': gi.FunctionInfo(get_protocol, bound=None), 'get_proxy_resolver': gi.FunctionInfo(get_proxy_resolver, bound=None), 'get_socket_type': gi.FunctionInfo(get_socket_type, bound=None), 'get_timeout': gi.FunctionInfo(get_timeout, bound=None), 'get_tls': gi.FunctionInfo(get_tls, bound=None), 'get_tls_validation_flags': gi.FunctionInfo(get_tls_validation_flags, bound=None), 'set_enable_proxy': gi.FunctionInfo(set_enable_proxy, bound=None), 'set_family': gi.FunctionInfo(set_family, bound=None), 'set_local_address': gi.FunctionInfo(set_local_address, bound=None), 'set_protocol': gi.FunctionInfo(set_protocol, bound=None), 'set_proxy_resolver': gi.FunctionInfo(set_proxy_resolver, bound=None), 'set_socket_type': gi.FunctionInfo(set_socket_type, bound=None), 'set_timeout': gi.FunctionInfo(set_timeout, bound=None), 'set_tls': gi.FunctionInfo(set_tls, bound=None), 'set_tls_validation_flags': gi.FunctionInfo(set_tls_validation_flags, bound=None), 'do_event': gi.VFuncInfo(event, bound=None), 'parent_instance': <property object at 0x000001a793dcbab0>, 'priv': <property object at 0x000001a793dcbba0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(SocketClient), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSocketClient (1841600432)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'add_application_proxy': gi.FunctionInfo(add_application_proxy), 'connect': gi.FunctionInfo(connect), 'connect_async': gi.FunctionInfo(connect_async), 'connect_finish': gi.FunctionInfo(connect_finish), 'connect_to_host': gi.FunctionInfo(connect_to_host), 'connect_to_host_async': gi.FunctionInfo(connect_to_host_async), 'connect_to_host_finish': gi.FunctionInfo(connect_to_host_finish), 'connect_to_service': gi.FunctionInfo(connect_to_service), 'connect_to_service_async': gi.FunctionInfo(connect_to_service_async), 'connect_to_service_finish': gi.FunctionInfo(connect_to_service_finish), 'connect_to_uri': gi.FunctionInfo(connect_to_uri), 'connect_to_uri_async': gi.FunctionInfo(connect_to_uri_async), 'connect_to_uri_finish': gi.FunctionInfo(connect_to_uri_finish), 'get_enable_proxy': gi.FunctionInfo(get_enable_proxy), 'get_family': gi.FunctionInfo(get_family), 'get_local_address': gi.FunctionInfo(get_local_address), 'get_protocol': gi.FunctionInfo(get_protocol), 'get_proxy_resolver': gi.FunctionInfo(get_proxy_resolver), 'get_socket_type': gi.FunctionInfo(get_socket_type), 'get_timeout': gi.FunctionInfo(get_timeout), 'get_tls': gi.FunctionInfo(get_tls), 'get_tls_validation_flags': gi.FunctionInfo(get_tls_validation_flags), 'set_enable_proxy': gi.FunctionInfo(set_enable_proxy), 'set_family': gi.FunctionInfo(set_family), 'set_local_address': gi.FunctionInfo(set_local_address), 'set_protocol': gi.FunctionInfo(set_protocol), 'set_proxy_resolver': gi.FunctionInfo(set_proxy_resolver), 'set_socket_type': gi.FunctionInfo(set_socket_type), 'set_timeout': gi.FunctionInfo(set_timeout), 'set_tls': gi.FunctionInfo(set_tls), 'set_tls_validation_flags': gi.FunctionInfo(set_tls_validation_flags), 'do_event': gi.VFuncInfo(event), 'parent_instance': <property object at 0x000001ea709c7330>, 'priv': <property object at 0x000001ea709c7420>})"
     __gdoc__ = 'Object GSocketClient\n\nSignals from GSocketClient:\n  event (GSocketClientEvent, GSocketConnectable, GIOStream)\n\nProperties from GSocketClient:\n  family -> GSocketFamily: family\n  type -> GSocketType: type\n  protocol -> GSocketProtocol: protocol\n  local-address -> GSocketAddress: local-address\n  timeout -> guint: timeout\n  enable-proxy -> gboolean: enable-proxy\n  tls -> gboolean: tls\n  tls-validation-flags -> GTlsCertificateFlags: tls-validation-flags\n  proxy-resolver -> GProxyResolver: proxy-resolver\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GSocketClient (2466395328)>'
+    __gtype__ = None # (!) real value is '<GType GSocketClient (1841600432)>'
     __info__ = ObjectInfo(SocketClient)
 
 

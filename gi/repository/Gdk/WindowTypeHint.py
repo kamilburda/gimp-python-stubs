@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class WindowTypeHint(__gobject.GEnum):
+class WindowTypeHint(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -124,12 +123,23 @@ class WindowTypeHint(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -158,6 +168,10 @@ class WindowTypeHint(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -192,7 +206,8 @@ class WindowTypeHint(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -201,6 +216,14 @@ class WindowTypeHint(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -228,8 +251,8 @@ class WindowTypeHint(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -260,15 +283,16 @@ class WindowTypeHint(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -332,7 +356,7 @@ class WindowTypeHint(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -374,10 +398,6 @@ class WindowTypeHint(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     COMBO = 12
     DESKTOP = 7
@@ -393,25 +413,9 @@ class WindowTypeHint(__gobject.GEnum):
     TOOLBAR = 3
     TOOLTIP = 10
     UTILITY = 5
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gdk', '__dict__': <attribute '__dict__' of 'WindowTypeHint' objects>, '__doc__': None, '__gtype__': <GType GdkWindowTypeHint (2579734896)>, '__enum_values__': {0: <enum GDK_WINDOW_TYPE_HINT_NORMAL of type Gdk.WindowTypeHint>, 1: <enum GDK_WINDOW_TYPE_HINT_DIALOG of type Gdk.WindowTypeHint>, 2: <enum GDK_WINDOW_TYPE_HINT_MENU of type Gdk.WindowTypeHint>, 3: <enum GDK_WINDOW_TYPE_HINT_TOOLBAR of type Gdk.WindowTypeHint>, 4: <enum GDK_WINDOW_TYPE_HINT_SPLASHSCREEN of type Gdk.WindowTypeHint>, 5: <enum GDK_WINDOW_TYPE_HINT_UTILITY of type Gdk.WindowTypeHint>, 6: <enum GDK_WINDOW_TYPE_HINT_DOCK of type Gdk.WindowTypeHint>, 7: <enum GDK_WINDOW_TYPE_HINT_DESKTOP of type Gdk.WindowTypeHint>, 8: <enum GDK_WINDOW_TYPE_HINT_DROPDOWN_MENU of type Gdk.WindowTypeHint>, 9: <enum GDK_WINDOW_TYPE_HINT_POPUP_MENU of type Gdk.WindowTypeHint>, 10: <enum GDK_WINDOW_TYPE_HINT_TOOLTIP of type Gdk.WindowTypeHint>, 11: <enum GDK_WINDOW_TYPE_HINT_NOTIFICATION of type Gdk.WindowTypeHint>, 12: <enum GDK_WINDOW_TYPE_HINT_COMBO of type Gdk.WindowTypeHint>, 13: <enum GDK_WINDOW_TYPE_HINT_DND of type Gdk.WindowTypeHint>}, '__info__': gi.EnumInfo(WindowTypeHint), 'NORMAL': <enum GDK_WINDOW_TYPE_HINT_NORMAL of type Gdk.WindowTypeHint>, 'DIALOG': <enum GDK_WINDOW_TYPE_HINT_DIALOG of type Gdk.WindowTypeHint>, 'MENU': <enum GDK_WINDOW_TYPE_HINT_MENU of type Gdk.WindowTypeHint>, 'TOOLBAR': <enum GDK_WINDOW_TYPE_HINT_TOOLBAR of type Gdk.WindowTypeHint>, 'SPLASHSCREEN': <enum GDK_WINDOW_TYPE_HINT_SPLASHSCREEN of type Gdk.WindowTypeHint>, 'UTILITY': <enum GDK_WINDOW_TYPE_HINT_UTILITY of type Gdk.WindowTypeHint>, 'DOCK': <enum GDK_WINDOW_TYPE_HINT_DOCK of type Gdk.WindowTypeHint>, 'DESKTOP': <enum GDK_WINDOW_TYPE_HINT_DESKTOP of type Gdk.WindowTypeHint>, 'DROPDOWN_MENU': <enum GDK_WINDOW_TYPE_HINT_DROPDOWN_MENU of type Gdk.WindowTypeHint>, 'POPUP_MENU': <enum GDK_WINDOW_TYPE_HINT_POPUP_MENU of type Gdk.WindowTypeHint>, 'TOOLTIP': <enum GDK_WINDOW_TYPE_HINT_TOOLTIP of type Gdk.WindowTypeHint>, 'NOTIFICATION': <enum GDK_WINDOW_TYPE_HINT_NOTIFICATION of type Gdk.WindowTypeHint>, 'COMBO': <enum GDK_WINDOW_TYPE_HINT_COMBO of type Gdk.WindowTypeHint>, 'DND': <enum GDK_WINDOW_TYPE_HINT_DND of type Gdk.WindowTypeHint>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkWindowTypeHint (2579734896)>'
-    __info__ = gi.EnumInfo(WindowTypeHint)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NORMAL': <WindowTypeHint.NORMAL: 0>, 'DIALOG': <WindowTypeHint.DIALOG: 1>, 'MENU': <WindowTypeHint.MENU: 2>, 'TOOLBAR': <WindowTypeHint.TOOLBAR: 3>, 'SPLASHSCREEN': <WindowTypeHint.SPLASHSCREEN: 4>, 'UTILITY': <WindowTypeHint.UTILITY: 5>, 'DOCK': <WindowTypeHint.DOCK: 6>, 'DESKTOP': <WindowTypeHint.DESKTOP: 7>, 'DROPDOWN_MENU': <WindowTypeHint.DROPDOWN_MENU: 8>, 'POPUP_MENU': <WindowTypeHint.POPUP_MENU: 9>, 'TOOLTIP': <WindowTypeHint.TOOLTIP: 10>, 'NOTIFICATION': <WindowTypeHint.NOTIFICATION: 11>, 'COMBO': <WindowTypeHint.COMBO: 12>, 'DND': <WindowTypeHint.DND: 13>})"
+    __name__ = 'WindowTypeHint'
+    __qualname__ = 'WindowTypeHint'
 
 

@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class KeyFile(__gi.Boxed):
@@ -127,7 +125,8 @@ class KeyFile(__gi.Boxed):
         """ load_from_file(self, file:str, flags:GLib.KeyFileFlags) -> bool """
         return False
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> GLib.KeyFile """
         pass
 
@@ -327,8 +326,8 @@ class KeyFile(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(KeyFile), '__module__': 'gi.repository.GLib', '__gtype__': <GType GKeyFile (163508688)>, '__dict__': <attribute '__dict__' of 'KeyFile' objects>, '__weakref__': <attribute '__weakref__' of 'KeyFile' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'get_boolean': gi.FunctionInfo(get_boolean, bound=None), 'get_boolean_list': gi.FunctionInfo(get_boolean_list, bound=None), 'get_comment': gi.FunctionInfo(get_comment, bound=None), 'get_double': gi.FunctionInfo(get_double, bound=None), 'get_double_list': gi.FunctionInfo(get_double_list, bound=None), 'get_groups': gi.FunctionInfo(get_groups, bound=None), 'get_int64': gi.FunctionInfo(get_int64, bound=None), 'get_integer': gi.FunctionInfo(get_integer, bound=None), 'get_integer_list': gi.FunctionInfo(get_integer_list, bound=None), 'get_keys': gi.FunctionInfo(get_keys, bound=None), 'get_locale_for_key': gi.FunctionInfo(get_locale_for_key, bound=None), 'get_locale_string': gi.FunctionInfo(get_locale_string, bound=None), 'get_locale_string_list': gi.FunctionInfo(get_locale_string_list, bound=None), 'get_start_group': gi.FunctionInfo(get_start_group, bound=None), 'get_string': gi.FunctionInfo(get_string, bound=None), 'get_string_list': gi.FunctionInfo(get_string_list, bound=None), 'get_uint64': gi.FunctionInfo(get_uint64, bound=None), 'get_value': gi.FunctionInfo(get_value, bound=None), 'has_group': gi.FunctionInfo(has_group, bound=None), 'load_from_bytes': gi.FunctionInfo(load_from_bytes, bound=None), 'load_from_data': gi.FunctionInfo(load_from_data, bound=None), 'load_from_data_dirs': gi.FunctionInfo(load_from_data_dirs, bound=None), 'load_from_dirs': gi.FunctionInfo(load_from_dirs, bound=None), 'load_from_file': gi.FunctionInfo(load_from_file, bound=None), 'remove_comment': gi.FunctionInfo(remove_comment, bound=None), 'remove_group': gi.FunctionInfo(remove_group, bound=None), 'remove_key': gi.FunctionInfo(remove_key, bound=None), 'save_to_file': gi.FunctionInfo(save_to_file, bound=None), 'set_boolean': gi.FunctionInfo(set_boolean, bound=None), 'set_boolean_list': gi.FunctionInfo(set_boolean_list, bound=None), 'set_comment': gi.FunctionInfo(set_comment, bound=None), 'set_double': gi.FunctionInfo(set_double, bound=None), 'set_double_list': gi.FunctionInfo(set_double_list, bound=None), 'set_int64': gi.FunctionInfo(set_int64, bound=None), 'set_integer': gi.FunctionInfo(set_integer, bound=None), 'set_integer_list': gi.FunctionInfo(set_integer_list, bound=None), 'set_list_separator': gi.FunctionInfo(set_list_separator, bound=None), 'set_locale_string': gi.FunctionInfo(set_locale_string, bound=None), 'set_locale_string_list': gi.FunctionInfo(set_locale_string_list, bound=None), 'set_string': gi.FunctionInfo(set_string, bound=None), 'set_string_list': gi.FunctionInfo(set_string_list, bound=None), 'set_uint64': gi.FunctionInfo(set_uint64, bound=None), 'set_value': gi.FunctionInfo(set_value, bound=None), 'to_data': gi.FunctionInfo(to_data, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'error_quark': gi.FunctionInfo(error_quark, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GKeyFile (163508688)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(KeyFile), '__module__': 'gi.repository.GLib', '__gtype__': <GType GKeyFile (2640521760)>, '__dict__': <attribute '__dict__' of 'KeyFile' objects>, '__weakref__': <attribute '__weakref__' of 'KeyFile' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_boolean': gi.FunctionInfo(get_boolean), 'get_boolean_list': gi.FunctionInfo(get_boolean_list), 'get_comment': gi.FunctionInfo(get_comment), 'get_double': gi.FunctionInfo(get_double), 'get_double_list': gi.FunctionInfo(get_double_list), 'get_groups': gi.FunctionInfo(get_groups), 'get_int64': gi.FunctionInfo(get_int64), 'get_integer': gi.FunctionInfo(get_integer), 'get_integer_list': gi.FunctionInfo(get_integer_list), 'get_keys': gi.FunctionInfo(get_keys), 'get_locale_for_key': gi.FunctionInfo(get_locale_for_key), 'get_locale_string': gi.FunctionInfo(get_locale_string), 'get_locale_string_list': gi.FunctionInfo(get_locale_string_list), 'get_start_group': gi.FunctionInfo(get_start_group), 'get_string': gi.FunctionInfo(get_string), 'get_string_list': gi.FunctionInfo(get_string_list), 'get_uint64': gi.FunctionInfo(get_uint64), 'get_value': gi.FunctionInfo(get_value), 'has_group': gi.FunctionInfo(has_group), 'load_from_bytes': gi.FunctionInfo(load_from_bytes), 'load_from_data': gi.FunctionInfo(load_from_data), 'load_from_data_dirs': gi.FunctionInfo(load_from_data_dirs), 'load_from_dirs': gi.FunctionInfo(load_from_dirs), 'load_from_file': gi.FunctionInfo(load_from_file), 'remove_comment': gi.FunctionInfo(remove_comment), 'remove_group': gi.FunctionInfo(remove_group), 'remove_key': gi.FunctionInfo(remove_key), 'save_to_file': gi.FunctionInfo(save_to_file), 'set_boolean': gi.FunctionInfo(set_boolean), 'set_boolean_list': gi.FunctionInfo(set_boolean_list), 'set_comment': gi.FunctionInfo(set_comment), 'set_double': gi.FunctionInfo(set_double), 'set_double_list': gi.FunctionInfo(set_double_list), 'set_int64': gi.FunctionInfo(set_int64), 'set_integer': gi.FunctionInfo(set_integer), 'set_integer_list': gi.FunctionInfo(set_integer_list), 'set_list_separator': gi.FunctionInfo(set_list_separator), 'set_locale_string': gi.FunctionInfo(set_locale_string), 'set_locale_string_list': gi.FunctionInfo(set_locale_string_list), 'set_string': gi.FunctionInfo(set_string), 'set_string_list': gi.FunctionInfo(set_string_list), 'set_uint64': gi.FunctionInfo(set_uint64), 'set_value': gi.FunctionInfo(set_value), 'to_data': gi.FunctionInfo(to_data), 'unref': gi.FunctionInfo(unref), 'error_quark': <staticmethod(gi.FunctionInfo(error_quark))>, '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GKeyFile (2640521760)>'
     __info__ = StructInfo(KeyFile)
 
 

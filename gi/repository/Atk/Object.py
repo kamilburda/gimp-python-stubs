@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -51,20 +44,20 @@ class Object(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -87,6 +80,12 @@ class Object(__gi_overrides_GObject.Object):
 
     def do_children_changed(self, *args, **kwargs): # real signature unknown
         """ children_changed(self, change_index:int, changed_child=None) """
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_focus_event(self, *args, **kwargs): # real signature unknown
@@ -196,17 +195,17 @@ class Object(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -279,20 +278,20 @@ class Object(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -475,20 +474,20 @@ class Object(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -634,12 +633,14 @@ class Object(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x00000173364abaf0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001c85bf8f580>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Object), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkObject (892047568)>, '__doc__': None, '__gsignals__': {}, 'add_relationship': gi.FunctionInfo(add_relationship, bound=None), 'get_accessible_id': gi.FunctionInfo(get_accessible_id, bound=None), 'get_attributes': gi.FunctionInfo(get_attributes, bound=None), 'get_description': gi.FunctionInfo(get_description, bound=None), 'get_help_text': gi.FunctionInfo(get_help_text, bound=None), 'get_index_in_parent': gi.FunctionInfo(get_index_in_parent, bound=None), 'get_layer': gi.FunctionInfo(get_layer, bound=None), 'get_mdi_zorder': gi.FunctionInfo(get_mdi_zorder, bound=None), 'get_n_accessible_children': gi.FunctionInfo(get_n_accessible_children, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_object_locale': gi.FunctionInfo(get_object_locale, bound=None), 'get_parent': gi.FunctionInfo(get_parent, bound=None), 'get_role': gi.FunctionInfo(get_role, bound=None), 'initialize': gi.FunctionInfo(initialize, bound=None), 'notify_state_change': gi.FunctionInfo(notify_state_change, bound=None), 'peek_parent': gi.FunctionInfo(peek_parent, bound=None), 'ref_accessible_child': gi.FunctionInfo(ref_accessible_child, bound=None), 'ref_relation_set': gi.FunctionInfo(ref_relation_set, bound=None), 'ref_state_set': gi.FunctionInfo(ref_state_set, bound=None), 'remove_property_change_handler': gi.FunctionInfo(remove_property_change_handler, bound=None), 'remove_relationship': gi.FunctionInfo(remove_relationship, bound=None), 'set_accessible_id': gi.FunctionInfo(set_accessible_id, bound=None), 'set_description': gi.FunctionInfo(set_description, bound=None), 'set_help_text': gi.FunctionInfo(set_help_text, bound=None), 'set_name': gi.FunctionInfo(set_name, bound=None), 'set_parent': gi.FunctionInfo(set_parent, bound=None), 'set_role': gi.FunctionInfo(set_role, bound=None), 'do_active_descendant_changed': gi.VFuncInfo(active_descendant_changed, bound=None), 'do_children_changed': gi.VFuncInfo(children_changed, bound=None), 'do_focus_event': gi.VFuncInfo(focus_event, bound=None), 'do_get_attributes': gi.VFuncInfo(get_attributes, bound=None), 'do_get_description': gi.VFuncInfo(get_description, bound=None), 'do_get_index_in_parent': gi.VFuncInfo(get_index_in_parent, bound=None), 'do_get_layer': gi.VFuncInfo(get_layer, bound=None), 'do_get_mdi_zorder': gi.VFuncInfo(get_mdi_zorder, bound=None), 'do_get_n_children': gi.VFuncInfo(get_n_children, bound=None), 'do_get_name': gi.VFuncInfo(get_name, bound=None), 'do_get_object_locale': gi.VFuncInfo(get_object_locale, bound=None), 'do_get_parent': gi.VFuncInfo(get_parent, bound=None), 'do_get_role': gi.VFuncInfo(get_role, bound=None), 'do_initialize': gi.VFuncInfo(initialize, bound=None), 'do_property_change': gi.VFuncInfo(property_change, bound=None), 'do_ref_relation_set': gi.VFuncInfo(ref_relation_set, bound=None), 'do_ref_state_set': gi.VFuncInfo(ref_state_set, bound=None), 'do_remove_property_change_handler': gi.VFuncInfo(remove_property_change_handler, bound=None), 'do_set_description': gi.VFuncInfo(set_description, bound=None), 'do_set_name': gi.VFuncInfo(set_name, bound=None), 'do_set_parent': gi.VFuncInfo(set_parent, bound=None), 'do_set_role': gi.VFuncInfo(set_role, bound=None), 'do_state_change': gi.VFuncInfo(state_change, bound=None), 'do_visible_data_changed': gi.VFuncInfo(visible_data_changed, bound=None), 'parent': <property object at 0x000001733817f650>, 'description': <property object at 0x000001733817f740>, 'name': <property object at 0x000001733817f830>, 'accessible_parent': <property object at 0x000001733817f920>, 'role': <property object at 0x000001733817fa10>, 'relation_set': <property object at 0x000001733817fb00>, 'layer': <property object at 0x000001733817fbf0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Object), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkObject (1534561344)>, '__doc__': None, '__gsignals__': {}, 'add_relationship': gi.FunctionInfo(add_relationship), 'get_accessible_id': gi.FunctionInfo(get_accessible_id), 'get_attributes': gi.FunctionInfo(get_attributes), 'get_description': gi.FunctionInfo(get_description), 'get_help_text': gi.FunctionInfo(get_help_text), 'get_index_in_parent': gi.FunctionInfo(get_index_in_parent), 'get_layer': gi.FunctionInfo(get_layer), 'get_mdi_zorder': gi.FunctionInfo(get_mdi_zorder), 'get_n_accessible_children': gi.FunctionInfo(get_n_accessible_children), 'get_name': gi.FunctionInfo(get_name), 'get_object_locale': gi.FunctionInfo(get_object_locale), 'get_parent': gi.FunctionInfo(get_parent), 'get_role': gi.FunctionInfo(get_role), 'initialize': gi.FunctionInfo(initialize), 'notify_state_change': gi.FunctionInfo(notify_state_change), 'peek_parent': gi.FunctionInfo(peek_parent), 'ref_accessible_child': gi.FunctionInfo(ref_accessible_child), 'ref_relation_set': gi.FunctionInfo(ref_relation_set), 'ref_state_set': gi.FunctionInfo(ref_state_set), 'remove_property_change_handler': gi.FunctionInfo(remove_property_change_handler), 'remove_relationship': gi.FunctionInfo(remove_relationship), 'set_accessible_id': gi.FunctionInfo(set_accessible_id), 'set_description': gi.FunctionInfo(set_description), 'set_help_text': gi.FunctionInfo(set_help_text), 'set_name': gi.FunctionInfo(set_name), 'set_parent': gi.FunctionInfo(set_parent), 'set_role': gi.FunctionInfo(set_role), 'do_active_descendant_changed': gi.VFuncInfo(active_descendant_changed), 'do_children_changed': gi.VFuncInfo(children_changed), 'do_focus_event': gi.VFuncInfo(focus_event), 'do_get_attributes': gi.VFuncInfo(get_attributes), 'do_get_description': gi.VFuncInfo(get_description), 'do_get_index_in_parent': gi.VFuncInfo(get_index_in_parent), 'do_get_layer': gi.VFuncInfo(get_layer), 'do_get_mdi_zorder': gi.VFuncInfo(get_mdi_zorder), 'do_get_n_children': gi.VFuncInfo(get_n_children), 'do_get_name': gi.VFuncInfo(get_name), 'do_get_object_locale': gi.VFuncInfo(get_object_locale), 'do_get_parent': gi.VFuncInfo(get_parent), 'do_get_role': gi.VFuncInfo(get_role), 'do_initialize': gi.VFuncInfo(initialize), 'do_property_change': gi.VFuncInfo(property_change), 'do_ref_relation_set': gi.VFuncInfo(ref_relation_set), 'do_ref_state_set': gi.VFuncInfo(ref_state_set), 'do_remove_property_change_handler': gi.VFuncInfo(remove_property_change_handler), 'do_set_description': gi.VFuncInfo(set_description), 'do_set_name': gi.VFuncInfo(set_name), 'do_set_parent': gi.VFuncInfo(set_parent), 'do_set_role': gi.VFuncInfo(set_role), 'do_state_change': gi.VFuncInfo(state_change), 'do_visible_data_changed': gi.VFuncInfo(visible_data_changed), 'parent': <property object at 0x000001c85dc87d30>, 'description': <property object at 0x000001c85dc87e20>, 'name': <property object at 0x000001c85dc87f10>, 'accessible_parent': <property object at 0x000001c85dafc040>, 'role': <property object at 0x000001c85dafc130>, 'relation_set': <property object at 0x000001c85dafc220>, 'layer': <property object at 0x000001c85dafc310>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object AtkObject\n\nSignals from AtkObject:\n  children-changed (guint, gpointer)\n  focus-event (gboolean)\n  property-change (gpointer)\n  state-change (gchararray, gboolean)\n  visible-data-changed ()\n  active-descendant-changed (gpointer)\n  announcement (gchararray)\n  notification (gchararray, gint)\n  attribute-changed (gchararray, gchararray)\n\nProperties from AtkObject:\n  accessible-name -> gchararray: Accessible Name\n    Object instance’s name formatted for assistive technology access\n  accessible-description -> gchararray: Accessible Description\n    Description of an object, formatted for assistive technology access\n  accessible-parent -> AtkObject: Accessible Parent\n    Parent of the current accessible as returned by atk_object_get_parent()\n  accessible-value -> gdouble: Accessible Value\n    Is used to notify that the value has changed\n  accessible-role -> AtkRole: Accessible Role\n    The accessible role of this object\n  accessible-component-layer -> gint: Accessible Layer\n    The accessible layer of this object\n  accessible-component-mdi-zorder -> gint: Accessible MDI Value\n    The accessible MDI value of this object\n  accessible-table-caption -> gchararray: Accessible Table Caption\n    Is used to notify that the table caption has changed; this property should not be used. accessible-table-caption-object should be used instead\n  accessible-table-column-description -> gchararray: Accessible Table Column Description\n    Is used to notify that the table column description has changed\n  accessible-table-column-header -> AtkObject: Accessible Table Column Header\n    Is used to notify that the table column header has changed\n  accessible-table-row-description -> gchararray: Accessible Table Row Description\n    Is used to notify that the table row description has changed\n  accessible-table-row-header -> AtkObject: Accessible Table Row Header\n    Is used to notify that the table row header has changed\n  accessible-table-summary -> AtkObject: Accessible Table Summary\n    Is used to notify that the table summary has changed\n  accessible-table-caption-object -> AtkObject: Accessible Table Caption Object\n    Is used to notify that the table caption has changed\n  accessible-hypertext-nlinks -> gint: Number of Accessible Hypertext Links\n    The number of links which the current AtkHypertext has\n  accessible-id -> gchararray: Accessible ID\n    ID for the accessible; useful for automated testing\n  accessible-help-text -> gchararray: Help text\n    Help text associated with the accessible\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkObject (892047568)>'
+    __gtype__ = None # (!) real value is '<GType AtkObject (1534561344)>'
     __info__ = ObjectInfo(Object)
+    __static_attributes__ = ()
 
 

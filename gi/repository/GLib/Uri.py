@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Uri(__gi.Boxed):
@@ -268,8 +266,8 @@ class Uri(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Uri), '__module__': 'gi.repository.GLib', '__gtype__': <GType GUri (163509808)>, '__dict__': <attribute '__dict__' of 'Uri' objects>, '__weakref__': <attribute '__weakref__' of 'Uri' objects>, '__doc__': None, 'get_auth_params': gi.FunctionInfo(get_auth_params, bound=None), 'get_flags': gi.FunctionInfo(get_flags, bound=None), 'get_fragment': gi.FunctionInfo(get_fragment, bound=None), 'get_host': gi.FunctionInfo(get_host, bound=None), 'get_password': gi.FunctionInfo(get_password, bound=None), 'get_path': gi.FunctionInfo(get_path, bound=None), 'get_port': gi.FunctionInfo(get_port, bound=None), 'get_query': gi.FunctionInfo(get_query, bound=None), 'get_scheme': gi.FunctionInfo(get_scheme, bound=None), 'get_user': gi.FunctionInfo(get_user, bound=None), 'get_userinfo': gi.FunctionInfo(get_userinfo, bound=None), 'parse_relative': gi.FunctionInfo(parse_relative, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None), 'to_string_partial': gi.FunctionInfo(to_string_partial, bound=None), 'build': gi.FunctionInfo(build, bound=None), 'build_with_user': gi.FunctionInfo(build_with_user, bound=None), 'error_quark': gi.FunctionInfo(error_quark, bound=None), 'escape_bytes': gi.FunctionInfo(escape_bytes, bound=None), 'escape_string': gi.FunctionInfo(escape_string, bound=None), 'is_valid': gi.FunctionInfo(is_valid, bound=None), 'join': gi.FunctionInfo(join, bound=None), 'join_with_user': gi.FunctionInfo(join_with_user, bound=None), 'list_extract_uris': gi.FunctionInfo(list_extract_uris, bound=None), 'parse': gi.FunctionInfo(parse, bound=None), 'parse_params': gi.FunctionInfo(parse_params, bound=None), 'parse_scheme': gi.FunctionInfo(parse_scheme, bound=None), 'peek_scheme': gi.FunctionInfo(peek_scheme, bound=None), 'resolve_relative': gi.FunctionInfo(resolve_relative, bound=None), 'split': gi.FunctionInfo(split, bound=None), 'split_network': gi.FunctionInfo(split_network, bound=None), 'split_with_user': gi.FunctionInfo(split_with_user, bound=None), 'unescape_bytes': gi.FunctionInfo(unescape_bytes, bound=None), 'unescape_segment': gi.FunctionInfo(unescape_segment, bound=None), 'unescape_string': gi.FunctionInfo(unescape_string, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GUri (163509808)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Uri), '__module__': 'gi.repository.GLib', '__gtype__': <GType GUri (2640519744)>, '__dict__': <attribute '__dict__' of 'Uri' objects>, '__weakref__': <attribute '__weakref__' of 'Uri' objects>, '__doc__': None, 'get_auth_params': gi.FunctionInfo(get_auth_params), 'get_flags': gi.FunctionInfo(get_flags), 'get_fragment': gi.FunctionInfo(get_fragment), 'get_host': gi.FunctionInfo(get_host), 'get_password': gi.FunctionInfo(get_password), 'get_path': gi.FunctionInfo(get_path), 'get_port': gi.FunctionInfo(get_port), 'get_query': gi.FunctionInfo(get_query), 'get_scheme': gi.FunctionInfo(get_scheme), 'get_user': gi.FunctionInfo(get_user), 'get_userinfo': gi.FunctionInfo(get_userinfo), 'parse_relative': gi.FunctionInfo(parse_relative), 'to_string': gi.FunctionInfo(to_string), 'to_string_partial': gi.FunctionInfo(to_string_partial), 'build': <staticmethod(gi.FunctionInfo(build))>, 'build_with_user': <staticmethod(gi.FunctionInfo(build_with_user))>, 'error_quark': <staticmethod(gi.FunctionInfo(error_quark))>, 'escape_bytes': <staticmethod(gi.FunctionInfo(escape_bytes))>, 'escape_string': <staticmethod(gi.FunctionInfo(escape_string))>, 'is_valid': <staticmethod(gi.FunctionInfo(is_valid))>, 'join': <staticmethod(gi.FunctionInfo(join))>, 'join_with_user': <staticmethod(gi.FunctionInfo(join_with_user))>, 'list_extract_uris': <staticmethod(gi.FunctionInfo(list_extract_uris))>, 'parse': <staticmethod(gi.FunctionInfo(parse))>, 'parse_params': <staticmethod(gi.FunctionInfo(parse_params))>, 'parse_scheme': <staticmethod(gi.FunctionInfo(parse_scheme))>, 'peek_scheme': <staticmethod(gi.FunctionInfo(peek_scheme))>, 'resolve_relative': <staticmethod(gi.FunctionInfo(resolve_relative))>, 'split': <staticmethod(gi.FunctionInfo(split))>, 'split_network': <staticmethod(gi.FunctionInfo(split_network))>, 'split_with_user': <staticmethod(gi.FunctionInfo(split_with_user))>, 'unescape_bytes': <staticmethod(gi.FunctionInfo(unescape_bytes))>, 'unescape_segment': <staticmethod(gi.FunctionInfo(unescape_segment))>, 'unescape_string': <staticmethod(gi.FunctionInfo(unescape_string))>})"
+    __gtype__ = None # (!) real value is '<GType GUri (2640519744)>'
     __info__ = StructInfo(Uri)
 
 

@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class TlsBackendInterface(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -148,7 +157,7 @@ class TlsBackendInterface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TlsBackendInterface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TlsBackendInterface' objects>, '__weakref__': <attribute '__weakref__' of 'TlsBackendInterface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001a793da8310>, 'supports_tls': <property object at 0x000001a793da8400>, 'get_certificate_type': <property object at 0x000001a793da8540>, 'get_client_connection_type': <property object at 0x000001a793da8630>, 'get_server_connection_type': <property object at 0x000001a793da8720>, 'get_file_database_type': <property object at 0x000001a793da8810>, 'get_default_database': <property object at 0x000001a793da8900>, 'supports_dtls': <property object at 0x000001a793da89a0>, 'get_dtls_client_connection_type': <property object at 0x000001a793da8ae0>, 'get_dtls_server_connection_type': <property object at 0x000001a793da8bd0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TlsBackendInterface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TlsBackendInterface' objects>, '__weakref__': <attribute '__weakref__' of 'TlsBackendInterface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001ea709dd3f0>, 'supports_tls': <property object at 0x000001ea709dd4e0>, 'get_certificate_type': <property object at 0x000001ea709dd5d0>, 'get_client_connection_type': <property object at 0x000001ea709dd710>, 'get_server_connection_type': <property object at 0x000001ea709dd800>, 'get_file_database_type': <property object at 0x000001ea709dd8a0>, 'get_default_database': <property object at 0x000001ea709dd990>, 'supports_dtls': <property object at 0x000001ea709dda80>, 'get_dtls_client_connection_type': <property object at 0x000001ea709ddbc0>, 'get_dtls_server_connection_type': <property object at 0x000001ea709ddcb0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TlsBackendInterface)
 

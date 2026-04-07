@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -153,7 +147,7 @@ class ParamSpecInt(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ParamSpecInt), '__module__': 'gi.repository.Gegl', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ParamSpecInt' objects>, '__weakref__': <attribute '__weakref__' of 'ParamSpecInt' objects>, '__doc__': None, 'parent_instance': <property object at 0x000002761b9135b0>, 'ui_minimum': <property object at 0x000002761b9136a0>, 'ui_maximum': <property object at 0x000002761b913790>, 'ui_gamma': <property object at 0x000002761b913880>, 'ui_step_small': <property object at 0x000002761b913970>, 'ui_step_big': <property object at 0x000002761b913a60>, 'set_steps': gi.FunctionInfo(set_steps, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ParamSpecInt), '__module__': 'gi.repository.Gegl', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ParamSpecInt' objects>, '__weakref__': <attribute '__weakref__' of 'ParamSpecInt' objects>, '__doc__': None, 'parent_instance': <property object at 0x000001ebdc2004a0>, 'ui_minimum': <property object at 0x000001ebdc200590>, 'ui_maximum': <property object at 0x000001ebdc200680>, 'ui_gamma': <property object at 0x000001ebdc200770>, 'ui_step_small': <property object at 0x000001ebdc200860>, 'ui_step_big': <property object at 0x000001ebdc200950>, 'set_steps': gi.FunctionInfo(set_steps)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ParamSpecInt)
 

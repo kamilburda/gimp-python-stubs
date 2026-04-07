@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -190,7 +183,7 @@ class TextIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextIface' objects>, '__weakref__': <attribute '__weakref__' of 'TextIface' objects>, '__doc__': None, 'parent': <property object at 0x00000173381331f0>, 'get_text': <property object at 0x00000173381332e0>, 'get_text_after_offset': <property object at 0x00000173381333d0>, 'get_text_at_offset': <property object at 0x00000173381334c0>, 'get_character_at_offset': <property object at 0x00000173381335b0>, 'get_text_before_offset': <property object at 0x00000173381336a0>, 'get_caret_offset': <property object at 0x0000017338133790>, 'get_run_attributes': <property object at 0x0000017338133880>, 'get_default_attributes': <property object at 0x0000017338133970>, 'get_character_extents': <property object at 0x0000017338133a60>, 'get_character_count': <property object at 0x0000017338133b50>, 'get_offset_at_point': <property object at 0x0000017338133c40>, 'get_n_selections': <property object at 0x0000017338133d30>, 'get_selection': <property object at 0x0000017338133e20>, 'add_selection': <property object at 0x0000017338133f10>, 'remove_selection': <property object at 0x000001733812c040>, 'set_selection': <property object at 0x000001733812c130>, 'set_caret_offset': <property object at 0x000001733812c220>, 'text_changed': <property object at 0x000001733812c310>, 'text_caret_moved': <property object at 0x000001733812c400>, 'text_selection_changed': <property object at 0x000001733812c4f0>, 'text_attributes_changed': <property object at 0x000001733812c5e0>, 'get_range_extents': <property object at 0x000001733812c6d0>, 'get_bounded_ranges': <property object at 0x000001733812c7c0>, 'get_string_at_offset': <property object at 0x000001733812c8b0>, 'scroll_substring_to': <property object at 0x000001733812c9a0>, 'scroll_substring_to_point': <property object at 0x000001733812cae0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextIface' objects>, '__weakref__': <attribute '__weakref__' of 'TextIface' objects>, '__doc__': None, 'parent': <property object at 0x000001c85dc43dd0>, 'get_text': <property object at 0x000001c85dc43ec0>, 'get_text_after_offset': <property object at 0x000001c85dc43ba0>, 'get_text_at_offset': <property object at 0x000001c85dc43ab0>, 'get_character_at_offset': <property object at 0x000001c85dc439c0>, 'get_text_before_offset': <property object at 0x000001c85dc2c270>, 'get_caret_offset': <property object at 0x000001c85dc2c180>, 'get_run_attributes': <property object at 0x000001c85dc2c090>, 'get_default_attributes': <property object at 0x000001c85dc2c3b0>, 'get_character_extents': <property object at 0x000001c85dc2c4a0>, 'get_character_count': <property object at 0x000001c85dc2c590>, 'get_offset_at_point': <property object at 0x000001c85dc2c680>, 'get_n_selections': <property object at 0x000001c85dc2c770>, 'get_selection': <property object at 0x000001c85dc2c860>, 'add_selection': <property object at 0x000001c85dc2c950>, 'remove_selection': <property object at 0x000001c85dc2ca40>, 'set_selection': <property object at 0x000001c85dc2cb30>, 'set_caret_offset': <property object at 0x000001c85dc2cc20>, 'text_changed': <property object at 0x000001c85dc2cd10>, 'text_caret_moved': <property object at 0x000001c85dc2ce00>, 'text_selection_changed': <property object at 0x000001c85dc2cef0>, 'text_attributes_changed': <property object at 0x000001c85dc2cfe0>, 'get_range_extents': <property object at 0x000001c85dc2d0d0>, 'get_bounded_ranges': <property object at 0x000001c85dc2d1c0>, 'get_string_at_offset': <property object at 0x000001c85dc2d2b0>, 'scroll_substring_to': <property object at 0x000001c85dc2d3a0>, 'scroll_substring_to_point': <property object at 0x000001c85dc2d4e0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TextIface)
 

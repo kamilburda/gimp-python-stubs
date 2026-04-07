@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ScriptIter(__gi.Boxed):
@@ -33,7 +31,8 @@ class ScriptIter(__gi.Boxed):
         """ get_range(self) -> start:str, end:str, script:Pango.Script """
         pass
 
-    def new(self, text, length): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, text, length): # real signature unknown; restored from __doc__
         """ new(text:str, length:int) -> Pango.ScriptIter """
         pass
 
@@ -153,8 +152,8 @@ class ScriptIter(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ScriptIter), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoScriptIter (4081763520)>, '__dict__': <attribute '__dict__' of 'ScriptIter' objects>, '__weakref__': <attribute '__weakref__' of 'ScriptIter' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_range': gi.FunctionInfo(get_range, bound=None), 'next': gi.FunctionInfo(next, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x00000213f5fb7880>})"
-    __gtype__ = None # (!) real value is '<GType PangoScriptIter (4081763520)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ScriptIter), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoScriptIter (843937440)>, '__dict__': <attribute '__dict__' of 'ScriptIter' objects>, '__weakref__': <attribute '__weakref__' of 'ScriptIter' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'free': gi.FunctionInfo(free), 'get_range': gi.FunctionInfo(get_range), 'next': gi.FunctionInfo(next), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000028034ff1010>})"
+    __gtype__ = None # (!) real value is '<GType PangoScriptIter (843937440)>'
     __info__ = StructInfo(ScriptIter)
 
 

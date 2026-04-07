@@ -1,28 +1,32 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class AskPasswordFlags(__gobject.GFlags):
+class AskPasswordFlags(__gi__gi.GFlags):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -81,6 +85,10 @@ class AskPasswordFlags(__gobject.GFlags):
         """
         pass
 
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return an array of bytes representing an integer.
@@ -110,8 +118,8 @@ class AskPasswordFlags(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -122,12 +130,16 @@ class AskPasswordFlags(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -151,10 +163,15 @@ class AskPasswordFlags(__gobject.GFlags):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -189,15 +206,24 @@ class AskPasswordFlags(__gobject.GFlags):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -225,16 +251,16 @@ class AskPasswordFlags(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -249,24 +275,24 @@ class AskPasswordFlags(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -285,8 +311,8 @@ class AskPasswordFlags(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -317,8 +343,8 @@ class AskPasswordFlags(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -330,7 +356,7 @@ class AskPasswordFlags(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -356,16 +382,12 @@ class AskPasswordFlags(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -376,10 +398,6 @@ class AskPasswordFlags(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ANONYMOUS_SUPPORTED = 16
     NEED_DOMAIN = 4
@@ -387,17 +405,9 @@ class AskPasswordFlags(__gobject.GFlags):
     NEED_USERNAME = 2
     SAVING_SUPPORTED = 8
     TCRYPT = 32
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gio', '__dict__': <attribute '__dict__' of 'AskPasswordFlags' objects>, '__doc__': None, '__gtype__': <GType GAskPasswordFlags (2472612384)>, '__flags_values__': {1: <flags G_ASK_PASSWORD_NEED_PASSWORD of type Gio.AskPasswordFlags>, 2: <flags G_ASK_PASSWORD_NEED_USERNAME of type Gio.AskPasswordFlags>, 4: <flags G_ASK_PASSWORD_NEED_DOMAIN of type Gio.AskPasswordFlags>, 8: <flags G_ASK_PASSWORD_SAVING_SUPPORTED of type Gio.AskPasswordFlags>, 16: <flags G_ASK_PASSWORD_ANONYMOUS_SUPPORTED of type Gio.AskPasswordFlags>, 32: <flags G_ASK_PASSWORD_TCRYPT of type Gio.AskPasswordFlags>}, '__info__': gi.EnumInfo(AskPasswordFlags), 'NEED_PASSWORD': <flags G_ASK_PASSWORD_NEED_PASSWORD of type Gio.AskPasswordFlags>, 'NEED_USERNAME': <flags G_ASK_PASSWORD_NEED_USERNAME of type Gio.AskPasswordFlags>, 'NEED_DOMAIN': <flags G_ASK_PASSWORD_NEED_DOMAIN of type Gio.AskPasswordFlags>, 'SAVING_SUPPORTED': <flags G_ASK_PASSWORD_SAVING_SUPPORTED of type Gio.AskPasswordFlags>, 'ANONYMOUS_SUPPORTED': <flags G_ASK_PASSWORD_ANONYMOUS_SUPPORTED of type Gio.AskPasswordFlags>, 'TCRYPT': <flags G_ASK_PASSWORD_TCRYPT of type Gio.AskPasswordFlags>})"
-    __flags_values__ = {
-        1: 1,
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-    }
-    __gtype__ = None # (!) real value is '<GType GAskPasswordFlags (2472612384)>'
-    __info__ = gi.EnumInfo(AskPasswordFlags)
+    __class__ = None # (!) real value is "<class 'gi._enum.GFlagsMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NEED_PASSWORD': <AskPasswordFlags.NEED_PASSWORD: 1>, 'NEED_USERNAME': <AskPasswordFlags.NEED_USERNAME: 2>, 'NEED_DOMAIN': <AskPasswordFlags.NEED_DOMAIN: 4>, 'SAVING_SUPPORTED': <AskPasswordFlags.SAVING_SUPPORTED: 8>, 'ANONYMOUS_SUPPORTED': <AskPasswordFlags.ANONYMOUS_SUPPORTED: 16>, 'TCRYPT': <AskPasswordFlags.TCRYPT: 32>})"
+    __name__ = 'AskPasswordFlags'
+    __qualname__ = 'AskPasswordFlags'
 
 

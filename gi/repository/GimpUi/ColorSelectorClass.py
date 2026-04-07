@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ColorSelectorClass(__gi.Struct):
@@ -193,7 +186,7 @@ class ColorSelectorClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ColorSelectorClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ColorSelectorClass' objects>, '__weakref__': <attribute '__weakref__' of 'ColorSelectorClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb74d8810>, 'name': <property object at 0x000001eeb74d8900>, 'help_id': <property object at 0x000001eeb74d89f0>, 'icon_name': <property object at 0x000001eeb74d8ae0>, 'set_toggles_visible': <property object at 0x000001eeb74d8bd0>, 'set_toggles_sensitive': <property object at 0x000001eeb74d8cc0>, 'set_show_alpha': <property object at 0x000001eeb74d8db0>, 'set_color': <property object at 0x000001eeb74d8ea0>, 'set_channel': <property object at 0x000001eeb74d8f90>, 'set_model_visible': <property object at 0x000001eeb74d9080>, 'set_config': <property object at 0x000001eeb74d9170>, 'set_format': <property object at 0x000001eeb74d9260>, 'set_simulation': <property object at 0x000001eeb74d9350>, 'color_changed': <property object at 0x000001eeb74d9440>, 'channel_changed': <property object at 0x000001eeb74d9530>, 'model_visible_changed': <property object at 0x000001eeb74d9620>, 'simulation': <property object at 0x000001eeb74d9710>, '_gimp_reserved0': <property object at 0x000001eeb74d9800>, '_gimp_reserved1': <property object at 0x000001eeb74d98f0>, '_gimp_reserved2': <property object at 0x000001eeb74d99e0>, '_gimp_reserved3': <property object at 0x000001eeb74d9ad0>, '_gimp_reserved4': <property object at 0x000001eeb74d9bc0>, '_gimp_reserved5': <property object at 0x000001eeb74d9cb0>, '_gimp_reserved6': <property object at 0x000001eeb74d9da0>, '_gimp_reserved7': <property object at 0x000001eeb74d9e90>, '_gimp_reserved8': <property object at 0x000001eeb74d9f80>, '_gimp_reserved9': <property object at 0x000001eeb74da070>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ColorSelectorClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ColorSelectorClass' objects>, '__weakref__': <attribute '__weakref__' of 'ColorSelectorClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1d33e70>, 'name': <property object at 0x0000020ee1d33d80>, 'help_id': <property object at 0x0000020ee1d33c90>, 'icon_name': <property object at 0x0000020ee1d33fb0>, 'set_toggles_visible': <property object at 0x0000020ee1d240e0>, 'set_toggles_sensitive': <property object at 0x0000020ee1d241d0>, 'set_show_alpha': <property object at 0x0000020ee1d242c0>, 'set_color': <property object at 0x0000020ee1d243b0>, 'set_channel': <property object at 0x0000020ee1d244a0>, 'set_model_visible': <property object at 0x0000020ee1d24590>, 'set_config': <property object at 0x0000020ee1d24680>, 'set_format': <property object at 0x0000020ee1d24770>, 'set_simulation': <property object at 0x0000020ee1d24860>, 'color_changed': <property object at 0x0000020ee1d24950>, 'channel_changed': <property object at 0x0000020ee1d24a40>, 'model_visible_changed': <property object at 0x0000020ee1d24b30>, 'simulation': <property object at 0x0000020ee1d24c20>, '_gimp_reserved0': <property object at 0x0000020ee1d24d10>, '_gimp_reserved1': <property object at 0x0000020ee1d24e00>, '_gimp_reserved2': <property object at 0x0000020ee1d24ef0>, '_gimp_reserved3': <property object at 0x0000020ee1d24fe0>, '_gimp_reserved4': <property object at 0x0000020ee1d250d0>, '_gimp_reserved5': <property object at 0x0000020ee1d251c0>, '_gimp_reserved6': <property object at 0x0000020ee1d252b0>, '_gimp_reserved7': <property object at 0x0000020ee1d253a0>, '_gimp_reserved8': <property object at 0x0000020ee1d25490>, '_gimp_reserved9': <property object at 0x0000020ee1d25580>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ColorSelectorClass)
 

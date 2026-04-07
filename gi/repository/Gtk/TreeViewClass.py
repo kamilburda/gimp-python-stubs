@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -183,7 +182,7 @@ class TreeViewClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TreeViewClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TreeViewClass' objects>, '__weakref__': <attribute '__weakref__' of 'TreeViewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece9b52930>, 'row_activated': <property object at 0x000002ece9b52a20>, 'test_expand_row': <property object at 0x000002ece9b52b10>, 'test_collapse_row': <property object at 0x000002ece9b52c00>, 'row_expanded': <property object at 0x000002ece9b52cf0>, 'row_collapsed': <property object at 0x000002ece9b52de0>, 'columns_changed': <property object at 0x000002ece9b52ed0>, 'cursor_changed': <property object at 0x000002ece9b52fc0>, 'move_cursor': <property object at 0x000002ece9b530b0>, 'select_all': <property object at 0x000002ece9b531a0>, 'unselect_all': <property object at 0x000002ece9b53290>, 'select_cursor_row': <property object at 0x000002ece9b53380>, 'toggle_cursor_row': <property object at 0x000002ece9b53470>, 'expand_collapse_cursor_row': <property object at 0x000002ece9b535b0>, 'select_cursor_parent': <property object at 0x000002ece9b536a0>, 'start_interactive_search': <property object at 0x000002ece9b537e0>, '_gtk_reserved1': <property object at 0x000002ece9b538d0>, '_gtk_reserved2': <property object at 0x000002ece9b539c0>, '_gtk_reserved3': <property object at 0x000002ece9b53ab0>, '_gtk_reserved4': <property object at 0x000002ece9b53ba0>, '_gtk_reserved5': <property object at 0x000002ece9b53c90>, '_gtk_reserved6': <property object at 0x000002ece9b53d80>, '_gtk_reserved7': <property object at 0x000002ece9b53e70>, '_gtk_reserved8': <property object at 0x000002ece9b53f60>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TreeViewClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TreeViewClass' objects>, '__weakref__': <attribute '__weakref__' of 'TreeViewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd3a35030>, 'row_activated': <property object at 0x000002bfd3a35120>, 'test_expand_row': <property object at 0x000002bfd3a35210>, 'test_collapse_row': <property object at 0x000002bfd3a35300>, 'row_expanded': <property object at 0x000002bfd3a353f0>, 'row_collapsed': <property object at 0x000002bfd3a354e0>, 'columns_changed': <property object at 0x000002bfd3a355d0>, 'cursor_changed': <property object at 0x000002bfd3a356c0>, 'move_cursor': <property object at 0x000002bfd3a357b0>, 'select_all': <property object at 0x000002bfd3a358a0>, 'unselect_all': <property object at 0x000002bfd3a35990>, 'select_cursor_row': <property object at 0x000002bfd3a35a80>, 'toggle_cursor_row': <property object at 0x000002bfd3a35b70>, 'expand_collapse_cursor_row': <property object at 0x000002bfd3a35cb0>, 'select_cursor_parent': <property object at 0x000002bfd3a35d50>, 'start_interactive_search': <property object at 0x000002bfd3a35e90>, '_gtk_reserved1': <property object at 0x000002bfd3a35f80>, '_gtk_reserved2': <property object at 0x000002bfd3a36070>, '_gtk_reserved3': <property object at 0x000002bfd3a36160>, '_gtk_reserved4': <property object at 0x000002bfd3a36250>, '_gtk_reserved5': <property object at 0x000002bfd3a36340>, '_gtk_reserved6': <property object at 0x000002bfd3a36430>, '_gtk_reserved7': <property object at 0x000002bfd3a36520>, '_gtk_reserved8': <property object at 0x000002bfd3a36610>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TreeViewClass)
 

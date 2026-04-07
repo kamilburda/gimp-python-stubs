@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GExiv2
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GExiv2-0.10.typelib
 # by generator 1.147
 # no doc
 
@@ -8,24 +7,21 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 # Variables with simple values
 
 MAJOR_VERSION = 0
 
-MICRO_VERSION = 3
+MICRO_VERSION = 6
 
 MINOR_VERSION = 14
 
 _namespace = 'GExiv2'
 
 _version = '0.10'
-
-__weakref__ = None
 
 # functions
 
@@ -49,117 +45,15 @@ def log_use_glib_logging(): # real signature unknown; restored from __doc__
     """ log_use_glib_logging() """
     pass
 
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """ Default object formatter. """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
-    pass
-
 # classes
 
-class ByteOrder(__gobject.GEnum):
+class ByteOrder(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -218,6 +112,10 @@ class ByteOrder(__gobject.GEnum):
         """
         pass
 
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return an array of bytes representing an integer.
@@ -259,12 +157,23 @@ class ByteOrder(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -288,10 +197,15 @@ class ByteOrder(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -326,7 +240,8 @@ class ByteOrder(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -335,6 +250,14 @@ class ByteOrder(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -362,8 +285,8 @@ class ByteOrder(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -394,15 +317,16 @@ class ByteOrder(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -466,7 +390,7 @@ class ByteOrder(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -507,32 +431,23 @@ class ByteOrder(__gobject.GEnum):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     BIG = 1
     LITTLE = 0
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GExiv2', '__dict__': <attribute '__dict__' of 'ByteOrder' objects>, '__doc__': None, '__gtype__': <GType GExiv2ByteOrder (3204435472)>, '__enum_values__': {0: <enum GEXIV2_BYTE_ORDER_LITTLE of type GExiv2.ByteOrder>, 1: <enum GEXIV2_BYTE_ORDER_BIG of type GExiv2.ByteOrder>}, '__info__': gi.EnumInfo(ByteOrder), 'LITTLE': <enum GEXIV2_BYTE_ORDER_LITTLE of type GExiv2.ByteOrder>, 'BIG': <enum GEXIV2_BYTE_ORDER_BIG of type GExiv2.ByteOrder>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-    }
-    __gtype__ = None # (!) real value is '<GType GExiv2ByteOrder (3204435472)>'
-    __info__ = gi.EnumInfo(ByteOrder)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'LITTLE': <ByteOrder.LITTLE: 0>, 'BIG': <ByteOrder.BIG: 1>})"
+    __name__ = 'ByteOrder'
+    __qualname__ = 'ByteOrder'
 
 
-class LogLevel(__gobject.GEnum):
+class LogLevel(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -591,6 +506,10 @@ class LogLevel(__gobject.GEnum):
         """
         pass
 
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return an array of bytes representing an integer.
@@ -632,12 +551,23 @@ class LogLevel(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -661,10 +591,15 @@ class LogLevel(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -699,7 +634,8 @@ class LogLevel(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -708,6 +644,14 @@ class LogLevel(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -735,8 +679,8 @@ class LogLevel(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -767,15 +711,16 @@ class LogLevel(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -839,7 +784,7 @@ class LogLevel(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -880,10 +825,6 @@ class LogLevel(__gobject.GEnum):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     DEBUG = 0
@@ -891,17 +832,10 @@ class LogLevel(__gobject.GEnum):
     INFO = 1
     MUTE = 4
     WARN = 2
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GExiv2', '__dict__': <attribute '__dict__' of 'LogLevel' objects>, '__doc__': None, '__gtype__': <GType GExiv2LogLevel (3204435808)>, '__enum_values__': {0: <enum GEXIV2_LOG_LEVEL_DEBUG of type GExiv2.LogLevel>, 1: <enum GEXIV2_LOG_LEVEL_INFO of type GExiv2.LogLevel>, 2: <enum GEXIV2_LOG_LEVEL_WARN of type GExiv2.LogLevel>, 3: <enum GEXIV2_LOG_LEVEL_ERROR of type GExiv2.LogLevel>, 4: <enum GEXIV2_LOG_LEVEL_MUTE of type GExiv2.LogLevel>}, '__info__': gi.EnumInfo(LogLevel), 'DEBUG': <enum GEXIV2_LOG_LEVEL_DEBUG of type GExiv2.LogLevel>, 'INFO': <enum GEXIV2_LOG_LEVEL_INFO of type GExiv2.LogLevel>, 'WARN': <enum GEXIV2_LOG_LEVEL_WARN of type GExiv2.LogLevel>, 'ERROR': <enum GEXIV2_LOG_LEVEL_ERROR of type GExiv2.LogLevel>, 'MUTE': <enum GEXIV2_LOG_LEVEL_MUTE of type GExiv2.LogLevel>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-    }
-    __gtype__ = None # (!) real value is '<GType GExiv2LogLevel (3204435808)>'
-    __info__ = gi.EnumInfo(LogLevel)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'DEBUG': <LogLevel.DEBUG: 0>, 'INFO': <LogLevel.INFO: 1>, 'WARN': <LogLevel.WARN: 2>, 'ERROR': <LogLevel.ERROR: 3>, 'MUTE': <LogLevel.MUTE: 4>})"
+    __name__ = 'LogLevel'
+    __qualname__ = 'LogLevel'
 
 
 class Metadata(Metadata):
@@ -957,7 +891,7 @@ class Metadata(Metadata):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -989,6 +923,9 @@ class Metadata(Metadata):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -1661,20 +1598,20 @@ class Metadata(Metadata):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -1712,7 +1649,11 @@ class Metadata(Metadata):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -1831,12 +1772,12 @@ class Metadata(Metadata):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001f7c1c666e0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001b1e5496980>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GExiv2', '__init__': <function Metadata.__init__ at 0x000001f7c16911c0>, 'open_path': <function Metadata.open_path at 0x000001f7c0af4a40>, 'save_file': <function Metadata.save_file at 0x000001f7c171b240>, 'get_date_time': <function Metadata.get_date_time at 0x000001f7c171b2e0>, 'set_date_time': <function Metadata.set_date_time at 0x000001f7c171b380>, 'get_exposure_time': <function Metadata.get_exposure_time at 0x000001f7c171b420>, 'get_exif_tag_rational': <function Metadata.get_exif_tag_rational at 0x000001f7c171b4c0>, 'set_exif_tag_rational': <function Metadata.set_exif_tag_rational at 0x000001f7c171b560>, 'get_tags': <function Metadata.get_tags at 0x000001f7c171b600>, 'get': <function Metadata.get at 0x000001f7c171b6a0>, 'get_raw': <function Metadata.get_raw at 0x000001f7c171b740>, '__iter__': <function Metadata.__iter__ at 0x000001f7c171b7e0>, '__contains__': <function Metadata.__contains__ at 0x000001f7c171b880>, '__len__': <function Metadata.__len__ at 0x000001f7c171b920>, '__getitem__': <function Metadata.__getitem__ at 0x000001f7c171b9c0>, '__delitem__': <function Metadata.__delitem__ at 0x000001f7c171ba60>, '__setitem__': gi.FunctionInfo(set_tag_string, bound=None), '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GExiv2', '__init__': <function Metadata.__init__ at 0x000001b1e5589a80>, 'open_path': <function Metadata.open_path at 0x000001b1e56b3740>, 'save_file': <function Metadata.save_file at 0x000001b1e5689a80>, 'get_date_time': <function Metadata.get_date_time at 0x000001b1e5689b20>, 'set_date_time': <function Metadata.set_date_time at 0x000001b1e5689bc0>, 'get_exposure_time': <function Metadata.get_exposure_time at 0x000001b1e5689c60>, 'get_exif_tag_rational': <function Metadata.get_exif_tag_rational at 0x000001b1e5689d00>, 'set_exif_tag_rational': <function Metadata.set_exif_tag_rational at 0x000001b1e5689da0>, 'get_tags': <function Metadata.get_tags at 0x000001b1e5689e40>, 'get': <function Metadata.get at 0x000001b1e5689ee0>, 'get_raw': <function Metadata.get_raw at 0x000001b1e5689f80>, '__iter__': <function Metadata.__iter__ at 0x000001b1e568a020>, '__contains__': <function Metadata.__contains__ at 0x000001b1e568a0c0>, '__len__': <function Metadata.__len__ at 0x000001b1e568a160>, '__getitem__': <function Metadata.__getitem__ at 0x000001b1e568a200>, '__delitem__': <function Metadata.__delitem__ at 0x000001b1e568a2a0>, '__setitem__': gi.FunctionInfo(set_tag_string), '__doc__': None, '__gsignals__': {}})"
     __gdoc__ = 'Object GExiv2Metadata\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GExiv2Metadata (3199780576)>'
+    __gtype__ = None # (!) real value is '<GType GExiv2Metadata (3812473232)>'
     __info__ = ObjectInfo(Metadata)
 
 
@@ -1861,7 +1802,11 @@ class MetadataClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -1955,7 +1900,7 @@ class MetadataClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MetadataClass), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MetadataClass' objects>, '__weakref__': <attribute '__weakref__' of 'MetadataClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001f7c1b47bf0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MetadataClass), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MetadataClass' objects>, '__weakref__': <attribute '__weakref__' of 'MetadataClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001b1e561e070>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(MetadataClass)
 
@@ -1975,7 +1920,11 @@ class MetadataPrivate(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -2071,14 +2020,13 @@ class MetadataPrivate(__gi.Struct):
     __info__ = StructInfo(MetadataPrivate)
 
 
-class Orientation(__gobject.GEnum):
+class Orientation(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -2137,6 +2085,10 @@ class Orientation(__gobject.GEnum):
         """
         pass
 
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return an array of bytes representing an integer.
@@ -2178,12 +2130,23 @@ class Orientation(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -2207,10 +2170,15 @@ class Orientation(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -2245,7 +2213,8 @@ class Orientation(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -2254,6 +2223,14 @@ class Orientation(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -2281,8 +2258,8 @@ class Orientation(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -2313,15 +2290,16 @@ class Orientation(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -2385,7 +2363,7 @@ class Orientation(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -2427,10 +2405,6 @@ class Orientation(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     HFLIP = 2
     NORMAL = 1
@@ -2441,21 +2415,10 @@ class Orientation(__gobject.GEnum):
     ROT_90_VFLIP = 7
     UNSPECIFIED = 0
     VFLIP = 4
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GExiv2', '__dict__': <attribute '__dict__' of 'Orientation' objects>, '__doc__': None, '__gtype__': <GType GExiv2Orientation (3204436704)>, '__enum_values__': {0: <enum GEXIV2_ORIENTATION_UNSPECIFIED of type GExiv2.Orientation>, 1: <enum GEXIV2_ORIENTATION_NORMAL of type GExiv2.Orientation>, 2: <enum GEXIV2_ORIENTATION_HFLIP of type GExiv2.Orientation>, 3: <enum GEXIV2_ORIENTATION_ROT_180 of type GExiv2.Orientation>, 4: <enum GEXIV2_ORIENTATION_VFLIP of type GExiv2.Orientation>, 5: <enum GEXIV2_ORIENTATION_ROT_90_HFLIP of type GExiv2.Orientation>, 6: <enum GEXIV2_ORIENTATION_ROT_90 of type GExiv2.Orientation>, 7: <enum GEXIV2_ORIENTATION_ROT_90_VFLIP of type GExiv2.Orientation>, 8: <enum GEXIV2_ORIENTATION_ROT_270 of type GExiv2.Orientation>}, '__info__': gi.EnumInfo(Orientation), 'UNSPECIFIED': <enum GEXIV2_ORIENTATION_UNSPECIFIED of type GExiv2.Orientation>, 'NORMAL': <enum GEXIV2_ORIENTATION_NORMAL of type GExiv2.Orientation>, 'HFLIP': <enum GEXIV2_ORIENTATION_HFLIP of type GExiv2.Orientation>, 'ROT_180': <enum GEXIV2_ORIENTATION_ROT_180 of type GExiv2.Orientation>, 'VFLIP': <enum GEXIV2_ORIENTATION_VFLIP of type GExiv2.Orientation>, 'ROT_90_HFLIP': <enum GEXIV2_ORIENTATION_ROT_90_HFLIP of type GExiv2.Orientation>, 'ROT_90': <enum GEXIV2_ORIENTATION_ROT_90 of type GExiv2.Orientation>, 'ROT_90_VFLIP': <enum GEXIV2_ORIENTATION_ROT_90_VFLIP of type GExiv2.Orientation>, 'ROT_270': <enum GEXIV2_ORIENTATION_ROT_270 of type GExiv2.Orientation>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-    }
-    __gtype__ = None # (!) real value is '<GType GExiv2Orientation (3204436704)>'
-    __info__ = gi.EnumInfo(Orientation)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'UNSPECIFIED': <Orientation.UNSPECIFIED: 0>, 'NORMAL': <Orientation.NORMAL: 1>, 'HFLIP': <Orientation.HFLIP: 2>, 'ROT_180': <Orientation.ROT_180: 3>, 'VFLIP': <Orientation.VFLIP: 4>, 'ROT_90_HFLIP': <Orientation.ROT_90_HFLIP: 5>, 'ROT_90': <Orientation.ROT_90: 6>, 'ROT_90_VFLIP': <Orientation.ROT_90_VFLIP: 7>, 'ROT_270': <Orientation.ROT_270: 8>})"
+    __name__ = 'Orientation'
+    __qualname__ = 'Orientation'
 
 
 class PreviewImage(__gi_overrides_GObject.Object):
@@ -2486,7 +2449,7 @@ class PreviewImage(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -2514,6 +2477,9 @@ class PreviewImage(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -2738,20 +2704,20 @@ class PreviewImage(__gi_overrides_GObject.Object):
         """ write_file(self, path:str) -> int """
         return 0
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -2781,7 +2747,11 @@ class PreviewImage(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -2883,12 +2853,12 @@ class PreviewImage(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001f7c0afa950>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001b1e311bd60>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PreviewImage), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType GExiv2PreviewImage (3204436032)>, '__doc__': None, '__gsignals__': {}, 'free': gi.FunctionInfo(free, bound=None), 'get_data': gi.FunctionInfo(get_data, bound=None), 'get_extension': gi.FunctionInfo(get_extension, bound=None), 'get_height': gi.FunctionInfo(get_height, bound=None), 'get_mime_type': gi.FunctionInfo(get_mime_type, bound=None), 'get_width': gi.FunctionInfo(get_width, bound=None), 'try_write_file': gi.FunctionInfo(try_write_file, bound=None), 'write_file': gi.FunctionInfo(write_file, bound=None), 'parent_instance': <property object at 0x000001f7c1ba01d0>, 'priv': <property object at 0x000001f7c1ba02c0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PreviewImage), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType GExiv2PreviewImage (3812483216)>, '__doc__': None, '__gsignals__': {}, 'free': gi.FunctionInfo(free), 'get_data': gi.FunctionInfo(get_data), 'get_extension': gi.FunctionInfo(get_extension), 'get_height': gi.FunctionInfo(get_height), 'get_mime_type': gi.FunctionInfo(get_mime_type), 'get_width': gi.FunctionInfo(get_width), 'try_write_file': gi.FunctionInfo(try_write_file), 'write_file': gi.FunctionInfo(write_file), 'parent_instance': <property object at 0x000001b1e5bff650>, 'priv': <property object at 0x000001b1e5bff740>})"
     __gdoc__ = 'Object GExiv2PreviewImage\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GExiv2PreviewImage (3204436032)>'
+    __gtype__ = None # (!) real value is '<GType GExiv2PreviewImage (3812483216)>'
     __info__ = ObjectInfo(PreviewImage)
 
 
@@ -2913,7 +2883,11 @@ class PreviewImageClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -3007,7 +2981,7 @@ class PreviewImageClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PreviewImageClass), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PreviewImageClass' objects>, '__weakref__': <attribute '__weakref__' of 'PreviewImageClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001f7c1ba0450>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PreviewImageClass), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PreviewImageClass' objects>, '__weakref__': <attribute '__weakref__' of 'PreviewImageClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001b1e5bff6a0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PreviewImageClass)
 
@@ -3027,7 +3001,11 @@ class PreviewImagePrivate(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -3151,7 +3129,7 @@ class PreviewProperties(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -3179,6 +3157,9 @@ class PreviewProperties(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -3395,20 +3376,20 @@ class PreviewProperties(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -3438,7 +3419,11 @@ class PreviewProperties(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -3540,12 +3525,12 @@ class PreviewProperties(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001f7c1c66800>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001b1e55ffe50>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PreviewProperties), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType GExiv2PreviewProperties (3204433008)>, '__doc__': None, '__gsignals__': {}, 'get_extension': gi.FunctionInfo(get_extension, bound=None), 'get_height': gi.FunctionInfo(get_height, bound=None), 'get_mime_type': gi.FunctionInfo(get_mime_type, bound=None), 'get_size': gi.FunctionInfo(get_size, bound=None), 'get_width': gi.FunctionInfo(get_width, bound=None), 'parent_instance': <property object at 0x000001f7c1ba0680>, 'priv': <property object at 0x000001f7c1ba0770>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PreviewProperties), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType GExiv2PreviewProperties (3812484368)>, '__doc__': None, '__gsignals__': {}, 'get_extension': gi.FunctionInfo(get_extension), 'get_height': gi.FunctionInfo(get_height), 'get_mime_type': gi.FunctionInfo(get_mime_type), 'get_size': gi.FunctionInfo(get_size), 'get_width': gi.FunctionInfo(get_width), 'parent_instance': <property object at 0x000001b1e5bff380>, 'priv': <property object at 0x000001b1e5bffe20>})"
     __gdoc__ = 'Object GExiv2PreviewProperties\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GExiv2PreviewProperties (3204433008)>'
+    __gtype__ = None # (!) real value is '<GType GExiv2PreviewProperties (3812484368)>'
     __info__ = ObjectInfo(PreviewProperties)
 
 
@@ -3570,7 +3555,11 @@ class PreviewPropertiesClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -3664,7 +3653,7 @@ class PreviewPropertiesClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PreviewPropertiesClass), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PreviewPropertiesClass' objects>, '__weakref__': <attribute '__weakref__' of 'PreviewPropertiesClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001f7c1ba0900>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PreviewPropertiesClass), '__module__': 'gi.repository.GExiv2', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PreviewPropertiesClass' objects>, '__weakref__': <attribute '__weakref__' of 'PreviewPropertiesClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001b1e5bfff60>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PreviewPropertiesClass)
 
@@ -3684,7 +3673,11 @@ class PreviewPropertiesPrivate(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -3780,14 +3773,13 @@ class PreviewPropertiesPrivate(__gi.Struct):
     __info__ = StructInfo(PreviewPropertiesPrivate)
 
 
-class StructureType(__gobject.GEnum):
+class StructureType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -3846,383 +3838,8 @@ class StructureType(__gobject.GEnum):
         """
         pass
 
-    def to_bytes(self, *args, **kwargs): # real signature unknown
-        """
-        Return an array of bytes representing an integer.
-        
-          length
-            Length of bytes object to use.  An OverflowError is raised if the
-            integer is not representable with the given number of bytes.  Default
-            is length 1.
-          byteorder
-            The byte order used to represent the integer.  If byteorder is 'big',
-            the most significant byte is at the beginning of the byte array.  If
-            byteorder is 'little', the most significant byte is at the end of the
-            byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
-          signed
-            Determines whether two's complement is used to represent the integer.
-            If signed is False and a negative integer is given, an OverflowError
-            is raised.
-        """
-        pass
-
-    def __abs__(self, *args, **kwargs): # real signature unknown
-        """ abs(self) """
-        pass
-
-    def __add__(self, *args, **kwargs): # real signature unknown
-        """ Return self+value. """
-        pass
-
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
-        pass
-
-    def __bool__(self, *args, **kwargs): # real signature unknown
-        """ True if self else False """
-        pass
-
-    def __ceil__(self, *args, **kwargs): # real signature unknown
-        """ Ceiling of an Integral returns itself. """
-        pass
-
-    def __delattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement delattr(self, name). """
-        pass
-
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
-        pass
-
-    def __divmod__(self, *args, **kwargs): # real signature unknown
-        """ Return divmod(self, value). """
-        pass
-
-    def __eq__(self, *args, **kwargs): # real signature unknown
-        """ Return self==value. """
-        pass
-
-    def __float__(self, *args, **kwargs): # real signature unknown
-        """ float(self) """
-        pass
-
-    def __floordiv__(self, *args, **kwargs): # real signature unknown
-        """ Return self//value. """
-        pass
-
-    def __floor__(self, *args, **kwargs): # real signature unknown
-        """ Flooring an Integral returns itself. """
-        pass
-
-    def __format__(self, *args, **kwargs): # real signature unknown
-        pass
-
-    def __getattribute__(self, *args, **kwargs): # real signature unknown
-        """ Return getattr(self, name). """
-        pass
-
-    def __getnewargs__(self, *args, **kwargs): # real signature unknown
-        pass
-
-    def __getstate__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __ge__(self, *args, **kwargs): # real signature unknown
-        """ Return self>=value. """
-        pass
-
-    def __gt__(self, *args, **kwargs): # real signature unknown
-        """ Return self>value. """
-        pass
-
-    def __hash__(self, *args, **kwargs): # real signature unknown
-        """ Return hash(self). """
-        pass
-
-    def __index__(self, *args, **kwargs): # real signature unknown
-        """ Return self converted to an integer, if self is suitable for use as an index into a list. """
-        pass
-
-    def __init_subclass__(self, *args, **kwargs): # real signature unknown
-        """
-        This method is called when a class is subclassed.
-        
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-        pass
-
-    def __init__(self, *args, **kwargs): # real signature unknown
-        pass
-
-    def __int__(self, *args, **kwargs): # real signature unknown
-        """ int(self) """
-        pass
-
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
-        pass
-
-    def __le__(self, *args, **kwargs): # real signature unknown
-        """ Return self<=value. """
-        pass
-
-    def __lshift__(self, *args, **kwargs): # real signature unknown
-        """ Return self<<value. """
-        pass
-
-    def __lt__(self, *args, **kwargs): # real signature unknown
-        """ Return self<value. """
-        pass
-
-    def __mod__(self, *args, **kwargs): # real signature unknown
-        """ Return self%value. """
-        pass
-
-    def __mul__(self, *args, **kwargs): # real signature unknown
-        """ Return self*value. """
-        pass
-
-    def __neg__(self, *args, **kwargs): # real signature unknown
-        """ -self """
-        pass
-
-    @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
-        pass
-
-    def __ne__(self, *args, **kwargs): # real signature unknown
-        """ Return self!=value. """
-        pass
-
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
-        pass
-
-    def __pos__(self, *args, **kwargs): # real signature unknown
-        """ +self """
-        pass
-
-    def __pow__(self, *args, **kwargs): # real signature unknown
-        """ Return pow(self, value, mod). """
-        pass
-
-    def __radd__(self, *args, **kwargs): # real signature unknown
-        """ Return value+self. """
-        pass
-
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
-        pass
-
-    def __rdivmod__(self, *args, **kwargs): # real signature unknown
-        """ Return divmod(value, self). """
-        pass
-
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __reduce__(self, *args, **kwargs): # real signature unknown
-        pass
-
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
-        pass
-
-    def __rfloordiv__(self, *args, **kwargs): # real signature unknown
-        """ Return value//self. """
-        pass
-
-    def __rlshift__(self, *args, **kwargs): # real signature unknown
-        """ Return value<<self. """
-        pass
-
-    def __rmod__(self, *args, **kwargs): # real signature unknown
-        """ Return value%self. """
-        pass
-
-    def __rmul__(self, *args, **kwargs): # real signature unknown
-        """ Return value*self. """
-        pass
-
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
-        pass
-
-    def __round__(self, *args, **kwargs): # real signature unknown
-        """
-        Rounding an Integral returns itself.
-        
-        Rounding with an ndigits argument also returns an integer.
-        """
-        pass
-
-    def __rpow__(self, *args, **kwargs): # real signature unknown
-        """ Return pow(value, self, mod). """
-        pass
-
-    def __rrshift__(self, *args, **kwargs): # real signature unknown
-        """ Return value>>self. """
-        pass
-
-    def __rshift__(self, *args, **kwargs): # real signature unknown
-        """ Return self>>value. """
-        pass
-
-    def __rsub__(self, *args, **kwargs): # real signature unknown
-        """ Return value-self. """
-        pass
-
-    def __rtruediv__(self, *args, **kwargs): # real signature unknown
-        """ Return value/self. """
-        pass
-
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
-        pass
-
-    def __setattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement setattr(self, name, value). """
-        pass
-
-    def __sizeof__(self, *args, **kwargs): # real signature unknown
-        """ Returns size in memory, in bytes. """
-        pass
-
-    def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
-        pass
-
-    def __subclasshook__(self, *args, **kwargs): # real signature unknown
-        """
-        Abstract classes can override this to customize issubclass().
-        
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-        pass
-
-    def __sub__(self, *args, **kwargs): # real signature unknown
-        """ Return self-value. """
-        pass
-
-    def __truediv__(self, *args, **kwargs): # real signature unknown
-        """ Return self/value. """
-        pass
-
-    def __trunc__(self, *args, **kwargs): # real signature unknown
-        """ Truncating an Integral returns itself. """
-        pass
-
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
-        pass
-
-    denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """the denominator of a rational number in lowest terms"""
-
-    imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """the imaginary part of a complex number"""
-
-    numerator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """the numerator of a rational number in lowest terms"""
-
-    real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-
-    ALT = 20
-    BAG = 21
-    LANG = 23
-    NONE = 0
-    SEQ = 22
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GExiv2', '__dict__': <attribute '__dict__' of 'StructureType' objects>, '__doc__': None, '__gtype__': <GType GExiv2StructureType (3204430656)>, '__enum_values__': {0: <enum GEXIV2_STRUCTURE_XA_NONE of type GExiv2.StructureType>, 20: <enum GEXIV2_STRUCTURE_XA_ALT of type GExiv2.StructureType>, 21: <enum GEXIV2_STRUCTURE_XA_BAG of type GExiv2.StructureType>, 22: <enum GEXIV2_STRUCTURE_XA_SEQ of type GExiv2.StructureType>, 23: <enum GEXIV2_STRUCTURE_XA_LANG of type GExiv2.StructureType>}, '__info__': gi.EnumInfo(StructureType), 'NONE': <enum GEXIV2_STRUCTURE_XA_NONE of type GExiv2.StructureType>, 'ALT': <enum GEXIV2_STRUCTURE_XA_ALT of type GExiv2.StructureType>, 'BAG': <enum GEXIV2_STRUCTURE_XA_BAG of type GExiv2.StructureType>, 'SEQ': <enum GEXIV2_STRUCTURE_XA_SEQ of type GExiv2.StructureType>, 'LANG': <enum GEXIV2_STRUCTURE_XA_LANG of type GExiv2.StructureType>})"
-    __enum_values__ = {
-        0: 0,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-    }
-    __gtype__ = None # (!) real value is '<GType GExiv2StructureType (3204430656)>'
-    __info__ = gi.EnumInfo(StructureType)
-
-
-class XmpFormatFlags(__gobject.GFlags):
-    # no doc
-    def as_integer_ratio(self): # real signature unknown; restored from __doc__
-        """
-        Return integer ratio.
-        
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
-        
-        >>> (10).as_integer_ratio()
-        (10, 1)
-        >>> (-10).as_integer_ratio()
-        (-10, 1)
-        >>> (0).as_integer_ratio()
-        (0, 1)
-        """
-        pass
-
-    def bit_count(self): # real signature unknown; restored from __doc__
-        """
-        Number of ones in the binary representation of the absolute value of self.
-        
-        Also known as the population count.
-        
-        >>> bin(13)
-        '0b1101'
-        >>> (13).bit_count()
-        3
-        """
-        pass
-
-    def bit_length(self): # real signature unknown; restored from __doc__
-        """
-        Number of bits necessary to represent self in binary.
-        
-        >>> bin(37)
-        '0b100101'
-        >>> (37).bit_length()
-        6
-        """
-        pass
-
-    def conjugate(self, *args, **kwargs): # real signature unknown
-        """ Returns self, the complex conjugate of any int. """
-        pass
-
-    def from_bytes(self, *args, **kwargs): # real signature unknown
-        """
-        Return the integer represented by the given array of bytes.
-        
-          bytes
-            Holds the array of bytes to convert.  The argument must either
-            support the buffer protocol or be an iterable object producing bytes.
-            Bytes and bytearray are examples of built-in objects that support the
-            buffer protocol.
-          byteorder
-            The byte order used to represent the integer.  If byteorder is 'big',
-            the most significant byte is at the beginning of the byte array.  If
-            byteorder is 'little', the most significant byte is at the end of the
-            byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
-          signed
-            Indicates whether two's complement is used to represent the integer.
-        """
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -4266,311 +3883,58 @@ class XmpFormatFlags(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
-    def __delattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement delattr(self, name). """
-        pass
-
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
-        pass
-
-    def __divmod__(self, *args, **kwargs): # real signature unknown
-        """ Return divmod(self, value). """
-        pass
-
-    def __eq__(self, *args, **kwargs): # real signature unknown
-        """ Return self==value. """
-        pass
-
-    def __float__(self, *args, **kwargs): # real signature unknown
-        """ float(self) """
-        pass
-
-    def __floordiv__(self, *args, **kwargs): # real signature unknown
-        """ Return self//value. """
-        pass
-
-    def __floor__(self, *args, **kwargs): # real signature unknown
-        """ Flooring an Integral returns itself. """
-        pass
-
-    def __format__(self, *args, **kwargs): # real signature unknown
-        pass
-
-    def __getattribute__(self, *args, **kwargs): # real signature unknown
-        """ Return getattr(self, name). """
-        pass
-
-    def __getnewargs__(self, *args, **kwargs): # real signature unknown
-        pass
-
-    def __getstate__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __ge__(self, *args, **kwargs): # real signature unknown
-        """ Return self>=value. """
-        pass
-
-    def __gt__(self, *args, **kwargs): # real signature unknown
-        """ Return self>value. """
-        pass
-
-    def __hash__(self, *args, **kwargs): # real signature unknown
-        """ Return hash(self). """
-        pass
-
-    def __index__(self, *args, **kwargs): # real signature unknown
-        """ Return self converted to an integer, if self is suitable for use as an index into a list. """
-        pass
-
-    def __init_subclass__(self, *args, **kwargs): # real signature unknown
+    def __contains__(self, *args, **kwargs): # real signature unknown
         """
-        This method is called when a class is subclassed.
+        Return True if `value` is in `cls`.
         
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
-        pass
-
-    def __int__(self, *args, **kwargs): # real signature unknown
-        """ int(self) """
-        pass
-
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
-        pass
-
-    def __le__(self, *args, **kwargs): # real signature unknown
-        """ Return self<=value. """
-        pass
-
-    def __lshift__(self, *args, **kwargs): # real signature unknown
-        """ Return self<<value. """
-        pass
-
-    def __lt__(self, *args, **kwargs): # real signature unknown
-        """ Return self<value. """
-        pass
-
-    def __mod__(self, *args, **kwargs): # real signature unknown
-        """ Return self%value. """
-        pass
-
-    def __mul__(self, *args, **kwargs): # real signature unknown
-        """ Return self*value. """
-        pass
-
-    def __neg__(self, *args, **kwargs): # real signature unknown
-        """ -self """
-        pass
-
-    @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
-        pass
-
-    def __ne__(self, *args, **kwargs): # real signature unknown
-        """ Return self!=value. """
-        pass
-
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
-        pass
-
-    def __pos__(self, *args, **kwargs): # real signature unknown
-        """ +self """
-        pass
-
-    def __pow__(self, *args, **kwargs): # real signature unknown
-        """ Return pow(self, value, mod). """
-        pass
-
-    def __radd__(self, *args, **kwargs): # real signature unknown
-        """ Return value+self. """
-        pass
-
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
-        pass
-
-    def __rdivmod__(self, *args, **kwargs): # real signature unknown
-        """ Return divmod(value, self). """
-        pass
-
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __reduce__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
-        pass
-
-    def __rfloordiv__(self, *args, **kwargs): # real signature unknown
-        """ Return value//self. """
-        pass
-
-    def __rlshift__(self, *args, **kwargs): # real signature unknown
-        """ Return value<<self. """
-        pass
-
-    def __rmod__(self, *args, **kwargs): # real signature unknown
-        """ Return value%self. """
-        pass
-
-    def __rmul__(self, *args, **kwargs): # real signature unknown
-        """ Return value*self. """
-        pass
-
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
-        pass
-
-    def __round__(self, *args, **kwargs): # real signature unknown
-        """
-        Rounding an Integral returns itself.
-        
-        Rounding with an ndigits argument also returns an integer.
-        """
-        pass
-
-    def __rpow__(self, *args, **kwargs): # real signature unknown
-        """ Return pow(value, self, mod). """
-        pass
-
-    def __rrshift__(self, *args, **kwargs): # real signature unknown
-        """ Return value>>self. """
-        pass
-
-    def __rshift__(self, *args, **kwargs): # real signature unknown
-        """ Return self>>value. """
-        pass
-
-    def __rsub__(self, *args, **kwargs): # real signature unknown
-        """ Return value-self. """
-        pass
-
-    def __rtruediv__(self, *args, **kwargs): # real signature unknown
-        """ Return value/self. """
-        pass
-
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
-        pass
-
-    def __setattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement setattr(self, name, value). """
-        pass
-
-    def __sizeof__(self, *args, **kwargs): # real signature unknown
-        """ Returns size in memory, in bytes. """
-        pass
-
-    def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
-        pass
-
-    def __subclasshook__(self, *args, **kwargs): # real signature unknown
-        """
-        Abstract classes can override this to customize issubclass().
-        
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-        pass
-
-    def __sub__(self, *args, **kwargs): # real signature unknown
-        """ Return self-value. """
-        pass
-
-    def __truediv__(self, *args, **kwargs): # real signature unknown
-        """ Return self/value. """
-        pass
-
-    def __trunc__(self, *args, **kwargs): # real signature unknown
-        """ Truncating an Integral returns itself. """
-        pass
-
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
-        pass
-
-    denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """the imaginary part of a complex number"""
-
-    numerator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """the numerator of a rational number in lowest terms"""
-
-    real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """the real part of a complex number"""
-
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-
-    EXACT_PACKET_LENGTH = 512
-    INCLUDE_THUMBNAIL_PAD = 256
-    OMIT_ALL_FORMATTING = 2048
-    OMIT_PACKET_WRAPPER = 16
-    READ_ONLY_PACKET = 32
-    USE_COMPACT_FORMAT = 64
-    WRITE_ALIAS_COMMENTS = 1024
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GExiv2', '__dict__': <attribute '__dict__' of 'XmpFormatFlags' objects>, '__doc__': None, '__gtype__': <GType GExiv2XmpFormatFlags (3204434800)>, '__flags_values__': {16: <flags GEXIV2_OMIT_PACKET_WRAPPER of type GExiv2.XmpFormatFlags>, 32: <flags GEXIV2_READ_ONLY_PACKET of type GExiv2.XmpFormatFlags>, 64: <flags GEXIV2_USE_COMPACT_FORMAT of type GExiv2.XmpFormatFlags>, 256: <flags GEXIV2_INCLUDE_THUMBNAIL_PAD of type GExiv2.XmpFormatFlags>, 512: <flags GEXIV2_EXACT_PACKET_LENGTH of type GExiv2.XmpFormatFlags>, 1024: <flags GEXIV2_WRITE_ALIAS_COMMENTS of type GExiv2.XmpFormatFlags>, 2048: <flags GEXIV2_OMIT_ALL_FORMATTING of type GExiv2.XmpFormatFlags>}, '__info__': gi.EnumInfo(XmpFormatFlags), 'OMIT_PACKET_WRAPPER': <flags GEXIV2_OMIT_PACKET_WRAPPER of type GExiv2.XmpFormatFlags>, 'READ_ONLY_PACKET': <flags GEXIV2_READ_ONLY_PACKET of type GExiv2.XmpFormatFlags>, 'USE_COMPACT_FORMAT': <flags GEXIV2_USE_COMPACT_FORMAT of type GExiv2.XmpFormatFlags>, 'INCLUDE_THUMBNAIL_PAD': <flags GEXIV2_INCLUDE_THUMBNAIL_PAD of type GExiv2.XmpFormatFlags>, 'EXACT_PACKET_LENGTH': <flags GEXIV2_EXACT_PACKET_LENGTH of type GExiv2.XmpFormatFlags>, 'WRITE_ALIAS_COMMENTS': <flags GEXIV2_WRITE_ALIAS_COMMENTS of type GExiv2.XmpFormatFlags>, 'OMIT_ALL_FORMATTING': <flags GEXIV2_OMIT_ALL_FORMATTING of type GExiv2.XmpFormatFlags>})"
-    __flags_values__ = {
-        16: 16,
-        32: 32,
-        64: 64,
-        256: 256,
-        512: 512,
-        1024: 1024,
-        2048: 2048,
-    }
-    __gtype__ = None # (!) real value is '<GType GExiv2XmpFormatFlags (3204434800)>'
-    __info__ = gi.EnumInfo(XmpFormatFlags)
-
-
-class __class__(__gi_overrides.OverridesProxyModule):
-    # no doc
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
     def __dir__(self): # reliably restored by inspect
-        # no doc
+        """ Returns public methods and other interesting attributes. """
+        pass
+
+    def __divmod__(self, *args, **kwargs): # real signature unknown
+        """ Return divmod(self, value). """
         pass
 
     def __eq__(self, *args, **kwargs): # real signature unknown
         """ Return self==value. """
         pass
 
+    def __float__(self, *args, **kwargs): # real signature unknown
+        """ float(self) """
+        pass
+
+    def __floordiv__(self, *args, **kwargs): # real signature unknown
+        """ Return self//value. """
+        pass
+
+    def __floor__(self, *args, **kwargs): # real signature unknown
+        """ Flooring an Integral returns itself. """
+        pass
+
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
         pass
 
-    def __getattr__(self, name): # reliably restored by inspect
-        # no doc
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
+        pass
+
+    def __getnewargs__(self, *args, **kwargs): # real signature unknown
         pass
 
     def __getstate__(self, *args, **kwargs): # real signature unknown
@@ -4589,6 +3953,10 @@ class __class__(__gi_overrides.OverridesProxyModule):
         """ Return hash(self). """
         pass
 
+    def __index__(self, *args, **kwargs): # real signature unknown
+        """ Return self converted to an integer, if self is suitable for use as an index into a list. """
+        pass
+
     def __init_subclass__(self, *args, **kwargs): # real signature unknown
         """
         This method is called when a class is subclassed.
@@ -4598,29 +3966,85 @@ class __class__(__gi_overrides.OverridesProxyModule):
         """
         pass
 
-    def __init__(self, introspection_module): # reliably restored by inspect
+    def __init__(self, *args, **kwds): # reliably restored by inspect
         # no doc
+        pass
+
+    def __int__(self, *args, **kwargs): # real signature unknown
+        """ int(self) """
+        pass
+
+    def __invert__(self, *args, **kwargs): # real signature unknown
+        """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
 
+    def __lshift__(self, *args, **kwargs): # real signature unknown
+        """ Return self<<value. """
+        pass
+
     def __lt__(self, *args, **kwargs): # real signature unknown
         """ Return self<value. """
         pass
 
+    def __mod__(self, *args, **kwargs): # real signature unknown
+        """ Return self%value. """
+        pass
+
+    def __mul__(self, *args, **kwargs): # real signature unknown
+        """ Return self*value. """
+        pass
+
+    def __neg__(self, *args, **kwargs): # real signature unknown
+        """ -self """
+        pass
+
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __or__(self, *args, **kwargs): # real signature unknown
+        """ Return self|value. """
+        pass
+
+    def __pos__(self, *args, **kwargs): # real signature unknown
+        """ +self """
+        pass
+
+    def __pow__(self, *args, **kwargs): # real signature unknown
+        """ Return pow(self, value, mod). """
+        pass
+
+    def __radd__(self, *args, **kwargs): # real signature unknown
+        """ Return value+self. """
+        pass
+
+    def __rand__(self, *args, **kwargs): # real signature unknown
+        """ Return value&self. """
+        pass
+
+    def __rdivmod__(self, *args, **kwargs): # real signature unknown
+        """ Return divmod(value, self). """
+        pass
+
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
@@ -4631,16 +4055,68 @@ class __class__(__gi_overrides.OverridesProxyModule):
         # no doc
         pass
 
+    def __rfloordiv__(self, *args, **kwargs): # real signature unknown
+        """ Return value//self. """
+        pass
+
+    def __rlshift__(self, *args, **kwargs): # real signature unknown
+        """ Return value<<self. """
+        pass
+
+    def __rmod__(self, *args, **kwargs): # real signature unknown
+        """ Return value%self. """
+        pass
+
+    def __rmul__(self, *args, **kwargs): # real signature unknown
+        """ Return value*self. """
+        pass
+
+    def __ror__(self, *args, **kwargs): # real signature unknown
+        """ Return value|self. """
+        pass
+
+    def __round__(self, *args, **kwargs): # real signature unknown
+        """
+        Rounding an Integral returns itself.
+        
+        Rounding with an ndigits argument also returns an integer.
+        """
+        pass
+
+    def __rpow__(self, *args, **kwargs): # real signature unknown
+        """ Return pow(value, self, mod). """
+        pass
+
+    def __rrshift__(self, *args, **kwargs): # real signature unknown
+        """ Return value>>self. """
+        pass
+
+    def __rshift__(self, *args, **kwargs): # real signature unknown
+        """ Return self>>value. """
+        pass
+
+    def __rsub__(self, *args, **kwargs): # real signature unknown
+        """ Return value-self. """
+        pass
+
+    def __rtruediv__(self, *args, **kwargs): # real signature unknown
+        """ Return value/self. """
+        pass
+
+    def __rxor__(self, *args, **kwargs): # real signature unknown
+        """ Return value^self. """
+        pass
+
     def __setattr__(self, *args, **kwargs): # real signature unknown
         """ Implement setattr(self, name, value). """
         pass
 
     def __sizeof__(self, *args, **kwargs): # real signature unknown
-        """ Size of object in memory, in bytes. """
+        """ Returns size in memory, in bytes. """
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -4654,20 +4130,443 @@ class __class__(__gi_overrides.OverridesProxyModule):
         """
         pass
 
-    __annotations__ = {}
-    __class__ = type
-    __dict__ = mappingproxy({'__module__': 'gi.overrides', '__doc__': None, '__annotations__': {}})
+    def __sub__(self, *args, **kwargs): # real signature unknown
+        """ Return self-value. """
+        pass
+
+    def __truediv__(self, *args, **kwargs): # real signature unknown
+        """ Return self/value. """
+        pass
+
+    def __trunc__(self, *args, **kwargs): # real signature unknown
+        """ Truncating an Integral returns itself. """
+        pass
+
+    def __xor__(self, *args, **kwargs): # real signature unknown
+        """ Return self^value. """
+        pass
+
+    denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """the denominator of a rational number in lowest terms"""
+
+    imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """the imaginary part of a complex number"""
+
+    numerator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """the numerator of a rational number in lowest terms"""
+
+    real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """the real part of a complex number"""
+
+
+    ALT = 20
+    BAG = 21
+    LANG = 23
+    NONE = 0
+    SEQ = 22
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NONE': <StructureType.NONE: 0>, 'ALT': <StructureType.ALT: 20>, 'BAG': <StructureType.BAG: 21>, 'SEQ': <StructureType.SEQ: 22>, 'LANG': <StructureType.LANG: 23>})"
+    __name__ = 'StructureType'
+    __qualname__ = 'StructureType'
+
+
+class XmpFormatFlags(__gi__gi.GFlags):
+    # no doc
+    def as_integer_ratio(self): # real signature unknown; restored from __doc__
+        """
+        Return a pair of integers, whose ratio is equal to the original int.
+        
+        The ratio is in lowest terms and has a positive denominator.
+        
+        >>> (10).as_integer_ratio()
+        (10, 1)
+        >>> (-10).as_integer_ratio()
+        (-10, 1)
+        >>> (0).as_integer_ratio()
+        (0, 1)
+        """
+        pass
+
+    def bit_count(self): # real signature unknown; restored from __doc__
+        """
+        Number of ones in the binary representation of the absolute value of self.
+        
+        Also known as the population count.
+        
+        >>> bin(13)
+        '0b1101'
+        >>> (13).bit_count()
+        3
+        """
+        pass
+
+    def bit_length(self): # real signature unknown; restored from __doc__
+        """
+        Number of bits necessary to represent self in binary.
+        
+        >>> bin(37)
+        '0b100101'
+        >>> (37).bit_length()
+        6
+        """
+        pass
+
+    def conjugate(self, *args, **kwargs): # real signature unknown
+        """ Returns self, the complex conjugate of any int. """
+        pass
+
+    def from_bytes(self, *args, **kwargs): # real signature unknown
+        """
+        Return the integer represented by the given array of bytes.
+        
+          bytes
+            Holds the array of bytes to convert.  The argument must either
+            support the buffer protocol or be an iterable object producing bytes.
+            Bytes and bytearray are examples of built-in objects that support the
+            buffer protocol.
+          byteorder
+            The byte order used to represent the integer.  If byteorder is 'big',
+            the most significant byte is at the beginning of the byte array.  If
+            byteorder is 'little', the most significant byte is at the end of the
+            byte array.  To request the native byte order of the host system, use
+            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+          signed
+            Indicates whether two's complement is used to represent the integer.
+        """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
+    def to_bytes(self, *args, **kwargs): # real signature unknown
+        """
+        Return an array of bytes representing an integer.
+        
+          length
+            Length of bytes object to use.  An OverflowError is raised if the
+            integer is not representable with the given number of bytes.  Default
+            is length 1.
+          byteorder
+            The byte order used to represent the integer.  If byteorder is 'big',
+            the most significant byte is at the beginning of the byte array.  If
+            byteorder is 'little', the most significant byte is at the end of the
+            byte array.  To request the native byte order of the host system, use
+            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+          signed
+            Determines whether two's complement is used to represent the integer.
+            If signed is False and a negative integer is given, an OverflowError
+            is raised.
+        """
+        pass
+
+    def __abs__(self, *args, **kwargs): # real signature unknown
+        """ abs(self) """
+        pass
+
+    def __add__(self, *args, **kwargs): # real signature unknown
+        """ Return self+value. """
+        pass
+
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __bool__(self, *args, **kwargs): # real signature unknown
+        """ True if self else False """
+        pass
+
+    def __ceil__(self, *args, **kwargs): # real signature unknown
+        """ Ceiling of an Integral returns itself. """
+        pass
+
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
+    def __delattr__(self, *args, **kwargs): # real signature unknown
+        """ Implement delattr(self, name). """
+        pass
+
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
+        pass
+
+    def __divmod__(self, *args, **kwargs): # real signature unknown
+        """ Return divmod(self, value). """
+        pass
+
+    def __eq__(self, *args, **kwargs): # real signature unknown
+        """ Return self==value. """
+        pass
+
+    def __float__(self, *args, **kwargs): # real signature unknown
+        """ float(self) """
+        pass
+
+    def __floordiv__(self, *args, **kwargs): # real signature unknown
+        """ Return self//value. """
+        pass
+
+    def __floor__(self, *args, **kwargs): # real signature unknown
+        """ Flooring an Integral returns itself. """
+        pass
+
+    def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
+        pass
+
+    def __getattribute__(self, *args, **kwargs): # real signature unknown
+        """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
+        pass
+
+    def __getnewargs__(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def __getstate__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
+        pass
+
+    def __ge__(self, *args, **kwargs): # real signature unknown
+        """ Return self>=value. """
+        pass
+
+    def __gt__(self, *args, **kwargs): # real signature unknown
+        """ Return self>value. """
+        pass
+
+    def __hash__(self, *args, **kwargs): # real signature unknown
+        """ Return hash(self). """
+        pass
+
+    def __index__(self, *args, **kwargs): # real signature unknown
+        """ Return self converted to an integer, if self is suitable for use as an index into a list. """
+        pass
+
+    def __init_subclass__(self, *args, **kwargs): # real signature unknown
+        """
+        This method is called when a class is subclassed.
+        
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+        pass
+
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __int__(self, *args, **kwargs): # real signature unknown
+        """ int(self) """
+        pass
+
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __le__(self, *args, **kwargs): # real signature unknown
+        """ Return self<=value. """
+        pass
+
+    def __lshift__(self, *args, **kwargs): # real signature unknown
+        """ Return self<<value. """
+        pass
+
+    def __lt__(self, *args, **kwargs): # real signature unknown
+        """ Return self<value. """
+        pass
+
+    def __mod__(self, *args, **kwargs): # real signature unknown
+        """ Return self%value. """
+        pass
+
+    def __mul__(self, *args, **kwargs): # real signature unknown
+        """ Return self*value. """
+        pass
+
+    def __neg__(self, *args, **kwargs): # real signature unknown
+        """ -self """
+        pass
+
+    @staticmethod # known case of __new__
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __ne__(self, *args, **kwargs): # real signature unknown
+        """ Return self!=value. """
+        pass
+
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __pos__(self, *args, **kwargs): # real signature unknown
+        """ +self """
+        pass
+
+    def __pow__(self, *args, **kwargs): # real signature unknown
+        """ Return pow(self, value, mod). """
+        pass
+
+    def __radd__(self, *args, **kwargs): # real signature unknown
+        """ Return value+self. """
+        pass
+
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __rdivmod__(self, *args, **kwargs): # real signature unknown
+        """ Return divmod(value, self). """
+        pass
+
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
+        pass
+
+    def __repr__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __rfloordiv__(self, *args, **kwargs): # real signature unknown
+        """ Return value//self. """
+        pass
+
+    def __rlshift__(self, *args, **kwargs): # real signature unknown
+        """ Return value<<self. """
+        pass
+
+    def __rmod__(self, *args, **kwargs): # real signature unknown
+        """ Return value%self. """
+        pass
+
+    def __rmul__(self, *args, **kwargs): # real signature unknown
+        """ Return value*self. """
+        pass
+
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __round__(self, *args, **kwargs): # real signature unknown
+        """
+        Rounding an Integral returns itself.
+        
+        Rounding with an ndigits argument also returns an integer.
+        """
+        pass
+
+    def __rpow__(self, *args, **kwargs): # real signature unknown
+        """ Return pow(value, self, mod). """
+        pass
+
+    def __rrshift__(self, *args, **kwargs): # real signature unknown
+        """ Return value>>self. """
+        pass
+
+    def __rshift__(self, *args, **kwargs): # real signature unknown
+        """ Return self>>value. """
+        pass
+
+    def __rsub__(self, *args, **kwargs): # real signature unknown
+        """ Return value-self. """
+        pass
+
+    def __rtruediv__(self, *args, **kwargs): # real signature unknown
+        """ Return value/self. """
+        pass
+
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __setattr__(self, *args, **kwargs): # real signature unknown
+        """ Implement setattr(self, name, value). """
+        pass
+
+    def __sizeof__(self, *args, **kwargs): # real signature unknown
+        """ Returns size in memory, in bytes. """
+        pass
+
+    def __str__(self, *args, **kwargs): # real signature unknown
+        """ Return repr(self). """
+        pass
+
+    def __subclasshook__(self, *args, **kwargs): # real signature unknown
+        """
+        Abstract classes can override this to customize issubclass().
+        
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+        pass
+
+    def __sub__(self, *args, **kwargs): # real signature unknown
+        """ Return self-value. """
+        pass
+
+    def __truediv__(self, *args, **kwargs): # real signature unknown
+        """ Return self/value. """
+        pass
+
+    def __trunc__(self, *args, **kwargs): # real signature unknown
+        """ Truncating an Integral returns itself. """
+        pass
+
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
+        pass
+
+    denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """the denominator of a rational number in lowest terms"""
+
+    imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """the imaginary part of a complex number"""
+
+    numerator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """the numerator of a rational number in lowest terms"""
+
+    real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """the real part of a complex number"""
+
+
+    EXACT_PACKET_LENGTH = 512
+    INCLUDE_THUMBNAIL_PAD = 256
+    OMIT_ALL_FORMATTING = 2048
+    OMIT_PACKET_WRAPPER = 16
+    READ_ONLY_PACKET = 32
+    USE_COMPACT_FORMAT = 64
+    WRITE_ALIAS_COMMENTS = 1024
+    __class__ = None # (!) real value is "<class 'gi._enum.GFlagsMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'OMIT_PACKET_WRAPPER': <XmpFormatFlags.OMIT_PACKET_WRAPPER: 16>, 'READ_ONLY_PACKET': <XmpFormatFlags.READ_ONLY_PACKET: 32>, 'USE_COMPACT_FORMAT': <XmpFormatFlags.USE_COMPACT_FORMAT: 64>, 'INCLUDE_THUMBNAIL_PAD': <XmpFormatFlags.INCLUDE_THUMBNAIL_PAD: 256>, 'EXACT_PACKET_LENGTH': <XmpFormatFlags.EXACT_PACKET_LENGTH: 512>, 'WRITE_ALIAS_COMMENTS': <XmpFormatFlags.WRITE_ALIAS_COMMENTS: 1024>, 'OMIT_ALL_FORMATTING': <XmpFormatFlags.OMIT_ALL_FORMATTING: 2048>})"
+    __name__ = 'XmpFormatFlags'
+    __qualname__ = 'XmpFormatFlags'
 
 
 # variables with complex values
 
-_introspection_module = None # (!) real value is "<IntrospectionModule 'GExiv2' from 'C:\\\\Program Files\\\\GIMP 3\\\\lib\\\\girepository-1.0\\\\GExiv2-0.10.typelib'>"
-
-__annotations__ = {}
-
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001f7c0bf2090>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001b1e30d6fc0>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GExiv2', loader=<gi.importer.DynamicImporter object at 0x000001f7c0bf2090>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GExiv2', loader=<gi.importer.DynamicImporter object at 0x000001b1e30d6fc0>)"
 

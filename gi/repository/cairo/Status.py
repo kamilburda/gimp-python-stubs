@@ -1,30 +1,22 @@
 # encoding: utf-8
 # module gi.repository.cairo
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class Status(__gobject.GEnum):
+class Status(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -77,10 +69,14 @@ class Status(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -96,7 +92,7 @@ class Status(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -124,12 +120,23 @@ class Status(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -153,10 +160,15 @@ class Status(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -202,6 +214,14 @@ class Status(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -227,8 +247,8 @@ class Status(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -259,15 +279,16 @@ class Status(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -331,7 +352,7 @@ class Status(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -373,10 +394,6 @@ class Status(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CLIP_NOT_REPRESENTABLE = 22
     DEVICE_ERROR = 35
@@ -384,6 +401,7 @@ class Status(__gobject.GEnum):
     DEVICE_TYPE_MISMATCH = 34
     FILE_NOT_FOUND = 18
     FONT_TYPE_MISMATCH = 25
+    FREETYPE_ERROR = 40
     INVALID_CLUSTERS = 29
     INVALID_CONTENT = 15
     INVALID_DASH = 19
@@ -403,11 +421,13 @@ class Status(__gobject.GEnum):
     INVALID_VISUAL = 17
     INVALID_WEIGHT = 31
     JBIG2_GLOBAL_MISSING = 38
+    LAST_STATUS = 45
     NEGATIVE_COUNT = 28
     NO_CURRENT_POINT = 4
     NO_MEMORY = 1
     NULL_POINTER = 7
     PATTERN_TYPE_MISMATCH = 14
+    PNG_ERROR = 39
     READ_ERROR = 10
     SUCCESS = 0
     SURFACE_FINISHED = 12
@@ -416,55 +436,11 @@ class Status(__gobject.GEnum):
     USER_FONT_ERROR = 27
     USER_FONT_IMMUTABLE = 26
     USER_FONT_NOT_IMPLEMENTED = 33
+    WIN32_GDI_ERROR = 41
     WRITE_ERROR = 11
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.cairo', '__dict__': <attribute '__dict__' of 'Status' objects>, '__doc__': None, '__gtype__': <GType cairo_status_t (4004034048)>, '__enum_values__': {0: <enum CAIRO_STATUS_SUCCESS of type cairo.Status>, 1: <enum CAIRO_STATUS_NO_MEMORY of type cairo.Status>, 2: <enum CAIRO_STATUS_INVALID_RESTORE of type cairo.Status>, 3: <enum CAIRO_STATUS_INVALID_POP_GROUP of type cairo.Status>, 4: <enum CAIRO_STATUS_NO_CURRENT_POINT of type cairo.Status>, 5: <enum CAIRO_STATUS_INVALID_MATRIX of type cairo.Status>, 6: <enum CAIRO_STATUS_INVALID_STATUS of type cairo.Status>, 7: <enum CAIRO_STATUS_NULL_POINTER of type cairo.Status>, 8: <enum CAIRO_STATUS_INVALID_STRING of type cairo.Status>, 9: <enum CAIRO_STATUS_INVALID_PATH_DATA of type cairo.Status>, 10: <enum CAIRO_STATUS_READ_ERROR of type cairo.Status>, 11: <enum CAIRO_STATUS_WRITE_ERROR of type cairo.Status>, 12: <enum CAIRO_STATUS_SURFACE_FINISHED of type cairo.Status>, 13: <enum CAIRO_STATUS_SURFACE_TYPE_MISMATCH of type cairo.Status>, 14: <enum CAIRO_STATUS_PATTERN_TYPE_MISMATCH of type cairo.Status>, 15: <enum CAIRO_STATUS_INVALID_CONTENT of type cairo.Status>, 16: <enum CAIRO_STATUS_INVALID_FORMAT of type cairo.Status>, 17: <enum CAIRO_STATUS_INVALID_VISUAL of type cairo.Status>, 18: <enum CAIRO_STATUS_FILE_NOT_FOUND of type cairo.Status>, 19: <enum CAIRO_STATUS_INVALID_DASH of type cairo.Status>, 20: <enum CAIRO_STATUS_INVALID_DSC_COMMENT of type cairo.Status>, 21: <enum CAIRO_STATUS_INVALID_INDEX of type cairo.Status>, 22: <enum CAIRO_STATUS_CLIP_NOT_REPRESENTABLE of type cairo.Status>, 23: <enum CAIRO_STATUS_TEMP_FILE_ERROR of type cairo.Status>, 24: <enum CAIRO_STATUS_INVALID_STRIDE of type cairo.Status>, 25: <enum CAIRO_STATUS_FONT_TYPE_MISMATCH of type cairo.Status>, 26: <enum CAIRO_STATUS_USER_FONT_IMMUTABLE of type cairo.Status>, 27: <enum CAIRO_STATUS_USER_FONT_ERROR of type cairo.Status>, 28: <enum CAIRO_STATUS_NEGATIVE_COUNT of type cairo.Status>, 29: <enum CAIRO_STATUS_INVALID_CLUSTERS of type cairo.Status>, 30: <enum CAIRO_STATUS_INVALID_SLANT of type cairo.Status>, 31: <enum CAIRO_STATUS_INVALID_WEIGHT of type cairo.Status>, 32: <enum CAIRO_STATUS_INVALID_SIZE of type cairo.Status>, 33: <enum CAIRO_STATUS_USER_FONT_NOT_IMPLEMENTED of type cairo.Status>, 34: <enum CAIRO_STATUS_DEVICE_TYPE_MISMATCH of type cairo.Status>, 35: <enum CAIRO_STATUS_DEVICE_ERROR of type cairo.Status>, 36: <enum CAIRO_STATUS_INVALID_MESH_CONSTRUCTION of type cairo.Status>, 37: <enum CAIRO_STATUS_DEVICE_FINISHED of type cairo.Status>, 38: <enum CAIRO_STATUS_JBIG2_GLOBAL_MISSING of type cairo.Status>, 39: <enum CAIRO_STATUS_PNG_ERROR of type cairo.Status>, 40: <enum CAIRO_STATUS_FREETYPE_ERROR of type cairo.Status>, 45: <enum CAIRO_STATUS_LAST_STATUS of type cairo.Status>, 41: <enum CAIRO_STATUS_WIN32_GDI_ERROR of type cairo.Status>}, '__info__': gi.EnumInfo(Status), 'SUCCESS': <enum CAIRO_STATUS_SUCCESS of type cairo.Status>, 'NO_MEMORY': <enum CAIRO_STATUS_NO_MEMORY of type cairo.Status>, 'INVALID_RESTORE': <enum CAIRO_STATUS_INVALID_RESTORE of type cairo.Status>, 'INVALID_POP_GROUP': <enum CAIRO_STATUS_INVALID_POP_GROUP of type cairo.Status>, 'NO_CURRENT_POINT': <enum CAIRO_STATUS_NO_CURRENT_POINT of type cairo.Status>, 'INVALID_MATRIX': <enum CAIRO_STATUS_INVALID_MATRIX of type cairo.Status>, 'INVALID_STATUS': <enum CAIRO_STATUS_INVALID_STATUS of type cairo.Status>, 'NULL_POINTER': <enum CAIRO_STATUS_NULL_POINTER of type cairo.Status>, 'INVALID_STRING': <enum CAIRO_STATUS_INVALID_STRING of type cairo.Status>, 'INVALID_PATH_DATA': <enum CAIRO_STATUS_INVALID_PATH_DATA of type cairo.Status>, 'READ_ERROR': <enum CAIRO_STATUS_READ_ERROR of type cairo.Status>, 'WRITE_ERROR': <enum CAIRO_STATUS_WRITE_ERROR of type cairo.Status>, 'SURFACE_FINISHED': <enum CAIRO_STATUS_SURFACE_FINISHED of type cairo.Status>, 'SURFACE_TYPE_MISMATCH': <enum CAIRO_STATUS_SURFACE_TYPE_MISMATCH of type cairo.Status>, 'PATTERN_TYPE_MISMATCH': <enum CAIRO_STATUS_PATTERN_TYPE_MISMATCH of type cairo.Status>, 'INVALID_CONTENT': <enum CAIRO_STATUS_INVALID_CONTENT of type cairo.Status>, 'INVALID_FORMAT': <enum CAIRO_STATUS_INVALID_FORMAT of type cairo.Status>, 'INVALID_VISUAL': <enum CAIRO_STATUS_INVALID_VISUAL of type cairo.Status>, 'FILE_NOT_FOUND': <enum CAIRO_STATUS_FILE_NOT_FOUND of type cairo.Status>, 'INVALID_DASH': <enum CAIRO_STATUS_INVALID_DASH of type cairo.Status>, 'INVALID_DSC_COMMENT': <enum CAIRO_STATUS_INVALID_DSC_COMMENT of type cairo.Status>, 'INVALID_INDEX': <enum CAIRO_STATUS_INVALID_INDEX of type cairo.Status>, 'CLIP_NOT_REPRESENTABLE': <enum CAIRO_STATUS_CLIP_NOT_REPRESENTABLE of type cairo.Status>, 'TEMP_FILE_ERROR': <enum CAIRO_STATUS_TEMP_FILE_ERROR of type cairo.Status>, 'INVALID_STRIDE': <enum CAIRO_STATUS_INVALID_STRIDE of type cairo.Status>, 'FONT_TYPE_MISMATCH': <enum CAIRO_STATUS_FONT_TYPE_MISMATCH of type cairo.Status>, 'USER_FONT_IMMUTABLE': <enum CAIRO_STATUS_USER_FONT_IMMUTABLE of type cairo.Status>, 'USER_FONT_ERROR': <enum CAIRO_STATUS_USER_FONT_ERROR of type cairo.Status>, 'NEGATIVE_COUNT': <enum CAIRO_STATUS_NEGATIVE_COUNT of type cairo.Status>, 'INVALID_CLUSTERS': <enum CAIRO_STATUS_INVALID_CLUSTERS of type cairo.Status>, 'INVALID_SLANT': <enum CAIRO_STATUS_INVALID_SLANT of type cairo.Status>, 'INVALID_WEIGHT': <enum CAIRO_STATUS_INVALID_WEIGHT of type cairo.Status>, 'INVALID_SIZE': <enum CAIRO_STATUS_INVALID_SIZE of type cairo.Status>, 'USER_FONT_NOT_IMPLEMENTED': <enum CAIRO_STATUS_USER_FONT_NOT_IMPLEMENTED of type cairo.Status>, 'DEVICE_TYPE_MISMATCH': <enum CAIRO_STATUS_DEVICE_TYPE_MISMATCH of type cairo.Status>, 'DEVICE_ERROR': <enum CAIRO_STATUS_DEVICE_ERROR of type cairo.Status>, 'INVALID_MESH_CONSTRUCTION': <enum CAIRO_STATUS_INVALID_MESH_CONSTRUCTION of type cairo.Status>, 'DEVICE_FINISHED': <enum CAIRO_STATUS_DEVICE_FINISHED of type cairo.Status>, 'JBIG2_GLOBAL_MISSING': <enum CAIRO_STATUS_JBIG2_GLOBAL_MISSING of type cairo.Status>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-        30: 30,
-        31: 31,
-        32: 32,
-        33: 33,
-        34: 34,
-        35: 35,
-        36: 36,
-        37: 37,
-        38: 38,
-        39: 39,
-        40: 40,
-        41: 41,
-        45: 45,
-    }
-    __gtype__ = None # (!) real value is '<GType cairo_status_t (4004034048)>'
-    __info__ = gi.EnumInfo(Status)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'SUCCESS': <Status.SUCCESS: 0>, 'NO_MEMORY': <Status.NO_MEMORY: 1>, 'INVALID_RESTORE': <Status.INVALID_RESTORE: 2>, 'INVALID_POP_GROUP': <Status.INVALID_POP_GROUP: 3>, 'NO_CURRENT_POINT': <Status.NO_CURRENT_POINT: 4>, 'INVALID_MATRIX': <Status.INVALID_MATRIX: 5>, 'INVALID_STATUS': <Status.INVALID_STATUS: 6>, 'NULL_POINTER': <Status.NULL_POINTER: 7>, 'INVALID_STRING': <Status.INVALID_STRING: 8>, 'INVALID_PATH_DATA': <Status.INVALID_PATH_DATA: 9>, 'READ_ERROR': <Status.READ_ERROR: 10>, 'WRITE_ERROR': <Status.WRITE_ERROR: 11>, 'SURFACE_FINISHED': <Status.SURFACE_FINISHED: 12>, 'SURFACE_TYPE_MISMATCH': <Status.SURFACE_TYPE_MISMATCH: 13>, 'PATTERN_TYPE_MISMATCH': <Status.PATTERN_TYPE_MISMATCH: 14>, 'INVALID_CONTENT': <Status.INVALID_CONTENT: 15>, 'INVALID_FORMAT': <Status.INVALID_FORMAT: 16>, 'INVALID_VISUAL': <Status.INVALID_VISUAL: 17>, 'FILE_NOT_FOUND': <Status.FILE_NOT_FOUND: 18>, 'INVALID_DASH': <Status.INVALID_DASH: 19>, 'INVALID_DSC_COMMENT': <Status.INVALID_DSC_COMMENT: 20>, 'INVALID_INDEX': <Status.INVALID_INDEX: 21>, 'CLIP_NOT_REPRESENTABLE': <Status.CLIP_NOT_REPRESENTABLE: 22>, 'TEMP_FILE_ERROR': <Status.TEMP_FILE_ERROR: 23>, 'INVALID_STRIDE': <Status.INVALID_STRIDE: 24>, 'FONT_TYPE_MISMATCH': <Status.FONT_TYPE_MISMATCH: 25>, 'USER_FONT_IMMUTABLE': <Status.USER_FONT_IMMUTABLE: 26>, 'USER_FONT_ERROR': <Status.USER_FONT_ERROR: 27>, 'NEGATIVE_COUNT': <Status.NEGATIVE_COUNT: 28>, 'INVALID_CLUSTERS': <Status.INVALID_CLUSTERS: 29>, 'INVALID_SLANT': <Status.INVALID_SLANT: 30>, 'INVALID_WEIGHT': <Status.INVALID_WEIGHT: 31>, 'INVALID_SIZE': <Status.INVALID_SIZE: 32>, 'USER_FONT_NOT_IMPLEMENTED': <Status.USER_FONT_NOT_IMPLEMENTED: 33>, 'DEVICE_TYPE_MISMATCH': <Status.DEVICE_TYPE_MISMATCH: 34>, 'DEVICE_ERROR': <Status.DEVICE_ERROR: 35>, 'INVALID_MESH_CONSTRUCTION': <Status.INVALID_MESH_CONSTRUCTION: 36>, 'DEVICE_FINISHED': <Status.DEVICE_FINISHED: 37>, 'JBIG2_GLOBAL_MISSING': <Status.JBIG2_GLOBAL_MISSING: 38>, 'PNG_ERROR': <Status.PNG_ERROR: 39>, 'FREETYPE_ERROR': <Status.FREETYPE_ERROR: 40>, 'LAST_STATUS': <Status.LAST_STATUS: 45>, 'WIN32_GDI_ERROR': <Status.WIN32_GDI_ERROR: 41>})"
+    __name__ = 'Status'
+    __qualname__ = 'Status'
 
 

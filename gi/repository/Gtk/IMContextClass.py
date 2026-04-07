@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -181,7 +180,7 @@ class IMContextClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IMContextClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IMContextClass' objects>, '__weakref__': <attribute '__weakref__' of 'IMContextClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceabea200>, 'preedit_start': <property object at 0x000002eceabea2f0>, 'preedit_end': <property object at 0x000002eceabea3e0>, 'preedit_changed': <property object at 0x000002eceabea4d0>, 'commit': <property object at 0x000002eceabea5c0>, 'retrieve_surrounding': <property object at 0x000002eceabea6b0>, 'delete_surrounding': <property object at 0x000002eceabea7a0>, 'set_client_window': <property object at 0x000002eceabea890>, 'get_preedit_string': <property object at 0x000002eceabea980>, 'filter_keypress': <property object at 0x000002eceabeaa70>, 'focus_in': <property object at 0x000002eceabeab60>, 'focus_out': <property object at 0x000002eceabeac50>, 'reset': <property object at 0x000002eceabead40>, 'set_cursor_location': <property object at 0x000002eceabeae30>, 'set_use_preedit': <property object at 0x000002eceabeaf20>, 'set_surrounding': <property object at 0x000002eceabeb010>, 'get_surrounding': <property object at 0x000002eceabeb100>, '_gtk_reserved1': <property object at 0x000002eceabeb1f0>, '_gtk_reserved2': <property object at 0x000002eceabeb2e0>, '_gtk_reserved3': <property object at 0x000002eceabeb3d0>, '_gtk_reserved4': <property object at 0x000002eceabeb4c0>, '_gtk_reserved5': <property object at 0x000002eceabeb5b0>, '_gtk_reserved6': <property object at 0x000002eceabeb6a0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IMContextClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IMContextClass' objects>, '__weakref__': <attribute '__weakref__' of 'IMContextClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18dd580>, 'preedit_start': <property object at 0x000002bfd18dd670>, 'preedit_end': <property object at 0x000002bfd18dd760>, 'preedit_changed': <property object at 0x000002bfd18dd850>, 'commit': <property object at 0x000002bfd18dd940>, 'retrieve_surrounding': <property object at 0x000002bfd18dda30>, 'delete_surrounding': <property object at 0x000002bfd18ddb20>, 'set_client_window': <property object at 0x000002bfd18ddc10>, 'get_preedit_string': <property object at 0x000002bfd18ddd00>, 'filter_keypress': <property object at 0x000002bfd18dddf0>, 'focus_in': <property object at 0x000002bfd18ddee0>, 'focus_out': <property object at 0x000002bfd18ddfd0>, 'reset': <property object at 0x000002bfd18de0c0>, 'set_cursor_location': <property object at 0x000002bfd18de1b0>, 'set_use_preedit': <property object at 0x000002bfd18de2a0>, 'set_surrounding': <property object at 0x000002bfd18de390>, 'get_surrounding': <property object at 0x000002bfd18de480>, '_gtk_reserved1': <property object at 0x000002bfd18de570>, '_gtk_reserved2': <property object at 0x000002bfd18de660>, '_gtk_reserved3': <property object at 0x000002bfd18de750>, '_gtk_reserved4': <property object at 0x000002bfd18de840>, '_gtk_reserved5': <property object at 0x000002bfd18de930>, '_gtk_reserved6': <property object at 0x000002bfd18dea20>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(IMContextClass)
 

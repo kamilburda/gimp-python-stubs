@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -151,7 +150,7 @@ class TextAppearance(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextAppearance), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextAppearance' objects>, '__weakref__': <attribute '__weakref__' of 'TextAppearance' objects>, '__doc__': None, 'bg_color': <property object at 0x000002ece9b77970>, 'fg_color': <property object at 0x000002ece9b77a60>, 'rise': <property object at 0x000002ece9b77b50>, 'underline': <property object at 0x000002ece9b77c40>, 'strikethrough': <property object at 0x000002ece9b77d30>, 'draw_bg': <property object at 0x000002ece9b77e20>, 'inside_selection': <property object at 0x000002ece9b77f10>, 'is_text': <property object at 0x000002ece9b6c040>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextAppearance), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TextAppearance' objects>, '__weakref__': <attribute '__weakref__' of 'TextAppearance' objects>, '__doc__': None, 'bg_color': <property object at 0x000002bfd3a0e110>, 'fg_color': <property object at 0x000002bfd3a0e200>, 'rise': <property object at 0x000002bfd3a0e2f0>, 'underline': <property object at 0x000002bfd3a0e3e0>, 'strikethrough': <property object at 0x000002bfd3a0e4d0>, 'draw_bg': <property object at 0x000002bfd3a0e5c0>, 'inside_selection': <property object at 0x000002bfd3a0e6b0>, 'is_text': <property object at 0x000002bfd3a0e7a0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TextAppearance)
 

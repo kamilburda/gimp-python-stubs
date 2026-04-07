@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -143,7 +142,7 @@ class StyleProviderIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StyleProviderIface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StyleProviderIface' objects>, '__weakref__': <attribute '__weakref__' of 'StyleProviderIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002ece9b7fa10>, 'get_style': <property object at 0x000002ece9b7fb00>, 'get_style_property': <property object at 0x000002ece9b7fbf0>, 'get_icon_factory': <property object at 0x000002ece9b7fce0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StyleProviderIface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StyleProviderIface' objects>, '__weakref__': <attribute '__weakref__' of 'StyleProviderIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002bfd3a021b0>, 'get_style': <property object at 0x000002bfd3a022a0>, 'get_style_property': <property object at 0x000002bfd3a02390>, 'get_icon_factory': <property object at 0x000002bfd3a02480>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(StyleProviderIface)
 

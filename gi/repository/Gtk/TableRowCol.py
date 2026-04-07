@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -151,7 +150,7 @@ class TableRowCol(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TableRowCol), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TableRowCol' objects>, '__weakref__': <attribute '__weakref__' of 'TableRowCol' objects>, '__doc__': None, 'requisition': <property object at 0x000002ece9b76110>, 'allocation': <property object at 0x000002ece9b76200>, 'spacing': <property object at 0x000002ece9b762f0>, 'need_expand': <property object at 0x000002ece9b763e0>, 'need_shrink': <property object at 0x000002ece9b764d0>, 'expand': <property object at 0x000002ece9b765c0>, 'shrink': <property object at 0x000002ece9b766b0>, 'empty': <property object at 0x000002ece9b767a0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TableRowCol), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TableRowCol' objects>, '__weakref__': <attribute '__weakref__' of 'TableRowCol' objects>, '__doc__': None, 'requisition': <property object at 0x000002bfd3a0c8b0>, 'allocation': <property object at 0x000002bfd3a0c9a0>, 'spacing': <property object at 0x000002bfd3a0ca90>, 'need_expand': <property object at 0x000002bfd3a0cb80>, 'need_shrink': <property object at 0x000002bfd3a0cc70>, 'expand': <property object at 0x000002bfd3a0cd60>, 'shrink': <property object at 0x000002bfd3a0ce50>, 'empty': <property object at 0x000002bfd3a0cf40>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TableRowCol)
 

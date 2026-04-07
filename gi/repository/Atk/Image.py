@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -149,10 +142,10 @@ class Image(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Image), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkImage (892047344)>, '__dict__': <attribute '__dict__' of 'Image' objects>, '__weakref__': <attribute '__weakref__' of 'Image' objects>, '__doc__': None, '__gsignals__': {}, 'get_image_description': gi.FunctionInfo(get_image_description, bound=None), 'get_image_locale': gi.FunctionInfo(get_image_locale, bound=None), 'get_image_position': gi.FunctionInfo(get_image_position, bound=None), 'get_image_size': gi.FunctionInfo(get_image_size, bound=None), 'set_image_description': gi.FunctionInfo(set_image_description, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Image), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkImage (1534560768)>, '__dict__': <attribute '__dict__' of 'Image' objects>, '__weakref__': <attribute '__weakref__' of 'Image' objects>, '__doc__': None, '__gsignals__': {}, 'get_image_description': gi.FunctionInfo(get_image_description), 'get_image_locale': gi.FunctionInfo(get_image_locale), 'get_image_position': gi.FunctionInfo(get_image_position), 'get_image_size': gi.FunctionInfo(get_image_size), 'set_image_description': gi.FunctionInfo(set_image_description)})"
     __gdoc__ = 'Interface AtkImage\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkImage (892047344)>'
+    __gtype__ = None # (!) real value is '<GType AtkImage (1534560768)>'
     __info__ = InterfaceInfo(Image)
 
 

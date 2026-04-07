@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,10 +150,10 @@ class EditableText(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(EditableText), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkEditableText (892044208)>, '__dict__': <attribute '__dict__' of 'EditableText' objects>, '__weakref__': <attribute '__weakref__' of 'EditableText' objects>, '__doc__': None, '__gsignals__': {}, 'copy_text': gi.FunctionInfo(copy_text, bound=None), 'cut_text': gi.FunctionInfo(cut_text, bound=None), 'delete_text': gi.FunctionInfo(delete_text, bound=None), 'insert_text': gi.FunctionInfo(insert_text, bound=None), 'paste_text': gi.FunctionInfo(paste_text, bound=None), 'set_run_attributes': gi.FunctionInfo(set_run_attributes, bound=None), 'set_text_contents': gi.FunctionInfo(set_text_contents, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(EditableText), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkEditableText (1534562496)>, '__dict__': <attribute '__dict__' of 'EditableText' objects>, '__weakref__': <attribute '__weakref__' of 'EditableText' objects>, '__doc__': None, '__gsignals__': {}, 'copy_text': gi.FunctionInfo(copy_text), 'cut_text': gi.FunctionInfo(cut_text), 'delete_text': gi.FunctionInfo(delete_text), 'insert_text': gi.FunctionInfo(insert_text), 'paste_text': gi.FunctionInfo(paste_text), 'set_run_attributes': gi.FunctionInfo(set_run_attributes), 'set_text_contents': gi.FunctionInfo(set_text_contents)})"
     __gdoc__ = 'Interface AtkEditableText\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkEditableText (892044208)>'
+    __gtype__ = None # (!) real value is '<GType AtkEditableText (1534562496)>'
     __info__ = InterfaceInfo(EditableText)
 
 

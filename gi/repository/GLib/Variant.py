@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 from .Variant import Variant
@@ -359,11 +357,11 @@ class Variant(Variant):
         """
         Return a list of the element signatures of the topmost signature tuple.
         
-                If the signature is not a tuple, it returns one element with the entire
-                signature. If the signature is an empty tuple, the result is [].
+        If the signature is not a tuple, it returns one element with the entire
+        signature. If the signature is an empty tuple, the result is [].
         
-                This is useful for e. g. iterating over method parameters which are
-                passed as a single Variant.
+        This is useful for e. g. iterating over method parameters which are
+        passed as a single Variant.
         """
         pass
 
@@ -464,14 +462,14 @@ class Variant(Variant):
         """
         Create a GVariant from a native Python object.
         
-                format_string is a standard GVariant type signature, value is a Python
-                object whose structure has to match the signature.
+        format_string is a standard GVariant type signature, value is a Python
+        object whose structure has to match the signature.
         
-                Examples:
-                  GLib.Variant('i', 1)
-                  GLib.Variant('(is)', (1, 'hello'))
-                  GLib.Variant('(asa{sv})', ([], {'foo': GLib.Variant('b', True),
-                                                  'bar': GLib.Variant('i', 2)}))
+        Examples:
+          GLib.Variant('i', 1)
+          GLib.Variant('(is)', (1, 'hello'))
+          GLib.Variant('(asa{sv})', ([], {'foo': GLib.Variant('b', True),
+                                          'bar': GLib.Variant('i', 2)}))
         """
         pass
 
@@ -522,8 +520,10 @@ class Variant(Variant):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__new__': <staticmethod(<function Variant.__new__ at 0x000002830be20860>)>, 'new_tuple': <staticmethod(<function Variant.new_tuple at 0x000002830be20900>)>, '__del__': <function Variant.__del__ at 0x000002830be209a0>, '__str__': <function Variant.__str__ at 0x000002830be20a40>, '__repr__': <function Variant.__repr__ at 0x000002830be20ae0>, '__eq__': <function Variant.__eq__ at 0x000002830be20b80>, '__ne__': <function Variant.__ne__ at 0x000002830be20c20>, '__hash__': <function Variant.__hash__ at 0x000002830be20cc0>, 'unpack': <function Variant.unpack at 0x000002830be20d60>, 'split_signature': <classmethod(<function Variant.split_signature at 0x000002830be20e00>)>, '__len__': <function Variant.__len__ at 0x000002830be20ea0>, '__getitem__': <function Variant.__getitem__ at 0x000002830be20f40>, '__nonzero__': <function Variant.__nonzero__ at 0x000002830be20fe0>, '__bool__': <function Variant.__bool__ at 0x000002830be21080>, 'keys': <function Variant.keys at 0x000002830be21120>, '__doc__': None, 'get_string': <function get_string at 0x000002830bbf9580>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__firstlineno__': 187, '__new__': <staticmethod(<function Variant.__new__ at 0x0000018e9fdc35e0>)>, 'new_tuple': <staticmethod(<function Variant.new_tuple at 0x0000018e9fdc3740>)>, '__del__': <function Variant.__del__ at 0x0000018e9fdc37f0>, '__str__': <function Variant.__str__ at 0x0000018e9fdc3950>, '__repr__': <function Variant.__repr__ at 0x0000018e9fdc3ab0>, '__eq__': <function Variant.__eq__ at 0x0000018e9fdc3c10>, '__ne__': <function Variant.__ne__ at 0x0000018e9fdc3d70>, '__hash__': <function Variant.__hash__ at 0x0000018e9fdc3ed0>, 'unpack': <function Variant.unpack at 0x0000018e9fee80f0>, 'split_signature': <classmethod(<function Variant.split_signature at 0x0000018e9fee81a0>)>, '__len__': <function Variant.__len__ at 0x0000018e9fee8300>, '__getitem__': <function Variant.__getitem__ at 0x0000018e9fee8460>, '__nonzero__': <function Variant.__nonzero__ at 0x0000018e9fee8510>, '__bool__': <function Variant.__bool__ at 0x0000018e9fee8670>, 'keys': <function Variant.keys at 0x0000018e9fee87d0>, 'get_string': <function Variant.get_string at 0x0000018e9fee8930>, '__static_attributes__': (), '__doc__': None})"
+    __firstlineno__ = 187
     __gtype__ = None # (!) real value is '<GType GVariant (84)>'
     __info__ = StructInfo(Variant)
+    __static_attributes__ = ()
 
 

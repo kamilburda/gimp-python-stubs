@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -169,10 +162,10 @@ class Value(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Value), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkValue (892677952)>, '__dict__': <attribute '__dict__' of 'Value' objects>, '__weakref__': <attribute '__weakref__' of 'Value' objects>, '__doc__': None, '__gsignals__': {}, 'get_current_value': gi.FunctionInfo(get_current_value, bound=None), 'get_increment': gi.FunctionInfo(get_increment, bound=None), 'get_maximum_value': gi.FunctionInfo(get_maximum_value, bound=None), 'get_minimum_increment': gi.FunctionInfo(get_minimum_increment, bound=None), 'get_minimum_value': gi.FunctionInfo(get_minimum_value, bound=None), 'get_range': gi.FunctionInfo(get_range, bound=None), 'get_sub_ranges': gi.FunctionInfo(get_sub_ranges, bound=None), 'get_value_and_text': gi.FunctionInfo(get_value_and_text, bound=None), 'set_current_value': gi.FunctionInfo(set_current_value, bound=None), 'set_value': gi.FunctionInfo(set_value, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Value), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkValue (1534561248)>, '__dict__': <attribute '__dict__' of 'Value' objects>, '__weakref__': <attribute '__weakref__' of 'Value' objects>, '__doc__': None, '__gsignals__': {}, 'get_current_value': gi.FunctionInfo(get_current_value), 'get_increment': gi.FunctionInfo(get_increment), 'get_maximum_value': gi.FunctionInfo(get_maximum_value), 'get_minimum_increment': gi.FunctionInfo(get_minimum_increment), 'get_minimum_value': gi.FunctionInfo(get_minimum_value), 'get_range': gi.FunctionInfo(get_range), 'get_sub_ranges': gi.FunctionInfo(get_sub_ranges), 'get_value_and_text': gi.FunctionInfo(get_value_and_text), 'set_current_value': gi.FunctionInfo(set_current_value), 'set_value': gi.FunctionInfo(set_value)})"
     __gdoc__ = 'Interface AtkValue\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkValue (892677952)>'
+    __gtype__ = None # (!) real value is '<GType AtkValue (1534561248)>'
     __info__ = InterfaceInfo(Value)
 
 

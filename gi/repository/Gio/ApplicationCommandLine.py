@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -43,7 +48,7 @@ class ApplicationCommandLine(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -79,6 +84,9 @@ class ApplicationCommandLine(__gi_overrides_GObject.Object):
 
     def done(self): # real signature unknown; restored from __doc__
         """ done(self) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_done(self, *args, **kwargs): # real signature unknown
@@ -339,20 +347,20 @@ class ApplicationCommandLine(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -382,7 +390,11 @@ class ApplicationCommandLine(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -484,12 +496,12 @@ class ApplicationCommandLine(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eccb20>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70486cb0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ApplicationCommandLine), '__module__': 'gi.repository.Gio', '__gtype__': <GType GApplicationCommandLine (2472613952)>, '__doc__': None, '__gsignals__': {}, 'create_file_for_arg': gi.FunctionInfo(create_file_for_arg, bound=None), 'done': gi.FunctionInfo(done, bound=None), 'get_arguments': gi.FunctionInfo(get_arguments, bound=None), 'get_cwd': gi.FunctionInfo(get_cwd, bound=None), 'get_environ': gi.FunctionInfo(get_environ, bound=None), 'get_exit_status': gi.FunctionInfo(get_exit_status, bound=None), 'get_is_remote': gi.FunctionInfo(get_is_remote, bound=None), 'get_options_dict': gi.FunctionInfo(get_options_dict, bound=None), 'get_platform_data': gi.FunctionInfo(get_platform_data, bound=None), 'get_stdin': gi.FunctionInfo(get_stdin, bound=None), 'getenv': gi.FunctionInfo(getenv, bound=None), 'print_literal': gi.FunctionInfo(print_literal, bound=None), 'printerr_literal': gi.FunctionInfo(printerr_literal, bound=None), 'set_exit_status': gi.FunctionInfo(set_exit_status, bound=None), 'do_done': gi.VFuncInfo(done, bound=None), 'do_get_stdin': gi.VFuncInfo(get_stdin, bound=None), 'do_print_literal': gi.VFuncInfo(print_literal, bound=None), 'do_printerr_literal': gi.VFuncInfo(printerr_literal, bound=None), 'parent_instance': <property object at 0x000001a793d8a8e0>, 'priv': <property object at 0x000001a793d8a9d0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ApplicationCommandLine), '__module__': 'gi.repository.Gio', '__gtype__': <GType GApplicationCommandLine (1838044752)>, '__doc__': None, '__gsignals__': {}, 'create_file_for_arg': gi.FunctionInfo(create_file_for_arg), 'done': gi.FunctionInfo(done), 'get_arguments': gi.FunctionInfo(get_arguments), 'get_cwd': gi.FunctionInfo(get_cwd), 'get_environ': gi.FunctionInfo(get_environ), 'get_exit_status': gi.FunctionInfo(get_exit_status), 'get_is_remote': gi.FunctionInfo(get_is_remote), 'get_options_dict': gi.FunctionInfo(get_options_dict), 'get_platform_data': gi.FunctionInfo(get_platform_data), 'get_stdin': gi.FunctionInfo(get_stdin), 'getenv': gi.FunctionInfo(getenv), 'print_literal': gi.FunctionInfo(print_literal), 'printerr_literal': gi.FunctionInfo(printerr_literal), 'set_exit_status': gi.FunctionInfo(set_exit_status), 'do_done': gi.VFuncInfo(done), 'do_get_stdin': gi.VFuncInfo(get_stdin), 'do_print_literal': gi.VFuncInfo(print_literal), 'do_printerr_literal': gi.VFuncInfo(printerr_literal), 'parent_instance': <property object at 0x000001ea703f5580>, 'priv': <property object at 0x000001ea703f5670>})"
     __gdoc__ = 'Object GApplicationCommandLine\n\nProperties from GApplicationCommandLine:\n  arguments -> GVariant: arguments\n  options -> GVariant: options\n  platform-data -> GVariant: platform-data\n  is-remote -> gboolean: is-remote\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GApplicationCommandLine (2472613952)>'
+    __gtype__ = None # (!) real value is '<GType GApplicationCommandLine (1838044752)>'
     __info__ = ObjectInfo(ApplicationCommandLine)
 
 

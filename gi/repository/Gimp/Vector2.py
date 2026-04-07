@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -80,7 +76,8 @@ class Vector2(__gi.Boxed):
         """ neg_val(self) -> Gimp.Vector2 """
         pass
 
-    def new(self, x, y): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, x, y): # real signature unknown; restored from __doc__
         """ new(x:float, y:float) -> Gimp.Vector2 """
         pass
 
@@ -236,8 +233,8 @@ class Vector2(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Vector2), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpVector2 (3595420784)>, '__dict__': <attribute '__dict__' of 'Vector2' objects>, '__weakref__': <attribute '__weakref__' of 'Vector2' objects>, '__doc__': None, 'x': <property object at 0x000001dcd92f1080>, 'y': <property object at 0x000001dcd92f1170>, 'new': gi.FunctionInfo(new, bound=None), 'add_val': gi.FunctionInfo(add_val, bound=None), 'cross_product': gi.FunctionInfo(cross_product, bound=None), 'cross_product_val': gi.FunctionInfo(cross_product_val, bound=None), 'inner_product': gi.FunctionInfo(inner_product, bound=None), 'inner_product_val': gi.FunctionInfo(inner_product_val, bound=None), 'length': gi.FunctionInfo(length, bound=None), 'length_val': gi.FunctionInfo(length_val, bound=None), 'mul': gi.FunctionInfo(mul, bound=None), 'mul_val': gi.FunctionInfo(mul_val, bound=None), 'neg': gi.FunctionInfo(neg, bound=None), 'neg_val': gi.FunctionInfo(neg_val, bound=None), 'normal': gi.FunctionInfo(normal, bound=None), 'normal_val': gi.FunctionInfo(normal_val, bound=None), 'normalize': gi.FunctionInfo(normalize, bound=None), 'normalize_val': gi.FunctionInfo(normalize_val, bound=None), 'rotate': gi.FunctionInfo(rotate, bound=None), 'rotate_val': gi.FunctionInfo(rotate_val, bound=None), 'set': gi.FunctionInfo(set, bound=None), 'sub_val': gi.FunctionInfo(sub_val, bound=None), 'add': gi.FunctionInfo(add, bound=None), 'sub': gi.FunctionInfo(sub, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GimpVector2 (3595420784)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Vector2), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpVector2 (2360887776)>, '__dict__': <attribute '__dict__' of 'Vector2' objects>, '__weakref__': <attribute '__weakref__' of 'Vector2' objects>, '__doc__': None, 'x': <property object at 0x000001268f548540>, 'y': <property object at 0x000001268f548450>, 'new': <classmethod(gi.FunctionInfo(new))>, 'add_val': gi.FunctionInfo(add_val), 'cross_product': gi.FunctionInfo(cross_product), 'cross_product_val': gi.FunctionInfo(cross_product_val), 'inner_product': gi.FunctionInfo(inner_product), 'inner_product_val': gi.FunctionInfo(inner_product_val), 'length': gi.FunctionInfo(length), 'length_val': gi.FunctionInfo(length_val), 'mul': gi.FunctionInfo(mul), 'mul_val': gi.FunctionInfo(mul_val), 'neg': gi.FunctionInfo(neg), 'neg_val': gi.FunctionInfo(neg_val), 'normal': gi.FunctionInfo(normal), 'normal_val': gi.FunctionInfo(normal_val), 'normalize': gi.FunctionInfo(normalize), 'normalize_val': gi.FunctionInfo(normalize_val), 'rotate': gi.FunctionInfo(rotate), 'rotate_val': gi.FunctionInfo(rotate_val), 'set': gi.FunctionInfo(set), 'sub_val': gi.FunctionInfo(sub_val), 'add': <staticmethod(gi.FunctionInfo(add))>, 'sub': <staticmethod(gi.FunctionInfo(sub))>})"
+    __gtype__ = None # (!) real value is '<GType GimpVector2 (2360887776)>'
     __info__ = StructInfo(Vector2)
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -148,10 +147,10 @@ class Actionable(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Actionable), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkActionable (3867803344)>, '__dict__': <attribute '__dict__' of 'Actionable' objects>, '__weakref__': <attribute '__weakref__' of 'Actionable' objects>, '__doc__': None, '__gsignals__': {}, 'get_action_name': gi.FunctionInfo(get_action_name, bound=None), 'get_action_target_value': gi.FunctionInfo(get_action_target_value, bound=None), 'set_action_name': gi.FunctionInfo(set_action_name, bound=None), 'set_action_target_value': gi.FunctionInfo(set_action_target_value, bound=None), 'set_detailed_action_name': gi.FunctionInfo(set_detailed_action_name, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Actionable), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkActionable (3416387472)>, '__dict__': <attribute '__dict__' of 'Actionable' objects>, '__weakref__': <attribute '__weakref__' of 'Actionable' objects>, '__doc__': None, '__gsignals__': {}, 'get_action_name': gi.FunctionInfo(get_action_name), 'get_action_target_value': gi.FunctionInfo(get_action_target_value), 'set_action_name': gi.FunctionInfo(set_action_name), 'set_action_target_value': gi.FunctionInfo(set_action_target_value), 'set_detailed_action_name': gi.FunctionInfo(set_detailed_action_name)})"
     __gdoc__ = 'Interface GtkActionable\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkActionable (3867803344)>'
+    __gtype__ = None # (!) real value is '<GType GtkActionable (3416387472)>'
     __info__ = InterfaceInfo(Actionable)
 
 

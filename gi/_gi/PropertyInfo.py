@@ -4,9 +4,9 @@
 # no doc
 
 # imports
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
+import enum as __enum
 import gi as __gi
 import gobject as __gobject
 
@@ -19,7 +19,7 @@ class PropertyInfo(__gi.BaseInfo):
     def get_ownership_transfer(self, *args, **kwargs): # real signature unknown
         pass
 
-    def get_type(self, *args, **kwargs): # real signature unknown
+    def get_type_info(self, *args, **kwargs): # real signature unknown
         pass
 
     def __init__(self, *args, **kwargs): # real signature unknown

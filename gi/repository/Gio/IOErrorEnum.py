@@ -1,28 +1,32 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class IOErrorEnum(__gobject.GEnum):
+class IOErrorEnum(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -81,6 +85,10 @@ class IOErrorEnum(__gobject.GEnum):
         """
         pass
 
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
+
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return an array of bytes representing an integer.
@@ -122,12 +130,23 @@ class IOErrorEnum(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+                `value` is in `cls` if:
+                1) `value` is a member of `cls`, or
+                2) `value` is the value of one of the `cls`'s members.
+                3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -151,10 +170,15 @@ class IOErrorEnum(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -189,7 +213,8 @@ class IOErrorEnum(__gobject.GEnum):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
@@ -198,6 +223,14 @@ class IOErrorEnum(__gobject.GEnum):
 
     def __invert__(self, *args, **kwargs): # real signature unknown
         """ ~self """
+        pass
+
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -225,8 +258,8 @@ class IOErrorEnum(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -257,15 +290,16 @@ class IOErrorEnum(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -329,7 +363,7 @@ class IOErrorEnum(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -371,10 +405,6 @@ class IOErrorEnum(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     ADDRESS_IN_USE = 33
     ALREADY_MOUNTED = 17
@@ -383,7 +413,6 @@ class IOErrorEnum(__gobject.GEnum):
     CANCELLED = 19
     CANT_CREATE_BACKUP = 22
     CLOSED = 18
-    CONNECTION_CLOSED = 44
     CONNECTION_REFUSED = 39
     DBUS_ERROR = 36
     DESTINATION_UNSET = 48
@@ -426,60 +455,9 @@ class IOErrorEnum(__gobject.GEnum):
     WOULD_MERGE = 29
     WOULD_RECURSE = 25
     WRONG_ETAG = 23
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gio', '__dict__': <attribute '__dict__' of 'IOErrorEnum' objects>, '__doc__': None, '__gtype__': <GType GIOErrorEnum (2466384240)>, '__enum_values__': {0: <enum G_IO_ERROR_FAILED of type Gio.IOErrorEnum>, 1: <enum G_IO_ERROR_NOT_FOUND of type Gio.IOErrorEnum>, 2: <enum G_IO_ERROR_EXISTS of type Gio.IOErrorEnum>, 3: <enum G_IO_ERROR_IS_DIRECTORY of type Gio.IOErrorEnum>, 4: <enum G_IO_ERROR_NOT_DIRECTORY of type Gio.IOErrorEnum>, 5: <enum G_IO_ERROR_NOT_EMPTY of type Gio.IOErrorEnum>, 6: <enum G_IO_ERROR_NOT_REGULAR_FILE of type Gio.IOErrorEnum>, 7: <enum G_IO_ERROR_NOT_SYMBOLIC_LINK of type Gio.IOErrorEnum>, 8: <enum G_IO_ERROR_NOT_MOUNTABLE_FILE of type Gio.IOErrorEnum>, 9: <enum G_IO_ERROR_FILENAME_TOO_LONG of type Gio.IOErrorEnum>, 10: <enum G_IO_ERROR_INVALID_FILENAME of type Gio.IOErrorEnum>, 11: <enum G_IO_ERROR_TOO_MANY_LINKS of type Gio.IOErrorEnum>, 12: <enum G_IO_ERROR_NO_SPACE of type Gio.IOErrorEnum>, 13: <enum G_IO_ERROR_INVALID_ARGUMENT of type Gio.IOErrorEnum>, 14: <enum G_IO_ERROR_PERMISSION_DENIED of type Gio.IOErrorEnum>, 15: <enum G_IO_ERROR_NOT_SUPPORTED of type Gio.IOErrorEnum>, 16: <enum G_IO_ERROR_NOT_MOUNTED of type Gio.IOErrorEnum>, 17: <enum G_IO_ERROR_ALREADY_MOUNTED of type Gio.IOErrorEnum>, 18: <enum G_IO_ERROR_CLOSED of type Gio.IOErrorEnum>, 19: <enum G_IO_ERROR_CANCELLED of type Gio.IOErrorEnum>, 20: <enum G_IO_ERROR_PENDING of type Gio.IOErrorEnum>, 21: <enum G_IO_ERROR_READ_ONLY of type Gio.IOErrorEnum>, 22: <enum G_IO_ERROR_CANT_CREATE_BACKUP of type Gio.IOErrorEnum>, 23: <enum G_IO_ERROR_WRONG_ETAG of type Gio.IOErrorEnum>, 24: <enum G_IO_ERROR_TIMED_OUT of type Gio.IOErrorEnum>, 25: <enum G_IO_ERROR_WOULD_RECURSE of type Gio.IOErrorEnum>, 26: <enum G_IO_ERROR_BUSY of type Gio.IOErrorEnum>, 27: <enum G_IO_ERROR_WOULD_BLOCK of type Gio.IOErrorEnum>, 28: <enum G_IO_ERROR_HOST_NOT_FOUND of type Gio.IOErrorEnum>, 29: <enum G_IO_ERROR_WOULD_MERGE of type Gio.IOErrorEnum>, 30: <enum G_IO_ERROR_FAILED_HANDLED of type Gio.IOErrorEnum>, 31: <enum G_IO_ERROR_TOO_MANY_OPEN_FILES of type Gio.IOErrorEnum>, 32: <enum G_IO_ERROR_NOT_INITIALIZED of type Gio.IOErrorEnum>, 33: <enum G_IO_ERROR_ADDRESS_IN_USE of type Gio.IOErrorEnum>, 34: <enum G_IO_ERROR_PARTIAL_INPUT of type Gio.IOErrorEnum>, 35: <enum G_IO_ERROR_INVALID_DATA of type Gio.IOErrorEnum>, 36: <enum G_IO_ERROR_DBUS_ERROR of type Gio.IOErrorEnum>, 37: <enum G_IO_ERROR_HOST_UNREACHABLE of type Gio.IOErrorEnum>, 38: <enum G_IO_ERROR_NETWORK_UNREACHABLE of type Gio.IOErrorEnum>, 39: <enum G_IO_ERROR_CONNECTION_REFUSED of type Gio.IOErrorEnum>, 40: <enum G_IO_ERROR_PROXY_FAILED of type Gio.IOErrorEnum>, 41: <enum G_IO_ERROR_PROXY_AUTH_FAILED of type Gio.IOErrorEnum>, 42: <enum G_IO_ERROR_PROXY_NEED_AUTH of type Gio.IOErrorEnum>, 43: <enum G_IO_ERROR_PROXY_NOT_ALLOWED of type Gio.IOErrorEnum>, 44: <enum G_IO_ERROR_BROKEN_PIPE of type Gio.IOErrorEnum>, 45: <enum G_IO_ERROR_NOT_CONNECTED of type Gio.IOErrorEnum>, 46: <enum G_IO_ERROR_MESSAGE_TOO_LARGE of type Gio.IOErrorEnum>, 47: <enum G_IO_ERROR_NO_SUCH_DEVICE of type Gio.IOErrorEnum>, 48: <enum G_IO_ERROR_DESTINATION_UNSET of type Gio.IOErrorEnum>}, '__info__': gi.EnumInfo(IOErrorEnum), 'FAILED': <enum G_IO_ERROR_FAILED of type Gio.IOErrorEnum>, 'NOT_FOUND': <enum G_IO_ERROR_NOT_FOUND of type Gio.IOErrorEnum>, 'EXISTS': <enum G_IO_ERROR_EXISTS of type Gio.IOErrorEnum>, 'IS_DIRECTORY': <enum G_IO_ERROR_IS_DIRECTORY of type Gio.IOErrorEnum>, 'NOT_DIRECTORY': <enum G_IO_ERROR_NOT_DIRECTORY of type Gio.IOErrorEnum>, 'NOT_EMPTY': <enum G_IO_ERROR_NOT_EMPTY of type Gio.IOErrorEnum>, 'NOT_REGULAR_FILE': <enum G_IO_ERROR_NOT_REGULAR_FILE of type Gio.IOErrorEnum>, 'NOT_SYMBOLIC_LINK': <enum G_IO_ERROR_NOT_SYMBOLIC_LINK of type Gio.IOErrorEnum>, 'NOT_MOUNTABLE_FILE': <enum G_IO_ERROR_NOT_MOUNTABLE_FILE of type Gio.IOErrorEnum>, 'FILENAME_TOO_LONG': <enum G_IO_ERROR_FILENAME_TOO_LONG of type Gio.IOErrorEnum>, 'INVALID_FILENAME': <enum G_IO_ERROR_INVALID_FILENAME of type Gio.IOErrorEnum>, 'TOO_MANY_LINKS': <enum G_IO_ERROR_TOO_MANY_LINKS of type Gio.IOErrorEnum>, 'NO_SPACE': <enum G_IO_ERROR_NO_SPACE of type Gio.IOErrorEnum>, 'INVALID_ARGUMENT': <enum G_IO_ERROR_INVALID_ARGUMENT of type Gio.IOErrorEnum>, 'PERMISSION_DENIED': <enum G_IO_ERROR_PERMISSION_DENIED of type Gio.IOErrorEnum>, 'NOT_SUPPORTED': <enum G_IO_ERROR_NOT_SUPPORTED of type Gio.IOErrorEnum>, 'NOT_MOUNTED': <enum G_IO_ERROR_NOT_MOUNTED of type Gio.IOErrorEnum>, 'ALREADY_MOUNTED': <enum G_IO_ERROR_ALREADY_MOUNTED of type Gio.IOErrorEnum>, 'CLOSED': <enum G_IO_ERROR_CLOSED of type Gio.IOErrorEnum>, 'CANCELLED': <enum G_IO_ERROR_CANCELLED of type Gio.IOErrorEnum>, 'PENDING': <enum G_IO_ERROR_PENDING of type Gio.IOErrorEnum>, 'READ_ONLY': <enum G_IO_ERROR_READ_ONLY of type Gio.IOErrorEnum>, 'CANT_CREATE_BACKUP': <enum G_IO_ERROR_CANT_CREATE_BACKUP of type Gio.IOErrorEnum>, 'WRONG_ETAG': <enum G_IO_ERROR_WRONG_ETAG of type Gio.IOErrorEnum>, 'TIMED_OUT': <enum G_IO_ERROR_TIMED_OUT of type Gio.IOErrorEnum>, 'WOULD_RECURSE': <enum G_IO_ERROR_WOULD_RECURSE of type Gio.IOErrorEnum>, 'BUSY': <enum G_IO_ERROR_BUSY of type Gio.IOErrorEnum>, 'WOULD_BLOCK': <enum G_IO_ERROR_WOULD_BLOCK of type Gio.IOErrorEnum>, 'HOST_NOT_FOUND': <enum G_IO_ERROR_HOST_NOT_FOUND of type Gio.IOErrorEnum>, 'WOULD_MERGE': <enum G_IO_ERROR_WOULD_MERGE of type Gio.IOErrorEnum>, 'FAILED_HANDLED': <enum G_IO_ERROR_FAILED_HANDLED of type Gio.IOErrorEnum>, 'TOO_MANY_OPEN_FILES': <enum G_IO_ERROR_TOO_MANY_OPEN_FILES of type Gio.IOErrorEnum>, 'NOT_INITIALIZED': <enum G_IO_ERROR_NOT_INITIALIZED of type Gio.IOErrorEnum>, 'ADDRESS_IN_USE': <enum G_IO_ERROR_ADDRESS_IN_USE of type Gio.IOErrorEnum>, 'PARTIAL_INPUT': <enum G_IO_ERROR_PARTIAL_INPUT of type Gio.IOErrorEnum>, 'INVALID_DATA': <enum G_IO_ERROR_INVALID_DATA of type Gio.IOErrorEnum>, 'DBUS_ERROR': <enum G_IO_ERROR_DBUS_ERROR of type Gio.IOErrorEnum>, 'HOST_UNREACHABLE': <enum G_IO_ERROR_HOST_UNREACHABLE of type Gio.IOErrorEnum>, 'NETWORK_UNREACHABLE': <enum G_IO_ERROR_NETWORK_UNREACHABLE of type Gio.IOErrorEnum>, 'CONNECTION_REFUSED': <enum G_IO_ERROR_CONNECTION_REFUSED of type Gio.IOErrorEnum>, 'PROXY_FAILED': <enum G_IO_ERROR_PROXY_FAILED of type Gio.IOErrorEnum>, 'PROXY_AUTH_FAILED': <enum G_IO_ERROR_PROXY_AUTH_FAILED of type Gio.IOErrorEnum>, 'PROXY_NEED_AUTH': <enum G_IO_ERROR_PROXY_NEED_AUTH of type Gio.IOErrorEnum>, 'PROXY_NOT_ALLOWED': <enum G_IO_ERROR_PROXY_NOT_ALLOWED of type Gio.IOErrorEnum>, 'BROKEN_PIPE': <enum G_IO_ERROR_BROKEN_PIPE of type Gio.IOErrorEnum>, 'CONNECTION_CLOSED': <enum G_IO_ERROR_BROKEN_PIPE of type Gio.IOErrorEnum>, 'NOT_CONNECTED': <enum G_IO_ERROR_NOT_CONNECTED of type Gio.IOErrorEnum>, 'MESSAGE_TOO_LARGE': <enum G_IO_ERROR_MESSAGE_TOO_LARGE of type Gio.IOErrorEnum>, 'NO_SUCH_DEVICE': <enum G_IO_ERROR_NO_SUCH_DEVICE of type Gio.IOErrorEnum>, 'DESTINATION_UNSET': <enum G_IO_ERROR_DESTINATION_UNSET of type Gio.IOErrorEnum>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-        30: 30,
-        31: 31,
-        32: 32,
-        33: 33,
-        34: 34,
-        35: 35,
-        36: 36,
-        37: 37,
-        38: 38,
-        39: 39,
-        40: 40,
-        41: 41,
-        42: 42,
-        43: 43,
-        44: 44,
-        45: 45,
-        46: 46,
-        47: 47,
-        48: 48,
-    }
-    __gtype__ = None # (!) real value is '<GType GIOErrorEnum (2466384240)>'
-    __info__ = gi.EnumInfo(IOErrorEnum)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'FAILED': <IOErrorEnum.FAILED: 0>, 'NOT_FOUND': <IOErrorEnum.NOT_FOUND: 1>, 'EXISTS': <IOErrorEnum.EXISTS: 2>, 'IS_DIRECTORY': <IOErrorEnum.IS_DIRECTORY: 3>, 'NOT_DIRECTORY': <IOErrorEnum.NOT_DIRECTORY: 4>, 'NOT_EMPTY': <IOErrorEnum.NOT_EMPTY: 5>, 'NOT_REGULAR_FILE': <IOErrorEnum.NOT_REGULAR_FILE: 6>, 'NOT_SYMBOLIC_LINK': <IOErrorEnum.NOT_SYMBOLIC_LINK: 7>, 'NOT_MOUNTABLE_FILE': <IOErrorEnum.NOT_MOUNTABLE_FILE: 8>, 'FILENAME_TOO_LONG': <IOErrorEnum.FILENAME_TOO_LONG: 9>, 'INVALID_FILENAME': <IOErrorEnum.INVALID_FILENAME: 10>, 'TOO_MANY_LINKS': <IOErrorEnum.TOO_MANY_LINKS: 11>, 'NO_SPACE': <IOErrorEnum.NO_SPACE: 12>, 'INVALID_ARGUMENT': <IOErrorEnum.INVALID_ARGUMENT: 13>, 'PERMISSION_DENIED': <IOErrorEnum.PERMISSION_DENIED: 14>, 'NOT_SUPPORTED': <IOErrorEnum.NOT_SUPPORTED: 15>, 'NOT_MOUNTED': <IOErrorEnum.NOT_MOUNTED: 16>, 'ALREADY_MOUNTED': <IOErrorEnum.ALREADY_MOUNTED: 17>, 'CLOSED': <IOErrorEnum.CLOSED: 18>, 'CANCELLED': <IOErrorEnum.CANCELLED: 19>, 'PENDING': <IOErrorEnum.PENDING: 20>, 'READ_ONLY': <IOErrorEnum.READ_ONLY: 21>, 'CANT_CREATE_BACKUP': <IOErrorEnum.CANT_CREATE_BACKUP: 22>, 'WRONG_ETAG': <IOErrorEnum.WRONG_ETAG: 23>, 'TIMED_OUT': <IOErrorEnum.TIMED_OUT: 24>, 'WOULD_RECURSE': <IOErrorEnum.WOULD_RECURSE: 25>, 'BUSY': <IOErrorEnum.BUSY: 26>, 'WOULD_BLOCK': <IOErrorEnum.WOULD_BLOCK: 27>, 'HOST_NOT_FOUND': <IOErrorEnum.HOST_NOT_FOUND: 28>, 'WOULD_MERGE': <IOErrorEnum.WOULD_MERGE: 29>, 'FAILED_HANDLED': <IOErrorEnum.FAILED_HANDLED: 30>, 'TOO_MANY_OPEN_FILES': <IOErrorEnum.TOO_MANY_OPEN_FILES: 31>, 'NOT_INITIALIZED': <IOErrorEnum.NOT_INITIALIZED: 32>, 'ADDRESS_IN_USE': <IOErrorEnum.ADDRESS_IN_USE: 33>, 'PARTIAL_INPUT': <IOErrorEnum.PARTIAL_INPUT: 34>, 'INVALID_DATA': <IOErrorEnum.INVALID_DATA: 35>, 'DBUS_ERROR': <IOErrorEnum.DBUS_ERROR: 36>, 'HOST_UNREACHABLE': <IOErrorEnum.HOST_UNREACHABLE: 37>, 'NETWORK_UNREACHABLE': <IOErrorEnum.NETWORK_UNREACHABLE: 38>, 'CONNECTION_REFUSED': <IOErrorEnum.CONNECTION_REFUSED: 39>, 'PROXY_FAILED': <IOErrorEnum.PROXY_FAILED: 40>, 'PROXY_AUTH_FAILED': <IOErrorEnum.PROXY_AUTH_FAILED: 41>, 'PROXY_NEED_AUTH': <IOErrorEnum.PROXY_NEED_AUTH: 42>, 'PROXY_NOT_ALLOWED': <IOErrorEnum.PROXY_NOT_ALLOWED: 43>, 'BROKEN_PIPE': <IOErrorEnum.BROKEN_PIPE: 44>, 'CONNECTION_CLOSED': <IOErrorEnum.BROKEN_PIPE: 44>, 'NOT_CONNECTED': <IOErrorEnum.NOT_CONNECTED: 45>, 'MESSAGE_TOO_LARGE': <IOErrorEnum.MESSAGE_TOO_LARGE: 46>, 'NO_SUCH_DEVICE': <IOErrorEnum.NO_SUCH_DEVICE: 47>, 'DESTINATION_UNSET': <IOErrorEnum.DESTINATION_UNSET: 48>})"
+    __name__ = 'IOErrorEnum'
+    __qualname__ = 'IOErrorEnum'
 
 

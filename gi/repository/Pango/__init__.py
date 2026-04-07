@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 # Variables with simple values
@@ -35,15 +33,13 @@ GLYPH_UNKNOWN_FLAG = 268435456
 SCALE = 1024
 
 VERSION_MAJOR = 1
-VERSION_MICRO = 1
+VERSION_MICRO = 4
 VERSION_MINOR = 56
-VERSION_STRING = '1.56.1'
+VERSION_STRING = '1.56.4'
 
 _namespace = 'Pango'
 
 _version = '1.0'
-
-__weakref__ = None
 
 # functions
 
@@ -63,8 +59,8 @@ def attr_baseline_shift_new(shift): # real signature unknown; restored from __do
     """ attr_baseline_shift_new(shift:int) -> Pango.Attribute """
     pass
 
-def attr_break(text, length, attr_list, offset, attrs): # real signature unknown; restored from __doc__
-    """ attr_break(text:str, length:int, attr_list:Pango.AttrList, offset:int, attrs:list) """
+def attr_break(text, length, attr_list, offset): # real signature unknown; restored from __doc__
+    """ attr_break(text:str, length:int, attr_list:Pango.AttrList, offset:int) -> attrs:list """
     pass
 
 def attr_fallback_new(enable_fallback): # real signature unknown; restored from __doc__
@@ -219,16 +215,16 @@ def bidi_type_for_unichar(ch): # real signature unknown; restored from __doc__
     """ bidi_type_for_unichar(ch:str) -> Pango.BidiType """
     pass
 
-def break_(text, length, analysis, attrs): # real signature unknown; restored from __doc__
-    """ break_(text:str, length:int, analysis:Pango.Analysis, attrs:list) """
+def break_(text, length, analysis): # real signature unknown; restored from __doc__
+    """ break_(text:str, length:int, analysis:Pango.Analysis) -> attrs:list """
     pass
 
-def default_break(text, length, analysis=None, attrs, attrs_len): # real signature unknown; restored from __doc__
-    """ default_break(text:str, length:int, analysis:Pango.Analysis=None, attrs:Pango.LogAttr, attrs_len:int) """
+def default_break(text, length, analysis=None): # real signature unknown; restored from __doc__
+    """ default_break(text:str, length:int, analysis:Pango.Analysis=None) -> attrs:list """
     pass
 
-def extents_to_pixels(inclusive=None, nearest=None): # real signature unknown; restored from __doc__
-    """ extents_to_pixels(inclusive:Pango.Rectangle=None, nearest:Pango.Rectangle=None) """
+def extents_to_pixels(inclusive, *args, **kwargs): # real signature unknown; NOTE: unreliably restored from __doc__ 
+    """ extents_to_pixels(inclusive:Pango.Rectangle=<optional>, nearest:Pango.Rectangle=<optional>) -> inclusive:Pango.Rectangle, nearest:Pango.Rectangle """
     pass
 
 def find_base_dir(text, length): # real signature unknown; restored from __doc__
@@ -243,12 +239,12 @@ def font_description_from_string(p_str): # real signature unknown; restored from
     """ font_description_from_string(str:str) -> Pango.FontDescription """
     pass
 
-def get_log_attrs(text, length, level, language, attrs): # real signature unknown; restored from __doc__
-    """ get_log_attrs(text:str, length:int, level:int, language:Pango.Language, attrs:list) """
+def get_log_attrs(text, length, level, language): # real signature unknown; restored from __doc__
+    """ get_log_attrs(text:str, length:int, level:int, language:Pango.Language) -> attrs:list """
     pass
 
-def get_mirror_char(ch, mirrored_ch): # real signature unknown; restored from __doc__
-    """ get_mirror_char(ch:str, mirrored_ch:str) -> bool """
+def get_mirror_char(ch): # real signature unknown; restored from __doc__
+    """ get_mirror_char(ch:str) -> bool, mirrored_ch:str """
     return False
 
 def gravity_get_for_matrix(matrix=None): # real signature unknown; restored from __doc__
@@ -296,8 +292,8 @@ def layout_deserialize_error_quark(): # real signature unknown; restored from __
     return 0
 
 def log2vis_get_embedding_levels(text, length, pbase_dir): # real signature unknown; restored from __doc__
-    """ log2vis_get_embedding_levels(text:str, length:int, pbase_dir:Pango.Direction) -> int """
-    return 0
+    """ log2vis_get_embedding_levels(text:str, length:int, pbase_dir:Pango.Direction) -> list, pbase_dir:Pango.Direction """
+    return []
 
 def markup_parser_finish(context): # real signature unknown; restored from __doc__
     """ markup_parser_finish(context:GLib.MarkupParseContext) -> bool, attr_list:Pango.AttrList, text:str, accel_char:str """
@@ -363,20 +359,20 @@ def script_get_sample_language(script): # real signature unknown; restored from 
     """ script_get_sample_language(script:Pango.Script) -> Pango.Language or None """
     pass
 
-def shape(text, length, analysis, glyphs): # real signature unknown; restored from __doc__
-    """ shape(text:str, length:int, analysis:Pango.Analysis, glyphs:Pango.GlyphString) """
+def shape(text, length, analysis): # real signature unknown; restored from __doc__
+    """ shape(text:str, length:int, analysis:Pango.Analysis) -> glyphs:Pango.GlyphString """
     pass
 
-def shape_full(item_text, item_length, paragraph_text=None, paragraph_length, analysis, glyphs): # real signature unknown; restored from __doc__
-    """ shape_full(item_text:str, item_length:int, paragraph_text:str=None, paragraph_length:int, analysis:Pango.Analysis, glyphs:Pango.GlyphString) """
+def shape_full(item_text, item_length, paragraph_text=None, paragraph_length, analysis): # real signature unknown; restored from __doc__
+    """ shape_full(item_text:str, item_length:int, paragraph_text:str=None, paragraph_length:int, analysis:Pango.Analysis) -> glyphs:Pango.GlyphString """
     pass
 
-def shape_item(item, paragraph_text=None, paragraph_length, log_attrs=None, glyphs, flags): # real signature unknown; restored from __doc__
-    """ shape_item(item:Pango.Item, paragraph_text:str=None, paragraph_length:int, log_attrs:Pango.LogAttr=None, glyphs:Pango.GlyphString, flags:Pango.ShapeFlags) """
+def shape_item(item, paragraph_text=None, paragraph_length, log_attrs=None, flags): # real signature unknown; restored from __doc__
+    """ shape_item(item:Pango.Item, paragraph_text:str=None, paragraph_length:int, log_attrs:Pango.LogAttr=None, flags:Pango.ShapeFlags) -> glyphs:Pango.GlyphString """
     pass
 
-def shape_with_flags(item_text, item_length, paragraph_text=None, paragraph_length, analysis, glyphs, flags): # real signature unknown; restored from __doc__
-    """ shape_with_flags(item_text:str, item_length:int, paragraph_text:str=None, paragraph_length:int, analysis:Pango.Analysis, glyphs:Pango.GlyphString, flags:Pango.ShapeFlags) """
+def shape_with_flags(item_text, item_length, paragraph_text=None, paragraph_length, analysis, flags): # real signature unknown; restored from __doc__
+    """ shape_with_flags(item_text:str, item_length:int, paragraph_text:str=None, paragraph_length:int, analysis:Pango.Analysis, flags:Pango.ShapeFlags) -> glyphs:Pango.GlyphString """
     pass
 
 def skip_space(pos): # real signature unknown; restored from __doc__
@@ -391,8 +387,8 @@ def tab_array_from_string(text): # real signature unknown; restored from __doc__
     """ tab_array_from_string(text:str) -> Pango.TabArray or None """
     pass
 
-def tailor_break(text, length, analysis, offset, attrs): # real signature unknown; restored from __doc__
-    """ tailor_break(text:str, length:int, analysis:Pango.Analysis, offset:int, attrs:list) """
+def tailor_break(text, length, analysis, offset): # real signature unknown; restored from __doc__
+    """ tailor_break(text:str, length:int, analysis:Pango.Analysis, offset:int) -> attrs:list """
     pass
 
 def trim_string(p_str): # real signature unknown; restored from __doc__
@@ -422,111 +418,6 @@ def version_check(required_major, required_minor, required_micro): # real signat
 def version_string(): # real signature unknown; restored from __doc__
     """ version_string() -> str """
     return ""
-
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """
-    Default object formatter.
-    
-    Return str(self) if format_spec is empty. Raise TypeError otherwise.
-    """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
-    pass
 
 # classes
 
@@ -609,16 +500,11 @@ from .Underline import Underline
 from .Variant import Variant
 from .Weight import Weight
 from .WrapMode import WrapMode
-from .__class__ import __class__
 # variables with complex values
 
-_introspection_module = None # (!) real value is "<IntrospectionModule 'Pango' from 'C:\\\\Program Files\\\\GIMP 3\\\\lib\\\\girepository-1.0\\\\Pango-1.0.typelib'>"
-
-__annotations__ = {}
-
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x00000213f3ab0c80>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x0000028034fe8440>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Pango', loader=<gi.importer.DynamicImporter object at 0x00000213f3ab0c80>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Pango', loader=<gi.importer.DynamicImporter object at 0x0000028034fe8440>)"
 

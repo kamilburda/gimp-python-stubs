@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class AsciiType(__gobject.GFlags):
+class AsciiType(__enum.IntFlag):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class AsciiType(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class AsciiType(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -114,8 +112,8 @@ class AsciiType(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -126,12 +124,16 @@ class AsciiType(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +162,10 @@ class AsciiType(__gobject.GFlags):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -201,8 +207,16 @@ class AsciiType(__gobject.GFlags):
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -230,16 +244,16 @@ class AsciiType(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -254,24 +268,24 @@ class AsciiType(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -290,8 +304,8 @@ class AsciiType(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -322,8 +336,8 @@ class AsciiType(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -335,7 +349,7 @@ class AsciiType(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -361,16 +375,12 @@ class AsciiType(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -380,10 +390,6 @@ class AsciiType(__gobject.GFlags):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     ALNUM = 1
@@ -397,22 +403,9 @@ class AsciiType(__gobject.GFlags):
     SPACE = 256
     UPPER = 512
     XDIGIT = 1024
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'AsciiType' objects>, '__doc__': None, '__gtype__': <GType PyGLibAsciiType (155709664)>, '__flags_values__': {1: <flags G_ASCII_ALNUM of type GLib.AsciiType>, 2: <flags G_ASCII_ALPHA of type GLib.AsciiType>, 4: <flags G_ASCII_CNTRL of type GLib.AsciiType>, 8: <flags G_ASCII_DIGIT of type GLib.AsciiType>, 16: <flags G_ASCII_GRAPH of type GLib.AsciiType>, 32: <flags G_ASCII_LOWER of type GLib.AsciiType>, 64: <flags G_ASCII_PRINT of type GLib.AsciiType>, 128: <flags G_ASCII_PUNCT of type GLib.AsciiType>, 256: <flags G_ASCII_SPACE of type GLib.AsciiType>, 512: <flags G_ASCII_UPPER of type GLib.AsciiType>, 1024: <flags G_ASCII_XDIGIT of type GLib.AsciiType>}, '__info__': gi.EnumInfo(AsciiType), 'ALNUM': <flags G_ASCII_ALNUM of type GLib.AsciiType>, 'ALPHA': <flags G_ASCII_ALPHA of type GLib.AsciiType>, 'CNTRL': <flags G_ASCII_CNTRL of type GLib.AsciiType>, 'DIGIT': <flags G_ASCII_DIGIT of type GLib.AsciiType>, 'GRAPH': <flags G_ASCII_GRAPH of type GLib.AsciiType>, 'LOWER': <flags G_ASCII_LOWER of type GLib.AsciiType>, 'PRINT': <flags G_ASCII_PRINT of type GLib.AsciiType>, 'PUNCT': <flags G_ASCII_PUNCT of type GLib.AsciiType>, 'SPACE': <flags G_ASCII_SPACE of type GLib.AsciiType>, 'UPPER': <flags G_ASCII_UPPER of type GLib.AsciiType>, 'XDIGIT': <flags G_ASCII_XDIGIT of type GLib.AsciiType>})"
-    __flags_values__ = {
-        1: 1,
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-        64: 64,
-        128: 128,
-        256: 256,
-        512: 512,
-        1024: 1024,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGLibAsciiType (155709664)>'
-    __info__ = gi.EnumInfo(AsciiType)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'ALNUM': <AsciiType.ALNUM: 1>, 'ALPHA': <AsciiType.ALPHA: 2>, 'CNTRL': <AsciiType.CNTRL: 4>, 'DIGIT': <AsciiType.DIGIT: 8>, 'GRAPH': <AsciiType.GRAPH: 16>, 'LOWER': <AsciiType.LOWER: 32>, 'PRINT': <AsciiType.PRINT: 64>, 'PUNCT': <AsciiType.PUNCT: 128>, 'SPACE': <AsciiType.SPACE: 256>, 'UPPER': <AsciiType.UPPER: 512>, 'XDIGIT': <AsciiType.XDIGIT: 1024>})"
+    __name__ = 'AsciiType'
+    __qualname__ = 'AsciiType'
 
 

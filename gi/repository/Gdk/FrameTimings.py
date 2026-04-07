@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -162,8 +161,8 @@ class FrameTimings(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FrameTimings), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkFrameTimings (2579726720)>, '__dict__': <attribute '__dict__' of 'FrameTimings' objects>, '__weakref__': <attribute '__weakref__' of 'FrameTimings' objects>, '__doc__': None, 'get_complete': gi.FunctionInfo(get_complete, bound=None), 'get_frame_counter': gi.FunctionInfo(get_frame_counter, bound=None), 'get_frame_time': gi.FunctionInfo(get_frame_time, bound=None), 'get_predicted_presentation_time': gi.FunctionInfo(get_predicted_presentation_time, bound=None), 'get_presentation_time': gi.FunctionInfo(get_presentation_time, bound=None), 'get_refresh_interval': gi.FunctionInfo(get_refresh_interval, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GdkFrameTimings (2579726720)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FrameTimings), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkFrameTimings (587608224)>, '__dict__': <attribute '__dict__' of 'FrameTimings' objects>, '__weakref__': <attribute '__weakref__' of 'FrameTimings' objects>, '__doc__': None, 'get_complete': gi.FunctionInfo(get_complete), 'get_frame_counter': gi.FunctionInfo(get_frame_counter), 'get_frame_time': gi.FunctionInfo(get_frame_time), 'get_predicted_presentation_time': gi.FunctionInfo(get_predicted_presentation_time), 'get_presentation_time': gi.FunctionInfo(get_presentation_time), 'get_refresh_interval': gi.FunctionInfo(get_refresh_interval), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref)})"
+    __gtype__ = None # (!) real value is '<GType GdkFrameTimings (587608224)>'
     __info__ = StructInfo(FrameTimings)
 
 

@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 # Variables with simple values
@@ -180,6 +178,10 @@ LOG_FATAL_MASK = 5
 
 LOG_LEVEL_USER_SHIFT = 8
 
+macro__has_attribute_ifunc = 0
+
+macro__has_attribute_no_sanitize_address = 0
+
 macro__has_attribute___noreturn__ = 0
 
 MAJOR_VERSION = 2
@@ -216,7 +218,7 @@ MININT8 = -128
 MINLONG = -2147483648
 MINOFFSET = -9223372036854775808
 
-MINOR_VERSION = 82
+MINOR_VERSION = 86
 
 MINSHORT = -32768
 MINSSIZE = -9223372036854775808
@@ -310,6 +312,10 @@ SYSDEF_MSG_PEEK = 2
 
 TEST_OPTION_ISOLATE_DIRS = 'isolate_dirs'
 
+TEST_OPTION_NONFATAL_ASSERTIONS = 'nonfatal-assertions'
+
+TEST_OPTION_NO_PRGNAME = 'no_g_set_prgname'
+
 TIME_SPAN_DAY = 86400000000
 TIME_SPAN_HOUR = 3600000000
 TIME_SPAN_MILLISECOND = 1000
@@ -342,8 +348,6 @@ WIN32_MSG_HANDLE = 19981206
 _namespace = 'GLib'
 
 _version = '2.0'
-
-__weakref__ = None
 
 # functions
 
@@ -467,52 +471,52 @@ def atexit(func): # real signature unknown; restored from __doc__
     """ atexit(func:GLib.VoidFunc) """
     pass
 
-def atomic_int_add(atomic, val): # real signature unknown; restored from __doc__
-    """ atomic_int_add(atomic:int, val:int) -> int """
+def atomic_int_add(atomic=None, val): # real signature unknown; restored from __doc__
+    """ atomic_int_add(atomic=None, val:int) -> int """
     return 0
 
-def atomic_int_and(atomic, val): # real signature unknown; restored from __doc__
-    """ atomic_int_and(atomic:int, val:int) -> int """
+def atomic_int_and(atomic=None, val): # real signature unknown; restored from __doc__
+    """ atomic_int_and(atomic=None, val:int) -> int """
     return 0
 
-def atomic_int_compare_and_exchange(atomic, oldval, newval): # real signature unknown; restored from __doc__
-    """ atomic_int_compare_and_exchange(atomic:int, oldval:int, newval:int) -> bool """
+def atomic_int_compare_and_exchange(atomic=None, oldval, newval): # real signature unknown; restored from __doc__
+    """ atomic_int_compare_and_exchange(atomic=None, oldval:int, newval:int) -> bool """
     return False
 
-def atomic_int_compare_and_exchange_full(atomic, oldval, newval): # real signature unknown; restored from __doc__
-    """ atomic_int_compare_and_exchange_full(atomic:int, oldval:int, newval:int) -> bool, preval:int """
+def atomic_int_compare_and_exchange_full(atomic=None, oldval, newval): # real signature unknown; restored from __doc__
+    """ atomic_int_compare_and_exchange_full(atomic=None, oldval:int, newval:int) -> bool, preval:int """
     return False
 
-def atomic_int_dec_and_test(atomic): # real signature unknown; restored from __doc__
-    """ atomic_int_dec_and_test(atomic:int) -> bool """
+def atomic_int_dec_and_test(atomic=None): # real signature unknown; restored from __doc__
+    """ atomic_int_dec_and_test(atomic=None) -> bool """
     return False
 
-def atomic_int_exchange(atomic, newval): # real signature unknown; restored from __doc__
-    """ atomic_int_exchange(atomic:int, newval:int) -> int """
+def atomic_int_exchange(atomic=None, newval): # real signature unknown; restored from __doc__
+    """ atomic_int_exchange(atomic=None, newval:int) -> int """
     return 0
 
-def atomic_int_exchange_and_add(atomic, val): # real signature unknown; restored from __doc__
-    """ atomic_int_exchange_and_add(atomic:int, val:int) -> int """
+def atomic_int_exchange_and_add(atomic=None, val): # real signature unknown; restored from __doc__
+    """ atomic_int_exchange_and_add(atomic=None, val:int) -> int """
     return 0
 
-def atomic_int_get(atomic): # real signature unknown; restored from __doc__
-    """ atomic_int_get(atomic:int) -> int """
+def atomic_int_get(atomic=None): # real signature unknown; restored from __doc__
+    """ atomic_int_get(atomic=None) -> int """
     return 0
 
-def atomic_int_inc(atomic): # real signature unknown; restored from __doc__
-    """ atomic_int_inc(atomic:int) """
+def atomic_int_inc(atomic=None): # real signature unknown; restored from __doc__
+    """ atomic_int_inc(atomic=None) """
     pass
 
-def atomic_int_or(atomic, val): # real signature unknown; restored from __doc__
-    """ atomic_int_or(atomic:int, val:int) -> int """
+def atomic_int_or(atomic=None, val): # real signature unknown; restored from __doc__
+    """ atomic_int_or(atomic=None, val:int) -> int """
     return 0
 
-def atomic_int_set(atomic, newval): # real signature unknown; restored from __doc__
-    """ atomic_int_set(atomic:int, newval:int) """
+def atomic_int_set(atomic=None, newval): # real signature unknown; restored from __doc__
+    """ atomic_int_set(atomic=None, newval:int) """
     pass
 
-def atomic_int_xor(atomic, val): # real signature unknown; restored from __doc__
-    """ atomic_int_xor(atomic:int, val:int) -> int """
+def atomic_int_xor(atomic=None, val): # real signature unknown; restored from __doc__
+    """ atomic_int_xor(atomic=None, val:int) -> int """
     return 0
 
 def atomic_pointer_add(atomic, val): # real signature unknown; restored from __doc__
@@ -591,8 +595,8 @@ def atomic_ref_count_inc(arc): # real signature unknown; restored from __doc__
     """ atomic_ref_count_inc(arc:int) """
     pass
 
-def atomic_ref_count_init(arc): # real signature unknown; restored from __doc__
-    """ atomic_ref_count_init(arc:int) """
+def atomic_ref_count_init(): # real signature unknown; restored from __doc__
+    """ atomic_ref_count_init() -> arc:int """
     pass
 
 def base64_decode(text): # real signature unknown; restored from __doc__
@@ -619,8 +623,12 @@ def basename(file_name): # real signature unknown; restored from __doc__
     """ basename(file_name:str) -> str """
     return ""
 
-def bit_lock(address, lock_bit): # real signature unknown; restored from __doc__
-    """ bit_lock(address:int, lock_bit:int) """
+def bit_lock(address=None, lock_bit): # real signature unknown; restored from __doc__
+    """ bit_lock(address=None, lock_bit:int) """
+    pass
+
+def bit_lock_and_get(address=None, lock_bit): # real signature unknown; restored from __doc__
+    """ bit_lock_and_get(address=None, lock_bit:int) -> out_val:int """
     pass
 
 def bit_nth_lsf(mask, nth_bit): # real signature unknown; restored from __doc__
@@ -635,12 +643,16 @@ def bit_storage(number): # real signature unknown; restored from __doc__
     """ bit_storage(number:int) -> int """
     return 0
 
-def bit_trylock(address, lock_bit): # real signature unknown; restored from __doc__
-    """ bit_trylock(address:int, lock_bit:int) -> bool """
+def bit_trylock(address=None, lock_bit): # real signature unknown; restored from __doc__
+    """ bit_trylock(address=None, lock_bit:int) -> bool """
     return False
 
-def bit_unlock(address, lock_bit): # real signature unknown; restored from __doc__
-    """ bit_unlock(address:int, lock_bit:int) """
+def bit_unlock(address=None, lock_bit): # real signature unknown; restored from __doc__
+    """ bit_unlock(address=None, lock_bit:int) """
+    pass
+
+def bit_unlock_and_set(address=None, lock_bit, new_val, preserve_mask): # real signature unknown; restored from __doc__
+    """ bit_unlock_and_set(address=None, lock_bit:int, new_val:int, preserve_mask:int) """
     pass
 
 def blow_chunks(): # real signature unknown; restored from __doc__
@@ -659,13 +671,13 @@ def build_pathv(separator, args): # real signature unknown; restored from __doc_
     """ build_pathv(separator:str, args:list) -> str """
     return ""
 
-def byte_array_append(array, data, len): # real signature unknown; restored from __doc__
-    """ byte_array_append(array:list, data:int, len:int) -> list """
+def byte_array_append(array, data): # real signature unknown; restored from __doc__
+    """ byte_array_append(array:list, data:list) -> list """
     return []
 
 def byte_array_free(array, free_segment): # real signature unknown; restored from __doc__
-    """ byte_array_free(array:list, free_segment:bool) -> int """
-    return 0
+    """ byte_array_free(array:list, free_segment:bool) -> list or None """
+    return []
 
 def byte_array_free_to_bytes(array): # real signature unknown; restored from __doc__
     """ byte_array_free_to_bytes(array:list) -> GLib.Bytes """
@@ -679,8 +691,8 @@ def byte_array_new_take(data): # real signature unknown; restored from __doc__
     """ byte_array_new_take(data:list) -> list """
     return []
 
-def byte_array_prepend(array, data, len): # real signature unknown; restored from __doc__
-    """ byte_array_prepend(array:list, data:int, len:int) -> list """
+def byte_array_prepend(array, data): # real signature unknown; restored from __doc__
+    """ byte_array_prepend(array:list, data:list) -> list """
     return []
 
 def byte_array_ref(array): # real signature unknown; restored from __doc__
@@ -716,8 +728,8 @@ def byte_array_sort_with_data(array, compare_func, user_data=None): # real signa
     pass
 
 def byte_array_steal(array): # real signature unknown; restored from __doc__
-    """ byte_array_steal(array:list) -> int, len:int """
-    return 0
+    """ byte_array_steal(array:list) -> list """
+    return []
 
 def byte_array_unref(array): # real signature unknown; restored from __doc__
     """ byte_array_unref(array:list) """
@@ -740,7 +752,7 @@ def check_version(required_major, required_minor, required_micro): # real signat
     return ""
 
 def child_watch_add(*args, **kwargs): # reliably restored by inspect
-    """ child_watch_add(priority, pid, function, *data) """
+    """ child_watch_add(priority, pid, function, *data). """
     pass
 
 def child_watch_source_new(pid): # real signature unknown; restored from __doc__
@@ -849,6 +861,10 @@ def date_get_monday_weeks_in_year(year): # real signature unknown; restored from
 
 def date_get_sunday_weeks_in_year(year): # real signature unknown; restored from __doc__
     """ date_get_sunday_weeks_in_year(year:int) -> int """
+    return 0
+
+def date_get_weeks_in_year(year, first_day_of_week): # real signature unknown; restored from __doc__
+    """ date_get_weeks_in_year(year:int, first_day_of_week:GLib.DateWeekday) -> int """
     return 0
 
 def date_is_leap_year(year): # real signature unknown; restored from __doc__
@@ -1283,7 +1299,7 @@ def hostname_to_unicode(hostname): # real signature unknown; restored from __doc
     """ hostname_to_unicode(hostname:str) -> str or None """
     return ""
 
-def idle_add(function, *user_data, **kwargs): # reliably restored by inspect
+def idle_add(function, *user_data, priority=200): # reliably restored by inspect
     # no doc
     pass
 
@@ -1320,7 +1336,7 @@ def int_hash(v): # real signature unknown; restored from __doc__
     return 0
 
 def io_add_watch(*args, **kwargs): # reliably restored by inspect
-    """ io_add_watch(channel, priority, condition, func, *user_data) -> event_source_id """
+    """ io_add_watch(channel, priority, condition, func, *user_data) -> event_source_id. """
     pass
 
 def io_channel_error_from_errno(en): # real signature unknown; restored from __doc__
@@ -1365,6 +1381,10 @@ def locale_to_utf8(opsysstring): # real signature unknown; restored from __doc__
 
 def log_default_handler(log_domain=None, log_level, message=None, unused_data=None): # real signature unknown; restored from __doc__
     """ log_default_handler(log_domain:str=None, log_level:GLib.LogLevelFlags, message:str=None, unused_data=None) """
+    pass
+
+def log_get_always_fatal(): # real signature unknown; restored from __doc__
+    """ log_get_always_fatal() -> GLib.LogLevelFlags """
     pass
 
 def log_get_debug_enabled(): # real signature unknown; restored from __doc__
@@ -1563,8 +1583,8 @@ def on_error_query(prg_name): # real signature unknown; restored from __doc__
     """ on_error_query(prg_name:str) """
     pass
 
-def on_error_stack_trace(prg_name): # real signature unknown; restored from __doc__
-    """ on_error_stack_trace(prg_name:str) """
+def on_error_stack_trace(prg_name=None): # real signature unknown; restored from __doc__
+    """ on_error_stack_trace(prg_name:str=None) """
     pass
 
 def open(filename, flags, mode): # real signature unknown; restored from __doc__
@@ -1720,20 +1740,24 @@ def ref_count_compare(rc, val): # real signature unknown; restored from __doc__
     return False
 
 def ref_count_dec(rc): # real signature unknown; restored from __doc__
-    """ ref_count_dec(rc:int) -> bool """
+    """ ref_count_dec(rc:int) -> bool, rc:int """
     return False
 
 def ref_count_inc(rc): # real signature unknown; restored from __doc__
-    """ ref_count_inc(rc:int) """
+    """ ref_count_inc(rc:int) -> rc:int """
     pass
 
-def ref_count_init(rc): # real signature unknown; restored from __doc__
-    """ ref_count_init(rc:int) """
+def ref_count_init(): # real signature unknown; restored from __doc__
+    """ ref_count_init() -> rc:int """
     pass
 
 def ref_string_acquire(p_str): # real signature unknown; restored from __doc__
     """ ref_string_acquire(str:str) -> str """
     return ""
+
+def ref_string_equal(str1, str2): # real signature unknown; restored from __doc__
+    """ ref_string_equal(str1:str, str2:str) -> bool """
+    return False
 
 def ref_string_length(p_str): # real signature unknown; restored from __doc__
     """ ref_string_length(str:str) -> int """
@@ -2335,11 +2359,11 @@ def thread_yield(): # real signature unknown; restored from __doc__
     """ thread_yield() """
     pass
 
-def timeout_add(interval, function, *user_data, **kwargs): # reliably restored by inspect
+def timeout_add(interval, function, *user_data, priority=0): # reliably restored by inspect
     # no doc
     pass
 
-def timeout_add_seconds(interval, function, *user_data, **kwargs): # reliably restored by inspect
+def timeout_add_seconds(interval, function, *user_data, priority=0): # reliably restored by inspect
     # no doc
     pass
 
@@ -2748,11 +2772,11 @@ def utf8_truncate_middle(string, truncate_length): # real signature unknown; res
     return ""
 
 def utf8_validate(p_str): # real signature unknown; restored from __doc__
-    """ utf8_validate(str:list) -> bool, end:str """
+    """ utf8_validate(str:list) -> bool, end:list """
     return False
 
 def utf8_validate_len(p_str): # real signature unknown; restored from __doc__
-    """ utf8_validate_len(str:list) -> bool, end:str """
+    """ utf8_validate_len(str:list) -> bool, end:list """
     return False
 
 def utime(filename, utb=None): # real signature unknown; restored from __doc__
@@ -2863,111 +2887,6 @@ def _io_add_watch_get_args(channel, priority_, condition, *cb_and_user_data, **k
     # no doc
     pass
 
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """
-    Default object formatter.
-    
-    Return str(self) if format_spec is empty. Raise TypeError otherwise.
-    """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
-    pass
-
 # classes
 
 from .Allocator import Allocator
@@ -3042,9 +2961,11 @@ from .NumberParserError import NumberParserError
 from .Once import Once
 from .OnceStatus import OnceStatus
 from .OptionArg import OptionArg
+from .OptionContext import OptionContext
 from .OptionEntry import OptionEntry
 from .OptionError import OptionError
 from .OptionFlags import OptionFlags
+from .OptionGroup import OptionGroup
 from .PathBuf import PathBuf
 from .PatternSpec import PatternSpec
 from .PollFD import PollFD
@@ -3119,28 +3040,23 @@ from .VariantDict import VariantDict
 from .VariantParseError import VariantParseError
 from .VariantType import VariantType
 from .Win32OSType import Win32OSType
-from .__class__ import __class__
 # variables with complex values
 
 glib_version = (
     2,
-    82,
+    86,
     4,
 )
 
 pyglib_version = (
     3,
-    50,
+    56,
     0,
 )
 
-_introspection_module = option.GLib
-
-__annotations__ = {}
-
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x0000028309690e90>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x0000018e9fdbc440>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GLib', loader=<gi.importer.DynamicImporter object at 0x0000028309690e90>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GLib', loader=<gi.importer.DynamicImporter object at 0x0000018e9fdbc440>)"
 

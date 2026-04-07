@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -161,7 +160,7 @@ class IconViewClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IconViewClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IconViewClass' objects>, '__weakref__': <attribute '__weakref__' of 'IconViewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceabf2660>, 'item_activated': <property object at 0x000002eceabf2750>, 'selection_changed': <property object at 0x000002eceabf2840>, 'select_all': <property object at 0x000002eceabf2930>, 'unselect_all': <property object at 0x000002eceabf2a20>, 'select_cursor_item': <property object at 0x000002eceabf2b10>, 'toggle_cursor_item': <property object at 0x000002eceabf2c00>, 'move_cursor': <property object at 0x000002eceabf2cf0>, 'activate_cursor_item': <property object at 0x000002eceabf2de0>, '_gtk_reserved1': <property object at 0x000002eceabf2ed0>, '_gtk_reserved2': <property object at 0x000002eceabf2fc0>, '_gtk_reserved3': <property object at 0x000002eceabf30b0>, '_gtk_reserved4': <property object at 0x000002eceabf31a0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IconViewClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IconViewClass' objects>, '__weakref__': <attribute '__weakref__' of 'IconViewClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18d99e0>, 'item_activated': <property object at 0x000002bfd18d9ad0>, 'selection_changed': <property object at 0x000002bfd18d9bc0>, 'select_all': <property object at 0x000002bfd18d9cb0>, 'unselect_all': <property object at 0x000002bfd18d9da0>, 'select_cursor_item': <property object at 0x000002bfd18d9e90>, 'toggle_cursor_item': <property object at 0x000002bfd18d9f80>, 'move_cursor': <property object at 0x000002bfd18da070>, 'activate_cursor_item': <property object at 0x000002bfd18da160>, '_gtk_reserved1': <property object at 0x000002bfd18da250>, '_gtk_reserved2': <property object at 0x000002bfd18da340>, '_gtk_reserved3': <property object at 0x000002bfd18da430>, '_gtk_reserved4': <property object at 0x000002bfd18da520>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(IconViewClass)
 

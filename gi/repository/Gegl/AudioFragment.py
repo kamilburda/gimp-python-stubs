@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -49,7 +43,7 @@ class AudioFragment(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -77,6 +71,9 @@ class AudioFragment(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -220,7 +217,8 @@ class AudioFragment(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, sample_rate, channels, channel_layout, max_samples): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, sample_rate, channels, channel_layout, max_samples): # real signature unknown; restored from __doc__
         """ new(sample_rate:int, channels:int, channel_layout:int, max_samples:int) -> Gegl.AudioFragment """
         pass
 
@@ -325,20 +323,20 @@ class AudioFragment(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -476,12 +474,12 @@ class AudioFragment(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x00000276193f44f0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ebd9d38730>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(AudioFragment), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglAudioFragment (426592112)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_channel_layout': gi.FunctionInfo(get_channel_layout, bound=None), 'get_channels': gi.FunctionInfo(get_channels, bound=None), 'get_max_samples': gi.FunctionInfo(get_max_samples, bound=None), 'get_pos': gi.FunctionInfo(get_pos, bound=None), 'get_sample_count': gi.FunctionInfo(get_sample_count, bound=None), 'get_sample_rate': gi.FunctionInfo(get_sample_rate, bound=None), 'set_channel_layout': gi.FunctionInfo(set_channel_layout, bound=None), 'set_channels': gi.FunctionInfo(set_channels, bound=None), 'set_max_samples': gi.FunctionInfo(set_max_samples, bound=None), 'set_pos': gi.FunctionInfo(set_pos, bound=None), 'set_sample_count': gi.FunctionInfo(set_sample_count, bound=None), 'set_sample_rate': gi.FunctionInfo(set_sample_rate, bound=None), 'parent_instance': <property object at 0x000002761b94c4a0>, 'data': <property object at 0x000002761b94c450>, 'priv': <property object at 0x000002761b94c270>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(AudioFragment), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglAudioFragment (3652618272)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_channel_layout': gi.FunctionInfo(get_channel_layout), 'get_channels': gi.FunctionInfo(get_channels), 'get_max_samples': gi.FunctionInfo(get_max_samples), 'get_pos': gi.FunctionInfo(get_pos), 'get_sample_count': gi.FunctionInfo(get_sample_count), 'get_sample_rate': gi.FunctionInfo(get_sample_rate), 'set_channel_layout': gi.FunctionInfo(set_channel_layout), 'set_channels': gi.FunctionInfo(set_channels), 'set_max_samples': gi.FunctionInfo(set_max_samples), 'set_pos': gi.FunctionInfo(set_pos), 'set_sample_count': gi.FunctionInfo(set_sample_count), 'set_sample_rate': gi.FunctionInfo(set_sample_rate), 'parent_instance': <property object at 0x000001ebdc261210>, 'data': <property object at 0x000001ebdc261260>, 'priv': <property object at 0x000001ebdc261080>})"
     __gdoc__ = 'Object GeglAudioFragment\n\nProperties from GeglAudioFragment:\n  string -> gchararray: String\n    A String representation of the GeglAudioFragment\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglAudioFragment (426592112)>'
+    __gtype__ = None # (!) real value is '<GType GeglAudioFragment (3652618272)>'
     __info__ = ObjectInfo(AudioFragment)
 
 

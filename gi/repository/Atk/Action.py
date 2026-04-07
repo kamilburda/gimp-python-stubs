@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,10 +150,10 @@ class Action(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Action), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkAction (892041632)>, '__dict__': <attribute '__dict__' of 'Action' objects>, '__weakref__': <attribute '__weakref__' of 'Action' objects>, '__doc__': None, '__gsignals__': {}, 'do_action': gi.FunctionInfo(do_action, bound=None), 'get_description': gi.FunctionInfo(get_description, bound=None), 'get_keybinding': gi.FunctionInfo(get_keybinding, bound=None), 'get_localized_name': gi.FunctionInfo(get_localized_name, bound=None), 'get_n_actions': gi.FunctionInfo(get_n_actions, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'set_description': gi.FunctionInfo(set_description, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Action), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkAction (1534560096)>, '__dict__': <attribute '__dict__' of 'Action' objects>, '__weakref__': <attribute '__weakref__' of 'Action' objects>, '__doc__': None, '__gsignals__': {}, 'do_action': gi.FunctionInfo(do_action), 'get_description': gi.FunctionInfo(get_description), 'get_keybinding': gi.FunctionInfo(get_keybinding), 'get_localized_name': gi.FunctionInfo(get_localized_name), 'get_n_actions': gi.FunctionInfo(get_n_actions), 'get_name': gi.FunctionInfo(get_name), 'set_description': gi.FunctionInfo(set_description)})"
     __gdoc__ = 'Interface AtkAction\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkAction (892041632)>'
+    __gtype__ = None # (!) real value is '<GType AtkAction (1534560096)>'
     __info__ = InterfaceInfo(Action)
 
 

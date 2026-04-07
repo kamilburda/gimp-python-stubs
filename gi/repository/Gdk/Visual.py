@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -42,7 +41,7 @@ class Visual(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -70,6 +69,9 @@ class Visual(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -330,20 +332,20 @@ class Visual(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -475,12 +477,12 @@ class Visual(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002459c419870>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x00000187257ddde0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Visual), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkVisual (2578995136)>, '__doc__': None, '__gsignals__': {}, 'get_best': gi.FunctionInfo(get_best, bound=None), 'get_best_depth': gi.FunctionInfo(get_best_depth, bound=None), 'get_best_type': gi.FunctionInfo(get_best_type, bound=None), 'get_best_with_both': gi.FunctionInfo(get_best_with_both, bound=None), 'get_best_with_depth': gi.FunctionInfo(get_best_with_depth, bound=None), 'get_best_with_type': gi.FunctionInfo(get_best_with_type, bound=None), 'get_system': gi.FunctionInfo(get_system, bound=None), 'get_bits_per_rgb': gi.FunctionInfo(get_bits_per_rgb, bound=None), 'get_blue_pixel_details': gi.FunctionInfo(get_blue_pixel_details, bound=None), 'get_byte_order': gi.FunctionInfo(get_byte_order, bound=None), 'get_colormap_size': gi.FunctionInfo(get_colormap_size, bound=None), 'get_depth': gi.FunctionInfo(get_depth, bound=None), 'get_green_pixel_details': gi.FunctionInfo(get_green_pixel_details, bound=None), 'get_red_pixel_details': gi.FunctionInfo(get_red_pixel_details, bound=None), 'get_screen': gi.FunctionInfo(get_screen, bound=None), 'get_visual_type': gi.FunctionInfo(get_visual_type, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Visual), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkVisual (585149952)>, '__doc__': None, '__gsignals__': {}, 'get_best': <staticmethod(gi.FunctionInfo(get_best))>, 'get_best_depth': <staticmethod(gi.FunctionInfo(get_best_depth))>, 'get_best_type': <staticmethod(gi.FunctionInfo(get_best_type))>, 'get_best_with_both': <staticmethod(gi.FunctionInfo(get_best_with_both))>, 'get_best_with_depth': <staticmethod(gi.FunctionInfo(get_best_with_depth))>, 'get_best_with_type': <staticmethod(gi.FunctionInfo(get_best_with_type))>, 'get_system': <staticmethod(gi.FunctionInfo(get_system))>, 'get_bits_per_rgb': gi.FunctionInfo(get_bits_per_rgb), 'get_blue_pixel_details': gi.FunctionInfo(get_blue_pixel_details), 'get_byte_order': gi.FunctionInfo(get_byte_order), 'get_colormap_size': gi.FunctionInfo(get_colormap_size), 'get_depth': gi.FunctionInfo(get_depth), 'get_green_pixel_details': gi.FunctionInfo(get_green_pixel_details), 'get_red_pixel_details': gi.FunctionInfo(get_red_pixel_details), 'get_screen': gi.FunctionInfo(get_screen), 'get_visual_type': gi.FunctionInfo(get_visual_type)})"
     __gdoc__ = 'Object GdkVisual\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkVisual (2578995136)>'
+    __gtype__ = None # (!) real value is '<GType GdkVisual (585149952)>'
     __info__ = ObjectInfo(Visual)
 
 

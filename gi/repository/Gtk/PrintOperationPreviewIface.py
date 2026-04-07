@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -163,7 +162,7 @@ class PrintOperationPreviewIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PrintOperationPreviewIface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PrintOperationPreviewIface' objects>, '__weakref__': <attribute '__weakref__' of 'PrintOperationPreviewIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002eceac3c7c0>, 'ready': <property object at 0x000002eceac3c8b0>, 'got_page_size': <property object at 0x000002eceac3c9a0>, 'render_page': <property object at 0x000002eceac3ca90>, 'is_selected': <property object at 0x000002eceac3cb80>, 'end_preview': <property object at 0x000002eceac3cc70>, '_gtk_reserved1': <property object at 0x000002eceac3cd60>, '_gtk_reserved2': <property object at 0x000002eceac3ce50>, '_gtk_reserved3': <property object at 0x000002eceac3cf40>, '_gtk_reserved4': <property object at 0x000002eceac3d030>, '_gtk_reserved5': <property object at 0x000002eceac3d120>, '_gtk_reserved6': <property object at 0x000002eceac3d210>, '_gtk_reserved7': <property object at 0x000002eceac3d300>, '_gtk_reserved8': <property object at 0x000002eceac3d3f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PrintOperationPreviewIface), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PrintOperationPreviewIface' objects>, '__weakref__': <attribute '__weakref__' of 'PrintOperationPreviewIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000002bfd1893380>, 'ready': <property object at 0x000002bfd1893470>, 'got_page_size': <property object at 0x000002bfd1893560>, 'render_page': <property object at 0x000002bfd1893650>, 'is_selected': <property object at 0x000002bfd1893740>, 'end_preview': <property object at 0x000002bfd1893830>, '_gtk_reserved1': <property object at 0x000002bfd18938d0>, '_gtk_reserved2': <property object at 0x000002bfd18939c0>, '_gtk_reserved3': <property object at 0x000002bfd1893ab0>, '_gtk_reserved4': <property object at 0x000002bfd1893ba0>, '_gtk_reserved5': <property object at 0x000002bfd1893c90>, '_gtk_reserved6': <property object at 0x000002bfd1893d80>, '_gtk_reserved7': <property object at 0x000002bfd1893e70>, '_gtk_reserved8': <property object at 0x000002bfd1893f60>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PrintOperationPreviewIface)
 

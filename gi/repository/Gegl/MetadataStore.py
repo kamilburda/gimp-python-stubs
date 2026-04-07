@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -50,7 +44,7 @@ class MetadataStore(__gi_overrides_GObject.Object, Metadata):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -82,6 +76,9 @@ class MetadataStore(__gi_overrides_GObject.Object, Metadata):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_has_value(self, *args, **kwargs): # real signature unknown
@@ -470,20 +467,20 @@ class MetadataStore(__gi_overrides_GObject.Object, Metadata):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -620,12 +617,12 @@ class MetadataStore(__gi_overrides_GObject.Object, Metadata):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002761b7fcb20>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ebdc0e5d80>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(MetadataStore), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglMetadataStore (426594128)>, '__doc__': None, '__gsignals__': {}, 'declare': gi.FunctionInfo(declare, bound=None), 'get_artist': gi.FunctionInfo(get_artist, bound=None), 'get_comment': gi.FunctionInfo(get_comment, bound=None), 'get_copyright': gi.FunctionInfo(get_copyright, bound=None), 'get_description': gi.FunctionInfo(get_description, bound=None), 'get_disclaimer': gi.FunctionInfo(get_disclaimer, bound=None), 'get_file_module_name': gi.FunctionInfo(get_file_module_name, bound=None), 'get_resolution_unit': gi.FunctionInfo(get_resolution_unit, bound=None), 'get_resolution_x': gi.FunctionInfo(get_resolution_x, bound=None), 'get_resolution_y': gi.FunctionInfo(get_resolution_y, bound=None), 'get_software': gi.FunctionInfo(get_software, bound=None), 'get_source': gi.FunctionInfo(get_source, bound=None), 'get_string': gi.FunctionInfo(get_string, bound=None), 'get_timestamp': gi.FunctionInfo(get_timestamp, bound=None), 'get_title': gi.FunctionInfo(get_title, bound=None), 'get_value': gi.FunctionInfo(get_value, bound=None), 'get_warning': gi.FunctionInfo(get_warning, bound=None), 'has_value': gi.FunctionInfo(has_value, bound=None), 'notify': gi.FunctionInfo(notify, bound=None), 'register': gi.FunctionInfo(register, bound=None), 'set_artist': gi.FunctionInfo(set_artist, bound=None), 'set_comment': gi.FunctionInfo(set_comment, bound=None), 'set_copyright': gi.FunctionInfo(set_copyright, bound=None), 'set_description': gi.FunctionInfo(set_description, bound=None), 'set_disclaimer': gi.FunctionInfo(set_disclaimer, bound=None), 'set_resolution_unit': gi.FunctionInfo(set_resolution_unit, bound=None), 'set_resolution_x': gi.FunctionInfo(set_resolution_x, bound=None), 'set_resolution_y': gi.FunctionInfo(set_resolution_y, bound=None), 'set_software': gi.FunctionInfo(set_software, bound=None), 'set_source': gi.FunctionInfo(set_source, bound=None), 'set_string': gi.FunctionInfo(set_string, bound=None), 'set_timestamp': gi.FunctionInfo(set_timestamp, bound=None), 'set_title': gi.FunctionInfo(set_title, bound=None), 'set_value': gi.FunctionInfo(set_value, bound=None), 'set_warning': gi.FunctionInfo(set_warning, bound=None), 'typeof_value': gi.FunctionInfo(typeof_value, bound=None), 'do__declare': gi.VFuncInfo(_declare, bound=None), 'do__get_value': gi.VFuncInfo(_get_value, bound=None), 'do_has_value': gi.VFuncInfo(has_value, bound=None), 'do_register_hook': gi.VFuncInfo(register_hook, bound=None), 'do_set_value': gi.VFuncInfo(set_value, bound=None), 'parent_instance': <property object at 0x000002761b94ee80>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(MetadataStore), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglMetadataStore (3657336384)>, '__doc__': None, '__gsignals__': {}, 'declare': gi.FunctionInfo(declare), 'get_artist': gi.FunctionInfo(get_artist), 'get_comment': gi.FunctionInfo(get_comment), 'get_copyright': gi.FunctionInfo(get_copyright), 'get_description': gi.FunctionInfo(get_description), 'get_disclaimer': gi.FunctionInfo(get_disclaimer), 'get_file_module_name': gi.FunctionInfo(get_file_module_name), 'get_resolution_unit': gi.FunctionInfo(get_resolution_unit), 'get_resolution_x': gi.FunctionInfo(get_resolution_x), 'get_resolution_y': gi.FunctionInfo(get_resolution_y), 'get_software': gi.FunctionInfo(get_software), 'get_source': gi.FunctionInfo(get_source), 'get_string': gi.FunctionInfo(get_string), 'get_timestamp': gi.FunctionInfo(get_timestamp), 'get_title': gi.FunctionInfo(get_title), 'get_value': gi.FunctionInfo(get_value), 'get_warning': gi.FunctionInfo(get_warning), 'has_value': gi.FunctionInfo(has_value), 'notify': gi.FunctionInfo(notify), 'register': gi.FunctionInfo(register), 'set_artist': gi.FunctionInfo(set_artist), 'set_comment': gi.FunctionInfo(set_comment), 'set_copyright': gi.FunctionInfo(set_copyright), 'set_description': gi.FunctionInfo(set_description), 'set_disclaimer': gi.FunctionInfo(set_disclaimer), 'set_resolution_unit': gi.FunctionInfo(set_resolution_unit), 'set_resolution_x': gi.FunctionInfo(set_resolution_x), 'set_resolution_y': gi.FunctionInfo(set_resolution_y), 'set_software': gi.FunctionInfo(set_software), 'set_source': gi.FunctionInfo(set_source), 'set_string': gi.FunctionInfo(set_string), 'set_timestamp': gi.FunctionInfo(set_timestamp), 'set_title': gi.FunctionInfo(set_title), 'set_value': gi.FunctionInfo(set_value), 'set_warning': gi.FunctionInfo(set_warning), 'typeof_value': gi.FunctionInfo(typeof_value), 'do__declare': gi.VFuncInfo(_declare), 'do__get_value': gi.VFuncInfo(_get_value), 'do_has_value': gi.VFuncInfo(has_value), 'do_register_hook': gi.VFuncInfo(register_hook), 'do_set_value': gi.VFuncInfo(set_value), 'parent_instance': <property object at 0x000001ebdc263f10>})"
     __gdoc__ = 'Object GeglMetadataStore\n\nSignals from GeglMetadataStore:\n  changed (GParam)\n  mapped (gchararray, gboolean)\n  unmapped (gchararray, gchararray)\n  generate-value (GParam, GValue) -> gboolean\n  parse-value (GParam, GValue) -> gboolean\n\nProperties from GeglMetadataStore:\n  resolution-unit -> GeglResolutionUnit: Resolution Unit\n    Units for image resolution\n  resolution-x -> gdouble: Resolution X\n    X Resolution\n  resolution-y -> gdouble: Resolution Y\n    X Resolution\n  file-module-name -> gchararray: File Module Name\n    Name of currently active file module or NULL\n  title -> gchararray: Title\n    Short title or caption\n  artist -> gchararray: Artist\n    Name of image creator\n  description -> gchararray: Description\n    Description of image (possibly long)\n  copyright -> gchararray: Copyright\n    Copyright notice\n  disclaimer -> gchararray: Disclaimer\n    Legal disclaimer\n  warning -> gchararray: Warning\n    Warning of nature of content\n  comment -> gchararray: Comment\n    Miscellaneous comment\n  software -> gchararray: Software\n    Software used to create the image\n  source -> gchararray: Source\n    Device used to create the image\n  timestamp -> GDateTime: Timestamp\n    Image creation time\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglMetadataStore (426594128)>'
+    __gtype__ = None # (!) real value is '<GType GeglMetadataStore (3657336384)>'
     __info__ = ObjectInfo(MetadataStore)
 
 

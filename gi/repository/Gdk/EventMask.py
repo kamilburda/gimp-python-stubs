@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class EventMask(__gobject.GFlags):
+class EventMask(__gi__gi.GFlags):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -112,8 +111,8 @@ class EventMask(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -124,12 +123,16 @@ class EventMask(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -158,6 +161,10 @@ class EventMask(__gobject.GFlags):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -192,15 +199,24 @@ class EventMask(__gobject.GFlags):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -228,16 +244,16 @@ class EventMask(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -252,24 +268,24 @@ class EventMask(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -288,8 +304,8 @@ class EventMask(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -320,8 +336,8 @@ class EventMask(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -333,7 +349,7 @@ class EventMask(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -359,16 +375,12 @@ class EventMask(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -379,12 +391,7 @@ class EventMask(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-
-    ALL_EVENTS_MASK = 67108862
     BUTTON1_MOTION_MASK = 32
     BUTTON2_MOTION_MASK = 64
     BUTTON3_MOTION_MASK = 128
@@ -410,37 +417,9 @@ class EventMask(__gobject.GFlags):
     TOUCHPAD_GESTURE_MASK = 16777216
     TOUCH_MASK = 4194304
     VISIBILITY_NOTIFY_MASK = 131072
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gdk', '__dict__': <attribute '__dict__' of 'EventMask' objects>, '__doc__': None, '__gtype__': <GType GdkEventMask (2579723024)>, '__flags_values__': {2: <flags GDK_EXPOSURE_MASK of type Gdk.EventMask>, 4: <flags GDK_POINTER_MOTION_MASK of type Gdk.EventMask>, 8: <flags GDK_POINTER_MOTION_HINT_MASK of type Gdk.EventMask>, 16: <flags GDK_BUTTON_MOTION_MASK of type Gdk.EventMask>, 32: <flags GDK_BUTTON1_MOTION_MASK of type Gdk.EventMask>, 64: <flags GDK_BUTTON2_MOTION_MASK of type Gdk.EventMask>, 128: <flags GDK_BUTTON3_MOTION_MASK of type Gdk.EventMask>, 256: <flags GDK_BUTTON_PRESS_MASK of type Gdk.EventMask>, 512: <flags GDK_BUTTON_RELEASE_MASK of type Gdk.EventMask>, 1024: <flags GDK_KEY_PRESS_MASK of type Gdk.EventMask>, 2048: <flags GDK_KEY_RELEASE_MASK of type Gdk.EventMask>, 4096: <flags GDK_ENTER_NOTIFY_MASK of type Gdk.EventMask>, 8192: <flags GDK_LEAVE_NOTIFY_MASK of type Gdk.EventMask>, 16384: <flags GDK_FOCUS_CHANGE_MASK of type Gdk.EventMask>, 32768: <flags GDK_STRUCTURE_MASK of type Gdk.EventMask>, 65536: <flags GDK_PROPERTY_CHANGE_MASK of type Gdk.EventMask>, 131072: <flags GDK_VISIBILITY_NOTIFY_MASK of type Gdk.EventMask>, 262144: <flags GDK_PROXIMITY_IN_MASK of type Gdk.EventMask>, 524288: <flags GDK_PROXIMITY_OUT_MASK of type Gdk.EventMask>, 1048576: <flags GDK_SUBSTRUCTURE_MASK of type Gdk.EventMask>, 2097152: <flags GDK_SCROLL_MASK of type Gdk.EventMask>, 4194304: <flags GDK_TOUCH_MASK of type Gdk.EventMask>, 8388608: <flags GDK_SMOOTH_SCROLL_MASK of type Gdk.EventMask>, 16777216: <flags GDK_TOUCHPAD_GESTURE_MASK of type Gdk.EventMask>, 33554432: <flags GDK_TABLET_PAD_MASK of type Gdk.EventMask>, 67108862: <flags GDK_EXPOSURE_MASK | GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_MOTION_MASK | GDK_BUTTON1_MOTION_MASK | GDK_BUTTON2_MOTION_MASK | GDK_BUTTON3_MOTION_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_KEY_PRESS_MASK | GDK_KEY_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK | GDK_LEAVE_NOTIFY_MASK | GDK_FOCUS_CHANGE_MASK | GDK_STRUCTURE_MASK | GDK_PROPERTY_CHANGE_MASK | GDK_VISIBILITY_NOTIFY_MASK | GDK_PROXIMITY_IN_MASK | GDK_PROXIMITY_OUT_MASK | GDK_SUBSTRUCTURE_MASK | GDK_SCROLL_MASK | GDK_TOUCH_MASK | GDK_SMOOTH_SCROLL_MASK | GDK_TOUCHPAD_GESTURE_MASK | GDK_TABLET_PAD_MASK | GDK_ALL_EVENTS_MASK of type Gdk.EventMask>}, '__info__': gi.EnumInfo(EventMask), 'EXPOSURE_MASK': <flags GDK_EXPOSURE_MASK of type Gdk.EventMask>, 'POINTER_MOTION_MASK': <flags GDK_POINTER_MOTION_MASK of type Gdk.EventMask>, 'POINTER_MOTION_HINT_MASK': <flags GDK_POINTER_MOTION_HINT_MASK of type Gdk.EventMask>, 'BUTTON_MOTION_MASK': <flags GDK_BUTTON_MOTION_MASK of type Gdk.EventMask>, 'BUTTON1_MOTION_MASK': <flags GDK_BUTTON1_MOTION_MASK of type Gdk.EventMask>, 'BUTTON2_MOTION_MASK': <flags GDK_BUTTON2_MOTION_MASK of type Gdk.EventMask>, 'BUTTON3_MOTION_MASK': <flags GDK_BUTTON3_MOTION_MASK of type Gdk.EventMask>, 'BUTTON_PRESS_MASK': <flags GDK_BUTTON_PRESS_MASK of type Gdk.EventMask>, 'BUTTON_RELEASE_MASK': <flags GDK_BUTTON_RELEASE_MASK of type Gdk.EventMask>, 'KEY_PRESS_MASK': <flags GDK_KEY_PRESS_MASK of type Gdk.EventMask>, 'KEY_RELEASE_MASK': <flags GDK_KEY_RELEASE_MASK of type Gdk.EventMask>, 'ENTER_NOTIFY_MASK': <flags GDK_ENTER_NOTIFY_MASK of type Gdk.EventMask>, 'LEAVE_NOTIFY_MASK': <flags GDK_LEAVE_NOTIFY_MASK of type Gdk.EventMask>, 'FOCUS_CHANGE_MASK': <flags GDK_FOCUS_CHANGE_MASK of type Gdk.EventMask>, 'STRUCTURE_MASK': <flags GDK_STRUCTURE_MASK of type Gdk.EventMask>, 'PROPERTY_CHANGE_MASK': <flags GDK_PROPERTY_CHANGE_MASK of type Gdk.EventMask>, 'VISIBILITY_NOTIFY_MASK': <flags GDK_VISIBILITY_NOTIFY_MASK of type Gdk.EventMask>, 'PROXIMITY_IN_MASK': <flags GDK_PROXIMITY_IN_MASK of type Gdk.EventMask>, 'PROXIMITY_OUT_MASK': <flags GDK_PROXIMITY_OUT_MASK of type Gdk.EventMask>, 'SUBSTRUCTURE_MASK': <flags GDK_SUBSTRUCTURE_MASK of type Gdk.EventMask>, 'SCROLL_MASK': <flags GDK_SCROLL_MASK of type Gdk.EventMask>, 'TOUCH_MASK': <flags GDK_TOUCH_MASK of type Gdk.EventMask>, 'SMOOTH_SCROLL_MASK': <flags GDK_SMOOTH_SCROLL_MASK of type Gdk.EventMask>, 'TOUCHPAD_GESTURE_MASK': <flags GDK_TOUCHPAD_GESTURE_MASK of type Gdk.EventMask>, 'TABLET_PAD_MASK': <flags GDK_TABLET_PAD_MASK of type Gdk.EventMask>, 'ALL_EVENTS_MASK': <flags GDK_EXPOSURE_MASK | GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_MOTION_MASK | GDK_BUTTON1_MOTION_MASK | GDK_BUTTON2_MOTION_MASK | GDK_BUTTON3_MOTION_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_KEY_PRESS_MASK | GDK_KEY_RELEASE_MASK | GDK_ENTER_NOTIFY_MASK | GDK_LEAVE_NOTIFY_MASK | GDK_FOCUS_CHANGE_MASK | GDK_STRUCTURE_MASK | GDK_PROPERTY_CHANGE_MASK | GDK_VISIBILITY_NOTIFY_MASK | GDK_PROXIMITY_IN_MASK | GDK_PROXIMITY_OUT_MASK | GDK_SUBSTRUCTURE_MASK | GDK_SCROLL_MASK | GDK_TOUCH_MASK | GDK_SMOOTH_SCROLL_MASK | GDK_TOUCHPAD_GESTURE_MASK | GDK_TABLET_PAD_MASK | GDK_ALL_EVENTS_MASK of type Gdk.EventMask>})"
-    __flags_values__ = {
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-        64: 64,
-        128: 128,
-        256: 256,
-        512: 512,
-        1024: 1024,
-        2048: 2048,
-        4096: 4096,
-        8192: 8192,
-        16384: 16384,
-        32768: 32768,
-        65536: 65536,
-        131072: 131072,
-        262144: 262144,
-        524288: 524288,
-        1048576: 1048576,
-        2097152: 2097152,
-        4194304: 4194304,
-        8388608: 8388608,
-        16777216: 16777216,
-        33554432: 33554432,
-        67108862: 67108862,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkEventMask (2579723024)>'
-    __info__ = gi.EnumInfo(EventMask)
+    __class__ = None # (!) real value is "<class 'gi._enum.GFlagsMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'EXPOSURE_MASK': <EventMask.EXPOSURE_MASK: 2>, 'POINTER_MOTION_MASK': <EventMask.POINTER_MOTION_MASK: 4>, 'POINTER_MOTION_HINT_MASK': <EventMask.POINTER_MOTION_HINT_MASK: 8>, 'BUTTON_MOTION_MASK': <EventMask.BUTTON_MOTION_MASK: 16>, 'BUTTON1_MOTION_MASK': <EventMask.BUTTON1_MOTION_MASK: 32>, 'BUTTON2_MOTION_MASK': <EventMask.BUTTON2_MOTION_MASK: 64>, 'BUTTON3_MOTION_MASK': <EventMask.BUTTON3_MOTION_MASK: 128>, 'BUTTON_PRESS_MASK': <EventMask.BUTTON_PRESS_MASK: 256>, 'BUTTON_RELEASE_MASK': <EventMask.BUTTON_RELEASE_MASK: 512>, 'KEY_PRESS_MASK': <EventMask.KEY_PRESS_MASK: 1024>, 'KEY_RELEASE_MASK': <EventMask.KEY_RELEASE_MASK: 2048>, 'ENTER_NOTIFY_MASK': <EventMask.ENTER_NOTIFY_MASK: 4096>, 'LEAVE_NOTIFY_MASK': <EventMask.LEAVE_NOTIFY_MASK: 8192>, 'FOCUS_CHANGE_MASK': <EventMask.FOCUS_CHANGE_MASK: 16384>, 'STRUCTURE_MASK': <EventMask.STRUCTURE_MASK: 32768>, 'PROPERTY_CHANGE_MASK': <EventMask.PROPERTY_CHANGE_MASK: 65536>, 'VISIBILITY_NOTIFY_MASK': <EventMask.VISIBILITY_NOTIFY_MASK: 131072>, 'PROXIMITY_IN_MASK': <EventMask.PROXIMITY_IN_MASK: 262144>, 'PROXIMITY_OUT_MASK': <EventMask.PROXIMITY_OUT_MASK: 524288>, 'SUBSTRUCTURE_MASK': <EventMask.SUBSTRUCTURE_MASK: 1048576>, 'SCROLL_MASK': <EventMask.SCROLL_MASK: 2097152>, 'TOUCH_MASK': <EventMask.TOUCH_MASK: 4194304>, 'SMOOTH_SCROLL_MASK': <EventMask.SMOOTH_SCROLL_MASK: 8388608>, 'TOUCHPAD_GESTURE_MASK': <EventMask.TOUCHPAD_GESTURE_MASK: 16777216>, 'TABLET_PAD_MASK': <EventMask.TABLET_PAD_MASK: 33554432>, 'ALL_EVENTS_MASK': <EventMask.ALL_EVENTS_MASK: 67108862>})"
+    __name__ = 'EventMask'
+    __qualname__ = 'EventMask'
 
 

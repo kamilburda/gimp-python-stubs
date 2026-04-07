@@ -1,26 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class LayerMode(__gobject.GEnum):
+class LayerMode(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -79,7 +75,7 @@ class LayerMode(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -102,7 +98,7 @@ class LayerMode(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -130,12 +126,23 @@ class LayerMode(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -164,6 +171,10 @@ class LayerMode(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -209,6 +220,14 @@ class LayerMode(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -234,8 +253,8 @@ class LayerMode(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -266,15 +285,16 @@ class LayerMode(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -338,7 +358,7 @@ class LayerMode(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -379,10 +399,6 @@ class LayerMode(__gobject.GEnum):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     ADDITION = 33
@@ -437,6 +453,7 @@ class LayerMode(__gobject.GEnum):
     NORMAL_LEGACY = 0
     OVERLAY = 23
     OVERLAY_LEGACY = 5
+    OVERWRITE = 63
     PASS_THROUGH = 61
     PIN_LIGHT = 49
     REPLACE = 62
@@ -448,74 +465,9 @@ class LayerMode(__gobject.GEnum):
     SUBTRACT = 34
     SUBTRACT_LEGACY = 8
     VIVID_LIGHT = 48
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gimp', '__dict__': <attribute '__dict__' of 'LayerMode' objects>, '__doc__': None, '__gtype__': <GType GimpLayerMode (3595411712)>, '__enum_values__': {0: <enum GIMP_LAYER_MODE_NORMAL_LEGACY of type Gimp.LayerMode>, 1: <enum GIMP_LAYER_MODE_DISSOLVE of type Gimp.LayerMode>, 2: <enum GIMP_LAYER_MODE_BEHIND_LEGACY of type Gimp.LayerMode>, 3: <enum GIMP_LAYER_MODE_MULTIPLY_LEGACY of type Gimp.LayerMode>, 4: <enum GIMP_LAYER_MODE_SCREEN_LEGACY of type Gimp.LayerMode>, 5: <enum GIMP_LAYER_MODE_OVERLAY_LEGACY of type Gimp.LayerMode>, 6: <enum GIMP_LAYER_MODE_DIFFERENCE_LEGACY of type Gimp.LayerMode>, 7: <enum GIMP_LAYER_MODE_ADDITION_LEGACY of type Gimp.LayerMode>, 8: <enum GIMP_LAYER_MODE_SUBTRACT_LEGACY of type Gimp.LayerMode>, 9: <enum GIMP_LAYER_MODE_DARKEN_ONLY_LEGACY of type Gimp.LayerMode>, 10: <enum GIMP_LAYER_MODE_LIGHTEN_ONLY_LEGACY of type Gimp.LayerMode>, 11: <enum GIMP_LAYER_MODE_HSV_HUE_LEGACY of type Gimp.LayerMode>, 12: <enum GIMP_LAYER_MODE_HSV_SATURATION_LEGACY of type Gimp.LayerMode>, 13: <enum GIMP_LAYER_MODE_HSL_COLOR_LEGACY of type Gimp.LayerMode>, 14: <enum GIMP_LAYER_MODE_HSV_VALUE_LEGACY of type Gimp.LayerMode>, 15: <enum GIMP_LAYER_MODE_DIVIDE_LEGACY of type Gimp.LayerMode>, 16: <enum GIMP_LAYER_MODE_DODGE_LEGACY of type Gimp.LayerMode>, 17: <enum GIMP_LAYER_MODE_BURN_LEGACY of type Gimp.LayerMode>, 18: <enum GIMP_LAYER_MODE_HARDLIGHT_LEGACY of type Gimp.LayerMode>, 19: <enum GIMP_LAYER_MODE_SOFTLIGHT_LEGACY of type Gimp.LayerMode>, 20: <enum GIMP_LAYER_MODE_GRAIN_EXTRACT_LEGACY of type Gimp.LayerMode>, 21: <enum GIMP_LAYER_MODE_GRAIN_MERGE_LEGACY of type Gimp.LayerMode>, 22: <enum GIMP_LAYER_MODE_COLOR_ERASE_LEGACY of type Gimp.LayerMode>, 23: <enum GIMP_LAYER_MODE_OVERLAY of type Gimp.LayerMode>, 24: <enum GIMP_LAYER_MODE_LCH_HUE of type Gimp.LayerMode>, 25: <enum GIMP_LAYER_MODE_LCH_CHROMA of type Gimp.LayerMode>, 26: <enum GIMP_LAYER_MODE_LCH_COLOR of type Gimp.LayerMode>, 27: <enum GIMP_LAYER_MODE_LCH_LIGHTNESS of type Gimp.LayerMode>, 28: <enum GIMP_LAYER_MODE_NORMAL of type Gimp.LayerMode>, 29: <enum GIMP_LAYER_MODE_BEHIND of type Gimp.LayerMode>, 30: <enum GIMP_LAYER_MODE_MULTIPLY of type Gimp.LayerMode>, 31: <enum GIMP_LAYER_MODE_SCREEN of type Gimp.LayerMode>, 32: <enum GIMP_LAYER_MODE_DIFFERENCE of type Gimp.LayerMode>, 33: <enum GIMP_LAYER_MODE_ADDITION of type Gimp.LayerMode>, 34: <enum GIMP_LAYER_MODE_SUBTRACT of type Gimp.LayerMode>, 35: <enum GIMP_LAYER_MODE_DARKEN_ONLY of type Gimp.LayerMode>, 36: <enum GIMP_LAYER_MODE_LIGHTEN_ONLY of type Gimp.LayerMode>, 37: <enum GIMP_LAYER_MODE_HSV_HUE of type Gimp.LayerMode>, 38: <enum GIMP_LAYER_MODE_HSV_SATURATION of type Gimp.LayerMode>, 39: <enum GIMP_LAYER_MODE_HSL_COLOR of type Gimp.LayerMode>, 40: <enum GIMP_LAYER_MODE_HSV_VALUE of type Gimp.LayerMode>, 41: <enum GIMP_LAYER_MODE_DIVIDE of type Gimp.LayerMode>, 42: <enum GIMP_LAYER_MODE_DODGE of type Gimp.LayerMode>, 43: <enum GIMP_LAYER_MODE_BURN of type Gimp.LayerMode>, 44: <enum GIMP_LAYER_MODE_HARDLIGHT of type Gimp.LayerMode>, 45: <enum GIMP_LAYER_MODE_SOFTLIGHT of type Gimp.LayerMode>, 46: <enum GIMP_LAYER_MODE_GRAIN_EXTRACT of type Gimp.LayerMode>, 47: <enum GIMP_LAYER_MODE_GRAIN_MERGE of type Gimp.LayerMode>, 48: <enum GIMP_LAYER_MODE_VIVID_LIGHT of type Gimp.LayerMode>, 49: <enum GIMP_LAYER_MODE_PIN_LIGHT of type Gimp.LayerMode>, 50: <enum GIMP_LAYER_MODE_LINEAR_LIGHT of type Gimp.LayerMode>, 51: <enum GIMP_LAYER_MODE_HARD_MIX of type Gimp.LayerMode>, 52: <enum GIMP_LAYER_MODE_EXCLUSION of type Gimp.LayerMode>, 53: <enum GIMP_LAYER_MODE_LINEAR_BURN of type Gimp.LayerMode>, 54: <enum GIMP_LAYER_MODE_LUMA_DARKEN_ONLY of type Gimp.LayerMode>, 55: <enum GIMP_LAYER_MODE_LUMA_LIGHTEN_ONLY of type Gimp.LayerMode>, 56: <enum GIMP_LAYER_MODE_LUMINANCE of type Gimp.LayerMode>, 57: <enum GIMP_LAYER_MODE_COLOR_ERASE of type Gimp.LayerMode>, 58: <enum GIMP_LAYER_MODE_ERASE of type Gimp.LayerMode>, 59: <enum GIMP_LAYER_MODE_MERGE of type Gimp.LayerMode>, 60: <enum GIMP_LAYER_MODE_SPLIT of type Gimp.LayerMode>, 61: <enum GIMP_LAYER_MODE_PASS_THROUGH of type Gimp.LayerMode>, 62: <enum GIMP_LAYER_MODE_REPLACE of type Gimp.LayerMode>}, '__info__': gi.EnumInfo(LayerMode), 'NORMAL_LEGACY': <enum GIMP_LAYER_MODE_NORMAL_LEGACY of type Gimp.LayerMode>, 'DISSOLVE': <enum GIMP_LAYER_MODE_DISSOLVE of type Gimp.LayerMode>, 'BEHIND_LEGACY': <enum GIMP_LAYER_MODE_BEHIND_LEGACY of type Gimp.LayerMode>, 'MULTIPLY_LEGACY': <enum GIMP_LAYER_MODE_MULTIPLY_LEGACY of type Gimp.LayerMode>, 'SCREEN_LEGACY': <enum GIMP_LAYER_MODE_SCREEN_LEGACY of type Gimp.LayerMode>, 'OVERLAY_LEGACY': <enum GIMP_LAYER_MODE_OVERLAY_LEGACY of type Gimp.LayerMode>, 'DIFFERENCE_LEGACY': <enum GIMP_LAYER_MODE_DIFFERENCE_LEGACY of type Gimp.LayerMode>, 'ADDITION_LEGACY': <enum GIMP_LAYER_MODE_ADDITION_LEGACY of type Gimp.LayerMode>, 'SUBTRACT_LEGACY': <enum GIMP_LAYER_MODE_SUBTRACT_LEGACY of type Gimp.LayerMode>, 'DARKEN_ONLY_LEGACY': <enum GIMP_LAYER_MODE_DARKEN_ONLY_LEGACY of type Gimp.LayerMode>, 'LIGHTEN_ONLY_LEGACY': <enum GIMP_LAYER_MODE_LIGHTEN_ONLY_LEGACY of type Gimp.LayerMode>, 'HSV_HUE_LEGACY': <enum GIMP_LAYER_MODE_HSV_HUE_LEGACY of type Gimp.LayerMode>, 'HSV_SATURATION_LEGACY': <enum GIMP_LAYER_MODE_HSV_SATURATION_LEGACY of type Gimp.LayerMode>, 'HSL_COLOR_LEGACY': <enum GIMP_LAYER_MODE_HSL_COLOR_LEGACY of type Gimp.LayerMode>, 'HSV_VALUE_LEGACY': <enum GIMP_LAYER_MODE_HSV_VALUE_LEGACY of type Gimp.LayerMode>, 'DIVIDE_LEGACY': <enum GIMP_LAYER_MODE_DIVIDE_LEGACY of type Gimp.LayerMode>, 'DODGE_LEGACY': <enum GIMP_LAYER_MODE_DODGE_LEGACY of type Gimp.LayerMode>, 'BURN_LEGACY': <enum GIMP_LAYER_MODE_BURN_LEGACY of type Gimp.LayerMode>, 'HARDLIGHT_LEGACY': <enum GIMP_LAYER_MODE_HARDLIGHT_LEGACY of type Gimp.LayerMode>, 'SOFTLIGHT_LEGACY': <enum GIMP_LAYER_MODE_SOFTLIGHT_LEGACY of type Gimp.LayerMode>, 'GRAIN_EXTRACT_LEGACY': <enum GIMP_LAYER_MODE_GRAIN_EXTRACT_LEGACY of type Gimp.LayerMode>, 'GRAIN_MERGE_LEGACY': <enum GIMP_LAYER_MODE_GRAIN_MERGE_LEGACY of type Gimp.LayerMode>, 'COLOR_ERASE_LEGACY': <enum GIMP_LAYER_MODE_COLOR_ERASE_LEGACY of type Gimp.LayerMode>, 'OVERLAY': <enum GIMP_LAYER_MODE_OVERLAY of type Gimp.LayerMode>, 'LCH_HUE': <enum GIMP_LAYER_MODE_LCH_HUE of type Gimp.LayerMode>, 'LCH_CHROMA': <enum GIMP_LAYER_MODE_LCH_CHROMA of type Gimp.LayerMode>, 'LCH_COLOR': <enum GIMP_LAYER_MODE_LCH_COLOR of type Gimp.LayerMode>, 'LCH_LIGHTNESS': <enum GIMP_LAYER_MODE_LCH_LIGHTNESS of type Gimp.LayerMode>, 'NORMAL': <enum GIMP_LAYER_MODE_NORMAL of type Gimp.LayerMode>, 'BEHIND': <enum GIMP_LAYER_MODE_BEHIND of type Gimp.LayerMode>, 'MULTIPLY': <enum GIMP_LAYER_MODE_MULTIPLY of type Gimp.LayerMode>, 'SCREEN': <enum GIMP_LAYER_MODE_SCREEN of type Gimp.LayerMode>, 'DIFFERENCE': <enum GIMP_LAYER_MODE_DIFFERENCE of type Gimp.LayerMode>, 'ADDITION': <enum GIMP_LAYER_MODE_ADDITION of type Gimp.LayerMode>, 'SUBTRACT': <enum GIMP_LAYER_MODE_SUBTRACT of type Gimp.LayerMode>, 'DARKEN_ONLY': <enum GIMP_LAYER_MODE_DARKEN_ONLY of type Gimp.LayerMode>, 'LIGHTEN_ONLY': <enum GIMP_LAYER_MODE_LIGHTEN_ONLY of type Gimp.LayerMode>, 'HSV_HUE': <enum GIMP_LAYER_MODE_HSV_HUE of type Gimp.LayerMode>, 'HSV_SATURATION': <enum GIMP_LAYER_MODE_HSV_SATURATION of type Gimp.LayerMode>, 'HSL_COLOR': <enum GIMP_LAYER_MODE_HSL_COLOR of type Gimp.LayerMode>, 'HSV_VALUE': <enum GIMP_LAYER_MODE_HSV_VALUE of type Gimp.LayerMode>, 'DIVIDE': <enum GIMP_LAYER_MODE_DIVIDE of type Gimp.LayerMode>, 'DODGE': <enum GIMP_LAYER_MODE_DODGE of type Gimp.LayerMode>, 'BURN': <enum GIMP_LAYER_MODE_BURN of type Gimp.LayerMode>, 'HARDLIGHT': <enum GIMP_LAYER_MODE_HARDLIGHT of type Gimp.LayerMode>, 'SOFTLIGHT': <enum GIMP_LAYER_MODE_SOFTLIGHT of type Gimp.LayerMode>, 'GRAIN_EXTRACT': <enum GIMP_LAYER_MODE_GRAIN_EXTRACT of type Gimp.LayerMode>, 'GRAIN_MERGE': <enum GIMP_LAYER_MODE_GRAIN_MERGE of type Gimp.LayerMode>, 'VIVID_LIGHT': <enum GIMP_LAYER_MODE_VIVID_LIGHT of type Gimp.LayerMode>, 'PIN_LIGHT': <enum GIMP_LAYER_MODE_PIN_LIGHT of type Gimp.LayerMode>, 'LINEAR_LIGHT': <enum GIMP_LAYER_MODE_LINEAR_LIGHT of type Gimp.LayerMode>, 'HARD_MIX': <enum GIMP_LAYER_MODE_HARD_MIX of type Gimp.LayerMode>, 'EXCLUSION': <enum GIMP_LAYER_MODE_EXCLUSION of type Gimp.LayerMode>, 'LINEAR_BURN': <enum GIMP_LAYER_MODE_LINEAR_BURN of type Gimp.LayerMode>, 'LUMA_DARKEN_ONLY': <enum GIMP_LAYER_MODE_LUMA_DARKEN_ONLY of type Gimp.LayerMode>, 'LUMA_LIGHTEN_ONLY': <enum GIMP_LAYER_MODE_LUMA_LIGHTEN_ONLY of type Gimp.LayerMode>, 'LUMINANCE': <enum GIMP_LAYER_MODE_LUMINANCE of type Gimp.LayerMode>, 'COLOR_ERASE': <enum GIMP_LAYER_MODE_COLOR_ERASE of type Gimp.LayerMode>, 'ERASE': <enum GIMP_LAYER_MODE_ERASE of type Gimp.LayerMode>, 'MERGE': <enum GIMP_LAYER_MODE_MERGE of type Gimp.LayerMode>, 'SPLIT': <enum GIMP_LAYER_MODE_SPLIT of type Gimp.LayerMode>, 'PASS_THROUGH': <enum GIMP_LAYER_MODE_PASS_THROUGH of type Gimp.LayerMode>, 'REPLACE': <enum GIMP_LAYER_MODE_REPLACE of type Gimp.LayerMode>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-        30: 30,
-        31: 31,
-        32: 32,
-        33: 33,
-        34: 34,
-        35: 35,
-        36: 36,
-        37: 37,
-        38: 38,
-        39: 39,
-        40: 40,
-        41: 41,
-        42: 42,
-        43: 43,
-        44: 44,
-        45: 45,
-        46: 46,
-        47: 47,
-        48: 48,
-        49: 49,
-        50: 50,
-        51: 51,
-        52: 52,
-        53: 53,
-        54: 54,
-        55: 55,
-        56: 56,
-        57: 57,
-        58: 58,
-        59: 59,
-        60: 60,
-        61: 61,
-        62: 62,
-    }
-    __gtype__ = None # (!) real value is '<GType GimpLayerMode (3595411712)>'
-    __info__ = gi.EnumInfo(LayerMode)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NORMAL_LEGACY': <LayerMode.NORMAL_LEGACY: 0>, 'DISSOLVE': <LayerMode.DISSOLVE: 1>, 'BEHIND_LEGACY': <LayerMode.BEHIND_LEGACY: 2>, 'MULTIPLY_LEGACY': <LayerMode.MULTIPLY_LEGACY: 3>, 'SCREEN_LEGACY': <LayerMode.SCREEN_LEGACY: 4>, 'OVERLAY_LEGACY': <LayerMode.OVERLAY_LEGACY: 5>, 'DIFFERENCE_LEGACY': <LayerMode.DIFFERENCE_LEGACY: 6>, 'ADDITION_LEGACY': <LayerMode.ADDITION_LEGACY: 7>, 'SUBTRACT_LEGACY': <LayerMode.SUBTRACT_LEGACY: 8>, 'DARKEN_ONLY_LEGACY': <LayerMode.DARKEN_ONLY_LEGACY: 9>, 'LIGHTEN_ONLY_LEGACY': <LayerMode.LIGHTEN_ONLY_LEGACY: 10>, 'HSV_HUE_LEGACY': <LayerMode.HSV_HUE_LEGACY: 11>, 'HSV_SATURATION_LEGACY': <LayerMode.HSV_SATURATION_LEGACY: 12>, 'HSL_COLOR_LEGACY': <LayerMode.HSL_COLOR_LEGACY: 13>, 'HSV_VALUE_LEGACY': <LayerMode.HSV_VALUE_LEGACY: 14>, 'DIVIDE_LEGACY': <LayerMode.DIVIDE_LEGACY: 15>, 'DODGE_LEGACY': <LayerMode.DODGE_LEGACY: 16>, 'BURN_LEGACY': <LayerMode.BURN_LEGACY: 17>, 'HARDLIGHT_LEGACY': <LayerMode.HARDLIGHT_LEGACY: 18>, 'SOFTLIGHT_LEGACY': <LayerMode.SOFTLIGHT_LEGACY: 19>, 'GRAIN_EXTRACT_LEGACY': <LayerMode.GRAIN_EXTRACT_LEGACY: 20>, 'GRAIN_MERGE_LEGACY': <LayerMode.GRAIN_MERGE_LEGACY: 21>, 'COLOR_ERASE_LEGACY': <LayerMode.COLOR_ERASE_LEGACY: 22>, 'OVERLAY': <LayerMode.OVERLAY: 23>, 'LCH_HUE': <LayerMode.LCH_HUE: 24>, 'LCH_CHROMA': <LayerMode.LCH_CHROMA: 25>, 'LCH_COLOR': <LayerMode.LCH_COLOR: 26>, 'LCH_LIGHTNESS': <LayerMode.LCH_LIGHTNESS: 27>, 'NORMAL': <LayerMode.NORMAL: 28>, 'BEHIND': <LayerMode.BEHIND: 29>, 'MULTIPLY': <LayerMode.MULTIPLY: 30>, 'SCREEN': <LayerMode.SCREEN: 31>, 'DIFFERENCE': <LayerMode.DIFFERENCE: 32>, 'ADDITION': <LayerMode.ADDITION: 33>, 'SUBTRACT': <LayerMode.SUBTRACT: 34>, 'DARKEN_ONLY': <LayerMode.DARKEN_ONLY: 35>, 'LIGHTEN_ONLY': <LayerMode.LIGHTEN_ONLY: 36>, 'HSV_HUE': <LayerMode.HSV_HUE: 37>, 'HSV_SATURATION': <LayerMode.HSV_SATURATION: 38>, 'HSL_COLOR': <LayerMode.HSL_COLOR: 39>, 'HSV_VALUE': <LayerMode.HSV_VALUE: 40>, 'DIVIDE': <LayerMode.DIVIDE: 41>, 'DODGE': <LayerMode.DODGE: 42>, 'BURN': <LayerMode.BURN: 43>, 'HARDLIGHT': <LayerMode.HARDLIGHT: 44>, 'SOFTLIGHT': <LayerMode.SOFTLIGHT: 45>, 'GRAIN_EXTRACT': <LayerMode.GRAIN_EXTRACT: 46>, 'GRAIN_MERGE': <LayerMode.GRAIN_MERGE: 47>, 'VIVID_LIGHT': <LayerMode.VIVID_LIGHT: 48>, 'PIN_LIGHT': <LayerMode.PIN_LIGHT: 49>, 'LINEAR_LIGHT': <LayerMode.LINEAR_LIGHT: 50>, 'HARD_MIX': <LayerMode.HARD_MIX: 51>, 'EXCLUSION': <LayerMode.EXCLUSION: 52>, 'LINEAR_BURN': <LayerMode.LINEAR_BURN: 53>, 'LUMA_DARKEN_ONLY': <LayerMode.LUMA_DARKEN_ONLY: 54>, 'LUMA_LIGHTEN_ONLY': <LayerMode.LUMA_LIGHTEN_ONLY: 55>, 'LUMINANCE': <LayerMode.LUMINANCE: 56>, 'COLOR_ERASE': <LayerMode.COLOR_ERASE: 57>, 'ERASE': <LayerMode.ERASE: 58>, 'MERGE': <LayerMode.MERGE: 59>, 'SPLIT': <LayerMode.SPLIT: 60>, 'PASS_THROUGH': <LayerMode.PASS_THROUGH: 61>, 'REPLACE': <LayerMode.REPLACE: 62>, 'OVERWRITE': <LayerMode.OVERWRITE: 63>})"
+    __name__ = 'LayerMode'
+    __qualname__ = 'LayerMode'
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -180,8 +179,8 @@ class Color(Color):
 
     MAX_VALUE = 65535
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gdk', 'MAX_VALUE': 65535, '__init__': <function Color.__init__ at 0x000002459be0e0c0>, '__eq__': <function Color.__eq__ at 0x000002459bda5300>, '__ne__': <function Color.__ne__ at 0x000002459bda53a0>, '__repr__': <function Color.__repr__ at 0x000002459bda5440>, 'red_float': <property object at 0x000002459bdf31f0>, 'green_float': <property object at 0x000002459bd9f330>, 'blue_float': <property object at 0x000002459bd9f380>, 'to_floats': <function Color.to_floats at 0x000002459bda58a0>, 'from_floats': <staticmethod(<function Color.from_floats at 0x000002459bda5940>)>, '__doc__': None, '__hash__': None})"
-    __gtype__ = None # (!) real value is '<GType GdkColor (2575320672)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gdk', 'MAX_VALUE': 65535, '__init__': <function Color.__init__ at 0x0000018725189940>, '__eq__': <function Color.__eq__ at 0x000001872518a340>, '__ne__': <function Color.__ne__ at 0x000001872518a3e0>, '__repr__': <function Color.__repr__ at 0x000001872518a480>, 'red_float': <property object at 0x0000018725183650>, 'green_float': <property object at 0x0000018725183a10>, 'blue_float': <property object at 0x0000018725183a60>, 'to_floats': <function Color.to_floats at 0x000001872518a8e0>, 'from_floats': <staticmethod(<function Color.from_floats at 0x000001872518a980>)>, '__doc__': None, '__hash__': None})"
+    __gtype__ = None # (!) real value is '<GType GdkColor (585155712)>'
     __hash__ = None
     __info__ = StructInfo(Color)
 

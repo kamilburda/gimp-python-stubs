@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -144,8 +140,8 @@ class DoubleArray(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DoubleArray), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpDoubleArray (3595404544)>, '__dict__': <attribute '__dict__' of 'DoubleArray' objects>, '__weakref__': <attribute '__weakref__' of 'DoubleArray' objects>, '__doc__': None, 'get_values': gi.FunctionInfo(get_values, bound=None), 'set_values': gi.FunctionInfo(set_values, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GimpDoubleArray (3595404544)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DoubleArray), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpDoubleArray (2406247472)>, '__dict__': <attribute '__dict__' of 'DoubleArray' objects>, '__weakref__': <attribute '__weakref__' of 'DoubleArray' objects>, '__doc__': None, 'get_values': <staticmethod(gi.FunctionInfo(get_values))>, 'set_values': <staticmethod(gi.FunctionInfo(set_values))>})"
+    __gtype__ = None # (!) real value is '<GType GimpDoubleArray (2406247472)>'
     __info__ = StructInfo(DoubleArray)
 
 

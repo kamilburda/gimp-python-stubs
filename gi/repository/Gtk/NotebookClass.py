@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -175,7 +174,7 @@ class NotebookClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(NotebookClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'NotebookClass' objects>, '__weakref__': <attribute '__weakref__' of 'NotebookClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceac1fec0>, 'switch_page': <property object at 0x000002eceac1ffb0>, 'select_page': <property object at 0x000002eceac240e0>, 'focus_tab': <property object at 0x000002eceac241d0>, 'change_current_page': <property object at 0x000002eceac242c0>, 'move_focus_out': <property object at 0x000002eceac243b0>, 'reorder_tab': <property object at 0x000002eceac244a0>, 'insert_page': <property object at 0x000002eceac24590>, 'create_window': <property object at 0x000002eceac24680>, 'page_reordered': <property object at 0x000002eceac24770>, 'page_removed': <property object at 0x000002eceac24860>, 'page_added': <property object at 0x000002eceac24950>, '_gtk_reserved1': <property object at 0x000002eceac24a40>, '_gtk_reserved2': <property object at 0x000002eceac24b30>, '_gtk_reserved3': <property object at 0x000002eceac24c20>, '_gtk_reserved4': <property object at 0x000002eceac24d10>, '_gtk_reserved5': <property object at 0x000002eceac24e00>, '_gtk_reserved6': <property object at 0x000002eceac24ef0>, '_gtk_reserved7': <property object at 0x000002eceac24fe0>, '_gtk_reserved8': <property object at 0x000002eceac250d0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(NotebookClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'NotebookClass' objects>, '__weakref__': <attribute '__weakref__' of 'NotebookClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18aacf0>, 'switch_page': <property object at 0x000002bfd18aade0>, 'select_page': <property object at 0x000002bfd18aaed0>, 'focus_tab': <property object at 0x000002bfd18aafc0>, 'change_current_page': <property object at 0x000002bfd18ab0b0>, 'move_focus_out': <property object at 0x000002bfd18ab1a0>, 'reorder_tab': <property object at 0x000002bfd18ab290>, 'insert_page': <property object at 0x000002bfd18ab380>, 'create_window': <property object at 0x000002bfd18ab470>, 'page_reordered': <property object at 0x000002bfd18ab560>, 'page_removed': <property object at 0x000002bfd18ab650>, 'page_added': <property object at 0x000002bfd18ab740>, '_gtk_reserved1': <property object at 0x000002bfd18ab830>, '_gtk_reserved2': <property object at 0x000002bfd18ab920>, '_gtk_reserved3': <property object at 0x000002bfd18aba10>, '_gtk_reserved4': <property object at 0x000002bfd18abb00>, '_gtk_reserved5': <property object at 0x000002bfd18abbf0>, '_gtk_reserved6': <property object at 0x000002bfd18abce0>, '_gtk_reserved7': <property object at 0x000002bfd18abdd0>, '_gtk_reserved8': <property object at 0x000002bfd18abec0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(NotebookClass)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -173,7 +172,7 @@ class ThemingEngineClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ThemingEngineClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ThemingEngineClass' objects>, '__weakref__': <attribute '__weakref__' of 'ThemingEngineClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece9b67330>, 'render_line': <property object at 0x000002ece9b67420>, 'render_background': <property object at 0x000002ece9b67510>, 'render_frame': <property object at 0x000002ece9b67600>, 'render_frame_gap': <property object at 0x000002ece9b676f0>, 'render_extension': <property object at 0x000002ece9b677e0>, 'render_check': <property object at 0x000002ece9b678d0>, 'render_option': <property object at 0x000002ece9b679c0>, 'render_arrow': <property object at 0x000002ece9b67ab0>, 'render_expander': <property object at 0x000002ece9b67ba0>, 'render_focus': <property object at 0x000002ece9b67c90>, 'render_layout': <property object at 0x000002ece9b67d80>, 'render_slider': <property object at 0x000002ece9b67e70>, 'render_handle': <property object at 0x000002ece9b67f60>, 'render_activity': <property object at 0x000002ece9b5c090>, 'render_icon_pixbuf': <property object at 0x000002ece9b5c180>, 'render_icon': <property object at 0x000002ece9b5c270>, 'render_icon_surface': <property object at 0x000002ece9b5c360>, 'padding': <property object at 0x000002ece9b5c450>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ThemingEngineClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ThemingEngineClass' objects>, '__weakref__': <attribute '__weakref__' of 'ThemingEngineClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd3a1db70>, 'render_line': <property object at 0x000002bfd3a1dc60>, 'render_background': <property object at 0x000002bfd3a1dd50>, 'render_frame': <property object at 0x000002bfd3a1de40>, 'render_frame_gap': <property object at 0x000002bfd3a1df30>, 'render_extension': <property object at 0x000002bfd3a1e020>, 'render_check': <property object at 0x000002bfd3a1e110>, 'render_option': <property object at 0x000002bfd3a1e200>, 'render_arrow': <property object at 0x000002bfd3a1e2f0>, 'render_expander': <property object at 0x000002bfd3a1e3e0>, 'render_focus': <property object at 0x000002bfd3a1e4d0>, 'render_layout': <property object at 0x000002bfd3a1e5c0>, 'render_slider': <property object at 0x000002bfd3a1e6b0>, 'render_handle': <property object at 0x000002bfd3a1e7a0>, 'render_activity': <property object at 0x000002bfd3a1e890>, 'render_icon_pixbuf': <property object at 0x000002bfd3a1e980>, 'render_icon': <property object at 0x000002bfd3a1ea70>, 'render_icon_surface': <property object at 0x000002bfd3a1eb60>, 'padding': <property object at 0x000002bfd3a1ec50>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ThemingEngineClass)
 

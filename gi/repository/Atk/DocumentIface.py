@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -158,7 +151,7 @@ class DocumentIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DocumentIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DocumentIface' objects>, '__weakref__': <attribute '__weakref__' of 'DocumentIface' objects>, '__doc__': None, 'parent': <property object at 0x000001733817e200>, 'get_document_type': <property object at 0x000001733817e2f0>, 'get_document': <property object at 0x000001733817e3e0>, 'get_document_locale': <property object at 0x000001733817e4d0>, 'get_document_attributes': <property object at 0x000001733817e5c0>, 'get_document_attribute_value': <property object at 0x000001733817e700>, 'set_document_attribute': <property object at 0x000001733817e7f0>, 'get_current_page_number': <property object at 0x000001733817e8e0>, 'get_page_count': <property object at 0x000001733817e9d0>, 'get_text_selections': <property object at 0x000001733817eac0>, 'set_text_selections': <property object at 0x000001733817ebb0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DocumentIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DocumentIface' objects>, '__weakref__': <attribute '__weakref__' of 'DocumentIface' objects>, '__doc__': None, 'parent': <property object at 0x000001c85dc868e0>, 'get_document_type': <property object at 0x000001c85dc869d0>, 'get_document': <property object at 0x000001c85dc86ac0>, 'get_document_locale': <property object at 0x000001c85dc86bb0>, 'get_document_attributes': <property object at 0x000001c85dc86ca0>, 'get_document_attribute_value': <property object at 0x000001c85dc86de0>, 'set_document_attribute': <property object at 0x000001c85dc86ed0>, 'get_current_page_number': <property object at 0x000001c85dc86fc0>, 'get_page_count': <property object at 0x000001c85dc870b0>, 'get_text_selections': <property object at 0x000001c85dc871a0>, 'set_text_selections': <property object at 0x000001c85dc87290>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(DocumentIface)
 

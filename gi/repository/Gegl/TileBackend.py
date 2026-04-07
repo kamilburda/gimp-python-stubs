@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -54,7 +48,7 @@ class TileBackend(TileSource):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -82,6 +76,9 @@ class TileBackend(TileSource):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -310,20 +307,20 @@ class TileBackend(TileSource):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -461,12 +458,12 @@ class TileBackend(TileSource):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002761b832ef0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ebdc192aa0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TileBackend), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglTileBackend (420743600)>, '__doc__': None, '__gsignals__': {}, 'unlink_swap': gi.FunctionInfo(unlink_swap, bound=None), 'command': gi.FunctionInfo(command, bound=None), 'get_flush_on_destroy': gi.FunctionInfo(get_flush_on_destroy, bound=None), 'get_tile_height': gi.FunctionInfo(get_tile_height, bound=None), 'get_tile_size': gi.FunctionInfo(get_tile_size, bound=None), 'get_tile_width': gi.FunctionInfo(get_tile_width, bound=None), 'peek_storage': gi.FunctionInfo(peek_storage, bound=None), 'set_extent': gi.FunctionInfo(set_extent, bound=None), 'set_flush_on_destroy': gi.FunctionInfo(set_flush_on_destroy, bound=None), 'parent_instance': <property object at 0x000002761b909530>, 'priv': <property object at 0x000002761b909620>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TileBackend), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglTileBackend (3656448592)>, '__doc__': None, '__gsignals__': {}, 'unlink_swap': <staticmethod(gi.FunctionInfo(unlink_swap))>, 'command': gi.FunctionInfo(command), 'get_flush_on_destroy': gi.FunctionInfo(get_flush_on_destroy), 'get_tile_height': gi.FunctionInfo(get_tile_height), 'get_tile_size': gi.FunctionInfo(get_tile_size), 'get_tile_width': gi.FunctionInfo(get_tile_width), 'peek_storage': gi.FunctionInfo(peek_storage), 'set_extent': gi.FunctionInfo(set_extent), 'set_flush_on_destroy': gi.FunctionInfo(set_flush_on_destroy), 'parent_instance': <property object at 0x000001ebdc202480>, 'priv': <property object at 0x000001ebdc202570>})"
     __gdoc__ = 'Object GeglTileBackend\n\nProperties from GeglTileBackend:\n  tile-width -> gint: tile-width\n    Tile width in pixels\n  tile-height -> gint: tile-height\n    Tile height in pixels\n  px-size -> gint: px-size\n    Size of a single pixel in bytes\n  tile-size -> gint: tile-size\n    Size of the tiles linear buffer in bytes\n  format -> gpointer: format\n    babl format\n  flush-on-destroy -> gboolean: flush-on-destroy\n    Cache tiles will be flushed before the backend is destroyed\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglTileBackend (420743600)>'
+    __gtype__ = None # (!) real value is '<GType GeglTileBackend (3656448592)>'
     __info__ = ObjectInfo(TileBackend)
 
 

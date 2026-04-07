@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -59,7 +58,11 @@ class TypeValueTable(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -167,7 +170,7 @@ class TypeValueTable(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TypeValueTable), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeValueTable' objects>, '__weakref__': <attribute '__weakref__' of 'TypeValueTable' objects>, '__doc__': None, 'value_init': <property object at 0x0000010b07a8a430>, 'value_free': <property object at 0x0000010b07a8a520>, 'value_copy': <property object at 0x0000010b07a8a610>, 'value_peek_pointer': <property object at 0x0000010b07a8a750>, 'collect_format': <property object at 0x0000010b07a8a840>, 'collect_value': <property object at 0x0000010b07a8a930>, 'lcopy_format': <property object at 0x0000010b07a8aa20>, 'lcopy_value': <property object at 0x0000010b07a8ab10>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TypeValueTable), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeValueTable' objects>, '__weakref__': <attribute '__weakref__' of 'TypeValueTable' objects>, '__doc__': None, 'value_init': <property object at 0x000001dd11e38630>, 'value_free': <property object at 0x000001dd11e38720>, 'value_copy': <property object at 0x000001dd11e38810>, 'value_peek_pointer': <property object at 0x000001dd11e38900>, 'collect_format': <property object at 0x000001dd11e389f0>, 'collect_value': <property object at 0x000001dd11e38ae0>, 'lcopy_format': <property object at 0x000001dd11e38bd0>, 'lcopy_value': <property object at 0x000001dd11e38cc0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TypeValueTable)
 

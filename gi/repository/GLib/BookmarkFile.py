@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class BookmarkFile(__gi.Boxed):
@@ -140,7 +138,8 @@ class BookmarkFile(__gi.Boxed):
         """ move_item(self, old_uri:str, new_uri:str=None) -> bool """
         return False
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> GLib.BookmarkFile """
         pass
 
@@ -332,8 +331,8 @@ class BookmarkFile(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(BookmarkFile), '__module__': 'gi.repository.GLib', '__gtype__': <GType GBookmarkFile (155711344)>, '__dict__': <attribute '__dict__' of 'BookmarkFile' objects>, '__weakref__': <attribute '__weakref__' of 'BookmarkFile' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'add_application': gi.FunctionInfo(add_application, bound=None), 'add_group': gi.FunctionInfo(add_group, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_added': gi.FunctionInfo(get_added, bound=None), 'get_added_date_time': gi.FunctionInfo(get_added_date_time, bound=None), 'get_app_info': gi.FunctionInfo(get_app_info, bound=None), 'get_application_info': gi.FunctionInfo(get_application_info, bound=None), 'get_applications': gi.FunctionInfo(get_applications, bound=None), 'get_description': gi.FunctionInfo(get_description, bound=None), 'get_groups': gi.FunctionInfo(get_groups, bound=None), 'get_icon': gi.FunctionInfo(get_icon, bound=None), 'get_is_private': gi.FunctionInfo(get_is_private, bound=None), 'get_mime_type': gi.FunctionInfo(get_mime_type, bound=None), 'get_modified': gi.FunctionInfo(get_modified, bound=None), 'get_modified_date_time': gi.FunctionInfo(get_modified_date_time, bound=None), 'get_size': gi.FunctionInfo(get_size, bound=None), 'get_title': gi.FunctionInfo(get_title, bound=None), 'get_uris': gi.FunctionInfo(get_uris, bound=None), 'get_visited': gi.FunctionInfo(get_visited, bound=None), 'get_visited_date_time': gi.FunctionInfo(get_visited_date_time, bound=None), 'has_application': gi.FunctionInfo(has_application, bound=None), 'has_group': gi.FunctionInfo(has_group, bound=None), 'has_item': gi.FunctionInfo(has_item, bound=None), 'load_from_data': gi.FunctionInfo(load_from_data, bound=None), 'load_from_data_dirs': gi.FunctionInfo(load_from_data_dirs, bound=None), 'load_from_file': gi.FunctionInfo(load_from_file, bound=None), 'move_item': gi.FunctionInfo(move_item, bound=None), 'remove_application': gi.FunctionInfo(remove_application, bound=None), 'remove_group': gi.FunctionInfo(remove_group, bound=None), 'remove_item': gi.FunctionInfo(remove_item, bound=None), 'set_added': gi.FunctionInfo(set_added, bound=None), 'set_added_date_time': gi.FunctionInfo(set_added_date_time, bound=None), 'set_app_info': gi.FunctionInfo(set_app_info, bound=None), 'set_application_info': gi.FunctionInfo(set_application_info, bound=None), 'set_description': gi.FunctionInfo(set_description, bound=None), 'set_groups': gi.FunctionInfo(set_groups, bound=None), 'set_icon': gi.FunctionInfo(set_icon, bound=None), 'set_is_private': gi.FunctionInfo(set_is_private, bound=None), 'set_mime_type': gi.FunctionInfo(set_mime_type, bound=None), 'set_modified': gi.FunctionInfo(set_modified, bound=None), 'set_modified_date_time': gi.FunctionInfo(set_modified_date_time, bound=None), 'set_title': gi.FunctionInfo(set_title, bound=None), 'set_visited': gi.FunctionInfo(set_visited, bound=None), 'set_visited_date_time': gi.FunctionInfo(set_visited_date_time, bound=None), 'to_data': gi.FunctionInfo(to_data, bound=None), 'to_file': gi.FunctionInfo(to_file, bound=None), 'error_quark': gi.FunctionInfo(error_quark, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002830be60720>})"
-    __gtype__ = None # (!) real value is '<GType GBookmarkFile (155711344)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(BookmarkFile), '__module__': 'gi.repository.GLib', '__gtype__': <GType GBookmarkFile (2640522048)>, '__dict__': <attribute '__dict__' of 'BookmarkFile' objects>, '__weakref__': <attribute '__weakref__' of 'BookmarkFile' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'add_application': gi.FunctionInfo(add_application), 'add_group': gi.FunctionInfo(add_group), 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_added': gi.FunctionInfo(get_added), 'get_added_date_time': gi.FunctionInfo(get_added_date_time), 'get_app_info': gi.FunctionInfo(get_app_info), 'get_application_info': gi.FunctionInfo(get_application_info), 'get_applications': gi.FunctionInfo(get_applications), 'get_description': gi.FunctionInfo(get_description), 'get_groups': gi.FunctionInfo(get_groups), 'get_icon': gi.FunctionInfo(get_icon), 'get_is_private': gi.FunctionInfo(get_is_private), 'get_mime_type': gi.FunctionInfo(get_mime_type), 'get_modified': gi.FunctionInfo(get_modified), 'get_modified_date_time': gi.FunctionInfo(get_modified_date_time), 'get_size': gi.FunctionInfo(get_size), 'get_title': gi.FunctionInfo(get_title), 'get_uris': gi.FunctionInfo(get_uris), 'get_visited': gi.FunctionInfo(get_visited), 'get_visited_date_time': gi.FunctionInfo(get_visited_date_time), 'has_application': gi.FunctionInfo(has_application), 'has_group': gi.FunctionInfo(has_group), 'has_item': gi.FunctionInfo(has_item), 'load_from_data': gi.FunctionInfo(load_from_data), 'load_from_data_dirs': gi.FunctionInfo(load_from_data_dirs), 'load_from_file': gi.FunctionInfo(load_from_file), 'move_item': gi.FunctionInfo(move_item), 'remove_application': gi.FunctionInfo(remove_application), 'remove_group': gi.FunctionInfo(remove_group), 'remove_item': gi.FunctionInfo(remove_item), 'set_added': gi.FunctionInfo(set_added), 'set_added_date_time': gi.FunctionInfo(set_added_date_time), 'set_app_info': gi.FunctionInfo(set_app_info), 'set_application_info': gi.FunctionInfo(set_application_info), 'set_description': gi.FunctionInfo(set_description), 'set_groups': gi.FunctionInfo(set_groups), 'set_icon': gi.FunctionInfo(set_icon), 'set_is_private': gi.FunctionInfo(set_is_private), 'set_mime_type': gi.FunctionInfo(set_mime_type), 'set_modified': gi.FunctionInfo(set_modified), 'set_modified_date_time': gi.FunctionInfo(set_modified_date_time), 'set_title': gi.FunctionInfo(set_title), 'set_visited': gi.FunctionInfo(set_visited), 'set_visited_date_time': gi.FunctionInfo(set_visited_date_time), 'to_data': gi.FunctionInfo(to_data), 'to_file': gi.FunctionInfo(to_file), 'error_quark': <staticmethod(gi.FunctionInfo(error_quark))>, '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000018e9fdc1010>})"
+    __gtype__ = None # (!) real value is '<GType GBookmarkFile (2640522048)>'
     __info__ = StructInfo(BookmarkFile)
 
 

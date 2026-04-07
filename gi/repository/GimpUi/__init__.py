@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 # Variables with simple values
@@ -297,6 +290,8 @@ ICON_LAYER_ANCHOR = 'gimp-anchor'
 
 ICON_LAYER_FLOATING_SELECTION = 'gimp-floating-selection'
 
+ICON_LAYER_LINK_LAYER = 'emblem-symbolic-link'
+
 ICON_LAYER_MASK = 'gimp-layer-mask'
 
 ICON_LAYER_MERGE_DOWN = 'gimp-merge-down'
@@ -304,6 +299,8 @@ ICON_LAYER_MERGE_DOWN = 'gimp-merge-down'
 ICON_LAYER_TEXT_LAYER = 'gimp-text-layer'
 
 ICON_LAYER_TO_IMAGESIZE = 'gimp-layer-to-imagesize'
+
+ICON_LAYER_VECTOR_LAYER = 'gimp-tool-path'
 
 ICON_LINKED = 'gimp-linked'
 ICON_LIST = 'gimp-list'
@@ -528,8 +525,6 @@ _namespace = 'GimpUi'
 
 _version = '3.0'
 
-__weakref__ = None
-
 # functions
 
 def cairo_set_focus_line_pattern(cr, widget): # real signature unknown; restored from __doc__
@@ -752,12 +747,20 @@ def prop_icon_image_new(config, property_name, icon_size): # real signature unkn
     """ prop_icon_image_new(config:GObject.Object, property_name:str, icon_size:Gtk.IconSize) -> Gtk.Widget """
     pass
 
+def prop_image_chooser_new(config, property_name, chooser_title=None): # real signature unknown; restored from __doc__
+    """ prop_image_chooser_new(config:GObject.Object, property_name:str, chooser_title:str=None) -> Gtk.Widget """
+    pass
+
 def prop_int_combo_box_new(config, property_name, store): # real signature unknown; restored from __doc__
     """ prop_int_combo_box_new(config:GObject.Object, property_name:str, store:GimpUi.IntStore) -> Gtk.Widget """
     pass
 
 def prop_int_radio_frame_new(config, property_name, title=None, store): # real signature unknown; restored from __doc__
     """ prop_int_radio_frame_new(config:GObject.Object, property_name:str, title:str=None, store:GimpUi.IntStore) -> Gtk.Widget """
+    pass
+
+def prop_item_chooser_new(config, property_name, chooser_title=None): # real signature unknown; restored from __doc__
+    """ prop_item_chooser_new(config:GObject.Object, property_name:str, chooser_title:str=None) -> Gtk.Widget """
     pass
 
 def prop_label_color_new(config, property_name, editable): # real signature unknown; restored from __doc__
@@ -824,6 +827,10 @@ def prop_text_buffer_new(config, property_name, max_len): # real signature unkno
     """ prop_text_buffer_new(config:GObject.Object, property_name:str, max_len:int) -> Gtk.TextBuffer """
     pass
 
+def prop_toggle_new(config, property_name, icon_name, label): # real signature unknown; restored from __doc__
+    """ prop_toggle_new(config:GObject.Object, property_name:str, icon_name:str, label:str) -> Gtk.Widget, image_out:Gtk.Widget """
+    pass
+
 def prop_unit_combo_box_new(config, property_name): # real signature unknown; restored from __doc__
     """ prop_unit_combo_box_new(config:GObject.Object, property_name:str) -> Gtk.Widget """
     pass
@@ -884,8 +891,8 @@ def widget_animation_enabled(): # real signature unknown; restored from __doc__
     """ widget_animation_enabled() -> bool """
     return False
 
-def widget_free_native_handle(widget): # real signature unknown; restored from __doc__
-    """ widget_free_native_handle(widget:Gtk.Widget) -> window_handle:GLib.Bytes """
+def widget_free_native_handle(widget, window_handle): # real signature unknown; restored from __doc__
+    """ widget_free_native_handle(widget:Gtk.Widget, window_handle:GLib.Bytes) -> window_handle:GLib.Bytes """
     pass
 
 def widget_get_color_profile(widget): # real signature unknown; restored from __doc__
@@ -904,8 +911,8 @@ def widget_get_render_space(widget, config): # real signature unknown; restored 
     """ widget_get_render_space(widget:Gtk.Widget, config:Gimp.ColorConfig) -> Babl.Object """
     pass
 
-def widget_set_native_handle(widget): # real signature unknown; restored from __doc__
-    """ widget_set_native_handle(widget:Gtk.Widget) -> handle:GLib.Bytes """
+def widget_set_native_handle(widget, window_handle): # real signature unknown; restored from __doc__
+    """ widget_set_native_handle(widget:Gtk.Widget, window_handle:GLib.Bytes) -> window_handle:GLib.Bytes """
     pass
 
 def widget_track_monitor(widget, monitor_changed_callback, user_data=None): # real signature unknown; restored from __doc__
@@ -926,112 +933,6 @@ def window_set_transient_for_display(window, display): # real signature unknown;
 
 def zoom_button_new(model, zoom_type, icon_size): # real signature unknown; restored from __doc__
     """ zoom_button_new(model:GimpUi.ZoomModel, zoom_type:GimpUi.ZoomType, icon_size:Gtk.IconSize) -> Gtk.Widget """
-    pass
-
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """
-    Default object formatter.
-    
-    Return str(self) if format_spec is empty. Raise TypeError otherwise.
-    """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    """ Might raise gi._gi.RepositoryError """
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
     pass
 
 # classes
@@ -1088,7 +989,9 @@ from .ScaleEntry import ScaleEntry
 from .ColorScaleEntry import ColorScaleEntry
 from .ColorScaleEntryClass import ColorScaleEntryClass
 from .ColorScales import ColorScales
+from .ColorScalesClass import ColorScalesClass
 from .ColorSelect import ColorSelect
+from .ColorSelectClass import ColorSelectClass
 from .ColorSelection import ColorSelection
 from .ColorSelectionClass import ColorSelectionClass
 from .ColorSelectorChannel import ColorSelectorChannel
@@ -1124,6 +1027,8 @@ from .GradientChooser import GradientChooser
 from .GradientChooserClass import GradientChooserClass
 from .HintBox import HintBox
 from .HintBoxClass import HintBoxClass
+from .ImageChooser import ImageChooser
+from .ImageChooserClass import ImageChooserClass
 from .ImageComboBox import ImageComboBox
 from .ImageComboBoxClass import ImageComboBoxClass
 from .IntComboBoxClass import IntComboBoxClass
@@ -1132,6 +1037,8 @@ from .IntRadioFrame import IntRadioFrame
 from .IntRadioFrameClass import IntRadioFrameClass
 from .IntStoreClass import IntStoreClass
 from .IntStoreColumns import IntStoreColumns
+from .ItemChooser import ItemChooser
+from .ItemChooserClass import ItemChooserClass
 from .LabelColor import LabelColor
 from .LabelColorClass import LabelColorClass
 from .LabeledClass import LabeledClass
@@ -1195,12 +1102,11 @@ from .ZoomModelClass import ZoomModelClass
 from .ZoomPreview import ZoomPreview
 from .ZoomPreviewClass import ZoomPreviewClass
 from .ZoomType import ZoomType
-from .__class__ import __class__
 # variables with complex values
 
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001eeb48755b0>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x0000020ede1b4440>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GimpUi', loader=<gi.importer.DynamicImporter object at 0x000001eeb48755b0>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GimpUi', loader=<gi.importer.DynamicImporter object at 0x0000020ede1b4440>)"
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -42,7 +41,7 @@ class Screen(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -70,6 +69,9 @@ class Screen(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -406,20 +408,20 @@ class Screen(__gi_overrides_GObject.Object):
         """ width_mm() -> int """
         return 0
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -551,12 +553,12 @@ class Screen(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002459c416260>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x00000187252eb310>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Screen), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkScreen (2578995920)>, '__doc__': None, '__gsignals__': {}, 'get_default': gi.FunctionInfo(get_default, bound=None), 'height': gi.FunctionInfo(height, bound=None), 'height_mm': gi.FunctionInfo(height_mm, bound=None), 'width': gi.FunctionInfo(width, bound=None), 'width_mm': gi.FunctionInfo(width_mm, bound=None), 'get_active_window': gi.FunctionInfo(get_active_window, bound=None), 'get_display': gi.FunctionInfo(get_display, bound=None), 'get_font_options': gi.FunctionInfo(get_font_options, bound=None), 'get_height': gi.FunctionInfo(get_height, bound=None), 'get_height_mm': gi.FunctionInfo(get_height_mm, bound=None), 'get_monitor_at_point': gi.FunctionInfo(get_monitor_at_point, bound=None), 'get_monitor_at_window': gi.FunctionInfo(get_monitor_at_window, bound=None), 'get_monitor_geometry': gi.FunctionInfo(get_monitor_geometry, bound=None), 'get_monitor_height_mm': gi.FunctionInfo(get_monitor_height_mm, bound=None), 'get_monitor_plug_name': gi.FunctionInfo(get_monitor_plug_name, bound=None), 'get_monitor_scale_factor': gi.FunctionInfo(get_monitor_scale_factor, bound=None), 'get_monitor_width_mm': gi.FunctionInfo(get_monitor_width_mm, bound=None), 'get_monitor_workarea': gi.FunctionInfo(get_monitor_workarea, bound=None), 'get_n_monitors': gi.FunctionInfo(get_n_monitors, bound=None), 'get_number': gi.FunctionInfo(get_number, bound=None), 'get_primary_monitor': gi.FunctionInfo(get_primary_monitor, bound=None), 'get_resolution': gi.FunctionInfo(get_resolution, bound=None), 'get_rgba_visual': gi.FunctionInfo(get_rgba_visual, bound=None), 'get_root_window': gi.FunctionInfo(get_root_window, bound=None), 'get_setting': gi.FunctionInfo(get_setting, bound=None), 'get_system_visual': gi.FunctionInfo(get_system_visual, bound=None), 'get_toplevel_windows': gi.FunctionInfo(get_toplevel_windows, bound=None), 'get_width': gi.FunctionInfo(get_width, bound=None), 'get_width_mm': gi.FunctionInfo(get_width_mm, bound=None), 'get_window_stack': gi.FunctionInfo(get_window_stack, bound=None), 'is_composited': gi.FunctionInfo(is_composited, bound=None), 'list_visuals': gi.FunctionInfo(list_visuals, bound=None), 'make_display_name': gi.FunctionInfo(make_display_name, bound=None), 'set_font_options': gi.FunctionInfo(set_font_options, bound=None), 'set_resolution': gi.FunctionInfo(set_resolution, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Screen), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkScreen (585146016)>, '__doc__': None, '__gsignals__': {}, 'get_default': <staticmethod(gi.FunctionInfo(get_default))>, 'height': <staticmethod(gi.FunctionInfo(height))>, 'height_mm': <staticmethod(gi.FunctionInfo(height_mm))>, 'width': <staticmethod(gi.FunctionInfo(width))>, 'width_mm': <staticmethod(gi.FunctionInfo(width_mm))>, 'get_active_window': gi.FunctionInfo(get_active_window), 'get_display': gi.FunctionInfo(get_display), 'get_font_options': gi.FunctionInfo(get_font_options), 'get_height': gi.FunctionInfo(get_height), 'get_height_mm': gi.FunctionInfo(get_height_mm), 'get_monitor_at_point': gi.FunctionInfo(get_monitor_at_point), 'get_monitor_at_window': gi.FunctionInfo(get_monitor_at_window), 'get_monitor_geometry': gi.FunctionInfo(get_monitor_geometry), 'get_monitor_height_mm': gi.FunctionInfo(get_monitor_height_mm), 'get_monitor_plug_name': gi.FunctionInfo(get_monitor_plug_name), 'get_monitor_scale_factor': gi.FunctionInfo(get_monitor_scale_factor), 'get_monitor_width_mm': gi.FunctionInfo(get_monitor_width_mm), 'get_monitor_workarea': gi.FunctionInfo(get_monitor_workarea), 'get_n_monitors': gi.FunctionInfo(get_n_monitors), 'get_number': gi.FunctionInfo(get_number), 'get_primary_monitor': gi.FunctionInfo(get_primary_monitor), 'get_resolution': gi.FunctionInfo(get_resolution), 'get_rgba_visual': gi.FunctionInfo(get_rgba_visual), 'get_root_window': gi.FunctionInfo(get_root_window), 'get_setting': gi.FunctionInfo(get_setting), 'get_system_visual': gi.FunctionInfo(get_system_visual), 'get_toplevel_windows': gi.FunctionInfo(get_toplevel_windows), 'get_width': gi.FunctionInfo(get_width), 'get_width_mm': gi.FunctionInfo(get_width_mm), 'get_window_stack': gi.FunctionInfo(get_window_stack), 'is_composited': gi.FunctionInfo(is_composited), 'list_visuals': gi.FunctionInfo(list_visuals), 'make_display_name': gi.FunctionInfo(make_display_name), 'set_font_options': gi.FunctionInfo(set_font_options), 'set_resolution': gi.FunctionInfo(set_resolution)})"
     __gdoc__ = 'Object GdkScreen\n\nSignals from GdkScreen:\n  size-changed ()\n  composited-changed ()\n  monitors-changed ()\n\nProperties from GdkScreen:\n  font-options -> gpointer: Font options\n    The default font options for the screen\n  resolution -> gdouble: Font resolution\n    The resolution for fonts on the screen\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkScreen (2578995920)>'
+    __gtype__ = None # (!) real value is '<GType GdkScreen (585146016)>'
     __info__ = ObjectInfo(Screen)
 
 

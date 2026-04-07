@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -150,6 +149,12 @@ class Template(object):
     Callback = None # (!) real value is "<class 'gi._gtktemplate.Callback'>"
     Child = None # (!) real value is "<class 'gi._gtktemplate.Child'>"
     __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi._gtktemplate', '__init__': <function Template.__init__ at 0x000002ece89f37e0>, 'from_file': <classmethod(<function Template.from_file at 0x000002ece89f3880>)>, 'from_string': <classmethod(<function Template.from_string at 0x000002ece89f3920>)>, 'from_resource': <classmethod(<function Template.from_resource at 0x000002ece89f39c0>)>, 'Callback': <class 'gi._gtktemplate.Callback'>, 'Child': <class 'gi._gtktemplate.Child'>, '__call__': <function Template.__call__ at 0x000002ece89f3a60>, '__dict__': <attribute '__dict__' of 'Template' objects>, '__weakref__': <attribute '__weakref__' of 'Template' objects>, '__doc__': None})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi._gtktemplate', '__firstlineno__': 219, '__init__': <function Template.__init__ at 0x000002bfce4d4f60>, 'from_file': <classmethod(<function Template.from_file at 0x000002bfce4d4eb0>)>, 'from_string': <classmethod(<function Template.from_string at 0x000002bfce4d4e00>)>, 'from_resource': <classmethod(<function Template.from_resource at 0x000002bfce4d4d50>)>, 'Callback': <class 'gi._gtktemplate.Callback'>, 'Child': <class 'gi._gtktemplate.Child'>, '__call__': <function Template.__call__ at 0x000002bfce4d4ca0>, '__static_attributes__': ('filename', 'resource_path', 'string'), '__dict__': <attribute '__dict__' of 'Template' objects>, '__weakref__': <attribute '__weakref__' of 'Template' objects>, '__doc__': None})"
+    __firstlineno__ = 219
+    __static_attributes__ = (
+        'filename',
+        'resource_path',
+        'string',
+    )
 
 

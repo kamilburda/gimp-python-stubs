@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -2534,7 +2533,7 @@ MAJOR_VERSION = 3
 
 MAX_TIMECOORD_AXES = 128
 
-MICRO_VERSION = 48
+MICRO_VERSION = 51
 
 MINOR_VERSION = 24
 
@@ -2545,8 +2544,6 @@ PRIORITY_REDRAW = 120
 _namespace = 'Gdk'
 
 _version = '3.0'
-
-__weakref__ = None
 
 # functions
 
@@ -2982,111 +2979,6 @@ def utf8_to_string_target(p_str): # real signature unknown; restored from __doc_
     """ utf8_to_string_target(str:str) -> str or None """
     return ""
 
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """
-    Default object formatter.
-    
-    Return str(self) if format_spec is empty. Raise TypeError otherwise.
-    """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
-    pass
-
 # classes
 
 from .AnchorHints import AnchorHints
@@ -3196,7 +3088,6 @@ from .WindowTypeHint import WindowTypeHint
 from .WindowWindowClass import WindowWindowClass
 from .WMDecoration import WMDecoration
 from .WMFunction import WMFunction
-from .__class__ import __class__
 # variables with complex values
 
 SELECTION_CLIPBOARD = None # (!) real value is 'Gdk.Atom.intern("CLIPBOARD", False)'
@@ -3231,13 +3122,9 @@ TARGET_PIXMAP = None # (!) real value is 'Gdk.Atom.intern("PIXMAP", False)'
 
 TARGET_STRING = None # (!) real value is 'Gdk.Atom.intern("STRING", False)'
 
-_introspection_module = None # (!) real value is "<IntrospectionModule 'Gdk' from 'C:\\\\Program Files\\\\GIMP 3\\\\lib\\\\girepository-1.0\\\\Gdk-3.0.typelib'>"
-
-__annotations__ = {}
-
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x00000245994f3890>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x0000018722cb6fc0>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Gdk', loader=<gi.importer.DynamicImporter object at 0x00000245994f3890>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Gdk', loader=<gi.importer.DynamicImporter object at 0x0000018722cb6fc0>)"
 

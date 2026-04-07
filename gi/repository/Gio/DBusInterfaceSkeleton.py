@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -45,7 +50,7 @@ class DBusInterfaceSkeleton(__gi_overrides_GObject.Object, DBusInterface):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -73,6 +78,9 @@ class DBusInterfaceSkeleton(__gi_overrides_GObject.Object, DBusInterface):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_flush(self, *args, **kwargs): # real signature unknown
@@ -346,20 +354,20 @@ class DBusInterfaceSkeleton(__gi_overrides_GObject.Object, DBusInterface):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -389,7 +397,11 @@ class DBusInterfaceSkeleton(__gi_overrides_GObject.Object, DBusInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -494,12 +506,12 @@ class DBusInterfaceSkeleton(__gi_overrides_GObject.Object, DBusInterface):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a793753fd0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70851ff0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(DBusInterfaceSkeleton), '__module__': 'gi.repository.Gio', '__gtype__': <GType GDBusInterfaceSkeleton (2472608128)>, '__doc__': None, '__gsignals__': {}, 'export': gi.FunctionInfo(export, bound=None), 'flush': gi.FunctionInfo(flush, bound=None), 'get_connection': gi.FunctionInfo(get_connection, bound=None), 'get_connections': gi.FunctionInfo(get_connections, bound=None), 'get_flags': gi.FunctionInfo(get_flags, bound=None), 'get_info': gi.FunctionInfo(get_info, bound=None), 'get_object_path': gi.FunctionInfo(get_object_path, bound=None), 'get_properties': gi.FunctionInfo(get_properties, bound=None), 'get_vtable': gi.FunctionInfo(get_vtable, bound=None), 'has_connection': gi.FunctionInfo(has_connection, bound=None), 'set_flags': gi.FunctionInfo(set_flags, bound=None), 'unexport': gi.FunctionInfo(unexport, bound=None), 'unexport_from_connection': gi.FunctionInfo(unexport_from_connection, bound=None), 'do_flush': gi.VFuncInfo(flush, bound=None), 'do_g_authorize_method': gi.VFuncInfo(g_authorize_method, bound=None), 'do_get_info': gi.VFuncInfo(get_info, bound=None), 'do_get_properties': gi.VFuncInfo(get_properties, bound=None), 'do_get_vtable': gi.VFuncInfo(get_vtable, bound=None), 'parent_instance': <property object at 0x000001a793e686d0>, 'priv': <property object at 0x000001a793e687c0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(DBusInterfaceSkeleton), '__module__': 'gi.repository.Gio', '__gtype__': <GType GDBusInterfaceSkeleton (1841874912)>, '__doc__': None, '__gsignals__': {}, 'export': gi.FunctionInfo(export), 'flush': gi.FunctionInfo(flush), 'get_connection': gi.FunctionInfo(get_connection), 'get_connections': gi.FunctionInfo(get_connections), 'get_flags': gi.FunctionInfo(get_flags), 'get_info': gi.FunctionInfo(get_info), 'get_object_path': gi.FunctionInfo(get_object_path), 'get_properties': gi.FunctionInfo(get_properties), 'get_vtable': gi.FunctionInfo(get_vtable), 'has_connection': gi.FunctionInfo(has_connection), 'set_flags': gi.FunctionInfo(set_flags), 'unexport': gi.FunctionInfo(unexport), 'unexport_from_connection': gi.FunctionInfo(unexport_from_connection), 'do_flush': gi.VFuncInfo(flush), 'do_g_authorize_method': gi.VFuncInfo(g_authorize_method), 'do_get_info': gi.VFuncInfo(get_info), 'do_get_properties': gi.VFuncInfo(get_properties), 'do_get_vtable': gi.VFuncInfo(get_vtable), 'parent_instance': <property object at 0x000001ea703eea20>, 'priv': <property object at 0x000001ea703eeb10>})"
     __gdoc__ = 'Object GDBusInterfaceSkeleton\n\nSignals from GDBusInterfaceSkeleton:\n  g-authorize-method (GDBusMethodInvocation) -> gboolean\n\nProperties from GDBusInterfaceSkeleton:\n  g-flags -> GDBusInterfaceSkeletonFlags: g-flags\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GDBusInterfaceSkeleton (2472608128)>'
+    __gtype__ = None # (!) real value is '<GType GDBusInterfaceSkeleton (1841874912)>'
     __info__ = ObjectInfo(DBusInterfaceSkeleton)
 
 

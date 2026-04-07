@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -52,35 +57,36 @@ class SimpleActionGroup(__gi_overrides_GObject.Object, ActionGroup, __gi_overrid
 
     def add_action_entries(self, entries, user_data=None): # reliably restored by inspect
         """
-        The add_action_entries() method is a convenience function for creating
-                multiple Gio.SimpleAction instances and adding them to a Gio.ActionMap.
+        The ``add_action_entries()`` method is a convenience function for creating
+                multiple :class:`~gi.repository.Gio.SimpleAction` instances and adding them
+                to a :class:`~gi.repository.Gio.ActionMap`.
                 Each action is constructed as per one entry.
         
                 :param list entries:
-                    List of entry tuples for add_action() method. The entry tuple can
+                    List of entry tuples for :meth:`add_action` method. The entry tuple can
                     vary in size with the following information:
         
-                        * The name of the action. Must be specified.
-                        * The callback to connect to the "activate" signal of the
-                          action. Since GLib 2.40, this can be None for stateful
-                          actions, in which case the default handler is used. For
-                          boolean-stated actions with no parameter, this is a toggle.
-                          For other state types (and parameter type equal to the state
-                          type) this will be a function that just calls change_state
-                          (which you should provide).
-                        * The type of the parameter that must be passed to the activate
-                          function for this action, given as a single GLib.Variant type
-                          string (or None for no parameter)
-                        * The initial state for this action, given in GLib.Variant text
-                          format. The state is parsed with no extra type information, so
-                          type tags must be added to the string if they are necessary.
-                          Stateless actions should give None here.
-                        * The callback to connect to the "change-state" signal of the
-                          action. All stateful actions should provide a handler here;
-                          stateless actions should not.
+                    * The name of the action. Must be specified.
+                    * The callback to connect to the "activate" signal of the
+                      action. Since GLib 2.40, this can be ``None`` for stateful
+                      actions, in which case the default handler is used. For
+                      boolean-stated actions with no parameter, this is a toggle.
+                      For other state types (and parameter type equal to the state
+                      type) this will be a function that just calls change_state
+                      (which you should provide).
+                    * The type of the parameter that must be passed to the activate
+                      function for this action, given as a single :class:`~gi.repository.GLib.Variant` type
+                      string (or ``None`` for no parameter)
+                    * The initial state for this action, given in GLib.Variant text
+                      format. The state is parsed with no extra type information, so
+                      type tags must be added to the string if they are necessary.
+                      Stateless actions should give ``None`` here.
+                    * The callback to connect to the "change-state" signal of the
+                      action. All stateful actions should provide a handler here;
+                      stateless actions should not.
         
                 :param user_data:
-                    The user data for signal connections, or None
+                    The user data for signal connections, or ``None``
         """
         pass
 
@@ -112,7 +118,7 @@ class SimpleActionGroup(__gi_overrides_GObject.Object, ActionGroup, __gi_overrid
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -140,6 +146,9 @@ class SimpleActionGroup(__gi_overrides_GObject.Object, ActionGroup, __gi_overrid
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -299,7 +308,8 @@ class SimpleActionGroup(__gi_overrides_GObject.Object, ActionGroup, __gi_overrid
         """ lookup_action(self, action_name:str) -> Gio.Action or None """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gio.SimpleActionGroup """
         pass
 
@@ -396,20 +406,20 @@ class SimpleActionGroup(__gi_overrides_GObject.Object, ActionGroup, __gi_overrid
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -439,7 +449,11 @@ class SimpleActionGroup(__gi_overrides_GObject.Object, ActionGroup, __gi_overrid
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -544,12 +558,12 @@ class SimpleActionGroup(__gi_overrides_GObject.Object, ActionGroup, __gi_overrid
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb5fc0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70863dc0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(SimpleActionGroup), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSimpleActionGroup (2466394880)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'add_entries': gi.FunctionInfo(add_entries, bound=None), 'insert': gi.FunctionInfo(insert, bound=None), 'lookup': gi.FunctionInfo(lookup, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'parent_instance': <property object at 0x000001a793dc8400>, 'priv': <property object at 0x000001a793dc84f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(SimpleActionGroup), '__module__': 'gi.repository.Gio', '__gtype__': <GType GSimpleActionGroup (1841604080)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'add_entries': gi.FunctionInfo(add_entries), 'insert': gi.FunctionInfo(insert), 'lookup': gi.FunctionInfo(lookup), 'remove': gi.FunctionInfo(remove), 'parent_instance': <property object at 0x000001ea709c49f0>, 'priv': <property object at 0x000001ea709c4ae0>})"
     __gdoc__ = 'Object GSimpleActionGroup\n\nSignals from GActionGroup:\n  action-added (gchararray)\n  action-removed (gchararray)\n  action-enabled-changed (gchararray, gboolean)\n  action-state-changed (gchararray, GVariant)\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GSimpleActionGroup (2466394880)>'
+    __gtype__ = None # (!) real value is '<GType GSimpleActionGroup (1841604080)>'
     __info__ = ObjectInfo(SimpleActionGroup)
 
 

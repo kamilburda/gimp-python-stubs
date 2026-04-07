@@ -4,9 +4,9 @@
 # no doc
 
 # imports
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
+import enum as __enum
 import gi as __gi
 import gobject as __gobject
 
@@ -47,5 +47,8 @@ class CallableInfo(__gi.BaseInfo):
     def __repr__(self, *args, **kwargs): # real signature unknown
         """ Return repr(self). """
         pass
+
+    __signature__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+
 
 

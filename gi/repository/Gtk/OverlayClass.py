@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -155,7 +154,7 @@ class OverlayClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(OverlayClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'OverlayClass' objects>, '__weakref__': <attribute '__weakref__' of 'OverlayClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceac26c50>, 'get_child_position': <property object at 0x000002eceac26d40>, '_gtk_reserved1': <property object at 0x000002eceac26e30>, '_gtk_reserved2': <property object at 0x000002eceac26f20>, '_gtk_reserved3': <property object at 0x000002eceac27010>, '_gtk_reserved4': <property object at 0x000002eceac27100>, '_gtk_reserved5': <property object at 0x000002eceac271f0>, '_gtk_reserved6': <property object at 0x000002eceac272e0>, '_gtk_reserved7': <property object at 0x000002eceac273d0>, '_gtk_reserved8': <property object at 0x000002eceac274c0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(OverlayClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'OverlayClass' objects>, '__weakref__': <attribute '__weakref__' of 'OverlayClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18a1ad0>, 'get_child_position': <property object at 0x000002bfd18a1bc0>, '_gtk_reserved1': <property object at 0x000002bfd18a1cb0>, '_gtk_reserved2': <property object at 0x000002bfd18a1da0>, '_gtk_reserved3': <property object at 0x000002bfd18a1e90>, '_gtk_reserved4': <property object at 0x000002bfd18a1f80>, '_gtk_reserved5': <property object at 0x000002bfd18a2070>, '_gtk_reserved6': <property object at 0x000002bfd18a2160>, '_gtk_reserved7': <property object at 0x000002bfd18a2250>, '_gtk_reserved8': <property object at 0x000002bfd18a2340>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(OverlayClass)
 

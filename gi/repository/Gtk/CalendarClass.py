@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -159,7 +158,7 @@ class CalendarClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(CalendarClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'CalendarClass' objects>, '__weakref__': <attribute '__weakref__' of 'CalendarClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece8ff49a0>, 'month_changed': <property object at 0x000002ece8ff4a90>, 'day_selected': <property object at 0x000002ece8ff4b80>, 'day_selected_double_click': <property object at 0x000002ece8ff4cc0>, 'prev_month': <property object at 0x000002ece8ff4db0>, 'next_month': <property object at 0x000002ece8ff4ea0>, 'prev_year': <property object at 0x000002ece8ff4f90>, 'next_year': <property object at 0x000002ece8ff5080>, '_gtk_reserved1': <property object at 0x000002ece8ff5170>, '_gtk_reserved2': <property object at 0x000002ece8ff5260>, '_gtk_reserved3': <property object at 0x000002ece8ff5350>, '_gtk_reserved4': <property object at 0x000002ece8ff5440>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(CalendarClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'CalendarClass' objects>, '__weakref__': <attribute '__weakref__' of 'CalendarClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd17a7c90>, 'month_changed': <property object at 0x000002bfd17a7d80>, 'day_selected': <property object at 0x000002bfd17a7e70>, 'day_selected_double_click': <property object at 0x000002bfd17a7fb0>, 'prev_month': <property object at 0x000002bfd17980e0>, 'next_month': <property object at 0x000002bfd17981d0>, 'prev_year': <property object at 0x000002bfd17982c0>, 'next_year': <property object at 0x000002bfd17983b0>, '_gtk_reserved1': <property object at 0x000002bfd17984a0>, '_gtk_reserved2': <property object at 0x000002bfd1798590>, '_gtk_reserved3': <property object at 0x000002bfd1798680>, '_gtk_reserved4': <property object at 0x000002bfd1798770>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(CalendarClass)
 

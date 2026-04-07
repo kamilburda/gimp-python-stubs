@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -137,7 +136,7 @@ class KeymapKey(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(KeymapKey), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'KeymapKey' objects>, '__weakref__': <attribute '__weakref__' of 'KeymapKey' objects>, '__doc__': None, 'keycode': <property object at 0x000002459c469f30>, 'group': <property object at 0x000002459c46a020>, 'level': <property object at 0x000002459c46a110>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(KeymapKey), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'KeymapKey' objects>, '__weakref__': <attribute '__weakref__' of 'KeymapKey' objects>, '__doc__': None, 'keycode': <property object at 0x000001872580f3d0>, 'group': <property object at 0x000001872580f4c0>, 'level': <property object at 0x000001872580f5b0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(KeymapKey)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -35,7 +34,8 @@ class Requisition(__gi.Boxed):
         """ free(self) """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.Requisition """
         pass
 
@@ -156,8 +156,8 @@ class Requisition(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Requisition), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkRequisition (3867686560)>, '__dict__': <attribute '__dict__' of 'Requisition' objects>, '__weakref__': <attribute '__weakref__' of 'Requisition' objects>, '__doc__': None, 'width': <property object at 0x000002eceac59530>, 'height': <property object at 0x000002eceac59620>, 'new': gi.FunctionInfo(new, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002ece8827880>})"
-    __gtype__ = None # (!) real value is '<GType GtkRequisition (3867686560)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Requisition), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkRequisition (3418527488)>, '__dict__': <attribute '__dict__' of 'Requisition' objects>, '__weakref__': <attribute '__weakref__' of 'Requisition' objects>, '__doc__': None, 'width': <property object at 0x000002bfd1858090>, 'height': <property object at 0x000002bfd1858180>, 'new': <classmethod(gi.FunctionInfo(new))>, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000002bfce305010>})"
+    __gtype__ = None # (!) real value is '<GType GtkRequisition (3418527488)>'
     __info__ = StructInfo(Requisition)
 
 

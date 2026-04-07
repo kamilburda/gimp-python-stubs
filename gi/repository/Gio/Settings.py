@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -55,7 +60,7 @@ class Settings(Settings):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -99,6 +104,9 @@ class Settings(Settings):
 
     def do_change_event(self, *args, **kwargs): # real signature unknown
         """ change_event(self, keys:int, n_keys:int) -> bool """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_writable_changed(self, *args, **kwargs): # real signature unknown
@@ -479,20 +487,20 @@ class Settings(Settings):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -530,7 +538,11 @@ class Settings(Settings):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -652,12 +664,12 @@ class Settings(Settings):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb5540>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70862a40>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gio', '__doc__': 'Provide dictionary-like access to GLib.Settings.', '__init__': <function deprecated_init.<locals>.new_init at 0x000001a7938bb920>, '__contains__': <function Settings.__contains__ at 0x000001a7938bb9c0>, '__len__': <function Settings.__len__ at 0x000001a7938bba60>, '__iter__': <function Settings.__iter__ at 0x000001a7938bbb00>, '__bool__': <function Settings.__bool__ at 0x000001a7938bbba0>, '__getitem__': <function Settings.__getitem__ at 0x000001a7938bbc40>, '__setitem__': <function Settings.__setitem__ at 0x000001a7938bbce0>, 'keys': <function Settings.keys at 0x000001a7938bbd80>, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gio', '__doc__': 'Provide dictionary-like access to GLib.Settings.', '__init__': <function deprecated_init.<locals>.new_init at 0x000001ea7028a020>, '__contains__': <function Settings.__contains__ at 0x000001ea703080e0>, '__len__': <function Settings.__len__ at 0x000001ea70308180>, '__iter__': <function Settings.__iter__ at 0x000001ea70308220>, '__bool__': <function Settings.__bool__ at 0x000001ea703082c0>, '__getitem__': <function Settings.__getitem__ at 0x000001ea70308360>, '__setitem__': <function Settings.__setitem__ at 0x000001ea70308400>, 'keys': <function Settings.keys at 0x000001ea703084a0>, '__gsignals__': {}})"
     __gdoc__ = 'Object GSettings\n\nProvide dictionary-like access to GLib.Settings.\n\nSignals from GSettings:\n  changed (gchararray)\n  change-event (gpointer, gint) -> gboolean\n  writable-changed (gchararray)\n  writable-change-event (guint) -> gboolean\n\nProperties from GSettings:\n  settings-schema -> GSettingsSchema: settings-schema\n  schema -> gchararray: schema\n  schema-id -> gchararray: schema-id\n  backend -> GSettingsBackend: backend\n  path -> gchararray: path\n  has-unapplied -> gboolean: has-unapplied\n  delay-apply -> gboolean: delay-apply\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GSettings (2430930224)>'
+    __gtype__ = None # (!) real value is '<GType GSettings (1845788704)>'
     __info__ = ObjectInfo(Settings)
 
 

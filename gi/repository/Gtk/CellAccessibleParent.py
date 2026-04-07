@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -176,10 +175,10 @@ class CellAccessibleParent(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(CellAccessibleParent), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCellAccessibleParent (3855028784)>, '__dict__': <attribute '__dict__' of 'CellAccessibleParent' objects>, '__weakref__': <attribute '__weakref__' of 'CellAccessibleParent' objects>, '__doc__': None, '__gsignals__': {}, 'activate': gi.FunctionInfo(activate, bound=None), 'edit': gi.FunctionInfo(edit, bound=None), 'expand_collapse': gi.FunctionInfo(expand_collapse, bound=None), 'get_cell_area': gi.FunctionInfo(get_cell_area, bound=None), 'get_cell_extents': gi.FunctionInfo(get_cell_extents, bound=None), 'get_cell_position': gi.FunctionInfo(get_cell_position, bound=None), 'get_child_index': gi.FunctionInfo(get_child_index, bound=None), 'get_column_header_cells': gi.FunctionInfo(get_column_header_cells, bound=None), 'get_renderer_state': gi.FunctionInfo(get_renderer_state, bound=None), 'get_row_header_cells': gi.FunctionInfo(get_row_header_cells, bound=None), 'grab_focus': gi.FunctionInfo(grab_focus, bound=None), 'update_relationset': gi.FunctionInfo(update_relationset, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(CellAccessibleParent), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCellAccessibleParent (3418538144)>, '__dict__': <attribute '__dict__' of 'CellAccessibleParent' objects>, '__weakref__': <attribute '__weakref__' of 'CellAccessibleParent' objects>, '__doc__': None, '__gsignals__': {}, 'activate': gi.FunctionInfo(activate), 'edit': gi.FunctionInfo(edit), 'expand_collapse': gi.FunctionInfo(expand_collapse), 'get_cell_area': gi.FunctionInfo(get_cell_area), 'get_cell_extents': gi.FunctionInfo(get_cell_extents), 'get_cell_position': gi.FunctionInfo(get_cell_position), 'get_child_index': gi.FunctionInfo(get_child_index), 'get_column_header_cells': gi.FunctionInfo(get_column_header_cells), 'get_renderer_state': gi.FunctionInfo(get_renderer_state), 'get_row_header_cells': gi.FunctionInfo(get_row_header_cells), 'grab_focus': gi.FunctionInfo(grab_focus), 'update_relationset': gi.FunctionInfo(update_relationset)})"
     __gdoc__ = 'Interface GtkCellAccessibleParent\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkCellAccessibleParent (3855028784)>'
+    __gtype__ = None # (!) real value is '<GType GtkCellAccessibleParent (3418538144)>'
     __info__ = InterfaceInfo(CellAccessibleParent)
 
 

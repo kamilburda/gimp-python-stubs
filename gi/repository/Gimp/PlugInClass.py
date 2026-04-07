@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -169,7 +165,7 @@ class PlugInClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PlugInClass), '__module__': 'gi.repository.Gimp', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PlugInClass' objects>, '__weakref__': <attribute '__weakref__' of 'PlugInClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001dcd92df6f0>, 'query_procedures': <property object at 0x000001dcd92df7e0>, 'init_procedures': <property object at 0x000001dcd92df8d0>, 'create_procedure': <property object at 0x000001dcd92df9c0>, 'quit': <property object at 0x000001dcd92dfab0>, 'set_i18n': <property object at 0x000001dcd92dfba0>, '_gimp_reserved0': <property object at 0x000001dcd92dfc90>, '_gimp_reserved1': <property object at 0x000001dcd92dfd80>, '_gimp_reserved2': <property object at 0x000001dcd92dfe70>, '_gimp_reserved3': <property object at 0x000001dcd92dff60>, '_gimp_reserved4': <property object at 0x000001dcd92e8090>, '_gimp_reserved5': <property object at 0x000001dcd92e8180>, '_gimp_reserved6': <property object at 0x000001dcd92e8270>, '_gimp_reserved7': <property object at 0x000001dcd92e8360>, '_gimp_reserved8': <property object at 0x000001dcd92e8400>, '_gimp_reserved9': <property object at 0x000001dcd92e84f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PlugInClass), '__module__': 'gi.repository.Gimp', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PlugInClass' objects>, '__weakref__': <attribute '__weakref__' of 'PlugInClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001268f52eb60>, 'query_procedures': <property object at 0x000001268f52ec50>, 'init_procedures': <property object at 0x000001268f52ed40>, 'create_procedure': <property object at 0x000001268f52ee30>, 'quit': <property object at 0x000001268f52ef20>, 'set_i18n': <property object at 0x000001268f52f010>, '_gimp_reserved0': <property object at 0x000001268f52f100>, '_gimp_reserved1': <property object at 0x000001268f52f1f0>, '_gimp_reserved2': <property object at 0x000001268f52f2e0>, '_gimp_reserved3': <property object at 0x000001268f52f3d0>, '_gimp_reserved4': <property object at 0x000001268f52f4c0>, '_gimp_reserved5': <property object at 0x000001268f52f5b0>, '_gimp_reserved6': <property object at 0x000001268f52f6a0>, '_gimp_reserved7': <property object at 0x000001268f52f790>, '_gimp_reserved8': <property object at 0x000001268f52f880>, '_gimp_reserved9': <property object at 0x000001268f52f970>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PlugInClass)
 

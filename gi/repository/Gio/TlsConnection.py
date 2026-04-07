@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -61,7 +66,7 @@ class TlsConnection(IOStream):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -105,6 +110,9 @@ class TlsConnection(IOStream):
 
     def do_close_fn(self, *args, **kwargs): # real signature unknown
         """ close_fn(self, cancellable:Gio.Cancellable=None) -> bool """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_binding_data(self, *args, **kwargs): # real signature unknown
@@ -449,20 +457,20 @@ class TlsConnection(IOStream):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -492,7 +500,11 @@ class TlsConnection(IOStream):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -594,12 +606,12 @@ class TlsConnection(IOStream):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb7e50>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7086eb30>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TlsConnection), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTlsConnection (2466627408)>, '__doc__': None, '__gsignals__': {}, 'emit_accept_certificate': gi.FunctionInfo(emit_accept_certificate, bound=None), 'get_certificate': gi.FunctionInfo(get_certificate, bound=None), 'get_channel_binding_data': gi.FunctionInfo(get_channel_binding_data, bound=None), 'get_ciphersuite_name': gi.FunctionInfo(get_ciphersuite_name, bound=None), 'get_database': gi.FunctionInfo(get_database, bound=None), 'get_interaction': gi.FunctionInfo(get_interaction, bound=None), 'get_negotiated_protocol': gi.FunctionInfo(get_negotiated_protocol, bound=None), 'get_peer_certificate': gi.FunctionInfo(get_peer_certificate, bound=None), 'get_peer_certificate_errors': gi.FunctionInfo(get_peer_certificate_errors, bound=None), 'get_protocol_version': gi.FunctionInfo(get_protocol_version, bound=None), 'get_rehandshake_mode': gi.FunctionInfo(get_rehandshake_mode, bound=None), 'get_require_close_notify': gi.FunctionInfo(get_require_close_notify, bound=None), 'get_use_system_certdb': gi.FunctionInfo(get_use_system_certdb, bound=None), 'handshake': gi.FunctionInfo(handshake, bound=None), 'handshake_async': gi.FunctionInfo(handshake_async, bound=None), 'handshake_finish': gi.FunctionInfo(handshake_finish, bound=None), 'set_advertised_protocols': gi.FunctionInfo(set_advertised_protocols, bound=None), 'set_certificate': gi.FunctionInfo(set_certificate, bound=None), 'set_database': gi.FunctionInfo(set_database, bound=None), 'set_interaction': gi.FunctionInfo(set_interaction, bound=None), 'set_rehandshake_mode': gi.FunctionInfo(set_rehandshake_mode, bound=None), 'set_require_close_notify': gi.FunctionInfo(set_require_close_notify, bound=None), 'set_use_system_certdb': gi.FunctionInfo(set_use_system_certdb, bound=None), 'do_accept_certificate': gi.VFuncInfo(accept_certificate, bound=None), 'do_get_binding_data': gi.VFuncInfo(get_binding_data, bound=None), 'do_get_negotiated_protocol': gi.VFuncInfo(get_negotiated_protocol, bound=None), 'do_handshake': gi.VFuncInfo(handshake, bound=None), 'do_handshake_async': gi.VFuncInfo(handshake_async, bound=None), 'do_handshake_finish': gi.VFuncInfo(handshake_finish, bound=None), 'parent_instance': <property object at 0x000001a793daa8e0>, 'priv': <property object at 0x000001a793daa9d0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TlsConnection), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTlsConnection (1845536016)>, '__doc__': None, '__gsignals__': {}, 'emit_accept_certificate': gi.FunctionInfo(emit_accept_certificate), 'get_certificate': gi.FunctionInfo(get_certificate), 'get_channel_binding_data': gi.FunctionInfo(get_channel_binding_data), 'get_ciphersuite_name': gi.FunctionInfo(get_ciphersuite_name), 'get_database': gi.FunctionInfo(get_database), 'get_interaction': gi.FunctionInfo(get_interaction), 'get_negotiated_protocol': gi.FunctionInfo(get_negotiated_protocol), 'get_peer_certificate': gi.FunctionInfo(get_peer_certificate), 'get_peer_certificate_errors': gi.FunctionInfo(get_peer_certificate_errors), 'get_protocol_version': gi.FunctionInfo(get_protocol_version), 'get_rehandshake_mode': gi.FunctionInfo(get_rehandshake_mode), 'get_require_close_notify': gi.FunctionInfo(get_require_close_notify), 'get_use_system_certdb': gi.FunctionInfo(get_use_system_certdb), 'handshake': gi.FunctionInfo(handshake), 'handshake_async': gi.FunctionInfo(handshake_async), 'handshake_finish': gi.FunctionInfo(handshake_finish), 'set_advertised_protocols': gi.FunctionInfo(set_advertised_protocols), 'set_certificate': gi.FunctionInfo(set_certificate), 'set_database': gi.FunctionInfo(set_database), 'set_interaction': gi.FunctionInfo(set_interaction), 'set_rehandshake_mode': gi.FunctionInfo(set_rehandshake_mode), 'set_require_close_notify': gi.FunctionInfo(set_require_close_notify), 'set_use_system_certdb': gi.FunctionInfo(set_use_system_certdb), 'do_accept_certificate': gi.VFuncInfo(accept_certificate), 'do_get_binding_data': gi.VFuncInfo(get_binding_data), 'do_get_negotiated_protocol': gi.VFuncInfo(get_negotiated_protocol), 'do_handshake': gi.VFuncInfo(handshake), 'do_handshake_async': gi.VFuncInfo(handshake_async), 'do_handshake_finish': gi.VFuncInfo(handshake_finish), 'parent_instance': <property object at 0x000001ea709de980>, 'priv': <property object at 0x000001ea709dea70>})"
     __gdoc__ = 'Object GTlsConnection\n\nSignals from GTlsConnection:\n  accept-certificate (GTlsCertificate, GTlsCertificateFlags) -> gboolean\n\nProperties from GTlsConnection:\n  base-io-stream -> GIOStream: base-io-stream\n  require-close-notify -> gboolean: require-close-notify\n  rehandshake-mode -> GTlsRehandshakeMode: rehandshake-mode\n  use-system-certdb -> gboolean: use-system-certdb\n  database -> GTlsDatabase: database\n  interaction -> GTlsInteraction: interaction\n  certificate -> GTlsCertificate: certificate\n  peer-certificate -> GTlsCertificate: peer-certificate\n  peer-certificate-errors -> GTlsCertificateFlags: peer-certificate-errors\n  advertised-protocols -> GStrv: advertised-protocols\n  negotiated-protocol -> gchararray: negotiated-protocol\n  protocol-version -> GTlsProtocolVersion: protocol-version\n  ciphersuite-name -> gchararray: ciphersuite-name\n\nProperties from GIOStream:\n  input-stream -> GInputStream: input-stream\n  output-stream -> GOutputStream: output-stream\n  closed -> gboolean: closed\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GTlsConnection (2466627408)>'
+    __gtype__ = None # (!) real value is '<GType GTlsConnection (1845536016)>'
     __info__ = ObjectInfo(TlsConnection)
 
 

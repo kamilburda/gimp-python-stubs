@@ -1,24 +1,16 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
-class unicode_general_category_t(__gobject.GEnum):
+class unicode_general_category_t(__enum.IntEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +69,7 @@ class unicode_general_category_t(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +92,7 @@ class unicode_general_category_t(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -128,12 +120,23 @@ class unicode_general_category_t(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +165,10 @@ class unicode_general_category_t(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -207,6 +214,14 @@ class unicode_general_category_t(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -232,8 +247,8 @@ class unicode_general_category_t(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -264,15 +279,16 @@ class unicode_general_category_t(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -336,7 +352,7 @@ class unicode_general_category_t(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -378,10 +394,6 @@ class unicode_general_category_t(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CLOSE_PUNCTUATION = 18
     CONNECT_PUNCTUATION = 16
@@ -413,41 +425,9 @@ class unicode_general_category_t(__gobject.GEnum):
     TITLECASE_LETTER = 8
     UNASSIGNED = 2
     UPPERCASE_LETTER = 9
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.HarfBuzz', '__dict__': <attribute '__dict__' of 'unicode_general_category_t' objects>, '__doc__': None, '__gtype__': <GType PyHarfBuzzunicode_general_category_t (2667611472)>, '__enum_values__': {0: <enum HB_UNICODE_GENERAL_CATEGORY_CONTROL of type HarfBuzz.unicode_general_category_t>, 1: <enum HB_UNICODE_GENERAL_CATEGORY_FORMAT of type HarfBuzz.unicode_general_category_t>, 2: <enum HB_UNICODE_GENERAL_CATEGORY_UNASSIGNED of type HarfBuzz.unicode_general_category_t>, 3: <enum HB_UNICODE_GENERAL_CATEGORY_PRIVATE_USE of type HarfBuzz.unicode_general_category_t>, 4: <enum HB_UNICODE_GENERAL_CATEGORY_SURROGATE of type HarfBuzz.unicode_general_category_t>, 5: <enum HB_UNICODE_GENERAL_CATEGORY_LOWERCASE_LETTER of type HarfBuzz.unicode_general_category_t>, 6: <enum HB_UNICODE_GENERAL_CATEGORY_MODIFIER_LETTER of type HarfBuzz.unicode_general_category_t>, 7: <enum HB_UNICODE_GENERAL_CATEGORY_OTHER_LETTER of type HarfBuzz.unicode_general_category_t>, 8: <enum HB_UNICODE_GENERAL_CATEGORY_TITLECASE_LETTER of type HarfBuzz.unicode_general_category_t>, 9: <enum HB_UNICODE_GENERAL_CATEGORY_UPPERCASE_LETTER of type HarfBuzz.unicode_general_category_t>, 10: <enum HB_UNICODE_GENERAL_CATEGORY_SPACING_MARK of type HarfBuzz.unicode_general_category_t>, 11: <enum HB_UNICODE_GENERAL_CATEGORY_ENCLOSING_MARK of type HarfBuzz.unicode_general_category_t>, 12: <enum HB_UNICODE_GENERAL_CATEGORY_NON_SPACING_MARK of type HarfBuzz.unicode_general_category_t>, 13: <enum HB_UNICODE_GENERAL_CATEGORY_DECIMAL_NUMBER of type HarfBuzz.unicode_general_category_t>, 14: <enum HB_UNICODE_GENERAL_CATEGORY_LETTER_NUMBER of type HarfBuzz.unicode_general_category_t>, 15: <enum HB_UNICODE_GENERAL_CATEGORY_OTHER_NUMBER of type HarfBuzz.unicode_general_category_t>, 16: <enum HB_UNICODE_GENERAL_CATEGORY_CONNECT_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 17: <enum HB_UNICODE_GENERAL_CATEGORY_DASH_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 18: <enum HB_UNICODE_GENERAL_CATEGORY_CLOSE_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 19: <enum HB_UNICODE_GENERAL_CATEGORY_FINAL_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 20: <enum HB_UNICODE_GENERAL_CATEGORY_INITIAL_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 21: <enum HB_UNICODE_GENERAL_CATEGORY_OTHER_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 22: <enum HB_UNICODE_GENERAL_CATEGORY_OPEN_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 23: <enum HB_UNICODE_GENERAL_CATEGORY_CURRENCY_SYMBOL of type HarfBuzz.unicode_general_category_t>, 24: <enum HB_UNICODE_GENERAL_CATEGORY_MODIFIER_SYMBOL of type HarfBuzz.unicode_general_category_t>, 25: <enum HB_UNICODE_GENERAL_CATEGORY_MATH_SYMBOL of type HarfBuzz.unicode_general_category_t>, 26: <enum HB_UNICODE_GENERAL_CATEGORY_OTHER_SYMBOL of type HarfBuzz.unicode_general_category_t>, 27: <enum HB_UNICODE_GENERAL_CATEGORY_LINE_SEPARATOR of type HarfBuzz.unicode_general_category_t>, 28: <enum HB_UNICODE_GENERAL_CATEGORY_PARAGRAPH_SEPARATOR of type HarfBuzz.unicode_general_category_t>, 29: <enum HB_UNICODE_GENERAL_CATEGORY_SPACE_SEPARATOR of type HarfBuzz.unicode_general_category_t>}, '__info__': gi.EnumInfo(unicode_general_category_t), 'CONTROL': <enum HB_UNICODE_GENERAL_CATEGORY_CONTROL of type HarfBuzz.unicode_general_category_t>, 'FORMAT': <enum HB_UNICODE_GENERAL_CATEGORY_FORMAT of type HarfBuzz.unicode_general_category_t>, 'UNASSIGNED': <enum HB_UNICODE_GENERAL_CATEGORY_UNASSIGNED of type HarfBuzz.unicode_general_category_t>, 'PRIVATE_USE': <enum HB_UNICODE_GENERAL_CATEGORY_PRIVATE_USE of type HarfBuzz.unicode_general_category_t>, 'SURROGATE': <enum HB_UNICODE_GENERAL_CATEGORY_SURROGATE of type HarfBuzz.unicode_general_category_t>, 'LOWERCASE_LETTER': <enum HB_UNICODE_GENERAL_CATEGORY_LOWERCASE_LETTER of type HarfBuzz.unicode_general_category_t>, 'MODIFIER_LETTER': <enum HB_UNICODE_GENERAL_CATEGORY_MODIFIER_LETTER of type HarfBuzz.unicode_general_category_t>, 'OTHER_LETTER': <enum HB_UNICODE_GENERAL_CATEGORY_OTHER_LETTER of type HarfBuzz.unicode_general_category_t>, 'TITLECASE_LETTER': <enum HB_UNICODE_GENERAL_CATEGORY_TITLECASE_LETTER of type HarfBuzz.unicode_general_category_t>, 'UPPERCASE_LETTER': <enum HB_UNICODE_GENERAL_CATEGORY_UPPERCASE_LETTER of type HarfBuzz.unicode_general_category_t>, 'SPACING_MARK': <enum HB_UNICODE_GENERAL_CATEGORY_SPACING_MARK of type HarfBuzz.unicode_general_category_t>, 'ENCLOSING_MARK': <enum HB_UNICODE_GENERAL_CATEGORY_ENCLOSING_MARK of type HarfBuzz.unicode_general_category_t>, 'NON_SPACING_MARK': <enum HB_UNICODE_GENERAL_CATEGORY_NON_SPACING_MARK of type HarfBuzz.unicode_general_category_t>, 'DECIMAL_NUMBER': <enum HB_UNICODE_GENERAL_CATEGORY_DECIMAL_NUMBER of type HarfBuzz.unicode_general_category_t>, 'LETTER_NUMBER': <enum HB_UNICODE_GENERAL_CATEGORY_LETTER_NUMBER of type HarfBuzz.unicode_general_category_t>, 'OTHER_NUMBER': <enum HB_UNICODE_GENERAL_CATEGORY_OTHER_NUMBER of type HarfBuzz.unicode_general_category_t>, 'CONNECT_PUNCTUATION': <enum HB_UNICODE_GENERAL_CATEGORY_CONNECT_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 'DASH_PUNCTUATION': <enum HB_UNICODE_GENERAL_CATEGORY_DASH_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 'CLOSE_PUNCTUATION': <enum HB_UNICODE_GENERAL_CATEGORY_CLOSE_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 'FINAL_PUNCTUATION': <enum HB_UNICODE_GENERAL_CATEGORY_FINAL_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 'INITIAL_PUNCTUATION': <enum HB_UNICODE_GENERAL_CATEGORY_INITIAL_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 'OTHER_PUNCTUATION': <enum HB_UNICODE_GENERAL_CATEGORY_OTHER_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 'OPEN_PUNCTUATION': <enum HB_UNICODE_GENERAL_CATEGORY_OPEN_PUNCTUATION of type HarfBuzz.unicode_general_category_t>, 'CURRENCY_SYMBOL': <enum HB_UNICODE_GENERAL_CATEGORY_CURRENCY_SYMBOL of type HarfBuzz.unicode_general_category_t>, 'MODIFIER_SYMBOL': <enum HB_UNICODE_GENERAL_CATEGORY_MODIFIER_SYMBOL of type HarfBuzz.unicode_general_category_t>, 'MATH_SYMBOL': <enum HB_UNICODE_GENERAL_CATEGORY_MATH_SYMBOL of type HarfBuzz.unicode_general_category_t>, 'OTHER_SYMBOL': <enum HB_UNICODE_GENERAL_CATEGORY_OTHER_SYMBOL of type HarfBuzz.unicode_general_category_t>, 'LINE_SEPARATOR': <enum HB_UNICODE_GENERAL_CATEGORY_LINE_SEPARATOR of type HarfBuzz.unicode_general_category_t>, 'PARAGRAPH_SEPARATOR': <enum HB_UNICODE_GENERAL_CATEGORY_PARAGRAPH_SEPARATOR of type HarfBuzz.unicode_general_category_t>, 'SPACE_SEPARATOR': <enum HB_UNICODE_GENERAL_CATEGORY_SPACE_SEPARATOR of type HarfBuzz.unicode_general_category_t>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-    }
-    __gtype__ = None # (!) real value is '<GType PyHarfBuzzunicode_general_category_t (2667611472)>'
-    __info__ = gi.EnumInfo(unicode_general_category_t)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'CONTROL': <unicode_general_category_t.CONTROL: 0>, 'FORMAT': <unicode_general_category_t.FORMAT: 1>, 'UNASSIGNED': <unicode_general_category_t.UNASSIGNED: 2>, 'PRIVATE_USE': <unicode_general_category_t.PRIVATE_USE: 3>, 'SURROGATE': <unicode_general_category_t.SURROGATE: 4>, 'LOWERCASE_LETTER': <unicode_general_category_t.LOWERCASE_LETTER: 5>, 'MODIFIER_LETTER': <unicode_general_category_t.MODIFIER_LETTER: 6>, 'OTHER_LETTER': <unicode_general_category_t.OTHER_LETTER: 7>, 'TITLECASE_LETTER': <unicode_general_category_t.TITLECASE_LETTER: 8>, 'UPPERCASE_LETTER': <unicode_general_category_t.UPPERCASE_LETTER: 9>, 'SPACING_MARK': <unicode_general_category_t.SPACING_MARK: 10>, 'ENCLOSING_MARK': <unicode_general_category_t.ENCLOSING_MARK: 11>, 'NON_SPACING_MARK': <unicode_general_category_t.NON_SPACING_MARK: 12>, 'DECIMAL_NUMBER': <unicode_general_category_t.DECIMAL_NUMBER: 13>, 'LETTER_NUMBER': <unicode_general_category_t.LETTER_NUMBER: 14>, 'OTHER_NUMBER': <unicode_general_category_t.OTHER_NUMBER: 15>, 'CONNECT_PUNCTUATION': <unicode_general_category_t.CONNECT_PUNCTUATION: 16>, 'DASH_PUNCTUATION': <unicode_general_category_t.DASH_PUNCTUATION: 17>, 'CLOSE_PUNCTUATION': <unicode_general_category_t.CLOSE_PUNCTUATION: 18>, 'FINAL_PUNCTUATION': <unicode_general_category_t.FINAL_PUNCTUATION: 19>, 'INITIAL_PUNCTUATION': <unicode_general_category_t.INITIAL_PUNCTUATION: 20>, 'OTHER_PUNCTUATION': <unicode_general_category_t.OTHER_PUNCTUATION: 21>, 'OPEN_PUNCTUATION': <unicode_general_category_t.OPEN_PUNCTUATION: 22>, 'CURRENCY_SYMBOL': <unicode_general_category_t.CURRENCY_SYMBOL: 23>, 'MODIFIER_SYMBOL': <unicode_general_category_t.MODIFIER_SYMBOL: 24>, 'MATH_SYMBOL': <unicode_general_category_t.MATH_SYMBOL: 25>, 'OTHER_SYMBOL': <unicode_general_category_t.OTHER_SYMBOL: 26>, 'LINE_SEPARATOR': <unicode_general_category_t.LINE_SEPARATOR: 27>, 'PARAGRAPH_SEPARATOR': <unicode_general_category_t.PARAGRAPH_SEPARATOR: 28>, 'SPACE_SEPARATOR': <unicode_general_category_t.SPACE_SEPARATOR: 29>})"
+    __name__ = 'unicode_general_category_t'
+    __qualname__ = 'unicode_general_category_t'
 
 

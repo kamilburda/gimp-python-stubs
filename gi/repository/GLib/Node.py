@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Node(__gi.Struct):
@@ -199,7 +197,7 @@ class Node(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Node), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Node' objects>, '__weakref__': <attribute '__weakref__' of 'Node' objects>, '__doc__': None, 'data': <property object at 0x000002830bf17e20>, 'next': <property object at 0x000002830bf17f10>, 'prev': <property object at 0x000002830bef4040>, 'parent': <property object at 0x000002830bef4130>, 'children': <property object at 0x000002830bef4220>, 'child_index': gi.FunctionInfo(child_index, bound=None), 'child_position': gi.FunctionInfo(child_position, bound=None), 'children_foreach': gi.FunctionInfo(children_foreach, bound=None), 'depth': gi.FunctionInfo(depth, bound=None), 'destroy': gi.FunctionInfo(destroy, bound=None), 'is_ancestor': gi.FunctionInfo(is_ancestor, bound=None), 'max_height': gi.FunctionInfo(max_height, bound=None), 'n_children': gi.FunctionInfo(n_children, bound=None), 'n_nodes': gi.FunctionInfo(n_nodes, bound=None), 'reverse_children': gi.FunctionInfo(reverse_children, bound=None), 'traverse': gi.FunctionInfo(traverse, bound=None), 'unlink': gi.FunctionInfo(unlink, bound=None), 'pop_allocator': gi.FunctionInfo(pop_allocator, bound=None), 'push_allocator': gi.FunctionInfo(push_allocator, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Node), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Node' objects>, '__weakref__': <attribute '__weakref__' of 'Node' objects>, '__doc__': None, 'data': <property object at 0x0000018ea0079260>, 'next': <property object at 0x0000018ea0079350>, 'prev': <property object at 0x0000018ea0079440>, 'parent': <property object at 0x0000018ea0079530>, 'children': <property object at 0x0000018ea0079620>, 'child_index': gi.FunctionInfo(child_index), 'child_position': gi.FunctionInfo(child_position), 'children_foreach': gi.FunctionInfo(children_foreach), 'depth': gi.FunctionInfo(depth), 'destroy': gi.FunctionInfo(destroy), 'is_ancestor': gi.FunctionInfo(is_ancestor), 'max_height': gi.FunctionInfo(max_height), 'n_children': gi.FunctionInfo(n_children), 'n_nodes': gi.FunctionInfo(n_nodes), 'reverse_children': gi.FunctionInfo(reverse_children), 'traverse': gi.FunctionInfo(traverse), 'unlink': gi.FunctionInfo(unlink), 'pop_allocator': <staticmethod(gi.FunctionInfo(pop_allocator))>, 'push_allocator': <staticmethod(gi.FunctionInfo(push_allocator))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Node)
 

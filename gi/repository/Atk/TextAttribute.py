@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class TextAttribute(__gobject.GEnum):
+class TextAttribute(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -64,10 +57,6 @@ class TextAttribute(__gobject.GEnum):
         """ Returns self, the complex conjugate of any int. """
         pass
 
-    def for_name(self, name): # real signature unknown; restored from __doc__
-        """ for_name(name:str) -> Atk.TextAttribute """
-        pass
-
     def from_bytes(self, *args, **kwargs): # real signature unknown
         """
         Return the integer represented by the given array of bytes.
@@ -82,26 +71,14 @@ class TextAttribute(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
         pass
 
-    def get_name(self, attr): # real signature unknown; restored from __doc__
-        """ get_name(attr:Atk.TextAttribute) -> str """
-        return ""
-
-    def get_value(self, attr, index_): # real signature unknown; restored from __doc__
-        """ get_value(attr:Atk.TextAttribute, index_:int) -> str or None """
-        return ""
-
     def is_integer(self, *args, **kwargs): # real signature unknown
         """ Returns True. Exists for duck type compatibility with float.is_integer. """
-        pass
-
-    def register(self, name): # real signature unknown; restored from __doc__
-        """ register(name:str) -> Atk.TextAttribute """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -117,7 +94,7 @@ class TextAttribute(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -145,12 +122,23 @@ class TextAttribute(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -179,6 +167,10 @@ class TextAttribute(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -224,6 +216,14 @@ class TextAttribute(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -249,8 +249,8 @@ class TextAttribute(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -281,15 +281,16 @@ class TextAttribute(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -353,7 +354,7 @@ class TextAttribute(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -395,10 +396,6 @@ class TextAttribute(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     BG_COLOR = 18
     BG_FULL_HEIGHT = 9
@@ -430,41 +427,9 @@ class TextAttribute(__gobject.GEnum):
     VARIANT = 26
     WEIGHT = 15
     WRAP_MODE = 22
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Atk', '__dict__': <attribute '__dict__' of 'TextAttribute' objects>, '__doc__': None, '__gtype__': <GType AtkTextAttribute (892675600)>, '__enum_values__': {0: <enum ATK_TEXT_ATTR_INVALID of type Atk.TextAttribute>, 1: <enum ATK_TEXT_ATTR_LEFT_MARGIN of type Atk.TextAttribute>, 2: <enum ATK_TEXT_ATTR_RIGHT_MARGIN of type Atk.TextAttribute>, 3: <enum ATK_TEXT_ATTR_INDENT of type Atk.TextAttribute>, 4: <enum ATK_TEXT_ATTR_INVISIBLE of type Atk.TextAttribute>, 5: <enum ATK_TEXT_ATTR_EDITABLE of type Atk.TextAttribute>, 6: <enum ATK_TEXT_ATTR_PIXELS_ABOVE_LINES of type Atk.TextAttribute>, 7: <enum ATK_TEXT_ATTR_PIXELS_BELOW_LINES of type Atk.TextAttribute>, 8: <enum ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP of type Atk.TextAttribute>, 9: <enum ATK_TEXT_ATTR_BG_FULL_HEIGHT of type Atk.TextAttribute>, 10: <enum ATK_TEXT_ATTR_RISE of type Atk.TextAttribute>, 11: <enum ATK_TEXT_ATTR_UNDERLINE of type Atk.TextAttribute>, 12: <enum ATK_TEXT_ATTR_STRIKETHROUGH of type Atk.TextAttribute>, 13: <enum ATK_TEXT_ATTR_SIZE of type Atk.TextAttribute>, 14: <enum ATK_TEXT_ATTR_SCALE of type Atk.TextAttribute>, 15: <enum ATK_TEXT_ATTR_WEIGHT of type Atk.TextAttribute>, 16: <enum ATK_TEXT_ATTR_LANGUAGE of type Atk.TextAttribute>, 17: <enum ATK_TEXT_ATTR_FAMILY_NAME of type Atk.TextAttribute>, 18: <enum ATK_TEXT_ATTR_BG_COLOR of type Atk.TextAttribute>, 19: <enum ATK_TEXT_ATTR_FG_COLOR of type Atk.TextAttribute>, 20: <enum ATK_TEXT_ATTR_BG_STIPPLE of type Atk.TextAttribute>, 21: <enum ATK_TEXT_ATTR_FG_STIPPLE of type Atk.TextAttribute>, 22: <enum ATK_TEXT_ATTR_WRAP_MODE of type Atk.TextAttribute>, 23: <enum ATK_TEXT_ATTR_DIRECTION of type Atk.TextAttribute>, 24: <enum ATK_TEXT_ATTR_JUSTIFICATION of type Atk.TextAttribute>, 25: <enum ATK_TEXT_ATTR_STRETCH of type Atk.TextAttribute>, 26: <enum ATK_TEXT_ATTR_VARIANT of type Atk.TextAttribute>, 27: <enum ATK_TEXT_ATTR_STYLE of type Atk.TextAttribute>, 28: <enum ATK_TEXT_ATTR_TEXT_POSITION of type Atk.TextAttribute>, 29: <enum ATK_TEXT_ATTR_LAST_DEFINED of type Atk.TextAttribute>}, '__info__': gi.EnumInfo(TextAttribute), 'INVALID': <enum ATK_TEXT_ATTR_INVALID of type Atk.TextAttribute>, 'LEFT_MARGIN': <enum ATK_TEXT_ATTR_LEFT_MARGIN of type Atk.TextAttribute>, 'RIGHT_MARGIN': <enum ATK_TEXT_ATTR_RIGHT_MARGIN of type Atk.TextAttribute>, 'INDENT': <enum ATK_TEXT_ATTR_INDENT of type Atk.TextAttribute>, 'INVISIBLE': <enum ATK_TEXT_ATTR_INVISIBLE of type Atk.TextAttribute>, 'EDITABLE': <enum ATK_TEXT_ATTR_EDITABLE of type Atk.TextAttribute>, 'PIXELS_ABOVE_LINES': <enum ATK_TEXT_ATTR_PIXELS_ABOVE_LINES of type Atk.TextAttribute>, 'PIXELS_BELOW_LINES': <enum ATK_TEXT_ATTR_PIXELS_BELOW_LINES of type Atk.TextAttribute>, 'PIXELS_INSIDE_WRAP': <enum ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP of type Atk.TextAttribute>, 'BG_FULL_HEIGHT': <enum ATK_TEXT_ATTR_BG_FULL_HEIGHT of type Atk.TextAttribute>, 'RISE': <enum ATK_TEXT_ATTR_RISE of type Atk.TextAttribute>, 'UNDERLINE': <enum ATK_TEXT_ATTR_UNDERLINE of type Atk.TextAttribute>, 'STRIKETHROUGH': <enum ATK_TEXT_ATTR_STRIKETHROUGH of type Atk.TextAttribute>, 'SIZE': <enum ATK_TEXT_ATTR_SIZE of type Atk.TextAttribute>, 'SCALE': <enum ATK_TEXT_ATTR_SCALE of type Atk.TextAttribute>, 'WEIGHT': <enum ATK_TEXT_ATTR_WEIGHT of type Atk.TextAttribute>, 'LANGUAGE': <enum ATK_TEXT_ATTR_LANGUAGE of type Atk.TextAttribute>, 'FAMILY_NAME': <enum ATK_TEXT_ATTR_FAMILY_NAME of type Atk.TextAttribute>, 'BG_COLOR': <enum ATK_TEXT_ATTR_BG_COLOR of type Atk.TextAttribute>, 'FG_COLOR': <enum ATK_TEXT_ATTR_FG_COLOR of type Atk.TextAttribute>, 'BG_STIPPLE': <enum ATK_TEXT_ATTR_BG_STIPPLE of type Atk.TextAttribute>, 'FG_STIPPLE': <enum ATK_TEXT_ATTR_FG_STIPPLE of type Atk.TextAttribute>, 'WRAP_MODE': <enum ATK_TEXT_ATTR_WRAP_MODE of type Atk.TextAttribute>, 'DIRECTION': <enum ATK_TEXT_ATTR_DIRECTION of type Atk.TextAttribute>, 'JUSTIFICATION': <enum ATK_TEXT_ATTR_JUSTIFICATION of type Atk.TextAttribute>, 'STRETCH': <enum ATK_TEXT_ATTR_STRETCH of type Atk.TextAttribute>, 'VARIANT': <enum ATK_TEXT_ATTR_VARIANT of type Atk.TextAttribute>, 'STYLE': <enum ATK_TEXT_ATTR_STYLE of type Atk.TextAttribute>, 'TEXT_POSITION': <enum ATK_TEXT_ATTR_TEXT_POSITION of type Atk.TextAttribute>, 'LAST_DEFINED': <enum ATK_TEXT_ATTR_LAST_DEFINED of type Atk.TextAttribute>, 'for_name': gi.FunctionInfo(for_name, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_value': gi.FunctionInfo(get_value, bound=None), 'register': gi.FunctionInfo(register, bound=None)})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-    }
-    __gtype__ = None # (!) real value is '<GType AtkTextAttribute (892675600)>'
-    __info__ = gi.EnumInfo(TextAttribute)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'INVALID': <TextAttribute.INVALID: 0>, 'LEFT_MARGIN': <TextAttribute.LEFT_MARGIN: 1>, 'RIGHT_MARGIN': <TextAttribute.RIGHT_MARGIN: 2>, 'INDENT': <TextAttribute.INDENT: 3>, 'INVISIBLE': <TextAttribute.INVISIBLE: 4>, 'EDITABLE': <TextAttribute.EDITABLE: 5>, 'PIXELS_ABOVE_LINES': <TextAttribute.PIXELS_ABOVE_LINES: 6>, 'PIXELS_BELOW_LINES': <TextAttribute.PIXELS_BELOW_LINES: 7>, 'PIXELS_INSIDE_WRAP': <TextAttribute.PIXELS_INSIDE_WRAP: 8>, 'BG_FULL_HEIGHT': <TextAttribute.BG_FULL_HEIGHT: 9>, 'RISE': <TextAttribute.RISE: 10>, 'UNDERLINE': <TextAttribute.UNDERLINE: 11>, 'STRIKETHROUGH': <TextAttribute.STRIKETHROUGH: 12>, 'SIZE': <TextAttribute.SIZE: 13>, 'SCALE': <TextAttribute.SCALE: 14>, 'WEIGHT': <TextAttribute.WEIGHT: 15>, 'LANGUAGE': <TextAttribute.LANGUAGE: 16>, 'FAMILY_NAME': <TextAttribute.FAMILY_NAME: 17>, 'BG_COLOR': <TextAttribute.BG_COLOR: 18>, 'FG_COLOR': <TextAttribute.FG_COLOR: 19>, 'BG_STIPPLE': <TextAttribute.BG_STIPPLE: 20>, 'FG_STIPPLE': <TextAttribute.FG_STIPPLE: 21>, 'WRAP_MODE': <TextAttribute.WRAP_MODE: 22>, 'DIRECTION': <TextAttribute.DIRECTION: 23>, 'JUSTIFICATION': <TextAttribute.JUSTIFICATION: 24>, 'STRETCH': <TextAttribute.STRETCH: 25>, 'VARIANT': <TextAttribute.VARIANT: 26>, 'STYLE': <TextAttribute.STYLE: 27>, 'TEXT_POSITION': <TextAttribute.TEXT_POSITION: 28>, 'LAST_DEFINED': <TextAttribute.LAST_DEFINED: 29>})"
+    __name__ = 'TextAttribute'
+    __qualname__ = 'TextAttribute'
 
 

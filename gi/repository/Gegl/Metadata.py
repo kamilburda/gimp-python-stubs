@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -166,10 +160,10 @@ class Metadata(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Metadata), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglMetadata (426598720)>, '__dict__': <attribute '__dict__' of 'Metadata' objects>, '__weakref__': <attribute '__weakref__' of 'Metadata' objects>, '__doc__': None, '__gsignals__': {}, 'get_resolution': gi.FunctionInfo(get_resolution, bound=None), 'iter_get_value': gi.FunctionInfo(iter_get_value, bound=None), 'iter_init': gi.FunctionInfo(iter_init, bound=None), 'iter_lookup': gi.FunctionInfo(iter_lookup, bound=None), 'iter_next': gi.FunctionInfo(iter_next, bound=None), 'iter_set_value': gi.FunctionInfo(iter_set_value, bound=None), 'register_map': gi.FunctionInfo(register_map, bound=None), 'set_resolution': gi.FunctionInfo(set_resolution, bound=None), 'unregister_map': gi.FunctionInfo(unregister_map, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Metadata), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglMetadata (3652621152)>, '__dict__': <attribute '__dict__' of 'Metadata' objects>, '__weakref__': <attribute '__weakref__' of 'Metadata' objects>, '__doc__': None, '__gsignals__': {}, 'get_resolution': gi.FunctionInfo(get_resolution), 'iter_get_value': gi.FunctionInfo(iter_get_value), 'iter_init': gi.FunctionInfo(iter_init), 'iter_lookup': gi.FunctionInfo(iter_lookup), 'iter_next': gi.FunctionInfo(iter_next), 'iter_set_value': gi.FunctionInfo(iter_set_value), 'register_map': gi.FunctionInfo(register_map), 'set_resolution': gi.FunctionInfo(set_resolution), 'unregister_map': gi.FunctionInfo(unregister_map)})"
     __gdoc__ = 'Interface GeglMetadata\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GeglMetadata (426598720)>'
+    __gtype__ = None # (!) real value is '<GType GeglMetadata (3652621152)>'
     __info__ = InterfaceInfo(Metadata)
 
 

@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class HookList(__gi.Struct):
@@ -171,7 +169,7 @@ class HookList(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HookList), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'HookList' objects>, '__weakref__': <attribute '__weakref__' of 'HookList' objects>, '__doc__': None, 'seq_id': <property object at 0x000002830bf15760>, 'hook_size': <property object at 0x000002830bf15850>, 'is_setup': <property object at 0x000002830bf15940>, 'hooks': <property object at 0x000002830bf15a30>, 'dummy3': <property object at 0x000002830bf15b20>, 'finalize_hook': <property object at 0x000002830bf15c10>, 'dummy': <property object at 0x000002830bf15d00>, 'clear': gi.FunctionInfo(clear, bound=None), 'init': gi.FunctionInfo(init, bound=None), 'invoke': gi.FunctionInfo(invoke, bound=None), 'invoke_check': gi.FunctionInfo(invoke_check, bound=None), 'marshal': gi.FunctionInfo(marshal, bound=None), 'marshal_check': gi.FunctionInfo(marshal_check, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(HookList), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'HookList' objects>, '__weakref__': <attribute '__weakref__' of 'HookList' objects>, '__doc__': None, 'seq_id': <property object at 0x0000018e9ff8a840>, 'hook_size': <property object at 0x0000018e9ff8a700>, 'is_setup': <property object at 0x0000018e9ff8a9d0>, 'hooks': <property object at 0x0000018e9ff8aac0>, 'dummy3': <property object at 0x0000018e9ff8abb0>, 'finalize_hook': <property object at 0x0000018e9ff8aca0>, 'dummy': <property object at 0x0000018e9ff8ad90>, 'clear': gi.FunctionInfo(clear), 'init': gi.FunctionInfo(init), 'invoke': gi.FunctionInfo(invoke), 'invoke_check': gi.FunctionInfo(invoke_check), 'marshal': gi.FunctionInfo(marshal), 'marshal_check': gi.FunctionInfo(marshal_check)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(HookList)
 

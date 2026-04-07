@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class InputStreamClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -158,7 +167,7 @@ class InputStreamClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(InputStreamClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'InputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'InputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793dfa0c0>, 'read_fn': <property object at 0x000001a793dfa1b0>, 'skip': <property object at 0x000001a793dfa2a0>, 'close_fn': <property object at 0x000001a793dfa390>, 'read_async': <property object at 0x000001a793dfa480>, 'read_finish': <property object at 0x000001a793dfa570>, 'skip_async': <property object at 0x000001a793dfa660>, 'skip_finish': <property object at 0x000001a793dfa750>, 'close_async': <property object at 0x000001a793dfa840>, 'close_finish': <property object at 0x000001a793dfa930>, '_g_reserved1': <property object at 0x000001a793dfaa20>, '_g_reserved2': <property object at 0x000001a793dfab10>, '_g_reserved3': <property object at 0x000001a793dfac00>, '_g_reserved4': <property object at 0x000001a793dfacf0>, '_g_reserved5': <property object at 0x000001a793dfade0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(InputStreamClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'InputStreamClass' objects>, '__weakref__': <attribute '__weakref__' of 'InputStreamClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea7030ea20>, 'read_fn': <property object at 0x000001ea7030eb10>, 'skip': <property object at 0x000001ea7030ec00>, 'close_fn': <property object at 0x000001ea7030ecf0>, 'read_async': <property object at 0x000001ea7030ede0>, 'read_finish': <property object at 0x000001ea7030eed0>, 'skip_async': <property object at 0x000001ea7030efc0>, 'skip_finish': <property object at 0x000001ea7030f0b0>, 'close_async': <property object at 0x000001ea7030f1a0>, 'close_finish': <property object at 0x000001ea7030f290>, '_g_reserved1': <property object at 0x000001ea7030f380>, '_g_reserved2': <property object at 0x000001ea7030f470>, '_g_reserved3': <property object at 0x000001ea7030f560>, '_g_reserved4': <property object at 0x000001ea7030f650>, '_g_reserved5': <property object at 0x000001ea7030f740>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(InputStreamClass)
 

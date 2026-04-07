@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class LayoutLine(__gi.Boxed):
@@ -195,8 +193,8 @@ class LayoutLine(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LayoutLine), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoLayoutLine (4081762176)>, '__dict__': <attribute '__dict__' of 'LayoutLine' objects>, '__weakref__': <attribute '__weakref__' of 'LayoutLine' objects>, '__doc__': None, 'layout': <property object at 0x00000213f60876f0>, 'start_index': <property object at 0x00000213f60877e0>, 'length': <property object at 0x00000213f60878d0>, 'runs': <property object at 0x00000213f60879c0>, 'is_paragraph_start': gi.FunctionInfo(is_paragraph_start, bound=None), 'resolved_dir': <property object at 0x00000213f6087ba0>, 'get_extents': gi.FunctionInfo(get_extents, bound=None), 'get_height': gi.FunctionInfo(get_height, bound=None), 'get_length': gi.FunctionInfo(get_length, bound=None), 'get_pixel_extents': gi.FunctionInfo(get_pixel_extents, bound=None), 'get_resolved_direction': gi.FunctionInfo(get_resolved_direction, bound=None), 'get_start_index': gi.FunctionInfo(get_start_index, bound=None), 'get_x_ranges': gi.FunctionInfo(get_x_ranges, bound=None), 'index_to_x': gi.FunctionInfo(index_to_x, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'x_to_index': gi.FunctionInfo(x_to_index, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType PangoLayoutLine (4081762176)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LayoutLine), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoLayoutLine (843936384)>, '__dict__': <attribute '__dict__' of 'LayoutLine' objects>, '__weakref__': <attribute '__weakref__' of 'LayoutLine' objects>, '__doc__': None, 'layout': <property object at 0x00000280355d6340>, 'start_index': <property object at 0x00000280355d6430>, 'length': <property object at 0x00000280355d6520>, 'runs': <property object at 0x00000280355d6610>, 'is_paragraph_start': gi.FunctionInfo(is_paragraph_start), 'resolved_dir': <property object at 0x00000280355d67f0>, 'get_extents': gi.FunctionInfo(get_extents), 'get_height': gi.FunctionInfo(get_height), 'get_length': gi.FunctionInfo(get_length), 'get_pixel_extents': gi.FunctionInfo(get_pixel_extents), 'get_resolved_direction': gi.FunctionInfo(get_resolved_direction), 'get_start_index': gi.FunctionInfo(get_start_index), 'get_x_ranges': gi.FunctionInfo(get_x_ranges), 'index_to_x': gi.FunctionInfo(index_to_x), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), 'x_to_index': gi.FunctionInfo(x_to_index)})"
+    __gtype__ = None # (!) real value is '<GType PangoLayoutLine (843936384)>'
     __info__ = StructInfo(LayoutLine)
 
 

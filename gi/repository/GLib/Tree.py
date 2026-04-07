@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Tree(__gi.Boxed):
@@ -67,7 +65,8 @@ class Tree(__gi.Boxed):
         """ lower_bound(self, key=None) -> GLib.TreeNode or None """
         pass
 
-    def new_full(self, key_compare_func, key_compare_data=None, key_destroy_func): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_full(cls, key_compare_func, key_compare_data=None, key_destroy_func): # real signature unknown; restored from __doc__
         """ new_full(key_compare_func:GLib.CompareDataFunc, key_compare_data=None, key_destroy_func:GLib.DestroyNotify) -> GLib.Tree """
         pass
 
@@ -238,8 +237,8 @@ class Tree(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Tree), '__module__': 'gi.repository.GLib', '__gtype__': <GType GTree (163509136)>, '__dict__': <attribute '__dict__' of 'Tree' objects>, '__weakref__': <attribute '__weakref__' of 'Tree' objects>, '__doc__': None, 'new_full': gi.FunctionInfo(new_full, bound=None), 'destroy': gi.FunctionInfo(destroy, bound=None), 'foreach': gi.FunctionInfo(foreach, bound=None), 'foreach_node': gi.FunctionInfo(foreach_node, bound=None), 'height': gi.FunctionInfo(height, bound=None), 'insert': gi.FunctionInfo(insert, bound=None), 'insert_node': gi.FunctionInfo(insert_node, bound=None), 'lookup': gi.FunctionInfo(lookup, bound=None), 'lookup_extended': gi.FunctionInfo(lookup_extended, bound=None), 'lookup_node': gi.FunctionInfo(lookup_node, bound=None), 'lower_bound': gi.FunctionInfo(lower_bound, bound=None), 'nnodes': gi.FunctionInfo(nnodes, bound=None), 'node_first': gi.FunctionInfo(node_first, bound=None), 'node_last': gi.FunctionInfo(node_last, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'remove_all': gi.FunctionInfo(remove_all, bound=None), 'replace': gi.FunctionInfo(replace, bound=None), 'replace_node': gi.FunctionInfo(replace_node, bound=None), 'search': gi.FunctionInfo(search, bound=None), 'search_node': gi.FunctionInfo(search_node, bound=None), 'steal': gi.FunctionInfo(steal, bound=None), 'traverse': gi.FunctionInfo(traverse, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'upper_bound': gi.FunctionInfo(upper_bound, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GTree (163509136)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Tree), '__module__': 'gi.repository.GLib', '__gtype__': <GType GTree (2640518496)>, '__dict__': <attribute '__dict__' of 'Tree' objects>, '__weakref__': <attribute '__weakref__' of 'Tree' objects>, '__doc__': None, 'new_full': <classmethod(gi.FunctionInfo(new_full))>, 'destroy': gi.FunctionInfo(destroy), 'foreach': gi.FunctionInfo(foreach), 'foreach_node': gi.FunctionInfo(foreach_node), 'height': gi.FunctionInfo(height), 'insert': gi.FunctionInfo(insert), 'insert_node': gi.FunctionInfo(insert_node), 'lookup': gi.FunctionInfo(lookup), 'lookup_extended': gi.FunctionInfo(lookup_extended), 'lookup_node': gi.FunctionInfo(lookup_node), 'lower_bound': gi.FunctionInfo(lower_bound), 'nnodes': gi.FunctionInfo(nnodes), 'node_first': gi.FunctionInfo(node_first), 'node_last': gi.FunctionInfo(node_last), 'ref': gi.FunctionInfo(ref), 'remove': gi.FunctionInfo(remove), 'remove_all': gi.FunctionInfo(remove_all), 'replace': gi.FunctionInfo(replace), 'replace_node': gi.FunctionInfo(replace_node), 'search': gi.FunctionInfo(search), 'search_node': gi.FunctionInfo(search_node), 'steal': gi.FunctionInfo(steal), 'traverse': gi.FunctionInfo(traverse), 'unref': gi.FunctionInfo(unref), 'upper_bound': gi.FunctionInfo(upper_bound)})"
+    __gtype__ = None # (!) real value is '<GType GTree (2640518496)>'
     __info__ = StructInfo(Tree)
 
 

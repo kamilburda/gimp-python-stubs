@@ -1,20 +1,13 @@
 # encoding: utf-8
 # module gi.repository.cairo
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Glyph(__gi.Boxed):
@@ -44,7 +37,11 @@ class Glyph(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -142,8 +139,8 @@ class Glyph(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Glyph), '__module__': 'gi.repository.cairo', '__gtype__': <GType CairoGlyph (4004037072)>, '__dict__': <attribute '__dict__' of 'Glyph' objects>, '__weakref__': <attribute '__weakref__' of 'Glyph' objects>, '__doc__': None, 'index': <property object at 0x00000161ef1cec50>, 'x': <property object at 0x00000161ef1ced40>, 'y': <property object at 0x00000161ef1cee30>})"
-    __gtype__ = None # (!) real value is '<GType CairoGlyph (4004037072)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Glyph), '__module__': 'gi.repository.cairo', '__gtype__': <GType CairoGlyph (575360848)>, '__dict__': <attribute '__dict__' of 'Glyph' objects>, '__weakref__': <attribute '__weakref__' of 'Glyph' objects>, '__doc__': None, 'index': <property object at 0x00000202247c8bd0>, 'x': <property object at 0x0000020224925350>, 'y': <property object at 0x0000020224925300>})"
+    __gtype__ = None # (!) real value is '<GType CairoGlyph (575360848)>'
     __info__ = StructInfo(Glyph)
 
 

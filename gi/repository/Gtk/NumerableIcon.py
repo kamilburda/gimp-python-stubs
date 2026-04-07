@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -54,20 +53,20 @@ class NumerableIcon(__gi_repository_Gio.EmblemedIcon):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -86,6 +85,12 @@ class NumerableIcon(__gi_repository_Gio.EmblemedIcon):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -111,17 +116,17 @@ class NumerableIcon(__gi_repository_Gio.EmblemedIcon):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -174,20 +179,20 @@ class NumerableIcon(__gi_repository_Gio.EmblemedIcon):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -358,20 +363,20 @@ class NumerableIcon(__gi_repository_Gio.EmblemedIcon):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -512,12 +517,14 @@ class NumerableIcon(__gi_repository_Gio.EmblemedIcon):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002eceabad150>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd1803b20>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(NumerableIcon), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkNumerableIcon (3923952256)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_with_style_context': gi.FunctionInfo(new_with_style_context, bound=None), 'get_background_gicon': gi.FunctionInfo(get_background_gicon, bound=None), 'get_background_icon_name': gi.FunctionInfo(get_background_icon_name, bound=None), 'get_count': gi.FunctionInfo(get_count, bound=None), 'get_label': gi.FunctionInfo(get_label, bound=None), 'get_style_context': gi.FunctionInfo(get_style_context, bound=None), 'set_background_gicon': gi.FunctionInfo(set_background_gicon, bound=None), 'set_background_icon_name': gi.FunctionInfo(set_background_icon_name, bound=None), 'set_count': gi.FunctionInfo(set_count, bound=None), 'set_label': gi.FunctionInfo(set_label, bound=None), 'set_style_context': gi.FunctionInfo(set_style_context, bound=None), 'parent': <property object at 0x000002eceac25b70>, 'priv': <property object at 0x000002eceac25c60>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(NumerableIcon), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkNumerableIcon (3413962832)>, '__doc__': None, '__gsignals__': {}, 'new': <staticmethod(gi.FunctionInfo(new))>, 'new_with_style_context': <staticmethod(gi.FunctionInfo(new_with_style_context))>, 'get_background_gicon': gi.FunctionInfo(get_background_gicon), 'get_background_icon_name': gi.FunctionInfo(get_background_icon_name), 'get_count': gi.FunctionInfo(get_count), 'get_label': gi.FunctionInfo(get_label), 'get_style_context': gi.FunctionInfo(get_style_context), 'set_background_gicon': gi.FunctionInfo(set_background_gicon), 'set_background_icon_name': gi.FunctionInfo(set_background_icon_name), 'set_count': gi.FunctionInfo(set_count), 'set_label': gi.FunctionInfo(set_label), 'set_style_context': gi.FunctionInfo(set_style_context), 'parent': <property object at 0x000002bfd18a09f0>, 'priv': <property object at 0x000002bfd18a0ae0>})"
+    __firstlineno__ = 651
     __gdoc__ = "Object GtkNumerableIcon\n\nProperties from GtkNumerableIcon:\n  count -> gint: Icon's count\n    The count of the emblem currently displayed\n  label -> gchararray: Icon's label\n    The label to be displayed over the icon\n  style-context -> GtkStyleContext: Icon's style context\n    The style context to theme the icon appearance\n  background-icon -> GIcon: Background icon\n    The icon for the number emblem background\n  background-icon-name -> gchararray: Background icon name\n    The icon name for the number emblem background\n\nProperties from GEmblemedIcon:\n  gicon -> GIcon: gicon\n\nSignals from GObject:\n  notify (GParam)\n\n"
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkNumerableIcon (3923952256)>'
+    __gtype__ = None # (!) real value is '<GType GtkNumerableIcon (3413962832)>'
     __info__ = ObjectInfo(NumerableIcon)
+    __static_attributes__ = ()
 
 

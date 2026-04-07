@@ -1,21 +1,13 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
 class draw_state_t(__gi.Struct):
@@ -159,7 +151,7 @@ class draw_state_t(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(draw_state_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'draw_state_t' objects>, '__weakref__': <attribute '__weakref__' of 'draw_state_t' objects>, '__doc__': None, 'path_open': <property object at 0x000001d9a160abb0>, 'path_start_x': <property object at 0x000001d9a160aca0>, 'path_start_y': <property object at 0x000001d9a160ad90>, 'current_x': <property object at 0x000001d9a160ae80>, 'current_y': <property object at 0x000001d9a160af70>, 'reserved1': <property object at 0x000001d9a160b060>, 'reserved2': <property object at 0x000001d9a160b150>, 'reserved3': <property object at 0x000001d9a160b240>, 'reserved4': <property object at 0x000001d9a160b330>, 'reserved5': <property object at 0x000001d9a160b420>, 'reserved6': <property object at 0x000001d9a160b510>, 'reserved7': <property object at 0x000001d9a160b600>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(draw_state_t), '__module__': 'gi.repository.HarfBuzz', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'draw_state_t' objects>, '__weakref__': <attribute '__weakref__' of 'draw_state_t' objects>, '__doc__': None, 'path_open': <property object at 0x00000208a4fea390>, 'path_start_x': <property object at 0x00000208a4fea200>, 'path_start_y': <property object at 0x00000208a4fea110>, 'current_x': <property object at 0x00000208a4fea020>, 'current_y': <property object at 0x00000208a4fe9f30>, 'reserved1': <property object at 0x00000208a4fe9e40>, 'reserved2': <property object at 0x00000208a4fe9d50>, 'reserved3': <property object at 0x00000208a4fe9c60>, 'reserved4': <property object at 0x00000208a348d9e0>, 'reserved5': <property object at 0x00000208a50a00e0>, 'reserved6': <property object at 0x00000208a50a01d0>, 'reserved7': <property object at 0x00000208a50a02c0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(draw_state_t)
 

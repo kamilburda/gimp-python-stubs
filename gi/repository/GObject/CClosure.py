@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -151,7 +150,11 @@ class CClosure(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -247,7 +250,7 @@ class CClosure(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(CClosure), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'CClosure' objects>, '__weakref__': <attribute '__weakref__' of 'CClosure' objects>, '__doc__': None, 'closure': <property object at 0x0000010b07a4d5d0>, 'callback': <property object at 0x0000010b07a4d6c0>, 'marshal_BOOLEAN__BOXED_BOXED': gi.FunctionInfo(marshal_BOOLEAN__BOXED_BOXED, bound=None), 'marshal_BOOLEAN__FLAGS': gi.FunctionInfo(marshal_BOOLEAN__FLAGS, bound=None), 'marshal_STRING__OBJECT_POINTER': gi.FunctionInfo(marshal_STRING__OBJECT_POINTER, bound=None), 'marshal_VOID__BOOLEAN': gi.FunctionInfo(marshal_VOID__BOOLEAN, bound=None), 'marshal_VOID__BOXED': gi.FunctionInfo(marshal_VOID__BOXED, bound=None), 'marshal_VOID__CHAR': gi.FunctionInfo(marshal_VOID__CHAR, bound=None), 'marshal_VOID__DOUBLE': gi.FunctionInfo(marshal_VOID__DOUBLE, bound=None), 'marshal_VOID__ENUM': gi.FunctionInfo(marshal_VOID__ENUM, bound=None), 'marshal_VOID__FLAGS': gi.FunctionInfo(marshal_VOID__FLAGS, bound=None), 'marshal_VOID__FLOAT': gi.FunctionInfo(marshal_VOID__FLOAT, bound=None), 'marshal_VOID__INT': gi.FunctionInfo(marshal_VOID__INT, bound=None), 'marshal_VOID__LONG': gi.FunctionInfo(marshal_VOID__LONG, bound=None), 'marshal_VOID__OBJECT': gi.FunctionInfo(marshal_VOID__OBJECT, bound=None), 'marshal_VOID__PARAM': gi.FunctionInfo(marshal_VOID__PARAM, bound=None), 'marshal_VOID__POINTER': gi.FunctionInfo(marshal_VOID__POINTER, bound=None), 'marshal_VOID__STRING': gi.FunctionInfo(marshal_VOID__STRING, bound=None), 'marshal_VOID__UCHAR': gi.FunctionInfo(marshal_VOID__UCHAR, bound=None), 'marshal_VOID__UINT': gi.FunctionInfo(marshal_VOID__UINT, bound=None), 'marshal_VOID__UINT_POINTER': gi.FunctionInfo(marshal_VOID__UINT_POINTER, bound=None), 'marshal_VOID__ULONG': gi.FunctionInfo(marshal_VOID__ULONG, bound=None), 'marshal_VOID__VARIANT': gi.FunctionInfo(marshal_VOID__VARIANT, bound=None), 'marshal_VOID__VOID': gi.FunctionInfo(marshal_VOID__VOID, bound=None), 'marshal_generic': gi.FunctionInfo(marshal_generic, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(CClosure), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'CClosure' objects>, '__weakref__': <attribute '__weakref__' of 'CClosure' objects>, '__doc__': None, 'closure': <property object at 0x000001dd11ea6840>, 'callback': <property object at 0x000001dd11ea6930>, 'marshal_BOOLEAN__BOXED_BOXED': <staticmethod(gi.FunctionInfo(marshal_BOOLEAN__BOXED_BOXED))>, 'marshal_BOOLEAN__FLAGS': <staticmethod(gi.FunctionInfo(marshal_BOOLEAN__FLAGS))>, 'marshal_STRING__OBJECT_POINTER': <staticmethod(gi.FunctionInfo(marshal_STRING__OBJECT_POINTER))>, 'marshal_VOID__BOOLEAN': <staticmethod(gi.FunctionInfo(marshal_VOID__BOOLEAN))>, 'marshal_VOID__BOXED': <staticmethod(gi.FunctionInfo(marshal_VOID__BOXED))>, 'marshal_VOID__CHAR': <staticmethod(gi.FunctionInfo(marshal_VOID__CHAR))>, 'marshal_VOID__DOUBLE': <staticmethod(gi.FunctionInfo(marshal_VOID__DOUBLE))>, 'marshal_VOID__ENUM': <staticmethod(gi.FunctionInfo(marshal_VOID__ENUM))>, 'marshal_VOID__FLAGS': <staticmethod(gi.FunctionInfo(marshal_VOID__FLAGS))>, 'marshal_VOID__FLOAT': <staticmethod(gi.FunctionInfo(marshal_VOID__FLOAT))>, 'marshal_VOID__INT': <staticmethod(gi.FunctionInfo(marshal_VOID__INT))>, 'marshal_VOID__LONG': <staticmethod(gi.FunctionInfo(marshal_VOID__LONG))>, 'marshal_VOID__OBJECT': <staticmethod(gi.FunctionInfo(marshal_VOID__OBJECT))>, 'marshal_VOID__PARAM': <staticmethod(gi.FunctionInfo(marshal_VOID__PARAM))>, 'marshal_VOID__POINTER': <staticmethod(gi.FunctionInfo(marshal_VOID__POINTER))>, 'marshal_VOID__STRING': <staticmethod(gi.FunctionInfo(marshal_VOID__STRING))>, 'marshal_VOID__UCHAR': <staticmethod(gi.FunctionInfo(marshal_VOID__UCHAR))>, 'marshal_VOID__UINT': <staticmethod(gi.FunctionInfo(marshal_VOID__UINT))>, 'marshal_VOID__UINT_POINTER': <staticmethod(gi.FunctionInfo(marshal_VOID__UINT_POINTER))>, 'marshal_VOID__ULONG': <staticmethod(gi.FunctionInfo(marshal_VOID__ULONG))>, 'marshal_VOID__VARIANT': <staticmethod(gi.FunctionInfo(marshal_VOID__VARIANT))>, 'marshal_VOID__VOID': <staticmethod(gi.FunctionInfo(marshal_VOID__VOID))>, 'marshal_generic': <staticmethod(gi.FunctionInfo(marshal_generic))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(CClosure)
 

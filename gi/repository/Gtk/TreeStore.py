@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -61,20 +60,20 @@ class TreeStore(TreeStore, __gi_overrides_Gtk.TreeModel, __gi_overrides_Gtk.Tree
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -105,6 +104,12 @@ class TreeStore(TreeStore, __gi_overrides_Gtk.TreeModel, __gi_overrides_Gtk.Tree
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def drag_data_delete(self, path): # real signature unknown; restored from __doc__
@@ -146,17 +151,17 @@ class TreeStore(TreeStore, __gi_overrides_Gtk.TreeModel, __gi_overrides_Gtk.Tree
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -233,20 +238,20 @@ class TreeStore(TreeStore, __gi_overrides_Gtk.TreeModel, __gi_overrides_Gtk.Tree
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -550,31 +555,31 @@ class TreeStore(TreeStore, __gi_overrides_Gtk.TreeModel, __gi_overrides_Gtk.Tree
         pass
 
     def _convert_value(self, column, value): # reliably restored by inspect
-        """ Convert value to a GObject.Value of the expected type """
+        """ Convert value to a GObject.Value of the expected type. """
         pass
 
     def _do_insert(self, parent, position, row): # reliably restored by inspect
         # no doc
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
     def _getiter(self, key): # reliably restored by inspect
         # no doc
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -738,12 +743,14 @@ class TreeStore(TreeStore, __gi_overrides_Gtk.TreeModel, __gi_overrides_Gtk.Tree
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002ecee4b5cf0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd191c730>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__init__': <function TreeStore.__init__ at 0x000002ece8a7b060>, '_do_insert': <function TreeStore._do_insert at 0x000002ece8a7b100>, 'append': <function TreeStore.append at 0x000002ece8a7b1a0>, 'prepend': <function TreeStore.prepend at 0x000002ece8a7b240>, 'insert': <function TreeStore.insert at 0x000002ece8a7b2e0>, 'insert_before': <function TreeStore.insert_before at 0x000002ece8a7b380>, 'insert_after': <function TreeStore.insert_after at 0x000002ece8a7b420>, 'set_value': <function TreeStore.set_value at 0x000002ece8a7b4c0>, 'set': <function TreeStore.set at 0x000002ece8a7b560>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__firstlineno__': 1351, '__init__': <function TreeStore.__init__ at 0x000002bfcebd3270>, '_do_insert': <function TreeStore._do_insert at 0x000002bfcebd3320>, 'append': <function TreeStore.append at 0x000002bfcebd33d0>, 'prepend': <function TreeStore.prepend at 0x000002bfcebd3480>, 'insert': <function TreeStore.insert at 0x000002bfcebd3530>, 'insert_before': <function TreeStore.insert_before at 0x000002bfcebd35e0>, 'insert_after': <function TreeStore.insert_after at 0x000002bfcebd3690>, 'set_value': <function TreeStore.set_value at 0x000002bfcebd3740>, 'set': <function TreeStore.set at 0x000002bfcebd37f0>, '__static_attributes__': (), '__doc__': None, '__gsignals__': {}})"
+    __firstlineno__ = 1351
     __gdoc__ = 'Object GtkTreeStore\n\nSignals from GtkTreeModel:\n  row-changed (GtkTreePath, GtkTreeIter)\n  row-inserted (GtkTreePath, GtkTreeIter)\n  row-has-child-toggled (GtkTreePath, GtkTreeIter)\n  row-deleted (GtkTreePath)\n  rows-reordered (GtkTreePath, GtkTreeIter, gpointer)\n\nSignals from GtkTreeSortable:\n  sort-column-changed ()\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkTreeStore (3867803008)>'
+    __gtype__ = None # (!) real value is '<GType GtkTreeStore (3416387376)>'
     __info__ = ObjectInfo(TreeStore)
+    __static_attributes__ = ()
 
 

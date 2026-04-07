@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -56,11 +50,13 @@ class Random(__gi.Boxed):
         """ int_range(self, x:int, y:int, z:int, n:int, min:int, max:int) -> int """
         return 0
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gegl.Random """
         pass
 
-    def new_with_seed(self, seed): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_with_seed(cls, seed): # real signature unknown; restored from __doc__
         """ new_with_seed(seed:int) -> Gegl.Random """
         pass
 
@@ -180,8 +176,8 @@ class Random(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Random), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglRandom (420741136)>, '__dict__': <attribute '__dict__' of 'Random' objects>, '__weakref__': <attribute '__weakref__' of 'Random' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'new_with_seed': gi.FunctionInfo(new_with_seed, bound=None), 'duplicate': gi.FunctionInfo(duplicate, bound=None), 'float': gi.FunctionInfo(float, bound=None), 'float_range': gi.FunctionInfo(float_range, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'int': gi.FunctionInfo(int, bound=None), 'int_range': gi.FunctionInfo(int_range, bound=None), 'set_seed': gi.FunctionInfo(set_seed, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000002761b8a7880>})"
-    __gtype__ = None # (!) real value is '<GType GeglRandom (420741136)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Random), '__module__': 'gi.repository.Gegl', '__gtype__': <GType GeglRandom (3657336096)>, '__dict__': <attribute '__dict__' of 'Random' objects>, '__weakref__': <attribute '__weakref__' of 'Random' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_with_seed': <classmethod(gi.FunctionInfo(new_with_seed))>, 'duplicate': gi.FunctionInfo(duplicate), 'float': gi.FunctionInfo(float), 'float_range': gi.FunctionInfo(float_range), 'free': gi.FunctionInfo(free), 'int': gi.FunctionInfo(int), 'int_range': gi.FunctionInfo(int_range), 'set_seed': gi.FunctionInfo(set_seed), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000001ebdc19cfe0>})"
+    __gtype__ = None # (!) real value is '<GType GeglRandom (3657336096)>'
     __info__ = StructInfo(Random)
 
 

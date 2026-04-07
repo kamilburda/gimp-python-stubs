@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -46,7 +51,11 @@ class PollableInputStream(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -137,10 +146,10 @@ class PollableInputStream(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(PollableInputStream), '__module__': 'gi.repository.Gio', '__gtype__': <GType GPollableInputStream (2472611488)>, '__dict__': <attribute '__dict__' of 'PollableInputStream' objects>, '__weakref__': <attribute '__weakref__' of 'PollableInputStream' objects>, '__doc__': None, '__gsignals__': {}, 'can_poll': gi.FunctionInfo(can_poll, bound=None), 'create_source': gi.FunctionInfo(create_source, bound=None), 'is_readable': gi.FunctionInfo(is_readable, bound=None), 'read_nonblocking': gi.FunctionInfo(read_nonblocking, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(PollableInputStream), '__module__': 'gi.repository.Gio', '__gtype__': <GType GPollableInputStream (1841873568)>, '__dict__': <attribute '__dict__' of 'PollableInputStream' objects>, '__weakref__': <attribute '__weakref__' of 'PollableInputStream' objects>, '__doc__': None, '__gsignals__': {}, 'can_poll': gi.FunctionInfo(can_poll), 'create_source': gi.FunctionInfo(create_source), 'is_readable': gi.FunctionInfo(is_readable), 'read_nonblocking': gi.FunctionInfo(read_nonblocking)})"
     __gdoc__ = 'Interface GPollableInputStream\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GPollableInputStream (2472611488)>'
+    __gtype__ = None # (!) real value is '<GType GPollableInputStream (1841873568)>'
     __info__ = InterfaceInfo(PollableInputStream)
 
 

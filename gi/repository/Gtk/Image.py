@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -118,20 +117,20 @@ class Image(Misc):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -228,6 +227,9 @@ class Image(Misc):
         """ configure_event(self, event:Gdk.EventConfigure) -> bool """
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_damage_event(self, *args, **kwargs): # real signature unknown
         """ damage_event(self, event:Gdk.EventExpose) -> bool """
         pass
@@ -250,6 +252,9 @@ class Image(Misc):
 
     def do_dispatch_child_properties_changed(self, *args, **kwargs): # real signature unknown
         """ dispatch_child_properties_changed(self, n_pspecs:int, pspecs:GObject.ParamSpec) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_drag_begin(self, *args, **kwargs): # real signature unknown
@@ -667,17 +672,17 @@ class Image(Misc):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -1098,20 +1103,20 @@ class Image(Misc):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -1301,7 +1306,8 @@ class Image(Misc):
         """ modify_text(self, state:Gtk.StateType, color:Gdk.Color=None) """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.Widget """
         pass
 
@@ -1309,39 +1315,48 @@ class Image(Misc):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_from_animation(self, animation): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_animation(cls, animation): # real signature unknown; restored from __doc__
         """ new_from_animation(animation:GdkPixbuf.PixbufAnimation) -> Gtk.Widget """
         pass
 
-    def new_from_file(self, filename): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_file(cls, filename): # real signature unknown; restored from __doc__
         """ new_from_file(filename:str) -> Gtk.Widget """
         pass
 
-    def new_from_gicon(self, icon, size): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_gicon(cls, icon, size): # real signature unknown; restored from __doc__
         """ new_from_gicon(icon:Gio.Icon, size:int) -> Gtk.Widget """
         pass
 
-    def new_from_icon_name(self, icon_name=None, size): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_icon_name(cls, icon_name=None, size): # real signature unknown; restored from __doc__
         """ new_from_icon_name(icon_name:str=None, size:int) -> Gtk.Widget """
         pass
 
-    def new_from_icon_set(self, icon_set, size): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_icon_set(cls, icon_set, size): # real signature unknown; restored from __doc__
         """ new_from_icon_set(icon_set:Gtk.IconSet, size:int) -> Gtk.Widget """
         pass
 
-    def new_from_pixbuf(self, pixbuf=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_pixbuf(cls, pixbuf=None): # real signature unknown; restored from __doc__
         """ new_from_pixbuf(pixbuf:GdkPixbuf.Pixbuf=None) -> Gtk.Widget """
         pass
 
-    def new_from_resource(self, resource_path): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_resource(cls, resource_path): # real signature unknown; restored from __doc__
         """ new_from_resource(resource_path:str) -> Gtk.Widget """
         pass
 
-    def new_from_stock(self, stock_id, size): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_stock(cls, stock_id, size): # real signature unknown; restored from __doc__
         """ new_from_stock(stock_id:str, size:int) -> Gtk.Widget """
         pass
 
-    def new_from_surface(self, surface=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_surface(cls, surface=None): # real signature unknown; restored from __doc__
         """ new_from_surface(surface:cairo.Surface=None) -> Gtk.Widget """
         pass
 
@@ -1886,20 +1901,20 @@ class Image(Misc):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -2042,12 +2057,14 @@ class Image(Misc):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002eceaba1e40>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17e5f90>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Image), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkImage (3871457920)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_from_animation': gi.FunctionInfo(new_from_animation, bound=None), 'new_from_file': gi.FunctionInfo(new_from_file, bound=None), 'new_from_gicon': gi.FunctionInfo(new_from_gicon, bound=None), 'new_from_icon_name': gi.FunctionInfo(new_from_icon_name, bound=None), 'new_from_icon_set': gi.FunctionInfo(new_from_icon_set, bound=None), 'new_from_pixbuf': gi.FunctionInfo(new_from_pixbuf, bound=None), 'new_from_resource': gi.FunctionInfo(new_from_resource, bound=None), 'new_from_stock': gi.FunctionInfo(new_from_stock, bound=None), 'new_from_surface': gi.FunctionInfo(new_from_surface, bound=None), 'clear': gi.FunctionInfo(clear, bound=None), 'get_animation': gi.FunctionInfo(get_animation, bound=None), 'get_gicon': gi.FunctionInfo(get_gicon, bound=None), 'get_icon_name': gi.FunctionInfo(get_icon_name, bound=None), 'get_icon_set': gi.FunctionInfo(get_icon_set, bound=None), 'get_pixbuf': gi.FunctionInfo(get_pixbuf, bound=None), 'get_pixel_size': gi.FunctionInfo(get_pixel_size, bound=None), 'get_stock': gi.FunctionInfo(get_stock, bound=None), 'get_storage_type': gi.FunctionInfo(get_storage_type, bound=None), 'set_from_animation': gi.FunctionInfo(set_from_animation, bound=None), 'set_from_file': gi.FunctionInfo(set_from_file, bound=None), 'set_from_gicon': gi.FunctionInfo(set_from_gicon, bound=None), 'set_from_icon_name': gi.FunctionInfo(set_from_icon_name, bound=None), 'set_from_icon_set': gi.FunctionInfo(set_from_icon_set, bound=None), 'set_from_pixbuf': gi.FunctionInfo(set_from_pixbuf, bound=None), 'set_from_resource': gi.FunctionInfo(set_from_resource, bound=None), 'set_from_stock': gi.FunctionInfo(set_from_stock, bound=None), 'set_from_surface': gi.FunctionInfo(set_from_surface, bound=None), 'set_pixel_size': gi.FunctionInfo(set_pixel_size, bound=None), 'misc': <property object at 0x000002eceabf3470>, 'priv': <property object at 0x000002eceabf3560>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Image), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkImage (3427463360)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_from_animation': <classmethod(gi.FunctionInfo(new_from_animation))>, 'new_from_file': <classmethod(gi.FunctionInfo(new_from_file))>, 'new_from_gicon': <classmethod(gi.FunctionInfo(new_from_gicon))>, 'new_from_icon_name': <classmethod(gi.FunctionInfo(new_from_icon_name))>, 'new_from_icon_set': <classmethod(gi.FunctionInfo(new_from_icon_set))>, 'new_from_pixbuf': <classmethod(gi.FunctionInfo(new_from_pixbuf))>, 'new_from_resource': <classmethod(gi.FunctionInfo(new_from_resource))>, 'new_from_stock': <classmethod(gi.FunctionInfo(new_from_stock))>, 'new_from_surface': <classmethod(gi.FunctionInfo(new_from_surface))>, 'clear': gi.FunctionInfo(clear), 'get_animation': gi.FunctionInfo(get_animation), 'get_gicon': gi.FunctionInfo(get_gicon), 'get_icon_name': gi.FunctionInfo(get_icon_name), 'get_icon_set': gi.FunctionInfo(get_icon_set), 'get_pixbuf': gi.FunctionInfo(get_pixbuf), 'get_pixel_size': gi.FunctionInfo(get_pixel_size), 'get_stock': gi.FunctionInfo(get_stock), 'get_storage_type': gi.FunctionInfo(get_storage_type), 'set_from_animation': gi.FunctionInfo(set_from_animation), 'set_from_file': gi.FunctionInfo(set_from_file), 'set_from_gicon': gi.FunctionInfo(set_from_gicon), 'set_from_icon_name': gi.FunctionInfo(set_from_icon_name), 'set_from_icon_set': gi.FunctionInfo(set_from_icon_set), 'set_from_pixbuf': gi.FunctionInfo(set_from_pixbuf), 'set_from_resource': gi.FunctionInfo(set_from_resource), 'set_from_stock': gi.FunctionInfo(set_from_stock), 'set_from_surface': gi.FunctionInfo(set_from_surface), 'set_pixel_size': gi.FunctionInfo(set_pixel_size), 'misc': <property object at 0x000002bfd18da7a0>, 'priv': <property object at 0x000002bfd18da750>})"
+    __firstlineno__ = 104
     __gdoc__ = "Object GtkImage\n\nProperties from GtkImage:\n  pixbuf -> GdkPixbuf: Pixbuf\n    A GdkPixbuf to display\n  surface -> CairoSurface: Surface\n    A cairo_surface_t to display\n  file -> gchararray: Filename\n    Filename to load and display\n  stock -> gchararray: Stock ID\n    Stock ID for a stock image to display\n  icon-set -> GtkIconSet: Icon set\n    Icon set to display\n  icon-size -> gint: Icon size\n    Symbolic size to use for stock icon, icon set or named icon\n  pixel-size -> gint: Pixel size\n    Pixel size to use for named icon\n  pixbuf-animation -> GdkPixbufAnimation: Animation\n    GdkPixbufAnimation to display\n  icon-name -> gchararray: Icon Name\n    The name of the icon from the icon theme\n  storage-type -> GtkImageType: Storage type\n    The representation being used for image data\n  gicon -> GIcon: Icon\n    The GIcon being displayed\n  resource -> gchararray: Resource\n    The resource path being displayed\n  use-fallback -> gboolean: Use Fallback\n    Whether to use icon names fallback\n\nProperties from GtkMisc:\n  xalign -> gfloat: X align\n    The horizontal alignment, from 0 (left) to 1 (right). Reversed for RTL layouts.\n  yalign -> gfloat: Y align\n    The vertical alignment, from 0 (top) to 1 (bottom)\n  xpad -> gint: X pad\n    The amount of space to add on the left and right of the widget, in pixels\n  ypad -> gint: Y pad\n    The amount of space to add on the top and bottom of the widget, in pixels\n\nSignals from GtkWidget:\n  direction-changed (GtkTextDirection)\n  state-changed (GtkStateType)\n  composited-changed ()\n  destroy ()\n  show ()\n  hide ()\n  map ()\n  unmap ()\n  realize ()\n  unrealize ()\n  size-allocate (GdkRectangle)\n  state-flags-changed (GtkStateFlags)\n  parent-set (GtkWidget)\n  hierarchy-changed (GtkWidget)\n  style-set (GtkStyle)\n  style-updated ()\n  grab-notify (gboolean)\n  child-notify (GParam)\n  draw (CairoContext) -> gboolean\n  mnemonic-activate (gboolean) -> gboolean\n  grab-focus ()\n  focus (GtkDirectionType) -> gboolean\n  move-focus (GtkDirectionType)\n  keynav-failed (GtkDirectionType) -> gboolean\n  event (GdkEvent) -> gboolean\n  event-after (GdkEvent)\n  button-press-event (GdkEvent) -> gboolean\n  button-release-event (GdkEvent) -> gboolean\n  touch-event (GdkEvent) -> gboolean\n  scroll-event (GdkEvent) -> gboolean\n  motion-notify-event (GdkEvent) -> gboolean\n  delete-event (GdkEvent) -> gboolean\n  destroy-event (GdkEvent) -> gboolean\n  key-press-event (GdkEvent) -> gboolean\n  key-release-event (GdkEvent) -> gboolean\n  enter-notify-event (GdkEvent) -> gboolean\n  leave-notify-event (GdkEvent) -> gboolean\n  configure-event (GdkEvent) -> gboolean\n  focus-in-event (GdkEvent) -> gboolean\n  focus-out-event (GdkEvent) -> gboolean\n  map-event (GdkEvent) -> gboolean\n  unmap-event (GdkEvent) -> gboolean\n  property-notify-event (GdkEvent) -> gboolean\n  selection-clear-event (GdkEvent) -> gboolean\n  selection-request-event (GdkEvent) -> gboolean\n  selection-notify-event (GdkEvent) -> gboolean\n  selection-received (GtkSelectionData, guint)\n  selection-get (GtkSelectionData, guint, guint)\n  proximity-in-event (GdkEvent) -> gboolean\n  proximity-out-event (GdkEvent) -> gboolean\n  drag-leave (GdkDragContext, guint)\n  drag-begin (GdkDragContext)\n  drag-end (GdkDragContext)\n  drag-data-delete (GdkDragContext)\n  drag-failed (GdkDragContext, GtkDragResult) -> gboolean\n  drag-motion (GdkDragContext, gint, gint, guint) -> gboolean\n  drag-drop (GdkDragContext, gint, gint, guint) -> gboolean\n  drag-data-get (GdkDragContext, GtkSelectionData, guint, guint)\n  drag-data-received (GdkDragContext, gint, gint, GtkSelectionData, guint, guint)\n  visibility-notify-event (GdkEvent) -> gboolean\n  window-state-event (GdkEvent) -> gboolean\n  damage-event (GdkEvent) -> gboolean\n  grab-broken-event (GdkEvent) -> gboolean\n  query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean\n  popup-menu () -> gboolean\n  show-help (GtkWidgetHelpType) -> gboolean\n  accel-closures-changed ()\n  screen-changed (GdkScreen)\n  can-activate-accel (guint) -> gboolean\n\nProperties from GtkWidget:\n  name -> gchararray: Widget name\n    The name of the widget\n  parent -> GtkContainer: Parent widget\n    The parent widget of this widget. Must be a Container widget\n  width-request -> gint: Width request\n    Override for width request of the widget, or -1 if natural request should be used\n  height-request -> gint: Height request\n    Override for height request of the widget, or -1 if natural request should be used\n  visible -> gboolean: Visible\n    Whether the widget is visible\n  sensitive -> gboolean: Sensitive\n    Whether the widget responds to input\n  app-paintable -> gboolean: Application paintable\n    Whether the application will paint directly on the widget\n  can-focus -> gboolean: Can focus\n    Whether the widget can accept the input focus\n  has-focus -> gboolean: Has focus\n    Whether the widget has the input focus\n  is-focus -> gboolean: Is focus\n    Whether the widget is the focus widget within the toplevel\n  focus-on-click -> gboolean: Focus on click\n    Whether the widget should grab focus when it is clicked with the mouse\n  can-default -> gboolean: Can default\n    Whether the widget can be the default widget\n  has-default -> gboolean: Has default\n    Whether the widget is the default widget\n  receives-default -> gboolean: Receives default\n    If TRUE, the widget will receive the default action when it is focused\n  composite-child -> gboolean: Composite child\n    Whether the widget is part of a composite widget\n  style -> GtkStyle: Style\n    The style of the widget, which contains information about how it will look (colors etc)\n  events -> GdkEventMask: Events\n    The event mask that decides what kind of GdkEvents this widget gets\n  no-show-all -> gboolean: No show all\n    Whether gtk_widget_show_all() should not affect this widget\n  has-tooltip -> gboolean: Has tooltip\n    Whether this widget has a tooltip\n  tooltip-markup -> gchararray: Tooltip markup\n    The contents of the tooltip for this widget\n  tooltip-text -> gchararray: Tooltip Text\n    The contents of the tooltip for this widget\n  window -> GdkWindow: Window\n    The widget's window if it is realized\n  opacity -> gdouble: Opacity for Widget\n    The opacity of the widget, from 0 to 1\n  double-buffered -> gboolean: Double Buffered\n    Whether the widget is double buffered\n  halign -> GtkAlign: Horizontal Alignment\n    How to position in extra horizontal space\n  valign -> GtkAlign: Vertical Alignment\n    How to position in extra vertical space\n  margin-left -> gint: Margin on Left\n    Pixels of extra space on the left side\n  margin-right -> gint: Margin on Right\n    Pixels of extra space on the right side\n  margin-start -> gint: Margin on Start\n    Pixels of extra space on the start\n  margin-end -> gint: Margin on End\n    Pixels of extra space on the end\n  margin-top -> gint: Margin on Top\n    Pixels of extra space on the top side\n  margin-bottom -> gint: Margin on Bottom\n    Pixels of extra space on the bottom side\n  margin -> gint: All Margins\n    Pixels of extra space on all four sides\n  hexpand -> gboolean: Horizontal Expand\n    Whether widget wants more horizontal space\n  vexpand -> gboolean: Vertical Expand\n    Whether widget wants more vertical space\n  hexpand-set -> gboolean: Horizontal Expand Set\n    Whether to use the hexpand property\n  vexpand-set -> gboolean: Vertical Expand Set\n    Whether to use the vexpand property\n  expand -> gboolean: Expand Both\n    Whether widget wants to expand in both directions\n  scale-factor -> gint: Scale factor\n    The scaling factor of the window\n\nSignals from GObject:\n  notify (GParam)\n\n"
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkImage (3871457920)>'
+    __gtype__ = None # (!) real value is '<GType GtkImage (3427463360)>'
     __info__ = ObjectInfo(Image)
+    __static_attributes__ = ()
 
 

@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ColorDisplay(__gi_overrides_GObject.Object, __gi_repository_Gimp.ConfigInterface):
@@ -82,20 +75,20 @@ class ColorDisplay(__gi_overrides_GObject.Object, __gi_repository_Gimp.ConfigInt
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -132,8 +125,14 @@ class ColorDisplay(__gi_overrides_GObject.Object, __gi_repository_Gimp.ConfigInt
         """ configure(self) -> Gtk.Widget """
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_convert_buffer(self, *args, **kwargs): # real signature unknown
         """ convert_buffer(self, buffer:Gegl.Buffer, area:Gegl.Rectangle) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -159,17 +158,17 @@ class ColorDisplay(__gi_overrides_GObject.Object, __gi_repository_Gimp.ConfigInt
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -206,20 +205,20 @@ class ColorDisplay(__gi_overrides_GObject.Object, __gi_repository_Gimp.ConfigInt
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -386,20 +385,20 @@ class ColorDisplay(__gi_overrides_GObject.Object, __gi_repository_Gimp.ConfigInt
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -536,12 +535,14 @@ class ColorDisplay(__gi_overrides_GObject.Object, __gi_repository_Gimp.ConfigInt
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001eeb70a4ac0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x0000020ee0175030>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ColorDisplay), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType GimpColorDisplay (3033930144)>, '__doc__': None, '__gsignals__': {}, 'changed': gi.FunctionInfo(changed, bound=None), 'clone': gi.FunctionInfo(clone, bound=None), 'configure': gi.FunctionInfo(configure, bound=None), 'configure_reset': gi.FunctionInfo(configure_reset, bound=None), 'convert_buffer': gi.FunctionInfo(convert_buffer, bound=None), 'get_config': gi.FunctionInfo(get_config, bound=None), 'get_enabled': gi.FunctionInfo(get_enabled, bound=None), 'get_managed': gi.FunctionInfo(get_managed, bound=None), 'load_state': gi.FunctionInfo(load_state, bound=None), 'save_state': gi.FunctionInfo(save_state, bound=None), 'set_enabled': gi.FunctionInfo(set_enabled, bound=None), 'do_changed': gi.VFuncInfo(changed, bound=None), 'do_configure': gi.VFuncInfo(configure, bound=None), 'do_convert_buffer': gi.VFuncInfo(convert_buffer, bound=None), 'parent_instance': <property object at 0x000001eeb753d710>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ColorDisplay), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType GimpColorDisplay (3708113280)>, '__doc__': None, '__gsignals__': {}, 'changed': gi.FunctionInfo(changed), 'clone': gi.FunctionInfo(clone), 'configure': gi.FunctionInfo(configure), 'configure_reset': gi.FunctionInfo(configure_reset), 'convert_buffer': gi.FunctionInfo(convert_buffer), 'get_config': gi.FunctionInfo(get_config), 'get_enabled': gi.FunctionInfo(get_enabled), 'get_managed': gi.FunctionInfo(get_managed), 'load_state': gi.FunctionInfo(load_state), 'save_state': gi.FunctionInfo(save_state), 'set_enabled': gi.FunctionInfo(set_enabled), 'do_changed': gi.VFuncInfo(changed), 'do_configure': gi.VFuncInfo(configure), 'do_convert_buffer': gi.VFuncInfo(convert_buffer), 'parent_instance': <property object at 0x0000020ee1d30900>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GimpColorDisplay\n\nSignals from GimpColorDisplay:\n  changed ()\n\nProperties from GimpColorDisplay:\n  enabled -> gboolean: Enabled\n    Whether this display filter is enabled\n  color-config -> GimpColorConfig: Color Config\n    The color config used for this filter\n  color-managed -> GimpColorManaged: Color Managed\n    The color managed pixel source that is filtered\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpColorDisplay (3033930144)>'
+    __gtype__ = None # (!) real value is '<GType GimpColorDisplay (3708113280)>'
     __info__ = ObjectInfo(ColorDisplay)
+    __static_attributes__ = ()
 
 

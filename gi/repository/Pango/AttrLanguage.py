@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class AttrLanguage(__gi.Struct):
@@ -139,7 +137,7 @@ class AttrLanguage(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrLanguage), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AttrLanguage' objects>, '__weakref__': <attribute '__weakref__' of 'AttrLanguage' objects>, '__doc__': None, 'attr': <property object at 0x00000213f608c3b0>, 'value': <property object at 0x00000213f608c4a0>, 'new': gi.FunctionInfo(new, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(AttrLanguage), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'AttrLanguage' objects>, '__weakref__': <attribute '__weakref__' of 'AttrLanguage' objects>, '__doc__': None, 'attr': <property object at 0x000002803560aca0>, 'value': <property object at 0x000002803560ad90>, 'new': <staticmethod(gi.FunctionInfo(new))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(AttrLanguage)
 

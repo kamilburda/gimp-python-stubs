@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class DriveIface(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -194,7 +203,7 @@ class DriveIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DriveIface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DriveIface' objects>, '__weakref__': <attribute '__weakref__' of 'DriveIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001a793e2a750>, 'changed': <property object at 0x000001a793e2a840>, 'disconnected': <property object at 0x000001a793e2a930>, 'eject_button': <property object at 0x000001a793e2aa20>, 'get_name': <property object at 0x000001a793e2ab10>, 'get_icon': <property object at 0x000001a793e2ac00>, 'has_volumes': <property object at 0x000001a793e2acf0>, 'get_volumes': <property object at 0x000001a793e2ade0>, 'is_media_removable': <property object at 0x000001a793e2af20>, 'has_media': <property object at 0x000001a793e2afc0>, 'is_media_check_automatic': <property object at 0x000001a793e2b100>, 'can_eject': <property object at 0x000001a793e2b1a0>, 'can_poll_for_media': <property object at 0x000001a793e2b2e0>, 'eject': <property object at 0x000001a793e2b380>, 'eject_finish': <property object at 0x000001a793e2b470>, 'poll_for_media': <property object at 0x000001a793e2b560>, 'poll_for_media_finish': <property object at 0x000001a793e2b6a0>, 'get_identifier': <property object at 0x000001a793e2b740>, 'enumerate_identifiers': <property object at 0x000001a793e2b880>, 'get_start_stop_type': <property object at 0x000001a793e2b970>, 'can_start': <property object at 0x000001a793e2ba10>, 'can_start_degraded': <property object at 0x000001a793e2bb50>, 'start': <property object at 0x000001a793e2bbf0>, 'start_finish': <property object at 0x000001a793e2bce0>, 'can_stop': <property object at 0x000001a793e2bdd0>, 'stop': <property object at 0x000001a793e2bec0>, 'stop_finish': <property object at 0x000001a793e2bfb0>, 'stop_button': <property object at 0x000001a793e200e0>, 'eject_with_operation': <property object at 0x000001a793e20220>, 'eject_with_operation_finish': <property object at 0x000001a793e20310>, 'get_sort_key': <property object at 0x000001a793e203b0>, 'get_symbolic_icon': <property object at 0x000001a793e204f0>, 'is_removable': <property object at 0x000001a793e20590>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DriveIface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DriveIface' objects>, '__weakref__': <attribute '__weakref__' of 'DriveIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001ea7095d4e0>, 'changed': <property object at 0x000001ea7095d5d0>, 'disconnected': <property object at 0x000001ea7095d6c0>, 'eject_button': <property object at 0x000001ea7095d7b0>, 'get_name': <property object at 0x000001ea7095d8a0>, 'get_icon': <property object at 0x000001ea7095d990>, 'has_volumes': <property object at 0x000001ea7095da80>, 'get_volumes': <property object at 0x000001ea7095db70>, 'is_media_removable': <property object at 0x000001ea7095dc60>, 'has_media': <property object at 0x000001ea7095dd50>, 'is_media_check_automatic': <property object at 0x000001ea7095de90>, 'can_eject': <property object at 0x000001ea7095df30>, 'can_poll_for_media': <property object at 0x000001ea7095e020>, 'eject': <property object at 0x000001ea7095e110>, 'eject_finish': <property object at 0x000001ea7095e200>, 'poll_for_media': <property object at 0x000001ea7095e2f0>, 'poll_for_media_finish': <property object at 0x000001ea7095e3e0>, 'get_identifier': <property object at 0x000001ea7095e4d0>, 'enumerate_identifiers': <property object at 0x000001ea7095e5c0>, 'get_start_stop_type': <property object at 0x000001ea7095e6b0>, 'can_start': <property object at 0x000001ea7095e7a0>, 'can_start_degraded': <property object at 0x000001ea7095e890>, 'start': <property object at 0x000001ea7095e980>, 'start_finish': <property object at 0x000001ea7095ea70>, 'can_stop': <property object at 0x000001ea7095eb60>, 'stop': <property object at 0x000001ea7095ec50>, 'stop_finish': <property object at 0x000001ea7095ed40>, 'stop_button': <property object at 0x000001ea7095ee30>, 'eject_with_operation': <property object at 0x000001ea7095ef20>, 'eject_with_operation_finish': <property object at 0x000001ea7095f060>, 'get_sort_key': <property object at 0x000001ea7095f100>, 'get_symbolic_icon': <property object at 0x000001ea7095f1f0>, 'is_removable': <property object at 0x000001ea7095f2e0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(DriveIface)
 

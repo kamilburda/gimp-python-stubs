@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -48,7 +53,7 @@ class FileInfo(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -80,6 +85,9 @@ class FileInfo(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def dup(self): # real signature unknown; restored from __doc__
@@ -347,7 +355,8 @@ class FileInfo(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gio.FileInfo """
         pass
 
@@ -552,20 +561,20 @@ class FileInfo(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -595,7 +604,11 @@ class FileInfo(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -693,12 +706,12 @@ class FileInfo(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a793751ab0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea70857fd0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(FileInfo), '__module__': 'gi.repository.Gio', '__gtype__': <GType GFileInfo (2466388720)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'clear_status': gi.FunctionInfo(clear_status, bound=None), 'copy_into': gi.FunctionInfo(copy_into, bound=None), 'dup': gi.FunctionInfo(dup, bound=None), 'get_access_date_time': gi.FunctionInfo(get_access_date_time, bound=None), 'get_attribute_as_string': gi.FunctionInfo(get_attribute_as_string, bound=None), 'get_attribute_boolean': gi.FunctionInfo(get_attribute_boolean, bound=None), 'get_attribute_byte_string': gi.FunctionInfo(get_attribute_byte_string, bound=None), 'get_attribute_data': gi.FunctionInfo(get_attribute_data, bound=None), 'get_attribute_file_path': gi.FunctionInfo(get_attribute_file_path, bound=None), 'get_attribute_int32': gi.FunctionInfo(get_attribute_int32, bound=None), 'get_attribute_int64': gi.FunctionInfo(get_attribute_int64, bound=None), 'get_attribute_object': gi.FunctionInfo(get_attribute_object, bound=None), 'get_attribute_status': gi.FunctionInfo(get_attribute_status, bound=None), 'get_attribute_string': gi.FunctionInfo(get_attribute_string, bound=None), 'get_attribute_stringv': gi.FunctionInfo(get_attribute_stringv, bound=None), 'get_attribute_type': gi.FunctionInfo(get_attribute_type, bound=None), 'get_attribute_uint32': gi.FunctionInfo(get_attribute_uint32, bound=None), 'get_attribute_uint64': gi.FunctionInfo(get_attribute_uint64, bound=None), 'get_content_type': gi.FunctionInfo(get_content_type, bound=None), 'get_creation_date_time': gi.FunctionInfo(get_creation_date_time, bound=None), 'get_deletion_date': gi.FunctionInfo(get_deletion_date, bound=None), 'get_display_name': gi.FunctionInfo(get_display_name, bound=None), 'get_edit_name': gi.FunctionInfo(get_edit_name, bound=None), 'get_etag': gi.FunctionInfo(get_etag, bound=None), 'get_file_type': gi.FunctionInfo(get_file_type, bound=None), 'get_icon': gi.FunctionInfo(get_icon, bound=None), 'get_is_backup': gi.FunctionInfo(get_is_backup, bound=None), 'get_is_hidden': gi.FunctionInfo(get_is_hidden, bound=None), 'get_is_symlink': gi.FunctionInfo(get_is_symlink, bound=None), 'get_modification_date_time': gi.FunctionInfo(get_modification_date_time, bound=None), 'get_modification_time': gi.FunctionInfo(get_modification_time, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_size': gi.FunctionInfo(get_size, bound=None), 'get_sort_order': gi.FunctionInfo(get_sort_order, bound=None), 'get_symbolic_icon': gi.FunctionInfo(get_symbolic_icon, bound=None), 'get_symlink_target': gi.FunctionInfo(get_symlink_target, bound=None), 'has_attribute': gi.FunctionInfo(has_attribute, bound=None), 'has_namespace': gi.FunctionInfo(has_namespace, bound=None), 'list_attributes': gi.FunctionInfo(list_attributes, bound=None), 'remove_attribute': gi.FunctionInfo(remove_attribute, bound=None), 'set_access_date_time': gi.FunctionInfo(set_access_date_time, bound=None), 'set_attribute': gi.FunctionInfo(set_attribute, bound=None), 'set_attribute_boolean': gi.FunctionInfo(set_attribute_boolean, bound=None), 'set_attribute_byte_string': gi.FunctionInfo(set_attribute_byte_string, bound=None), 'set_attribute_file_path': gi.FunctionInfo(set_attribute_file_path, bound=None), 'set_attribute_int32': gi.FunctionInfo(set_attribute_int32, bound=None), 'set_attribute_int64': gi.FunctionInfo(set_attribute_int64, bound=None), 'set_attribute_mask': gi.FunctionInfo(set_attribute_mask, bound=None), 'set_attribute_object': gi.FunctionInfo(set_attribute_object, bound=None), 'set_attribute_status': gi.FunctionInfo(set_attribute_status, bound=None), 'set_attribute_string': gi.FunctionInfo(set_attribute_string, bound=None), 'set_attribute_stringv': gi.FunctionInfo(set_attribute_stringv, bound=None), 'set_attribute_uint32': gi.FunctionInfo(set_attribute_uint32, bound=None), 'set_attribute_uint64': gi.FunctionInfo(set_attribute_uint64, bound=None), 'set_content_type': gi.FunctionInfo(set_content_type, bound=None), 'set_creation_date_time': gi.FunctionInfo(set_creation_date_time, bound=None), 'set_display_name': gi.FunctionInfo(set_display_name, bound=None), 'set_edit_name': gi.FunctionInfo(set_edit_name, bound=None), 'set_file_type': gi.FunctionInfo(set_file_type, bound=None), 'set_icon': gi.FunctionInfo(set_icon, bound=None), 'set_is_hidden': gi.FunctionInfo(set_is_hidden, bound=None), 'set_is_symlink': gi.FunctionInfo(set_is_symlink, bound=None), 'set_modification_date_time': gi.FunctionInfo(set_modification_date_time, bound=None), 'set_modification_time': gi.FunctionInfo(set_modification_time, bound=None), 'set_name': gi.FunctionInfo(set_name, bound=None), 'set_size': gi.FunctionInfo(set_size, bound=None), 'set_sort_order': gi.FunctionInfo(set_sort_order, bound=None), 'set_symbolic_icon': gi.FunctionInfo(set_symbolic_icon, bound=None), 'set_symlink_target': gi.FunctionInfo(set_symlink_target, bound=None), 'unset_attribute_mask': gi.FunctionInfo(unset_attribute_mask, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(FileInfo), '__module__': 'gi.repository.Gio', '__gtype__': <GType GFileInfo (1848620816)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'clear_status': gi.FunctionInfo(clear_status), 'copy_into': gi.FunctionInfo(copy_into), 'dup': gi.FunctionInfo(dup), 'get_access_date_time': gi.FunctionInfo(get_access_date_time), 'get_attribute_as_string': gi.FunctionInfo(get_attribute_as_string), 'get_attribute_boolean': gi.FunctionInfo(get_attribute_boolean), 'get_attribute_byte_string': gi.FunctionInfo(get_attribute_byte_string), 'get_attribute_data': gi.FunctionInfo(get_attribute_data), 'get_attribute_file_path': gi.FunctionInfo(get_attribute_file_path), 'get_attribute_int32': gi.FunctionInfo(get_attribute_int32), 'get_attribute_int64': gi.FunctionInfo(get_attribute_int64), 'get_attribute_object': gi.FunctionInfo(get_attribute_object), 'get_attribute_status': gi.FunctionInfo(get_attribute_status), 'get_attribute_string': gi.FunctionInfo(get_attribute_string), 'get_attribute_stringv': gi.FunctionInfo(get_attribute_stringv), 'get_attribute_type': gi.FunctionInfo(get_attribute_type), 'get_attribute_uint32': gi.FunctionInfo(get_attribute_uint32), 'get_attribute_uint64': gi.FunctionInfo(get_attribute_uint64), 'get_content_type': gi.FunctionInfo(get_content_type), 'get_creation_date_time': gi.FunctionInfo(get_creation_date_time), 'get_deletion_date': gi.FunctionInfo(get_deletion_date), 'get_display_name': gi.FunctionInfo(get_display_name), 'get_edit_name': gi.FunctionInfo(get_edit_name), 'get_etag': gi.FunctionInfo(get_etag), 'get_file_type': gi.FunctionInfo(get_file_type), 'get_icon': gi.FunctionInfo(get_icon), 'get_is_backup': gi.FunctionInfo(get_is_backup), 'get_is_hidden': gi.FunctionInfo(get_is_hidden), 'get_is_symlink': gi.FunctionInfo(get_is_symlink), 'get_modification_date_time': gi.FunctionInfo(get_modification_date_time), 'get_modification_time': gi.FunctionInfo(get_modification_time), 'get_name': gi.FunctionInfo(get_name), 'get_size': gi.FunctionInfo(get_size), 'get_sort_order': gi.FunctionInfo(get_sort_order), 'get_symbolic_icon': gi.FunctionInfo(get_symbolic_icon), 'get_symlink_target': gi.FunctionInfo(get_symlink_target), 'has_attribute': gi.FunctionInfo(has_attribute), 'has_namespace': gi.FunctionInfo(has_namespace), 'list_attributes': gi.FunctionInfo(list_attributes), 'remove_attribute': gi.FunctionInfo(remove_attribute), 'set_access_date_time': gi.FunctionInfo(set_access_date_time), 'set_attribute': gi.FunctionInfo(set_attribute), 'set_attribute_boolean': gi.FunctionInfo(set_attribute_boolean), 'set_attribute_byte_string': gi.FunctionInfo(set_attribute_byte_string), 'set_attribute_file_path': gi.FunctionInfo(set_attribute_file_path), 'set_attribute_int32': gi.FunctionInfo(set_attribute_int32), 'set_attribute_int64': gi.FunctionInfo(set_attribute_int64), 'set_attribute_mask': gi.FunctionInfo(set_attribute_mask), 'set_attribute_object': gi.FunctionInfo(set_attribute_object), 'set_attribute_status': gi.FunctionInfo(set_attribute_status), 'set_attribute_string': gi.FunctionInfo(set_attribute_string), 'set_attribute_stringv': gi.FunctionInfo(set_attribute_stringv), 'set_attribute_uint32': gi.FunctionInfo(set_attribute_uint32), 'set_attribute_uint64': gi.FunctionInfo(set_attribute_uint64), 'set_content_type': gi.FunctionInfo(set_content_type), 'set_creation_date_time': gi.FunctionInfo(set_creation_date_time), 'set_display_name': gi.FunctionInfo(set_display_name), 'set_edit_name': gi.FunctionInfo(set_edit_name), 'set_file_type': gi.FunctionInfo(set_file_type), 'set_icon': gi.FunctionInfo(set_icon), 'set_is_hidden': gi.FunctionInfo(set_is_hidden), 'set_is_symlink': gi.FunctionInfo(set_is_symlink), 'set_modification_date_time': gi.FunctionInfo(set_modification_date_time), 'set_modification_time': gi.FunctionInfo(set_modification_time), 'set_name': gi.FunctionInfo(set_name), 'set_size': gi.FunctionInfo(set_size), 'set_sort_order': gi.FunctionInfo(set_sort_order), 'set_symbolic_icon': gi.FunctionInfo(set_symbolic_icon), 'set_symlink_target': gi.FunctionInfo(set_symlink_target), 'unset_attribute_mask': gi.FunctionInfo(unset_attribute_mask)})"
     __gdoc__ = 'Object GFileInfo\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GFileInfo (2466388720)>'
+    __gtype__ = None # (!) real value is '<GType GFileInfo (1848620816)>'
     __info__ = ObjectInfo(FileInfo)
 
 

@@ -1,22 +1,20 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
-class UnicodeType(__gobject.GEnum):
+class UnicodeType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -75,7 +73,7 @@ class UnicodeType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -98,7 +96,7 @@ class UnicodeType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -126,12 +124,23 @@ class UnicodeType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -160,6 +169,10 @@ class UnicodeType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -205,6 +218,14 @@ class UnicodeType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -230,8 +251,8 @@ class UnicodeType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -262,15 +283,16 @@ class UnicodeType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -334,7 +356,7 @@ class UnicodeType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -376,10 +398,6 @@ class UnicodeType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CLOSE_PUNCTUATION = 18
     CONNECT_PUNCTUATION = 16
@@ -411,41 +429,9 @@ class UnicodeType(__gobject.GEnum):
     TITLECASE_LETTER = 8
     UNASSIGNED = 2
     UPPERCASE_LETTER = 9
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__dict__': <attribute '__dict__' of 'UnicodeType' objects>, '__doc__': None, '__gtype__': <GType GUnicodeType (163509472)>, '__enum_values__': {0: <enum G_UNICODE_CONTROL of type GLib.UnicodeType>, 1: <enum G_UNICODE_FORMAT of type GLib.UnicodeType>, 2: <enum G_UNICODE_UNASSIGNED of type GLib.UnicodeType>, 3: <enum G_UNICODE_PRIVATE_USE of type GLib.UnicodeType>, 4: <enum G_UNICODE_SURROGATE of type GLib.UnicodeType>, 5: <enum G_UNICODE_LOWERCASE_LETTER of type GLib.UnicodeType>, 6: <enum G_UNICODE_MODIFIER_LETTER of type GLib.UnicodeType>, 7: <enum G_UNICODE_OTHER_LETTER of type GLib.UnicodeType>, 8: <enum G_UNICODE_TITLECASE_LETTER of type GLib.UnicodeType>, 9: <enum G_UNICODE_UPPERCASE_LETTER of type GLib.UnicodeType>, 10: <enum G_UNICODE_SPACING_MARK of type GLib.UnicodeType>, 11: <enum G_UNICODE_ENCLOSING_MARK of type GLib.UnicodeType>, 12: <enum G_UNICODE_NON_SPACING_MARK of type GLib.UnicodeType>, 13: <enum G_UNICODE_DECIMAL_NUMBER of type GLib.UnicodeType>, 14: <enum G_UNICODE_LETTER_NUMBER of type GLib.UnicodeType>, 15: <enum G_UNICODE_OTHER_NUMBER of type GLib.UnicodeType>, 16: <enum G_UNICODE_CONNECT_PUNCTUATION of type GLib.UnicodeType>, 17: <enum G_UNICODE_DASH_PUNCTUATION of type GLib.UnicodeType>, 18: <enum G_UNICODE_CLOSE_PUNCTUATION of type GLib.UnicodeType>, 19: <enum G_UNICODE_FINAL_PUNCTUATION of type GLib.UnicodeType>, 20: <enum G_UNICODE_INITIAL_PUNCTUATION of type GLib.UnicodeType>, 21: <enum G_UNICODE_OTHER_PUNCTUATION of type GLib.UnicodeType>, 22: <enum G_UNICODE_OPEN_PUNCTUATION of type GLib.UnicodeType>, 23: <enum G_UNICODE_CURRENCY_SYMBOL of type GLib.UnicodeType>, 24: <enum G_UNICODE_MODIFIER_SYMBOL of type GLib.UnicodeType>, 25: <enum G_UNICODE_MATH_SYMBOL of type GLib.UnicodeType>, 26: <enum G_UNICODE_OTHER_SYMBOL of type GLib.UnicodeType>, 27: <enum G_UNICODE_LINE_SEPARATOR of type GLib.UnicodeType>, 28: <enum G_UNICODE_PARAGRAPH_SEPARATOR of type GLib.UnicodeType>, 29: <enum G_UNICODE_SPACE_SEPARATOR of type GLib.UnicodeType>}, '__info__': gi.EnumInfo(UnicodeType), 'CONTROL': <enum G_UNICODE_CONTROL of type GLib.UnicodeType>, 'FORMAT': <enum G_UNICODE_FORMAT of type GLib.UnicodeType>, 'UNASSIGNED': <enum G_UNICODE_UNASSIGNED of type GLib.UnicodeType>, 'PRIVATE_USE': <enum G_UNICODE_PRIVATE_USE of type GLib.UnicodeType>, 'SURROGATE': <enum G_UNICODE_SURROGATE of type GLib.UnicodeType>, 'LOWERCASE_LETTER': <enum G_UNICODE_LOWERCASE_LETTER of type GLib.UnicodeType>, 'MODIFIER_LETTER': <enum G_UNICODE_MODIFIER_LETTER of type GLib.UnicodeType>, 'OTHER_LETTER': <enum G_UNICODE_OTHER_LETTER of type GLib.UnicodeType>, 'TITLECASE_LETTER': <enum G_UNICODE_TITLECASE_LETTER of type GLib.UnicodeType>, 'UPPERCASE_LETTER': <enum G_UNICODE_UPPERCASE_LETTER of type GLib.UnicodeType>, 'SPACING_MARK': <enum G_UNICODE_SPACING_MARK of type GLib.UnicodeType>, 'ENCLOSING_MARK': <enum G_UNICODE_ENCLOSING_MARK of type GLib.UnicodeType>, 'NON_SPACING_MARK': <enum G_UNICODE_NON_SPACING_MARK of type GLib.UnicodeType>, 'DECIMAL_NUMBER': <enum G_UNICODE_DECIMAL_NUMBER of type GLib.UnicodeType>, 'LETTER_NUMBER': <enum G_UNICODE_LETTER_NUMBER of type GLib.UnicodeType>, 'OTHER_NUMBER': <enum G_UNICODE_OTHER_NUMBER of type GLib.UnicodeType>, 'CONNECT_PUNCTUATION': <enum G_UNICODE_CONNECT_PUNCTUATION of type GLib.UnicodeType>, 'DASH_PUNCTUATION': <enum G_UNICODE_DASH_PUNCTUATION of type GLib.UnicodeType>, 'CLOSE_PUNCTUATION': <enum G_UNICODE_CLOSE_PUNCTUATION of type GLib.UnicodeType>, 'FINAL_PUNCTUATION': <enum G_UNICODE_FINAL_PUNCTUATION of type GLib.UnicodeType>, 'INITIAL_PUNCTUATION': <enum G_UNICODE_INITIAL_PUNCTUATION of type GLib.UnicodeType>, 'OTHER_PUNCTUATION': <enum G_UNICODE_OTHER_PUNCTUATION of type GLib.UnicodeType>, 'OPEN_PUNCTUATION': <enum G_UNICODE_OPEN_PUNCTUATION of type GLib.UnicodeType>, 'CURRENCY_SYMBOL': <enum G_UNICODE_CURRENCY_SYMBOL of type GLib.UnicodeType>, 'MODIFIER_SYMBOL': <enum G_UNICODE_MODIFIER_SYMBOL of type GLib.UnicodeType>, 'MATH_SYMBOL': <enum G_UNICODE_MATH_SYMBOL of type GLib.UnicodeType>, 'OTHER_SYMBOL': <enum G_UNICODE_OTHER_SYMBOL of type GLib.UnicodeType>, 'LINE_SEPARATOR': <enum G_UNICODE_LINE_SEPARATOR of type GLib.UnicodeType>, 'PARAGRAPH_SEPARATOR': <enum G_UNICODE_PARAGRAPH_SEPARATOR of type GLib.UnicodeType>, 'SPACE_SEPARATOR': <enum G_UNICODE_SPACE_SEPARATOR of type GLib.UnicodeType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-        7: 7,
-        8: 8,
-        9: 9,
-        10: 10,
-        11: 11,
-        12: 12,
-        13: 13,
-        14: 14,
-        15: 15,
-        16: 16,
-        17: 17,
-        18: 18,
-        19: 19,
-        20: 20,
-        21: 21,
-        22: 22,
-        23: 23,
-        24: 24,
-        25: 25,
-        26: 26,
-        27: 27,
-        28: 28,
-        29: 29,
-    }
-    __gtype__ = None # (!) real value is '<GType GUnicodeType (163509472)>'
-    __info__ = gi.EnumInfo(UnicodeType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'CONTROL': <UnicodeType.CONTROL: 0>, 'FORMAT': <UnicodeType.FORMAT: 1>, 'UNASSIGNED': <UnicodeType.UNASSIGNED: 2>, 'PRIVATE_USE': <UnicodeType.PRIVATE_USE: 3>, 'SURROGATE': <UnicodeType.SURROGATE: 4>, 'LOWERCASE_LETTER': <UnicodeType.LOWERCASE_LETTER: 5>, 'MODIFIER_LETTER': <UnicodeType.MODIFIER_LETTER: 6>, 'OTHER_LETTER': <UnicodeType.OTHER_LETTER: 7>, 'TITLECASE_LETTER': <UnicodeType.TITLECASE_LETTER: 8>, 'UPPERCASE_LETTER': <UnicodeType.UPPERCASE_LETTER: 9>, 'SPACING_MARK': <UnicodeType.SPACING_MARK: 10>, 'ENCLOSING_MARK': <UnicodeType.ENCLOSING_MARK: 11>, 'NON_SPACING_MARK': <UnicodeType.NON_SPACING_MARK: 12>, 'DECIMAL_NUMBER': <UnicodeType.DECIMAL_NUMBER: 13>, 'LETTER_NUMBER': <UnicodeType.LETTER_NUMBER: 14>, 'OTHER_NUMBER': <UnicodeType.OTHER_NUMBER: 15>, 'CONNECT_PUNCTUATION': <UnicodeType.CONNECT_PUNCTUATION: 16>, 'DASH_PUNCTUATION': <UnicodeType.DASH_PUNCTUATION: 17>, 'CLOSE_PUNCTUATION': <UnicodeType.CLOSE_PUNCTUATION: 18>, 'FINAL_PUNCTUATION': <UnicodeType.FINAL_PUNCTUATION: 19>, 'INITIAL_PUNCTUATION': <UnicodeType.INITIAL_PUNCTUATION: 20>, 'OTHER_PUNCTUATION': <UnicodeType.OTHER_PUNCTUATION: 21>, 'OPEN_PUNCTUATION': <UnicodeType.OPEN_PUNCTUATION: 22>, 'CURRENCY_SYMBOL': <UnicodeType.CURRENCY_SYMBOL: 23>, 'MODIFIER_SYMBOL': <UnicodeType.MODIFIER_SYMBOL: 24>, 'MATH_SYMBOL': <UnicodeType.MATH_SYMBOL: 25>, 'OTHER_SYMBOL': <UnicodeType.OTHER_SYMBOL: 26>, 'LINE_SEPARATOR': <UnicodeType.LINE_SEPARATOR: 27>, 'PARAGRAPH_SEPARATOR': <UnicodeType.PARAGRAPH_SEPARATOR: 28>, 'SPACE_SEPARATOR': <UnicodeType.SPACE_SEPARATOR: 29>})"
+    __name__ = 'UnicodeType'
+    __qualname__ = 'UnicodeType'
 
 

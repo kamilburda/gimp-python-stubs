@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -112,7 +111,7 @@ class IOChannel(__gi_repository_GLib.IOChannel):
         pass
 
     def read(self, max_count=-1): # reliably restored by inspect
-        # no doc
+        """ Reads data from a :obj:`~gi.repository.GLib.IOChannel`. """
         pass
 
     def readline(self, size_hint=-1): # reliably restored by inspect
@@ -123,8 +122,8 @@ class IOChannel(__gi_repository_GLib.IOChannel):
         # no doc
         pass
 
-    def read_chars(self): # real signature unknown; restored from __doc__
-        """ read_chars(self) -> GLib.IOStatus, buf:list, bytes_read:int """
+    def read_chars(self, max_count=-1): # reliably restored by inspect
+        """ Alias for GLib.IOChannel.read(). """
         pass
 
     def read_line(self): # real signature unknown; restored from __doc__
@@ -259,7 +258,11 @@ class IOChannel(__gi_repository_GLib.IOChannel):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -405,8 +408,8 @@ class IOChannel(__gi_repository_GLib.IOChannel):
         2: 2,
     }
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__new__': <staticmethod(<function IOChannel.__new__ at 0x0000010b078e6c00>)>, '__init__': <function IOChannel.__init__ at 0x0000010b078e6ca0>, 'read': <function IOChannel.read at 0x0000010b078e6d40>, 'readline': <function IOChannel.readline at 0x0000010b078e6de0>, 'readlines': <function IOChannel.readlines at 0x0000010b078e6e80>, 'write': <function IOChannel.write at 0x0000010b078e6f20>, 'writelines': <function IOChannel.writelines at 0x0000010b078e6fc0>, '_whence_map': {0: <enum G_SEEK_SET of type GLib.SeekType>, 1: <enum G_SEEK_CUR of type GLib.SeekType>, 2: <enum G_SEEK_END of type GLib.SeekType>}, 'seek': <function IOChannel.seek at 0x0000010b078e71a0>, 'add_watch': <function IOChannel.add_watch at 0x0000010b078e72e0>, '__iter__': <function IOChannel.__iter__ at 0x0000010b078e7380>, '__next__': <function IOChannel.__next__ at 0x0000010b078e7420>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType GIOChannel (83283856)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__new__': <staticmethod(<function IOChannel.__new__ at 0x000001dd11de4fe0>)>, '__init__': <function IOChannel.__init__ at 0x000001dd11de7100>, 'read': <function IOChannel.read at 0x000001dd11de71a0>, 'read_chars': <function IOChannel.read_chars at 0x000001dd11de7240>, 'readline': <function IOChannel.readline at 0x000001dd11de72e0>, 'readlines': <function IOChannel.readlines at 0x000001dd11de7380>, 'write': <function IOChannel.write at 0x000001dd11de7420>, 'writelines': <function IOChannel.writelines at 0x000001dd11de74c0>, '_whence_map': {0: <SeekType.SET: 1>, 1: <SeekType.CUR: 0>, 2: <SeekType.END: 2>}, 'seek': <function IOChannel.seek at 0x000001dd11de76a0>, 'add_watch': <function IOChannel.add_watch at 0x000001dd11de77e0>, '__iter__': <function IOChannel.__iter__ at 0x000001dd11de7880>, '__next__': <function IOChannel.__next__ at 0x000001dd11de7920>, '__doc__': None})"
+    __gtype__ = None # (!) real value is '<GType GIOChannel (257692432)>'
     __info__ = StructInfo(IOChannel)
 
 

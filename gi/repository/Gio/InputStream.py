@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -59,7 +64,7 @@ class InputStream(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -99,6 +104,9 @@ class InputStream(__gi_overrides_GObject.Object):
 
     def do_close_fn(self, *args, **kwargs): # real signature unknown
         """ close_fn(self, cancellable:Gio.Cancellable=None) -> bool """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_read_async(self, *args, **kwargs): # real signature unknown
@@ -379,20 +387,20 @@ class InputStream(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -422,7 +430,11 @@ class InputStream(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -524,12 +536,12 @@ class InputStream(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792ecf460>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7045c3a0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(InputStream), '__module__': 'gi.repository.Gio', '__gtype__': <GType GInputStream (2430930896)>, '__doc__': None, '__gsignals__': {}, 'clear_pending': gi.FunctionInfo(clear_pending, bound=None), 'close': gi.FunctionInfo(close, bound=None), 'close_async': gi.FunctionInfo(close_async, bound=None), 'close_finish': gi.FunctionInfo(close_finish, bound=None), 'has_pending': gi.FunctionInfo(has_pending, bound=None), 'is_closed': gi.FunctionInfo(is_closed, bound=None), 'read': gi.FunctionInfo(read, bound=None), 'read_all': gi.FunctionInfo(read_all, bound=None), 'read_all_async': gi.FunctionInfo(read_all_async, bound=None), 'read_all_finish': gi.FunctionInfo(read_all_finish, bound=None), 'read_async': gi.FunctionInfo(read_async, bound=None), 'read_bytes': gi.FunctionInfo(read_bytes, bound=None), 'read_bytes_async': gi.FunctionInfo(read_bytes_async, bound=None), 'read_bytes_finish': gi.FunctionInfo(read_bytes_finish, bound=None), 'read_finish': gi.FunctionInfo(read_finish, bound=None), 'set_pending': gi.FunctionInfo(set_pending, bound=None), 'skip': gi.FunctionInfo(skip, bound=None), 'skip_async': gi.FunctionInfo(skip_async, bound=None), 'skip_finish': gi.FunctionInfo(skip_finish, bound=None), 'do_close_async': gi.VFuncInfo(close_async, bound=None), 'do_close_finish': gi.VFuncInfo(close_finish, bound=None), 'do_close_fn': gi.VFuncInfo(close_fn, bound=None), 'do_read_async': gi.VFuncInfo(read_async, bound=None), 'do_read_finish': gi.VFuncInfo(read_finish, bound=None), 'do_read_fn': gi.VFuncInfo(read_fn, bound=None), 'do_skip': gi.VFuncInfo(skip, bound=None), 'do_skip_async': gi.VFuncInfo(skip_async, bound=None), 'do_skip_finish': gi.VFuncInfo(skip_finish, bound=None), 'parent_instance': <property object at 0x000001a79393b1f0>, 'priv': <property object at 0x000001a79393b2e0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(InputStream), '__module__': 'gi.repository.Gio', '__gtype__': <GType GInputStream (1838043216)>, '__doc__': None, '__gsignals__': {}, 'clear_pending': gi.FunctionInfo(clear_pending), 'close': gi.FunctionInfo(close), 'close_async': gi.FunctionInfo(close_async), 'close_finish': gi.FunctionInfo(close_finish), 'has_pending': gi.FunctionInfo(has_pending), 'is_closed': gi.FunctionInfo(is_closed), 'read': gi.FunctionInfo(read), 'read_all': gi.FunctionInfo(read_all), 'read_all_async': gi.FunctionInfo(read_all_async), 'read_all_finish': gi.FunctionInfo(read_all_finish), 'read_async': gi.FunctionInfo(read_async), 'read_bytes': gi.FunctionInfo(read_bytes), 'read_bytes_async': gi.FunctionInfo(read_bytes_async), 'read_bytes_finish': gi.FunctionInfo(read_bytes_finish), 'read_finish': gi.FunctionInfo(read_finish), 'set_pending': gi.FunctionInfo(set_pending), 'skip': gi.FunctionInfo(skip), 'skip_async': gi.FunctionInfo(skip_async), 'skip_finish': gi.FunctionInfo(skip_finish), 'do_close_async': gi.VFuncInfo(close_async), 'do_close_finish': gi.VFuncInfo(close_finish), 'do_close_fn': gi.VFuncInfo(close_fn), 'do_read_async': gi.VFuncInfo(read_async), 'do_read_finish': gi.VFuncInfo(read_finish), 'do_read_fn': gi.VFuncInfo(read_fn), 'do_skip': gi.VFuncInfo(skip), 'do_skip_async': gi.VFuncInfo(skip_async), 'do_skip_finish': gi.VFuncInfo(skip_finish), 'parent_instance': <property object at 0x000001ea7030cd10>, 'priv': <property object at 0x000001ea7030ce00>})"
     __gdoc__ = 'Object GInputStream\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GInputStream (2430930896)>'
+    __gtype__ = None # (!) real value is '<GType GInputStream (1838043216)>'
     __info__ = ObjectInfo(InputStream)
 
 

@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ColorDisplayClass(__gi.Struct):
@@ -173,7 +166,7 @@ class ColorDisplayClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ColorDisplayClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ColorDisplayClass' objects>, '__weakref__': <attribute '__weakref__' of 'ColorDisplayClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb753d850>, 'name': <property object at 0x000001eeb753d940>, 'help_id': <property object at 0x000001eeb753da30>, 'icon_name': <property object at 0x000001eeb753db20>, 'convert_buffer': <property object at 0x000001eeb753dc10>, 'configure': <property object at 0x000001eeb753dd00>, 'changed': <property object at 0x000001eeb753ddf0>, '_gimp_reserved0': <property object at 0x000001eeb753dee0>, '_gimp_reserved1': <property object at 0x000001eeb753dfd0>, '_gimp_reserved2': <property object at 0x000001eeb753e0c0>, '_gimp_reserved3': <property object at 0x000001eeb753e1b0>, '_gimp_reserved4': <property object at 0x000001eeb753e2a0>, '_gimp_reserved5': <property object at 0x000001eeb753e390>, '_gimp_reserved6': <property object at 0x000001eeb753e480>, '_gimp_reserved7': <property object at 0x000001eeb753e570>, '_gimp_reserved8': <property object at 0x000001eeb753e660>, '_gimp_reserved9': <property object at 0x000001eeb753e750>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ColorDisplayClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ColorDisplayClass' objects>, '__weakref__': <attribute '__weakref__' of 'ColorDisplayClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1d30a40>, 'name': <property object at 0x0000020ee1d30b30>, 'help_id': <property object at 0x0000020ee1d30c20>, 'icon_name': <property object at 0x0000020ee1d30d10>, 'convert_buffer': <property object at 0x0000020ee1d30e00>, 'configure': <property object at 0x0000020ee1d30ef0>, 'changed': <property object at 0x0000020ee1d30fe0>, '_gimp_reserved0': <property object at 0x0000020ee1d310d0>, '_gimp_reserved1': <property object at 0x0000020ee1d311c0>, '_gimp_reserved2': <property object at 0x0000020ee1d312b0>, '_gimp_reserved3': <property object at 0x0000020ee1d313a0>, '_gimp_reserved4': <property object at 0x0000020ee1d31490>, '_gimp_reserved5': <property object at 0x0000020ee1d31580>, '_gimp_reserved6': <property object at 0x0000020ee1d31670>, '_gimp_reserved7': <property object at 0x0000020ee1d31760>, '_gimp_reserved8': <property object at 0x0000020ee1d31850>, '_gimp_reserved9': <property object at 0x0000020ee1d31940>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ColorDisplayClass)
 

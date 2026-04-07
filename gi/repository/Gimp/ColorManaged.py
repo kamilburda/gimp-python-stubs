@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -166,10 +162,10 @@ class ColorManaged(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ColorManaged), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpColorManaged (3599985792)>, '__dict__': <attribute '__dict__' of 'ColorManaged' objects>, '__weakref__': <attribute '__weakref__' of 'ColorManaged' objects>, '__doc__': None, '__gsignals__': {}, 'get_color_profile': gi.FunctionInfo(get_color_profile, bound=None), 'get_icc_profile': gi.FunctionInfo(get_icc_profile, bound=None), 'get_simulation_bpc': gi.FunctionInfo(get_simulation_bpc, bound=None), 'get_simulation_intent': gi.FunctionInfo(get_simulation_intent, bound=None), 'get_simulation_profile': gi.FunctionInfo(get_simulation_profile, bound=None), 'profile_changed': gi.FunctionInfo(profile_changed, bound=None), 'simulation_bpc_changed': gi.FunctionInfo(simulation_bpc_changed, bound=None), 'simulation_intent_changed': gi.FunctionInfo(simulation_intent_changed, bound=None), 'simulation_profile_changed': gi.FunctionInfo(simulation_profile_changed, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ColorManaged), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpColorManaged (2362305936)>, '__dict__': <attribute '__dict__' of 'ColorManaged' objects>, '__weakref__': <attribute '__weakref__' of 'ColorManaged' objects>, '__doc__': None, '__gsignals__': {}, 'get_color_profile': gi.FunctionInfo(get_color_profile), 'get_icc_profile': gi.FunctionInfo(get_icc_profile), 'get_simulation_bpc': gi.FunctionInfo(get_simulation_bpc), 'get_simulation_intent': gi.FunctionInfo(get_simulation_intent), 'get_simulation_profile': gi.FunctionInfo(get_simulation_profile), 'profile_changed': gi.FunctionInfo(profile_changed), 'simulation_bpc_changed': gi.FunctionInfo(simulation_bpc_changed), 'simulation_intent_changed': gi.FunctionInfo(simulation_intent_changed), 'simulation_profile_changed': gi.FunctionInfo(simulation_profile_changed)})"
     __gdoc__ = 'Interface GimpColorManaged\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpColorManaged (3599985792)>'
+    __gtype__ = None # (!) real value is '<GType GimpColorManaged (2362305936)>'
     __info__ = InterfaceInfo(ColorManaged)
 
 

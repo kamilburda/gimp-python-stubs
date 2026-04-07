@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -138,7 +143,11 @@ class Mount(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -229,10 +238,10 @@ class Mount(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Mount), '__module__': 'gi.repository.Gio', '__gtype__': <GType GMount (2466387712)>, '__dict__': <attribute '__dict__' of 'Mount' objects>, '__weakref__': <attribute '__weakref__' of 'Mount' objects>, '__doc__': None, '__gsignals__': {}, 'can_eject': gi.FunctionInfo(can_eject, bound=None), 'can_unmount': gi.FunctionInfo(can_unmount, bound=None), 'eject': gi.FunctionInfo(eject, bound=None), 'eject_finish': gi.FunctionInfo(eject_finish, bound=None), 'eject_with_operation': gi.FunctionInfo(eject_with_operation, bound=None), 'eject_with_operation_finish': gi.FunctionInfo(eject_with_operation_finish, bound=None), 'get_default_location': gi.FunctionInfo(get_default_location, bound=None), 'get_drive': gi.FunctionInfo(get_drive, bound=None), 'get_icon': gi.FunctionInfo(get_icon, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_root': gi.FunctionInfo(get_root, bound=None), 'get_sort_key': gi.FunctionInfo(get_sort_key, bound=None), 'get_symbolic_icon': gi.FunctionInfo(get_symbolic_icon, bound=None), 'get_uuid': gi.FunctionInfo(get_uuid, bound=None), 'get_volume': gi.FunctionInfo(get_volume, bound=None), 'guess_content_type': gi.FunctionInfo(guess_content_type, bound=None), 'guess_content_type_finish': gi.FunctionInfo(guess_content_type_finish, bound=None), 'guess_content_type_sync': gi.FunctionInfo(guess_content_type_sync, bound=None), 'is_shadowed': gi.FunctionInfo(is_shadowed, bound=None), 'remount': gi.FunctionInfo(remount, bound=None), 'remount_finish': gi.FunctionInfo(remount_finish, bound=None), 'shadow': gi.FunctionInfo(shadow, bound=None), 'unmount': gi.FunctionInfo(unmount, bound=None), 'unmount_finish': gi.FunctionInfo(unmount_finish, bound=None), 'unmount_with_operation': gi.FunctionInfo(unmount_with_operation, bound=None), 'unmount_with_operation_finish': gi.FunctionInfo(unmount_with_operation_finish, bound=None), 'unshadow': gi.FunctionInfo(unshadow, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Mount), '__module__': 'gi.repository.Gio', '__gtype__': <GType GMount (1848625040)>, '__dict__': <attribute '__dict__' of 'Mount' objects>, '__weakref__': <attribute '__weakref__' of 'Mount' objects>, '__doc__': None, '__gsignals__': {}, 'can_eject': gi.FunctionInfo(can_eject), 'can_unmount': gi.FunctionInfo(can_unmount), 'eject': gi.FunctionInfo(eject), 'eject_finish': gi.FunctionInfo(eject_finish), 'eject_with_operation': gi.FunctionInfo(eject_with_operation), 'eject_with_operation_finish': gi.FunctionInfo(eject_with_operation_finish), 'get_default_location': gi.FunctionInfo(get_default_location), 'get_drive': gi.FunctionInfo(get_drive), 'get_icon': gi.FunctionInfo(get_icon), 'get_name': gi.FunctionInfo(get_name), 'get_root': gi.FunctionInfo(get_root), 'get_sort_key': gi.FunctionInfo(get_sort_key), 'get_symbolic_icon': gi.FunctionInfo(get_symbolic_icon), 'get_uuid': gi.FunctionInfo(get_uuid), 'get_volume': gi.FunctionInfo(get_volume), 'guess_content_type': gi.FunctionInfo(guess_content_type), 'guess_content_type_finish': gi.FunctionInfo(guess_content_type_finish), 'guess_content_type_sync': gi.FunctionInfo(guess_content_type_sync), 'is_shadowed': gi.FunctionInfo(is_shadowed), 'remount': gi.FunctionInfo(remount), 'remount_finish': gi.FunctionInfo(remount_finish), 'shadow': gi.FunctionInfo(shadow), 'unmount': gi.FunctionInfo(unmount), 'unmount_finish': gi.FunctionInfo(unmount_finish), 'unmount_with_operation': gi.FunctionInfo(unmount_with_operation), 'unmount_with_operation_finish': gi.FunctionInfo(unmount_with_operation_finish), 'unshadow': gi.FunctionInfo(unshadow)})"
     __gdoc__ = 'Interface GMount\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GMount (2466387712)>'
+    __gtype__ = None # (!) real value is '<GType GMount (1848625040)>'
     __info__ = InterfaceInfo(Mount)
 
 

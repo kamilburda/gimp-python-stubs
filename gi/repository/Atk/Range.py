@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -47,7 +40,8 @@ class Range(__gi.Boxed):
         """ get_upper_limit(self) -> float """
         return 0.0
 
-    def new(self, lower_limit, upper_limit, description): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, lower_limit, upper_limit, description): # real signature unknown; restored from __doc__
         """ new(lower_limit:float, upper_limit:float, description:str) -> Atk.Range """
         pass
 
@@ -163,8 +157,8 @@ class Range(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Range), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkRange (892677056)>, '__dict__': <attribute '__dict__' of 'Range' objects>, '__weakref__': <attribute '__weakref__' of 'Range' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_description': gi.FunctionInfo(get_description, bound=None), 'get_lower_limit': gi.FunctionInfo(get_lower_limit, bound=None), 'get_upper_limit': gi.FunctionInfo(get_upper_limit, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x00000173380d7880>})"
-    __gtype__ = None # (!) real value is '<GType AtkRange (892677056)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Range), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkRange (1534562784)>, '__dict__': <attribute '__dict__' of 'Range' objects>, '__weakref__': <attribute '__weakref__' of 'Range' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_description': gi.FunctionInfo(get_description), 'get_lower_limit': gi.FunctionInfo(get_lower_limit), 'get_upper_limit': gi.FunctionInfo(get_upper_limit), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000001c85c381010>})"
+    __gtype__ = None # (!) real value is '<GType AtkRange (1534562784)>'
     __info__ = StructInfo(Range)
 
 

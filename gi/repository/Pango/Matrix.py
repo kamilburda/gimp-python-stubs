@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Matrix(__gi.Boxed):
@@ -198,8 +196,8 @@ class Matrix(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Matrix), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoMatrix (4081764416)>, '__dict__': <attribute '__dict__' of 'Matrix' objects>, '__weakref__': <attribute '__weakref__' of 'Matrix' objects>, '__doc__': None, 'xx': <property object at 0x00000213f6078c20>, 'xy': <property object at 0x00000213f6078d10>, 'yx': <property object at 0x00000213f6078e00>, 'yy': <property object at 0x00000213f6078ef0>, 'x0': <property object at 0x00000213f6078fe0>, 'y0': <property object at 0x00000213f60790d0>, 'concat': gi.FunctionInfo(concat, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_font_scale_factor': gi.FunctionInfo(get_font_scale_factor, bound=None), 'get_font_scale_factors': gi.FunctionInfo(get_font_scale_factors, bound=None), 'get_slant_ratio': gi.FunctionInfo(get_slant_ratio, bound=None), 'rotate': gi.FunctionInfo(rotate, bound=None), 'scale': gi.FunctionInfo(scale, bound=None), 'transform_distance': gi.FunctionInfo(transform_distance, bound=None), 'transform_pixel_rectangle': gi.FunctionInfo(transform_pixel_rectangle, bound=None), 'transform_point': gi.FunctionInfo(transform_point, bound=None), 'transform_rectangle': gi.FunctionInfo(transform_rectangle, bound=None), 'translate': gi.FunctionInfo(translate, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType PangoMatrix (4081764416)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Matrix), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoMatrix (843938304)>, '__dict__': <attribute '__dict__' of 'Matrix' objects>, '__weakref__': <attribute '__weakref__' of 'Matrix' objects>, '__doc__': None, 'xx': <property object at 0x00000280355d7880>, 'xy': <property object at 0x00000280355d7970>, 'yx': <property object at 0x00000280355d7a60>, 'yy': <property object at 0x00000280355d7b50>, 'x0': <property object at 0x00000280355d7c40>, 'y0': <property object at 0x00000280355d7d30>, 'concat': gi.FunctionInfo(concat), 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_font_scale_factor': gi.FunctionInfo(get_font_scale_factor), 'get_font_scale_factors': gi.FunctionInfo(get_font_scale_factors), 'get_slant_ratio': gi.FunctionInfo(get_slant_ratio), 'rotate': gi.FunctionInfo(rotate), 'scale': gi.FunctionInfo(scale), 'transform_distance': gi.FunctionInfo(transform_distance), 'transform_pixel_rectangle': gi.FunctionInfo(transform_pixel_rectangle), 'transform_point': gi.FunctionInfo(transform_point), 'transform_rectangle': gi.FunctionInfo(transform_rectangle), 'translate': gi.FunctionInfo(translate)})"
+    __gtype__ = None # (!) real value is '<GType PangoMatrix (843938304)>'
     __info__ = StructInfo(Matrix)
 
 

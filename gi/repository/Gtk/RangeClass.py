@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -159,7 +158,7 @@ class RangeClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RangeClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RangeClass' objects>, '__weakref__': <attribute '__weakref__' of 'RangeClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceac49c60>, 'slider_detail': <property object at 0x000002eceac49d50>, 'stepper_detail': <property object at 0x000002eceac49e40>, 'value_changed': <property object at 0x000002eceac49f30>, 'adjust_bounds': <property object at 0x000002eceac4a020>, 'move_slider': <property object at 0x000002eceac4a110>, 'get_range_border': <property object at 0x000002eceac4a200>, 'change_value': <property object at 0x000002eceac4a2f0>, 'get_range_size_request': <property object at 0x000002eceac4a3e0>, '_gtk_reserved1': <property object at 0x000002eceac4a4d0>, '_gtk_reserved2': <property object at 0x000002eceac4a5c0>, '_gtk_reserved3': <property object at 0x000002eceac4a6b0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(RangeClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'RangeClass' objects>, '__weakref__': <attribute '__weakref__' of 'RangeClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd1870900>, 'slider_detail': <property object at 0x000002bfd18709f0>, 'stepper_detail': <property object at 0x000002bfd1870ae0>, 'value_changed': <property object at 0x000002bfd1870bd0>, 'adjust_bounds': <property object at 0x000002bfd1870cc0>, 'move_slider': <property object at 0x000002bfd1870db0>, 'get_range_border': <property object at 0x000002bfd1870ea0>, 'change_value': <property object at 0x000002bfd1870f90>, 'get_range_size_request': <property object at 0x000002bfd1871080>, '_gtk_reserved1': <property object at 0x000002bfd1871170>, '_gtk_reserved2': <property object at 0x000002bfd1871260>, '_gtk_reserved3': <property object at 0x000002bfd1871350>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(RangeClass)
 

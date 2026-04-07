@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -106,7 +111,11 @@ class Volume(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -197,10 +206,10 @@ class Volume(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Volume), '__module__': 'gi.repository.Gio', '__gtype__': <GType GVolume (2466625952)>, '__dict__': <attribute '__dict__' of 'Volume' objects>, '__weakref__': <attribute '__weakref__' of 'Volume' objects>, '__doc__': None, '__gsignals__': {}, 'can_eject': gi.FunctionInfo(can_eject, bound=None), 'can_mount': gi.FunctionInfo(can_mount, bound=None), 'eject': gi.FunctionInfo(eject, bound=None), 'eject_finish': gi.FunctionInfo(eject_finish, bound=None), 'eject_with_operation': gi.FunctionInfo(eject_with_operation, bound=None), 'eject_with_operation_finish': gi.FunctionInfo(eject_with_operation_finish, bound=None), 'enumerate_identifiers': gi.FunctionInfo(enumerate_identifiers, bound=None), 'get_activation_root': gi.FunctionInfo(get_activation_root, bound=None), 'get_drive': gi.FunctionInfo(get_drive, bound=None), 'get_icon': gi.FunctionInfo(get_icon, bound=None), 'get_identifier': gi.FunctionInfo(get_identifier, bound=None), 'get_mount': gi.FunctionInfo(get_mount, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_sort_key': gi.FunctionInfo(get_sort_key, bound=None), 'get_symbolic_icon': gi.FunctionInfo(get_symbolic_icon, bound=None), 'get_uuid': gi.FunctionInfo(get_uuid, bound=None), 'mount': gi.FunctionInfo(mount, bound=None), 'mount_finish': gi.FunctionInfo(mount_finish, bound=None), 'should_automount': gi.FunctionInfo(should_automount, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Volume), '__module__': 'gi.repository.Gio', '__gtype__': <GType GVolume (1845592144)>, '__dict__': <attribute '__dict__' of 'Volume' objects>, '__weakref__': <attribute '__weakref__' of 'Volume' objects>, '__doc__': None, '__gsignals__': {}, 'can_eject': gi.FunctionInfo(can_eject), 'can_mount': gi.FunctionInfo(can_mount), 'eject': gi.FunctionInfo(eject), 'eject_finish': gi.FunctionInfo(eject_finish), 'eject_with_operation': gi.FunctionInfo(eject_with_operation), 'eject_with_operation_finish': gi.FunctionInfo(eject_with_operation_finish), 'enumerate_identifiers': gi.FunctionInfo(enumerate_identifiers), 'get_activation_root': gi.FunctionInfo(get_activation_root), 'get_drive': gi.FunctionInfo(get_drive), 'get_icon': gi.FunctionInfo(get_icon), 'get_identifier': gi.FunctionInfo(get_identifier), 'get_mount': gi.FunctionInfo(get_mount), 'get_name': gi.FunctionInfo(get_name), 'get_sort_key': gi.FunctionInfo(get_sort_key), 'get_symbolic_icon': gi.FunctionInfo(get_symbolic_icon), 'get_uuid': gi.FunctionInfo(get_uuid), 'mount': gi.FunctionInfo(mount), 'mount_finish': gi.FunctionInfo(mount_finish), 'should_automount': gi.FunctionInfo(should_automount)})"
     __gdoc__ = 'Interface GVolume\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GVolume (2466625952)>'
+    __gtype__ = None # (!) real value is '<GType GVolume (1845592144)>'
     __info__ = InterfaceInfo(Volume)
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class GlyphItem(__gi.Boxed):
@@ -34,8 +32,8 @@ class GlyphItem(__gi.Boxed):
         """ free(self) """
         pass
 
-    def get_logical_widths(self, text, logical_widths): # real signature unknown; restored from __doc__
-        """ get_logical_widths(self, text:str, logical_widths:list) """
+    def get_logical_widths(self, text): # real signature unknown; restored from __doc__
+        """ get_logical_widths(self, text:str) -> logical_widths:list """
         pass
 
     def letter_space(self, text, log_attrs, letter_spacing): # real signature unknown; restored from __doc__
@@ -168,8 +166,8 @@ class GlyphItem(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphItem), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoGlyphItem (4081766096)>, '__dict__': <attribute '__dict__' of 'GlyphItem' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphItem' objects>, '__doc__': None, 'item': <property object at 0x00000213f6085d00>, 'glyphs': <property object at 0x00000213f6085df0>, 'y_offset': <property object at 0x00000213f6085ee0>, 'start_x_offset': <property object at 0x00000213f6085fd0>, 'end_x_offset': <property object at 0x00000213f60860c0>, 'apply_attrs': gi.FunctionInfo(apply_attrs, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_logical_widths': gi.FunctionInfo(get_logical_widths, bound=None), 'letter_space': gi.FunctionInfo(letter_space, bound=None), 'split': gi.FunctionInfo(split, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType PangoGlyphItem (4081766096)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphItem), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoGlyphItem (843937824)>, '__dict__': <attribute '__dict__' of 'GlyphItem' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphItem' objects>, '__doc__': None, 'item': <property object at 0x00000280355d47c0>, 'glyphs': <property object at 0x00000280355d48b0>, 'y_offset': <property object at 0x00000280355d49a0>, 'start_x_offset': <property object at 0x00000280355d4a90>, 'end_x_offset': <property object at 0x00000280355d4b80>, 'apply_attrs': gi.FunctionInfo(apply_attrs), 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_logical_widths': gi.FunctionInfo(get_logical_widths), 'letter_space': gi.FunctionInfo(letter_space), 'split': gi.FunctionInfo(split)})"
+    __gtype__ = None # (!) real value is '<GType PangoGlyphItem (843937824)>'
     __info__ = StructInfo(GlyphItem)
 
 

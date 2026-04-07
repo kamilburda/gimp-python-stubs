@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -71,20 +67,20 @@ class Palette(Resource):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -117,6 +113,12 @@ class Palette(Resource):
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
+        pass
+
     def duplicate(self): # real signature unknown; restored from __doc__
         """ duplicate(self) -> Gimp.Resource """
         pass
@@ -144,17 +146,17 @@ class Palette(Resource):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -219,20 +221,20 @@ class Palette(Resource):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -334,7 +336,8 @@ class Palette(Resource):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, name): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, name): # real signature unknown; restored from __doc__
         """ new(name:str) -> Gimp.Palette """
         pass
 
@@ -463,20 +466,20 @@ class Palette(Resource):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -613,12 +616,14 @@ class Palette(Resource):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001dcd9181b40>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001268f3b1420>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Palette), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpPalette (3595412160)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_by_name': gi.FunctionInfo(get_by_name, bound=None), 'add_entry': gi.FunctionInfo(add_entry, bound=None), 'delete_entry': gi.FunctionInfo(delete_entry, bound=None), 'get_color_count': gi.FunctionInfo(get_color_count, bound=None), 'get_colormap': gi.FunctionInfo(get_colormap, bound=None), 'get_colors': gi.FunctionInfo(get_colors, bound=None), 'get_columns': gi.FunctionInfo(get_columns, bound=None), 'get_entry_color': gi.FunctionInfo(get_entry_color, bound=None), 'get_entry_name': gi.FunctionInfo(get_entry_name, bound=None), 'set_colormap': gi.FunctionInfo(set_colormap, bound=None), 'set_columns': gi.FunctionInfo(set_columns, bound=None), 'set_entry_color': gi.FunctionInfo(set_entry_color, bound=None), 'set_entry_name': gi.FunctionInfo(set_entry_name, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Palette), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpPalette (2360846880)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_by_name': <staticmethod(gi.FunctionInfo(get_by_name))>, 'add_entry': gi.FunctionInfo(add_entry), 'delete_entry': gi.FunctionInfo(delete_entry), 'get_color_count': gi.FunctionInfo(get_color_count), 'get_colormap': gi.FunctionInfo(get_colormap), 'get_colors': gi.FunctionInfo(get_colors), 'get_columns': gi.FunctionInfo(get_columns), 'get_entry_color': gi.FunctionInfo(get_entry_color), 'get_entry_name': gi.FunctionInfo(get_entry_name), 'set_colormap': gi.FunctionInfo(set_colormap), 'set_columns': gi.FunctionInfo(set_columns), 'set_entry_color': gi.FunctionInfo(set_entry_color), 'set_entry_name': gi.FunctionInfo(set_entry_name)})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GimpPalette\n\nProperties from GimpResource:\n  id -> gint: The id\n    The id for internal use\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpPalette (3595412160)>'
+    __gtype__ = None # (!) real value is '<GType GimpPalette (2360846880)>'
     __info__ = ObjectInfo(Palette)
+    __static_attributes__ = ()
 
 

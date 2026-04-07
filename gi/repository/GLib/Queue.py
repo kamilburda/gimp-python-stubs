@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Queue(__gi.Struct):
@@ -231,7 +229,7 @@ class Queue(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Queue), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Queue' objects>, '__weakref__': <attribute '__weakref__' of 'Queue' objects>, '__doc__': None, 'head': <property object at 0x000002830bef54e0>, 'tail': <property object at 0x000002830bef55d0>, 'length': <property object at 0x000002830bef56c0>, 'clear': gi.FunctionInfo(clear, bound=None), 'clear_full': gi.FunctionInfo(clear_full, bound=None), 'foreach': gi.FunctionInfo(foreach, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'free_full': gi.FunctionInfo(free_full, bound=None), 'get_length': gi.FunctionInfo(get_length, bound=None), 'index': gi.FunctionInfo(index, bound=None), 'init': gi.FunctionInfo(init, bound=None), 'insert_sorted': gi.FunctionInfo(insert_sorted, bound=None), 'is_empty': gi.FunctionInfo(is_empty, bound=None), 'peek_head': gi.FunctionInfo(peek_head, bound=None), 'peek_nth': gi.FunctionInfo(peek_nth, bound=None), 'peek_tail': gi.FunctionInfo(peek_tail, bound=None), 'pop_head': gi.FunctionInfo(pop_head, bound=None), 'pop_nth': gi.FunctionInfo(pop_nth, bound=None), 'pop_tail': gi.FunctionInfo(pop_tail, bound=None), 'push_head': gi.FunctionInfo(push_head, bound=None), 'push_nth': gi.FunctionInfo(push_nth, bound=None), 'push_tail': gi.FunctionInfo(push_tail, bound=None), 'remove': gi.FunctionInfo(remove, bound=None), 'remove_all': gi.FunctionInfo(remove_all, bound=None), 'reverse': gi.FunctionInfo(reverse, bound=None), 'sort': gi.FunctionInfo(sort, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Queue), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Queue' objects>, '__weakref__': <attribute '__weakref__' of 'Queue' objects>, '__doc__': None, 'head': <property object at 0x0000018ea007abb0>, 'tail': <property object at 0x0000018ea007aca0>, 'length': <property object at 0x0000018ea007ad90>, 'clear': gi.FunctionInfo(clear), 'clear_full': gi.FunctionInfo(clear_full), 'foreach': gi.FunctionInfo(foreach), 'free': gi.FunctionInfo(free), 'free_full': gi.FunctionInfo(free_full), 'get_length': gi.FunctionInfo(get_length), 'index': gi.FunctionInfo(index), 'init': gi.FunctionInfo(init), 'insert_sorted': gi.FunctionInfo(insert_sorted), 'is_empty': gi.FunctionInfo(is_empty), 'peek_head': gi.FunctionInfo(peek_head), 'peek_nth': gi.FunctionInfo(peek_nth), 'peek_tail': gi.FunctionInfo(peek_tail), 'pop_head': gi.FunctionInfo(pop_head), 'pop_nth': gi.FunctionInfo(pop_nth), 'pop_tail': gi.FunctionInfo(pop_tail), 'push_head': gi.FunctionInfo(push_head), 'push_nth': gi.FunctionInfo(push_nth), 'push_tail': gi.FunctionInfo(push_tail), 'remove': gi.FunctionInfo(remove), 'remove_all': gi.FunctionInfo(remove_all), 'reverse': gi.FunctionInfo(reverse), 'sort': gi.FunctionInfo(sort)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Queue)
 

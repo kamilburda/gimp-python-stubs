@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -47,20 +46,20 @@ class MountOperation(__gi_repository_Gio.MountOperation):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -87,6 +86,12 @@ class MountOperation(__gi_repository_Gio.MountOperation):
 
     def do_ask_question(self, *args, **kwargs): # real signature unknown
         """ ask_question(self, message:str, choices:list) """
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_reply(self, *args, **kwargs): # real signature unknown
@@ -120,17 +125,17 @@ class MountOperation(__gi_repository_Gio.MountOperation):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -199,20 +204,20 @@ class MountOperation(__gi_repository_Gio.MountOperation):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -266,7 +271,8 @@ class MountOperation(__gi_repository_Gio.MountOperation):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, parent=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, parent=None): # real signature unknown; restored from __doc__
         """ new(parent:Gtk.Window=None) -> Gio.MountOperation """
         pass
 
@@ -395,20 +401,20 @@ class MountOperation(__gi_repository_Gio.MountOperation):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -544,12 +550,14 @@ class MountOperation(__gi_repository_Gio.MountOperation):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002eceaba4460>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd1908430>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(MountOperation), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkMountOperation (3923950800)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_parent': gi.FunctionInfo(get_parent, bound=None), 'get_screen': gi.FunctionInfo(get_screen, bound=None), 'is_showing': gi.FunctionInfo(is_showing, bound=None), 'set_parent': gi.FunctionInfo(set_parent, bound=None), 'set_screen': gi.FunctionInfo(set_screen, bound=None), 'parent_instance': <property object at 0x000002eceac1e750>, 'priv': <property object at 0x000002eceac1e840>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(MountOperation), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkMountOperation (3413951296)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_parent': gi.FunctionInfo(get_parent), 'get_screen': gi.FunctionInfo(get_screen), 'is_showing': gi.FunctionInfo(is_showing), 'set_parent': gi.FunctionInfo(set_parent), 'set_screen': gi.FunctionInfo(set_screen), 'parent_instance': <property object at 0x000002bfd18a9620>, 'priv': <property object at 0x000002bfd18a9710>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkMountOperation\n\nProperties from GtkMountOperation:\n  parent -> GtkWindow: Parent\n    The parent window\n  is-showing -> gboolean: Is Showing\n    Are we showing a dialog\n  screen -> GdkScreen: Screen\n    The screen where this window will be displayed.\n\nSignals from GMountOperation:\n  ask-password (gchararray, gchararray, gchararray, GAskPasswordFlags)\n  ask-question (gchararray, GStrv)\n  reply (GMountOperationResult)\n  aborted ()\n  show-processes (gchararray, GArray, GStrv)\n  show-unmount-progress (gchararray, gint64, gint64)\n\nProperties from GMountOperation:\n  username -> gchararray: username\n  password -> gchararray: password\n  anonymous -> gboolean: anonymous\n  domain -> gchararray: domain\n  password-save -> GPasswordSave: password-save\n  choice -> gint: choice\n  is-tcrypt-hidden-volume -> gboolean: is-tcrypt-hidden-volume\n  is-tcrypt-system-volume -> gboolean: is-tcrypt-system-volume\n  pim -> guint: pim\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkMountOperation (3923950800)>'
+    __gtype__ = None # (!) real value is '<GType GtkMountOperation (3413951296)>'
     __info__ = ObjectInfo(MountOperation)
+    __static_attributes__ = ()
 
 

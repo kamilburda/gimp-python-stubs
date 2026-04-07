@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -152,7 +145,7 @@ class ActionIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ActionIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ActionIface' objects>, '__weakref__': <attribute '__weakref__' of 'ActionIface' objects>, '__doc__': None, 'parent': <property object at 0x00000173380ad5d0>, 'do_action': <property object at 0x000001733817c5e0>, 'get_n_actions': <property object at 0x000001733817c540>, 'get_description': <property object at 0x000001733817c360>, 'get_name': <property object at 0x000001733817c3b0>, 'get_keybinding': <property object at 0x000001733817c180>, 'set_description': <property object at 0x000001733817cc20>, 'get_localized_name': <property object at 0x000001733817cc70>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ActionIface), '__module__': 'gi.repository.Atk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ActionIface' objects>, '__weakref__': <attribute '__weakref__' of 'ActionIface' objects>, '__doc__': None, 'parent': <property object at 0x000001c85da81670>, 'do_action': <property object at 0x000001c85da81c10>, 'get_n_actions': <property object at 0x000001c85dac93a0>, 'get_description': <property object at 0x000001c85dac8b80>, 'get_name': <property object at 0x000001c85dac8d60>, 'get_keybinding': <property object at 0x000001c85dac8ea0>, 'set_description': <property object at 0x000001c85dc84d10>, 'get_localized_name': <property object at 0x000001c85dc85300>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ActionIface)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Renderer(__gi_overrides_GObject.Object):
@@ -46,20 +44,20 @@ class Renderer(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -82,6 +80,12 @@ class Renderer(__gi_overrides_GObject.Object):
 
     def do_begin(self, *args, **kwargs): # real signature unknown
         """ begin(self) """
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_draw_error_underline(self, *args, **kwargs): # real signature unknown
@@ -175,17 +179,17 @@ class Renderer(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -230,20 +234,20 @@ class Renderer(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -386,20 +390,20 @@ class Renderer(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -543,12 +547,14 @@ class Renderer(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x00000213f60a9120>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x0000028033701360>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Renderer), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoRenderer (4081762064)>, '__doc__': None, '__gsignals__': {}, 'activate': gi.FunctionInfo(activate, bound=None), 'deactivate': gi.FunctionInfo(deactivate, bound=None), 'draw_error_underline': gi.FunctionInfo(draw_error_underline, bound=None), 'draw_glyph': gi.FunctionInfo(draw_glyph, bound=None), 'draw_glyph_item': gi.FunctionInfo(draw_glyph_item, bound=None), 'draw_glyphs': gi.FunctionInfo(draw_glyphs, bound=None), 'draw_layout': gi.FunctionInfo(draw_layout, bound=None), 'draw_layout_line': gi.FunctionInfo(draw_layout_line, bound=None), 'draw_rectangle': gi.FunctionInfo(draw_rectangle, bound=None), 'draw_trapezoid': gi.FunctionInfo(draw_trapezoid, bound=None), 'get_alpha': gi.FunctionInfo(get_alpha, bound=None), 'get_color': gi.FunctionInfo(get_color, bound=None), 'get_layout': gi.FunctionInfo(get_layout, bound=None), 'get_layout_line': gi.FunctionInfo(get_layout_line, bound=None), 'get_matrix': gi.FunctionInfo(get_matrix, bound=None), 'part_changed': gi.FunctionInfo(part_changed, bound=None), 'set_alpha': gi.FunctionInfo(set_alpha, bound=None), 'set_color': gi.FunctionInfo(set_color, bound=None), 'set_matrix': gi.FunctionInfo(set_matrix, bound=None), 'do_begin': gi.VFuncInfo(begin, bound=None), 'do_draw_error_underline': gi.VFuncInfo(draw_error_underline, bound=None), 'do_draw_glyph': gi.VFuncInfo(draw_glyph, bound=None), 'do_draw_glyph_item': gi.VFuncInfo(draw_glyph_item, bound=None), 'do_draw_glyphs': gi.VFuncInfo(draw_glyphs, bound=None), 'do_draw_rectangle': gi.VFuncInfo(draw_rectangle, bound=None), 'do_draw_shape': gi.VFuncInfo(draw_shape, bound=None), 'do_draw_trapezoid': gi.VFuncInfo(draw_trapezoid, bound=None), 'do_end': gi.VFuncInfo(end, bound=None), 'do_part_changed': gi.VFuncInfo(part_changed, bound=None), 'do_prepare_run': gi.VFuncInfo(prepare_run, bound=None), 'parent_instance': <property object at 0x00000213f6079710>, 'underline': <property object at 0x00000213f6079800>, 'strikethrough': <property object at 0x00000213f60798f0>, 'active_count': <property object at 0x00000213f60799e0>, 'matrix': <property object at 0x00000213f6079ad0>, 'priv': <property object at 0x00000213f6079bc0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Renderer), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoRenderer (843936192)>, '__doc__': None, '__gsignals__': {}, 'activate': gi.FunctionInfo(activate), 'deactivate': gi.FunctionInfo(deactivate), 'draw_error_underline': gi.FunctionInfo(draw_error_underline), 'draw_glyph': gi.FunctionInfo(draw_glyph), 'draw_glyph_item': gi.FunctionInfo(draw_glyph_item), 'draw_glyphs': gi.FunctionInfo(draw_glyphs), 'draw_layout': gi.FunctionInfo(draw_layout), 'draw_layout_line': gi.FunctionInfo(draw_layout_line), 'draw_rectangle': gi.FunctionInfo(draw_rectangle), 'draw_trapezoid': gi.FunctionInfo(draw_trapezoid), 'get_alpha': gi.FunctionInfo(get_alpha), 'get_color': gi.FunctionInfo(get_color), 'get_layout': gi.FunctionInfo(get_layout), 'get_layout_line': gi.FunctionInfo(get_layout_line), 'get_matrix': gi.FunctionInfo(get_matrix), 'part_changed': gi.FunctionInfo(part_changed), 'set_alpha': gi.FunctionInfo(set_alpha), 'set_color': gi.FunctionInfo(set_color), 'set_matrix': gi.FunctionInfo(set_matrix), 'do_begin': gi.VFuncInfo(begin), 'do_draw_error_underline': gi.VFuncInfo(draw_error_underline), 'do_draw_glyph': gi.VFuncInfo(draw_glyph), 'do_draw_glyph_item': gi.VFuncInfo(draw_glyph_item), 'do_draw_glyphs': gi.VFuncInfo(draw_glyphs), 'do_draw_rectangle': gi.VFuncInfo(draw_rectangle), 'do_draw_shape': gi.VFuncInfo(draw_shape), 'do_draw_trapezoid': gi.VFuncInfo(draw_trapezoid), 'do_end': gi.VFuncInfo(end), 'do_part_changed': gi.VFuncInfo(part_changed), 'do_prepare_run': gi.VFuncInfo(prepare_run), 'parent_instance': <property object at 0x00000280355cc400>, 'underline': <property object at 0x00000280355cc310>, 'strikethrough': <property object at 0x00000280355cc5e0>, 'active_count': <property object at 0x00000280355cc6d0>, 'matrix': <property object at 0x00000280355cc7c0>, 'priv': <property object at 0x00000280355cc8b0>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object PangoRenderer\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType PangoRenderer (4081762064)>'
+    __gtype__ = None # (!) real value is '<GType PangoRenderer (843936192)>'
     __info__ = ObjectInfo(Renderer)
+    __static_attributes__ = ()
 
 

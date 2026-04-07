@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -164,10 +163,10 @@ class CellLayout(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(CellLayout), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCellLayout (3867804016)>, '__dict__': <attribute '__dict__' of 'CellLayout' objects>, '__weakref__': <attribute '__weakref__' of 'CellLayout' objects>, '__doc__': None, '__gsignals__': {}, 'add_attribute': gi.FunctionInfo(add_attribute, bound=None), 'clear': gi.FunctionInfo(clear, bound=None), 'clear_attributes': gi.FunctionInfo(clear_attributes, bound=None), 'get_area': gi.FunctionInfo(get_area, bound=None), 'get_cells': gi.FunctionInfo(get_cells, bound=None), 'pack_end': gi.FunctionInfo(pack_end, bound=None), 'pack_start': gi.FunctionInfo(pack_start, bound=None), 'reorder': gi.FunctionInfo(reorder, bound=None), 'set_cell_data_func': gi.FunctionInfo(set_cell_data_func, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(CellLayout), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCellLayout (3416385840)>, '__dict__': <attribute '__dict__' of 'CellLayout' objects>, '__weakref__': <attribute '__weakref__' of 'CellLayout' objects>, '__doc__': None, '__gsignals__': {}, 'add_attribute': gi.FunctionInfo(add_attribute), 'clear': gi.FunctionInfo(clear), 'clear_attributes': gi.FunctionInfo(clear_attributes), 'get_area': gi.FunctionInfo(get_area), 'get_cells': gi.FunctionInfo(get_cells), 'pack_end': gi.FunctionInfo(pack_end), 'pack_start': gi.FunctionInfo(pack_start), 'reorder': gi.FunctionInfo(reorder), 'set_cell_data_func': gi.FunctionInfo(set_cell_data_func)})"
     __gdoc__ = 'Interface GtkCellLayout\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkCellLayout (3867804016)>'
+    __gtype__ = None # (!) real value is '<GType GtkCellLayout (3416385840)>'
     __info__ = InterfaceInfo(CellLayout)
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -153,7 +152,7 @@ class FontChooserWidgetClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontChooserWidgetClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontChooserWidgetClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontChooserWidgetClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002eceabd6e80>, '_gtk_reserved1': <property object at 0x000002eceabd6f70>, '_gtk_reserved2': <property object at 0x000002eceabd7060>, '_gtk_reserved3': <property object at 0x000002eceabd7150>, '_gtk_reserved4': <property object at 0x000002eceabd7240>, '_gtk_reserved5': <property object at 0x000002eceabd7330>, '_gtk_reserved6': <property object at 0x000002eceabd7420>, '_gtk_reserved7': <property object at 0x000002eceabd7510>, '_gtk_reserved8': <property object at 0x000002eceabd7600>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontChooserWidgetClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontChooserWidgetClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontChooserWidgetClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd18f6070>, '_gtk_reserved1': <property object at 0x000002bfd18f6160>, '_gtk_reserved2': <property object at 0x000002bfd18f6250>, '_gtk_reserved3': <property object at 0x000002bfd18f6340>, '_gtk_reserved4': <property object at 0x000002bfd18f6430>, '_gtk_reserved5': <property object at 0x000002bfd18f6520>, '_gtk_reserved6': <property object at 0x000002bfd18f6610>, '_gtk_reserved7': <property object at 0x000002bfd18f6700>, '_gtk_reserved8': <property object at 0x000002bfd18f67f0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(FontChooserWidgetClass)
 

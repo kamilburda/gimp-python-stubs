@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -191,7 +190,7 @@ class Signal(str):
         return ""
 
     def get_signal_args(self): # reliably restored by inspect
-        """ Returns a tuple of: (flags, return_type, arg_types, accumulator, accu_data) """
+        """ Returns a tuple of: (flags, return_type, arg_types, accumulator, accu_data). """
         pass
 
     def index(self, sub, start=None, end=None): # real signature unknown; restored from __doc__
@@ -280,10 +279,9 @@ class Signal(str):
 
     def isprintable(self, *args, **kwargs): # real signature unknown
         """
-        Return True if the string is printable, False otherwise.
+        Return True if all characters in the string are printable, False otherwise.
         
-        A string is printable if all of its characters are considered printable in
-        repr() or if it is empty.
+        A character is printable if repr() may use it in its output.
         """
         pass
 
@@ -576,7 +574,7 @@ class Signal(str):
         pass
 
     def __contains__(self, *args, **kwargs): # real signature unknown
-        """ Return key in self. """
+        """ Return bool(key in self). """
         pass
 
     def __delattr__(self, *args, **kwargs): # real signature unknown
@@ -721,6 +719,6 @@ class Signal(str):
 
     BoundSignal = None # (!) real value is "<class 'gi._signalhelper.Signal.BoundSignal'>"
     __class__ = type
-    __dict__ = None # (!) real value is 'mappingproxy({\'__module__\': \'gi._signalhelper\', \'__doc__\': \'Object which gives a nice API for creating and binding signals.\\n\\n    :param name:\\n        Name of signal or callable closure when used as a decorator.\\n    :type name: str or callable\\n    :param callable func:\\n        Callable closure method.\\n    :param GObject.SignalFlags flags:\\n        Flags specifying when to run closure.\\n    :param type return_type:\\n        Return type of the Signal.\\n    :param list arg_types:\\n        List of argument types specifying the signals function signature\\n    :param str doc:\\n        Documentation of signal object.\\n    :param callable accumulator:\\n        Accumulator method with the signature:\\n        func(ihint, return_accu, handler_return, accu_data) -> boolean\\n    :param object accu_data:\\n        User data passed to the accumulator.\\n\\n    :Example:\\n\\n    .. code-block:: python\\n\\n        class Spam(GObject.Object):\\n            velocity = 0\\n\\n            @GObject.Signal\\n            def pushed(self):\\n                self.velocity += 1\\n\\n            @GObject.Signal(flags=GObject.SignalFlags.RUN_LAST)\\n            def pulled(self):\\n                self.velocity -= 1\\n\\n            stomped = GObject.Signal(\\\'stomped\\\', arg_types=(int,))\\n\\n            @GObject.Signal\\n            def annotated_signal(self, a:int, b:str):\\n                "Python3 annotation support for parameter types.\\n\\n        def on_pushed(obj):\\n            print(obj)\\n\\n        spam = Spam()\\n        spam.pushed.connect(on_pushed)\\n        spam.pushed.emit()\\n    \', \'BoundSignal\': <class \'gi._signalhelper.Signal.BoundSignal\'>, \'__new__\': <staticmethod(<function Signal.__new__ at 0x0000010b078af1a0>)>, \'__init__\': <function Signal.__init__ at 0x0000010b078af7e0>, \'__get__\': <function Signal.__get__ at 0x0000010b078af880>, \'__call__\': <function Signal.__call__ at 0x0000010b078af920>, \'copy\': <function Signal.copy at 0x0000010b078af9c0>, \'get_signal_args\': <function Signal.get_signal_args at 0x0000010b078afa60>, \'__dict__\': <attribute \'__dict__\' of \'Signal\' objects>, \'__weakref__\': <attribute \'__weakref__\' of \'Signal\' objects>})'
+    __dict__ = None # (!) real value is 'mappingproxy({\'__module__\': \'gi._signalhelper\', \'__doc__\': \'Object which gives a nice API for creating and binding signals.\\n\\n    :param name:\\n        Name of signal or callable closure when used as a decorator.\\n    :type name: str or callable\\n    :param callable func:\\n        Callable closure method.\\n    :param GObject.SignalFlags flags:\\n        Flags specifying when to run closure.\\n    :param type return_type:\\n        Return type of the Signal.\\n    :param list arg_types:\\n        List of argument types specifying the signals function signature\\n    :param str doc:\\n        Documentation of signal object.\\n    :param callable accumulator:\\n        Accumulator method with the signature:\\n        func(ihint, return_accu, handler_return, accu_data) -> boolean\\n    :param object accu_data:\\n        User data passed to the accumulator.\\n\\n    :Example:\\n\\n    .. code-block:: python\\n\\n        class Spam(GObject.Object):\\n            velocity = 0\\n\\n            @GObject.Signal\\n            def pushed(self):\\n                self.velocity += 1\\n\\n            @GObject.Signal(flags=GObject.SignalFlags.RUN_LAST)\\n            def pulled(self):\\n                self.velocity -= 1\\n\\n            stomped = GObject.Signal(\\\'stomped\\\', arg_types=(int,))\\n\\n            @GObject.Signal\\n            def annotated_signal(self, a:int, b:str):\\n                "Python3 annotation support for parameter types.\\n\\n        def on_pushed(obj):\\n            print(obj)\\n\\n        spam = Spam()\\n        spam.pushed.connect(on_pushed)\\n        spam.pushed.emit()\\n    \', \'BoundSignal\': <class \'gi._signalhelper.Signal.BoundSignal\'>, \'__new__\': <staticmethod(<function Signal.__new__ at 0x000001dd11e0bba0>)>, \'__init__\': <function Signal.__init__ at 0x000001dd11ddc180>, \'__get__\': <function Signal.__get__ at 0x000001dd11ddc220>, \'__call__\': <function Signal.__call__ at 0x000001dd11ddc2c0>, \'copy\': <function Signal.copy at 0x000001dd11ddc360>, \'get_signal_args\': <function Signal.get_signal_args at 0x000001dd11ddc400>, \'__dict__\': <attribute \'__dict__\' of \'Signal\' objects>, \'__weakref__\': <attribute \'__weakref__\' of \'Signal\' objects>})'
 
 

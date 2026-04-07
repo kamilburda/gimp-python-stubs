@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -69,7 +68,7 @@ class Object(Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -97,6 +96,9 @@ class Object(Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -293,20 +295,20 @@ class Object(Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -336,7 +338,11 @@ class Object(Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -434,9 +440,9 @@ class Object(Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x0000010b079f38b0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001dd11d20070>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GObject', '_unsupported_method': <function Object._unsupported_method at 0x0000010b07929440>, '_unsupported_data_method': <function Object._unsupported_data_method at 0x0000010b079294e0>, 'get_data': <function Object._unsupported_data_method at 0x0000010b079294e0>, 'get_qdata': <function Object._unsupported_data_method at 0x0000010b079294e0>, 'set_data': <function Object._unsupported_data_method at 0x0000010b079294e0>, 'steal_data': <function Object._unsupported_data_method at 0x0000010b079294e0>, 'steal_qdata': <function Object._unsupported_data_method at 0x0000010b079294e0>, 'replace_data': <function Object._unsupported_data_method at 0x0000010b079294e0>, 'replace_qdata': <function Object._unsupported_data_method at 0x0000010b079294e0>, 'bind_property_full': <function Object._unsupported_method at 0x0000010b07929440>, 'compat_control': <function Object._unsupported_method at 0x0000010b07929440>, 'interface_find_property': <function Object._unsupported_method at 0x0000010b07929440>, 'interface_install_property': <function Object._unsupported_method at 0x0000010b07929440>, 'interface_list_properties': <function Object._unsupported_method at 0x0000010b07929440>, 'notify_by_pspec': <function Object._unsupported_method at 0x0000010b07929440>, 'watch_closure': <function Object._unsupported_method at 0x0000010b07929440>, '_ref': gi.FunctionInfo(ref, bound=None), '_ref_sink': gi.FunctionInfo(ref_sink, bound=None), '_unref': gi.FunctionInfo(unref, bound=None), '_force_floating': gi.FunctionInfo(force_floating, bound=None), 'ref': <function Object._unsupported_method at 0x0000010b07929440>, 'ref_sink': <function Object._unsupported_method at 0x0000010b07929440>, 'unref': <function Object._unsupported_method at 0x0000010b07929440>, 'force_floating': <function Object._unsupported_method at 0x0000010b07929440>, 'get_property': <method 'get_property' of 'gi._gi.GObject' objects>, 'get_properties': <method 'get_properties' of 'gi._gi.GObject' objects>, 'set_property': <method 'set_property' of 'gi._gi.GObject' objects>, 'set_properties': <method 'set_properties' of 'gi._gi.GObject' objects>, 'bind_property': <method 'bind_property' of 'gi._gi.GObject' objects>, 'connect': <method 'connect' of 'gi._gi.GObject' objects>, 'connect_after': <method 'connect_after' of 'gi._gi.GObject' objects>, 'connect_object': <method 'connect_object' of 'gi._gi.GObject' objects>, 'connect_object_after': <method 'connect_object_after' of 'gi._gi.GObject' objects>, 'disconnect_by_func': <method 'disconnect_by_func' of 'gi._gi.GObject' objects>, 'handler_block_by_func': <method 'handler_block_by_func' of 'gi._gi.GObject' objects>, 'handler_unblock_by_func': <method 'handler_unblock_by_func' of 'gi._gi.GObject' objects>, 'emit': <method 'emit' of 'gi._gi.GObject' objects>, 'chain': <method 'chain' of 'gi._gi.GObject' objects>, 'weak_ref': <method 'weak_ref' of 'gi._gi.GObject' objects>, '__copy__': <method '__copy__' of 'gi._gi.GObject' objects>, '__deepcopy__': <method '__deepcopy__' of 'gi._gi.GObject' objects>, 'freeze_notify': <function Object.freeze_notify at 0x0000010b07929580>, 'connect_data': <function Object.connect_data at 0x0000010b07929620>, 'handler_block': <function signal_handler_block at 0x0000010b07928b80>, 'handler_unblock': <function _signalmethod.<locals>.meth at 0x0000010b079296c0>, 'disconnect': <function _signalmethod.<locals>.meth at 0x0000010b07929760>, 'handler_disconnect': <function _signalmethod.<locals>.meth at 0x0000010b07929800>, 'handler_is_connected': <function _signalmethod.<locals>.meth at 0x0000010b079298a0>, 'stop_emission_by_name': <function _signalmethod.<locals>.meth at 0x0000010b07929940>, 'stop_emission': <function Object.stop_emission at 0x0000010b079299e0>, 'emit_stop_by_name': <function Object.stop_emission at 0x0000010b079299e0>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GObject', '_unsupported_method': <function Object._unsupported_method at 0x000001dd11d99620>, '_unsupported_data_method': <function Object._unsupported_data_method at 0x000001dd11d996c0>, 'get_data': <function Object._unsupported_data_method at 0x000001dd11d996c0>, 'get_qdata': <function Object._unsupported_data_method at 0x000001dd11d996c0>, 'set_data': <function Object._unsupported_data_method at 0x000001dd11d996c0>, 'steal_data': <function Object._unsupported_data_method at 0x000001dd11d996c0>, 'steal_qdata': <function Object._unsupported_data_method at 0x000001dd11d996c0>, 'replace_data': <function Object._unsupported_data_method at 0x000001dd11d996c0>, 'replace_qdata': <function Object._unsupported_data_method at 0x000001dd11d996c0>, 'bind_property_full': <function Object._unsupported_method at 0x000001dd11d99620>, 'compat_control': <function Object._unsupported_method at 0x000001dd11d99620>, 'interface_find_property': <function Object._unsupported_method at 0x000001dd11d99620>, 'interface_install_property': <function Object._unsupported_method at 0x000001dd11d99620>, 'interface_list_properties': <function Object._unsupported_method at 0x000001dd11d99620>, 'notify_by_pspec': <function Object._unsupported_method at 0x000001dd11d99620>, 'watch_closure': <function Object._unsupported_method at 0x000001dd11d99620>, '_ref': <function Object._ref at 0x000001dd11d99760>, '_ref_sink': <function Object._ref_sink at 0x000001dd11d99800>, '_unref': <function Object._unref at 0x000001dd11d998a0>, '_force_floating': <function Object._force_floating at 0x000001dd11d99940>, 'ref': <function Object._unsupported_method at 0x000001dd11d99620>, 'ref_sink': <function Object._unsupported_method at 0x000001dd11d99620>, 'unref': <function Object._unsupported_method at 0x000001dd11d99620>, 'force_floating': <function Object._unsupported_method at 0x000001dd11d99620>, 'get_property': <method 'get_property' of 'gi._gi.GObject' objects>, 'get_properties': <method 'get_properties' of 'gi._gi.GObject' objects>, 'set_property': <method 'set_property' of 'gi._gi.GObject' objects>, 'set_properties': <method 'set_properties' of 'gi._gi.GObject' objects>, 'bind_property': <method 'bind_property' of 'gi._gi.GObject' objects>, 'connect': <method 'connect' of 'gi._gi.GObject' objects>, 'connect_after': <method 'connect_after' of 'gi._gi.GObject' objects>, 'connect_object': <method 'connect_object' of 'gi._gi.GObject' objects>, 'connect_object_after': <method 'connect_object_after' of 'gi._gi.GObject' objects>, 'disconnect_by_func': <method 'disconnect_by_func' of 'gi._gi.GObject' objects>, 'handler_block_by_func': <method 'handler_block_by_func' of 'gi._gi.GObject' objects>, 'handler_unblock_by_func': <method 'handler_unblock_by_func' of 'gi._gi.GObject' objects>, 'emit': <method 'emit' of 'gi._gi.GObject' objects>, 'chain': <method 'chain' of 'gi._gi.GObject' objects>, 'weak_ref': <method 'weak_ref' of 'gi._gi.GObject' objects>, '__copy__': <method '__copy__' of 'gi._gi.GObject' objects>, '__deepcopy__': <method '__deepcopy__' of 'gi._gi.GObject' objects>, 'freeze_notify': <function Object.freeze_notify at 0x000001dd11d999e0>, 'connect_data': <function Object.connect_data at 0x000001dd11d99a80>, 'handler_block': <function signal_handler_block at 0x000001dd11d98d60>, 'handler_unblock': <function _signalmethod.<locals>.meth at 0x000001dd11d99b20>, 'disconnect': <function _signalmethod.<locals>.meth at 0x000001dd11d99bc0>, 'handler_disconnect': <function _signalmethod.<locals>.meth at 0x000001dd11d99c60>, 'handler_is_connected': <function _signalmethod.<locals>.meth at 0x000001dd11d99d00>, 'stop_emission_by_name': <function _signalmethod.<locals>.meth at 0x000001dd11d99da0>, 'stop_emission': <function Object.stop_emission at 0x000001dd11d99e40>, 'emit_stop_by_name': <function Object.stop_emission at 0x000001dd11d99e40>, '__doc__': None, '__gsignals__': {}})"
     __gdoc__ = 'Object GObject\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
     __gtype__ = None # (!) real value is '<GType GObject (80)>'

@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -54,7 +59,11 @@ class Icon(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -145,10 +154,10 @@ class Icon(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Icon), '__module__': 'gi.repository.Gio', '__gtype__': <GType GIcon (2435161936)>, '__dict__': <attribute '__dict__' of 'Icon' objects>, '__weakref__': <attribute '__weakref__' of 'Icon' objects>, '__doc__': None, '__gsignals__': {}, 'deserialize': gi.FunctionInfo(deserialize, bound=None), 'new_for_string': gi.FunctionInfo(new_for_string, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'hash': gi.FunctionInfo(hash, bound=None), 'serialize': gi.FunctionInfo(serialize, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Icon), '__module__': 'gi.repository.Gio', '__gtype__': <GType GIcon (1838041392)>, '__dict__': <attribute '__dict__' of 'Icon' objects>, '__weakref__': <attribute '__weakref__' of 'Icon' objects>, '__doc__': None, '__gsignals__': {}, 'deserialize': <staticmethod(gi.FunctionInfo(deserialize))>, 'new_for_string': <staticmethod(gi.FunctionInfo(new_for_string))>, 'equal': gi.FunctionInfo(equal), 'hash': gi.FunctionInfo(hash), 'serialize': gi.FunctionInfo(serialize), 'to_string': gi.FunctionInfo(to_string)})"
     __gdoc__ = 'Interface GIcon\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GIcon (2435161936)>'
+    __gtype__ = None # (!) real value is '<GType GIcon (1838041392)>'
     __info__ = InterfaceInfo(Icon)
 
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class GlyphString(__gi.Boxed):
@@ -39,8 +37,8 @@ class GlyphString(__gi.Boxed):
         """ free(self) """
         pass
 
-    def get_logical_widths(self, text, length, embedding_level, logical_widths): # real signature unknown; restored from __doc__
-        """ get_logical_widths(self, text:str, length:int, embedding_level:int, logical_widths:list) """
+    def get_logical_widths(self, text, length, embedding_level): # real signature unknown; restored from __doc__
+        """ get_logical_widths(self, text:str, length:int, embedding_level:int) -> logical_widths:list """
         pass
 
     def get_width(self): # real signature unknown; restored from __doc__
@@ -55,7 +53,8 @@ class GlyphString(__gi.Boxed):
         """ index_to_x_full(self, text:str, length:int, analysis:Pango.Analysis, attrs:Pango.LogAttr=None, index_:int, trailing:bool) -> x_pos:int """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Pango.GlyphString """
         pass
 
@@ -188,8 +187,8 @@ class GlyphString(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphString), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoGlyphString (4081761728)>, '__dict__': <attribute '__dict__' of 'GlyphString' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphString' objects>, '__doc__': None, 'num_glyphs': <property object at 0x00000213f60869d0>, 'glyphs': <property object at 0x00000213f6086ac0>, 'log_clusters': <property object at 0x00000213f6086bb0>, 'space': <property object at 0x00000213f6086ca0>, 'new': gi.FunctionInfo(new, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'extents': gi.FunctionInfo(extents, bound=None), 'extents_range': gi.FunctionInfo(extents_range, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_logical_widths': gi.FunctionInfo(get_logical_widths, bound=None), 'get_width': gi.FunctionInfo(get_width, bound=None), 'index_to_x': gi.FunctionInfo(index_to_x, bound=None), 'index_to_x_full': gi.FunctionInfo(index_to_x_full, bound=None), 'set_size': gi.FunctionInfo(set_size, bound=None), 'x_to_index': gi.FunctionInfo(x_to_index, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x00000213f5fb7880>})"
-    __gtype__ = None # (!) real value is '<GType PangoGlyphString (4081761728)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(GlyphString), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoGlyphString (843940704)>, '__dict__': <attribute '__dict__' of 'GlyphString' objects>, '__weakref__': <attribute '__weakref__' of 'GlyphString' objects>, '__doc__': None, 'num_glyphs': <property object at 0x00000280355d5490>, 'glyphs': <property object at 0x00000280355d5580>, 'log_clusters': <property object at 0x00000280355d5670>, 'space': <property object at 0x00000280355d5760>, 'new': <classmethod(gi.FunctionInfo(new))>, 'copy': gi.FunctionInfo(copy), 'extents': gi.FunctionInfo(extents), 'extents_range': gi.FunctionInfo(extents_range), 'free': gi.FunctionInfo(free), 'get_logical_widths': gi.FunctionInfo(get_logical_widths), 'get_width': gi.FunctionInfo(get_width), 'index_to_x': gi.FunctionInfo(index_to_x), 'index_to_x_full': gi.FunctionInfo(index_to_x_full), 'set_size': gi.FunctionInfo(set_size), 'x_to_index': gi.FunctionInfo(x_to_index), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x0000028034ff1010>})"
+    __gtype__ = None # (!) real value is '<GType PangoGlyphString (843940704)>'
     __info__ = StructInfo(GlyphString)
 
 

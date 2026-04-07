@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class TlsConnectionClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -144,7 +153,7 @@ class TlsConnectionClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TlsConnectionClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TlsConnectionClass' objects>, '__weakref__': <attribute '__weakref__' of 'TlsConnectionClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001a793daab60>, 'accept_certificate': <property object at 0x000001a793daaca0>, 'handshake': <property object at 0x000001a793daad40>, 'handshake_async': <property object at 0x000001a793daae30>, 'handshake_finish': <property object at 0x000001a793daaf70>, 'get_binding_data': <property object at 0x000001a793dab060>, 'get_negotiated_protocol': <property object at 0x000001a793dab150>, 'padding': <property object at 0x000001a793dab1f0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TlsConnectionClass), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TlsConnectionClass' objects>, '__weakref__': <attribute '__weakref__' of 'TlsConnectionClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001ea709debb0>, 'accept_certificate': <property object at 0x000001ea709deca0>, 'handshake': <property object at 0x000001ea709ded90>, 'handshake_async': <property object at 0x000001ea709dee80>, 'handshake_finish': <property object at 0x000001ea709def70>, 'get_binding_data': <property object at 0x000001ea709df060>, 'get_negotiated_protocol': <property object at 0x000001ea709df150>, 'padding': <property object at 0x000001ea709df240>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TlsConnectionClass)
 

@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Thread(__gi.Boxed):
@@ -37,11 +35,16 @@ class Thread(__gi.Boxed):
         """ exit(retval=None) """
         pass
 
+    def get_name(self): # real signature unknown; restored from __doc__
+        """ get_name(self) -> str """
+        return ""
+
     def join(self): # real signature unknown; restored from __doc__
         """ join(self) """
         pass
 
-    def new(self, name=None, func, data=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, name=None, func, data=None): # real signature unknown; restored from __doc__
         """ new(name:str=None, func:GLib.ThreadFunc, data=None) -> GLib.Thread """
         pass
 
@@ -53,7 +56,8 @@ class Thread(__gi.Boxed):
         """ self() -> GLib.Thread """
         pass
 
-    def try_new(self, name=None, func, data=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def try_new(cls, name=None, func, data=None): # real signature unknown; restored from __doc__
         """ try_new(name:str=None, func:GLib.ThreadFunc, data=None) -> GLib.Thread """
         pass
 
@@ -185,8 +189,8 @@ class Thread(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Thread), '__module__': 'gi.repository.GLib', '__gtype__': <GType GThread (163508128)>, '__dict__': <attribute '__dict__' of 'Thread' objects>, '__weakref__': <attribute '__weakref__' of 'Thread' objects>, '__doc__': None, 'func': <property object at 0x000002830bec32e0>, 'data': <property object at 0x000002830bec33d0>, 'joinable': <property object at 0x000002830bec34c0>, 'priority': <property object at 0x000002830bec35b0>, 'new': gi.FunctionInfo(new, bound=None), 'try_new': gi.FunctionInfo(try_new, bound=None), 'join': gi.FunctionInfo(join, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'error_quark': gi.FunctionInfo(error_quark, bound=None), 'exit': gi.FunctionInfo(exit, bound=None), 'self': gi.FunctionInfo(self, bound=None), 'yield_': gi.FunctionInfo(yield, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GThread (163508128)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Thread), '__module__': 'gi.repository.GLib', '__gtype__': <GType GThread (2640518592)>, '__dict__': <attribute '__dict__' of 'Thread' objects>, '__weakref__': <attribute '__weakref__' of 'Thread' objects>, '__doc__': None, 'func': <property object at 0x0000018ea0050d60>, 'data': <property object at 0x0000018ea0050b30>, 'joinable': <property object at 0x0000018ea0050ea0>, 'priority': <property object at 0x0000018ea0050f40>, 'new': <classmethod(gi.FunctionInfo(new))>, 'try_new': <classmethod(gi.FunctionInfo(try_new))>, 'get_name': gi.FunctionInfo(get_name), 'join': gi.FunctionInfo(join), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref), 'error_quark': <staticmethod(gi.FunctionInfo(error_quark))>, 'exit': <staticmethod(gi.FunctionInfo(exit))>, 'self': <staticmethod(gi.FunctionInfo(self))>, 'yield_': <staticmethod(gi.FunctionInfo(yield))>})"
+    __gtype__ = None # (!) real value is '<GType GThread (2640518592)>'
     __info__ = StructInfo(Thread)
 
 

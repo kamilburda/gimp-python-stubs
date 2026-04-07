@@ -1,26 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class Precision(__gobject.GEnum):
+class Precision(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -79,7 +75,7 @@ class Precision(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -102,7 +98,7 @@ class Precision(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -130,12 +126,23 @@ class Precision(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -164,6 +171,10 @@ class Precision(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -209,6 +220,14 @@ class Precision(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -234,8 +253,8 @@ class Precision(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -266,15 +285,16 @@ class Precision(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -338,7 +358,7 @@ class Precision(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -380,10 +400,6 @@ class Precision(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     DOUBLE_LINEAR = 700
     DOUBLE_NON_LINEAR = 750
@@ -403,29 +419,9 @@ class Precision(__gobject.GEnum):
     U8_LINEAR = 100
     U8_NON_LINEAR = 150
     U8_PERCEPTUAL = 175
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gimp', '__dict__': <attribute '__dict__' of 'Precision' objects>, '__doc__': None, '__gtype__': <GType GimpPrecision (3595417424)>, '__enum_values__': {100: <enum GIMP_PRECISION_U8_LINEAR of type Gimp.Precision>, 150: <enum GIMP_PRECISION_U8_NON_LINEAR of type Gimp.Precision>, 175: <enum GIMP_PRECISION_U8_PERCEPTUAL of type Gimp.Precision>, 200: <enum GIMP_PRECISION_U16_LINEAR of type Gimp.Precision>, 250: <enum GIMP_PRECISION_U16_NON_LINEAR of type Gimp.Precision>, 275: <enum GIMP_PRECISION_U16_PERCEPTUAL of type Gimp.Precision>, 300: <enum GIMP_PRECISION_U32_LINEAR of type Gimp.Precision>, 350: <enum GIMP_PRECISION_U32_NON_LINEAR of type Gimp.Precision>, 375: <enum GIMP_PRECISION_U32_PERCEPTUAL of type Gimp.Precision>, 500: <enum GIMP_PRECISION_HALF_LINEAR of type Gimp.Precision>, 550: <enum GIMP_PRECISION_HALF_NON_LINEAR of type Gimp.Precision>, 575: <enum GIMP_PRECISION_HALF_PERCEPTUAL of type Gimp.Precision>, 600: <enum GIMP_PRECISION_FLOAT_LINEAR of type Gimp.Precision>, 650: <enum GIMP_PRECISION_FLOAT_NON_LINEAR of type Gimp.Precision>, 675: <enum GIMP_PRECISION_FLOAT_PERCEPTUAL of type Gimp.Precision>, 700: <enum GIMP_PRECISION_DOUBLE_LINEAR of type Gimp.Precision>, 750: <enum GIMP_PRECISION_DOUBLE_NON_LINEAR of type Gimp.Precision>, 775: <enum GIMP_PRECISION_DOUBLE_PERCEPTUAL of type Gimp.Precision>}, '__info__': gi.EnumInfo(Precision), 'U8_LINEAR': <enum GIMP_PRECISION_U8_LINEAR of type Gimp.Precision>, 'U8_NON_LINEAR': <enum GIMP_PRECISION_U8_NON_LINEAR of type Gimp.Precision>, 'U8_PERCEPTUAL': <enum GIMP_PRECISION_U8_PERCEPTUAL of type Gimp.Precision>, 'U16_LINEAR': <enum GIMP_PRECISION_U16_LINEAR of type Gimp.Precision>, 'U16_NON_LINEAR': <enum GIMP_PRECISION_U16_NON_LINEAR of type Gimp.Precision>, 'U16_PERCEPTUAL': <enum GIMP_PRECISION_U16_PERCEPTUAL of type Gimp.Precision>, 'U32_LINEAR': <enum GIMP_PRECISION_U32_LINEAR of type Gimp.Precision>, 'U32_NON_LINEAR': <enum GIMP_PRECISION_U32_NON_LINEAR of type Gimp.Precision>, 'U32_PERCEPTUAL': <enum GIMP_PRECISION_U32_PERCEPTUAL of type Gimp.Precision>, 'HALF_LINEAR': <enum GIMP_PRECISION_HALF_LINEAR of type Gimp.Precision>, 'HALF_NON_LINEAR': <enum GIMP_PRECISION_HALF_NON_LINEAR of type Gimp.Precision>, 'HALF_PERCEPTUAL': <enum GIMP_PRECISION_HALF_PERCEPTUAL of type Gimp.Precision>, 'FLOAT_LINEAR': <enum GIMP_PRECISION_FLOAT_LINEAR of type Gimp.Precision>, 'FLOAT_NON_LINEAR': <enum GIMP_PRECISION_FLOAT_NON_LINEAR of type Gimp.Precision>, 'FLOAT_PERCEPTUAL': <enum GIMP_PRECISION_FLOAT_PERCEPTUAL of type Gimp.Precision>, 'DOUBLE_LINEAR': <enum GIMP_PRECISION_DOUBLE_LINEAR of type Gimp.Precision>, 'DOUBLE_NON_LINEAR': <enum GIMP_PRECISION_DOUBLE_NON_LINEAR of type Gimp.Precision>, 'DOUBLE_PERCEPTUAL': <enum GIMP_PRECISION_DOUBLE_PERCEPTUAL of type Gimp.Precision>})"
-    __enum_values__ = {
-        100: 100,
-        150: 150,
-        175: 175,
-        200: 200,
-        250: 250,
-        275: 275,
-        300: 300,
-        350: 350,
-        375: 375,
-        500: 500,
-        550: 550,
-        575: 575,
-        600: 600,
-        650: 650,
-        675: 675,
-        700: 700,
-        750: 750,
-        775: 775,
-    }
-    __gtype__ = None # (!) real value is '<GType GimpPrecision (3595417424)>'
-    __info__ = gi.EnumInfo(Precision)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'U8_LINEAR': <Precision.U8_LINEAR: 100>, 'U8_NON_LINEAR': <Precision.U8_NON_LINEAR: 150>, 'U8_PERCEPTUAL': <Precision.U8_PERCEPTUAL: 175>, 'U16_LINEAR': <Precision.U16_LINEAR: 200>, 'U16_NON_LINEAR': <Precision.U16_NON_LINEAR: 250>, 'U16_PERCEPTUAL': <Precision.U16_PERCEPTUAL: 275>, 'U32_LINEAR': <Precision.U32_LINEAR: 300>, 'U32_NON_LINEAR': <Precision.U32_NON_LINEAR: 350>, 'U32_PERCEPTUAL': <Precision.U32_PERCEPTUAL: 375>, 'HALF_LINEAR': <Precision.HALF_LINEAR: 500>, 'HALF_NON_LINEAR': <Precision.HALF_NON_LINEAR: 550>, 'HALF_PERCEPTUAL': <Precision.HALF_PERCEPTUAL: 575>, 'FLOAT_LINEAR': <Precision.FLOAT_LINEAR: 600>, 'FLOAT_NON_LINEAR': <Precision.FLOAT_NON_LINEAR: 650>, 'FLOAT_PERCEPTUAL': <Precision.FLOAT_PERCEPTUAL: 675>, 'DOUBLE_LINEAR': <Precision.DOUBLE_LINEAR: 700>, 'DOUBLE_NON_LINEAR': <Precision.DOUBLE_NON_LINEAR: 750>, 'DOUBLE_PERCEPTUAL': <Precision.DOUBLE_PERCEPTUAL: 775>})"
+    __name__ = 'Precision'
+    __qualname__ = 'Precision'
 
 

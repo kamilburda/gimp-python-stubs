@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -46,7 +51,7 @@ class Task(__gi_overrides_GObject.Object, AsyncResult):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -74,6 +79,9 @@ class Task(__gi_overrides_GObject.Object, AsyncResult):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -253,7 +261,8 @@ class Task(__gi_overrides_GObject.Object, AsyncResult):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, source_object=None, cancellable=None, callback=None, callback_data=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, source_object=None, cancellable=None, callback=None, callback_data=None): # real signature unknown; restored from __doc__
         """ new(source_object:GObject.Object=None, cancellable:Gio.Cancellable=None, callback:Gio.AsyncReadyCallback=None, callback_data=None) -> Gio.Task """
         pass
 
@@ -418,20 +427,20 @@ class Task(__gi_overrides_GObject.Object, AsyncResult):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -461,7 +470,11 @@ class Task(__gi_overrides_GObject.Object, AsyncResult):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -562,12 +575,12 @@ class Task(__gi_overrides_GObject.Object, AsyncResult):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb5a80>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7086cac0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Task), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTask (2466397680)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'is_valid': gi.FunctionInfo(is_valid, bound=None), 'report_error': gi.FunctionInfo(report_error, bound=None), 'get_cancellable': gi.FunctionInfo(get_cancellable, bound=None), 'get_check_cancellable': gi.FunctionInfo(get_check_cancellable, bound=None), 'get_completed': gi.FunctionInfo(get_completed, bound=None), 'get_context': gi.FunctionInfo(get_context, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_priority': gi.FunctionInfo(get_priority, bound=None), 'get_return_on_cancel': gi.FunctionInfo(get_return_on_cancel, bound=None), 'get_source_object': gi.FunctionInfo(get_source_object, bound=None), 'get_source_tag': gi.FunctionInfo(get_source_tag, bound=None), 'get_task_data': gi.FunctionInfo(get_task_data, bound=None), 'had_error': gi.FunctionInfo(had_error, bound=None), 'propagate_boolean': gi.FunctionInfo(propagate_boolean, bound=None), 'propagate_int': gi.FunctionInfo(propagate_int, bound=None), 'propagate_pointer': gi.FunctionInfo(propagate_pointer, bound=None), 'propagate_value': gi.FunctionInfo(propagate_value, bound=None), 'return_boolean': gi.FunctionInfo(return_boolean, bound=None), 'return_error': gi.FunctionInfo(return_error, bound=None), 'return_error_if_cancelled': gi.FunctionInfo(return_error_if_cancelled, bound=None), 'return_int': gi.FunctionInfo(return_int, bound=None), 'return_new_error_literal': gi.FunctionInfo(return_new_error_literal, bound=None), 'return_pointer': gi.FunctionInfo(return_pointer, bound=None), 'return_value': gi.FunctionInfo(return_value, bound=None), 'run_in_thread': gi.FunctionInfo(run_in_thread, bound=None), 'run_in_thread_sync': gi.FunctionInfo(run_in_thread_sync, bound=None), 'set_check_cancellable': gi.FunctionInfo(set_check_cancellable, bound=None), 'set_name': gi.FunctionInfo(set_name, bound=None), 'set_priority': gi.FunctionInfo(set_priority, bound=None), 'set_return_on_cancel': gi.FunctionInfo(set_return_on_cancel, bound=None), 'set_source_tag': gi.FunctionInfo(set_source_tag, bound=None), 'set_static_name': gi.FunctionInfo(set_static_name, bound=None), 'set_task_data': gi.FunctionInfo(set_task_data, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Task), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTask (1841606384)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'is_valid': <staticmethod(gi.FunctionInfo(is_valid))>, 'report_error': <staticmethod(gi.FunctionInfo(report_error))>, 'get_cancellable': gi.FunctionInfo(get_cancellable), 'get_check_cancellable': gi.FunctionInfo(get_check_cancellable), 'get_completed': gi.FunctionInfo(get_completed), 'get_context': gi.FunctionInfo(get_context), 'get_name': gi.FunctionInfo(get_name), 'get_priority': gi.FunctionInfo(get_priority), 'get_return_on_cancel': gi.FunctionInfo(get_return_on_cancel), 'get_source_object': gi.FunctionInfo(get_source_object), 'get_source_tag': gi.FunctionInfo(get_source_tag), 'get_task_data': gi.FunctionInfo(get_task_data), 'had_error': gi.FunctionInfo(had_error), 'propagate_boolean': gi.FunctionInfo(propagate_boolean), 'propagate_int': gi.FunctionInfo(propagate_int), 'propagate_pointer': gi.FunctionInfo(propagate_pointer), 'propagate_value': gi.FunctionInfo(propagate_value), 'return_boolean': gi.FunctionInfo(return_boolean), 'return_error': gi.FunctionInfo(return_error), 'return_error_if_cancelled': gi.FunctionInfo(return_error_if_cancelled), 'return_int': gi.FunctionInfo(return_int), 'return_new_error_literal': gi.FunctionInfo(return_new_error_literal), 'return_pointer': gi.FunctionInfo(return_pointer), 'return_value': gi.FunctionInfo(return_value), 'run_in_thread': gi.FunctionInfo(run_in_thread), 'run_in_thread_sync': gi.FunctionInfo(run_in_thread_sync), 'set_check_cancellable': gi.FunctionInfo(set_check_cancellable), 'set_name': gi.FunctionInfo(set_name), 'set_priority': gi.FunctionInfo(set_priority), 'set_return_on_cancel': gi.FunctionInfo(set_return_on_cancel), 'set_source_tag': gi.FunctionInfo(set_source_tag), 'set_static_name': gi.FunctionInfo(set_static_name), 'set_task_data': gi.FunctionInfo(set_task_data)})"
     __gdoc__ = 'Object GTask\n\nProperties from GTask:\n  completed -> gboolean: completed\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GTask (2466397680)>'
+    __gtype__ = None # (!) real value is '<GType GTask (1841606384)>'
     __info__ = ObjectInfo(Task)
 
 

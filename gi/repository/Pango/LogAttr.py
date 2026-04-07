@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class LogAttr(__gi.Struct):
@@ -163,7 +161,7 @@ class LogAttr(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LogAttr), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'LogAttr' objects>, '__weakref__': <attribute '__weakref__' of 'LogAttr' objects>, '__doc__': None, 'is_line_break': <property object at 0x00000213f6087c40>, 'is_mandatory_break': <property object at 0x00000213f6087d30>, 'is_char_break': <property object at 0x00000213f6087e20>, 'is_white': <property object at 0x00000213f6087f10>, 'is_cursor_position': <property object at 0x00000213f6078040>, 'is_word_start': <property object at 0x00000213f6078130>, 'is_word_end': <property object at 0x00000213f6078220>, 'is_sentence_boundary': <property object at 0x00000213f6078310>, 'is_sentence_start': <property object at 0x00000213f6078400>, 'is_sentence_end': <property object at 0x00000213f60784f0>, 'backspace_deletes_character': <property object at 0x00000213f6078630>, 'is_expandable_space': <property object at 0x00000213f6078720>, 'is_word_boundary': <property object at 0x00000213f6078810>, 'break_inserts_hyphen': <property object at 0x00000213f6078900>, 'break_removes_preceding': <property object at 0x00000213f60789f0>, 'reserved': <property object at 0x00000213f6078ae0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(LogAttr), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'LogAttr' objects>, '__weakref__': <attribute '__weakref__' of 'LogAttr' objects>, '__doc__': None, 'is_line_break': <property object at 0x00000280355d6930>, 'is_mandatory_break': <property object at 0x00000280355d6890>, 'is_char_break': <property object at 0x00000280355d6ac0>, 'is_white': <property object at 0x00000280355d6bb0>, 'is_cursor_position': <property object at 0x00000280355d6ca0>, 'is_word_start': <property object at 0x00000280355d6d90>, 'is_word_end': <property object at 0x00000280355d6e80>, 'is_sentence_boundary': <property object at 0x00000280355d6f70>, 'is_sentence_start': <property object at 0x00000280355d7060>, 'is_sentence_end': <property object at 0x00000280355d7150>, 'backspace_deletes_character': <property object at 0x00000280355d7290>, 'is_expandable_space': <property object at 0x00000280355d7380>, 'is_word_boundary': <property object at 0x00000280355d7470>, 'break_inserts_hyphen': <property object at 0x00000280355d7560>, 'break_removes_preceding': <property object at 0x00000280355d7650>, 'reserved': <property object at 0x00000280355d7740>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(LogAttr)
 

@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -49,7 +54,7 @@ class TlsCertificate(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -77,6 +82,9 @@ class TlsCertificate(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_verify(self, *args, **kwargs): # real signature unknown
@@ -240,27 +248,33 @@ class TlsCertificate(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_from_file(self, file): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_file(cls, file): # real signature unknown; restored from __doc__
         """ new_from_file(file:str) -> Gio.TlsCertificate """
         pass
 
-    def new_from_files(self, cert_file, key_file): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_files(cls, cert_file, key_file): # real signature unknown; restored from __doc__
         """ new_from_files(cert_file:str, key_file:str) -> Gio.TlsCertificate """
         pass
 
-    def new_from_file_with_password(self, file, password): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_file_with_password(cls, file, password): # real signature unknown; restored from __doc__
         """ new_from_file_with_password(file:str, password:str) -> Gio.TlsCertificate """
         pass
 
-    def new_from_pem(self, data, length): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_pem(cls, data, length): # real signature unknown; restored from __doc__
         """ new_from_pem(data:str, length:int) -> Gio.TlsCertificate """
         pass
 
-    def new_from_pkcs11_uris(self, pkcs11_uri, private_key_pkcs11_uri=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_pkcs11_uris(cls, pkcs11_uri, private_key_pkcs11_uri=None): # real signature unknown; restored from __doc__
         """ new_from_pkcs11_uris(pkcs11_uri:str, private_key_pkcs11_uri:str=None) -> Gio.TlsCertificate """
         pass
 
-    def new_from_pkcs12(self, data, password=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_pkcs12(cls, data, password=None): # real signature unknown; restored from __doc__
         """ new_from_pkcs12(data:list, password:str=None) -> Gio.TlsCertificate """
         pass
 
@@ -341,20 +355,20 @@ class TlsCertificate(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -384,7 +398,11 @@ class TlsCertificate(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -486,12 +504,12 @@ class TlsCertificate(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb46d0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7086d720>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TlsCertificate), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTlsCertificate (2466629424)>, '__doc__': None, '__gsignals__': {}, 'new_from_file': gi.FunctionInfo(new_from_file, bound=None), 'new_from_file_with_password': gi.FunctionInfo(new_from_file_with_password, bound=None), 'new_from_files': gi.FunctionInfo(new_from_files, bound=None), 'new_from_pem': gi.FunctionInfo(new_from_pem, bound=None), 'new_from_pkcs11_uris': gi.FunctionInfo(new_from_pkcs11_uris, bound=None), 'new_from_pkcs12': gi.FunctionInfo(new_from_pkcs12, bound=None), 'list_new_from_file': gi.FunctionInfo(list_new_from_file, bound=None), 'get_dns_names': gi.FunctionInfo(get_dns_names, bound=None), 'get_ip_addresses': gi.FunctionInfo(get_ip_addresses, bound=None), 'get_issuer': gi.FunctionInfo(get_issuer, bound=None), 'get_issuer_name': gi.FunctionInfo(get_issuer_name, bound=None), 'get_not_valid_after': gi.FunctionInfo(get_not_valid_after, bound=None), 'get_not_valid_before': gi.FunctionInfo(get_not_valid_before, bound=None), 'get_subject_name': gi.FunctionInfo(get_subject_name, bound=None), 'is_same': gi.FunctionInfo(is_same, bound=None), 'verify': gi.FunctionInfo(verify, bound=None), 'do_verify': gi.VFuncInfo(verify, bound=None), 'parent_instance': <property object at 0x000001a793da8f40>, 'priv': <property object at 0x000001a793da9030>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(TlsCertificate), '__module__': 'gi.repository.Gio', '__gtype__': <GType GTlsCertificate (1846058448)>, '__doc__': None, '__gsignals__': {}, 'new_from_file': <classmethod(gi.FunctionInfo(new_from_file))>, 'new_from_file_with_password': <classmethod(gi.FunctionInfo(new_from_file_with_password))>, 'new_from_files': <classmethod(gi.FunctionInfo(new_from_files))>, 'new_from_pem': <classmethod(gi.FunctionInfo(new_from_pem))>, 'new_from_pkcs11_uris': <classmethod(gi.FunctionInfo(new_from_pkcs11_uris))>, 'new_from_pkcs12': <classmethod(gi.FunctionInfo(new_from_pkcs12))>, 'list_new_from_file': <staticmethod(gi.FunctionInfo(list_new_from_file))>, 'get_dns_names': gi.FunctionInfo(get_dns_names), 'get_ip_addresses': gi.FunctionInfo(get_ip_addresses), 'get_issuer': gi.FunctionInfo(get_issuer), 'get_issuer_name': gi.FunctionInfo(get_issuer_name), 'get_not_valid_after': gi.FunctionInfo(get_not_valid_after), 'get_not_valid_before': gi.FunctionInfo(get_not_valid_before), 'get_subject_name': gi.FunctionInfo(get_subject_name), 'is_same': gi.FunctionInfo(is_same), 'verify': gi.FunctionInfo(verify), 'do_verify': gi.VFuncInfo(verify), 'parent_instance': <property object at 0x000001ea709dde90>, 'priv': <property object at 0x000001ea709ddf80>})"
     __gdoc__ = 'Object GTlsCertificate\n\nProperties from GTlsCertificate:\n  certificate -> GByteArray: certificate\n  certificate-pem -> gchararray: certificate-pem\n  private-key -> GByteArray: private-key\n  private-key-pem -> gchararray: private-key-pem\n  issuer -> GTlsCertificate: issuer\n  pkcs11-uri -> gchararray: pkcs11-uri\n  private-key-pkcs11-uri -> gchararray: private-key-pkcs11-uri\n  not-valid-before -> GDateTime: not-valid-before\n  not-valid-after -> GDateTime: not-valid-after\n  subject-name -> gchararray: subject-name\n  issuer-name -> gchararray: issuer-name\n  dns-names -> GPtrArray: dns-names\n  ip-addresses -> GPtrArray: ip-addresses\n  pkcs12-data -> GByteArray: pkcs12-data\n  password -> gchararray: password\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GTlsCertificate (2466629424)>'
+    __gtype__ = None # (!) real value is '<GType GTlsCertificate (1846058448)>'
     __info__ = ObjectInfo(TlsCertificate)
 
 

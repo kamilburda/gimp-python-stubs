@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -151,7 +150,7 @@ class StatusbarClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StatusbarClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StatusbarClass' objects>, '__weakref__': <attribute '__weakref__' of 'StatusbarClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece9b91ee0>, 'reserved': <property object at 0x000002ece9b91fd0>, 'text_pushed': <property object at 0x000002ece9b920c0>, 'text_popped': <property object at 0x000002ece9b921b0>, '_gtk_reserved1': <property object at 0x000002ece9b922a0>, '_gtk_reserved2': <property object at 0x000002ece9b92390>, '_gtk_reserved3': <property object at 0x000002ece9b92480>, '_gtk_reserved4': <property object at 0x000002ece9b92570>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(StatusbarClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'StatusbarClass' objects>, '__weakref__': <attribute '__weakref__' of 'StatusbarClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd39fc5e0>, 'reserved': <property object at 0x000002bfd39fc6d0>, 'text_pushed': <property object at 0x000002bfd39fc7c0>, 'text_popped': <property object at 0x000002bfd39fc8b0>, '_gtk_reserved1': <property object at 0x000002bfd39fc9a0>, '_gtk_reserved2': <property object at 0x000002bfd39fca90>, '_gtk_reserved3': <property object at 0x000002bfd39fcb80>, '_gtk_reserved4': <property object at 0x000002bfd39fcc70>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(StatusbarClass)
 

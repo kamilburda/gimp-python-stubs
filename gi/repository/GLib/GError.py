@@ -1,30 +1,25 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 from .RuntimeError import RuntimeError
 
 class GError(RuntimeError):
     # no doc
-    def add_note(self, note): # real signature unknown; restored from __doc__
-        """
-        Exception.add_note(note) --
-            add a note to the exception
-        """
+    def add_note(self, *args, **kwargs): # real signature unknown
+        """ Add a note to the exception """
         pass
 
     def copy(self): # reliably restored by inspect
@@ -39,11 +34,8 @@ class GError(RuntimeError):
         # no doc
         pass
 
-    def with_traceback(self, tb): # real signature unknown; restored from __doc__
-        """
-        Exception.with_traceback(tb) --
-            set self.__traceback__ to tb and return self.
-        """
+    def with_traceback(self, *args, **kwargs): # real signature unknown
+        """ Set self.__traceback__ to tb and return self. """
         pass
 
     def __delattr__(self, *args, **kwargs): # real signature unknown
@@ -156,10 +148,8 @@ class GError(RuntimeError):
     args = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     __cause__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """exception cause"""
 
     __context__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """exception context"""
 
     __suppress_context__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
@@ -169,8 +159,18 @@ class GError(RuntimeError):
     """list of weak references to the object"""
 
 
+    __annotations__ = {
+        'code': 'int',
+        'domain': 'str',
+        'message': 'str',
+    }
     __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__init__': <function GError.__init__ at 0x000002830bbf9260>, '__str__': <function GError.__str__ at 0x000002830bbf9300>, '__repr__': <function GError.__repr__ at 0x000002830bbf93a0>, 'copy': <function GError.copy at 0x000002830bbf9440>, 'matches': <function gerror_matches at 0x000002830be62ac0>, 'new_literal': <staticmethod(<function gerror_new_literal at 0x000002830be62c00>)>, '__weakref__': <attribute '__weakref__' of 'Error' objects>, '__doc__': None, '__gtype__': <GType GError (154887200)>})"
-    __gtype__ = None # (!) real value is '<GType GError (154887200)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GLib', '__annotations__': {'message': 'str', 'domain': 'str', 'code': 'int'}, '__init__': <function GError.__init__ at 0x0000018e9e4ff950>, '__str__': <function GError.__str__ at 0x0000018e9e6096f0>, '__repr__': <function GError.__repr__ at 0x0000018e9e609850>, 'copy': <function GError.copy at 0x0000018e9e6099b0>, 'matches': <function gerror_matches at 0x0000018e9fdc33d0>, 'new_literal': <staticmethod(<function gerror_new_literal at 0x0000018e9fdc3530>)>, '__static_attributes__': ('code', 'domain', 'message'), '__weakref__': <attribute '__weakref__' of 'Error' objects>, '__doc__': None, '__gtype__': <GType GError (2636579888)>})"
+    __gtype__ = None # (!) real value is '<GType GError (2636579888)>'
+    __static_attributes__ = (
+        'code',
+        'domain',
+        'message',
+    )
 
 

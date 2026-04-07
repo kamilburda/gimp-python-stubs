@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -150,9 +146,9 @@ class ConfigPath(object):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ConfigPath), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpConfigPath (3595398608)>, '__dict__': <attribute '__dict__' of 'ConfigPath' objects>, '__weakref__': <attribute '__weakref__' of 'ConfigPath' objects>, '__doc__': None, '__gsignals__': {}, 'expand': gi.FunctionInfo(expand, bound=None), 'expand_to_files': gi.FunctionInfo(expand_to_files, bound=None), 'unexpand': gi.FunctionInfo(unexpand, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ConfigPath), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpConfigPath (2406244544)>, '__dict__': <attribute '__dict__' of 'ConfigPath' objects>, '__weakref__': <attribute '__weakref__' of 'ConfigPath' objects>, '__doc__': None, '__gsignals__': {}, 'expand': <staticmethod(gi.FunctionInfo(expand))>, 'expand_to_files': <staticmethod(gi.FunctionInfo(expand_to_files))>, 'unexpand': <staticmethod(gi.FunctionInfo(unexpand))>})"
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpConfigPath (3595398608)>'
+    __gtype__ = None # (!) real value is '<GType GimpConfigPath (2406244544)>'
     __info__ = ObjectInfo(ConfigPath)
 
 

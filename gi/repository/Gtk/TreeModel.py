@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -143,7 +142,7 @@ class TreeModel(TreeModel):
         pass
 
     def _convert_value(self, column, value): # reliably restored by inspect
-        """ Convert value to a GObject.Value of the expected type """
+        """ Convert value to a GObject.Value of the expected type. """
         pass
 
     def _getiter(self, key): # reliably restored by inspect
@@ -282,10 +281,12 @@ class TreeModel(TreeModel):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__len__': <function TreeModel.__len__ at 0x000002ece8a78220>, '__bool__': <function TreeModel.__bool__ at 0x000002ece8a782c0>, '_getiter': <function TreeModel._getiter at 0x000002ece8a78360>, 'sort_new_with_model': <function TreeModel.sort_new_with_model at 0x000002ece8a78400>, '_coerce_path': <function TreeModel._coerce_path at 0x000002ece8a784a0>, '__getitem__': <function TreeModel.__getitem__ at 0x000002ece8a78540>, '__setitem__': <function TreeModel.__setitem__ at 0x000002ece8a785e0>, '__delitem__': <function TreeModel.__delitem__ at 0x000002ece8a78680>, '__iter__': <function TreeModel.__iter__ at 0x000002ece8a78720>, 'get_iter_first': <function strip_boolean_result.<locals>.wrapped at 0x000002ece8a787c0>, 'iter_children': <function strip_boolean_result.<locals>.wrapped at 0x000002ece8a78860>, 'iter_nth_child': <function strip_boolean_result.<locals>.wrapped at 0x000002ece8a78900>, 'iter_parent': <function strip_boolean_result.<locals>.wrapped at 0x000002ece8a789a0>, 'get_iter_from_string': <function strip_boolean_result.<locals>.wrapped at 0x000002ece8a78a40>, 'get_iter': <function TreeModel.get_iter at 0x000002ece8a78ae0>, 'iter_next': <function TreeModel.iter_next at 0x000002ece8a78b80>, 'iter_previous': <function TreeModel.iter_previous at 0x000002ece8a78c20>, '_convert_row': <function TreeModel._convert_row at 0x000002ece8a78cc0>, 'set_row': <function TreeModel.set_row at 0x000002ece8a78d60>, '_convert_value': <function TreeModel._convert_value at 0x000002ece8a78e00>, 'get': <function TreeModel.get at 0x000002ece8a78ea0>, 'row_changed': <function TreeModel.row_changed at 0x000002ece8a78f40>, 'row_inserted': <function TreeModel.row_inserted at 0x000002ece8a78fe0>, 'row_has_child_toggled': <function TreeModel.row_has_child_toggled at 0x000002ece8a79080>, 'row_deleted': <function TreeModel.row_deleted at 0x000002ece8a79120>, 'rows_reordered': <function TreeModel.rows_reordered at 0x000002ece8a791c0>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__firstlineno__': 891, '__len__': <function TreeModel.__len__ at 0x000002bfcebd0510>, '__bool__': <function TreeModel.__bool__ at 0x000002bfcebd05c0>, '_getiter': <function TreeModel._getiter at 0x000002bfcebd0670>, 'sort_new_with_model': <function TreeModel.sort_new_with_model at 0x000002bfcebd0720>, '_coerce_path': <function TreeModel._coerce_path at 0x000002bfcebd07d0>, '__getitem__': <function TreeModel.__getitem__ at 0x000002bfcebd0880>, '__setitem__': <function TreeModel.__setitem__ at 0x000002bfcebd0930>, '__delitem__': <function TreeModel.__delitem__ at 0x000002bfcebd09e0>, '__iter__': <function TreeModel.__iter__ at 0x000002bfcebd0a90>, 'get_iter_first': <function strip_boolean_result.<locals>.wrapped at 0x000002bfcebd0b40>, 'iter_children': <function strip_boolean_result.<locals>.wrapped at 0x000002bfcebd0bf0>, 'iter_nth_child': <function strip_boolean_result.<locals>.wrapped at 0x000002bfcebd0ca0>, 'iter_parent': <function strip_boolean_result.<locals>.wrapped at 0x000002bfcebd0d50>, 'get_iter_from_string': <function strip_boolean_result.<locals>.wrapped at 0x000002bfcebd0e00>, 'get_iter': <function TreeModel.get_iter at 0x000002bfcebd0eb0>, 'iter_next': <function TreeModel.iter_next at 0x000002bfcebd0f60>, 'iter_previous': <function TreeModel.iter_previous at 0x000002bfcebd1010>, '_convert_row': <function TreeModel._convert_row at 0x000002bfcebd10c0>, 'set_row': <function TreeModel.set_row at 0x000002bfcebd1170>, '_convert_value': <function TreeModel._convert_value at 0x000002bfcebd1220>, 'get': <function TreeModel.get at 0x000002bfcebd12d0>, 'row_changed': <function TreeModel.row_changed at 0x000002bfcebd1380>, 'row_inserted': <function TreeModel.row_inserted at 0x000002bfcebd1430>, 'row_has_child_toggled': <function TreeModel.row_has_child_toggled at 0x000002bfcebd14e0>, 'row_deleted': <function TreeModel.row_deleted at 0x000002bfcebd1590>, 'rows_reordered': <function TreeModel.rows_reordered at 0x000002bfcebd1640>, '__static_attributes__': (), '__doc__': None, '__gsignals__': {}})"
+    __firstlineno__ = 891
     __gdoc__ = 'Interface GtkTreeModel\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkTreeModel (3867804688)>'
+    __gtype__ = None # (!) real value is '<GType GtkTreeModel (3416383632)>'
     __info__ = InterfaceInfo(TreeModel)
+    __static_attributes__ = ()
 
 

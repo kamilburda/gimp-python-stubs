@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class FrameClass(__gi.Struct):
@@ -161,7 +154,7 @@ class FrameClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FrameClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FrameClass' objects>, '__weakref__': <attribute '__weakref__' of 'FrameClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb74e4d60>, '_gimp_reserved0': <property object at 0x000001eeb74e4e50>, '_gimp_reserved1': <property object at 0x000001eeb74e4f40>, '_gimp_reserved2': <property object at 0x000001eeb74e5030>, '_gimp_reserved3': <property object at 0x000001eeb74e5120>, '_gimp_reserved4': <property object at 0x000001eeb74e5210>, '_gimp_reserved5': <property object at 0x000001eeb74e5300>, '_gimp_reserved6': <property object at 0x000001eeb74e53f0>, '_gimp_reserved7': <property object at 0x000001eeb74e54e0>, '_gimp_reserved8': <property object at 0x000001eeb74e55d0>, '_gimp_reserved9': <property object at 0x000001eeb74e56c0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FrameClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FrameClass' objects>, '__weakref__': <attribute '__weakref__' of 'FrameClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1d1c400>, '_gimp_reserved0': <property object at 0x0000020ee1d1c4f0>, '_gimp_reserved1': <property object at 0x0000020ee1d1c5e0>, '_gimp_reserved2': <property object at 0x0000020ee1d1c6d0>, '_gimp_reserved3': <property object at 0x0000020ee1d1c7c0>, '_gimp_reserved4': <property object at 0x0000020ee1d1c8b0>, '_gimp_reserved5': <property object at 0x0000020ee1d1c9a0>, '_gimp_reserved6': <property object at 0x0000020ee1d1ca90>, '_gimp_reserved7': <property object at 0x0000020ee1d1cb80>, '_gimp_reserved8': <property object at 0x0000020ee1d1cc70>, '_gimp_reserved9': <property object at 0x0000020ee1d1cd60>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(FrameClass)
 

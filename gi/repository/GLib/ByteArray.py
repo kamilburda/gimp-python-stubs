@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ByteArray(__gi.Boxed):
@@ -24,16 +22,16 @@ class ByteArray(__gi.Boxed):
     
         ByteArray()
     """
-    def append(self, array, data, len): # real signature unknown; restored from __doc__
-        """ append(array:list, data:int, len:int) -> list """
+    def append(self, array, data): # real signature unknown; restored from __doc__
+        """ append(array:list, data:list) -> list """
         return []
 
     def copy(self, *args, **kwargs): # real signature unknown
         pass
 
     def free(self, array, free_segment): # real signature unknown; restored from __doc__
-        """ free(array:list, free_segment:bool) -> int """
-        return 0
+        """ free(array:list, free_segment:bool) -> list or None """
+        return []
 
     def free_to_bytes(self, array): # real signature unknown; restored from __doc__
         """ free_to_bytes(array:list) -> GLib.Bytes """
@@ -47,8 +45,8 @@ class ByteArray(__gi.Boxed):
         """ new_take(data:list) -> list """
         return []
 
-    def prepend(self, array, data, len): # real signature unknown; restored from __doc__
-        """ prepend(array:list, data:int, len:int) -> list """
+    def prepend(self, array, data): # real signature unknown; restored from __doc__
+        """ prepend(array:list, data:list) -> list """
         return []
 
     def ref(self, array): # real signature unknown; restored from __doc__
@@ -84,8 +82,8 @@ class ByteArray(__gi.Boxed):
         pass
 
     def steal(self, array): # real signature unknown; restored from __doc__
-        """ steal(array:list) -> int, len:int """
-        return 0
+        """ steal(array:list) -> list """
+        return []
 
     def unref(self, array): # real signature unknown; restored from __doc__
         """ unref(array:list) """
@@ -207,8 +205,8 @@ class ByteArray(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ByteArray), '__module__': 'gi.repository.GLib', '__gtype__': <GType GByteArray (155712800)>, '__dict__': <attribute '__dict__' of 'ByteArray' objects>, '__weakref__': <attribute '__weakref__' of 'ByteArray' objects>, '__doc__': None, 'data': <property object at 0x000002830bf1ede0>, 'len': <property object at 0x000002830bf1eed0>, 'append': gi.FunctionInfo(append, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'free_to_bytes': gi.FunctionInfo(free_to_bytes, bound=None), 'new': gi.FunctionInfo(new, bound=None), 'new_take': gi.FunctionInfo(new_take, bound=None), 'prepend': gi.FunctionInfo(prepend, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'remove_index': gi.FunctionInfo(remove_index, bound=None), 'remove_index_fast': gi.FunctionInfo(remove_index_fast, bound=None), 'remove_range': gi.FunctionInfo(remove_range, bound=None), 'set_size': gi.FunctionInfo(set_size, bound=None), 'sized_new': gi.FunctionInfo(sized_new, bound=None), 'sort': gi.FunctionInfo(sort, bound=None), 'sort_with_data': gi.FunctionInfo(sort_with_data, bound=None), 'steal': gi.FunctionInfo(steal, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GByteArray (155712800)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ByteArray), '__module__': 'gi.repository.GLib', '__gtype__': <GType GByteArray (2640521280)>, '__dict__': <attribute '__dict__' of 'ByteArray' objects>, '__weakref__': <attribute '__weakref__' of 'ByteArray' objects>, '__doc__': None, 'data': <property object at 0x0000018e9ff07740>, 'len': <property object at 0x0000018e9ff076f0>, 'append': <staticmethod(gi.FunctionInfo(append))>, 'free': <staticmethod(gi.FunctionInfo(free))>, 'free_to_bytes': <staticmethod(gi.FunctionInfo(free_to_bytes))>, 'new': <staticmethod(gi.FunctionInfo(new))>, 'new_take': <staticmethod(gi.FunctionInfo(new_take))>, 'prepend': <staticmethod(gi.FunctionInfo(prepend))>, 'ref': <staticmethod(gi.FunctionInfo(ref))>, 'remove_index': <staticmethod(gi.FunctionInfo(remove_index))>, 'remove_index_fast': <staticmethod(gi.FunctionInfo(remove_index_fast))>, 'remove_range': <staticmethod(gi.FunctionInfo(remove_range))>, 'set_size': <staticmethod(gi.FunctionInfo(set_size))>, 'sized_new': <staticmethod(gi.FunctionInfo(sized_new))>, 'sort': <staticmethod(gi.FunctionInfo(sort))>, 'sort_with_data': <staticmethod(gi.FunctionInfo(sort_with_data))>, 'steal': <staticmethod(gi.FunctionInfo(steal))>, 'unref': <staticmethod(gi.FunctionInfo(unref))>})"
+    __gtype__ = None # (!) real value is '<GType GByteArray (2640521280)>'
     __info__ = StructInfo(ByteArray)
 
 

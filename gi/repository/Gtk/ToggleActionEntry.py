@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -149,7 +148,7 @@ class ToggleActionEntry(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ToggleActionEntry), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ToggleActionEntry' objects>, '__weakref__': <attribute '__weakref__' of 'ToggleActionEntry' objects>, '__doc__': None, 'name': <property object at 0x000002ece9b5ccc0>, 'stock_id': <property object at 0x000002ece9b5cdb0>, 'label': <property object at 0x000002ece9b5cea0>, 'accelerator': <property object at 0x000002ece9b5cf90>, 'tooltip': <property object at 0x000002ece9b5d080>, 'callback': <property object at 0x000002ece9b5d170>, 'is_active': <property object at 0x000002ece9b5d260>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ToggleActionEntry), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ToggleActionEntry' objects>, '__weakref__': <attribute '__weakref__' of 'ToggleActionEntry' objects>, '__doc__': None, 'name': <property object at 0x000002bfd3a1f470>, 'stock_id': <property object at 0x000002bfd3a1f560>, 'label': <property object at 0x000002bfd3a1f650>, 'accelerator': <property object at 0x000002bfd3a1f740>, 'tooltip': <property object at 0x000002bfd3a1f830>, 'callback': <property object at 0x000002bfd3a1f920>, 'is_active': <property object at 0x000002bfd3a1fa10>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ToggleActionEntry)
 

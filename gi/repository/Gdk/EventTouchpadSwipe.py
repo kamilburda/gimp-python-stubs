@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -157,7 +156,7 @@ class EventTouchpadSwipe(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EventTouchpadSwipe), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EventTouchpadSwipe' objects>, '__weakref__': <attribute '__weakref__' of 'EventTouchpadSwipe' objects>, '__doc__': None, 'type': <property object at 0x000002459c4682c0>, 'window': <property object at 0x000002459c4683b0>, 'send_event': <property object at 0x000002459c4684a0>, 'phase': <property object at 0x000002459c468590>, 'n_fingers': <property object at 0x000002459c468680>, 'time': <property object at 0x000002459c468770>, 'x': <property object at 0x000002459c468860>, 'y': <property object at 0x000002459c468950>, 'dx': <property object at 0x000002459c468a40>, 'dy': <property object at 0x000002459c468b30>, 'x_root': <property object at 0x000002459c468c20>, 'y_root': <property object at 0x000002459c468d10>, 'state': <property object at 0x000002459c468e00>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(EventTouchpadSwipe), '__module__': 'gi.repository.Gdk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'EventTouchpadSwipe' objects>, '__weakref__': <attribute '__weakref__' of 'EventTouchpadSwipe' objects>, '__doc__': None, 'type': <property object at 0x000001872580d6c0>, 'window': <property object at 0x000001872580d7b0>, 'send_event': <property object at 0x000001872580d8a0>, 'phase': <property object at 0x000001872580d990>, 'n_fingers': <property object at 0x000001872580da80>, 'time': <property object at 0x000001872580db70>, 'x': <property object at 0x000001872580dc60>, 'y': <property object at 0x000001872580dd50>, 'dx': <property object at 0x000001872580de40>, 'dy': <property object at 0x000001872580df30>, 'x_root': <property object at 0x000001872580e020>, 'y_root': <property object at 0x000001872580e110>, 'state': <property object at 0x000001872580e200>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(EventTouchpadSwipe)
 

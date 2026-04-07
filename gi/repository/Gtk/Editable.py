@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -182,10 +181,12 @@ class Editable(Editable):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', 'insert_text': <function Editable.insert_text at 0x000002ece8a909a0>, 'get_selection_bounds': <function strip_boolean_result.<locals>.wrapped at 0x000002ece8a90a40>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__firstlineno__': 206, 'insert_text': <function Editable.insert_text at 0x000002bfce4d4040>, 'get_selection_bounds': <function strip_boolean_result.<locals>.wrapped at 0x000002bfce4d6140>, '__static_attributes__': (), '__doc__': None, '__gsignals__': {}})"
+    __firstlineno__ = 206
     __gdoc__ = 'Interface GtkEditable\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkEditable (3867794272)>'
+    __gtype__ = None # (!) real value is '<GType GtkEditable (3425467536)>'
     __info__ = InterfaceInfo(Editable)
+    __static_attributes__ = ()
 
 

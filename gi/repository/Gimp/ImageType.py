@@ -1,26 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class ImageType(__gobject.GEnum):
+class ImageType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -79,7 +75,7 @@ class ImageType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -102,7 +98,7 @@ class ImageType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -130,12 +126,23 @@ class ImageType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -164,6 +171,10 @@ class ImageType(__gobject.GEnum):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -209,6 +220,14 @@ class ImageType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -234,8 +253,8 @@ class ImageType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -266,15 +285,16 @@ class ImageType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -338,7 +358,7 @@ class ImageType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -380,10 +400,6 @@ class ImageType(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     GRAYA_IMAGE = 3
     GRAY_IMAGE = 2
@@ -391,17 +407,9 @@ class ImageType(__gobject.GEnum):
     INDEXED_IMAGE = 4
     RGBA_IMAGE = 1
     RGB_IMAGE = 0
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gimp', '__dict__': <attribute '__dict__' of 'ImageType' objects>, '__doc__': None, '__gtype__': <GType GimpImageType (3595405888)>, '__enum_values__': {0: <enum GIMP_RGB_IMAGE of type Gimp.ImageType>, 1: <enum GIMP_RGBA_IMAGE of type Gimp.ImageType>, 2: <enum GIMP_GRAY_IMAGE of type Gimp.ImageType>, 3: <enum GIMP_GRAYA_IMAGE of type Gimp.ImageType>, 4: <enum GIMP_INDEXED_IMAGE of type Gimp.ImageType>, 5: <enum GIMP_INDEXEDA_IMAGE of type Gimp.ImageType>}, '__info__': gi.EnumInfo(ImageType), 'RGB_IMAGE': <enum GIMP_RGB_IMAGE of type Gimp.ImageType>, 'RGBA_IMAGE': <enum GIMP_RGBA_IMAGE of type Gimp.ImageType>, 'GRAY_IMAGE': <enum GIMP_GRAY_IMAGE of type Gimp.ImageType>, 'GRAYA_IMAGE': <enum GIMP_GRAYA_IMAGE of type Gimp.ImageType>, 'INDEXED_IMAGE': <enum GIMP_INDEXED_IMAGE of type Gimp.ImageType>, 'INDEXEDA_IMAGE': <enum GIMP_INDEXEDA_IMAGE of type Gimp.ImageType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-    }
-    __gtype__ = None # (!) real value is '<GType GimpImageType (3595405888)>'
-    __info__ = gi.EnumInfo(ImageType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'RGB_IMAGE': <ImageType.RGB_IMAGE: 0>, 'RGBA_IMAGE': <ImageType.RGBA_IMAGE: 1>, 'GRAY_IMAGE': <ImageType.GRAY_IMAGE: 2>, 'GRAYA_IMAGE': <ImageType.GRAYA_IMAGE: 3>, 'INDEXED_IMAGE': <ImageType.INDEXED_IMAGE: 4>, 'INDEXEDA_IMAGE': <ImageType.INDEXEDA_IMAGE: 5>})"
+    __name__ = 'ImageType'
+    __qualname__ = 'ImageType'
 
 

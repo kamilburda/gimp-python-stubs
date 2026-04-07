@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -71,7 +70,7 @@ class MainContext(__gi_repository_GLib.MainContext):
         pass
 
     def find_source_by_funcs_user_data(self, funcs, user_data=None): # real signature unknown; restored from __doc__
-        """ find_source_by_funcs_user_data(self, funcs:GLib.SourceFuncs, user_data=None) -> GLib.Source """
+        """ find_source_by_funcs_user_data(self, funcs:GLib.SourceFuncs, user_data=None) -> GLib.Source or None """
         pass
 
     def find_source_by_id(self, source_id): # real signature unknown; restored from __doc__
@@ -79,7 +78,7 @@ class MainContext(__gi_repository_GLib.MainContext):
         pass
 
     def find_source_by_user_data(self, user_data=None): # real signature unknown; restored from __doc__
-        """ find_source_by_user_data(self, user_data=None) -> GLib.Source """
+        """ find_source_by_user_data(self, user_data=None) -> GLib.Source or None """
         pass
 
     def get_thread_default(self): # real signature unknown; restored from __doc__
@@ -118,13 +117,27 @@ class MainContext(__gi_repository_GLib.MainContext):
         """ prepare(self) -> bool, priority:int """
         return False
 
+    def pusher_new(self): # real signature unknown; restored from __doc__
+        """ pusher_new(self) """
+        pass
+
     def push_thread_default(self): # real signature unknown; restored from __doc__
         """ push_thread_default(self) """
         pass
 
-    def query(self, max_priority): # real signature unknown; restored from __doc__
-        """ query(self, max_priority:int) -> int, timeout_:int, fds:list """
-        return 0
+    def query(self, max_priority): # reliably restored by inspect
+        """
+        Determines information necessary to poll this main loop.
+        
+                :param max_priority: maximum priority source to check
+                :returns:
+                  The timeout (msec) used for polling,
+                  and the list of poll fd's.
+        
+                Please also check the usage notes in the
+                `C documention <https://docs.gtk.org/glib/method.MainContext.query.html>`__.
+        """
+        pass
 
     def ref(self): # real signature unknown; restored from __doc__
         """ ref(self) -> GLib.MainContext """
@@ -170,7 +183,11 @@ class MainContext(__gi_repository_GLib.MainContext):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -262,8 +279,8 @@ class MainContext(__gi_repository_GLib.MainContext):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', 'iteration': <function MainContext.iteration at 0x0000010b078e5d00>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType GMainContext (83279824)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', 'iteration': <function MainContext.iteration at 0x000001dd11de6160>, 'query': <function MainContext.query at 0x000001dd11de6200>, '__doc__': None})"
+    __gtype__ = None # (!) real value is '<GType GMainContext (257692144)>'
     __info__ = StructInfo(MainContext)
 
 

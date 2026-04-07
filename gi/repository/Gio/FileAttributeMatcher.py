@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -42,7 +47,8 @@ class FileAttributeMatcher(__gi.Boxed):
         """ matches_only(self, attribute:str) -> bool """
         return False
 
-    def new(self, attributes): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, attributes): # real signature unknown; restored from __doc__
         """ new(attributes:str) -> Gio.FileAttributeMatcher """
         pass
 
@@ -78,7 +84,11 @@ class FileAttributeMatcher(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -170,8 +180,8 @@ class FileAttributeMatcher(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FileAttributeMatcher), '__module__': 'gi.repository.Gio', '__gtype__': <GType GFileAttributeMatcher (2472622800)>, '__dict__': <attribute '__dict__' of 'FileAttributeMatcher' objects>, '__weakref__': <attribute '__weakref__' of 'FileAttributeMatcher' objects>, '__doc__': None, 'new': gi.FunctionInfo(new, bound=None), 'enumerate_namespace': gi.FunctionInfo(enumerate_namespace, bound=None), 'enumerate_next': gi.FunctionInfo(enumerate_next, bound=None), 'matches': gi.FunctionInfo(matches, bound=None), 'matches_only': gi.FunctionInfo(matches_only, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'subtract': gi.FunctionInfo(subtract, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), '__new__': <staticmethod(gi.FunctionInfo(new, bound=None))>, '__init__': <function nothing at 0x000001a7937e8680>})"
-    __gtype__ = None # (!) real value is '<GType GFileAttributeMatcher (2472622800)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FileAttributeMatcher), '__module__': 'gi.repository.Gio', '__gtype__': <GType GFileAttributeMatcher (1848619472)>, '__dict__': <attribute '__dict__' of 'FileAttributeMatcher' objects>, '__weakref__': <attribute '__weakref__' of 'FileAttributeMatcher' objects>, '__doc__': None, 'new': <classmethod(gi.FunctionInfo(new))>, 'enumerate_namespace': gi.FunctionInfo(enumerate_namespace), 'enumerate_next': gi.FunctionInfo(enumerate_next), 'matches': gi.FunctionInfo(matches), 'matches_only': gi.FunctionInfo(matches_only), 'ref': gi.FunctionInfo(ref), 'subtract': gi.FunctionInfo(subtract), 'to_string': gi.FunctionInfo(to_string), 'unref': gi.FunctionInfo(unref), '__new__': <staticmethod(gi.FunctionInfo(new))>, '__init__': <function nothing at 0x000001ea702ccfe0>})"
+    __gtype__ = None # (!) real value is '<GType GFileAttributeMatcher (1848619472)>'
     __info__ = StructInfo(FileAttributeMatcher)
 
 

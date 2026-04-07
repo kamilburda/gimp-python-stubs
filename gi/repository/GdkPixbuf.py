@@ -1,30 +1,27 @@
 # encoding: utf-8
 # module gi.repository.GdkPixbuf
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GdkPixbuf-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 # Variables with simple values
 
 PIXBUF_MAJOR = 2
-PIXBUF_MICRO = 12
-PIXBUF_MINOR = 42
-PIXBUF_VERSION = '2.42.12'
+PIXBUF_MICRO = 5
+PIXBUF_MINOR = 44
+PIXBUF_VERSION = '2.44.5'
 
 _namespace = 'GdkPixbuf'
 
 _version = '2.0'
-
-__weakref__ = None
 
 # functions
 
@@ -32,117 +29,15 @@ def pixbuf_error_quark(): # real signature unknown; restored from __doc__
     """ pixbuf_error_quark() -> int """
     return 0
 
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """ Default object formatter. """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
-    pass
-
 # classes
 
-class Colorspace(__gobject.GEnum):
+class Colorspace(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -195,10 +90,14 @@ class Colorspace(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -214,7 +113,7 @@ class Colorspace(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -242,12 +141,23 @@ class Colorspace(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -271,10 +181,15 @@ class Colorspace(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -320,6 +235,14 @@ class Colorspace(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -345,8 +268,8 @@ class Colorspace(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -377,15 +300,16 @@ class Colorspace(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -449,7 +373,7 @@ class Colorspace(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -490,30 +414,22 @@ class Colorspace(__gobject.GEnum):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     RGB = 0
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GdkPixbuf', '__dict__': <attribute '__dict__' of 'Colorspace' objects>, '__doc__': None, '__gtype__': <GType GdkColorspace (3187685360)>, '__enum_values__': {0: <enum GDK_COLORSPACE_RGB of type GdkPixbuf.Colorspace>}, '__info__': gi.EnumInfo(Colorspace), 'RGB': <enum GDK_COLORSPACE_RGB of type GdkPixbuf.Colorspace>})"
-    __enum_values__ = {
-        0: 0,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkColorspace (3187685360)>'
-    __info__ = gi.EnumInfo(Colorspace)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'RGB': <Colorspace.RGB: 0>})"
+    __name__ = 'Colorspace'
+    __qualname__ = 'Colorspace'
 
 
-class InterpType(__gobject.GEnum):
+class InterpType(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -566,10 +482,14 @@ class InterpType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -585,7 +505,7 @@ class InterpType(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -613,12 +533,23 @@ class InterpType(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -642,10 +573,15 @@ class InterpType(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -691,6 +627,14 @@ class InterpType(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -716,8 +660,8 @@ class InterpType(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -748,15 +692,16 @@ class InterpType(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -820,7 +765,7 @@ class InterpType(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -861,26 +806,16 @@ class InterpType(__gobject.GEnum):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     BILINEAR = 2
     HYPER = 3
     NEAREST = 0
     TILES = 1
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GdkPixbuf', '__dict__': <attribute '__dict__' of 'InterpType' objects>, '__doc__': None, '__gtype__': <GType GdkInterpType (3187684576)>, '__enum_values__': {0: <enum GDK_INTERP_NEAREST of type GdkPixbuf.InterpType>, 1: <enum GDK_INTERP_TILES of type GdkPixbuf.InterpType>, 2: <enum GDK_INTERP_BILINEAR of type GdkPixbuf.InterpType>, 3: <enum GDK_INTERP_HYPER of type GdkPixbuf.InterpType>}, '__info__': gi.EnumInfo(InterpType), 'NEAREST': <enum GDK_INTERP_NEAREST of type GdkPixbuf.InterpType>, 'TILES': <enum GDK_INTERP_TILES of type GdkPixbuf.InterpType>, 'BILINEAR': <enum GDK_INTERP_BILINEAR of type GdkPixbuf.InterpType>, 'HYPER': <enum GDK_INTERP_HYPER of type GdkPixbuf.InterpType>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkInterpType (3187684576)>'
-    __info__ = gi.EnumInfo(InterpType)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NEAREST': <InterpType.NEAREST: 0>, 'TILES': <InterpType.TILES: 1>, 'BILINEAR': <InterpType.BILINEAR: 2>, 'HYPER': <InterpType.HYPER: 3>})"
+    __name__ = 'InterpType'
+    __qualname__ = 'InterpType'
 
 
 class Pixbuf(Pixbuf):
@@ -951,20 +886,20 @@ class Pixbuf(Pixbuf):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -995,6 +930,12 @@ class Pixbuf(Pixbuf):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -1028,17 +969,17 @@ class Pixbuf(Pixbuf):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -1123,20 +1064,20 @@ class Pixbuf(Pixbuf):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -1431,20 +1372,20 @@ class Pixbuf(Pixbuf):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -1474,7 +1415,11 @@ class Pixbuf(Pixbuf):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -1575,23 +1520,24 @@ class Pixbuf(Pixbuf):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001c5c03a7d30>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x0000023c76e343d0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GdkPixbuf', 'new_from_data': <classmethod(<function Pixbuf.new_from_data at 0x000001c5c04a1300>)>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GdkPixbuf', '__firstlineno__': 31, 'new_from_data': <classmethod(<function Pixbuf.new_from_data at 0x0000023c7888ac40>)>, '__static_attributes__': (), '__doc__': None, '__gsignals__': {}})"
+    __firstlineno__ = 31
     __gdoc__ = 'Object GdkPixbuf\n\nProperties from GdkPixbuf:\n  colorspace -> GdkColorspace: Colorspace\n    The colorspace in which the samples are interpreted\n  n-channels -> gint: Number of Channels\n    The number of samples per pixel\n  has-alpha -> gboolean: Has Alpha\n    Whether the pixbuf has an alpha channel\n  bits-per-sample -> gint: Bits per Sample\n    The number of bits per sample\n  width -> gint: Width\n    The number of columns of the pixbuf\n  height -> gint: Height\n    The number of rows of the pixbuf\n  rowstride -> gint: Rowstride\n    The number of bytes between the start of a row and the start of the next row\n  pixels -> gpointer: Pixels\n    A pointer to the pixel data of the pixbuf\n  pixel-bytes -> GBytes: Pixel Bytes\n    Readonly pixel data\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkPixbuf (3184972672)>'
+    __gtype__ = None # (!) real value is '<GType GdkPixbuf (1980195808)>'
     __info__ = ObjectInfo(Pixbuf)
+    __static_attributes__ = ()
 
 
-class PixbufAlphaMode(__gobject.GEnum):
+class PixbufAlphaMode(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -1644,10 +1590,14 @@ class PixbufAlphaMode(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -1663,7 +1613,7 @@ class PixbufAlphaMode(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -1691,12 +1641,23 @@ class PixbufAlphaMode(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -1720,10 +1681,15 @@ class PixbufAlphaMode(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -1769,6 +1735,14 @@ class PixbufAlphaMode(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -1794,8 +1768,8 @@ class PixbufAlphaMode(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -1826,15 +1800,16 @@ class PixbufAlphaMode(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -1898,7 +1873,7 @@ class PixbufAlphaMode(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -1940,21 +1915,13 @@ class PixbufAlphaMode(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     BILEVEL = 0
     FULL = 1
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GdkPixbuf', '__dict__': <attribute '__dict__' of 'PixbufAlphaMode' objects>, '__doc__': None, '__gtype__': <GType GdkPixbufAlphaMode (3187691408)>, '__enum_values__': {0: <enum GDK_PIXBUF_ALPHA_BILEVEL of type GdkPixbuf.PixbufAlphaMode>, 1: <enum GDK_PIXBUF_ALPHA_FULL of type GdkPixbuf.PixbufAlphaMode>}, '__info__': gi.EnumInfo(PixbufAlphaMode), 'BILEVEL': <enum GDK_PIXBUF_ALPHA_BILEVEL of type GdkPixbuf.PixbufAlphaMode>, 'FULL': <enum GDK_PIXBUF_ALPHA_FULL of type GdkPixbuf.PixbufAlphaMode>})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkPixbufAlphaMode (3187691408)>'
-    __info__ = gi.EnumInfo(PixbufAlphaMode)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'BILEVEL': <PixbufAlphaMode.BILEVEL: 0>, 'FULL': <PixbufAlphaMode.FULL: 1>})"
+    __name__ = 'PixbufAlphaMode'
+    __qualname__ = 'PixbufAlphaMode'
 
 
 class PixbufAnimation(__gi_overrides_GObject.Object):
@@ -1990,20 +1957,20 @@ class PixbufAnimation(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -2018,6 +1985,12 @@ class PixbufAnimation(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_iter(self, *args, **kwargs): # real signature unknown
@@ -2055,17 +2028,17 @@ class PixbufAnimation(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -2106,20 +2079,20 @@ class PixbufAnimation(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -2177,19 +2150,23 @@ class PixbufAnimation(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_from_file(self, filename): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_file(cls, filename): # real signature unknown; restored from __doc__
         """ new_from_file(filename:str) -> GdkPixbuf.PixbufAnimation or None """
         pass
 
-    def new_from_file_utf8(self, filename): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_file_utf8(cls, filename): # real signature unknown; restored from __doc__
         """ new_from_file_utf8(filename:str) -> GdkPixbuf.PixbufAnimation """
         pass
 
-    def new_from_resource(self, resource_path): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_resource(cls, resource_path): # real signature unknown; restored from __doc__
         """ new_from_resource(resource_path:str) -> GdkPixbuf.PixbufAnimation or None """
         pass
 
-    def new_from_stream(self, stream, cancellable=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_stream(cls, stream, cancellable=None): # real signature unknown; restored from __doc__
         """ new_from_stream(stream:Gio.InputStream, cancellable:Gio.Cancellable=None) -> GdkPixbuf.PixbufAnimation or None """
         pass
 
@@ -2197,7 +2174,8 @@ class PixbufAnimation(__gi_overrides_GObject.Object):
         """ new_from_stream_async(stream:Gio.InputStream, cancellable:Gio.Cancellable=None, callback:Gio.AsyncReadyCallback=None, user_data=None) """
         pass
 
-    def new_from_stream_finish(self, async_result): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_stream_finish(cls, async_result): # real signature unknown; restored from __doc__
         """ new_from_stream_finish(async_result:Gio.AsyncResult) -> GdkPixbuf.PixbufAnimation or None """
         pass
 
@@ -2274,20 +2252,20 @@ class PixbufAnimation(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -2317,7 +2295,11 @@ class PixbufAnimation(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -2417,13 +2399,15 @@ class PixbufAnimation(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001c5c03a7ee0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x0000023c76e35360>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufAnimation), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufAnimation (3187690848)>, '__doc__': None, '__gsignals__': {}, 'new_from_file': gi.FunctionInfo(new_from_file, bound=None), 'new_from_file_utf8': gi.FunctionInfo(new_from_file_utf8, bound=None), 'new_from_resource': gi.FunctionInfo(new_from_resource, bound=None), 'new_from_stream': gi.FunctionInfo(new_from_stream, bound=None), 'new_from_stream_finish': gi.FunctionInfo(new_from_stream_finish, bound=None), 'new_from_stream_async': gi.FunctionInfo(new_from_stream_async, bound=None), 'get_height': gi.FunctionInfo(get_height, bound=None), 'get_iter': gi.FunctionInfo(get_iter, bound=None), 'get_static_image': gi.FunctionInfo(get_static_image, bound=None), 'get_width': gi.FunctionInfo(get_width, bound=None), 'is_static_image': gi.FunctionInfo(is_static_image, bound=None), 'do_get_iter': gi.VFuncInfo(get_iter, bound=None), 'do_get_size': gi.VFuncInfo(get_size, bound=None), 'do_get_static_image': gi.VFuncInfo(get_static_image, bound=None), 'do_is_static_image': gi.VFuncInfo(is_static_image, bound=None), 'parent_instance': <property object at 0x000001c5c09bbba0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufAnimation), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufAnimation (1979320368)>, '__doc__': None, '__gsignals__': {}, 'new_from_file': <classmethod(gi.FunctionInfo(new_from_file))>, 'new_from_file_utf8': <classmethod(gi.FunctionInfo(new_from_file_utf8))>, 'new_from_resource': <classmethod(gi.FunctionInfo(new_from_resource))>, 'new_from_stream': <classmethod(gi.FunctionInfo(new_from_stream))>, 'new_from_stream_finish': <classmethod(gi.FunctionInfo(new_from_stream_finish))>, 'new_from_stream_async': <staticmethod(gi.FunctionInfo(new_from_stream_async))>, 'get_height': gi.FunctionInfo(get_height), 'get_iter': gi.FunctionInfo(get_iter), 'get_static_image': gi.FunctionInfo(get_static_image), 'get_width': gi.FunctionInfo(get_width), 'is_static_image': gi.FunctionInfo(is_static_image), 'do_get_iter': gi.VFuncInfo(get_iter), 'do_get_size': gi.VFuncInfo(get_size), 'do_get_static_image': gi.VFuncInfo(get_static_image), 'do_is_static_image': gi.VFuncInfo(is_static_image), 'parent_instance': <property object at 0x0000023c78dbdf30>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GdkPixbufAnimation\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkPixbufAnimation (3187690848)>'
+    __gtype__ = None # (!) real value is '<GType GdkPixbufAnimation (1979320368)>'
     __info__ = ObjectInfo(PixbufAnimation)
+    __static_attributes__ = ()
 
 
 class PixbufAnimationClass(__gi.Struct):
@@ -2447,7 +2431,11 @@ class PixbufAnimationClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -2549,7 +2537,7 @@ class PixbufAnimationClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufAnimationClass), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufAnimationClass' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufAnimationClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001c5c09bbd30>, 'is_static_image': <property object at 0x000001c5c09bbe20>, 'get_static_image': <property object at 0x000001c5c09bbf60>, 'get_size': <property object at 0x000001c5c08f4040>, 'get_iter': <property object at 0x000001c5c08f4130>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufAnimationClass), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufAnimationClass' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufAnimationClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000023c788fd030>, 'is_static_image': <property object at 0x0000023c788fd080>, 'get_static_image': <property object at 0x0000023c788fd120>, 'get_size': <property object at 0x0000023c788fd260>, 'get_iter': <property object at 0x0000023c78d6d0d0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PixbufAnimationClass)
 
@@ -2586,20 +2574,20 @@ class PixbufAnimationIter(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -2618,6 +2606,12 @@ class PixbufAnimationIter(__gi_overrides_GObject.Object):
 
     def do_advance(self, *args, **kwargs): # real signature unknown
         """ advance(self, current_time:GLib.TimeVal=None) -> bool """
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_delay_time(self, *args, **kwargs): # real signature unknown
@@ -2651,17 +2645,17 @@ class PixbufAnimationIter(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -2694,20 +2688,20 @@ class PixbufAnimationIter(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -2838,20 +2832,20 @@ class PixbufAnimationIter(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -2881,7 +2875,11 @@ class PixbufAnimationIter(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -2981,13 +2979,15 @@ class PixbufAnimationIter(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001c5c03a6080>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x0000023c76e34550>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufAnimationIter), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufAnimationIter (3187691296)>, '__doc__': None, '__gsignals__': {}, 'advance': gi.FunctionInfo(advance, bound=None), 'get_delay_time': gi.FunctionInfo(get_delay_time, bound=None), 'get_pixbuf': gi.FunctionInfo(get_pixbuf, bound=None), 'on_currently_loading_frame': gi.FunctionInfo(on_currently_loading_frame, bound=None), 'do_advance': gi.VFuncInfo(advance, bound=None), 'do_get_delay_time': gi.VFuncInfo(get_delay_time, bound=None), 'do_get_pixbuf': gi.VFuncInfo(get_pixbuf, bound=None), 'do_on_currently_loading_frame': gi.VFuncInfo(on_currently_loading_frame, bound=None), 'parent_instance': <property object at 0x000001c5c08f43b0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufAnimationIter), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufAnimationIter (1979316048)>, '__doc__': None, '__gsignals__': {}, 'advance': gi.FunctionInfo(advance), 'get_delay_time': gi.FunctionInfo(get_delay_time), 'get_pixbuf': gi.FunctionInfo(get_pixbuf), 'on_currently_loading_frame': gi.FunctionInfo(on_currently_loading_frame), 'do_advance': gi.VFuncInfo(advance), 'do_get_delay_time': gi.VFuncInfo(get_delay_time), 'do_get_pixbuf': gi.VFuncInfo(get_pixbuf), 'do_on_currently_loading_frame': gi.VFuncInfo(on_currently_loading_frame), 'parent_instance': <property object at 0x0000023c78d6d7b0>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GdkPixbufAnimationIter\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkPixbufAnimationIter (3187691296)>'
+    __gtype__ = None # (!) real value is '<GType GdkPixbufAnimationIter (1979316048)>'
     __info__ = ObjectInfo(PixbufAnimationIter)
+    __static_attributes__ = ()
 
 
 class PixbufAnimationIterClass(__gi.Struct):
@@ -3011,7 +3011,11 @@ class PixbufAnimationIterClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -3113,19 +3117,18 @@ class PixbufAnimationIterClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufAnimationIterClass), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufAnimationIterClass' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufAnimationIterClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001c5c08f4540>, 'get_delay_time': <property object at 0x000001c5c08f4630>, 'get_pixbuf': <property object at 0x000001c5c08f4720>, 'on_currently_loading_frame': <property object at 0x000001c5c08f4860>, 'advance': <property object at 0x000001c5c08f4900>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufAnimationIterClass), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufAnimationIterClass' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufAnimationIterClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000023c78d6d8f0>, 'get_delay_time': <property object at 0x0000023c78d6d9e0>, 'get_pixbuf': <property object at 0x0000023c78d6dad0>, 'on_currently_loading_frame': <property object at 0x0000023c78d6dc10>, 'advance': <property object at 0x0000023c78d6dcb0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PixbufAnimationIterClass)
 
 
-class PixbufError(__gobject.GEnum):
+class PixbufError(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -3178,15 +3181,15 @@ class PixbufError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
         pass
 
-    def quark(self): # real signature unknown; restored from __doc__
-        """ quark() -> int """
-        return 0
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
+        pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
         """
@@ -3201,7 +3204,7 @@ class PixbufError(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -3229,12 +3232,23 @@ class PixbufError(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -3258,10 +3272,15 @@ class PixbufError(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -3307,6 +3326,14 @@ class PixbufError(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -3332,8 +3359,8 @@ class PixbufError(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -3364,15 +3391,16 @@ class PixbufError(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -3436,7 +3464,7 @@ class PixbufError(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -3478,10 +3506,6 @@ class PixbufError(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     BAD_OPTION = 2
     CORRUPT_IMAGE = 0
@@ -3490,19 +3514,10 @@ class PixbufError(__gobject.GEnum):
     INSUFFICIENT_MEMORY = 1
     UNKNOWN_TYPE = 3
     UNSUPPORTED_OPERATION = 4
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GdkPixbuf', '__dict__': <attribute '__dict__' of 'PixbufError' objects>, '__doc__': None, '__gtype__': <GType GdkPixbufError (3187690176)>, '__enum_values__': {0: <enum GDK_PIXBUF_ERROR_CORRUPT_IMAGE of type GdkPixbuf.PixbufError>, 1: <enum GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY of type GdkPixbuf.PixbufError>, 2: <enum GDK_PIXBUF_ERROR_BAD_OPTION of type GdkPixbuf.PixbufError>, 3: <enum GDK_PIXBUF_ERROR_UNKNOWN_TYPE of type GdkPixbuf.PixbufError>, 4: <enum GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION of type GdkPixbuf.PixbufError>, 5: <enum GDK_PIXBUF_ERROR_FAILED of type GdkPixbuf.PixbufError>, 6: <enum GDK_PIXBUF_ERROR_INCOMPLETE_ANIMATION of type GdkPixbuf.PixbufError>}, '__info__': gi.EnumInfo(PixbufError), 'CORRUPT_IMAGE': <enum GDK_PIXBUF_ERROR_CORRUPT_IMAGE of type GdkPixbuf.PixbufError>, 'INSUFFICIENT_MEMORY': <enum GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY of type GdkPixbuf.PixbufError>, 'BAD_OPTION': <enum GDK_PIXBUF_ERROR_BAD_OPTION of type GdkPixbuf.PixbufError>, 'UNKNOWN_TYPE': <enum GDK_PIXBUF_ERROR_UNKNOWN_TYPE of type GdkPixbuf.PixbufError>, 'UNSUPPORTED_OPERATION': <enum GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION of type GdkPixbuf.PixbufError>, 'FAILED': <enum GDK_PIXBUF_ERROR_FAILED of type GdkPixbuf.PixbufError>, 'INCOMPLETE_ANIMATION': <enum GDK_PIXBUF_ERROR_INCOMPLETE_ANIMATION of type GdkPixbuf.PixbufError>, 'quark': gi.FunctionInfo(quark, bound=None)})"
-    __enum_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        3: 3,
-        4: 4,
-        5: 5,
-        6: 6,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkPixbufError (3187690176)>'
-    __info__ = gi.EnumInfo(PixbufError)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'CORRUPT_IMAGE': <PixbufError.CORRUPT_IMAGE: 0>, 'INSUFFICIENT_MEMORY': <PixbufError.INSUFFICIENT_MEMORY: 1>, 'BAD_OPTION': <PixbufError.BAD_OPTION: 2>, 'UNKNOWN_TYPE': <PixbufError.UNKNOWN_TYPE: 3>, 'UNSUPPORTED_OPERATION': <PixbufError.UNSUPPORTED_OPERATION: 4>, 'FAILED': <PixbufError.FAILED: 5>, 'INCOMPLETE_ANIMATION': <PixbufError.INCOMPLETE_ANIMATION: 6>})"
+    __name__ = 'PixbufError'
+    __qualname__ = 'PixbufError'
 
 
 class PixbufFormat(__gi.Boxed):
@@ -3577,7 +3592,11 @@ class PixbufFormat(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -3687,19 +3706,18 @@ class PixbufFormat(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufFormat), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufFormat (3187690512)>, '__dict__': <attribute '__dict__' of 'PixbufFormat' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufFormat' objects>, '__doc__': None, 'name': <property object at 0x000001c5c08f4e00>, 'signature': <property object at 0x000001c5c08f4ef0>, 'domain': <property object at 0x000001c5c08f4fe0>, 'description': <property object at 0x000001c5c08f50d0>, 'mime_types': <property object at 0x000001c5c08f51c0>, 'extensions': <property object at 0x000001c5c08f52b0>, 'flags': <property object at 0x000001c5c08f53a0>, 'disabled': <property object at 0x000001c5c08f5490>, 'license': <property object at 0x000001c5c08f5580>, 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'get_description': gi.FunctionInfo(get_description, bound=None), 'get_extensions': gi.FunctionInfo(get_extensions, bound=None), 'get_license': gi.FunctionInfo(get_license, bound=None), 'get_mime_types': gi.FunctionInfo(get_mime_types, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'is_disabled': gi.FunctionInfo(is_disabled, bound=None), 'is_save_option_supported': gi.FunctionInfo(is_save_option_supported, bound=None), 'is_scalable': gi.FunctionInfo(is_scalable, bound=None), 'is_writable': gi.FunctionInfo(is_writable, bound=None), 'set_disabled': gi.FunctionInfo(set_disabled, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GdkPixbufFormat (3187690512)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufFormat), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufFormat (1979316336)>, '__dict__': <attribute '__dict__' of 'PixbufFormat' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufFormat' objects>, '__doc__': None, 'name': <property object at 0x0000023c78d6df30>, 'signature': <property object at 0x0000023c78d6de40>, 'domain': <property object at 0x0000023c78d6e070>, 'description': <property object at 0x0000023c78d6e160>, 'mime_types': <property object at 0x0000023c78d6e250>, 'extensions': <property object at 0x0000023c78d6e340>, 'flags': <property object at 0x0000023c78d6e430>, 'disabled': <property object at 0x0000023c78d6e520>, 'license': <property object at 0x0000023c78d6e610>, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'get_description': gi.FunctionInfo(get_description), 'get_extensions': gi.FunctionInfo(get_extensions), 'get_license': gi.FunctionInfo(get_license), 'get_mime_types': gi.FunctionInfo(get_mime_types), 'get_name': gi.FunctionInfo(get_name), 'is_disabled': gi.FunctionInfo(is_disabled), 'is_save_option_supported': gi.FunctionInfo(is_save_option_supported), 'is_scalable': gi.FunctionInfo(is_scalable), 'is_writable': gi.FunctionInfo(is_writable), 'set_disabled': gi.FunctionInfo(set_disabled)})"
+    __gtype__ = None # (!) real value is '<GType GdkPixbufFormat (1979316336)>'
     __info__ = StructInfo(PixbufFormat)
 
 
-class PixbufFormatFlags(__gobject.GFlags):
+class PixbufFormatFlags(__enum.IntFlag):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -3752,10 +3770,14 @@ class PixbufFormatFlags(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -3771,7 +3793,7 @@ class PixbufFormatFlags(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -3787,8 +3809,8 @@ class PixbufFormatFlags(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -3799,12 +3821,16 @@ class PixbufFormatFlags(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -3828,10 +3854,15 @@ class PixbufFormatFlags(__gobject.GFlags):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -3873,8 +3904,16 @@ class PixbufFormatFlags(__gobject.GFlags):
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -3902,16 +3941,16 @@ class PixbufFormatFlags(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -3926,24 +3965,24 @@ class PixbufFormatFlags(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -3962,8 +4001,8 @@ class PixbufFormatFlags(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -3994,8 +4033,8 @@ class PixbufFormatFlags(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -4007,7 +4046,7 @@ class PixbufFormatFlags(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -4033,16 +4072,12 @@ class PixbufFormatFlags(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -4053,23 +4088,14 @@ class PixbufFormatFlags(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     SCALABLE = 2
     THREADSAFE = 4
     WRITABLE = 1
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GdkPixbuf', '__dict__': <attribute '__dict__' of 'PixbufFormatFlags' objects>, '__doc__': None, '__gtype__': <GType PyGdkPixbufPixbufFormatFlags (3187689616)>, '__flags_values__': {1: <flags GDK_PIXBUF_FORMAT_WRITABLE of type GdkPixbuf.PixbufFormatFlags>, 2: <flags GDK_PIXBUF_FORMAT_SCALABLE of type GdkPixbuf.PixbufFormatFlags>, 4: <flags GDK_PIXBUF_FORMAT_THREADSAFE of type GdkPixbuf.PixbufFormatFlags>}, '__info__': gi.EnumInfo(PixbufFormatFlags), 'WRITABLE': <flags GDK_PIXBUF_FORMAT_WRITABLE of type GdkPixbuf.PixbufFormatFlags>, 'SCALABLE': <flags GDK_PIXBUF_FORMAT_SCALABLE of type GdkPixbuf.PixbufFormatFlags>, 'THREADSAFE': <flags GDK_PIXBUF_FORMAT_THREADSAFE of type GdkPixbuf.PixbufFormatFlags>})"
-    __flags_values__ = {
-        1: 1,
-        2: 2,
-        4: 4,
-    }
-    __gtype__ = None # (!) real value is '<GType PyGdkPixbufPixbufFormatFlags (3187689616)>'
-    __info__ = gi.EnumInfo(PixbufFormatFlags)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'WRITABLE': <PixbufFormatFlags.WRITABLE: 1>, 'SCALABLE': <PixbufFormatFlags.SCALABLE: 2>, 'THREADSAFE': <PixbufFormatFlags.THREADSAFE: 4>})"
+    __name__ = 'PixbufFormatFlags'
+    __qualname__ = 'PixbufFormatFlags'
 
 
 class PixbufLoader(__gi_overrides_GObject.Object):
@@ -4107,20 +4133,20 @@ class PixbufLoader(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -4149,6 +4175,12 @@ class PixbufLoader(__gi_overrides_GObject.Object):
         """ closed(self) """
         pass
 
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
+        pass
+
     def do_size_prepared(self, *args, **kwargs): # real signature unknown
         """ size_prepared(self, width:int, height:int) """
         pass
@@ -4172,17 +4204,17 @@ class PixbufLoader(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -4219,20 +4251,20 @@ class PixbufLoader(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -4282,7 +4314,8 @@ class PixbufLoader(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> GdkPixbuf.PixbufLoader """
         pass
 
@@ -4290,11 +4323,13 @@ class PixbufLoader(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_with_mime_type(self, mime_type): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_with_mime_type(cls, mime_type): # real signature unknown; restored from __doc__
         """ new_with_mime_type(mime_type:str) -> GdkPixbuf.PixbufLoader """
         pass
 
-    def new_with_type(self, image_type): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_with_type(cls, image_type): # real signature unknown; restored from __doc__
         """ new_with_type(image_type:str) -> GdkPixbuf.PixbufLoader """
         pass
 
@@ -4383,20 +4418,20 @@ class PixbufLoader(__gi_overrides_GObject.Object):
         """ write_bytes(self, buffer:GLib.Bytes) -> bool """
         return False
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -4426,7 +4461,11 @@ class PixbufLoader(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -4528,13 +4567,15 @@ class PixbufLoader(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001c5c03a4130>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x0000023c76e35090>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufLoader), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufLoader (3187689840)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_with_mime_type': gi.FunctionInfo(new_with_mime_type, bound=None), 'new_with_type': gi.FunctionInfo(new_with_type, bound=None), 'close': gi.FunctionInfo(close, bound=None), 'get_animation': gi.FunctionInfo(get_animation, bound=None), 'get_format': gi.FunctionInfo(get_format, bound=None), 'get_pixbuf': gi.FunctionInfo(get_pixbuf, bound=None), 'set_size': gi.FunctionInfo(set_size, bound=None), 'write': gi.FunctionInfo(write, bound=None), 'write_bytes': gi.FunctionInfo(write_bytes, bound=None), 'do_area_prepared': gi.VFuncInfo(area_prepared, bound=None), 'do_area_updated': gi.VFuncInfo(area_updated, bound=None), 'do_closed': gi.VFuncInfo(closed, bound=None), 'do_size_prepared': gi.VFuncInfo(size_prepared, bound=None), 'parent_instance': <property object at 0x000001c5c08f5ad0>, 'priv': <property object at 0x000001c5c08f5bc0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufLoader), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufLoader (1979315088)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_with_mime_type': <classmethod(gi.FunctionInfo(new_with_mime_type))>, 'new_with_type': <classmethod(gi.FunctionInfo(new_with_type))>, 'close': gi.FunctionInfo(close), 'get_animation': gi.FunctionInfo(get_animation), 'get_format': gi.FunctionInfo(get_format), 'get_pixbuf': gi.FunctionInfo(get_pixbuf), 'set_size': gi.FunctionInfo(set_size), 'write': gi.FunctionInfo(write), 'write_bytes': gi.FunctionInfo(write_bytes), 'do_area_prepared': gi.VFuncInfo(area_prepared), 'do_area_updated': gi.VFuncInfo(area_updated), 'do_closed': gi.VFuncInfo(closed), 'do_size_prepared': gi.VFuncInfo(size_prepared), 'parent_instance': <property object at 0x0000023c78d6e750>, 'priv': <property object at 0x0000023c78d6e980>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GdkPixbufLoader\n\nSignals from GdkPixbufLoader:\n  size-prepared (gint, gint)\n  area-prepared ()\n  area-updated (gint, gint, gint, gint)\n  closed ()\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkPixbufLoader (3187689840)>'
+    __gtype__ = None # (!) real value is '<GType GdkPixbufLoader (1979315088)>'
     __info__ = ObjectInfo(PixbufLoader)
+    __static_attributes__ = ()
 
 
 class PixbufLoaderClass(__gi.Struct):
@@ -4558,7 +4599,11 @@ class PixbufLoaderClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -4660,7 +4705,7 @@ class PixbufLoaderClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufLoaderClass), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufLoaderClass' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufLoaderClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001c5c08f5d50>, 'size_prepared': <property object at 0x000001c5c08f5e40>, 'area_prepared': <property object at 0x000001c5c08f5f30>, 'area_updated': <property object at 0x000001c5c08f6020>, 'closed': <property object at 0x000001c5c08f6110>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufLoaderClass), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufLoaderClass' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufLoaderClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000023c78d6eac0>, 'size_prepared': <property object at 0x0000023c78d6ebb0>, 'area_prepared': <property object at 0x0000023c78d6eca0>, 'area_updated': <property object at 0x0000023c78d6ed90>, 'closed': <property object at 0x0000023c78d6ee80>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PixbufLoaderClass)
 
@@ -4686,7 +4731,11 @@ class PixbufModule(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -4812,7 +4861,7 @@ class PixbufModule(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufModule), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufModule' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufModule' objects>, '__doc__': None, 'module_name': <property object at 0x000001c5c08f6250>, 'module_path': <property object at 0x000001c5c08f6340>, 'module': <property object at 0x000001c5c08f6430>, 'info': <property object at 0x000001c5c08f6520>, 'load': <property object at 0x000001c5c08f6610>, 'load_xpm_data': <property object at 0x000001c5c08f6700>, 'begin_load': <property object at 0x000001c5c08f67f0>, 'stop_load': <property object at 0x000001c5c08f68e0>, 'load_increment': <property object at 0x000001c5c08f69d0>, 'load_animation': <property object at 0x000001c5c08f6ac0>, 'save': <property object at 0x000001c5c08f6bb0>, 'save_to_callback': <property object at 0x000001c5c08f6cf0>, 'is_save_option_supported': <property object at 0x000001c5c08f6e30>, '_reserved1': <property object at 0x000001c5c08f6ed0>, '_reserved2': <property object at 0x000001c5c08f6fc0>, '_reserved3': <property object at 0x000001c5c08f70b0>, '_reserved4': <property object at 0x000001c5c08f71a0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufModule), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufModule' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufModule' objects>, '__doc__': None, 'module_name': <property object at 0x0000023c78d6efc0>, 'module_path': <property object at 0x0000023c78d6f0b0>, 'module': <property object at 0x0000023c78d6f1a0>, 'info': <property object at 0x0000023c78d6f290>, 'load': <property object at 0x0000023c78d6f380>, 'load_xpm_data': <property object at 0x0000023c78d6f470>, 'begin_load': <property object at 0x0000023c78d6f560>, 'stop_load': <property object at 0x0000023c78d6f650>, 'load_increment': <property object at 0x0000023c78d6f740>, 'load_animation': <property object at 0x0000023c78d6f830>, 'save': <property object at 0x0000023c78d6f920>, 'save_to_callback': <property object at 0x0000023c78d6fa10>, 'is_save_option_supported': <property object at 0x0000023c78d6fb50>, '_reserved1': <property object at 0x0000023c78d6fbf0>, '_reserved2': <property object at 0x0000023c78d6fce0>, '_reserved3': <property object at 0x0000023c78d6fdd0>, '_reserved4': <property object at 0x0000023c78d6fec0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PixbufModule)
 
@@ -4838,7 +4887,11 @@ class PixbufModulePattern(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -4936,7 +4989,7 @@ class PixbufModulePattern(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufModulePattern), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufModulePattern' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufModulePattern' objects>, '__doc__': None, 'prefix': <property object at 0x000001c5c08f7330>, 'mask': <property object at 0x000001c5c08f7420>, 'relevance': <property object at 0x000001c5c08f7510>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PixbufModulePattern), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PixbufModulePattern' objects>, '__weakref__': <attribute '__weakref__' of 'PixbufModulePattern' objects>, '__doc__': None, 'prefix': <property object at 0x0000023c78d48040>, 'mask': <property object at 0x0000023c78d48130>, 'relevance': <property object at 0x0000023c78d48220>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PixbufModulePattern)
 
@@ -4970,20 +5023,20 @@ class PixbufNonAnim(PixbufAnimation):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -4998,6 +5051,12 @@ class PixbufNonAnim(PixbufAnimation):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_iter(self, *args, **kwargs): # real signature unknown
@@ -5035,17 +5094,17 @@ class PixbufNonAnim(PixbufAnimation):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -5086,20 +5145,20 @@ class PixbufNonAnim(PixbufAnimation):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -5153,7 +5212,8 @@ class PixbufNonAnim(PixbufAnimation):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, pixbuf): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, pixbuf): # real signature unknown; restored from __doc__
         """ new(pixbuf:GdkPixbuf.Pixbuf) -> GdkPixbuf.PixbufAnimation """
         pass
 
@@ -5258,20 +5318,20 @@ class PixbufNonAnim(PixbufAnimation):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -5301,7 +5361,11 @@ class PixbufNonAnim(PixbufAnimation):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -5401,23 +5465,24 @@ class PixbufNonAnim(PixbufAnimation):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001c5c03a4340>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x0000023c76e36500>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufNonAnim), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufNonAnim (3187690400)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufNonAnim), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufNonAnim (1987543488)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GdkPixbufNonAnim\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkPixbufNonAnim (3187690400)>'
+    __gtype__ = None # (!) real value is '<GType GdkPixbufNonAnim (1987543488)>'
     __info__ = ObjectInfo(PixbufNonAnim)
+    __static_attributes__ = ()
 
 
-class PixbufRotation(__gobject.GEnum):
+class PixbufRotation(__gi__gi.GEnum):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
-        Return integer ratio.
+        Return a pair of integers, whose ratio is equal to the original int.
         
-        Return a pair of integers, whose ratio is exactly equal to the original int
-        and with a positive denominator.
+        The ratio is in lowest terms and has a positive denominator.
         
         >>> (10).as_integer_ratio()
         (10, 1)
@@ -5470,10 +5535,14 @@ class PixbufRotation(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
+        pass
+
+    def is_integer(self, *args, **kwargs): # real signature unknown
+        """ Returns True. Exists for duck type compatibility with float.is_integer. """
         pass
 
     def to_bytes(self, *args, **kwargs): # real signature unknown
@@ -5489,7 +5558,7 @@ class PixbufRotation(__gobject.GEnum):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -5517,12 +5586,23 @@ class PixbufRotation(__gobject.GEnum):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, *args, **kwargs): # real signature unknown
+        """
+        Return True if `value` is in `cls`.
+        
+        `value` is in `cls` if:
+        1) `value` is a member of `cls`, or
+        2) `value` is the value of one of the `cls`'s members.
+        3) `value` is a pseudo-member (flags)
+        """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -5546,10 +5626,15 @@ class PixbufRotation(__gobject.GEnum):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
+        """ Convert to a string according to format_spec. """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -5595,6 +5680,14 @@ class PixbufRotation(__gobject.GEnum):
         """ ~self """
         pass
 
+    def __iter__(self, *args, **kwargs): # real signature unknown
+        """ Return members in definition order. """
+        pass
+
+    def __len__(self, *args, **kwargs): # real signature unknown
+        """ Return the number of members (no aliases) """
+        pass
+
     def __le__(self, *args, **kwargs): # real signature unknown
         """ Return self<=value. """
         pass
@@ -5620,8 +5713,8 @@ class PixbufRotation(__gobject.GEnum):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
@@ -5652,15 +5745,16 @@ class PixbufRotation(__gobject.GEnum):
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
+        """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -5724,7 +5818,7 @@ class PixbufRotation(__gobject.GEnum):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -5766,25 +5860,15 @@ class PixbufRotation(__gobject.GEnum):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     CLOCKWISE = 270
     COUNTERCLOCKWISE = 90
     NONE = 0
     UPSIDEDOWN = 180
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.GdkPixbuf', '__dict__': <attribute '__dict__' of 'PixbufRotation' objects>, '__doc__': None, '__gtype__': <GType GdkPixbufRotation (3187689952)>, '__enum_values__': {0: <enum GDK_PIXBUF_ROTATE_NONE of type GdkPixbuf.PixbufRotation>, 90: <enum GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE of type GdkPixbuf.PixbufRotation>, 180: <enum GDK_PIXBUF_ROTATE_UPSIDEDOWN of type GdkPixbuf.PixbufRotation>, 270: <enum GDK_PIXBUF_ROTATE_CLOCKWISE of type GdkPixbuf.PixbufRotation>}, '__info__': gi.EnumInfo(PixbufRotation), 'NONE': <enum GDK_PIXBUF_ROTATE_NONE of type GdkPixbuf.PixbufRotation>, 'COUNTERCLOCKWISE': <enum GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE of type GdkPixbuf.PixbufRotation>, 'UPSIDEDOWN': <enum GDK_PIXBUF_ROTATE_UPSIDEDOWN of type GdkPixbuf.PixbufRotation>, 'CLOCKWISE': <enum GDK_PIXBUF_ROTATE_CLOCKWISE of type GdkPixbuf.PixbufRotation>})"
-    __enum_values__ = {
-        0: 0,
-        90: 90,
-        180: 180,
-        270: 270,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkPixbufRotation (3187689952)>'
-    __info__ = gi.EnumInfo(PixbufRotation)
+    __class__ = None # (!) real value is "<class 'gi._enum.GEnumMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'NONE': <PixbufRotation.NONE: 0>, 'COUNTERCLOCKWISE': <PixbufRotation.COUNTERCLOCKWISE: 90>, 'UPSIDEDOWN': <PixbufRotation.UPSIDEDOWN: 180>, 'CLOCKWISE': <PixbufRotation.CLOCKWISE: 270>})"
+    __name__ = 'PixbufRotation'
+    __qualname__ = 'PixbufRotation'
 
 
 class PixbufSimpleAnim(PixbufAnimation):
@@ -5820,20 +5904,20 @@ class PixbufSimpleAnim(PixbufAnimation):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -5848,6 +5932,12 @@ class PixbufSimpleAnim(PixbufAnimation):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_iter(self, *args, **kwargs): # real signature unknown
@@ -5885,17 +5975,17 @@ class PixbufSimpleAnim(PixbufAnimation):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -5940,20 +6030,20 @@ class PixbufSimpleAnim(PixbufAnimation):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -6007,7 +6097,8 @@ class PixbufSimpleAnim(PixbufAnimation):
         """ list_properties(self) -> list """
         return []
 
-    def new(self, width, height, rate): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, width, height, rate): # real signature unknown; restored from __doc__
         """ new(width:int, height:int, rate:float) -> GdkPixbuf.PixbufSimpleAnim """
         pass
 
@@ -6116,20 +6207,20 @@ class PixbufSimpleAnim(PixbufAnimation):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -6159,7 +6250,11 @@ class PixbufSimpleAnim(PixbufAnimation):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -6259,13 +6354,15 @@ class PixbufSimpleAnim(PixbufAnimation):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001c5c03a4430>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x0000023c76ce10c0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufSimpleAnim), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufSimpleAnim (3187682336)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'add_frame': gi.FunctionInfo(add_frame, bound=None), 'get_loop': gi.FunctionInfo(get_loop, bound=None), 'set_loop': gi.FunctionInfo(set_loop, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufSimpleAnim), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufSimpleAnim (1987544944)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'add_frame': gi.FunctionInfo(add_frame), 'get_loop': gi.FunctionInfo(get_loop), 'set_loop': gi.FunctionInfo(set_loop)})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GdkPixbufSimpleAnim\n\nProperties from GdkPixbufSimpleAnim:\n  loop -> gboolean: Loop\n    Whether the animation should loop when it reaches the end\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkPixbufSimpleAnim (3187682336)>'
+    __gtype__ = None # (!) real value is '<GType GdkPixbufSimpleAnim (1987544944)>'
     __info__ = ObjectInfo(PixbufSimpleAnim)
+    __static_attributes__ = ()
 
 
 class PixbufSimpleAnimClass(__gi.Struct):
@@ -6283,7 +6380,11 @@ class PixbufSimpleAnimClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -6411,20 +6512,20 @@ class PixbufSimpleAnimIter(PixbufAnimationIter):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -6443,6 +6544,12 @@ class PixbufSimpleAnimIter(PixbufAnimationIter):
 
     def do_advance(self, *args, **kwargs): # real signature unknown
         """ advance(self, current_time:GLib.TimeVal=None) -> bool """
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_get_delay_time(self, *args, **kwargs): # real signature unknown
@@ -6476,17 +6583,17 @@ class PixbufSimpleAnimIter(PixbufAnimationIter):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -6519,20 +6626,20 @@ class PixbufSimpleAnimIter(PixbufAnimationIter):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -6663,20 +6770,20 @@ class PixbufSimpleAnimIter(PixbufAnimationIter):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -6706,7 +6813,11 @@ class PixbufSimpleAnimIter(PixbufAnimationIter):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -6806,136 +6917,22 @@ class PixbufSimpleAnimIter(PixbufAnimationIter):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001c5c03a6bf0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x0000023c76ce1f00>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufSimpleAnimIter), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufSimpleAnimIter (3187676512)>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(PixbufSimpleAnimIter), '__module__': 'gi.repository.GdkPixbuf', '__gtype__': <GType GdkPixbufSimpleAnimIter (1987545952)>, '__doc__': None, '__gsignals__': {}})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GdkPixbufSimpleAnimIter\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkPixbufSimpleAnimIter (3187676512)>'
+    __gtype__ = None # (!) real value is '<GType GdkPixbufSimpleAnimIter (1987545952)>'
     __info__ = ObjectInfo(PixbufSimpleAnimIter)
-
-
-class __class__(__gi_overrides.OverridesProxyModule):
-    # no doc
-    def __delattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement delattr(self, name). """
-        pass
-
-    def __dir__(self): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __eq__(self, *args, **kwargs): # real signature unknown
-        """ Return self==value. """
-        pass
-
-    def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
-        pass
-
-    def __getattribute__(self, *args, **kwargs): # real signature unknown
-        """ Return getattr(self, name). """
-        pass
-
-    def __getattr__(self, name): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __getstate__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __ge__(self, *args, **kwargs): # real signature unknown
-        """ Return self>=value. """
-        pass
-
-    def __gt__(self, *args, **kwargs): # real signature unknown
-        """ Return self>value. """
-        pass
-
-    def __hash__(self, *args, **kwargs): # real signature unknown
-        """ Return hash(self). """
-        pass
-
-    def __init_subclass__(self, *args, **kwargs): # real signature unknown
-        """
-        This method is called when a class is subclassed.
-        
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-        pass
-
-    def __init__(self, introspection_module): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __le__(self, *args, **kwargs): # real signature unknown
-        """ Return self<=value. """
-        pass
-
-    def __lt__(self, *args, **kwargs): # real signature unknown
-        """ Return self<value. """
-        pass
-
-    @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
-        pass
-
-    def __ne__(self, *args, **kwargs): # real signature unknown
-        """ Return self!=value. """
-        pass
-
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __reduce__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
-        pass
-
-    def __repr__(self): # reliably restored by inspect
-        # no doc
-        pass
-
-    def __setattr__(self, *args, **kwargs): # real signature unknown
-        """ Implement setattr(self, name, value). """
-        pass
-
-    def __sizeof__(self, *args, **kwargs): # real signature unknown
-        """ Size of object in memory, in bytes. """
-        pass
-
-    def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
-        pass
-
-    def __subclasshook__(self, *args, **kwargs): # real signature unknown
-        """
-        Abstract classes can override this to customize issubclass().
-        
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-        pass
-
-    __annotations__ = {}
-    __class__ = type
-    __dict__ = mappingproxy({'__module__': 'gi.overrides', '__doc__': None, '__annotations__': {}})
+    __static_attributes__ = ()
 
 
 # variables with complex values
 
-_introspection_module = None # (!) real value is "<IntrospectionModule 'GdkPixbuf' from 'C:\\\\Program Files\\\\GIMP 3\\\\lib\\\\girepository-1.0\\\\GdkPixbuf-2.0.typelib'>"
-
-__annotations__ = {}
-
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000001c5bfa02090>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x0000023c77114440>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GdkPixbuf', loader=<gi.importer.DynamicImporter object at 0x000001c5bfa02090>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.GdkPixbuf', loader=<gi.importer.DynamicImporter object at 0x0000023c77114440>)"
 

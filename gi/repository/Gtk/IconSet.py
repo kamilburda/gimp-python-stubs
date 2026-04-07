@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -181,8 +180,10 @@ class IconSet(IconSet):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__new__': <staticmethod(<function IconSet.__new__ at 0x000002ece8a6dc60>)>, '__init__': <function IconSet.__init__ at 0x000002ece8a6dd00>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType GtkIconSet (3867805808)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gtk', '__firstlineno__': 1749, '__new__': <staticmethod(<function IconSet.__new__ at 0x000002bfcebc92d0>)>, '__init__': <function IconSet.__init__ at 0x000002bfcebc9380>, '__static_attributes__': (), '__doc__': None})"
+    __firstlineno__ = 1749
+    __gtype__ = None # (!) real value is '<GType GtkIconSet (3426611632)>'
     __info__ = StructInfo(IconSet)
+    __static_attributes__ = ()
 
 

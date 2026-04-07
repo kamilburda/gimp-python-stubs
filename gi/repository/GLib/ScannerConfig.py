@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ScannerConfig(__gi.Struct):
@@ -187,7 +185,7 @@ class ScannerConfig(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ScannerConfig), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ScannerConfig' objects>, '__weakref__': <attribute '__weakref__' of 'ScannerConfig' objects>, '__doc__': None, 'cset_skip_characters': <property object at 0x000002830bef7a60>, 'cset_identifier_first': <property object at 0x000002830bef7b50>, 'cset_identifier_nth': <property object at 0x000002830bef7c40>, 'cpair_comment_single': <property object at 0x000002830bef7d30>, 'case_sensitive': <property object at 0x000002830bef7e20>, 'skip_comment_multi': <property object at 0x000002830bef7f10>, 'skip_comment_single': <property object at 0x000002830bec0040>, 'scan_comment_multi': <property object at 0x000002830bec0130>, 'scan_identifier': <property object at 0x000002830bec0220>, 'scan_identifier_1char': <property object at 0x000002830bec0310>, 'scan_identifier_NULL': <property object at 0x000002830bec0400>, 'scan_symbols': <property object at 0x000002830bec04f0>, 'scan_binary': <property object at 0x000002830bec05e0>, 'scan_octal': <property object at 0x000002830bec06d0>, 'scan_float': <property object at 0x000002830bec07c0>, 'scan_hex': <property object at 0x000002830bec08b0>, 'scan_hex_dollar': <property object at 0x000002830bec09a0>, 'scan_string_sq': <property object at 0x000002830bec0a90>, 'scan_string_dq': <property object at 0x000002830bec0b80>, 'numbers_2_int': <property object at 0x000002830bec0c70>, 'int_2_float': <property object at 0x000002830bec0d60>, 'identifier_2_string': <property object at 0x000002830bec0e50>, 'char_2_token': <property object at 0x000002830bec0f40>, 'symbol_2_token': <property object at 0x000002830bec1030>, 'scope_0_fallback': <property object at 0x000002830bec1120>, 'store_int64': <property object at 0x000002830bec1210>, 'padding_dummy': <property object at 0x000002830bec1300>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ScannerConfig), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ScannerConfig' objects>, '__weakref__': <attribute '__weakref__' of 'ScannerConfig' objects>, '__doc__': None, 'cset_skip_characters': <property object at 0x0000018ea0065080>, 'cset_identifier_first': <property object at 0x0000018ea0065170>, 'cset_identifier_nth': <property object at 0x0000018ea0065260>, 'cpair_comment_single': <property object at 0x0000018ea0065350>, 'case_sensitive': <property object at 0x0000018ea0065440>, 'skip_comment_multi': <property object at 0x0000018ea0065530>, 'skip_comment_single': <property object at 0x0000018ea0065620>, 'scan_comment_multi': <property object at 0x0000018ea0065710>, 'scan_identifier': <property object at 0x0000018ea0065800>, 'scan_identifier_1char': <property object at 0x0000018ea00658f0>, 'scan_identifier_NULL': <property object at 0x0000018ea00659e0>, 'scan_symbols': <property object at 0x0000018ea0065ad0>, 'scan_binary': <property object at 0x0000018ea0065bc0>, 'scan_octal': <property object at 0x0000018ea0065cb0>, 'scan_float': <property object at 0x0000018ea0065da0>, 'scan_hex': <property object at 0x0000018ea0065e90>, 'scan_hex_dollar': <property object at 0x0000018ea0065f80>, 'scan_string_sq': <property object at 0x0000018ea0066070>, 'scan_string_dq': <property object at 0x0000018ea0066160>, 'numbers_2_int': <property object at 0x0000018ea0066250>, 'int_2_float': <property object at 0x0000018ea0066340>, 'identifier_2_string': <property object at 0x0000018ea0066430>, 'char_2_token': <property object at 0x0000018ea0066520>, 'symbol_2_token': <property object at 0x0000018ea0066610>, 'scope_0_fallback': <property object at 0x0000018ea0066700>, 'store_int64': <property object at 0x0000018ea00667f0>, 'padding_dummy': <property object at 0x0000018ea00668e0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ScannerConfig)
 

@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class FontsetClass(__gi.Struct):
@@ -149,7 +147,7 @@ class FontsetClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontsetClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontsetClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontsetClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000213f6084d60>, 'get_font': <property object at 0x00000213f6084e50>, 'get_metrics': <property object at 0x00000213f6084f40>, 'get_language': <property object at 0x00000213f6085030>, 'foreach': <property object at 0x00000213f6085120>, '_pango_reserved1': <property object at 0x00000213f6085210>, '_pango_reserved2': <property object at 0x00000213f6085300>, '_pango_reserved3': <property object at 0x00000213f60853f0>, '_pango_reserved4': <property object at 0x00000213f60854e0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(FontsetClass), '__module__': 'gi.repository.Pango', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'FontsetClass' objects>, '__weakref__': <attribute '__weakref__' of 'FontsetClass' objects>, '__doc__': None, 'parent_class': <property object at 0x00000280355e77e0>, 'get_font': <property object at 0x00000280355e78d0>, 'get_metrics': <property object at 0x00000280355e79c0>, 'get_language': <property object at 0x00000280355e7ab0>, 'foreach': <property object at 0x00000280355e7ba0>, '_pango_reserved1': <property object at 0x00000280355e7c90>, '_pango_reserved2': <property object at 0x00000280355e7d80>, '_pango_reserved3': <property object at 0x00000280355e7e70>, '_pango_reserved4': <property object at 0x00000280355e7f60>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(FontsetClass)
 

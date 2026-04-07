@@ -1,25 +1,18 @@
 # encoding: utf-8
 # module gi.repository.GimpUi
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GimpUi-3.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Gimp as __gi_repository_Gimp
 import gi.repository.Gtk as __gi_repository_Gtk
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class ScaleEntryClass(__gi.Struct):
@@ -163,7 +156,7 @@ class ScaleEntryClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ScaleEntryClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ScaleEntryClass' objects>, '__weakref__': <attribute '__weakref__' of 'ScaleEntryClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000001eeb751a480>, 'new_range_widget': <property object at 0x000001eeb751a570>, '_gimp_reserved0': <property object at 0x000001eeb751a660>, '_gimp_reserved1': <property object at 0x000001eeb751a750>, '_gimp_reserved2': <property object at 0x000001eeb751a840>, '_gimp_reserved3': <property object at 0x000001eeb751a930>, '_gimp_reserved4': <property object at 0x000001eeb751aa20>, '_gimp_reserved5': <property object at 0x000001eeb751ab10>, '_gimp_reserved6': <property object at 0x000001eeb751ac00>, '_gimp_reserved7': <property object at 0x000001eeb751acf0>, '_gimp_reserved8': <property object at 0x000001eeb751ade0>, '_gimp_reserved9': <property object at 0x000001eeb751aed0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ScaleEntryClass), '__module__': 'gi.repository.GimpUi', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ScaleEntryClass' objects>, '__weakref__': <attribute '__weakref__' of 'ScaleEntryClass' objects>, '__doc__': None, 'parent_class': <property object at 0x0000020ee1cedf30>, 'new_range_widget': <property object at 0x0000020ee1cee020>, '_gimp_reserved0': <property object at 0x0000020ee1cee110>, '_gimp_reserved1': <property object at 0x0000020ee1cee200>, '_gimp_reserved2': <property object at 0x0000020ee1cee2f0>, '_gimp_reserved3': <property object at 0x0000020ee1cee3e0>, '_gimp_reserved4': <property object at 0x0000020ee1cee4d0>, '_gimp_reserved5': <property object at 0x0000020ee1cee5c0>, '_gimp_reserved6': <property object at 0x0000020ee1cee6b0>, '_gimp_reserved7': <property object at 0x0000020ee1cee7a0>, '_gimp_reserved8': <property object at 0x0000020ee1cee890>, '_gimp_reserved9': <property object at 0x0000020ee1cee980>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ScaleEntryClass)
 

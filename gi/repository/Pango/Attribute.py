@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Attribute(__gi.Boxed):
@@ -192,8 +190,8 @@ class Attribute(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Attribute), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoAttribute (4081757024)>, '__dict__': <attribute '__dict__' of 'Attribute' objects>, '__weakref__': <attribute '__weakref__' of 'Attribute' objects>, '__doc__': None, 'klass': <property object at 0x00000213f608d1c0>, 'start_index': <property object at 0x00000213f608d2b0>, 'end_index': <property object at 0x00000213f608d3a0>, 'as_color': gi.FunctionInfo(as_color, bound=None), 'as_float': gi.FunctionInfo(as_float, bound=None), 'as_font_desc': gi.FunctionInfo(as_font_desc, bound=None), 'as_font_features': gi.FunctionInfo(as_font_features, bound=None), 'as_int': gi.FunctionInfo(as_int, bound=None), 'as_language': gi.FunctionInfo(as_language, bound=None), 'as_shape': gi.FunctionInfo(as_shape, bound=None), 'as_size': gi.FunctionInfo(as_size, bound=None), 'as_string': gi.FunctionInfo(as_string, bound=None), 'copy': gi.FunctionInfo(copy, bound=None), 'destroy': gi.FunctionInfo(destroy, bound=None), 'equal': gi.FunctionInfo(equal, bound=None), 'init': gi.FunctionInfo(init, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType PangoAttribute (4081757024)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Attribute), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoAttribute (857387200)>, '__dict__': <attribute '__dict__' of 'Attribute' objects>, '__weakref__': <attribute '__weakref__' of 'Attribute' objects>, '__doc__': None, 'klass': <property object at 0x000002803560bf10>, 'start_index': <property object at 0x000002803560be20>, 'end_index': <property object at 0x000002803560bd30>, 'as_color': gi.FunctionInfo(as_color), 'as_float': gi.FunctionInfo(as_float), 'as_font_desc': gi.FunctionInfo(as_font_desc), 'as_font_features': gi.FunctionInfo(as_font_features), 'as_int': gi.FunctionInfo(as_int), 'as_language': gi.FunctionInfo(as_language), 'as_shape': gi.FunctionInfo(as_shape), 'as_size': gi.FunctionInfo(as_size), 'as_string': gi.FunctionInfo(as_string), 'copy': gi.FunctionInfo(copy), 'destroy': gi.FunctionInfo(destroy), 'equal': gi.FunctionInfo(equal), 'init': gi.FunctionInfo(init)})"
+    __gtype__ = None # (!) real value is '<GType PangoAttribute (857387200)>'
     __info__ = StructInfo(Attribute)
 
 

@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -54,8 +59,39 @@ class Application(Application):
         """ add_action(self, action:Gio.Action) """
         pass
 
-    def add_action_entries(self, entries, user_data=None): # real signature unknown; restored from __doc__
-        """ add_action_entries(self, entries:list, user_data=None) """
+    def add_action_entries(self, entries, user_data=None): # reliably restored by inspect
+        """
+        The ``add_action_entries()`` method is a convenience function for creating
+                multiple :class:`~gi.repository.Gio.SimpleAction` instances and adding them
+                to a :class:`~gi.repository.Gio.ActionMap`.
+                Each action is constructed as per one entry.
+        
+                :param list entries:
+                    List of entry tuples for :meth:`add_action` method. The entry tuple can
+                    vary in size with the following information:
+        
+                    * The name of the action. Must be specified.
+                    * The callback to connect to the "activate" signal of the
+                      action. Since GLib 2.40, this can be ``None`` for stateful
+                      actions, in which case the default handler is used. For
+                      boolean-stated actions with no parameter, this is a toggle.
+                      For other state types (and parameter type equal to the state
+                      type) this will be a function that just calls change_state
+                      (which you should provide).
+                    * The type of the parameter that must be passed to the activate
+                      function for this action, given as a single :class:`~gi.repository.GLib.Variant` type
+                      string (or ``None`` for no parameter)
+                    * The initial state for this action, given in GLib.Variant text
+                      format. The state is parsed with no extra type information, so
+                      type tags must be added to the string if they are necessary.
+                      Stateless actions should give ``None`` here.
+                    * The callback to connect to the "change-state" signal of the
+                      action. All stateful actions should provide a handler here;
+                      stateless actions should not.
+        
+                :param user_data:
+                    The user data for signal connections, or ``None``
+        """
         pass
 
     def add_main_option(self, long_name, short_name, flags, arg, description, arg_description=None): # real signature unknown; restored from __doc__
@@ -98,7 +134,7 @@ class Application(Application):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -119,6 +155,24 @@ class Application(Application):
         pass
 
     def connect_object_after(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def create_asyncio_task(self, coro): # reliably restored by inspect
+        """
+        Safely create an asyncio task. The application will not quit until the
+                task completes. For potentially longer running tasks, you should add
+                cancellation logic to abort a task when it is not needed anymore (e.g.
+                cancelling it from the Gtk.Window.do_unmap event).
+        
+                Note that python will only log a raised exception if the Task is
+                destroyed without the result having been collected. However, this does
+                also not happen when the task is cancelled. As such, be careful to not
+                cancel tasks that are already finished.
+        
+                You can deal with this by either only storing a weak reference to the
+                Task, by explicitly collecting the result, or by only cancelling it if
+                it is not done already.
+        """
         pass
 
     def disconnect(*args, **kwargs): # reliably restored by inspect
@@ -154,6 +208,9 @@ class Application(Application):
 
     def do_dbus_unregister(self, *args, **kwargs): # real signature unknown
         """ dbus_unregister(self, connection:Gio.DBusConnection, object_path:str) """
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_handle_local_options(self, *args, **kwargs): # real signature unknown
@@ -562,20 +619,20 @@ class Application(Application):
         """ withdraw_notification(self, id:str) """
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -605,7 +662,11 @@ class Application(Application):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -637,7 +698,8 @@ class Application(Application):
         """
         pass
 
-    def __init__(self, **properties): # real signature unknown; restored from __doc__
+    def __init__(self, *args, **kwargs): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -710,12 +772,12 @@ class Application(Application):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792ecf9a0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea704867d0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gio', 'run': <function Application.run at 0x000001a7938ba840>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.Gio', '__init__': <function Application.__init__ at 0x000001ea7028b1a0>, 'run': <function Application.run at 0x000001ea7028b240>, 'create_asyncio_task': <function Application.create_asyncio_task at 0x000001ea7028b2e0>, '__doc__': None, '__gsignals__': {}})"
     __gdoc__ = 'Object GApplication\n\nSignals from GApplication:\n  startup ()\n  shutdown ()\n  activate ()\n  open (gpointer, gint, gchararray)\n  command-line (GApplicationCommandLine) -> gint\n  handle-local-options (GVariantDict) -> gint\n  name-lost () -> gboolean\n\nProperties from GApplication:\n  application-id -> gchararray: application-id\n  version -> gchararray: version\n  flags -> GApplicationFlags: flags\n  resource-base-path -> gchararray: resource-base-path\n  is-registered -> gboolean: is-registered\n  is-remote -> gboolean: is-remote\n  inactivity-timeout -> guint: inactivity-timeout\n  action-group -> GActionGroup: action-group\n  is-busy -> gboolean: is-busy\n\nSignals from GActionGroup:\n  action-added (gchararray)\n  action-removed (gchararray)\n  action-enabled-changed (gchararray, gboolean)\n  action-state-changed (gchararray, GVariant)\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GApplication (2430929104)>'
+    __gtype__ = None # (!) real value is '<GType GApplication (1845786016)>'
     __info__ = ObjectInfo(Application)
 
 

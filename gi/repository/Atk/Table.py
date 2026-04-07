@@ -1,21 +1,14 @@
 # encoding: utf-8
 # module gi.repository.Atk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Atk-1.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -245,10 +238,10 @@ class Table(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Table), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkTable (892679744)>, '__dict__': <attribute '__dict__' of 'Table' objects>, '__weakref__': <attribute '__weakref__' of 'Table' objects>, '__doc__': None, '__gsignals__': {}, 'add_column_selection': gi.FunctionInfo(add_column_selection, bound=None), 'add_row_selection': gi.FunctionInfo(add_row_selection, bound=None), 'get_caption': gi.FunctionInfo(get_caption, bound=None), 'get_column_at_index': gi.FunctionInfo(get_column_at_index, bound=None), 'get_column_description': gi.FunctionInfo(get_column_description, bound=None), 'get_column_extent_at': gi.FunctionInfo(get_column_extent_at, bound=None), 'get_column_header': gi.FunctionInfo(get_column_header, bound=None), 'get_index_at': gi.FunctionInfo(get_index_at, bound=None), 'get_n_columns': gi.FunctionInfo(get_n_columns, bound=None), 'get_n_rows': gi.FunctionInfo(get_n_rows, bound=None), 'get_row_at_index': gi.FunctionInfo(get_row_at_index, bound=None), 'get_row_description': gi.FunctionInfo(get_row_description, bound=None), 'get_row_extent_at': gi.FunctionInfo(get_row_extent_at, bound=None), 'get_row_header': gi.FunctionInfo(get_row_header, bound=None), 'get_selected_columns': gi.FunctionInfo(get_selected_columns, bound=None), 'get_selected_rows': gi.FunctionInfo(get_selected_rows, bound=None), 'get_summary': gi.FunctionInfo(get_summary, bound=None), 'is_column_selected': gi.FunctionInfo(is_column_selected, bound=None), 'is_row_selected': gi.FunctionInfo(is_row_selected, bound=None), 'is_selected': gi.FunctionInfo(is_selected, bound=None), 'ref_at': gi.FunctionInfo(ref_at, bound=None), 'remove_column_selection': gi.FunctionInfo(remove_column_selection, bound=None), 'remove_row_selection': gi.FunctionInfo(remove_row_selection, bound=None), 'set_caption': gi.FunctionInfo(set_caption, bound=None), 'set_column_description': gi.FunctionInfo(set_column_description, bound=None), 'set_column_header': gi.FunctionInfo(set_column_header, bound=None), 'set_row_description': gi.FunctionInfo(set_row_description, bound=None), 'set_row_header': gi.FunctionInfo(set_row_header, bound=None), 'set_summary': gi.FunctionInfo(set_summary, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Table), '__module__': 'gi.repository.Atk', '__gtype__': <GType AtkTable (1534561824)>, '__dict__': <attribute '__dict__' of 'Table' objects>, '__weakref__': <attribute '__weakref__' of 'Table' objects>, '__doc__': None, '__gsignals__': {}, 'add_column_selection': gi.FunctionInfo(add_column_selection), 'add_row_selection': gi.FunctionInfo(add_row_selection), 'get_caption': gi.FunctionInfo(get_caption), 'get_column_at_index': gi.FunctionInfo(get_column_at_index), 'get_column_description': gi.FunctionInfo(get_column_description), 'get_column_extent_at': gi.FunctionInfo(get_column_extent_at), 'get_column_header': gi.FunctionInfo(get_column_header), 'get_index_at': gi.FunctionInfo(get_index_at), 'get_n_columns': gi.FunctionInfo(get_n_columns), 'get_n_rows': gi.FunctionInfo(get_n_rows), 'get_row_at_index': gi.FunctionInfo(get_row_at_index), 'get_row_description': gi.FunctionInfo(get_row_description), 'get_row_extent_at': gi.FunctionInfo(get_row_extent_at), 'get_row_header': gi.FunctionInfo(get_row_header), 'get_selected_columns': gi.FunctionInfo(get_selected_columns), 'get_selected_rows': gi.FunctionInfo(get_selected_rows), 'get_summary': gi.FunctionInfo(get_summary), 'is_column_selected': gi.FunctionInfo(is_column_selected), 'is_row_selected': gi.FunctionInfo(is_row_selected), 'is_selected': gi.FunctionInfo(is_selected), 'ref_at': gi.FunctionInfo(ref_at), 'remove_column_selection': gi.FunctionInfo(remove_column_selection), 'remove_row_selection': gi.FunctionInfo(remove_row_selection), 'set_caption': gi.FunctionInfo(set_caption), 'set_column_description': gi.FunctionInfo(set_column_description), 'set_column_header': gi.FunctionInfo(set_column_header), 'set_row_description': gi.FunctionInfo(set_row_description), 'set_row_header': gi.FunctionInfo(set_row_header), 'set_summary': gi.FunctionInfo(set_summary)})"
     __gdoc__ = 'Interface AtkTable\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType AtkTable (892679744)>'
+    __gtype__ = None # (!) real value is '<GType AtkTable (1534561824)>'
     __info__ = InterfaceInfo(Table)
 
 

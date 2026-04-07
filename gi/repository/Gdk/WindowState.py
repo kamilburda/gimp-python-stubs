@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
-class WindowState(__gobject.GFlags):
+class WindowState(__gi__gi.GFlags):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -112,8 +111,8 @@ class WindowState(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -124,12 +123,16 @@ class WindowState(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -158,6 +161,10 @@ class WindowState(__gobject.GFlags):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -192,15 +199,24 @@ class WindowState(__gobject.GFlags):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, *args, **kwds): # reliably restored by inspect
+        # no doc
         pass
 
     def __int__(self, *args, **kwargs): # real signature unknown
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -228,16 +244,16 @@ class WindowState(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -252,24 +268,24 @@ class WindowState(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -288,8 +304,8 @@ class WindowState(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -320,8 +336,8 @@ class WindowState(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -333,7 +349,7 @@ class WindowState(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -359,16 +375,12 @@ class WindowState(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -378,10 +390,6 @@ class WindowState(__gobject.GFlags):
 
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
-
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
     ABOVE = 32
@@ -401,28 +409,9 @@ class WindowState(__gobject.GFlags):
     TOP_RESIZABLE = 1024
     TOP_TILED = 512
     WITHDRAWN = 1
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.Gdk', '__dict__': <attribute '__dict__' of 'WindowState' objects>, '__doc__': None, '__gtype__': <GType GdkWindowState (2579734672)>, '__flags_values__': {1: <flags GDK_WINDOW_STATE_WITHDRAWN of type Gdk.WindowState>, 2: <flags GDK_WINDOW_STATE_ICONIFIED of type Gdk.WindowState>, 4: <flags GDK_WINDOW_STATE_MAXIMIZED of type Gdk.WindowState>, 8: <flags GDK_WINDOW_STATE_STICKY of type Gdk.WindowState>, 16: <flags GDK_WINDOW_STATE_FULLSCREEN of type Gdk.WindowState>, 32: <flags GDK_WINDOW_STATE_ABOVE of type Gdk.WindowState>, 64: <flags GDK_WINDOW_STATE_BELOW of type Gdk.WindowState>, 128: <flags GDK_WINDOW_STATE_FOCUSED of type Gdk.WindowState>, 256: <flags GDK_WINDOW_STATE_TILED of type Gdk.WindowState>, 512: <flags GDK_WINDOW_STATE_TOP_TILED of type Gdk.WindowState>, 1024: <flags GDK_WINDOW_STATE_TOP_RESIZABLE of type Gdk.WindowState>, 2048: <flags GDK_WINDOW_STATE_RIGHT_TILED of type Gdk.WindowState>, 4096: <flags GDK_WINDOW_STATE_RIGHT_RESIZABLE of type Gdk.WindowState>, 8192: <flags GDK_WINDOW_STATE_BOTTOM_TILED of type Gdk.WindowState>, 16384: <flags GDK_WINDOW_STATE_BOTTOM_RESIZABLE of type Gdk.WindowState>, 32768: <flags GDK_WINDOW_STATE_LEFT_TILED of type Gdk.WindowState>, 65536: <flags GDK_WINDOW_STATE_LEFT_RESIZABLE of type Gdk.WindowState>}, '__info__': gi.EnumInfo(WindowState), 'WITHDRAWN': <flags GDK_WINDOW_STATE_WITHDRAWN of type Gdk.WindowState>, 'ICONIFIED': <flags GDK_WINDOW_STATE_ICONIFIED of type Gdk.WindowState>, 'MAXIMIZED': <flags GDK_WINDOW_STATE_MAXIMIZED of type Gdk.WindowState>, 'STICKY': <flags GDK_WINDOW_STATE_STICKY of type Gdk.WindowState>, 'FULLSCREEN': <flags GDK_WINDOW_STATE_FULLSCREEN of type Gdk.WindowState>, 'ABOVE': <flags GDK_WINDOW_STATE_ABOVE of type Gdk.WindowState>, 'BELOW': <flags GDK_WINDOW_STATE_BELOW of type Gdk.WindowState>, 'FOCUSED': <flags GDK_WINDOW_STATE_FOCUSED of type Gdk.WindowState>, 'TILED': <flags GDK_WINDOW_STATE_TILED of type Gdk.WindowState>, 'TOP_TILED': <flags GDK_WINDOW_STATE_TOP_TILED of type Gdk.WindowState>, 'TOP_RESIZABLE': <flags GDK_WINDOW_STATE_TOP_RESIZABLE of type Gdk.WindowState>, 'RIGHT_TILED': <flags GDK_WINDOW_STATE_RIGHT_TILED of type Gdk.WindowState>, 'RIGHT_RESIZABLE': <flags GDK_WINDOW_STATE_RIGHT_RESIZABLE of type Gdk.WindowState>, 'BOTTOM_TILED': <flags GDK_WINDOW_STATE_BOTTOM_TILED of type Gdk.WindowState>, 'BOTTOM_RESIZABLE': <flags GDK_WINDOW_STATE_BOTTOM_RESIZABLE of type Gdk.WindowState>, 'LEFT_TILED': <flags GDK_WINDOW_STATE_LEFT_TILED of type Gdk.WindowState>, 'LEFT_RESIZABLE': <flags GDK_WINDOW_STATE_LEFT_RESIZABLE of type Gdk.WindowState>})"
-    __flags_values__ = {
-        1: 1,
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-        64: 64,
-        128: 128,
-        256: 256,
-        512: 512,
-        1024: 1024,
-        2048: 2048,
-        4096: 4096,
-        8192: 8192,
-        16384: 16384,
-        32768: 32768,
-        65536: 65536,
-    }
-    __gtype__ = None # (!) real value is '<GType GdkWindowState (2579734672)>'
-    __info__ = gi.EnumInfo(WindowState)
+    __class__ = None # (!) real value is "<class 'gi._enum.GFlagsMeta'>"
+    __members__ = None # (!) real value is "mappingproxy({'WITHDRAWN': <WindowState.WITHDRAWN: 1>, 'ICONIFIED': <WindowState.ICONIFIED: 2>, 'MAXIMIZED': <WindowState.MAXIMIZED: 4>, 'STICKY': <WindowState.STICKY: 8>, 'FULLSCREEN': <WindowState.FULLSCREEN: 16>, 'ABOVE': <WindowState.ABOVE: 32>, 'BELOW': <WindowState.BELOW: 64>, 'FOCUSED': <WindowState.FOCUSED: 128>, 'TILED': <WindowState.TILED: 256>, 'TOP_TILED': <WindowState.TOP_TILED: 512>, 'TOP_RESIZABLE': <WindowState.TOP_RESIZABLE: 1024>, 'RIGHT_TILED': <WindowState.RIGHT_TILED: 2048>, 'RIGHT_RESIZABLE': <WindowState.RIGHT_RESIZABLE: 4096>, 'BOTTOM_TILED': <WindowState.BOTTOM_TILED: 8192>, 'BOTTOM_RESIZABLE': <WindowState.BOTTOM_RESIZABLE: 16384>, 'LEFT_TILED': <WindowState.LEFT_TILED: 32768>, 'LEFT_RESIZABLE': <WindowState.LEFT_RESIZABLE: 65536>})"
+    __name__ = 'WindowState'
+    __qualname__ = 'WindowState'
 
 

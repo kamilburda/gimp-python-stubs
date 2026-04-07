@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 from .MainLoop import MainLoop
@@ -109,7 +107,7 @@ class MainLoop(MainLoop):
         """
         pass
 
-    def __init__(self, context=None): # reliably restored by inspect
+    def __init__(*args, **kwargs): # reliably restored by inspect
         # no doc
         pass
 
@@ -169,8 +167,10 @@ class MainLoop(MainLoop):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__new__': <staticmethod(<function MainLoop.__new__ at 0x000002830be21620>)>, '__init__': <function MainLoop.__init__ at 0x000002830be216c0>, 'run': <function MainLoop.run at 0x000002830be21760>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType GMainLoop (155714704)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__firstlineno__': 576, '__new__': <staticmethod(<function MainLoop.__new__ at 0x0000018e9fee8bf0>)>, 'run': <function MainLoop.run at 0x0000018e9fee8d50>, '__static_attributes__': (), '__doc__': None})"
+    __firstlineno__ = 576
+    __gtype__ = None # (!) real value is '<GType GMainLoop (2636579600)>'
     __info__ = StructInfo(MainLoop)
+    __static_attributes__ = ()
 
 

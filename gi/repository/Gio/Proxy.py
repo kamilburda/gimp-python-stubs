@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -50,7 +55,11 @@ class Proxy(__gobject.GInterface):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -141,10 +150,10 @@ class Proxy(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Proxy), '__module__': 'gi.repository.Gio', '__gtype__': <GType GProxy (2472619552)>, '__dict__': <attribute '__dict__' of 'Proxy' objects>, '__weakref__': <attribute '__weakref__' of 'Proxy' objects>, '__doc__': None, '__gsignals__': {}, 'get_default_for_protocol': gi.FunctionInfo(get_default_for_protocol, bound=None), 'connect': gi.FunctionInfo(connect, bound=None), 'connect_async': gi.FunctionInfo(connect_async, bound=None), 'connect_finish': gi.FunctionInfo(connect_finish, bound=None), 'supports_hostname': gi.FunctionInfo(supports_hostname, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(Proxy), '__module__': 'gi.repository.Gio', '__gtype__': <GType GProxy (1848619760)>, '__dict__': <attribute '__dict__' of 'Proxy' objects>, '__weakref__': <attribute '__weakref__' of 'Proxy' objects>, '__doc__': None, '__gsignals__': {}, 'get_default_for_protocol': <staticmethod(gi.FunctionInfo(get_default_for_protocol))>, 'connect': gi.FunctionInfo(connect), 'connect_async': gi.FunctionInfo(connect_async), 'connect_finish': gi.FunctionInfo(connect_finish), 'supports_hostname': gi.FunctionInfo(supports_hostname)})"
     __gdoc__ = 'Interface GProxy\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GProxy (2472619552)>'
+    __gtype__ = None # (!) real value is '<GType GProxy (1848619760)>'
     __info__ = InterfaceInfo(Proxy)
 
 

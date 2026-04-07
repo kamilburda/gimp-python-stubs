@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -145,7 +144,7 @@ class ArrowClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ArrowClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ArrowClass' objects>, '__weakref__': <attribute '__weakref__' of 'ArrowClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece8fc0d60>, '_gtk_reserved1': <property object at 0x000002ece8fc0e50>, '_gtk_reserved2': <property object at 0x000002ece8fc0f40>, '_gtk_reserved3': <property object at 0x000002ece8fc1030>, '_gtk_reserved4': <property object at 0x000002ece8fc1120>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ArrowClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ArrowClass' objects>, '__weakref__': <attribute '__weakref__' of 'ArrowClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd17b7e70>, '_gtk_reserved1': <property object at 0x000002bfd17b7f60>, '_gtk_reserved2': <property object at 0x000002bfd17b0090>, '_gtk_reserved3': <property object at 0x000002bfd17b0180>, '_gtk_reserved4': <property object at 0x000002bfd17b0270>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ArrowClass)
 

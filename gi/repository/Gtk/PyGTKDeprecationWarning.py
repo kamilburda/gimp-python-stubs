@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,30 +7,24 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
 class PyGTKDeprecationWarning(__gi.PyGIDeprecationWarning):
     # no doc
-    def add_note(self, note): # real signature unknown; restored from __doc__
-        """
-        Exception.add_note(note) --
-            add a note to the exception
-        """
+    def add_note(self, *args, **kwargs): # real signature unknown
+        """ Add a note to the exception """
         pass
 
-    def with_traceback(self, tb): # real signature unknown; restored from __doc__
-        """
-        Exception.with_traceback(tb) --
-            set self.__traceback__ to tb and return self.
-        """
+    def with_traceback(self, *args, **kwargs): # real signature unknown
+        """ Set self.__traceback__ to tb and return self. """
         pass
 
     def __delattr__(self, *args, **kwargs): # real signature unknown
@@ -143,10 +136,8 @@ class PyGTKDeprecationWarning(__gi.PyGIDeprecationWarning):
     args = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     __cause__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """exception cause"""
 
     __context__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """exception context"""
 
     __suppress_context__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
@@ -157,6 +148,8 @@ class PyGTKDeprecationWarning(__gi.PyGIDeprecationWarning):
 
 
     __class__ = type
-    __dict__ = mappingproxy({'__module__': 'gi.overrides.Gtk', '__doc__': None})
+    __dict__ = mappingproxy({'__module__': 'gi.overrides.Gtk', '__firstlineno__': 50, '__static_attributes__': (), '__doc__': None})
+    __firstlineno__ = 50
+    __static_attributes__ = ()
 
 

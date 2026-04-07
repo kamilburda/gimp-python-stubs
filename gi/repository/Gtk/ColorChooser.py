@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -148,10 +147,10 @@ class ColorChooser(__gobject.GInterface):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ColorChooser), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkColorChooser (3855036288)>, '__dict__': <attribute '__dict__' of 'ColorChooser' objects>, '__weakref__': <attribute '__weakref__' of 'ColorChooser' objects>, '__doc__': None, '__gsignals__': {}, 'add_palette': gi.FunctionInfo(add_palette, bound=None), 'get_rgba': gi.FunctionInfo(get_rgba, bound=None), 'get_use_alpha': gi.FunctionInfo(get_use_alpha, bound=None), 'set_rgba': gi.FunctionInfo(set_rgba, bound=None), 'set_use_alpha': gi.FunctionInfo(set_use_alpha, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': InterfaceInfo(ColorChooser), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkColorChooser (3418537568)>, '__dict__': <attribute '__dict__' of 'ColorChooser' objects>, '__weakref__': <attribute '__weakref__' of 'ColorChooser' objects>, '__doc__': None, '__gsignals__': {}, 'add_palette': gi.FunctionInfo(add_palette), 'get_rgba': gi.FunctionInfo(get_rgba), 'get_use_alpha': gi.FunctionInfo(get_use_alpha), 'set_rgba': gi.FunctionInfo(set_rgba), 'set_use_alpha': gi.FunctionInfo(set_use_alpha)})"
     __gdoc__ = 'Interface GtkColorChooser\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkColorChooser (3855036288)>'
+    __gtype__ = None # (!) real value is '<GType GtkColorChooser (3418537568)>'
     __info__ = InterfaceInfo(ColorChooser)
 
 

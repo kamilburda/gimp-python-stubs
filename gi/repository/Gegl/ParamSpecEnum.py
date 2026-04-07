@@ -1,22 +1,16 @@
 # encoding: utf-8
 # module gi.repository.Gegl
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gegl-0.4.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -145,7 +139,7 @@ class ParamSpecEnum(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ParamSpecEnum), '__module__': 'gi.repository.Gegl', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ParamSpecEnum' objects>, '__weakref__': <attribute '__weakref__' of 'ParamSpecEnum' objects>, '__doc__': None, 'parent_instance': <property object at 0x000002761b912f20>, 'excluded_values': <property object at 0x000002761b913010>, 'exclude_value': gi.FunctionInfo(exclude_value, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(ParamSpecEnum), '__module__': 'gi.repository.Gegl', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'ParamSpecEnum' objects>, '__weakref__': <attribute '__weakref__' of 'ParamSpecEnum' objects>, '__doc__': None, 'parent_instance': <property object at 0x000001ebdc20fdd0>, 'excluded_values': <property object at 0x000001ebdc20fec0>, 'exclude_value': gi.FunctionInfo(exclude_value)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(ParamSpecEnum)
 

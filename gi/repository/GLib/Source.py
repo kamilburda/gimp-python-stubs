@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 from .Source import Source
@@ -44,6 +42,10 @@ class Source(Source):
 
     def destroy(self): # real signature unknown; restored from __doc__
         """ destroy(self) """
+        pass
+
+    def dup_context(self): # real signature unknown; restored from __doc__
+        """ dup_context(self) -> GLib.MainContext or None """
         pass
 
     def finalize(self): # reliably restored by inspect
@@ -114,7 +116,7 @@ class Source(Source):
         """ remove_poll(self, fd:GLib.PollFD) """
         pass
 
-    def set_callback(self, fn, user_data=None): # reliably restored by inspect
+    def set_callback(self, func, *user_data): # reliably restored by inspect
         # no doc
         pass
 
@@ -226,8 +228,7 @@ class Source(Source):
         """
         pass
 
-    def __init__(self, *args, **kwargs): # reliably restored by inspect
-        # no doc
+    def __init__(self): # real signature unknown; restored from __doc__
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -315,8 +316,10 @@ class Source(Source):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__new__': <staticmethod(<function Source.__new__ at 0x000002830be219e0>)>, '__init__': <function Source.__init__ at 0x000002830be21a80>, '__del__': <function Source.__del__ at 0x000002830be21b20>, 'finalize': <function Source.finalize at 0x000002830be21bc0>, 'set_callback': <function Source.set_callback at 0x000002830be21c60>, 'get_current_time': <function Source.get_current_time at 0x000002830be21da0>, '_Source__get_priority': <function Source.__get_priority at 0x000002830be21e40>, '_Source__set_priority': <function Source.__set_priority at 0x000002830be21ee0>, 'priority': <property object at 0x000002830be15da0>, '_Source__get_can_recurse': <function Source.__get_can_recurse at 0x000002830be21f80>, '_Source__set_can_recurse': <function Source.__set_can_recurse at 0x000002830be22020>, 'can_recurse': <property object at 0x000002830be16ac0>, '__doc__': None})"
-    __gtype__ = None # (!) real value is '<GType GSource (155711120)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.overrides.GLib', '__firstlineno__': 617, '__new__': <staticmethod(<function Source.__new__ at 0x0000018e9fee9170>)>, '__del__': <function Source.__del__ at 0x0000018e9fee92d0>, 'finalize': <function Source.finalize at 0x0000018e9fee9430>, 'set_callback': <function Source.set_callback at 0x0000018e9fee9590>, 'get_current_time': <function Source.get_current_time at 0x0000018e9fee97a0>, '_Source__get_priority': <function Source.__get_priority at 0x0000018e9fee9900>, '_Source__set_priority': <function Source.__set_priority at 0x0000018e9fee9a60>, 'priority': <property object at 0x0000018e9fedea20>, '_Source__get_can_recurse': <function Source.__get_can_recurse at 0x0000018e9fee9bc0>, '_Source__set_can_recurse': <function Source.__set_can_recurse at 0x0000018e9fee9d20>, 'can_recurse': <property object at 0x0000018e9fedea70>, '__static_attributes__': (), '__doc__': None})"
+    __firstlineno__ = 617
+    __gtype__ = None # (!) real value is '<GType GSource (2636582480)>'
     __info__ = StructInfo(Source)
+    __static_attributes__ = ()
 
 

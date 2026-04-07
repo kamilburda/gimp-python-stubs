@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -67,20 +66,20 @@ class IconTheme(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -99,6 +98,12 @@ class IconTheme(__gi_overrides_GObject.Object):
 
     def do_changed(self, *args, **kwargs): # real signature unknown
         """ changed(self) """
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -120,17 +125,17 @@ class IconTheme(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -175,20 +180,20 @@ class IconTheme(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -278,7 +283,8 @@ class IconTheme(__gi_overrides_GObject.Object):
         """ lookup_icon_for_scale(self, icon_name:str, size:int, scale:int, flags:Gtk.IconLookupFlags) -> Gtk.IconInfo or None """
         pass
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.IconTheme """
         pass
 
@@ -379,20 +385,20 @@ class IconTheme(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -528,12 +534,14 @@ class IconTheme(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002eceab9d9c0>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17fc820>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(IconTheme), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkIconTheme (3923977792)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'add_builtin_icon': gi.FunctionInfo(add_builtin_icon, bound=None), 'get_default': gi.FunctionInfo(get_default, bound=None), 'get_for_screen': gi.FunctionInfo(get_for_screen, bound=None), 'add_resource_path': gi.FunctionInfo(add_resource_path, bound=None), 'append_search_path': gi.FunctionInfo(append_search_path, bound=None), 'choose_icon': gi.FunctionInfo(choose_icon, bound=None), 'choose_icon_for_scale': gi.FunctionInfo(choose_icon_for_scale, bound=None), 'get_example_icon_name': gi.FunctionInfo(get_example_icon_name, bound=None), 'get_icon_sizes': gi.FunctionInfo(get_icon_sizes, bound=None), 'get_search_path': gi.FunctionInfo(get_search_path, bound=None), 'has_icon': gi.FunctionInfo(has_icon, bound=None), 'list_contexts': gi.FunctionInfo(list_contexts, bound=None), 'list_icons': gi.FunctionInfo(list_icons, bound=None), 'load_icon': gi.FunctionInfo(load_icon, bound=None), 'load_icon_for_scale': gi.FunctionInfo(load_icon_for_scale, bound=None), 'load_surface': gi.FunctionInfo(load_surface, bound=None), 'lookup_by_gicon': gi.FunctionInfo(lookup_by_gicon, bound=None), 'lookup_by_gicon_for_scale': gi.FunctionInfo(lookup_by_gicon_for_scale, bound=None), 'lookup_icon': gi.FunctionInfo(lookup_icon, bound=None), 'lookup_icon_for_scale': gi.FunctionInfo(lookup_icon_for_scale, bound=None), 'prepend_search_path': gi.FunctionInfo(prepend_search_path, bound=None), 'rescan_if_needed': gi.FunctionInfo(rescan_if_needed, bound=None), 'set_custom_theme': gi.FunctionInfo(set_custom_theme, bound=None), 'set_screen': gi.FunctionInfo(set_screen, bound=None), 'set_search_path': gi.FunctionInfo(set_search_path, bound=None), 'do_changed': gi.VFuncInfo(changed, bound=None), 'parent_instance': <property object at 0x000002eceabf1850>, 'priv': <property object at 0x000002eceabf1940>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(IconTheme), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkIconTheme (3538516640)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'add_builtin_icon': <staticmethod(gi.FunctionInfo(add_builtin_icon))>, 'get_default': <staticmethod(gi.FunctionInfo(get_default))>, 'get_for_screen': <staticmethod(gi.FunctionInfo(get_for_screen))>, 'add_resource_path': gi.FunctionInfo(add_resource_path), 'append_search_path': gi.FunctionInfo(append_search_path), 'choose_icon': gi.FunctionInfo(choose_icon), 'choose_icon_for_scale': gi.FunctionInfo(choose_icon_for_scale), 'get_example_icon_name': gi.FunctionInfo(get_example_icon_name), 'get_icon_sizes': gi.FunctionInfo(get_icon_sizes), 'get_search_path': gi.FunctionInfo(get_search_path), 'has_icon': gi.FunctionInfo(has_icon), 'list_contexts': gi.FunctionInfo(list_contexts), 'list_icons': gi.FunctionInfo(list_icons), 'load_icon': gi.FunctionInfo(load_icon), 'load_icon_for_scale': gi.FunctionInfo(load_icon_for_scale), 'load_surface': gi.FunctionInfo(load_surface), 'lookup_by_gicon': gi.FunctionInfo(lookup_by_gicon), 'lookup_by_gicon_for_scale': gi.FunctionInfo(lookup_by_gicon_for_scale), 'lookup_icon': gi.FunctionInfo(lookup_icon), 'lookup_icon_for_scale': gi.FunctionInfo(lookup_icon_for_scale), 'prepend_search_path': gi.FunctionInfo(prepend_search_path), 'rescan_if_needed': gi.FunctionInfo(rescan_if_needed), 'set_custom_theme': gi.FunctionInfo(set_custom_theme), 'set_screen': gi.FunctionInfo(set_screen), 'set_search_path': gi.FunctionInfo(set_search_path), 'do_changed': gi.VFuncInfo(changed), 'parent_instance': <property object at 0x000002bfd18d89f0>, 'priv': <property object at 0x000002bfd18d8cc0>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkIconTheme\n\nSignals from GtkIconTheme:\n  changed ()\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkIconTheme (3923977792)>'
+    __gtype__ = None # (!) real value is '<GType GtkIconTheme (3538516640)>'
     __info__ = ObjectInfo(IconTheme)
+    __static_attributes__ = ()
 
 

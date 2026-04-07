@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -43,7 +48,7 @@ class Resolver(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -71,6 +76,9 @@ class Resolver(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_lookup_by_address(self, *args, **kwargs): # real signature unknown
@@ -403,20 +411,20 @@ class Resolver(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -446,7 +454,11 @@ class Resolver(__gi_overrides_GObject.Object):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -548,12 +560,12 @@ class Resolver(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001a792eb4e80>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001ea7085cc10>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Resolver), '__module__': 'gi.repository.Gio', '__gtype__': <GType GResolver (2466395888)>, '__doc__': None, '__gsignals__': {}, 'get_default': gi.FunctionInfo(get_default, bound=None), 'get_timeout': gi.FunctionInfo(get_timeout, bound=None), 'lookup_by_address': gi.FunctionInfo(lookup_by_address, bound=None), 'lookup_by_address_async': gi.FunctionInfo(lookup_by_address_async, bound=None), 'lookup_by_address_finish': gi.FunctionInfo(lookup_by_address_finish, bound=None), 'lookup_by_name': gi.FunctionInfo(lookup_by_name, bound=None), 'lookup_by_name_async': gi.FunctionInfo(lookup_by_name_async, bound=None), 'lookup_by_name_finish': gi.FunctionInfo(lookup_by_name_finish, bound=None), 'lookup_by_name_with_flags': gi.FunctionInfo(lookup_by_name_with_flags, bound=None), 'lookup_by_name_with_flags_async': gi.FunctionInfo(lookup_by_name_with_flags_async, bound=None), 'lookup_by_name_with_flags_finish': gi.FunctionInfo(lookup_by_name_with_flags_finish, bound=None), 'lookup_records': gi.FunctionInfo(lookup_records, bound=None), 'lookup_records_async': gi.FunctionInfo(lookup_records_async, bound=None), 'lookup_records_finish': gi.FunctionInfo(lookup_records_finish, bound=None), 'lookup_service': gi.FunctionInfo(lookup_service, bound=None), 'lookup_service_async': gi.FunctionInfo(lookup_service_async, bound=None), 'lookup_service_finish': gi.FunctionInfo(lookup_service_finish, bound=None), 'set_default': gi.FunctionInfo(set_default, bound=None), 'set_timeout': gi.FunctionInfo(set_timeout, bound=None), 'do_lookup_by_address': gi.VFuncInfo(lookup_by_address, bound=None), 'do_lookup_by_address_async': gi.VFuncInfo(lookup_by_address_async, bound=None), 'do_lookup_by_address_finish': gi.VFuncInfo(lookup_by_address_finish, bound=None), 'do_lookup_by_name': gi.VFuncInfo(lookup_by_name, bound=None), 'do_lookup_by_name_async': gi.VFuncInfo(lookup_by_name_async, bound=None), 'do_lookup_by_name_finish': gi.VFuncInfo(lookup_by_name_finish, bound=None), 'do_lookup_by_name_with_flags': gi.VFuncInfo(lookup_by_name_with_flags, bound=None), 'do_lookup_by_name_with_flags_async': gi.VFuncInfo(lookup_by_name_with_flags_async, bound=None), 'do_lookup_by_name_with_flags_finish': gi.VFuncInfo(lookup_by_name_with_flags_finish, bound=None), 'do_lookup_records': gi.VFuncInfo(lookup_records, bound=None), 'do_lookup_records_async': gi.VFuncInfo(lookup_records_async, bound=None), 'do_lookup_records_finish': gi.VFuncInfo(lookup_records_finish, bound=None), 'do_lookup_service_async': gi.VFuncInfo(lookup_service_async, bound=None), 'do_lookup_service_finish': gi.VFuncInfo(lookup_service_finish, bound=None), 'do_reload': gi.VFuncInfo(reload, bound=None), 'parent_instance': <property object at 0x000001a793ddbb00>, 'priv': <property object at 0x000001a793ddbbf0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Resolver), '__module__': 'gi.repository.Gio', '__gtype__': <GType GResolver (1841603792)>, '__doc__': None, '__gsignals__': {}, 'get_default': <staticmethod(gi.FunctionInfo(get_default))>, 'get_timeout': gi.FunctionInfo(get_timeout), 'lookup_by_address': gi.FunctionInfo(lookup_by_address), 'lookup_by_address_async': gi.FunctionInfo(lookup_by_address_async), 'lookup_by_address_finish': gi.FunctionInfo(lookup_by_address_finish), 'lookup_by_name': gi.FunctionInfo(lookup_by_name), 'lookup_by_name_async': gi.FunctionInfo(lookup_by_name_async), 'lookup_by_name_finish': gi.FunctionInfo(lookup_by_name_finish), 'lookup_by_name_with_flags': gi.FunctionInfo(lookup_by_name_with_flags), 'lookup_by_name_with_flags_async': gi.FunctionInfo(lookup_by_name_with_flags_async), 'lookup_by_name_with_flags_finish': gi.FunctionInfo(lookup_by_name_with_flags_finish), 'lookup_records': gi.FunctionInfo(lookup_records), 'lookup_records_async': gi.FunctionInfo(lookup_records_async), 'lookup_records_finish': gi.FunctionInfo(lookup_records_finish), 'lookup_service': gi.FunctionInfo(lookup_service), 'lookup_service_async': gi.FunctionInfo(lookup_service_async), 'lookup_service_finish': gi.FunctionInfo(lookup_service_finish), 'set_default': gi.FunctionInfo(set_default), 'set_timeout': gi.FunctionInfo(set_timeout), 'do_lookup_by_address': gi.VFuncInfo(lookup_by_address), 'do_lookup_by_address_async': gi.VFuncInfo(lookup_by_address_async), 'do_lookup_by_address_finish': gi.VFuncInfo(lookup_by_address_finish), 'do_lookup_by_name': gi.VFuncInfo(lookup_by_name), 'do_lookup_by_name_async': gi.VFuncInfo(lookup_by_name_async), 'do_lookup_by_name_finish': gi.VFuncInfo(lookup_by_name_finish), 'do_lookup_by_name_with_flags': gi.VFuncInfo(lookup_by_name_with_flags), 'do_lookup_by_name_with_flags_async': gi.VFuncInfo(lookup_by_name_with_flags_async), 'do_lookup_by_name_with_flags_finish': gi.VFuncInfo(lookup_by_name_with_flags_finish), 'do_lookup_records': gi.VFuncInfo(lookup_records), 'do_lookup_records_async': gi.VFuncInfo(lookup_records_async), 'do_lookup_records_finish': gi.VFuncInfo(lookup_records_finish), 'do_lookup_service_async': gi.VFuncInfo(lookup_service_async), 'do_lookup_service_finish': gi.VFuncInfo(lookup_service_finish), 'do_reload': gi.VFuncInfo(reload), 'parent_instance': <property object at 0x000001ea709b9490>, 'priv': <property object at 0x000001ea709b9580>})"
     __gdoc__ = 'Object GResolver\n\nSignals from GResolver:\n  reload ()\n\nProperties from GResolver:\n  timeout -> guint: timeout\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GResolver (2466395888)>'
+    __gtype__ = None # (!) real value is '<GType GResolver (1841603792)>'
     __info__ = ObjectInfo(Resolver)
 
 

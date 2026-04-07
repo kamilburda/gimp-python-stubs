@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Pango
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Pango-1.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,10 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Color(__gi.Boxed):
@@ -160,8 +158,8 @@ class Color(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Color), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoColor (4081763856)>, '__dict__': <attribute '__dict__' of 'Color' objects>, '__weakref__': <attribute '__weakref__' of 'Color' objects>, '__doc__': None, 'red': <property object at 0x00000213f608d580>, 'green': <property object at 0x00000213f608d670>, 'blue': <property object at 0x00000213f608d760>, 'copy': gi.FunctionInfo(copy, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'parse': gi.FunctionInfo(parse, bound=None), 'parse_with_alpha': gi.FunctionInfo(parse_with_alpha, bound=None), 'to_string': gi.FunctionInfo(to_string, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType PangoColor (4081763856)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Color), '__module__': 'gi.repository.Pango', '__gtype__': <GType PangoColor (857393440)>, '__dict__': <attribute '__dict__' of 'Color' objects>, '__weakref__': <attribute '__weakref__' of 'Color' objects>, '__doc__': None, 'red': <property object at 0x000002803560bc40>, 'green': <property object at 0x00000280355e40e0>, 'blue': <property object at 0x00000280355e41d0>, 'copy': gi.FunctionInfo(copy), 'free': gi.FunctionInfo(free), 'parse': gi.FunctionInfo(parse), 'parse_with_alpha': gi.FunctionInfo(parse_with_alpha), 'to_string': gi.FunctionInfo(to_string)})"
+    __gtype__ = None # (!) real value is '<GType PangoColor (857393440)>'
     __info__ = StructInfo(Color)
 
 

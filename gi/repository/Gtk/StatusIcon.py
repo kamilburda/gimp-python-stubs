@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -52,20 +51,20 @@ class StatusIcon(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -92,6 +91,12 @@ class StatusIcon(__gi_overrides_GObject.Object):
 
     def do_button_release_event(self, *args, **kwargs): # real signature unknown
         """ button_release_event(self, event:Gdk.EventButton) -> bool """
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_popup_menu(self, *args, **kwargs): # real signature unknown
@@ -129,17 +134,17 @@ class StatusIcon(__gi_overrides_GObject.Object):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -220,20 +225,20 @@ class StatusIcon(__gi_overrides_GObject.Object):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -287,7 +292,8 @@ class StatusIcon(__gi_overrides_GObject.Object):
         """ list_properties(self) -> list """
         return []
 
-    def new(self): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls): # real signature unknown; restored from __doc__
         """ new() -> Gtk.StatusIcon """
         pass
 
@@ -295,23 +301,28 @@ class StatusIcon(__gi_overrides_GObject.Object):
         """ newv(object_type:GType, parameters:list) -> GObject.Object """
         pass
 
-    def new_from_file(self, filename): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_file(cls, filename): # real signature unknown; restored from __doc__
         """ new_from_file(filename:str) -> Gtk.StatusIcon """
         pass
 
-    def new_from_gicon(self, icon): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_gicon(cls, icon): # real signature unknown; restored from __doc__
         """ new_from_gicon(icon:Gio.Icon) -> Gtk.StatusIcon """
         pass
 
-    def new_from_icon_name(self, icon_name): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_icon_name(cls, icon_name): # real signature unknown; restored from __doc__
         """ new_from_icon_name(icon_name:str) -> Gtk.StatusIcon """
         pass
 
-    def new_from_pixbuf(self, pixbuf): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_pixbuf(cls, pixbuf): # real signature unknown; restored from __doc__
         """ new_from_pixbuf(pixbuf:GdkPixbuf.Pixbuf) -> Gtk.StatusIcon """
         pass
 
-    def new_from_stock(self, stock_id): # real signature unknown; restored from __doc__
+    @classmethod
+    def new_from_stock(cls, stock_id): # real signature unknown; restored from __doc__
         """ new_from_stock(stock_id:str) -> Gtk.StatusIcon """
         pass
 
@@ -440,20 +451,20 @@ class StatusIcon(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -589,12 +600,14 @@ class StatusIcon(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000002eceabb2830>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000002bfd17f6e30>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(StatusIcon), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkStatusIcon (3923962448)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'new_from_file': gi.FunctionInfo(new_from_file, bound=None), 'new_from_gicon': gi.FunctionInfo(new_from_gicon, bound=None), 'new_from_icon_name': gi.FunctionInfo(new_from_icon_name, bound=None), 'new_from_pixbuf': gi.FunctionInfo(new_from_pixbuf, bound=None), 'new_from_stock': gi.FunctionInfo(new_from_stock, bound=None), 'position_menu': gi.FunctionInfo(position_menu, bound=None), 'get_geometry': gi.FunctionInfo(get_geometry, bound=None), 'get_gicon': gi.FunctionInfo(get_gicon, bound=None), 'get_has_tooltip': gi.FunctionInfo(get_has_tooltip, bound=None), 'get_icon_name': gi.FunctionInfo(get_icon_name, bound=None), 'get_pixbuf': gi.FunctionInfo(get_pixbuf, bound=None), 'get_screen': gi.FunctionInfo(get_screen, bound=None), 'get_size': gi.FunctionInfo(get_size, bound=None), 'get_stock': gi.FunctionInfo(get_stock, bound=None), 'get_storage_type': gi.FunctionInfo(get_storage_type, bound=None), 'get_title': gi.FunctionInfo(get_title, bound=None), 'get_tooltip_markup': gi.FunctionInfo(get_tooltip_markup, bound=None), 'get_tooltip_text': gi.FunctionInfo(get_tooltip_text, bound=None), 'get_visible': gi.FunctionInfo(get_visible, bound=None), 'get_x11_window_id': gi.FunctionInfo(get_x11_window_id, bound=None), 'is_embedded': gi.FunctionInfo(is_embedded, bound=None), 'set_from_file': gi.FunctionInfo(set_from_file, bound=None), 'set_from_gicon': gi.FunctionInfo(set_from_gicon, bound=None), 'set_from_icon_name': gi.FunctionInfo(set_from_icon_name, bound=None), 'set_from_pixbuf': gi.FunctionInfo(set_from_pixbuf, bound=None), 'set_from_stock': gi.FunctionInfo(set_from_stock, bound=None), 'set_has_tooltip': gi.FunctionInfo(set_has_tooltip, bound=None), 'set_name': gi.FunctionInfo(set_name, bound=None), 'set_screen': gi.FunctionInfo(set_screen, bound=None), 'set_title': gi.FunctionInfo(set_title, bound=None), 'set_tooltip_markup': gi.FunctionInfo(set_tooltip_markup, bound=None), 'set_tooltip_text': gi.FunctionInfo(set_tooltip_text, bound=None), 'set_visible': gi.FunctionInfo(set_visible, bound=None), 'do_activate': gi.VFuncInfo(activate, bound=None), 'do_button_press_event': gi.VFuncInfo(button_press_event, bound=None), 'do_button_release_event': gi.VFuncInfo(button_release_event, bound=None), 'do_popup_menu': gi.VFuncInfo(popup_menu, bound=None), 'do_query_tooltip': gi.VFuncInfo(query_tooltip, bound=None), 'do_scroll_event': gi.VFuncInfo(scroll_event, bound=None), 'do_size_changed': gi.VFuncInfo(size_changed, bound=None), 'parent_instance': <property object at 0x000002ece9b909a0>, 'priv': <property object at 0x000002ece9b90a90>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(StatusIcon), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkStatusIcon (3414245520)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'new_from_file': <classmethod(gi.FunctionInfo(new_from_file))>, 'new_from_gicon': <classmethod(gi.FunctionInfo(new_from_gicon))>, 'new_from_icon_name': <classmethod(gi.FunctionInfo(new_from_icon_name))>, 'new_from_pixbuf': <classmethod(gi.FunctionInfo(new_from_pixbuf))>, 'new_from_stock': <classmethod(gi.FunctionInfo(new_from_stock))>, 'position_menu': <staticmethod(gi.FunctionInfo(position_menu))>, 'get_geometry': gi.FunctionInfo(get_geometry), 'get_gicon': gi.FunctionInfo(get_gicon), 'get_has_tooltip': gi.FunctionInfo(get_has_tooltip), 'get_icon_name': gi.FunctionInfo(get_icon_name), 'get_pixbuf': gi.FunctionInfo(get_pixbuf), 'get_screen': gi.FunctionInfo(get_screen), 'get_size': gi.FunctionInfo(get_size), 'get_stock': gi.FunctionInfo(get_stock), 'get_storage_type': gi.FunctionInfo(get_storage_type), 'get_title': gi.FunctionInfo(get_title), 'get_tooltip_markup': gi.FunctionInfo(get_tooltip_markup), 'get_tooltip_text': gi.FunctionInfo(get_tooltip_text), 'get_visible': gi.FunctionInfo(get_visible), 'get_x11_window_id': gi.FunctionInfo(get_x11_window_id), 'is_embedded': gi.FunctionInfo(is_embedded), 'set_from_file': gi.FunctionInfo(set_from_file), 'set_from_gicon': gi.FunctionInfo(set_from_gicon), 'set_from_icon_name': gi.FunctionInfo(set_from_icon_name), 'set_from_pixbuf': gi.FunctionInfo(set_from_pixbuf), 'set_from_stock': gi.FunctionInfo(set_from_stock), 'set_has_tooltip': gi.FunctionInfo(set_has_tooltip), 'set_name': gi.FunctionInfo(set_name), 'set_screen': gi.FunctionInfo(set_screen), 'set_title': gi.FunctionInfo(set_title), 'set_tooltip_markup': gi.FunctionInfo(set_tooltip_markup), 'set_tooltip_text': gi.FunctionInfo(set_tooltip_text), 'set_visible': gi.FunctionInfo(set_visible), 'do_activate': gi.VFuncInfo(activate), 'do_button_press_event': gi.VFuncInfo(button_press_event), 'do_button_release_event': gi.VFuncInfo(button_release_event), 'do_popup_menu': gi.VFuncInfo(popup_menu), 'do_query_tooltip': gi.VFuncInfo(query_tooltip), 'do_scroll_event': gi.VFuncInfo(scroll_event), 'do_size_changed': gi.VFuncInfo(size_changed), 'parent_instance': <property object at 0x000002bfd1943290>, 'priv': <property object at 0x000002bfd1943150>})"
+    __firstlineno__ = 651
     __gdoc__ = 'Object GtkStatusIcon\n\nSignals from GtkStatusIcon:\n  size-changed (gint) -> gboolean\n  button-press-event (GdkEvent) -> gboolean\n  button-release-event (GdkEvent) -> gboolean\n  scroll-event (GdkEvent) -> gboolean\n  query-tooltip (gint, gint, gboolean, GtkTooltip) -> gboolean\n  popup-menu (guint, guint)\n  activate ()\n\nProperties from GtkStatusIcon:\n  pixbuf -> GdkPixbuf: Pixbuf\n    A GdkPixbuf to display\n  file -> gchararray: Filename\n    Filename to load and display\n  stock -> gchararray: Stock ID\n    Stock ID for a stock image to display\n  icon-name -> gchararray: Icon Name\n    The name of the icon from the icon theme\n  gicon -> GIcon: GIcon\n    The GIcon being displayed\n  storage-type -> GtkImageType: Storage type\n    The representation being used for image data\n  size -> gint: Size\n    The size of the icon\n  screen -> GdkScreen: Screen\n    The screen where this status icon will be displayed\n  visible -> gboolean: Visible\n    Whether the status icon is visible\n  orientation -> GtkOrientation: Orientation\n    The orientation of the tray\n  embedded -> gboolean: Embedded\n    Whether the status icon is embedded\n  has-tooltip -> gboolean: Has tooltip\n    Whether this tray icon has a tooltip\n  tooltip-text -> gchararray: Tooltip Text\n    The contents of the tooltip for this widget\n  tooltip-markup -> gchararray: Tooltip markup\n    The contents of the tooltip for this tray icon\n  title -> gchararray: Title\n    The title of this tray icon\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GtkStatusIcon (3923962448)>'
+    __gtype__ = None # (!) real value is '<GType GtkStatusIcon (3414245520)>'
     __info__ = ObjectInfo(StatusIcon)
+    __static_attributes__ = ()
 
 

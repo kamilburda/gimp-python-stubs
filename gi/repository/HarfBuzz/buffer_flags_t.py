@@ -1,24 +1,16 @@
 # encoding: utf-8
 # module gi.repository.HarfBuzz
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\HarfBuzz-0.0.typelib
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gobject as __gobject
 
 
-class buffer_flags_t(__gobject.GFlags):
+class buffer_flags_t(__enum.IntFlag):
     # no doc
     def as_integer_ratio(self): # real signature unknown; restored from __doc__
         """
@@ -77,7 +69,7 @@ class buffer_flags_t(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Indicates whether two's complement is used to represent the integer.
         """
@@ -100,7 +92,7 @@ class buffer_flags_t(__gobject.GFlags):
             the most significant byte is at the beginning of the byte array.  If
             byteorder is 'little', the most significant byte is at the end of the
             byte array.  To request the native byte order of the host system, use
-            `sys.byteorder' as the byte order value.  Default is to use 'big'.
+            sys.byteorder as the byte order value.  Default is to use 'big'.
           signed
             Determines whether two's complement is used to represent the integer.
             If signed is False and a negative integer is given, an OverflowError
@@ -116,8 +108,8 @@ class buffer_flags_t(__gobject.GFlags):
         """ Return self+value. """
         pass
 
-    def __and__(self, *args, **kwargs): # real signature unknown
-        """ Return self&value. """
+    def __and__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __bool__(self, *args, **kwargs): # real signature unknown
@@ -128,12 +120,16 @@ class buffer_flags_t(__gobject.GFlags):
         """ Ceiling of an Integral returns itself. """
         pass
 
+    def __contains__(self, other): # reliably restored by inspect
+        """ Returns True if self has at least the same flags set as other. """
+        pass
+
     def __delattr__(self, *args, **kwargs): # real signature unknown
         """ Implement delattr(self, name). """
         pass
 
-    def __dir__(self, *args, **kwargs): # real signature unknown
-        """ Default dir() implementation. """
+    def __dir__(self): # reliably restored by inspect
+        """ Returns public methods and other interesting attributes. """
         pass
 
     def __divmod__(self, *args, **kwargs): # real signature unknown
@@ -162,6 +158,10 @@ class buffer_flags_t(__gobject.GFlags):
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
         """ Return getattr(self, name). """
+        pass
+
+    def __getitem__(self, *args, **kwargs): # real signature unknown
+        """ Return the member matching `name`. """
         pass
 
     def __getnewargs__(self, *args, **kwargs): # real signature unknown
@@ -203,8 +203,16 @@ class buffer_flags_t(__gobject.GFlags):
         """ int(self) """
         pass
 
-    def __invert__(self, *args, **kwargs): # real signature unknown
-        """ ~self """
+    def __invert__(self): # reliably restored by inspect
+        # no doc
+        pass
+
+    def __iter__(self): # reliably restored by inspect
+        """ Returns flags in definition order. """
+        pass
+
+    def __len__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __le__(self, *args, **kwargs): # real signature unknown
@@ -232,16 +240,16 @@ class buffer_flags_t(__gobject.GFlags):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(*args, **kwargs): # real signature unknown
-        """ Create and return a new object.  See help(type) for accurate signature. """
+    def __new__(cls, value): # reliably restored by inspect
+        # no doc
         pass
 
     def __ne__(self, *args, **kwargs): # real signature unknown
         """ Return self!=value. """
         pass
 
-    def __or__(self, *args, **kwargs): # real signature unknown
-        """ Return self|value. """
+    def __or__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __pos__(self, *args, **kwargs): # real signature unknown
@@ -256,24 +264,24 @@ class buffer_flags_t(__gobject.GFlags):
         """ Return value+self. """
         pass
 
-    def __rand__(self, *args, **kwargs): # real signature unknown
-        """ Return value&self. """
+    def __rand__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __rdivmod__(self, *args, **kwargs): # real signature unknown
         """ Return divmod(value, self). """
         pass
 
-    def __reduce_ex__(self, *args, **kwargs): # real signature unknown
-        """ Helper for pickle. """
+    def __reduce_ex__(self, proto): # reliably restored by inspect
+        # no doc
         pass
 
     def __reduce__(self, *args, **kwargs): # real signature unknown
         """ Helper for pickle. """
         pass
 
-    def __repr__(self, *args, **kwargs): # real signature unknown
-        """ Return repr(self). """
+    def __repr__(self): # reliably restored by inspect
+        # no doc
         pass
 
     def __rfloordiv__(self, *args, **kwargs): # real signature unknown
@@ -292,8 +300,8 @@ class buffer_flags_t(__gobject.GFlags):
         """ Return value*self. """
         pass
 
-    def __ror__(self, *args, **kwargs): # real signature unknown
-        """ Return value|self. """
+    def __ror__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __round__(self, *args, **kwargs): # real signature unknown
@@ -324,8 +332,8 @@ class buffer_flags_t(__gobject.GFlags):
         """ Return value/self. """
         pass
 
-    def __rxor__(self, *args, **kwargs): # real signature unknown
-        """ Return value^self. """
+    def __rxor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     def __setattr__(self, *args, **kwargs): # real signature unknown
@@ -337,7 +345,7 @@ class buffer_flags_t(__gobject.GFlags):
         pass
 
     def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+        """ Return repr(self). """
         pass
 
     def __subclasshook__(self, *args, **kwargs): # real signature unknown
@@ -363,16 +371,12 @@ class buffer_flags_t(__gobject.GFlags):
         """ Truncating an Integral returns itself. """
         pass
 
-    def __xor__(self, *args, **kwargs): # real signature unknown
-        """ Return self^value. """
+    def __xor__(self, other): # reliably restored by inspect
+        # no doc
         pass
 
     denominator = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the denominator of a rational number in lowest terms"""
-
-    first_value_name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    first_value_nick = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     imag = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the imaginary part of a complex number"""
@@ -383,14 +387,8 @@ class buffer_flags_t(__gobject.GFlags):
     real = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """the real part of a complex number"""
 
-    value_names = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    value_nicks = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
 
     BOT = 1
-    DEFAULT = 0
-    DEFINED = 255
     DO_NOT_INSERT_DOTTED_CIRCLE = 16
     EOT = 2
     PRESERVE_DEFAULT_IGNORABLES = 4
@@ -398,21 +396,9 @@ class buffer_flags_t(__gobject.GFlags):
     PRODUCE_UNSAFE_TO_CONCAT = 64
     REMOVE_DEFAULT_IGNORABLES = 8
     VERIFY = 32
-    __class__ = type
-    __dict__ = None # (!) real value is "mappingproxy({'__module__': 'gi.repository.HarfBuzz', '__dict__': <attribute '__dict__' of 'buffer_flags_t' objects>, '__doc__': None, '__gtype__': <GType PyHarfBuzzbuffer_flags_t (2667610912)>, '__flags_values__': {0: <flags 0 of type HarfBuzz.buffer_flags_t>, 1: <flags HB_BUFFER_FLAG_BOT of type HarfBuzz.buffer_flags_t>, 2: <flags HB_BUFFER_FLAG_EOT of type HarfBuzz.buffer_flags_t>, 4: <flags HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES of type HarfBuzz.buffer_flags_t>, 8: <flags HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES of type HarfBuzz.buffer_flags_t>, 16: <flags HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE of type HarfBuzz.buffer_flags_t>, 32: <flags HB_BUFFER_FLAG_VERIFY of type HarfBuzz.buffer_flags_t>, 64: <flags HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT of type HarfBuzz.buffer_flags_t>, 128: <flags HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL of type HarfBuzz.buffer_flags_t>, 255: <flags HB_BUFFER_FLAG_BOT | HB_BUFFER_FLAG_EOT | HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES | HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES | HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE | HB_BUFFER_FLAG_VERIFY | HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT | HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL | HB_BUFFER_FLAG_DEFINED of type HarfBuzz.buffer_flags_t>}, '__info__': gi.EnumInfo(buffer_flags_t), 'DEFAULT': <flags 0 of type HarfBuzz.buffer_flags_t>, 'BOT': <flags HB_BUFFER_FLAG_BOT of type HarfBuzz.buffer_flags_t>, 'EOT': <flags HB_BUFFER_FLAG_EOT of type HarfBuzz.buffer_flags_t>, 'PRESERVE_DEFAULT_IGNORABLES': <flags HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES of type HarfBuzz.buffer_flags_t>, 'REMOVE_DEFAULT_IGNORABLES': <flags HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES of type HarfBuzz.buffer_flags_t>, 'DO_NOT_INSERT_DOTTED_CIRCLE': <flags HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE of type HarfBuzz.buffer_flags_t>, 'VERIFY': <flags HB_BUFFER_FLAG_VERIFY of type HarfBuzz.buffer_flags_t>, 'PRODUCE_UNSAFE_TO_CONCAT': <flags HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT of type HarfBuzz.buffer_flags_t>, 'PRODUCE_SAFE_TO_INSERT_TATWEEL': <flags HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL of type HarfBuzz.buffer_flags_t>, 'DEFINED': <flags HB_BUFFER_FLAG_BOT | HB_BUFFER_FLAG_EOT | HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES | HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES | HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE | HB_BUFFER_FLAG_VERIFY | HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT | HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL | HB_BUFFER_FLAG_DEFINED of type HarfBuzz.buffer_flags_t>})"
-    __flags_values__ = {
-        0: 0,
-        1: 1,
-        2: 2,
-        4: 4,
-        8: 8,
-        16: 16,
-        32: 32,
-        64: 64,
-        128: 128,
-        255: 255,
-    }
-    __gtype__ = None # (!) real value is '<GType PyHarfBuzzbuffer_flags_t (2667610912)>'
-    __info__ = gi.EnumInfo(buffer_flags_t)
+    __class__ = None # (!) real value is "<class 'enum.EnumType'>"
+    __members__ = None # (!) real value is "mappingproxy({'DEFAULT': <buffer_flags_t.DEFAULT: 0>, 'BOT': <buffer_flags_t.BOT: 1>, 'EOT': <buffer_flags_t.EOT: 2>, 'PRESERVE_DEFAULT_IGNORABLES': <buffer_flags_t.PRESERVE_DEFAULT_IGNORABLES: 4>, 'REMOVE_DEFAULT_IGNORABLES': <buffer_flags_t.REMOVE_DEFAULT_IGNORABLES: 8>, 'DO_NOT_INSERT_DOTTED_CIRCLE': <buffer_flags_t.DO_NOT_INSERT_DOTTED_CIRCLE: 16>, 'VERIFY': <buffer_flags_t.VERIFY: 32>, 'PRODUCE_UNSAFE_TO_CONCAT': <buffer_flags_t.PRODUCE_UNSAFE_TO_CONCAT: 64>, 'PRODUCE_SAFE_TO_INSERT_TATWEEL': <buffer_flags_t.PRODUCE_SAFE_TO_INSERT_TATWEEL: 128>, 'DEFINED': <buffer_flags_t.DEFINED: 255>})"
+    __name__ = 'buffer_flags_t'
+    __qualname__ = 'buffer_flags_t'
 
 

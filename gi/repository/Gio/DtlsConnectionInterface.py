@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class DtlsConnectionInterface(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -150,7 +159,7 @@ class DtlsConnectionInterface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DtlsConnectionInterface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DtlsConnectionInterface' objects>, '__weakref__': <attribute '__weakref__' of 'DtlsConnectionInterface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001a793e21260>, 'accept_certificate': <property object at 0x000001a793e213a0>, 'handshake': <property object at 0x000001a793e21490>, 'handshake_async': <property object at 0x000001a793e21580>, 'handshake_finish': <property object at 0x000001a793e216c0>, 'shutdown': <property object at 0x000001a793e21760>, 'shutdown_async': <property object at 0x000001a793e21850>, 'shutdown_finish': <property object at 0x000001a793e21940>, 'set_advertised_protocols': <property object at 0x000001a793e21a80>, 'get_negotiated_protocol': <property object at 0x000001a793e21b70>, 'get_binding_data': <property object at 0x000001a793e21c60>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(DtlsConnectionInterface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'DtlsConnectionInterface' objects>, '__weakref__': <attribute '__weakref__' of 'DtlsConnectionInterface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001ea7095f830>, 'accept_certificate': <property object at 0x000001ea7095f920>, 'handshake': <property object at 0x000001ea7095fa10>, 'handshake_async': <property object at 0x000001ea7095fb00>, 'handshake_finish': <property object at 0x000001ea7095fbf0>, 'shutdown': <property object at 0x000001ea7095fce0>, 'shutdown_async': <property object at 0x000001ea7095fdd0>, 'shutdown_finish': <property object at 0x000001ea7095fec0>, 'set_advertised_protocols': <property object at 0x000001ea7094c040>, 'get_negotiated_protocol': <property object at 0x000001ea7094c0e0>, 'get_binding_data': <property object at 0x000001ea7094c1d0>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(DtlsConnectionInterface)
 

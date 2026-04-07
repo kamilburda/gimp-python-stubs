@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -173,7 +172,7 @@ class CellRendererClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(CellRendererClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'CellRendererClass' objects>, '__weakref__': <attribute '__weakref__' of 'CellRendererClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002ece9007510>, 'get_request_mode': <property object at 0x000002ece9007600>, 'get_preferred_width': <property object at 0x000002ece90076f0>, 'get_preferred_height_for_width': <property object at 0x000002ece9007830>, 'get_preferred_height': <property object at 0x000002ece90078d0>, 'get_preferred_width_for_height': <property object at 0x000002ece9007a10>, 'get_aligned_area': <property object at 0x000002ece9007ab0>, 'get_size': <property object at 0x000002ece9007ba0>, 'render': <property object at 0x000002ece9007c90>, 'activate': <property object at 0x000002ece9007d80>, 'start_editing': <property object at 0x000002ece9007e70>, 'editing_canceled': <property object at 0x000002ece9007f60>, 'editing_started': <property object at 0x000002eceabb4090>, 'priv': <property object at 0x000002eceabb4180>, '_gtk_reserved2': <property object at 0x000002eceabb4270>, '_gtk_reserved3': <property object at 0x000002eceabb4360>, '_gtk_reserved4': <property object at 0x000002eceabb4450>, 'set_accessible_type': gi.FunctionInfo(set_accessible_type, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(CellRendererClass), '__module__': 'gi.repository.Gtk', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'CellRendererClass' objects>, '__weakref__': <attribute '__weakref__' of 'CellRendererClass' objects>, '__doc__': None, 'parent_class': <property object at 0x000002bfd1792980>, 'get_request_mode': <property object at 0x000002bfd1792a70>, 'get_preferred_width': <property object at 0x000002bfd1792b60>, 'get_preferred_height_for_width': <property object at 0x000002bfd1792ca0>, 'get_preferred_height': <property object at 0x000002bfd1792d40>, 'get_preferred_width_for_height': <property object at 0x000002bfd1792e80>, 'get_aligned_area': <property object at 0x000002bfd1792f20>, 'get_size': <property object at 0x000002bfd1793010>, 'render': <property object at 0x000002bfd1793100>, 'activate': <property object at 0x000002bfd17931f0>, 'start_editing': <property object at 0x000002bfd17932e0>, 'editing_canceled': <property object at 0x000002bfd17933d0>, 'editing_started': <property object at 0x000002bfd17934c0>, 'priv': <property object at 0x000002bfd17935b0>, '_gtk_reserved2': <property object at 0x000002bfd17936a0>, '_gtk_reserved3': <property object at 0x000002bfd1793790>, '_gtk_reserved4': <property object at 0x000002bfd1793880>, 'set_accessible_type': gi.FunctionInfo(set_accessible_type)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(CellRendererClass)
 

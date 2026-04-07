@@ -1,17 +1,22 @@
 # encoding: utf-8
 # module gi.repository.Gio
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gio-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
+from gi.repository.GioWin32 import (NetworkMonitorClass, 
+    NetworkMonitorPrivate, Win32InputStream, Win32InputStreamClass, 
+    Win32InputStreamPrivate, Win32NetworkMonitor, Win32OutputStream, 
+    Win32OutputStreamClass, Win32OutputStreamPrivate, 
+    registry_settings_backend_new)
+
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -36,7 +41,11 @@ class MountIface(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -184,7 +193,7 @@ class MountIface(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MountIface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MountIface' objects>, '__weakref__': <attribute '__weakref__' of 'MountIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001a793df3330>, 'changed': <property object at 0x000001a793df3420>, 'unmounted': <property object at 0x000001a793df3510>, 'get_root': <property object at 0x000001a793df3600>, 'get_name': <property object at 0x000001a793df36f0>, 'get_icon': <property object at 0x000001a793df37e0>, 'get_uuid': <property object at 0x000001a793df38d0>, 'get_volume': <property object at 0x000001a793df39c0>, 'get_drive': <property object at 0x000001a793df3ab0>, 'can_unmount': <property object at 0x000001a793df3ba0>, 'can_eject': <property object at 0x000001a793df3c90>, 'unmount': <property object at 0x000001a793df3d80>, 'unmount_finish': <property object at 0x000001a793df3e70>, 'eject': <property object at 0x000001a793df3f60>, 'eject_finish': <property object at 0x000001a793dec090>, 'remount': <property object at 0x000001a793dec180>, 'remount_finish': <property object at 0x000001a793dec270>, 'guess_content_type': <property object at 0x000001a793dec3b0>, 'guess_content_type_finish': <property object at 0x000001a793dec4a0>, 'guess_content_type_sync': <property object at 0x000001a793dec590>, 'pre_unmount': <property object at 0x000001a793dec630>, 'unmount_with_operation': <property object at 0x000001a793dec770>, 'unmount_with_operation_finish': <property object at 0x000001a793dec860>, 'eject_with_operation': <property object at 0x000001a793dec950>, 'eject_with_operation_finish': <property object at 0x000001a793deca40>, 'get_default_location': <property object at 0x000001a793decb30>, 'get_sort_key': <property object at 0x000001a793decbd0>, 'get_symbolic_icon': <property object at 0x000001a793decd10>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(MountIface), '__module__': 'gi.repository.Gio', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'MountIface' objects>, '__weakref__': <attribute '__weakref__' of 'MountIface' objects>, '__doc__': None, 'g_iface': <property object at 0x000001ea709a4400>, 'changed': <property object at 0x000001ea709a44f0>, 'unmounted': <property object at 0x000001ea709a45e0>, 'get_root': <property object at 0x000001ea709a46d0>, 'get_name': <property object at 0x000001ea709a47c0>, 'get_icon': <property object at 0x000001ea709a48b0>, 'get_uuid': <property object at 0x000001ea709a49a0>, 'get_volume': <property object at 0x000001ea709a4a90>, 'get_drive': <property object at 0x000001ea709a4b80>, 'can_unmount': <property object at 0x000001ea709a4c70>, 'can_eject': <property object at 0x000001ea709a4d60>, 'unmount': <property object at 0x000001ea709a4e50>, 'unmount_finish': <property object at 0x000001ea709a4f40>, 'eject': <property object at 0x000001ea709a5030>, 'eject_finish': <property object at 0x000001ea709a5120>, 'remount': <property object at 0x000001ea709a5210>, 'remount_finish': <property object at 0x000001ea709a5300>, 'guess_content_type': <property object at 0x000001ea709a53f0>, 'guess_content_type_finish': <property object at 0x000001ea709a5530>, 'guess_content_type_sync': <property object at 0x000001ea709a55d0>, 'pre_unmount': <property object at 0x000001ea709a56c0>, 'unmount_with_operation': <property object at 0x000001ea709a57b0>, 'unmount_with_operation_finish': <property object at 0x000001ea709a58f0>, 'eject_with_operation': <property object at 0x000001ea709a5990>, 'eject_with_operation_finish': <property object at 0x000001ea709a5ad0>, 'get_default_location': <property object at 0x000001ea709a5b70>, 'get_sort_key': <property object at 0x000001ea709a5c60>, 'get_symbolic_icon': <property object at 0x000001ea709a5d50>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(MountIface)
 

@@ -1,20 +1,13 @@
 # encoding: utf-8
 # module gi.repository.cairo
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
 import gi as __gi
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class TextCluster(__gi.Boxed):
@@ -44,7 +37,11 @@ class TextCluster(__gi.Boxed):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -140,8 +137,8 @@ class TextCluster(__gi.Boxed):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextCluster), '__module__': 'gi.repository.cairo', '__gtype__': <GType CairoTextCluster (4004035952)>, '__dict__': <attribute '__dict__' of 'TextCluster' objects>, '__weakref__': <attribute '__weakref__' of 'TextCluster' objects>, '__doc__': None, 'num_bytes': <property object at 0x00000161ef23ade0>, 'num_glyphs': <property object at 0x00000161ef23aed0>})"
-    __gtype__ = None # (!) real value is '<GType CairoTextCluster (4004035952)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TextCluster), '__module__': 'gi.repository.cairo', '__gtype__': <GType CairoTextCluster (575363440)>, '__dict__': <attribute '__dict__' of 'TextCluster' objects>, '__weakref__': <attribute '__weakref__' of 'TextCluster' objects>, '__doc__': None, 'num_bytes': <property object at 0x0000020224926520>, 'num_glyphs': <property object at 0x0000020224926610>})"
+    __gtype__ = None # (!) real value is '<GType CairoTextCluster (575363440)>'
     __info__ = StructInfo(TextCluster)
 
 

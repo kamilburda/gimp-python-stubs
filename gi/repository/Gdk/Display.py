@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gdk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gdk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,9 +7,9 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.Gio as __gi_repository_Gio
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -50,7 +49,7 @@ class Display(__gi_overrides_GObject.Object):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
@@ -82,6 +81,9 @@ class Display(__gi_overrides_GObject.Object):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def emit(self, *args, **kwargs): # real signature unknown
@@ -458,20 +460,20 @@ class Display(__gi_overrides_GObject.Object):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -603,12 +605,12 @@ class Display(__gi_overrides_GObject.Object):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x0000024599917130>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001872539b670>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Display), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkDisplay (2575325824)>, '__doc__': None, '__gsignals__': {}, 'get_default': gi.FunctionInfo(get_default, bound=None), 'open': gi.FunctionInfo(open, bound=None), 'open_default_libgtk_only': gi.FunctionInfo(open_default_libgtk_only, bound=None), 'beep': gi.FunctionInfo(beep, bound=None), 'close': gi.FunctionInfo(close, bound=None), 'device_is_grabbed': gi.FunctionInfo(device_is_grabbed, bound=None), 'flush': gi.FunctionInfo(flush, bound=None), 'get_app_launch_context': gi.FunctionInfo(get_app_launch_context, bound=None), 'get_default_cursor_size': gi.FunctionInfo(get_default_cursor_size, bound=None), 'get_default_group': gi.FunctionInfo(get_default_group, bound=None), 'get_default_screen': gi.FunctionInfo(get_default_screen, bound=None), 'get_default_seat': gi.FunctionInfo(get_default_seat, bound=None), 'get_device_manager': gi.FunctionInfo(get_device_manager, bound=None), 'get_event': gi.FunctionInfo(get_event, bound=None), 'get_maximal_cursor_size': gi.FunctionInfo(get_maximal_cursor_size, bound=None), 'get_monitor': gi.FunctionInfo(get_monitor, bound=None), 'get_monitor_at_point': gi.FunctionInfo(get_monitor_at_point, bound=None), 'get_monitor_at_window': gi.FunctionInfo(get_monitor_at_window, bound=None), 'get_n_monitors': gi.FunctionInfo(get_n_monitors, bound=None), 'get_n_screens': gi.FunctionInfo(get_n_screens, bound=None), 'get_name': gi.FunctionInfo(get_name, bound=None), 'get_pointer': gi.FunctionInfo(get_pointer, bound=None), 'get_primary_monitor': gi.FunctionInfo(get_primary_monitor, bound=None), 'get_screen': gi.FunctionInfo(get_screen, bound=None), 'get_window_at_pointer': gi.FunctionInfo(get_window_at_pointer, bound=None), 'has_pending': gi.FunctionInfo(has_pending, bound=None), 'is_closed': gi.FunctionInfo(is_closed, bound=None), 'keyboard_ungrab': gi.FunctionInfo(keyboard_ungrab, bound=None), 'list_devices': gi.FunctionInfo(list_devices, bound=None), 'list_seats': gi.FunctionInfo(list_seats, bound=None), 'notify_startup_complete': gi.FunctionInfo(notify_startup_complete, bound=None), 'peek_event': gi.FunctionInfo(peek_event, bound=None), 'pointer_is_grabbed': gi.FunctionInfo(pointer_is_grabbed, bound=None), 'pointer_ungrab': gi.FunctionInfo(pointer_ungrab, bound=None), 'put_event': gi.FunctionInfo(put_event, bound=None), 'request_selection_notification': gi.FunctionInfo(request_selection_notification, bound=None), 'set_double_click_distance': gi.FunctionInfo(set_double_click_distance, bound=None), 'set_double_click_time': gi.FunctionInfo(set_double_click_time, bound=None), 'store_clipboard': gi.FunctionInfo(store_clipboard, bound=None), 'supports_clipboard_persistence': gi.FunctionInfo(supports_clipboard_persistence, bound=None), 'supports_composite': gi.FunctionInfo(supports_composite, bound=None), 'supports_cursor_alpha': gi.FunctionInfo(supports_cursor_alpha, bound=None), 'supports_cursor_color': gi.FunctionInfo(supports_cursor_color, bound=None), 'supports_input_shapes': gi.FunctionInfo(supports_input_shapes, bound=None), 'supports_selection_notification': gi.FunctionInfo(supports_selection_notification, bound=None), 'supports_shapes': gi.FunctionInfo(supports_shapes, bound=None), 'sync': gi.FunctionInfo(sync, bound=None), 'warp_pointer': gi.FunctionInfo(warp_pointer, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(Display), '__module__': 'gi.repository.Gdk', '__gtype__': <GType GdkDisplay (585158304)>, '__doc__': None, '__gsignals__': {}, 'get_default': <staticmethod(gi.FunctionInfo(get_default))>, 'open': <staticmethod(gi.FunctionInfo(open))>, 'open_default_libgtk_only': <staticmethod(gi.FunctionInfo(open_default_libgtk_only))>, 'beep': gi.FunctionInfo(beep), 'close': gi.FunctionInfo(close), 'device_is_grabbed': gi.FunctionInfo(device_is_grabbed), 'flush': gi.FunctionInfo(flush), 'get_app_launch_context': gi.FunctionInfo(get_app_launch_context), 'get_default_cursor_size': gi.FunctionInfo(get_default_cursor_size), 'get_default_group': gi.FunctionInfo(get_default_group), 'get_default_screen': gi.FunctionInfo(get_default_screen), 'get_default_seat': gi.FunctionInfo(get_default_seat), 'get_device_manager': gi.FunctionInfo(get_device_manager), 'get_event': gi.FunctionInfo(get_event), 'get_maximal_cursor_size': gi.FunctionInfo(get_maximal_cursor_size), 'get_monitor': gi.FunctionInfo(get_monitor), 'get_monitor_at_point': gi.FunctionInfo(get_monitor_at_point), 'get_monitor_at_window': gi.FunctionInfo(get_monitor_at_window), 'get_n_monitors': gi.FunctionInfo(get_n_monitors), 'get_n_screens': gi.FunctionInfo(get_n_screens), 'get_name': gi.FunctionInfo(get_name), 'get_pointer': gi.FunctionInfo(get_pointer), 'get_primary_monitor': gi.FunctionInfo(get_primary_monitor), 'get_screen': gi.FunctionInfo(get_screen), 'get_window_at_pointer': gi.FunctionInfo(get_window_at_pointer), 'has_pending': gi.FunctionInfo(has_pending), 'is_closed': gi.FunctionInfo(is_closed), 'keyboard_ungrab': gi.FunctionInfo(keyboard_ungrab), 'list_devices': gi.FunctionInfo(list_devices), 'list_seats': gi.FunctionInfo(list_seats), 'notify_startup_complete': gi.FunctionInfo(notify_startup_complete), 'peek_event': gi.FunctionInfo(peek_event), 'pointer_is_grabbed': gi.FunctionInfo(pointer_is_grabbed), 'pointer_ungrab': gi.FunctionInfo(pointer_ungrab), 'put_event': gi.FunctionInfo(put_event), 'request_selection_notification': gi.FunctionInfo(request_selection_notification), 'set_double_click_distance': gi.FunctionInfo(set_double_click_distance), 'set_double_click_time': gi.FunctionInfo(set_double_click_time), 'store_clipboard': gi.FunctionInfo(store_clipboard), 'supports_clipboard_persistence': gi.FunctionInfo(supports_clipboard_persistence), 'supports_composite': gi.FunctionInfo(supports_composite), 'supports_cursor_alpha': gi.FunctionInfo(supports_cursor_alpha), 'supports_cursor_color': gi.FunctionInfo(supports_cursor_color), 'supports_input_shapes': gi.FunctionInfo(supports_input_shapes), 'supports_selection_notification': gi.FunctionInfo(supports_selection_notification), 'supports_shapes': gi.FunctionInfo(supports_shapes), 'sync': gi.FunctionInfo(sync), 'warp_pointer': gi.FunctionInfo(warp_pointer)})"
     __gdoc__ = 'Object GdkDisplay\n\nSignals from GdkDisplay:\n  opened ()\n  closed (gboolean)\n  seat-added (GdkSeat)\n  seat-removed (GdkSeat)\n  monitor-added (GdkMonitor)\n  monitor-removed (GdkMonitor)\n\nSignals from GObject:\n  notify (GParam)\n\n'
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GdkDisplay (2575325824)>'
+    __gtype__ = None # (!) real value is '<GType GdkDisplay (585158304)>'
     __info__ = ObjectInfo(Display)
 
 

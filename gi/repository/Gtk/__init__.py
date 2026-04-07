@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,19 +7,19 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
 # Variables with simple values
 
-BINARY_AGE = 2448
+BINARY_AGE = 2451
 
 INPUT_ERROR = -1
 
@@ -34,7 +33,7 @@ MAJOR_VERSION = 3
 
 MAX_COMPOSE_LEN = 7
 
-MICRO_VERSION = 48
+MICRO_VERSION = 51
 
 MINOR_VERSION = 24
 
@@ -395,8 +394,6 @@ TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID = -2
 _namespace = 'Gtk'
 
 _version = '3.0'
-
-__weakref__ = None
 
 # functions
 
@@ -1154,120 +1151,15 @@ def true(): # real signature unknown; restored from __doc__
 
 def _construct_target_list(targets): # reliably restored by inspect
     """
-    Create a list of TargetEntry items from a list of tuples in the form (target, flags, info)
+    Create a list of TargetEntry items from a list of tuples in the form (target, flags, info).
     
-            The list can also contain existing TargetEntry items in which case the existing entry
-            is re-used in the return list.
+    The list can also contain existing TargetEntry items in which case the existing entry
+    is re-used in the return list.
     """
     pass
 
 def _extract_handler_and_args(obj_or_map, handler_name): # reliably restored by inspect
     # no doc
-    pass
-
-def __delattr__(*args, **kwargs): # real signature unknown
-    """ Implement delattr(self, name). """
-    pass
-
-def __dir__(*args, **kwargs): # real signature unknown
-    pass
-
-def __eq__(*args, **kwargs): # real signature unknown
-    """ Return self==value. """
-    pass
-
-def __format__(*args, **kwargs): # real signature unknown
-    """
-    Default object formatter.
-    
-    Return str(self) if format_spec is empty. Raise TypeError otherwise.
-    """
-    pass
-
-def __getattribute__(*args, **kwargs): # real signature unknown
-    """ Return getattr(self, name). """
-    pass
-
-def __getattr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __getstate__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __ge__(*args, **kwargs): # real signature unknown
-    """ Return self>=value. """
-    pass
-
-def __gt__(*args, **kwargs): # real signature unknown
-    """ Return self>value. """
-    pass
-
-def __hash__(*args, **kwargs): # real signature unknown
-    """ Return hash(self). """
-    pass
-
-def __init_subclass__(*args, **kwargs): # real signature unknown
-    """
-    This method is called when a class is subclassed.
-    
-    The default implementation does nothing. It may be
-    overridden to extend subclasses.
-    """
-    pass
-
-def __init__(*args, **kwargs): # real signature unknown
-    pass
-
-def __le__(*args, **kwargs): # real signature unknown
-    """ Return self<=value. """
-    pass
-
-def __lt__(*args, **kwargs): # real signature unknown
-    """ Return self<value. """
-    pass
-
-@staticmethod # known case of __new__
-def __new__(*args, **kwargs): # real signature unknown
-    """ Create and return a new object.  See help(type) for accurate signature. """
-    pass
-
-def __ne__(*args, **kwargs): # real signature unknown
-    """ Return self!=value. """
-    pass
-
-def __reduce_ex__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __reduce__(*args, **kwargs): # real signature unknown
-    """ Helper for pickle. """
-    pass
-
-def __repr__(*args, **kwargs): # real signature unknown
-    pass
-
-def __setattr__(*args, **kwargs): # real signature unknown
-    """ Implement setattr(self, name, value). """
-    pass
-
-def __sizeof__(*args, **kwargs): # real signature unknown
-    """ Size of object in memory, in bytes. """
-    pass
-
-def __str__(*args, **kwargs): # real signature unknown
-    """ Return str(self). """
-    pass
-
-def __subclasshook__(*args, **kwargs): # real signature unknown
-    """
-    Abstract classes can override this to customize issubclass().
-    
-    This is invoked early on by abc.ABCMeta.__subclasscheck__().
-    It should return True, False or NotImplemented.  If it returns
-    NotImplemented, the normal algorithm is used.  Otherwise, it
-    overrides the normal algorithm (and the outcome is cached).
-    """
     pass
 
 # classes
@@ -2222,16 +2114,11 @@ from ._MountOperationHandlerProxyPrivate import _MountOperationHandlerProxyPriva
 from ._MountOperationHandlerSkeleton import _MountOperationHandlerSkeleton
 from ._MountOperationHandlerSkeletonClass import _MountOperationHandlerSkeletonClass
 from ._MountOperationHandlerSkeletonPrivate import _MountOperationHandlerSkeletonPrivate
-from .__class__ import __class__
 # variables with complex values
 
-_introspection_module = None # (!) real value is "<IntrospectionModule 'Gtk' from 'C:\\\\Program Files\\\\GIMP 3\\\\lib\\\\girepository-1.0\\\\Gtk-3.0.typelib'>"
-
-__annotations__ = {}
-
-__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000002ece62f0290>'
+__loader__ = None # (!) real value is '<gi.importer.DynamicImporter object at 0x000002bfce2f4440>'
 
 __path__ = []
 
-__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Gtk', loader=<gi.importer.DynamicImporter object at 0x000002ece62f0290>)"
+__spec__ = None # (!) real value is "ModuleSpec(name='gi.repository.Gtk', loader=<gi.importer.DynamicImporter object at 0x000002bfce2f4440>)"
 

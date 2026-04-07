@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class IOFuncs(__gi.Struct):
@@ -149,7 +147,7 @@ class IOFuncs(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IOFuncs), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IOFuncs' objects>, '__weakref__': <attribute '__weakref__' of 'IOFuncs' objects>, '__doc__': None, 'io_read': <property object at 0x000002830bf15ee0>, 'io_write': <property object at 0x000002830bf15fd0>, 'io_seek': <property object at 0x000002830bf160c0>, 'io_close': <property object at 0x000002830bf161b0>, 'io_create_watch': <property object at 0x000002830bf162a0>, 'io_free': <property object at 0x000002830bf16390>, 'io_set_flags': <property object at 0x000002830bf16480>, 'io_get_flags': <property object at 0x000002830bf16570>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(IOFuncs), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'IOFuncs' objects>, '__weakref__': <attribute '__weakref__' of 'IOFuncs' objects>, '__doc__': None, 'io_read': <property object at 0x0000018e9ff8b0b0>, 'io_write': <property object at 0x0000018e9ff8af70>, 'io_seek': <property object at 0x0000018e9ff8ae80>, 'io_close': <property object at 0x0000018e9ff8b290>, 'io_create_watch': <property object at 0x0000018e9ff8b380>, 'io_free': <property object at 0x0000018e9ff8b470>, 'io_set_flags': <property object at 0x0000018e9ff8b560>, 'io_get_flags': <property object at 0x0000018e9ff8b650>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(IOFuncs)
 

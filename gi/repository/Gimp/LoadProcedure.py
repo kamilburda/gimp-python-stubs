@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -31,428 +27,452 @@ class LoadProcedure(FileProcedure):
         LoadProcedure(**properties)
         new(plug_in:Gimp.PlugIn, name:str, proc_type:Gimp.PDBProcType, run_func:Gimp.RunLoadFunc, run_data=None) -> Gimp.Procedure
     """
-    def add_boolean_argument(self, name, nick, blurb, value, flags): # real signature unknown; restored from __doc__
-        """ add_boolean_argument(self, name:str, nick:str, blurb:str, value:bool, flags:GObject.ParamFlags) """
+    def add_boolean_argument(self, name, nick, blurb=None, value, flags): # real signature unknown; restored from __doc__
+        """ add_boolean_argument(self, name:str, nick:str, blurb:str=None, value:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_boolean_aux_argument(self, name, nick, blurb, value, flags): # real signature unknown; restored from __doc__
-        """ add_boolean_aux_argument(self, name:str, nick:str, blurb:str, value:bool, flags:GObject.ParamFlags) """
+    def add_boolean_aux_argument(self, name, nick, blurb=None, value, flags): # real signature unknown; restored from __doc__
+        """ add_boolean_aux_argument(self, name:str, nick:str, blurb:str=None, value:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_boolean_return_value(self, name, nick, blurb, value, flags): # real signature unknown; restored from __doc__
-        """ add_boolean_return_value(self, name:str, nick:str, blurb:str, value:bool, flags:GObject.ParamFlags) """
+    def add_boolean_return_value(self, name, nick, blurb=None, value, flags): # real signature unknown; restored from __doc__
+        """ add_boolean_return_value(self, name:str, nick:str, blurb:str=None, value:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_brush_argument(self, name, nick, blurb, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_brush_argument(self, name:str, nick:str, blurb:str, none_ok:bool, default_value:Gimp.Brush=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_brush_argument(self, name, nick, blurb=None, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_brush_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, default_value:Gimp.Brush=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_brush_aux_argument(self, name, nick, blurb, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_brush_aux_argument(self, name:str, nick:str, blurb:str, default_value:Gimp.Brush=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_brush_aux_argument(self, name, nick, blurb=None, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_brush_aux_argument(self, name:str, nick:str, blurb:str=None, default_value:Gimp.Brush=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_brush_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_brush_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_brush_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_brush_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_bytes_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_bytes_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_bytes_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_bytes_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_bytes_aux_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_bytes_aux_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_bytes_aux_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_bytes_aux_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_bytes_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_bytes_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_bytes_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_bytes_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_channel_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_channel_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_channel_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_channel_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_channel_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_channel_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_channel_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_channel_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_channel_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_channel_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_channel_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_channel_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_choice_argument(self, name, nick, blurb, choice, value, flags): # real signature unknown; restored from __doc__
-        """ add_choice_argument(self, name:str, nick:str, blurb:str, choice:Gimp.Choice, value:str, flags:GObject.ParamFlags) """
+    def add_choice_argument(self, name, nick, blurb=None, choice, value, flags): # real signature unknown; restored from __doc__
+        """ add_choice_argument(self, name:str, nick:str, blurb:str=None, choice:Gimp.Choice, value:str, flags:GObject.ParamFlags) """
         pass
 
-    def add_choice_aux_argument(self, name, nick, blurb, choice, value, flags): # real signature unknown; restored from __doc__
-        """ add_choice_aux_argument(self, name:str, nick:str, blurb:str, choice:Gimp.Choice, value:str, flags:GObject.ParamFlags) """
+    def add_choice_aux_argument(self, name, nick, blurb=None, choice, value, flags): # real signature unknown; restored from __doc__
+        """ add_choice_aux_argument(self, name:str, nick:str, blurb:str=None, choice:Gimp.Choice, value:str, flags:GObject.ParamFlags) """
         pass
 
-    def add_choice_return_value(self, name, nick, blurb, choice, value, flags): # real signature unknown; restored from __doc__
-        """ add_choice_return_value(self, name:str, nick:str, blurb:str, choice:Gimp.Choice, value:str, flags:GObject.ParamFlags) """
+    def add_choice_return_value(self, name, nick, blurb=None, choice, value, flags): # real signature unknown; restored from __doc__
+        """ add_choice_return_value(self, name:str, nick:str, blurb:str=None, choice:Gimp.Choice, value:str, flags:GObject.ParamFlags) """
         pass
 
-    def add_color_argument(self, name, nick, blurb, has_alpha, value, flags): # real signature unknown; restored from __doc__
-        """ add_color_argument(self, name:str, nick:str, blurb:str, has_alpha:bool, value:Gegl.Color, flags:GObject.ParamFlags) """
+    def add_color_argument(self, name, nick, blurb=None, has_alpha, value, flags): # real signature unknown; restored from __doc__
+        """ add_color_argument(self, name:str, nick:str, blurb:str=None, has_alpha:bool, value:Gegl.Color, flags:GObject.ParamFlags) """
         pass
 
-    def add_color_aux_argument(self, name, nick, blurb, has_alpha, value, flags): # real signature unknown; restored from __doc__
-        """ add_color_aux_argument(self, name:str, nick:str, blurb:str, has_alpha:bool, value:Gegl.Color, flags:GObject.ParamFlags) """
+    def add_color_aux_argument(self, name, nick, blurb=None, has_alpha, value, flags): # real signature unknown; restored from __doc__
+        """ add_color_aux_argument(self, name:str, nick:str, blurb:str=None, has_alpha:bool, value:Gegl.Color, flags:GObject.ParamFlags) """
         pass
 
-    def add_color_from_string_argument(self, name, nick, blurb, has_alpha, value, flags): # real signature unknown; restored from __doc__
-        """ add_color_from_string_argument(self, name:str, nick:str, blurb:str, has_alpha:bool, value:str, flags:GObject.ParamFlags) """
+    def add_color_from_string_argument(self, name, nick, blurb=None, has_alpha, value, flags): # real signature unknown; restored from __doc__
+        """ add_color_from_string_argument(self, name:str, nick:str, blurb:str=None, has_alpha:bool, value:str, flags:GObject.ParamFlags) """
         pass
 
-    def add_color_from_string_aux_argument(self, name, nick, blurb, has_alpha, value, flags): # real signature unknown; restored from __doc__
-        """ add_color_from_string_aux_argument(self, name:str, nick:str, blurb:str, has_alpha:bool, value:str, flags:GObject.ParamFlags) """
+    def add_color_from_string_aux_argument(self, name, nick, blurb=None, has_alpha, value, flags): # real signature unknown; restored from __doc__
+        """ add_color_from_string_aux_argument(self, name:str, nick:str, blurb:str=None, has_alpha:bool, value:str, flags:GObject.ParamFlags) """
         pass
 
-    def add_color_from_string_return_value(self, name, nick, blurb, has_alpha, value, flags): # real signature unknown; restored from __doc__
-        """ add_color_from_string_return_value(self, name:str, nick:str, blurb:str, has_alpha:bool, value:str, flags:GObject.ParamFlags) """
+    def add_color_from_string_return_value(self, name, nick, blurb=None, has_alpha, value, flags): # real signature unknown; restored from __doc__
+        """ add_color_from_string_return_value(self, name:str, nick:str, blurb:str=None, has_alpha:bool, value:str, flags:GObject.ParamFlags) """
         pass
 
-    def add_color_return_value(self, name, nick, blurb, has_alpha, value, flags): # real signature unknown; restored from __doc__
-        """ add_color_return_value(self, name:str, nick:str, blurb:str, has_alpha:bool, value:Gegl.Color, flags:GObject.ParamFlags) """
+    def add_color_return_value(self, name, nick, blurb=None, has_alpha, value, flags): # real signature unknown; restored from __doc__
+        """ add_color_return_value(self, name:str, nick:str, blurb:str=None, has_alpha:bool, value:Gegl.Color, flags:GObject.ParamFlags) """
         pass
 
-    def add_core_object_array_argument(self, name, nick, blurb, object_type, flags): # real signature unknown; restored from __doc__
-        """ add_core_object_array_argument(self, name:str, nick:str, blurb:str, object_type:GType, flags:GObject.ParamFlags) """
+    def add_core_object_array_argument(self, name, nick, blurb=None, object_type, flags): # real signature unknown; restored from __doc__
+        """ add_core_object_array_argument(self, name:str, nick:str, blurb:str=None, object_type:GType, flags:GObject.ParamFlags) """
         pass
 
-    def add_core_object_array_aux_argument(self, name, nick, blurb, object_type, flags): # real signature unknown; restored from __doc__
-        """ add_core_object_array_aux_argument(self, name:str, nick:str, blurb:str, object_type:GType, flags:GObject.ParamFlags) """
+    def add_core_object_array_aux_argument(self, name, nick, blurb=None, object_type, flags): # real signature unknown; restored from __doc__
+        """ add_core_object_array_aux_argument(self, name:str, nick:str, blurb:str=None, object_type:GType, flags:GObject.ParamFlags) """
         pass
 
-    def add_core_object_array_return_value(self, name, nick, blurb, object_type, flags): # real signature unknown; restored from __doc__
-        """ add_core_object_array_return_value(self, name:str, nick:str, blurb:str, object_type:GType, flags:GObject.ParamFlags) """
+    def add_core_object_array_return_value(self, name, nick, blurb=None, object_type, flags): # real signature unknown; restored from __doc__
+        """ add_core_object_array_return_value(self, name:str, nick:str, blurb:str=None, object_type:GType, flags:GObject.ParamFlags) """
         pass
 
-    def add_display_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_display_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_display_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_display_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_display_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_display_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_display_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_display_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_display_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_display_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_display_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_display_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_double_argument(self, name, nick, blurb, min, max, value, flags): # real signature unknown; restored from __doc__
-        """ add_double_argument(self, name:str, nick:str, blurb:str, min:float, max:float, value:float, flags:GObject.ParamFlags) """
+    def add_double_argument(self, name, nick, blurb=None, min, max, value, flags): # real signature unknown; restored from __doc__
+        """ add_double_argument(self, name:str, nick:str, blurb:str=None, min:float, max:float, value:float, flags:GObject.ParamFlags) """
         pass
 
-    def add_double_array_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_double_array_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_double_array_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_double_array_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_double_array_aux_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_double_array_aux_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_double_array_aux_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_double_array_aux_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_double_array_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_double_array_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_double_array_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_double_array_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_double_aux_argument(self, name, nick, blurb, min, max, value, flags): # real signature unknown; restored from __doc__
-        """ add_double_aux_argument(self, name:str, nick:str, blurb:str, min:float, max:float, value:float, flags:GObject.ParamFlags) """
+    def add_double_aux_argument(self, name, nick, blurb=None, min, max, value, flags): # real signature unknown; restored from __doc__
+        """ add_double_aux_argument(self, name:str, nick:str, blurb:str=None, min:float, max:float, value:float, flags:GObject.ParamFlags) """
         pass
 
-    def add_double_return_value(self, name, nick, blurb, min, max, value, flags): # real signature unknown; restored from __doc__
-        """ add_double_return_value(self, name:str, nick:str, blurb:str, min:float, max:float, value:float, flags:GObject.ParamFlags) """
+    def add_double_return_value(self, name, nick, blurb=None, min, max, value, flags): # real signature unknown; restored from __doc__
+        """ add_double_return_value(self, name:str, nick:str, blurb:str=None, min:float, max:float, value:float, flags:GObject.ParamFlags) """
         pass
 
-    def add_drawable_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_drawable_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_drawable_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_drawable_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_drawable_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_drawable_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_drawable_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_drawable_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_drawable_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_drawable_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_drawable_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_drawable_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_enum_argument(self, name, nick, blurb, enum_type, value, flags): # real signature unknown; restored from __doc__
-        """ add_enum_argument(self, name:str, nick:str, blurb:str, enum_type:GType, value:int, flags:GObject.ParamFlags) """
+    def add_enum_argument(self, name, nick, blurb=None, enum_type, value, flags): # real signature unknown; restored from __doc__
+        """ add_enum_argument(self, name:str, nick:str, blurb:str=None, enum_type:GType, value:int, flags:GObject.ParamFlags) """
         pass
 
-    def add_enum_aux_argument(self, name, nick, blurb, enum_type, value, flags): # real signature unknown; restored from __doc__
-        """ add_enum_aux_argument(self, name:str, nick:str, blurb:str, enum_type:GType, value:int, flags:GObject.ParamFlags) """
+    def add_enum_aux_argument(self, name, nick, blurb=None, enum_type, value, flags): # real signature unknown; restored from __doc__
+        """ add_enum_aux_argument(self, name:str, nick:str, blurb:str=None, enum_type:GType, value:int, flags:GObject.ParamFlags) """
         pass
 
-    def add_enum_return_value(self, name, nick, blurb, enum_type, value, flags): # real signature unknown; restored from __doc__
-        """ add_enum_return_value(self, name:str, nick:str, blurb:str, enum_type:GType, value:int, flags:GObject.ParamFlags) """
+    def add_enum_return_value(self, name, nick, blurb=None, enum_type, value, flags): # real signature unknown; restored from __doc__
+        """ add_enum_return_value(self, name:str, nick:str, blurb:str=None, enum_type:GType, value:int, flags:GObject.ParamFlags) """
         pass
 
-    def add_file_argument(self, name, nick, blurb, action, none_ok, default_file=None, flags): # real signature unknown; restored from __doc__
-        """ add_file_argument(self, name:str, nick:str, blurb:str, action:Gimp.FileChooserAction, none_ok:bool, default_file:Gio.File=None, flags:GObject.ParamFlags) """
+    def add_file_argument(self, name, nick, blurb=None, action, none_ok, default_file=None, flags): # real signature unknown; restored from __doc__
+        """ add_file_argument(self, name:str, nick:str, blurb:str=None, action:Gimp.FileChooserAction, none_ok:bool, default_file:Gio.File=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_file_aux_argument(self, name, nick, blurb, action, none_ok, default_file=None, flags): # real signature unknown; restored from __doc__
-        """ add_file_aux_argument(self, name:str, nick:str, blurb:str, action:Gimp.FileChooserAction, none_ok:bool, default_file:Gio.File=None, flags:GObject.ParamFlags) """
+    def add_file_aux_argument(self, name, nick, blurb=None, action, none_ok, default_file=None, flags): # real signature unknown; restored from __doc__
+        """ add_file_aux_argument(self, name:str, nick:str, blurb:str=None, action:Gimp.FileChooserAction, none_ok:bool, default_file:Gio.File=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_file_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_file_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_file_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_file_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_font_argument(self, name, nick, blurb, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_font_argument(self, name:str, nick:str, blurb:str, none_ok:bool, default_value:Gimp.Font=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_font_argument(self, name, nick, blurb=None, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_font_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, default_value:Gimp.Font=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_font_aux_argument(self, name, nick, blurb, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_font_aux_argument(self, name:str, nick:str, blurb:str, default_value:Gimp.Font=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_font_aux_argument(self, name, nick, blurb=None, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_font_aux_argument(self, name:str, nick:str, blurb:str=None, default_value:Gimp.Font=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_font_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_font_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_font_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_font_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_gradient_argument(self, name, nick, blurb, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_gradient_argument(self, name:str, nick:str, blurb:str, none_ok:bool, default_value:Gimp.Gradient=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_gradient_argument(self, name, nick, blurb=None, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_gradient_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, default_value:Gimp.Gradient=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_gradient_aux_argument(self, name, nick, blurb, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_gradient_aux_argument(self, name:str, nick:str, blurb:str, default_value:Gimp.Gradient=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_gradient_aux_argument(self, name, nick, blurb=None, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_gradient_aux_argument(self, name:str, nick:str, blurb:str=None, default_value:Gimp.Gradient=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_gradient_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_gradient_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_gradient_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_gradient_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_group_layer_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_group_layer_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_group_layer_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_group_layer_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_group_layer_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_group_layer_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_group_layer_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_group_layer_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_group_layer_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_group_layer_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_group_layer_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_group_layer_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_image_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_image_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_image_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_image_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_image_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_image_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_image_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_image_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_image_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_image_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_image_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_image_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_int32_array_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_int32_array_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_int32_array_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_int32_array_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_int32_array_aux_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_int32_array_aux_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_int32_array_aux_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_int32_array_aux_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_int32_array_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_int32_array_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_int32_array_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_int32_array_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_int_argument(self, name, nick, blurb, min, max, value, flags): # real signature unknown; restored from __doc__
-        """ add_int_argument(self, name:str, nick:str, blurb:str, min:int, max:int, value:int, flags:GObject.ParamFlags) """
+    def add_int_argument(self, name, nick, blurb=None, min, max, value, flags): # real signature unknown; restored from __doc__
+        """ add_int_argument(self, name:str, nick:str, blurb:str=None, min:int, max:int, value:int, flags:GObject.ParamFlags) """
         pass
 
-    def add_int_aux_argument(self, name, nick, blurb, min, max, value, flags): # real signature unknown; restored from __doc__
-        """ add_int_aux_argument(self, name:str, nick:str, blurb:str, min:int, max:int, value:int, flags:GObject.ParamFlags) """
+    def add_int_aux_argument(self, name, nick, blurb=None, min, max, value, flags): # real signature unknown; restored from __doc__
+        """ add_int_aux_argument(self, name:str, nick:str, blurb:str=None, min:int, max:int, value:int, flags:GObject.ParamFlags) """
         pass
 
-    def add_int_return_value(self, name, nick, blurb, min, max, value, flags): # real signature unknown; restored from __doc__
-        """ add_int_return_value(self, name:str, nick:str, blurb:str, min:int, max:int, value:int, flags:GObject.ParamFlags) """
+    def add_int_return_value(self, name, nick, blurb=None, min, max, value, flags): # real signature unknown; restored from __doc__
+        """ add_int_return_value(self, name:str, nick:str, blurb:str=None, min:int, max:int, value:int, flags:GObject.ParamFlags) """
         pass
 
-    def add_item_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_item_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_item_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_item_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_item_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_item_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_item_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_item_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_item_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_item_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_item_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_item_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_layer_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_layer_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_layer_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_layer_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_layer_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_layer_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_layer_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_layer_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_layer_mask_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_layer_mask_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_layer_mask_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_layer_mask_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_layer_mask_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_layer_mask_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_layer_mask_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_layer_mask_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_layer_mask_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_layer_mask_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_layer_mask_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_layer_mask_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_layer_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_layer_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_layer_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_layer_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
+        pass
+
+    def add_link_layer_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_link_layer_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
+        pass
+
+    def add_link_layer_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_link_layer_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
+        pass
+
+    def add_link_layer_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_link_layer_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
     def add_menu_path(self, menu_path): # real signature unknown; restored from __doc__
         """ add_menu_path(self, menu_path:str) """
         pass
 
-    def add_palette_argument(self, name, nick, blurb, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_palette_argument(self, name:str, nick:str, blurb:str, none_ok:bool, default_value:Gimp.Palette=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_palette_argument(self, name, nick, blurb=None, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_palette_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, default_value:Gimp.Palette=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_palette_aux_argument(self, name, nick, blurb, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_palette_aux_argument(self, name:str, nick:str, blurb:str, default_value:Gimp.Palette=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_palette_aux_argument(self, name, nick, blurb=None, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_palette_aux_argument(self, name:str, nick:str, blurb:str=None, default_value:Gimp.Palette=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_palette_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_palette_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_palette_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_palette_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_param_argument(self, name, nick, blurb, param_type, flags): # real signature unknown; restored from __doc__
-        """ add_param_argument(self, name:str, nick:str, blurb:str, param_type:GType, flags:GObject.ParamFlags) """
+    def add_param_argument(self, name, nick, blurb=None, param_type, flags): # real signature unknown; restored from __doc__
+        """ add_param_argument(self, name:str, nick:str, blurb:str=None, param_type:GType, flags:GObject.ParamFlags) """
         pass
 
-    def add_param_aux_argument(self, name, nick, blurb, param_type, flags): # real signature unknown; restored from __doc__
-        """ add_param_aux_argument(self, name:str, nick:str, blurb:str, param_type:GType, flags:GObject.ParamFlags) """
+    def add_param_aux_argument(self, name, nick, blurb=None, param_type, flags): # real signature unknown; restored from __doc__
+        """ add_param_aux_argument(self, name:str, nick:str, blurb:str=None, param_type:GType, flags:GObject.ParamFlags) """
         pass
 
-    def add_param_return_value(self, name, nick, blurb, param_type, flags): # real signature unknown; restored from __doc__
-        """ add_param_return_value(self, name:str, nick:str, blurb:str, param_type:GType, flags:GObject.ParamFlags) """
+    def add_param_return_value(self, name, nick, blurb=None, param_type, flags): # real signature unknown; restored from __doc__
+        """ add_param_return_value(self, name:str, nick:str, blurb:str=None, param_type:GType, flags:GObject.ParamFlags) """
         pass
 
-    def add_parasite_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_parasite_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_parasite_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_parasite_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_parasite_aux_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_parasite_aux_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_parasite_aux_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_parasite_aux_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_parasite_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_parasite_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_parasite_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_parasite_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_path_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_path_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_path_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_path_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_path_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_path_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_path_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_path_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_path_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_path_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_path_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_path_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_pattern_argument(self, name, nick, blurb, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_pattern_argument(self, name:str, nick:str, blurb:str, none_ok:bool, default_value:Gimp.Pattern=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_pattern_argument(self, name, nick, blurb=None, none_ok, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_pattern_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, default_value:Gimp.Pattern=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_pattern_aux_argument(self, name, nick, blurb, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
-        """ add_pattern_aux_argument(self, name:str, nick:str, blurb:str, default_value:Gimp.Pattern=None, default_to_context:bool, flags:GObject.ParamFlags) """
+    def add_pattern_aux_argument(self, name, nick, blurb=None, default_value=None, default_to_context, flags): # real signature unknown; restored from __doc__
+        """ add_pattern_aux_argument(self, name:str, nick:str, blurb:str=None, default_value:Gimp.Pattern=None, default_to_context:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_pattern_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_pattern_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_pattern_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_pattern_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_resource_argument(self, name, nick, blurb, none_ok, default_value=None, flags): # real signature unknown; restored from __doc__
-        """ add_resource_argument(self, name:str, nick:str, blurb:str, none_ok:bool, default_value:Gimp.Resource=None, flags:GObject.ParamFlags) """
+    def add_resource_argument(self, name, nick, blurb=None, none_ok, default_value=None, flags): # real signature unknown; restored from __doc__
+        """ add_resource_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, default_value:Gimp.Resource=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_resource_aux_argument(self, name, nick, blurb, default_value=None, flags): # real signature unknown; restored from __doc__
-        """ add_resource_aux_argument(self, name:str, nick:str, blurb:str, default_value:Gimp.Resource=None, flags:GObject.ParamFlags) """
+    def add_resource_aux_argument(self, name, nick, blurb=None, default_value=None, flags): # real signature unknown; restored from __doc__
+        """ add_resource_aux_argument(self, name:str, nick:str, blurb:str=None, default_value:Gimp.Resource=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_resource_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_resource_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_resource_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_resource_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_selection_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_selection_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_selection_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_selection_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_selection_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_selection_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_selection_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_selection_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_selection_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_selection_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_selection_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_selection_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_string_argument(self, name, nick, blurb, value, flags): # real signature unknown; restored from __doc__
-        """ add_string_argument(self, name:str, nick:str, blurb:str, value:str, flags:GObject.ParamFlags) """
+    def add_string_argument(self, name, nick, blurb=None, value, flags): # real signature unknown; restored from __doc__
+        """ add_string_argument(self, name:str, nick:str, blurb:str=None, value:str, flags:GObject.ParamFlags) """
         pass
 
-    def add_string_array_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_string_array_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_string_array_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_string_array_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_string_array_aux_argument(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_string_array_aux_argument(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_string_array_aux_argument(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_string_array_aux_argument(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_string_array_return_value(self, name, nick, blurb, flags): # real signature unknown; restored from __doc__
-        """ add_string_array_return_value(self, name:str, nick:str, blurb:str, flags:GObject.ParamFlags) """
+    def add_string_array_return_value(self, name, nick, blurb=None, flags): # real signature unknown; restored from __doc__
+        """ add_string_array_return_value(self, name:str, nick:str, blurb:str=None, flags:GObject.ParamFlags) """
         pass
 
-    def add_string_aux_argument(self, name, nick, blurb, value, flags): # real signature unknown; restored from __doc__
-        """ add_string_aux_argument(self, name:str, nick:str, blurb:str, value:str, flags:GObject.ParamFlags) """
+    def add_string_aux_argument(self, name, nick, blurb=None, value, flags): # real signature unknown; restored from __doc__
+        """ add_string_aux_argument(self, name:str, nick:str, blurb:str=None, value:str, flags:GObject.ParamFlags) """
         pass
 
-    def add_string_return_value(self, name, nick, blurb, value, flags): # real signature unknown; restored from __doc__
-        """ add_string_return_value(self, name:str, nick:str, blurb:str, value:str, flags:GObject.ParamFlags) """
+    def add_string_return_value(self, name, nick, blurb=None, value, flags): # real signature unknown; restored from __doc__
+        """ add_string_return_value(self, name:str, nick:str, blurb:str=None, value:str, flags:GObject.ParamFlags) """
         pass
 
-    def add_text_layer_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_text_layer_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_text_layer_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_text_layer_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_text_layer_aux_argument(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_text_layer_aux_argument(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_text_layer_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_text_layer_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_text_layer_return_value(self, name, nick, blurb, none_ok, flags): # real signature unknown; restored from __doc__
-        """ add_text_layer_return_value(self, name:str, nick:str, blurb:str, none_ok:bool, flags:GObject.ParamFlags) """
+    def add_text_layer_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_text_layer_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
-    def add_uint_argument(self, name, nick, blurb, min, max, value, flags): # real signature unknown; restored from __doc__
-        """ add_uint_argument(self, name:str, nick:str, blurb:str, min:int, max:int, value:int, flags:GObject.ParamFlags) """
+    def add_uint_argument(self, name, nick, blurb=None, min, max, value, flags): # real signature unknown; restored from __doc__
+        """ add_uint_argument(self, name:str, nick:str, blurb:str=None, min:int, max:int, value:int, flags:GObject.ParamFlags) """
         pass
 
-    def add_uint_aux_argument(self, name, nick, blurb, min, max, value, flags): # real signature unknown; restored from __doc__
-        """ add_uint_aux_argument(self, name:str, nick:str, blurb:str, min:int, max:int, value:int, flags:GObject.ParamFlags) """
+    def add_uint_aux_argument(self, name, nick, blurb=None, min, max, value, flags): # real signature unknown; restored from __doc__
+        """ add_uint_aux_argument(self, name:str, nick:str, blurb:str=None, min:int, max:int, value:int, flags:GObject.ParamFlags) """
         pass
 
-    def add_uint_return_value(self, name, nick, blurb, min, max, value, flags): # real signature unknown; restored from __doc__
-        """ add_uint_return_value(self, name:str, nick:str, blurb:str, min:int, max:int, value:int, flags:GObject.ParamFlags) """
+    def add_uint_return_value(self, name, nick, blurb=None, min, max, value, flags): # real signature unknown; restored from __doc__
+        """ add_uint_return_value(self, name:str, nick:str, blurb:str=None, min:int, max:int, value:int, flags:GObject.ParamFlags) """
         pass
 
-    def add_unit_argument(self, name, nick, blurb, show_pixels, show_percent, value, flags): # real signature unknown; restored from __doc__
-        """ add_unit_argument(self, name:str, nick:str, blurb:str, show_pixels:bool, show_percent:bool, value:Gimp.Unit, flags:GObject.ParamFlags) """
+    def add_unit_argument(self, name, nick, blurb=None, show_pixels, show_percent, value, flags): # real signature unknown; restored from __doc__
+        """ add_unit_argument(self, name:str, nick:str, blurb:str=None, show_pixels:bool, show_percent:bool, value:Gimp.Unit, flags:GObject.ParamFlags) """
         pass
 
-    def add_unit_aux_argument(self, name, nick, blurb, show_pixels, show_percent, value, flags): # real signature unknown; restored from __doc__
-        """ add_unit_aux_argument(self, name:str, nick:str, blurb:str, show_pixels:bool, show_percent:bool, value:Gimp.Unit, flags:GObject.ParamFlags) """
+    def add_unit_aux_argument(self, name, nick, blurb=None, show_pixels, show_percent, value, flags): # real signature unknown; restored from __doc__
+        """ add_unit_aux_argument(self, name:str, nick:str, blurb:str=None, show_pixels:bool, show_percent:bool, value:Gimp.Unit, flags:GObject.ParamFlags) """
         pass
 
-    def add_unit_return_value(self, name, nick, blurb, show_pixels, show_percent, value, flags): # real signature unknown; restored from __doc__
-        """ add_unit_return_value(self, name:str, nick:str, blurb:str, show_pixels:bool, show_percent:bool, value:Gimp.Unit, flags:GObject.ParamFlags) """
+    def add_unit_return_value(self, name, nick, blurb=None, show_pixels, show_percent, value, flags): # real signature unknown; restored from __doc__
+        """ add_unit_return_value(self, name:str, nick:str, blurb:str=None, show_pixels:bool, show_percent:bool, value:Gimp.Unit, flags:GObject.ParamFlags) """
+        pass
+
+    def add_vector_layer_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_vector_layer_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
+        pass
+
+    def add_vector_layer_aux_argument(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_vector_layer_aux_argument(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
+        pass
+
+    def add_vector_layer_return_value(self, name, nick, blurb=None, none_ok, flags): # real signature unknown; restored from __doc__
+        """ add_vector_layer_return_value(self, name:str, nick:str, blurb:str=None, none_ok:bool, flags:GObject.ParamFlags) """
         pass
 
     def bind_property(self, *args, **kwargs): # real signature unknown
@@ -475,20 +495,20 @@ class LoadProcedure(FileProcedure):
     def connect_after(self, *args, **kwargs): # real signature unknown
         pass
 
-    def connect_data(self, detailed_signal, handler, *data, **kwargs): # reliably restored by inspect
+    def connect_data(self, detailed_signal, handler, *data, connect_flags=0): # reliably restored by inspect
         """
         Connect a callback to the given signal with optional user data.
         
-                :param str detailed_signal:
-                    A detailed signal to connect to.
-                :param callable handler:
-                    Callback handler to connect to the signal.
-                :param *data:
-                    Variable data which is passed through to the signal handler.
-                :param GObject.ConnectFlags connect_flags:
-                    Flags used for connection options.
-                :returns:
-                    A signal id which can be used with disconnect.
+        :param str detailed_signal:
+            A detailed signal to connect to.
+        :param callable handler:
+            Callback handler to connect to the signal.
+        :param *data:
+            Variable data which is passed through to the signal handler.
+        :param GObject.ConnectFlags connect_flags:
+            Flags used for connection options.
+        :returns:
+            A signal id which can be used with disconnect.
         """
         pass
 
@@ -507,6 +527,12 @@ class LoadProcedure(FileProcedure):
         pass
 
     def disconnect_by_func(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_constructed(self, *args, **kwargs): # real signature unknown
+        pass
+
+    def do_dispose(self, *args, **kwargs): # real signature unknown
         pass
 
     def do_install(self, *args, **kwargs): # real signature unknown
@@ -556,17 +582,17 @@ class LoadProcedure(FileProcedure):
         """
         Freezes the object's property-changed notification queue.
         
-                :returns:
-                    A context manager which optionally can be used to
-                    automatically thaw notifications.
+        :returns:
+            A context manager which optionally can be used to
+            automatically thaw notifications.
         
-                This will freeze the object so that "notify" signals are blocked until
-                the thaw_notify() method is called.
+        This will freeze the object so that "notify" signals are blocked until
+        the thaw_notify() method is called.
         
-                .. code-block:: python
+        .. code-block:: python
         
-                    with obj.freeze_notify():
-                        pass
+            with obj.freeze_notify():
+                pass
         """
         pass
 
@@ -662,6 +688,10 @@ class LoadProcedure(FileProcedure):
         """ get_menu_paths(self) -> list """
         return []
 
+    def get_meta(self): # real signature unknown; restored from __doc__
+        """ get_meta(self) -> bool, meta_extensions:str """
+        return False
+
     def get_mime_types(self): # real signature unknown; restored from __doc__
         """ get_mime_types(self) -> str """
         return ""
@@ -711,20 +741,20 @@ class LoadProcedure(FileProcedure):
     def handler_block(obj, handler_id): # reliably restored by inspect
         """
         Blocks the signal handler from being invoked until
-            handler_unblock() is called.
+        handler_unblock() is called.
         
-            :param GObject.Object obj:
-                Object instance to block handlers for.
-            :param int handler_id:
-                Id of signal to block.
-            :returns:
-                A context manager which optionally can be used to
-                automatically unblock the handler:
+        :param GObject.Object obj:
+            Object instance to block handlers for.
+        :param int handler_id:
+            Id of signal to block.
+        :returns:
+            A context manager which optionally can be used to
+            automatically unblock the handler:
         
-            .. code-block:: python
+        .. code-block:: python
         
-                with GObject.signal_handler_block(obj, id):
-                    pass
+            with GObject.signal_handler_block(obj, id):
+                pass
         """
         pass
 
@@ -766,19 +796,20 @@ class LoadProcedure(FileProcedure):
         # no doc
         pass
 
-    def is_core(self): # real signature unknown; restored from __doc__
-        """ is_core(self) -> bool """
-        return False
-
     def is_floating(self): # real signature unknown; restored from __doc__
         """ is_floating(self) -> bool """
+        return False
+
+    def is_internal(self): # real signature unknown; restored from __doc__
+        """ is_internal(self) -> bool """
         return False
 
     def list_properties(self): # real signature unknown; restored from __doc__
         """ list_properties(self) -> list """
         return []
 
-    def new(self, plug_in, name, proc_type, run_func, run_data=None): # real signature unknown; restored from __doc__
+    @classmethod
+    def new(cls, plug_in, name, proc_type, run_func, run_data=None): # real signature unknown; restored from __doc__
         """ new(plug_in:Gimp.PlugIn, name:str, proc_type:Gimp.PDBProcType, run_func:Gimp.RunLoadFunc, run_data=None) -> Gimp.Procedure """
         pass
 
@@ -886,6 +917,10 @@ class LoadProcedure(FileProcedure):
         """ set_menu_label(self, menu_label:str) """
         pass
 
+    def set_meta(self, is_meta, meta_extensions): # real signature unknown; restored from __doc__
+        """ set_meta(self, is_meta:bool, meta_extensions:str) """
+        pass
+
     def set_mime_types(self, mime_types): # real signature unknown; restored from __doc__
         """ set_mime_types(self, mime_types:str) """
         pass
@@ -943,20 +978,20 @@ class LoadProcedure(FileProcedure):
     def weak_ref(self, *args, **kwargs): # real signature unknown
         pass
 
-    def _force_floating(self, *args, **kwargs): # real signature unknown
-        """ force_floating(self) """
+    def _force_floating(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly float GObjects. """
         pass
 
-    def _ref(self, *args, **kwargs): # real signature unknown
-        """ ref(self) -> GObject.Object """
+    def _ref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _ref_sink(self, *args, **kwargs): # real signature unknown
-        """ ref_sink(self) -> GObject.Object """
+    def _ref_sink(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
-    def _unref(self, *args, **kwargs): # real signature unknown
-        """ unref(self) """
+    def _unref(self): # reliably restored by inspect
+        """ Deprecated, do not explicitly reference GObjects. """
         pass
 
     def _unsupported_data_method(self, *args, **kargs): # reliably restored by inspect
@@ -1090,12 +1125,14 @@ class LoadProcedure(FileProcedure):
     __grefcount__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    props = None # (!) real value is '<gi._gi.GProps object at 0x000001dcd90d5f90>'
+    props = None # (!) real value is '<gi._gi.GProps object at 0x000001268f3b1bd0>'
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(LoadProcedure), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpLoadProcedure (3599937968)>, '__doc__': None, '__gsignals__': {}, 'new': gi.FunctionInfo(new, bound=None), 'get_handles_raw': gi.FunctionInfo(get_handles_raw, bound=None), 'get_thumbnail_loader': gi.FunctionInfo(get_thumbnail_loader, bound=None), 'set_handles_raw': gi.FunctionInfo(set_handles_raw, bound=None), 'set_thumbnail_loader': gi.FunctionInfo(set_thumbnail_loader, bound=None), 'parent_instance': <property object at 0x000001dcd92a48b0>})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(LoadProcedure), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpLoadProcedure (2360668128)>, '__doc__': None, '__gsignals__': {}, 'new': <classmethod(gi.FunctionInfo(new))>, 'get_handles_raw': gi.FunctionInfo(get_handles_raw), 'get_thumbnail_loader': gi.FunctionInfo(get_thumbnail_loader), 'set_handles_raw': gi.FunctionInfo(set_handles_raw), 'set_thumbnail_loader': gi.FunctionInfo(set_thumbnail_loader), 'parent_instance': <property object at 0x000001268f4fbce0>})"
+    __firstlineno__ = 651
     __gdoc__ = "Object GimpLoadProcedure\n\nProperties from GimpProcedure:\n  plug-in -> GimpPlugIn: Plug-In\n    The GimpPlugIn of this plug-in process\n  name -> gchararray: Name\n    The procedure's name\n  procedure-type -> GimpPDBProcType: Procedure type\n    The procedure's type\n\nSignals from GObject:\n  notify (GParam)\n\n"
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpLoadProcedure (3599937968)>'
+    __gtype__ = None # (!) real value is '<GType GimpLoadProcedure (2360668128)>'
     __info__ = ObjectInfo(LoadProcedure)
+    __static_attributes__ = ()
 
 

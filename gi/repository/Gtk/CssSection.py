@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.Gtk
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\Gtk-3.0.typelib
 # by generator 1.147
 # no doc
 
@@ -8,13 +7,13 @@
 from _thread import _lock
 
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.overrides.Gtk as __gi_overrides_Gtk
 import gi.repository.Atk as __gi_repository_Atk
 import gi.repository.Gio as __gi_repository_Gio
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -170,8 +169,8 @@ class CssSection(__gi.Boxed):
         pass
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(CssSection), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCssSection (3855034608)>, '__dict__': <attribute '__dict__' of 'CssSection' objects>, '__weakref__': <attribute '__weakref__' of 'CssSection' objects>, '__doc__': None, 'get_end_line': gi.FunctionInfo(get_end_line, bound=None), 'get_end_position': gi.FunctionInfo(get_end_position, bound=None), 'get_file': gi.FunctionInfo(get_file, bound=None), 'get_parent': gi.FunctionInfo(get_parent, bound=None), 'get_section_type': gi.FunctionInfo(get_section_type, bound=None), 'get_start_line': gi.FunctionInfo(get_start_line, bound=None), 'get_start_position': gi.FunctionInfo(get_start_position, bound=None), 'ref': gi.FunctionInfo(ref, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
-    __gtype__ = None # (!) real value is '<GType GtkCssSection (3855034608)>'
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(CssSection), '__module__': 'gi.repository.Gtk', '__gtype__': <GType GtkCssSection (3537891824)>, '__dict__': <attribute '__dict__' of 'CssSection' objects>, '__weakref__': <attribute '__weakref__' of 'CssSection' objects>, '__doc__': None, 'get_end_line': gi.FunctionInfo(get_end_line), 'get_end_position': gi.FunctionInfo(get_end_position), 'get_file': gi.FunctionInfo(get_file), 'get_parent': gi.FunctionInfo(get_parent), 'get_section_type': gi.FunctionInfo(get_section_type), 'get_start_line': gi.FunctionInfo(get_start_line), 'get_start_position': gi.FunctionInfo(get_start_position), 'ref': gi.FunctionInfo(ref), 'unref': gi.FunctionInfo(unref)})"
+    __gtype__ = None # (!) real value is '<GType GtkCssSection (3537891824)>'
     __info__ = StructInfo(CssSection)
 
 

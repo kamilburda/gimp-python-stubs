@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class PathBuf(__gi.Struct):
@@ -183,7 +181,7 @@ class PathBuf(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PathBuf), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PathBuf' objects>, '__weakref__': <attribute '__weakref__' of 'PathBuf' objects>, '__doc__': None, 'dummy': <property object at 0x000002830bef4db0>, 'clear': gi.FunctionInfo(clear, bound=None), 'clear_to_path': gi.FunctionInfo(clear_to_path, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'free_to_path': gi.FunctionInfo(free_to_path, bound=None), 'init': gi.FunctionInfo(init, bound=None), 'init_from_path': gi.FunctionInfo(init_from_path, bound=None), 'pop': gi.FunctionInfo(pop, bound=None), 'push': gi.FunctionInfo(push, bound=None), 'set_extension': gi.FunctionInfo(set_extension, bound=None), 'set_filename': gi.FunctionInfo(set_filename, bound=None), 'to_path': gi.FunctionInfo(to_path, bound=None), 'equal': gi.FunctionInfo(equal, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(PathBuf), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'PathBuf' objects>, '__weakref__': <attribute '__weakref__' of 'PathBuf' objects>, '__doc__': None, 'dummy': <property object at 0x0000018ea007a430>, 'clear': gi.FunctionInfo(clear), 'clear_to_path': gi.FunctionInfo(clear_to_path), 'free': gi.FunctionInfo(free), 'free_to_path': gi.FunctionInfo(free_to_path), 'init': gi.FunctionInfo(init), 'init_from_path': gi.FunctionInfo(init_from_path), 'pop': gi.FunctionInfo(pop), 'push': gi.FunctionInfo(push), 'set_extension': gi.FunctionInfo(set_extension), 'set_filename': gi.FunctionInfo(set_filename), 'to_path': gi.FunctionInfo(to_path), 'equal': <staticmethod(gi.FunctionInfo(equal))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(PathBuf)
 

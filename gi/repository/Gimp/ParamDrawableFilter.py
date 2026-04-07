@@ -1,22 +1,18 @@
 # encoding: utf-8
 # module gi.repository.Gimp
 # by generator 1.147
-"""
-An object which wraps an introspection typelib.
-
-    This wrapping creates a python module like representation of the typelib
-    using gi repository as a foundation. Accessing attributes of the module
-    will dynamically pull them in and create wrappers for the members.
-    These members are then cached on this introspection module.
-"""
+# no doc
 
 # imports
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
+import gi.overrides.GExiv2 as __gi_overrides_GExiv2
 import gi.overrides.Gio as __gi_overrides_Gio
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GObject as __gi_repository_GObject
+import gi._gi as __gi__gi
 import gobject as __gobject
 
 
@@ -236,10 +232,11 @@ class ParamDrawableFilter(__gi_repository_GObject.ParamSpecObject):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.GObjectMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ParamDrawableFilter), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpParamDrawableFilter (3595413840)>, '__doc__': None, '__gsignals__': {}})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': ObjectInfo(ParamDrawableFilter), '__module__': 'gi.repository.Gimp', '__gtype__': <GType GimpParamDrawableFilter (2360844976)>, '__doc__': None, '__gsignals__': {}})"
+    __firstlineno__ = 843
     __gproperties__ = {
         'blurb': (
-            None, # (!) real value is '<GType PyObject (3594023216)>'
+            None, # (!) real value is '<GType PyObject (2352384080)>'
             '',
             '',
             3,
@@ -247,7 +244,11 @@ class ParamDrawableFilter(__gi_repository_GObject.ParamSpecObject):
         'nick': '<value is a self-reference, replaced by this string>',
     }
     __gsignals__ = {}
-    __gtype__ = None # (!) real value is '<GType GimpParamDrawableFilter (3595413840)>'
+    __gtype__ = None # (!) real value is '<GType GimpParamDrawableFilter (2360844976)>'
     __info__ = ObjectInfo(ParamDrawableFilter)
+    __static_attributes__ = (
+        '_blurb',
+        '_nick',
+    )
 
 

@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Hook(__gi.Struct):
@@ -179,7 +177,7 @@ class Hook(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Hook), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Hook' objects>, '__weakref__': <attribute '__weakref__' of 'Hook' objects>, '__doc__': None, 'data': <property object at 0x000002830bf15030>, 'next': <property object at 0x000002830bf15120>, 'prev': <property object at 0x000002830bf15210>, 'ref_count': <property object at 0x000002830bf15300>, 'hook_id': <property object at 0x000002830bf153f0>, 'flags': <property object at 0x000002830bf154e0>, 'func': <property object at 0x000002830bf155d0>, 'destroy': gi.FunctionInfo(destroy, bound=None), 'compare_ids': gi.FunctionInfo(compare_ids, bound=None), 'destroy_link': gi.FunctionInfo(destroy_link, bound=None), 'free': gi.FunctionInfo(free, bound=None), 'insert_before': gi.FunctionInfo(insert_before, bound=None), 'insert_sorted': gi.FunctionInfo(insert_sorted, bound=None), 'prepend': gi.FunctionInfo(prepend, bound=None), 'unref': gi.FunctionInfo(unref, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Hook), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Hook' objects>, '__weakref__': <attribute '__weakref__' of 'Hook' objects>, '__doc__': None, 'data': <property object at 0x0000018e9ff8a070>, 'next': <property object at 0x0000018e9ff8a160>, 'prev': <property object at 0x0000018e9ff8a250>, 'ref_count': <property object at 0x0000018e9ff8a340>, 'hook_id': <property object at 0x0000018e9ff8a430>, 'flags': <property object at 0x0000018e9ff8a520>, 'func': <property object at 0x0000018e9ff8a610>, 'destroy': <staticmethod(gi.FunctionInfo(destroy))>, 'compare_ids': gi.FunctionInfo(compare_ids), 'destroy_link': <staticmethod(gi.FunctionInfo(destroy_link))>, 'free': <staticmethod(gi.FunctionInfo(free))>, 'insert_before': <staticmethod(gi.FunctionInfo(insert_before))>, 'insert_sorted': <staticmethod(gi.FunctionInfo(insert_sorted))>, 'prepend': <staticmethod(gi.FunctionInfo(prepend))>, 'unref': <staticmethod(gi.FunctionInfo(unref))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Hook)
 

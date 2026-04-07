@@ -1,19 +1,17 @@
 # encoding: utf-8
 # module gi.repository.GLib
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GLib-2.0.typelib
 # by generator 1.147
 # no doc
 
 # imports
-import gi._option as option # C:\Program Files\GIMP 3\lib\python3.12\site-packages\gi\_option.py
-from gi._gi import OptionContext, OptionGroup, Pid, spawn_async
+from gi._gi import Pid, spawn_async
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
-import gobject as __gobject
+import gi._gi as __gi__gi
 
 
 class Private(__gi.Struct):
@@ -151,7 +149,7 @@ class Private(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Private), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Private' objects>, '__weakref__': <attribute '__weakref__' of 'Private' objects>, '__doc__': None, 'p': <property object at 0x000002830bef4f90>, 'notify': <property object at 0x000002830bef5080>, 'future': <property object at 0x000002830bef5170>, 'get': gi.FunctionInfo(get, bound=None), 'replace': gi.FunctionInfo(replace, bound=None), 'set': gi.FunctionInfo(set, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(Private), '__module__': 'gi.repository.GLib', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'Private' objects>, '__weakref__': <attribute '__weakref__' of 'Private' objects>, '__doc__': None, 'p': <property object at 0x0000018ea007a660>, 'notify': <property object at 0x0000018ea007a750>, 'future': <property object at 0x0000018ea007a840>, 'get': gi.FunctionInfo(get), 'replace': gi.FunctionInfo(replace), 'set': gi.FunctionInfo(set)})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(Private)
 

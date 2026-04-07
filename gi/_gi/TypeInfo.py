@@ -4,9 +4,9 @@
 # no doc
 
 # imports
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
+import enum as __enum
 import gi as __gi
 import gobject as __gobject
 
@@ -16,7 +16,7 @@ class TypeInfo(__gi.BaseInfo):
     def get_array_fixed_size(self, *args, **kwargs): # real signature unknown
         pass
 
-    def get_array_length(self, *args, **kwargs): # real signature unknown
+    def get_array_length_index(self, *args, **kwargs): # real signature unknown
         pass
 
     def get_array_type(self, *args, **kwargs): # real signature unknown

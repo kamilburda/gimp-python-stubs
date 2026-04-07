@@ -1,6 +1,5 @@
 # encoding: utf-8
 # module gi.repository.GObject
-# from C:/Program Files/GIMP 3/lib/girepository-1.0\GObject-2.0.typelib
 # by generator 1.147
 # no doc
 
@@ -20,20 +19,20 @@ from gi.repository.GLib import (Error, GError, IOCondition, IO_ERR,
     get_prgname, main_context_default, main_depth, set_application_name, 
     set_prgname, source_remove, uri_list_extract_uris)
 
-from gi._gi import (GObjectWeakRef, OptionContext, OptionGroup, Pid, 
-    add_emission_hook, list_properties, new, signal_new, spawn_async, 
+from gi._gi import (GEnum, GFlags, GObjectWeakRef, OptionContext, OptionGroup, 
+    Pid, add_emission_hook, list_properties, new, signal_new, spawn_async, 
     type_register)
 
-from gobject import (GBoxed, GEnum, GFlags, GInterface, GPointer, GType, 
-    Warning)
+from gobject import GBoxed, GInterface, GPointer, GType, Warning
 
 from _thread import _lock
 
+import enum as __enum
 import gi as __gi
-import gi.overrides as __gi_overrides
 import gi.overrides.GLib as __gi_overrides_GLib
 import gi.overrides.GObject as __gi_overrides_GObject
 import gi.repository.GLib as __gi_repository_GLib
+import gi._gi as __gi__gi
 import gi._signalhelper as __gi__signalhelper
 import gobject as __gobject
 
@@ -54,12 +53,16 @@ class TypeClass(__gi.Struct):
         """ adjust_private_offset(g_class=None, private_size_or_offset:int) """
         pass
 
+    def get(self, type): # real signature unknown; restored from __doc__
+        """ get(type:GType) -> GObject.TypeClass """
+        pass
+
     def get_private(self, private_type): # real signature unknown; restored from __doc__
         """ get_private(self, private_type:GType) """
         pass
 
     def peek(self, type): # real signature unknown; restored from __doc__
-        """ peek(type:GType) -> GObject.TypeClass """
+        """ peek(type:GType) -> GObject.TypeClass or None """
         pass
 
     def peek_parent(self): # real signature unknown; restored from __doc__
@@ -67,7 +70,7 @@ class TypeClass(__gi.Struct):
         pass
 
     def peek_static(self, type): # real signature unknown; restored from __doc__
-        """ peek_static(type:GType) -> GObject.TypeClass """
+        """ peek_static(type:GType) -> GObject.TypeClass or None """
         pass
 
     def ref(self, type): # real signature unknown; restored from __doc__
@@ -91,7 +94,11 @@ class TypeClass(__gi.Struct):
         pass
 
     def __format__(self, *args, **kwargs): # real signature unknown
-        """ Default object formatter. """
+        """
+        Default object formatter.
+        
+        Return str(self) if format_spec is empty. Raise TypeError otherwise.
+        """
         pass
 
     def __getattribute__(self, *args, **kwargs): # real signature unknown
@@ -185,7 +192,7 @@ class TypeClass(__gi.Struct):
 
 
     __class__ = None # (!) real value is "<class 'gi.types.StructMeta'>"
-    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TypeClass), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeClass' objects>, '__weakref__': <attribute '__weakref__' of 'TypeClass' objects>, '__doc__': None, 'g_type': <property object at 0x0000010b07a22fc0>, 'add_private': gi.FunctionInfo(add_private, bound=None), 'get_private': gi.FunctionInfo(get_private, bound=None), 'peek_parent': gi.FunctionInfo(peek_parent, bound=None), 'unref': gi.FunctionInfo(unref, bound=None), 'adjust_private_offset': gi.FunctionInfo(adjust_private_offset, bound=None), 'peek': gi.FunctionInfo(peek, bound=None), 'peek_static': gi.FunctionInfo(peek_static, bound=None), 'ref': gi.FunctionInfo(ref, bound=None)})"
+    __dict__ = None # (!) real value is "mappingproxy({'__info__': StructInfo(TypeClass), '__module__': 'gi.repository.GObject', '__gtype__': <GType void (4)>, '__dict__': <attribute '__dict__' of 'TypeClass' objects>, '__weakref__': <attribute '__weakref__' of 'TypeClass' objects>, '__doc__': None, 'g_type': <property object at 0x000001dd11e49f30>, 'add_private': gi.FunctionInfo(add_private), 'get_private': gi.FunctionInfo(get_private), 'peek_parent': gi.FunctionInfo(peek_parent), 'unref': gi.FunctionInfo(unref), 'adjust_private_offset': <staticmethod(gi.FunctionInfo(adjust_private_offset))>, 'get': <staticmethod(gi.FunctionInfo(get))>, 'peek': <staticmethod(gi.FunctionInfo(peek))>, 'peek_static': <staticmethod(gi.FunctionInfo(peek_static))>, 'ref': <staticmethod(gi.FunctionInfo(ref))>})"
     __gtype__ = None # (!) real value is '<GType void (4)>'
     __info__ = StructInfo(TypeClass)
 
