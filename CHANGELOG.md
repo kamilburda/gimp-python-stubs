@@ -1,3 +1,9 @@
+6.0
+===
+
+* Updated the repository for GIMP 3.2.
+
+
 5.0
 ===
 
