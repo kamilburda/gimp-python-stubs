@@ -2,7 +2,7 @@
 
 This repository contains generated Python stubs for `gi.repository` modules that can aid in developing Python plug-ins for GIMP 3.0 or later, by providing code completion suggestions. The stubs can be used in a variety of IDEs such as PyCharm, from which these stubs were generated.
 
-This repository additionally includes stubs for modules which PyCharm may fail to generate on some platforms [due to a bug](https://gitlab.gnome.org/GNOME/gimp/-/issues/10562). These modules are `gi.repository.Gimp` and `gi.repository.cairo`.
+This repository additionally includes stubs for modules which PyCharm may fail to generate on some platforms [due to a bug](https://gitlab.gnome.org/GNOME/gimp/-/issues/10562).
 
 
 ## Installation
